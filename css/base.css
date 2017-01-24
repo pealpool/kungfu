@@ -58,16 +58,28 @@ html, body {
 	text-shadow: 1px 1px 30px rgba(0, 0, 0, 0.1);
 }
 /*选招式*/
-.choicePaiBei_1 {
+.choicePaiBei {
 	width: 960px;
 	height: 555px;
-	background: #eeeeee;
+	background-color: #eeeeee;
 	border-radius: 5px;
 	box-shadow: 1px 1px 30px 0 rgba(0, 0, 0, 0.1);
 	margin-top: -40px;
 	z-index: 1100;
 	position: absolute;
+	transition: all 650ms cubic-bezier(0, 0, 0.07, 1.04) 0ms;
 }
+.cPBTaiji{
+	background-image:url(../Img/image/cPBTaiji.png);
+	background-repeat: no-repeat;
+	background-position: 575px 235px;
+}
+.cPBTaiquan{
+	background-image:url(../Img/image/cPBTaiquan.png);
+	background-repeat: no-repeat;
+	background-position: 500px 295px;
+}
+
 /*选择进度栏*/
 .choiceJinDuLan {
 	height: 60px;
@@ -133,7 +145,8 @@ html, body {
 	height: 210px;
 	border-radius: 10px;
 	box-shadow: 3px 3px 30px 0 rgba(0, 0, 0, 0.15);
-	transition: all 450ms cubic-bezier(0, 0, 0.07, 1.04) 0ms;
+/*	transition: all 450ms cubic-bezier(0, 0, 0.07, 1.04) 0ms;*/
+	transition: all 150ms;
 	cursor: pointer;
 	font-size: 52px;
 	line-height: 210px;
@@ -144,6 +157,7 @@ html, body {
 	margin-top: 3px;
 	margin-left: 2px;
 	box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.15);
+	font-weight: bold;
 }
 
 #choiceZhaoshishiXiaoKuang_Taiji{
@@ -152,11 +166,18 @@ html, body {
 	background-repeat: no-repeat;
 	background-position: 90px 98px;
 }
+#choiceZhaoshishiXiaoKuang_Taiji:active{
+	background-color:#8ec4ec ;
+}
+
 #choiceZhaoshishiXiaoKuang_Taiquan{
 	color: #a50000;
 	background-image:url(../Img/image/choiceZhaoshishiXiaoKuang_Taiquan.png);
 	background-repeat: no-repeat;
 	background-position: 65px 125px;
+}
+#choiceZhaoshishiXiaoKuang_Taiquan:active{
+	background-color:#eb8d8d ;
 }
 .choiceZhaoshishiXiaoKuang_QIdai{
 	color: #c1c1c1;
@@ -170,6 +191,7 @@ html, body {
 	margin-left: 0px;
 	box-shadow: 3px 3px 30px 0 rgba(0, 0, 0, 0.15);
 	cursor: default;
+	font-weight:normal;
 }
 /*诗题目外框*/
 .shi_TimuK{
@@ -194,7 +216,6 @@ html, body {
 	height: 1px;
 	width: 25px;
 	border:none;
-	border-bottom:1px solid #4388bb;
 }
 .shi{
 	font-size: 16px;
