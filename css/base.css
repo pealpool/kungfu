@@ -1,0 +1,215 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body {
+	font-family: 微软雅黑;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: #D3D3D3;
+	cursor: default;
+}
+/*全屏遮罩*/
+.mask {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	_position: absolute;
+	top: 0;
+	z-index: 1000;
+	background-color: #7f7f7f;
+}
+/*半透明效果*/
+.opacity {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+}
+/*模糊效果*/
+.blur {
+	-webkit-filter: blur(10px);
+	-moz-filter: blur(10px);
+	-o-filter: blur(10px);
+	-ms-filter: blur(10px);
+	filter: blur(10px);
+}
+/*基础大框*/
+.baseKuang {
+	width: 1000px;
+	margin: 0 auto;
+	background: #fff;
+}
+/*前置大框*/
+.choiceBigKuang {
+	z-index: 1100;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -480px;
+	margin-top: -390px;
+	width: 960px;
+	height: 1000px;
+}
+/*聚 · 功夫大大标题*/
+.choiceDaBiaoTi {
+	color: #fff;
+	font-size: 180px;
+	text-shadow: 1px 1px 30px rgba(0, 0, 0, 0.1);
+}
+/*选招式*/
+.choicePaiBei_1 {
+	width: 960px;
+	height: 555px;
+	background: #eeeeee;
+	border-radius: 5px;
+	box-shadow: 1px 1px 30px 0 rgba(0, 0, 0, 0.1);
+	margin-top: -40px;
+	z-index: 1100;
+	position: absolute;
+}
+/*选择进度栏*/
+.choiceJinDuLan {
+	height: 60px;
+	margin-top: 25px;
+	margin-left: 45px;
+}
+/*选择进度栏按钮外的框*/
+.choiceJinDuLanButtomK {
+	float: left;
+	width: 95px;
+	height: 40px;
+}
+/*选择进度栏按钮*/
+.choiceJinDuLanButtom {
+	font-size: 16px;
+	line-height: 37px;
+	text-align: center;
+	color: #fff;
+	width: 90px;
+	height: 37px;
+	border-radius: 3px;
+}
+.red {
+	background: #a50000;
+	box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.gray {
+	background: #a0a0a0;
+	box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);
+	transition: all 450ms cubic-bezier(0, 0, 0.07, 1.04) 0ms;
+}
+.gray:hover {
+	background: #bebebe;
+	cursor: pointer;
+}
+.gray:active {
+	margin-top: 2px;
+	margin-left: 2px;
+	box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.2);
+}
+/*选择进度栏右箭头*/
+.choiceJinDuLan_Jt {
+	float: left;
+	margin: 6px 15px 0px 15px;
+	width: 31px;
+	height: 37px;
+}
+/*选择招式中框*/
+.choiceZhaoshiZhongKuang{
+	margin-left: 30px;
+	width: 920px;
+	height: 265px;
+}
+/*选择招式小框外*/
+.choiceZhaoshiXiaoKuangW{
+	float: left;
+	width: 230px;
+	height: 220px;
+}
+/*选择招式小框*/
+.choiceZhaoshiXiaoKuang{
+	width: 210px;
+	height: 210px;
+	border-radius: 10px;
+	box-shadow: 3px 3px 30px 0 rgba(0, 0, 0, 0.15);
+	transition: all 450ms cubic-bezier(0, 0, 0.07, 1.04) 0ms;
+	cursor: pointer;
+	font-size: 52px;
+	line-height: 210px;
+	text-align: center;
+	background: #fff;
+}
+.choiceZhaoshiXiaoKuang:hover{
+	margin-top: 3px;
+	margin-left: 2px;
+	box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+#choiceZhaoshishiXiaoKuang_Taiji{
+	color: #4388bb;
+	background-image:url(../Img/image/choiceZhaoshishiXiaoKuang_Taiji.png);
+	background-repeat: no-repeat;
+	background-position: 90px 98px;
+}
+#choiceZhaoshishiXiaoKuang_Taiquan{
+	color: #a50000;
+	background-image:url(../Img/image/choiceZhaoshishiXiaoKuang_Taiquan.png);
+	background-repeat: no-repeat;
+	background-position: 65px 125px;
+}
+.choiceZhaoshishiXiaoKuang_QIdai{
+	color: #c1c1c1;
+	background-color: #F0F0F0;
+	background-image: url(../Img/image/choiceZhaoshishiXiaoKuang_QIdai.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.choiceZhaoshishiXiaoKuang_QIdai:hover{
+	margin-top: 0px;
+	margin-left: 0px;
+	box-shadow: 3px 3px 30px 0 rgba(0, 0, 0, 0.15);
+	cursor: default;
+}
+/*诗题目外框*/
+.shi_TimuK{
+	position:absolute;
+	left: 50%;
+	text-align: center;
+	width: 180px;
+	height: 30px;
+	margin-top: 20px;
+	margin-left: -90px;
+}
+.shi_Timu{
+	float: left;
+	width: 130px;
+	height: 20px;
+	font-size: 18px;
+	letter-spacing:5px;
+}
+.shi_hr{
+	float: left;
+	margin-top: 12px;
+	height: 1px;
+	width: 25px;
+	border:none;
+	border-bottom:1px solid #4388bb;
+}
+.shi{
+	font-size: 16px;
+	position:absolute;
+	left: 50%;
+	text-align: center;
+	width: 250px;
+	height: 30px;
+	margin-left: -118px;
+}
+#shi_01{
+	margin-top: 70px;
+	letter-spacing:3px;
+}
+#shi_02{
+	margin-top: 100px;
+	letter-spacing:3px;
+}
