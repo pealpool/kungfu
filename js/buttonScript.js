@@ -40,9 +40,13 @@ function choicePB(pbpb){
 	//var XZshuxin = document.getElementById("choiceJinDuLan_XZshuxin");
 	if (pbpb === 'Taiji'){
 		PaiBei = "Taiji";
+		document.getElementById("choiceZhaoshishiXiaoKuang_Taiji").style.backgroundColor = "#8ec4ec";
+		document.getElementById("choiceZhaoshishiXiaoKuang_Taiquan").style.backgroundColor = "#fff";
 	}
 	if (pbpb === 'Taiquan'){
 		PaiBei = "Taiquan";
+		document.getElementById("choiceZhaoshishiXiaoKuang_Taiji").style.backgroundColor = "#fff";
+		document.getElementById("choiceZhaoshishiXiaoKuang_Taiquan").style.backgroundColor = "#eb8d8d";
 	}
 	document.getElementById("choiceJinDuLan_XZpaibei").setAttribute("class","choiceJinDuLanButtom gray");
 	document.getElementById("choiceJinDuLan_XZshuxin").setAttribute("class","choiceJinDuLanButtom red");
