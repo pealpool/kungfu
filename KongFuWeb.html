@@ -5,13 +5,25 @@
 <title>聚 · 功夫</title>
 <link type="text/css" href="./css/base.css" rel="stylesheet">
 <link type="text/css" href="./css/cssTaiji.css" rel="stylesheet" id="cssStyle">
+<link type="text/css" href="./js/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
 <style></style>
-<script src="./js/buttonScript.js"></script>
-<script src="./js/PB_Taiji.js"></script>
-<script src="./js/PB_Taiquan.js"></script>
-<script src="./js/PB_All.js"></script>
-<script src="./js/ShuX.js"></script>
-<script src="./js/Hp.js"></script>
+<script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./js/jquery-ui-1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="./js/buttonScript.js"></script>
+<script type="text/javascript" src="./js/PB_Taiji.js"></script>
+<script type="text/javascript" src="./js/PB_Taiquan.js"></script>
+<script type="text/javascript" src="./js/PB_All.js"></script>
+<script type="text/javascript" src="./js/ShuX.js"></script>
+<script type="text/javascript" src="./js/Hp.js"></script>
+
+<!--<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<!--<script type="text/javascript" src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>-->
+
+<script>
+
+</script>
+
+
 </head>
 <body>
 <div class="mask"> </div>
@@ -58,39 +70,39 @@
     	<div class="choiceShuxinZhongKuangL">
 			<div class="ZhaoshiMinXiao Kuang10 ZsMX_Taiji" id="ZhaoshiMinXiao">太<br />极</div>
     		<div class="DianshuDaKuang Kuang10">
-    			<div class="DianshuDaKuang_T">
+    			<div class="DianshuDaKuang_T0">
     				<div class="DianshuDaKuang_TTL">剩余点数：</div>
-    				<div id="DianshuDaKuang_TTR">13</div>
+    				<div id="DianshuDaKuang_TTR">3</div>
     			</div>
     			<div class="DianshuDaKuang_T">
     				<div class="DianshuDaKuang_TL">力量：</div>
-    				<div class="DianshuDaKuang_TR1" id="DianshuDaKuang_TR1_liliang">-</div>
-    				<div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_liliang">3</div>
-    				<div class="DianshuDaKuang_TR3" id="DianshuDaKuang_TR3_liliang">+</div>
+    				<div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Liliang" onClick="SXtiaozheng('Liliang',0)">-</div>
+    				<div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Liliang">2</div>
+    				<div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Liliang" onClick="SXtiaozheng('Liliang',1)">+</div>
     			</div>
     			<div class="DianshuDaKuang_T">
     				<div class="DianshuDaKuang_TL">敏捷：</div>
-    				<div class="DianshuDaKuang_TR1" id="DianshuDaKuang_TR1_liliang">-</div>
-    				<div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_liliang">3</div>
-    				<div class="DianshuDaKuang_TR3" id="DianshuDaKuang_TR3_liliang">+</div>
+    				<div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Minjie" onClick="SXtiaozheng('Minjie',0)">-</div>
+    				<div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Minjie">2</div>
+    				<div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Minjie" onClick="SXtiaozheng('Minjie',1)">+</div>
     			</div>
     			<div class="DianshuDaKuang_T">
     				<div class="DianshuDaKuang_TL">智力：</div>
-    				<div class="DianshuDaKuang_TR1" id="DianshuDaKuang_TR1_liliang">-</div>
-    				<div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_liliang">3</div>
-    				<div class="DianshuDaKuang_TR3" id="DianshuDaKuang_TR3_liliang">+</div>
+    				<div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Zhili" onClick="SXtiaozheng('Zhili',0)">-</div>
+    				<div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Zhili">2</div>
+    				<div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Zhili" onClick="SXtiaozheng('Zhili',1)">+</div>
     			</div>
     			<div class="DianshuDaKuang_T">
     				<div class="DianshuDaKuang_TL">体质：</div>
-    				<div class="DianshuDaKuang_TR1" id="DianshuDaKuang_TR1_liliang">-</div>
-    				<div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_liliang">3</div>
-    				<div class="DianshuDaKuang_TR3" id="DianshuDaKuang_TR3_liliang">+</div>
+    				<div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Tizhi" onClick="SXtiaozheng('Tizhi',0)">-</div>
+    				<div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Tizhi">2</div>
+    				<div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Tizhi" onClick="SXtiaozheng('Tizhi',1)">+</div>
     			</div>
     			<div class="DianshuDaKuang_T">
     				<div class="DianshuDaKuang_TL">平衡：</div>
-    				<div class="DianshuDaKuang_TR1" id="DianshuDaKuang_TR1_liliang">-</div>
-    				<div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_liliang">2</div>
-    				<div class="DianshuDaKuang_TR3" id="DianshuDaKuang_TR3_liliang">+</div>
+    				<div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Pinheng" onClick="SXtiaozheng('Pinheng',0)">-</div>
+    				<div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Pinheng">2</div>
+    				<div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Pinheng" onClick="SXtiaozheng('Pinheng',1)">+</div>
     			</div>
     		</div>
     		<div class="DianshuguanlianKuang Kuang10">攻击力加成</div>

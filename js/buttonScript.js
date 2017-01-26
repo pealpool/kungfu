@@ -43,10 +43,14 @@ function choicePB_h() {
 		case "Taiji":
 			document.getElementById("choiceZhaoshishiXiaoKuang_Taiji").style.backgroundColor = "#8ec4ec";
 			document.getElementById("choiceZhaoshishiXiaoKuang_Taiquan").style.backgroundColor = "#fff";
+			document.getElementById("ZhaoshiMinXiao").setAttribute("class", "ZhaoshiMinXiao Kuang10 ZsMX_Taiji");
+			$("#ZhaoshiMinXiao").html("太<br />极");
 			break;
 		case "Taiquan":
 			document.getElementById("choiceZhaoshishiXiaoKuang_Taiji").style.backgroundColor = "#fff";
 			document.getElementById("choiceZhaoshishiXiaoKuang_Taiquan").style.backgroundColor = "#eb8d8d";
+			document.getElementById("ZhaoshiMinXiao").setAttribute("class", "ZhaoshiMinXiao Kuang10 ZsMX_Taiquan");
+			$("#ZhaoshiMinXiao").html("泰<br />拳");
 			break;
 	}
 	document.getElementById("choiceJinDuLan_XZpaibei").setAttribute("class", "choiceJinDuLanButtom gray");
@@ -56,21 +60,33 @@ function choicePB_h() {
 }
 
 
+//选择派别大按钮
 function choicePB(pbpb) {
 	//var XZpaibei = document.getElementById("choiceJinDuLan_XZpaibei");
 	//var XZshuxin = document.getElementById("choiceJinDuLan_XZshuxin");
 	PaiBei = pbpb;
 	choicePB_h();
-	document.getElementById("choiceZhaoshiDaKuang").style.display = "none";
-	document.getElementById("choiceShuxinDaKuang").style.display = "inline";
+	//document.getElementById("choiceZhaoshiDaKuang").style.display = "none";
+	$("#choiceZhaoshiDaKuang").hide("fade", 300, DaKuangHtS_ps);
+	//document.getElementById("choiceShuxinDaKuang").style.display = "inline";
 }
 
+function DaKuangHtS_ps() {
+	$("#choiceShuxinDaKuang").show("fade", 300);
+}
+
+function DaKuangHtS_sp() {
+	$("#choiceZhaoshiDaKuang").show("fade", 300);
+}
+
+//直接选择顶栏
 function XZbottomFF(Bu) {
 	if (Bu === 1) {
 		if (XZbottom === 0) {
-			document.getElementById("choiceZhaoshiDaKuang").style.display = "none";
-			document.getElementById("choiceShuxinDaKuang").style.display = "inline";
 			choicePB_h();
+			//document.getElementById("choiceZhaoshiDaKuang").style.display = "none";
+			//document.getElementById("choiceShuxinDaKuang").style.display = "inline";
+			$("#choiceZhaoshiDaKuang").hide("fade", 300, DaKuangHtS_ps);
 			if (PaiBei === "Taiji") {
 				document.getElementById("choicePaiBei").setAttribute("class", "choicePaiBei cPBTaiji");
 			}
@@ -80,11 +96,62 @@ function XZbottomFF(Bu) {
 		}
 	} else {
 		if (XZbottom === 1) {
-			document.getElementById("choiceZhaoshiDaKuang").style.display = "inline";
-			document.getElementById("choiceShuxinDaKuang").style.display = "none";
+			//document.getElementById("choiceZhaoshiDaKuang").style.display = "inline";
+			//document.getElementById("choiceShuxinDaKuang").style.display = "none";
+			$("#choiceShuxinDaKuang").hide("fade", 300, DaKuangHtS_sp);
 			document.getElementById("choiceJinDuLan_XZpaibei").setAttribute("class", "choiceJinDuLanButtom red");
 			document.getElementById("choiceJinDuLan_XZshuxin").setAttribute("class", "choiceJinDuLanButtom gray");
 			XZbottom = 0;
 		}
+	}
+}
+
+// “+-”号 点击
+function SXtiaozheng(shuxin, a) {
+	if (a === 0) {
+		switch (shuxin) {
+			case "Liliang":
+				if(SX_Liliang > 0){
+					SX_Liliang = SX_Liliang - 1 ;
+					SX_Sum = SX_Sum + 1;
+					$("#DianshuDaKuang_TTR").html(SX_Sum);
+					$("#DianshuDaKuang_TR2_Liliang").html(SX_Liliang);
+				}
+				break;
+			case "Minjie":
+				if(SX_Minjie > 0){
+					SX_Minjie = SX_Minjie - 1 ;
+					SX_Sum = SX_Sum + 1;
+					$("#DianshuDaKuang_TTR").html(SX_Sum);
+					$("#DianshuDaKuang_TR2_Minjie").html(SX_Minjie);
+				}
+				break;
+			case "Zhili":
+				if(SX_Zhili > 0){
+					SX_Zhili = SX_Zhili - 1 ;
+					SX_Sum = SX_Sum + 1;
+					$("#DianshuDaKuang_TTR").html(SX_Sum);
+					$("#DianshuDaKuang_TR2_Zhili").html(SX_Zhili);
+				}
+				break;
+			case "Tizhi":
+				if(SX_Tizhi > 0){
+					SX_Tizhi = SX_Tizhi - 1 ;
+					SX_Sum = SX_Sum + 1;
+					$("#DianshuDaKuang_TTR").html(SX_Sum);
+					$("#DianshuDaKuang_TR2_Tizhi").html(SX_Tizhi);
+				}
+				break;
+			case "Pinheng":
+				if(SX_Pinheng > 0){
+					SX_Pinheng = SX_Pinheng - 1 ;
+					SX_Sum = SX_Sum + 1;
+					$("#DianshuDaKuang_TTR").html(SX_Sum);
+					$("#DianshuDaKuang_TR2_Pinheng").html(SX_Pinheng);
+				}
+				break;
+		}
+	} else {
+
 	}
 }

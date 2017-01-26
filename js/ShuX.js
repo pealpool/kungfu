@@ -8,6 +8,13 @@
 	alert(aaa.gongjiJC(a));
 };
 */
+var SX_Sum = 3;
+var SX_Liliang = 2;
+var SX_Minjie = 2;
+var SX_Zhili = 2;
+var SX_Tizhi = 2;
+var SX_Pinheng = 2;
+
 
 //力量
 var ShuX_LiLiang = {
