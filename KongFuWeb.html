@@ -11,11 +11,12 @@
 <script src="./js/PB_Taiquan.js"></script>
 <script src="./js/PB_All.js"></script>
 <script src="./js/ShuX.js"></script>
+<script src="./js/Hp.js"></script>
 </head>
 <body>
 <div class="mask"> </div>
 <div class="choiceBigKuang" id="choiceBigKuang">
-  <div class="choiceDaBiaoTi" id="choiceDaBiaoTi" onClick="abcde(5)">聚 · 功夫</div>
+  <div class="choiceDaBiaoTi" id="choiceDaBiaoTi">聚 · 功夫</div>
   <div class="choicePaiBei cPBTaiji" id="choicePaiBei">
     <div class="choiceJinDuLan">
       <div class="choiceJinDuLanButtomK">
@@ -30,7 +31,7 @@
         <div class="choiceJinDuLanButtom gray" id="choiceJinDuLan_XZwancheng">完成</div>
       </div>
     </div>
-    <div class="choiceZhaoshiDaKuang" id="choiceZhaoshiDaKuang">
+    <div id="choiceZhaoshiDaKuang">
       <div class="choiceZhaoshiZhongKuang">
         <div class="choiceZhaoshiXiaoKuangW">
           <div class="choiceZhaoshiXiaoKuang" id="choiceZhaoshishiXiaoKuang_Taiji" onMouseOver="ChangechoiceBG('Taiji')" onClick="choicePB('Taiji')">太极</div>
@@ -52,6 +53,16 @@
       </div>
       <div class="shi" id="shi_01">攻击具有渗透性，高消削。</div>
       <div class="shi" id="shi_02">借力打力，化解冲击力。</div>
+    </div>
+    <div id="choiceShuxinDaKuang"  style="display: none;">
+    	<div class="choiceShuxinZhongKuangL">
+			<div class="ZhaoshiMinXiao Kuang10 ZsMX_Taiji" id="ZhaoshiMinXiao">太<br />极</div>
+    		<div class="DianshuDaKuang Kuang10">
+    			<div class="DianshuTitle_shengyu">剩余点数：</div>
+    		</div>
+    		<div class="DianshuguanlianKuang Kuang10">攻击力加成</div>
+    	</div>
+    	<div class="choiceShuxinZhongKuangR Kuang10">攻</div>
     </div>
   </div>
 </div>

@@ -62,28 +62,23 @@ html, body {
 	width: 960px;
 	height: 555px;
 	background-color: #eeeeee;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
-	-ms-border-radius:5px;
-	-o-border-radius:5px;
-	border-radius:5px;
+	border-radius: 5px;
 	box-shadow: 1px 1px 30px 0 rgba(0, 0, 0, 0.1);
 	margin-top: -40px;
 	z-index: 1100;
 	position: absolute;
 	transition: all 650ms cubic-bezier(0, 0, 0.07, 1.04) 0ms;
 }
-.cPBTaiji{
-	background-image:url(../Img/image/cPBTaiji.png);
+.cPBTaiji {
+	background-image: url(../Img/image/cPBTaiji.png);
 	background-repeat: no-repeat;
 	background-position: 575px 235px;
 }
-.cPBTaiquan{
-	background-image:url(../Img/image/cPBTaiquan.png);
+.cPBTaiquan {
+	background-image: url(../Img/image/cPBTaiquan.png);
 	background-repeat: no-repeat;
 	background-position: 500px 295px;
 }
-
 /*选择进度栏*/
 .choiceJinDuLan {
 	height: 60px;
@@ -104,11 +99,7 @@ html, body {
 	color: #fff;
 	width: 90px;
 	height: 37px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	-ms-border-radius: 3px;
-	-o-border-radius: 3px;
-	border-radius:3px ;
+	border-radius: 3px;
 }
 .red {
 	background: #a50000;
@@ -136,28 +127,24 @@ html, body {
 	height: 37px;
 }
 /*选择招式中框*/
-.choiceZhaoshiZhongKuang{
+.choiceZhaoshiZhongKuang {
 	margin-left: 30px;
 	width: 920px;
 	height: 265px;
 }
 /*选择招式小框外*/
-.choiceZhaoshiXiaoKuangW{
+.choiceZhaoshiXiaoKuangW {
 	float: left;
 	width: 230px;
 	height: 220px;
 }
 /*选择招式小框*/
-.choiceZhaoshiXiaoKuang{
+.choiceZhaoshiXiaoKuang {
 	width: 210px;
 	height: 210px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-ms-border-radius: 10px;
-	-o-border-radius: 10px;
 	border-radius: 10px;
 	box-shadow: 3px 3px 30px 0 rgba(0, 0, 0, 0.15);
-/*	transition: all 450ms cubic-bezier(0, 0, 0.07, 1.04) 0ms;*/
+	/*	transition: all 450ms cubic-bezier(0, 0, 0.07, 1.04) 0ms;*/
 	transition: all 150ms;
 	cursor: pointer;
 	font-size: 52px;
@@ -165,49 +152,47 @@ html, body {
 	text-align: center;
 	background: #fff;
 }
-.choiceZhaoshiXiaoKuang:hover{
+.choiceZhaoshiXiaoKuang:hover {
 	margin-top: 3px;
 	margin-left: 2px;
 	box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.15);
 	font-weight: bold;
 }
-
-#choiceZhaoshishiXiaoKuang_Taiji{
+#choiceZhaoshishiXiaoKuang_Taiji {
 	color: #4388bb;
-	background-image:url(../Img/image/choiceZhaoshishiXiaoKuang_Taiji.png);
+	background-image: url(../Img/image/choiceZhaoshishiXiaoKuang_Taiji.png);
 	background-repeat: no-repeat;
 	background-position: 90px 98px;
 }
-#choiceZhaoshishiXiaoKuang_Taiji:active{
-	background-color:#8ec4ec ;
+#choiceZhaoshishiXiaoKuang_Taiji:active {
+	background-color: #8ec4ec;
 }
-
-#choiceZhaoshishiXiaoKuang_Taiquan{
+#choiceZhaoshishiXiaoKuang_Taiquan {
 	color: #a50000;
-	background-image:url(../Img/image/choiceZhaoshishiXiaoKuang_Taiquan.png);
+	background-image: url(../Img/image/choiceZhaoshishiXiaoKuang_Taiquan.png);
 	background-repeat: no-repeat;
 	background-position: 65px 125px;
 }
-#choiceZhaoshishiXiaoKuang_Taiquan:active{
-	background-color:#eb8d8d ;
+#choiceZhaoshishiXiaoKuang_Taiquan:active {
+	background-color: #eb8d8d;
 }
-.choiceZhaoshishiXiaoKuang_QIdai{
+.choiceZhaoshishiXiaoKuang_QIdai {
 	color: #c1c1c1;
 	background-color: #F0F0F0;
 	background-image: url(../Img/image/choiceZhaoshishiXiaoKuang_QIdai.png);
 	background-repeat: no-repeat;
 	background-position: center;
 }
-.choiceZhaoshishiXiaoKuang_QIdai:hover{
+.choiceZhaoshishiXiaoKuang_QIdai:hover {
 	margin-top: 0px;
 	margin-left: 0px;
 	box-shadow: 3px 3px 30px 0 rgba(0, 0, 0, 0.15);
 	cursor: default;
-	font-weight:normal;
+	font-weight: normal;
 }
 /*诗题目外框*/
-.shi_TimuK{
-	position:absolute;
+.shi_TimuK {
+	position: absolute;
 	left: 50%;
 	text-align: center;
 	width: 180px;
@@ -215,34 +200,90 @@ html, body {
 	margin-top: 20px;
 	margin-left: -90px;
 }
-.shi_Timu{
+.shi_Timu {
 	float: left;
 	width: 130px;
 	height: 20px;
 	font-size: 18px;
-	letter-spacing:5px;
+	letter-spacing: 5px;
 }
-.shi_hr{
+.shi_hr {
 	float: left;
 	margin-top: 12px;
 	height: 1px;
 	width: 25px;
-	border:none;
+	border: none;
 }
-.shi{
+.shi {
 	font-size: 16px;
-	position:absolute;
+	position: absolute;
 	left: 50%;
 	text-align: center;
 	width: 250px;
 	height: 30px;
 	margin-left: -118px;
 }
-#shi_01{
+#shi_01 {
 	margin-top: 70px;
-	letter-spacing:3px;
+	letter-spacing: 3px;
 }
-#shi_02{
+#shi_02 {
 	margin-top: 100px;
-	letter-spacing:3px;
+	letter-spacing: 3px;
+}
+/*圆角白框*/
+.Kuang10 {
+	border-radius: 10px;
+	background-color: #fff;
+	border: 1px solid #e2e2e2;
+	box-shadow: 3px 3px 15px 0 rgba(0,0,0,0.05);
+}
+/*选择属性大框 左*/
+.choiceShuxinZhongKuangL {
+	float: left;
+	width: 380px;
+	margin-left: 30px;
+}
+/*选择属性大框 右*/
+.choiceShuxinZhongKuangR {
+	float: left;
+	width: 515px;
+	height: 440px;
+}
+/*选择属性 派别名称牌*/
+.ZhaoshiMinXiao {
+	float: left;
+	width: 100px;
+	height: 175px;
+	font-size: 51px;
+	text-align: center;
+	padding-top: 35px;
+}
+/*选择属性 派别名称牌 太极*/
+.ZsMX_Taiji{
+	background-image: url(../Img/image/choiceZhaoshishiXiaoKuang_Taiji.png);
+	background-repeat: no-repeat;
+	background-position: -20px 98px;
+	color: #4388bb;
+}
+/*选择属性 派别名称牌 太拳*/
+.ZsMX_Taiquan{
+	background-image: url(../Img/image/choiceZhaoshishiXiaoKuang_Taiquan.png);
+	background-repeat: no-repeat;
+	background-position: -38px 125px;
+	color: #a50000;
+}
+/*选择属性 点数大框*/
+.DianshuDaKuang{
+	float: left;
+	margin-left: 10px;
+	width: 255px;
+	height: 210px;
+}
+/*点数关联框*/
+.DianshuguanlianKuang{
+	float: left;
+	margin-top: 10px;
+	width: 370px;
+	height: 218px;
 }

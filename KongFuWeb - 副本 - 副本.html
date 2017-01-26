@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>聚 · 功夫</title>
+<link type="text/css" href="./css/base.css" rel="stylesheet">
+<link type="text/css" href="./css/cssTaiji.css" rel="stylesheet" id="cssStyle">
+<style></style>
+<script src="./js/buttonScript.js"></script>
+<script src="./js/PB_Taiji.js"></script>
+<script src="./js/PB_Taiquan.js"></script>
+<script src="./js/PB_All.js"></script>
+<script src="./js/ShuX.js"></script>
+<script src="./js/Hp.js"></script>
+</head>
+<body>
+<div class="mask"> </div>
+<div class="choiceBigKuang" id="choiceBigKuang">
+  <div class="choiceDaBiaoTi" id="choiceDaBiaoTi">聚 · 功夫</div>
+  <div class="choicePaiBei cPBTaiji" id="choicePaiBei">
+    <div class="choiceJinDuLan">
+      <div class="choiceJinDuLanButtomK">
+        <div class="choiceJinDuLanButtom red" id="choiceJinDuLan_XZpaibei" onClick="XZbottomFF(0)">选择派别</div>
+      </div>
+      <div class="choiceJinDuLan_Jt"><img src="Img/image/rightarrow.png" width="31" height="26" alt=""/></div>
+      <div class="choiceJinDuLanButtomK">
+        <div class="choiceJinDuLanButtom gray" id="choiceJinDuLan_XZshuxin" onClick="XZbottomFF(1)">选择属性</div>
+      </div>
+      <div class="choiceJinDuLan_Jt"><img src="Img/image/rightarrow.png" width="31" height="26" alt=""/></div>
+      <div class="choiceJinDuLanButtomK">
+        <div class="choiceJinDuLanButtom gray" id="choiceJinDuLan_XZwancheng">完成</div>
+      </div>
+    </div>
+    <div class="choiceZhaoshiDaKuang" id="choiceZhaoshiDaKuang">
+      <div class="choiceZhaoshiZhongKuang">
+        <div class="choiceZhaoshiXiaoKuangW">
+          <div class="choiceZhaoshiXiaoKuang" id="choiceZhaoshishiXiaoKuang_Taiji" onMouseOver="ChangechoiceBG('Taiji')" onClick="choicePB('Taiji')">太极</div>
+        </div>
+        <div class="choiceZhaoshiXiaoKuangW">
+          <div class="choiceZhaoshiXiaoKuang" id="choiceZhaoshishiXiaoKuang_Taiquan" onMouseOver="ChangechoiceBG('Taiquan')" onClick="choicePB('Taiquan')">泰拳</div>
+        </div>
+        <div class="choiceZhaoshiXiaoKuangW">
+          <div class="choiceZhaoshiXiaoKuang choiceZhaoshishiXiaoKuang_QIdai" id="choiceZhaoshishiXiaoKuang_Liumai">六脉</div>
+        </div>
+        <div class="choiceZhaoshiXiaoKuangW">
+          <div class="choiceZhaoshiXiaoKuang choiceZhaoshishiXiaoKuang_QIdai" id="choiceZhaoshishiXiaoKuang_Wudu">五毒</div>
+        </div>
+      </div>
+      <div class="shi_TimuK">
+      	<hr class="shi_hr">
+      	<div class="shi_Timu" id="shi_Timu">太极</div>
+      	<hr class="shi_hr">
+      </div>
+      <div class="shi" id="shi_01">攻击具有渗透性，高消削。</div>
+      <div class="shi" id="shi_02">借力打力，化解冲击力。</div>
+    </div>
+  </div>
+</div>
+<div class="baseKuang blur" id="baseKuang"> 2</div>
+</body>
+</html>

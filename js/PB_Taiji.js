@@ -27,10 +27,7 @@
 var TJ_panda = {
 	createNew: function(){
 		var tj_panda = {};
-		tj_panda.fAttBw_zhou = 0;
-		tj_panda.fAttBw_quan = 1;
-		tj_panda.fAttBw_xi = 0;
-		tj_panda.fAttBw_jiao = 0;
+		tj_panda.fAttBw = "手";
 		//发出攻击部位
 		tj_panda.AttBw_tou = 1;
 		tj_panda.AttBw_xiong = 1;
@@ -81,10 +78,7 @@ var TJ_panda = {
 var TJ_tuishou = {
 	createNew: function(){
 		var tj_tuishou = {};
-		tj_tuishou.fAttBw_zhou = 0;
-		tj_tuishou.fAttBw_quan = 1;
-		tj_tuishou.fAttBw_xi = 0;
-		tj_tuishou.fAttBw_jiao = 0;
+		tj_tuishou.fAttBw = "手";
 		//发出攻击部位
 		tj_tuishou.AttBw_tou = 0;
 		tj_tuishou.AttBw_xiong = 1;
@@ -135,10 +129,7 @@ var TJ_tuishou = {
 var TJ_qingna = {
 	createNew: function(){
 		var tj_qingna = {};
-		tj_qingna.fAttBw_zhou = 0;
-		tj_qingna.fAttBw_quan = 1;
-		tj_qingna.fAttBw_xi = 0;
-		tj_qingna.fAttBw_jiao = 0;
+		tj_qingna.fAttBw = "手";
 		//发出攻击部位
 		tj_qingna.AttBw_tou = 0;
 		tj_qingna.AttBw_xiong = 0;
@@ -190,10 +181,7 @@ var TJ_qingna = {
 var TJ_shuangfong = {
 	createNew: function(){
 		var tj_shuangfong = {};
-		tj_shuangfong.fAttBw_zhou = 0;
-		tj_shuangfong.fAttBw_quan = 1;
-		tj_shuangfong.fAttBw_xi = 0;
-		tj_shuangfong.fAttBw_jiao = 0;
+		tj_shuangfong.fAttBw = "手";
 		//发出攻击部位
 		tj_shuangfong.AttBw_tou = 1;
 		tj_shuangfong.AttBw_xiong = 0;
@@ -244,10 +232,7 @@ var TJ_shuangfong = {
 var TJ_zhoudicui = {
 	createNew: function(){
 		var tj_zhoudicui = {};
-		tj_zhoudicui.fAttBw_zhou = 0;
-		tj_zhoudicui.fAttBw_quan = 1;
-		tj_zhoudicui.fAttBw_xi = 0;
-		tj_zhoudicui.fAttBw_jiao = 0;
+		tj_zhoudicui.fAttBw = "手";
 		//发出攻击部位
 		tj_zhoudicui.AttBw_tou = 0;
 		tj_zhoudicui.AttBw_xiong = 1;
@@ -298,10 +283,7 @@ var TJ_zhoudicui = {
 var TJ_paocui = {
 	createNew: function(){
 		var tj_paocui = {};
-		tj_paocui.fAttBw_zhou = 0;
-		tj_paocui.fAttBw_quan = 1;
-		tj_paocui.fAttBw_xi = 0;
-		tj_paocui.fAttBw_jiao = 0;
+		tj_paocui.fAttBw = "手";
 		//发出攻击部位
 		tj_paocui.AttBw_tou = 0;
 		tj_paocui.AttBw_xiong = 1;
@@ -352,10 +334,7 @@ var TJ_paocui = {
 var TJ_yuanyangtui = {
 	createNew: function(){
 		var tj_yuanyangtui = {};
-		tj_yuanyangtui.fAttBw_zhou = 0;
-		tj_yuanyangtui.fAttBw_quan = 0;
-		tj_yuanyangtui.fAttBw_xi = 0;
-		tj_yuanyangtui.fAttBw_jiao = 1;
+		tj_yuanyangtui.fAttBw = "脚";
 		//发出攻击部位
 		tj_yuanyangtui.AttBw_tou = 1;
 		tj_yuanyangtui.AttBw_xiong = 1;
@@ -407,10 +386,7 @@ var TJ_yuanyangtui = {
 var TJ_banshuai = {
 	createNew: function(){
 		var tj_banshuai = {};
-		tj_banshuai.fAttBw_zhou = 0;
-		tj_banshuai.fAttBw_quan = 0;
-		tj_banshuai.fAttBw_xi = 0;
-		tj_banshuai.fAttBw_jiao = 1;
+		tj_banshuai.fAttBw = "脚";
 		//发出攻击部位
 		tj_banshuai.AttBw_tou = 0;
 		tj_banshuai.AttBw_xiong = 0;

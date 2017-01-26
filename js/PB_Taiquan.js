@@ -5,10 +5,7 @@
 var TQ_zhiquan = {
 	createNew: function(){
 		var tq_zhiquan = {};
-		tq_zhiquan.fAttBw_zhou = 0;
-		tq_zhiquan.fAttBw_quan = 1;
-		tq_zhiquan.fAttBw_xi = 0;
-		tq_zhiquan.fAttBw_jiao = 0;
+		tq_zhiquan.fAttBw = "手";
 		//发出攻击部位
 		tq_zhiquan.AttBw_tou = 1;
 		tq_zhiquan.AttBw_xiong = 1;
@@ -59,10 +56,7 @@ var TQ_zhiquan = {
 var TQ_lrgouquan = {
 	createNew: function(){
 		var tq_lrgouquan = {};
-		tq_lrgouquan.fAttBw_zhou = 0;
-		tq_lrgouquan.fAttBw_quan = 1;
-		tq_lrgouquan.fAttBw_xi = 0;
-		tq_lrgouquan.fAttBw_jiao = 0;
+		tq_lrgouquan.fAttBw = "手";
 		//发出攻击部位
 		tq_lrgouquan.AttBw_tou = 1;
 		tq_lrgouquan.AttBw_xiong = 0;
@@ -113,10 +107,7 @@ var TQ_lrgouquan = {
 var TQ_sgouquan = {
 	createNew: function(){
 		var tq_sgouquan = {};
-		tq_sgouquan.fAttBw_zhou = 0;
-		tq_sgouquan.fAttBw_quan = 1;
-		tq_sgouquan.fAttBw_xi = 0;
-		tq_sgouquan.fAttBw_jiao = 0;
+		tq_sgouquan.fAttBw = "手";
 		//发出攻击部位
 		tq_sgouquan.AttBw_tou = 1;
 		tq_sgouquan.AttBw_xiong = 1;
@@ -167,10 +158,7 @@ var TQ_sgouquan = {
 var TQ_zhouji = {
 	createNew: function(){
 		var tq_zhouji = {};
-		tq_zhouji.fAttBw_zhou = 1;
-		tq_zhouji.fAttBw_quan = 0;
-		tq_zhouji.fAttBw_xi = 0;
-		tq_zhouji.fAttBw_jiao = 0;
+		tq_zhouji.fAttBw = "肘";
 		//发出攻击部位
 		tq_zhouji.AttBw_tou = 1;
 		tq_zhouji.AttBw_xiong = 1;
@@ -221,10 +209,7 @@ var TQ_zhouji = {
 var TQ_xizhuang = {
 	createNew: function(){
 		var tq_xizhuang = {};
-		tq_xizhuang.fAttBw_zhou = 0;
-		tq_xizhuang.fAttBw_quan = 0;
-		tq_xizhuang.fAttBw_xi = 1;
-		tq_xizhuang.fAttBw_jiao = 0;
+		tq_xizhuang.fAttBw = "膝";
 		//发出攻击部位
 		tq_xizhuang.AttBw_tou = 1;
 		tq_xizhuang.AttBw_xiong = 1;
@@ -275,10 +260,7 @@ var TQ_xizhuang = {
 var TQ_dengtui = {
 	createNew: function(){
 		var tq_dengtui = {};
-		tq_dengtui.fAttBw_zhou = 0;
-		tq_dengtui.fAttBw_quan = 0;
-		tq_dengtui.fAttBw_xi = 0;
-		tq_dengtui.fAttBw_jiao = 1;
+		tq_dengtui.fAttBw = "脚";
 		//发出攻击部位
 		tq_dengtui.AttBw_tou = 1;
 		tq_dengtui.AttBw_xiong = 1;
@@ -329,10 +311,7 @@ var TQ_dengtui = {
 var TQ_shaotui = {
 	createNew: function(){
 		var tq_shaotui = {};
-		tq_shaotui.fAttBw_zhou = 0;
-		tq_shaotui.fAttBw_quan = 0;
-		tq_shaotui.fAttBw_xi = 0;
-		tq_shaotui.fAttBw_jiao = 1;
+		tq_shaotui.fAttBw = "脚";
 		//发出攻击部位
 		tq_shaotui.AttBw_tou = 1;
 		tq_shaotui.AttBw_xiong = 0;
