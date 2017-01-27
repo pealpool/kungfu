@@ -111,40 +111,40 @@ function SXtiaozheng(shuxin, a) {
 	if (a === 0) {
 		switch (shuxin) {
 			case "Liliang":
-				if(SX_Liliang > 0){
-					SX_Liliang = SX_Liliang - 1 ;
+				if (SX_Liliang > 0) {
+					SX_Liliang = SX_Liliang - 1;
 					SX_Sum = SX_Sum + 1;
 					$("#DianshuDaKuang_TTR").html(SX_Sum);
 					$("#DianshuDaKuang_TR2_Liliang").html(SX_Liliang);
 				}
 				break;
 			case "Minjie":
-				if(SX_Minjie > 0){
-					SX_Minjie = SX_Minjie - 1 ;
+				if (SX_Minjie > 0) {
+					SX_Minjie = SX_Minjie - 1;
 					SX_Sum = SX_Sum + 1;
 					$("#DianshuDaKuang_TTR").html(SX_Sum);
 					$("#DianshuDaKuang_TR2_Minjie").html(SX_Minjie);
 				}
 				break;
 			case "Zhili":
-				if(SX_Zhili > 0){
-					SX_Zhili = SX_Zhili - 1 ;
+				if (SX_Zhili > 0) {
+					SX_Zhili = SX_Zhili - 1;
 					SX_Sum = SX_Sum + 1;
 					$("#DianshuDaKuang_TTR").html(SX_Sum);
 					$("#DianshuDaKuang_TR2_Zhili").html(SX_Zhili);
 				}
 				break;
 			case "Tizhi":
-				if(SX_Tizhi > 0){
-					SX_Tizhi = SX_Tizhi - 1 ;
+				if (SX_Tizhi > 0) {
+					SX_Tizhi = SX_Tizhi - 1;
 					SX_Sum = SX_Sum + 1;
 					$("#DianshuDaKuang_TTR").html(SX_Sum);
 					$("#DianshuDaKuang_TR2_Tizhi").html(SX_Tizhi);
 				}
 				break;
 			case "Pinheng":
-				if(SX_Pinheng > 0){
-					SX_Pinheng = SX_Pinheng - 1 ;
+				if (SX_Pinheng > 0) {
+					SX_Pinheng = SX_Pinheng - 1;
 					SX_Sum = SX_Sum + 1;
 					$("#DianshuDaKuang_TTR").html(SX_Sum);
 					$("#DianshuDaKuang_TR2_Pinheng").html(SX_Pinheng);
@@ -152,6 +152,47 @@ function SXtiaozheng(shuxin, a) {
 				break;
 		}
 	} else {
-
+		switch (shuxin) {
+			case "Liliang":
+				if (SX_Sum > 0 && SX_Liliang<5) {
+					SX_Liliang ++;
+					SX_Sum --;
+					$("#DianshuDaKuang_TTR").html(SX_Sum);
+					$("#DianshuDaKuang_TR2_Liliang").html(SX_Liliang);
+				}
+				break;
+			case "Minjie":
+				if (SX_Minjie < 5 && SX_Sum > 0) {
+					SX_Minjie ++;
+					SX_Sum --;
+					$("#DianshuDaKuang_TTR").html(SX_Sum);
+					$("#DianshuDaKuang_TR2_Minjie").html(SX_Minjie);
+				}
+				break;
+			case "Zhili":
+				if (SX_Zhili < 5 && SX_Sum > 0) {
+					SX_Zhili ++;
+					SX_Sum --;
+					$("#DianshuDaKuang_TTR").html(SX_Sum);
+					$("#DianshuDaKuang_TR2_Zhili").html(SX_Zhili);
+				}
+				break;
+			case "Tizhi":
+				if (SX_Tizhi < 5 && SX_Sum > 0) {
+					SX_Tizhi ++;
+					SX_Sum --;
+					$("#DianshuDaKuang_TTR").html(SX_Sum);
+					$("#DianshuDaKuang_TR2_Tizhi").html(SX_Tizhi);
+				}
+				break;
+			case "Pinheng":
+				if (SX_Pinheng < 3 && SX_Sum > 0) {
+					SX_Pinheng  ++;
+					SX_Sum  --;
+					$("#DianshuDaKuang_TTR").html(SX_Sum);
+					$("#DianshuDaKuang_TR2_Pinheng").html(SX_Pinheng);
+				}
+				break;
+		}
 	}
 }

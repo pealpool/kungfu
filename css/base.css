@@ -348,7 +348,6 @@ html, body {
 	font-family: arial;
 	line-height: 24px;
 	color: #7d7d7d;
-	cursor: pointer;
 }
 /*力量等内框 右 数字*/
 .DianshuDaKuang_TR2 {
@@ -368,12 +367,13 @@ html, body {
 	font-weight: bold;
 	font-family: arial;
 	color: #7d7d7d;
-	cursor: pointer;
 }
 /*力量等内框 右 +- 号能hover*/
 .DDK_T_jj:hover {
 	-webkit-text-stroke: 2px;
+	cursor: pointer;
 }
 .DDK_T_jj:active {
 	-webkit-text-stroke: 0px;
+	cursor: pointer;
 }
