@@ -289,11 +289,13 @@ html, body {
 	height: 210px;
 }
 /*点数关联框*/
-.DianshuguanlianKuang {
+.DianshuguanlianDaKuang {
 	float: left;
 	margin-top: 10px;
 	width: 370px;
-	height: 218px;
+	height: 210px;
+	padding-top: 8px;
+	line-height: 21px;
 }
 /*点数框 剩余点数行*/
 .DianshuDaKuang_T0 {
@@ -307,7 +309,7 @@ html, body {
 .DianshuDaKuang_T {
 	width: 200px;
 	height: 26px;
-	margin-left: 26px;
+	margin-left: 25px;
 	margin-top: 5px;
 	line-height: 26px;
 }
@@ -347,7 +349,7 @@ html, body {
 	font-weight: bold;
 	font-family: arial;
 	line-height: 24px;
-	color: #7d7d7d;
+	color: #E8E8E8;
 }
 /*力量等内框 右 数字*/
 .DianshuDaKuang_TR2 {
@@ -366,9 +368,12 @@ html, body {
 	font-size: 24px;
 	font-weight: bold;
 	font-family: arial;
-	color: #7d7d7d;
+	color: #E8E8E8;
 }
 /*力量等内框 右 +- 号能hover*/
+.DDK_T_jj{
+	color: #7d7d7d;
+}
 .DDK_T_jj:hover {
 	-webkit-text-stroke: 2px;
 	cursor: pointer;
@@ -376,4 +381,51 @@ html, body {
 .DDK_T_jj:active {
 	-webkit-text-stroke: 0px;
 	cursor: pointer;
+}
+
+.DianshuguanlianXiaoKuangL {
+	float: left;
+	width: 170px;
+	height: 21px;
+	margin-left: 11px;
+	margin-top: 4px;	
+}
+.DianshuguanlianXiaoKuangS{
+	background: linear-gradient(left, rgb(255, 255, 255), rgb(235, 235, 235) 10%, rgb(235, 235, 235) 90%, rgb(255, 255, 255) 100%);
+	background: -o-linear-gradient(left, rgb(255, 255, 255), rgb(235, 235, 235) 10%, rgb(235, 235, 235) 90%, rgb(255, 255, 255) 100%);
+	background: -ms-linear-gradient(left, rgb(255, 255, 255), rgb(235, 235, 235) 10%, rgb(235, 235, 235) 90%, rgb(255, 255, 255) 100%);
+	background: -moz-linear-gradient(left, rgb(255, 255, 255), rgb(235, 235, 235) 10%, rgb(235, 235, 235) 90%, rgb(255, 255, 255) 100%);
+	background: -webkit-linear-gradient(left, rgb(255, 255, 255), rgb(235, 235, 235) 10%, rgb(235, 235, 235) 90%, rgb(255, 255, 255) 100%);
+}
+
+.DianshuguanlianXiaoKuangL1 {
+	float: left;
+	width: 100px;
+	margin-left: 15px;
+}
+
+.DianshuguanlianXiaoKuangL2 {
+	float: left;
+}
+
+.DianshuguanlianXiaoKuangR {
+	float: left;
+	width: 175px;
+	height: 21px;
+	margin-left: 4px;
+	margin-top: 4px;
+}
+
+.DianshuguanlianXiaoKuangR1 {
+	float: left;
+	width: 115px;
+	margin-left: 15px;
+}
+
+.DianshuguanlianXiaoKuangR2 {
+	float: left;
+}
+.redfont{
+	color: #a50000;
+	font-weight: bold;
 }

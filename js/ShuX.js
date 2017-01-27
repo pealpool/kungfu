@@ -2,12 +2,11 @@
 //http://www.ruanyifeng.com/blog/2012/07/three_ways_to_define_a_javascript_class.html
 "use strict";
 
+/*function abcde(){
+	var aaaf = ShuX_LiLiang.createNew();
+	alert(aaaf.gongjiJC(SX_Liliang));
+};*/
 
-/*function abcde(a){
-	var aaa = ShuX_LiLiang.createNew();
-	alert(aaa.gongjiJC(a));
-};
-*/
 var SX_Sum = 3;
 var SX_Liliang = 2;
 var SX_Minjie = 2;
@@ -15,6 +14,11 @@ var SX_Zhili = 2;
 var SX_Tizhi = 2;
 var SX_Pinheng = 2;
 
+//var mSX_LiLiang = ShuX_LiLiang.createNew();
+//var mSX_Minjie = ShuX_Minjie.createNew();
+//var mSX_Zhili = ShuX_Zhili.createNew();
+//var mSX_Tizhi = ShuX_Tizhi.createNew();
+//var mSX_Pinheng = ShuX_Pinheng.createNew();
 
 //力量
 var ShuX_LiLiang = {
@@ -338,7 +342,7 @@ var ShuX_MinJie = {
 	}
 };
 
-//智力
+/*//智力
 var ShuX_ZhiLi = {
 	createNew: function () {
 		var shuX_ZhiLi = {};
@@ -395,10 +399,73 @@ var ShuX_ZhiLi = {
 		};		
 		return shuX_ZhiLi;
 	}
+};*/
+
+
+
+var ShuX_ZhiLi = {
+	createNew: function () {
+		var wwa = {};
+		//暴击几率
+		wwa.baojijilv = function (a) {
+			switch (a) {
+				case 5:
+					return 0.25;
+				case 4:
+					return 0.2;
+				case 3:
+					return 0.15;
+				case 2:
+					return 0.1;
+				case 1:
+					return 0.05;
+				case 0:
+					return 0;
+			}
+		};
+		//攻击力浮动几率
+		wwa.gongjifudongjilv = function (a) {
+			switch (a) {
+				case 5:
+					return 0.8;
+				case 4:
+					return 0.7;
+				case 3:
+					return 0.6;
+				case 2:
+					return 0.5;
+				case 1:
+					return 0.3;
+				case 0:
+					return 0.2;
+			}
+		};
+		//命中率修正
+		wwa.minzhongxz = function (a) {
+			switch (a) {
+				case 5:
+					return 0.1;
+				case 4:
+					return 0.05;
+				case 3:
+					return 0.02;
+				case 2:
+					return 0;
+				case 1:
+					return -0.05;
+				case 0:
+					return -0.1;
+			}
+		};		
+		return wwa;
+	}
 };
 
+
+
+
 //体质
-var ShuX_TiZhi = {
+/*var ShuX_TiZhi = {
 	createNew: function () {
 		var shuX_TiZhi = {};
 		//防御后反伤
@@ -451,17 +518,7 @@ var ShuX_TiZhi = {
 				case 0:
 					return 0;
 			}
-		};
-		
-		
-		
-		
-		
-
-		
-		
-
-		
+		};	
 		//【防御率】头
 		shuX_TiZhi.FY_tou = function (a) {
 			switch (a) {
@@ -686,6 +743,302 @@ var ShuX_TiZhi = {
 		return shuX_TiZhi;
 	}
 };
+*/
+
+
+
+var ShuX_Tizhi = {
+	createNew: function () {
+		var shuX_TiZhi = {};
+		//防御后反伤
+		shuX_TiZhi.fangyufanshuang = function (a) {
+			switch (a) {
+				case 5:
+					return 0.5;
+				case 4:
+					return 0.4;
+				case 3:
+					return 0.3;
+				case 2:
+					return 0.2;
+				case 1:
+					return 0.1;
+				case 0:
+					return 0;
+			}
+		};
+		//一般反伤
+		shuX_TiZhi.yibanfanshuang = function (a) {
+			switch (a) {
+				case 5:
+					return 0.2;
+				case 4:
+					return 0.15;
+				case 3:
+					return 0.1;
+				case 2:
+					return 0.05;
+				case 1:
+					return 0;
+				case 0:
+					return 0;
+			}
+		};
+		//防御后稳定反弹
+		shuX_TiZhi.wendinfantan = function (a) {
+			switch (a) {
+				case 5:
+					return 0.8;
+				case 4:
+					return 0.5;
+				case 3:
+					return 0.4;
+				case 2:
+					return 0.3;
+				case 1:
+					return 0.2;
+				case 0:
+					return 0;
+			}
+		};	
+		//【防御率】头
+		shuX_TiZhi.FY_tou = function (a) {
+			switch (a) {
+				case 5:
+					return 0.8;
+				case 4:
+					return 0.65;
+				case 3:
+					return 0.55;
+				case 2:
+					return 0.45;
+				case 1:
+					return 0.35;
+				case 0:
+					return 0.25;
+			}
+		};
+		//【防御率】胸部
+		shuX_TiZhi.FY_xiong = function (a) {
+			switch (a) {
+				case 5:
+					return 0.8;
+				case 4:
+					return 0.65;
+				case 3:
+					return 0.55;
+				case 2:
+					return 0.45;
+				case 1:
+					return 0.35;
+				case 0:
+					return 0.25;
+			}
+		};
+		//【防御率】腹部
+		shuX_TiZhi.FY_fu = function (a) {
+			switch (a) {
+				case 5:
+					return 0.7;
+				case 4:
+					return 0.55;
+				case 3:
+					return 0.45;
+				case 2:
+					return 0.35;
+				case 1:
+					return 0.25;
+				case 0:
+					return 0.15;
+			}
+		};
+		//【防御率】两腰
+		shuX_TiZhi.FY_yao = function (a) {
+			switch (a) {
+				case 5:
+					return 0.6;
+				case 4:
+					return 0.45;
+				case 3:
+					return 0.35;
+				case 2:
+					return 0.25;
+				case 1:
+					return 0.15;
+				case 0:
+					return 0.05;
+			}
+		};	
+		//【防御率】肩关节
+		shuX_TiZhi.FY_jian = function (a) {
+			switch (a) {
+				case 5:
+					return 0.7;
+				case 4:
+					return 0.55;
+				case 3:
+					return 0.45;
+				case 2:
+					return 0.35;
+				case 1:
+					return 0.25;
+				case 0:
+					return 0.15;
+			}
+		};
+		//【防御率】上臂
+		shuX_TiZhi.FY_shangbi = function (a) {
+			switch (a) {
+				case 5:
+					return 0.9;
+				case 4:
+					return 0.8;
+				case 3:
+					return 0.75;
+				case 2:
+					return 0.70;
+				case 1:
+					return 0.65;
+				case 0:
+					return 0.6;
+			}
+		};
+		//【防御率】前臂
+		shuX_TiZhi.FY_qianbi = function (a) {
+			switch (a) {
+				case 5:
+					return 0.9;
+				case 4:
+					return 0.8;
+				case 3:
+					return 0.75;
+				case 2:
+					return 0.70;
+				case 1:
+					return 0.65;
+				case 0:
+					return 0.6;
+			}
+		};
+		//【防御率】手肘
+		shuX_TiZhi.FY_zhou = function (a) {
+			switch (a) {
+				case 5:
+					return 0.7;
+				case 4:
+					return 0.55;
+				case 3:
+					return 0.45;
+				case 2:
+					return 0.35;
+				case 1:
+					return 0.25;
+				case 0:
+					return 0.15;
+			}
+		};
+		//【防御率】手腕
+		shuX_TiZhi.FY_shouwan = function (a) {
+			switch (a) {
+				case 5:
+					return 0.2;
+				case 4:
+					return 0.1;
+				case 3:
+					return 0;
+				case 2:
+					return 0;
+				case 1:
+					return 0;
+				case 0:
+					return 0;
+			}
+		};
+		//【防御率】大腿
+		shuX_TiZhi.FY_datui = function (a) {
+			switch (a) {
+				case 5:
+					return 0.5;
+				case 4:
+					return 0.35;
+				case 3:
+					return 0.25;
+				case 2:
+					return 0.20;
+				case 1:
+					return 0.10;
+				case 0:
+					return 0;
+			}
+		};
+		//【防御率】小腿
+		shuX_TiZhi.FY_xiaotui = function (a) {
+			switch (a) {
+				case 5:
+					return 0.8;
+				case 4:
+					return 0.65;
+				case 3:
+					return 0.55;
+				case 2:
+					return 0.45;
+				case 1:
+					return 0.35;
+				case 0:
+					return 0.25;
+			}
+		};
+		//【防御率】膝关节
+		shuX_TiZhi.FY_xi = function (a) {
+			switch (a) {
+				case 5:
+					return 0.8;
+				case 4:
+					return 0.65;
+				case 3:
+					return 0.55;
+				case 2:
+					return 0.45;
+				case 1:
+					return 0.35;
+				case 0:
+					return 0.25;
+			}
+		};
+		//【防御率】踝关节
+		shuX_TiZhi.FY_kuai = function (a) {
+			switch (a) {
+				case 5:
+					return 0.1;
+				case 4:
+					return 0.1;
+				case 3:
+					return 0;
+				case 2:
+					return 0;
+				case 1:
+					return 0;
+				case 0:
+					return 0;
+			}
+		};
+		return shuX_TiZhi;
+	}
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //平衡

@@ -22,8 +22,6 @@
 <script>
 
 </script>
-
-
 </head>
 <body>
 <div class="mask"> </div>
@@ -59,55 +57,117 @@
         </div>
       </div>
       <div class="shi_TimuK">
-      	<hr class="shi_hr">
-      	<div class="shi_Timu" id="shi_Timu">太极</div>
-      	<hr class="shi_hr">
+        <hr class="shi_hr">
+        <div class="shi_Timu" id="shi_Timu">太极</div>
+        <hr class="shi_hr">
       </div>
       <div class="shi" id="shi_01">攻击具有渗透性，高消削。</div>
       <div class="shi" id="shi_02">借力打力，化解冲击力。</div>
     </div>
     <div id="choiceShuxinDaKuang"  style="display: none;">
-    	<div class="choiceShuxinZhongKuangL">
-			<div class="ZhaoshiMinXiao Kuang10 ZsMX_Taiji" id="ZhaoshiMinXiao">太<br />极</div>
-    		<div class="DianshuDaKuang Kuang10">
-    			<div class="DianshuDaKuang_T0">
-    				<div class="DianshuDaKuang_TTL">剩余点数：</div>
-    				<div id="DianshuDaKuang_TTR">3</div>
-    			</div>
-    			<div class="DianshuDaKuang_T">
-    				<div class="DianshuDaKuang_TL">力量：</div>
-    				<div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Liliang" onClick="SXtiaozheng('Liliang',0)">-</div>
-    				<div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Liliang">2</div>
-    				<div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Liliang" onClick="SXtiaozheng('Liliang',1)">+</div>
-    			</div>
-    			<div class="DianshuDaKuang_T">
-    				<div class="DianshuDaKuang_TL">敏捷：</div>
-    				<div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Minjie" onClick="SXtiaozheng('Minjie',0)">-</div>
-    				<div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Minjie">2</div>
-    				<div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Minjie" onClick="SXtiaozheng('Minjie',1)">+</div>
-    			</div>
-    			<div class="DianshuDaKuang_T">
-    				<div class="DianshuDaKuang_TL">智力：</div>
-    				<div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Zhili" onClick="SXtiaozheng('Zhili',0)">-</div>
-    				<div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Zhili">2</div>
-    				<div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Zhili" onClick="SXtiaozheng('Zhili',1)">+</div>
-    			</div>
-    			<div class="DianshuDaKuang_T">
-    				<div class="DianshuDaKuang_TL">体质：</div>
-    				<div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Tizhi" onClick="SXtiaozheng('Tizhi',0)">-</div>
-    				<div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Tizhi">2</div>
-    				<div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Tizhi" onClick="SXtiaozheng('Tizhi',1)">+</div>
-    			</div>
-    			<div class="DianshuDaKuang_T">
-    				<div class="DianshuDaKuang_TL">平衡：</div>
-    				<div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Pinheng" onClick="SXtiaozheng('Pinheng',0)">-</div>
-    				<div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Pinheng">2</div>
-    				<div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Pinheng" onClick="SXtiaozheng('Pinheng',1)">+</div>
-    			</div>
-    		</div>
-    		<div class="DianshuguanlianKuang Kuang10">攻击力加成</div>
-    	</div>
-    	<div class="choiceShuxinZhongKuangR Kuang10">攻</div>
+      <div class="choiceShuxinZhongKuangL">
+        <div class="ZhaoshiMinXiao Kuang10 ZsMX_Taiji" id="ZhaoshiMinXiao">太<br />
+          极</div>
+        <div class="DianshuDaKuang Kuang10">
+          <div class="DianshuDaKuang_T0">
+            <div class="DianshuDaKuang_TTL">剩余点数：</div>
+            <div id="DianshuDaKuang_TTR">3</div>
+          </div>
+          <div class="DianshuDaKuang_T" id="DianshuDaKuang_T_Liliang">
+            <div class="DianshuDaKuang_TL">力量：</div>
+            <div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Liliang" onClick="SXtiaozheng('Liliang',0)">-</div>
+            <div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Liliang">2</div>
+            <div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Liliang" onClick="SXtiaozheng('Liliang',1)">+</div>
+          </div>
+          <div class="DianshuDaKuang_T" id="DianshuDaKuang_T_Minjie">
+            <div class="DianshuDaKuang_TL">敏捷：</div>
+            <div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Minjie" onClick="SXtiaozheng('Minjie',0)">-</div>
+            <div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Minjie">2</div>
+            <div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Minjie" onClick="SXtiaozheng('Minjie',1)">+</div>
+          </div>
+          <div class="DianshuDaKuang_T" id="DianshuDaKuang_T_Zhili">
+            <div class="DianshuDaKuang_TL">智力：</div>
+            <div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Zhili" onClick="SXtiaozheng('Zhili',0)">-</div>
+            <div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Zhili">2</div>
+            <div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Zhili" onClick="SXtiaozheng('Zhili',1)">+</div>
+          </div>
+          <div class="DianshuDaKuang_T" id="DianshuDaKuang_T_Tizhi">
+            <div class="DianshuDaKuang_TL">体质：</div>
+            <div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Tizhi" onClick="SXtiaozheng('Tizhi',0)">-</div>
+            <div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Tizhi">2</div>
+            <div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Tizhi" onClick="SXtiaozheng('Tizhi',1)">+</div>
+          </div>
+          <div class="DianshuDaKuang_T" id="DianshuDaKuang_T_Pinheng">
+            <div class="DianshuDaKuang_TL">平衡：</div>
+            <div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Pinheng" onClick="SXtiaozheng('Pinheng',0)">-</div>
+            <div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Pinheng">2</div>
+            <div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Pinheng" onClick="SXtiaozheng('Pinheng',1)">+</div>
+          </div>
+        </div>
+        <div class="DianshuguanlianDaKuang Kuang10">
+          <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_gongjiJC">
+            <div class="DianshuguanlianXiaoKuangL1">攻击力加成：</div>
+            <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_gongjiJC">+0%</div>
+          </div>
+          <div class="DianshuguanlianXiaoKuangR" id="DianshuguanlianXiaoKuang_fangyujilv">
+            <div class="DianshuguanlianXiaoKuangR1">防御几率：</div>
+            <div class="DianshuguanlianXiaoKuangR2" id="DianshuguanlianXiaoKuang_s_fangyujilv">3</div>
+          </div>
+          <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_baojishanghai">
+            <div class="DianshuguanlianXiaoKuangL1">暴击伤害：</div>
+            <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_baojishanghai">+45%</div>
+          </div>
+          <div class="DianshuguanlianXiaoKuangR" id="DianshuguanlianXiaoKuang_yibanfanshuang">
+            <div class="DianshuguanlianXiaoKuangR1">一般反伤：</div>
+            <div class="DianshuguanlianXiaoKuangR2" id="DianshuguanlianXiaoKuang_s_yibanfanshuang">5%</div>
+          </div>
+          <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_shudu">
+            <div class="DianshuguanlianXiaoKuangL1">速度</div>
+            <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_shudu">2</div>
+          </div>
+          <div class="DianshuguanlianXiaoKuangR" id="DianshuguanlianXiaoKuang_fangyufanshuang">
+            <div class="DianshuguanlianXiaoKuangR1">防御后反伤：</div>
+            <div class="DianshuguanlianXiaoKuangR2" id="DianshuguanlianXiaoKuang_s_fangyufanshuang">20%</div>
+          </div>
+          <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_shanbi">
+            <div class="DianshuguanlianXiaoKuangL1">闪避：</div>
+            <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_shanbi">2</div>
+          </div>
+          <div class="DianshuguanlianXiaoKuangR" id="DianshuguanlianXiaoKuang_wendinfantan">
+            <div class="DianshuguanlianXiaoKuangR1">防御反弹稳定：</div>
+            <div class="DianshuguanlianXiaoKuangR2" id="DianshuguanlianXiaoKuang_s_wendinfantan">30%</div>
+          </div>
+          <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_baojijilv">
+            <div class="DianshuguanlianXiaoKuangL1">暴击几率：</div>
+            <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_baojijilv">10%</div>
+          </div>
+          <div class="DianshuguanlianXiaoKuangR" id="DianshuguanlianXiaoKuang_wendinzhi">
+            <div class="DianshuguanlianXiaoKuangR1">稳定度：</div>
+            <div class="DianshuguanlianXiaoKuangR2" id="DianshuguanlianXiaoKuang_s_wendinzhi">120</div>
+          </div>
+          <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_gongjifudongjilv">
+            <div class="DianshuguanlianXiaoKuangL1">攻击正浮动率：</div>
+            <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_gongjifudongjilv">50%</div>
+          </div>
+          <div class="DianshuguanlianXiaoKuangR" id="DianshuguanlianXiaoKuang_wendinhuifu">
+            <div class="DianshuguanlianXiaoKuangR1">恢复稳定/0.1s：</div>
+            <div class="DianshuguanlianXiaoKuangR2" id="DianshuguanlianXiaoKuang_s_wendinhuifu"> 2</div>
+          </div>
+          <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_minzhongxz">
+            <div class="DianshuguanlianXiaoKuangL1">命中修正：</div>
+            <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_minzhongxz">0%</div>
+          </div>
+          <div class="DianshuguanlianXiaoKuangR">
+            <div class="DianshuguanlianXiaoKuangR1"> </div>
+            <div class="DianshuguanlianXiaoKuangR2"> </div>
+          </div>
+          <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_qinbao">
+            <div class="DianshuguanlianXiaoKuangL1">情报：</div>
+            <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_qinbao">细致</div>
+          </div>
+        </div>
+      </div>
+      <div class="choiceShuxinZhongKuangR Kuang10">攻</div>
     </div>
   </div>
 </div>
