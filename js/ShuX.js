@@ -63,6 +63,292 @@ var ShuX_LiLiang = {
 };
 
 //敏捷
+/*var ShuX_MinJie = {
+	createNew: function () {
+		var shuX_MinJie = {};
+		//速度加成，前摇
+		shuX_MinJie.shuduJC_Q = function (a) {
+			switch (a) {
+				case 5:
+					return -0.1;
+				case 4:
+					return 0;
+				case 3:
+					return 0;
+				case 2:
+					return 0;
+				case 1:
+					return 0;
+				case 0:
+					return 0.1;
+			}
+		};
+		//速度加成，招式用时
+		shuX_MinJie.shuduJC_Z = function (a) {
+			switch (a) {
+				case 5:
+					return -0.1;
+				case 4:
+					return -0.1;
+				case 3:
+					return -0.1;
+				case 2:
+					return 0;
+				case 1:
+					return 0;
+				case 0:
+					return 0;
+			}
+		};
+		//速度加成，后摇
+		shuX_MinJie.shuduJC_H = function (a) {
+			switch (a) {
+				case 5:
+					return -0.1;
+				case 4:
+					return -0.1;
+				case 3:
+					return 0;
+				case 2:
+					return 0;
+				case 1:
+					return 0.1;
+				case 0:
+					return 0.1;
+			}
+		};
+		//【闪避】头
+		shuX_MinJie.SB_tou = function (a) {
+			switch (a) {
+				case 5:
+					return 0.8;
+				case 4:
+					return 0.65;
+				case 3:
+					return 0.55;
+				case 2:
+					return 0.45;
+				case 1:
+					return 0.35;
+				case 0:
+					return 0.25;
+			}
+		};
+		//【闪避】胸部
+		shuX_MinJie.SB_xiong = function (a) {
+			switch (a) {
+				case 5:
+					return 0.5;
+				case 4:
+					return 0.35;
+				case 3:
+					return 0.25;
+				case 2:
+					return 0.20;
+				case 1:
+					return 0.10;
+				case 0:
+					return 0;
+			}
+		};
+		//【闪避】腹部
+		shuX_MinJie.SB_fu = function (a) {
+			switch (a) {
+				case 5:
+					return 0.6;
+				case 4:
+					return 0.45;
+				case 3:
+					return 0.35;
+				case 2:
+					return 0.25;
+				case 1:
+					return 0.15;
+				case 0:
+					return 0.05;
+			}
+		};
+		//【闪避】两腰
+		shuX_MinJie.SB_yao = function (a) {
+			switch (a) {
+				case 5:
+					return 0.6;
+				case 4:
+					return 0.45;
+				case 3:
+					return 0.35;
+				case 2:
+					return 0.25;
+				case 1:
+					return 0.15;
+				case 0:
+					return 0.05;
+			}
+		};	
+		//【闪避】肩关节
+		shuX_MinJie.SB_jian = function (a) {
+			switch (a) {
+				case 5:
+					return 0.7;
+				case 4:
+					return 0.55;
+				case 3:
+					return 0.45;
+				case 2:
+					return 0.35;
+				case 1:
+					return 0.25;
+				case 0:
+					return 0.15;
+			}
+		};
+		//【闪避】上臂
+		shuX_MinJie.SB_shangbi = function (a) {
+			switch (a) {
+				case 5:
+					return 0.4;
+				case 4:
+					return 0.25;
+				case 3:
+					return 0.15;
+				case 2:
+					return 0.05;
+				case 1:
+					return 0;
+				case 0:
+					return 0;
+			}
+		};
+		//【闪避】前臂
+		shuX_MinJie.SB_qianbi = function (a) {
+			switch (a) {
+				case 5:
+					return 0.2;
+				case 4:
+					return 0.1;
+				case 3:
+					return 0;
+				case 2:
+					return 0;
+				case 1:
+					return 0;
+				case 0:
+					return 0;
+			}
+		};
+		//【闪避】手肘
+		shuX_MinJie.SB_zhou = function (a) {
+			switch (a) {
+				case 5:
+					return 0.9;
+				case 4:
+					return 0.8;
+				case 3:
+					return 0.75;
+				case 2:
+					return 0.7;
+				case 1:
+					return 0.65;
+				case 0:
+					return 0.6;
+			}
+		};
+		//【闪避】手腕
+		shuX_MinJie.SB_shouwan = function (a) {
+			switch (a) {
+				case 5:
+					return 0.9;
+				case 4:
+					return 0.8;
+				case 3:
+					return 0.75;
+				case 2:
+					return 0.7;
+				case 1:
+					return 0.65;
+				case 0:
+					return 0.6;
+			}
+		};
+		//【闪避】大腿
+		shuX_MinJie.SB_datui = function (a) {
+			switch (a) {
+				case 5:
+					return 0.4;
+				case 4:
+					return 0.25;
+				case 3:
+					return 0.15;
+				case 2:
+					return 0.05;
+				case 1:
+					return 0;
+				case 0:
+					return 0;
+			}
+		};
+		//【闪避】小腿
+		shuX_MinJie.SB_xiaotui = function (a) {
+			switch (a) {
+				case 5:
+					return 0.5;
+				case 4:
+					return 0.35;
+				case 3:
+					return 0.25;
+				case 2:
+					return 0.2;
+				case 1:
+					return 0.1;
+				case 0:
+					return 0;
+			}
+		};
+		//【闪避】膝关节
+		shuX_MinJie.SB_xi = function (a) {
+			switch (a) {
+				case 5:
+					return 0.4;
+				case 4:
+					return 0.25;
+				case 3:
+					return 0.15;
+				case 2:
+					return 0.05;
+				case 1:
+					return 0;
+				case 0:
+					return 0;
+			}
+		};
+		//【闪避】踝关节
+		shuX_MinJie.SB_kuai = function (a) {
+			switch (a) {
+				case 5:
+					return 0.8;
+				case 4:
+					return 0.65;
+				case 3:
+					return 0.55;
+				case 2:
+					return 0.45;
+				case 1:
+					return 0.35;
+				case 0:
+					return 0.25;
+			}
+		};
+		return shuX_MinJie;
+	}
+};
+*/
+
+
+
+
+
+
+
 var ShuX_MinJie = {
 	createNew: function () {
 		var shuX_MinJie = {};
@@ -341,6 +627,19 @@ var ShuX_MinJie = {
 		return shuX_MinJie;
 	}
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*//智力
 var ShuX_ZhiLi = {

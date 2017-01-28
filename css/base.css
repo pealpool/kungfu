@@ -429,3 +429,19 @@ html, body {
 	color: #a50000;
 	font-weight: bold;
 }
+/*对JQ ui提示栏的修改*/
+.ui-tooltip,.ui-tooltip div{
+	font-size: 10px;
+}
+.tooltip-fffmydivL{
+	float: left;
+	width: 50px;
+	height: 12px;
+}
+.tooltip-fffmydivR{
+	float: left;
+	width: 50px;
+	height: 12px;
+	color: #a50000;
+	font-weight: bold;
+}
