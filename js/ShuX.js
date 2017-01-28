@@ -1042,7 +1042,7 @@ var ShuX_Tizhi = {
 
 
 //平衡
-var ShuX_PinHeng = {
+/*var ShuX_PinHeng = {
 	createNew: function () {
 		var shuX_PinHeng = {};
 		//稳定
@@ -1072,5 +1072,42 @@ var ShuX_PinHeng = {
 			}
 		};
 		return shuX_PinHeng;
+	}
+};*/
+
+
+
+
+
+var ShuX_PinHeng = {
+	createNew: function () {
+		var oop = {};
+		//稳定
+		oop.wendinzhi = function (a) {
+			switch (a) {
+				case 3:
+					return 150;
+				case 2:
+					return 120;
+				case 1:
+					return 100;
+				case 0:
+					return 70;
+			}
+		};
+		//每0.1秒恢复稳定
+		oop.wendinhuifu = function (a) {
+			switch (a) {
+				case 3:
+					return 3;
+				case 2:
+					return 2;
+				case 1:
+					return 1;
+				case 0:
+					return 1;
+			}
+		};
+		return oop;
 	}
 };

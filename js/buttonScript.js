@@ -107,11 +107,11 @@ function XZbottomFF(Bu) {
 	}
 }
 //加"+"号
-function Add_zh(a){
+function Add_zh(a) {
 	var b;
-	if(a > 0){
-		b = "+" + a;	
-	}else{
+	if (a > 0) {
+		b = "+" + a;
+	} else {
 		b = a;
 	}
 	return b;
@@ -123,7 +123,7 @@ function SXtiaozheng(shuxin, a) {
 	//var mSX_Minjie = ShuX_Minjie.createNew();
 	var mSX_ZhiLi = ShuX_ZhiLi.createNew();
 	var mSX_Tizhi = ShuX_Tizhi.createNew();
-	//var mSX_Pinheng = ShuX_Pinheng.createNew();
+	var mSX_Pinheng = ShuX_PinHeng.createNew();
 	if (a === 0) {
 		switch (shuxin) {
 			case "Liliang":
@@ -152,9 +152,9 @@ function SXtiaozheng(shuxin, a) {
 					SX_Sum++;
 					$("#DianshuDaKuang_TTR").html(SX_Sum);
 					$("#DianshuDaKuang_TR2_Zhili").html(SX_Zhili);
-					$("#DianshuguanlianXiaoKuang_s_baojijilv").html(mSX_ZhiLi.baojijilv(SX_Zhili)*100 + "%");
-					$("#DianshuguanlianXiaoKuang_s_gongjifudongjilv").html(mSX_ZhiLi.gongjifudongjilv(SX_Zhili)*100 + "%");
-					$("#DianshuguanlianXiaoKuang_s_minzhongxz").html(Add_zh(mSX_ZhiLi.minzhongxz(SX_Zhili)*100) + "%");
+					$("#DianshuguanlianXiaoKuang_s_baojijilv").html(mSX_ZhiLi.baojijilv(SX_Zhili) * 100 + "%");
+					$("#DianshuguanlianXiaoKuang_s_gongjifudongjilv").html(mSX_ZhiLi.gongjifudongjilv(SX_Zhili) * 100 + "%");
+					$("#DianshuguanlianXiaoKuang_s_minzhongxz").html(Add_zh(mSX_ZhiLi.minzhongxz(SX_Zhili) * 100) + "%");
 					$("#DianshuguanlianXiaoKuang_s_qinbao").html(SX_Zhili);
 				}
 				break;
@@ -165,9 +165,9 @@ function SXtiaozheng(shuxin, a) {
 					$("#DianshuDaKuang_TTR").html(SX_Sum);
 					$("#DianshuDaKuang_TR2_Tizhi").html(SX_Tizhi);
 					$("#DianshuguanlianXiaoKuang_s_fangyujilv").html(SX_Tizhi);
-					$("#DianshuguanlianXiaoKuang_s_yibanfanshuang").html(mSX_Tizhi.yibanfanshuang(SX_Tizhi)*100 + "%");
-					$("#DianshuguanlianXiaoKuang_s_fangyufanshuang").html(mSX_Tizhi.fangyufanshuang(SX_Tizhi)*100 + "%");
-					$("#DianshuguanlianXiaoKuang_s_wendinfantan").html(mSX_Tizhi.wendinfantan(SX_Tizhi)*100 + "%");
+					$("#DianshuguanlianXiaoKuang_s_yibanfanshuang").html(mSX_Tizhi.yibanfanshuang(SX_Tizhi) * 100 + "%");
+					$("#DianshuguanlianXiaoKuang_s_fangyufanshuang").html(mSX_Tizhi.fangyufanshuang(SX_Tizhi) * 100 + "%");
+					$("#DianshuguanlianXiaoKuang_s_wendinfantan").html(mSX_Tizhi.wendinfantan(SX_Tizhi) * 100 + "%");
 				}
 				break;
 			case "Pinheng":
@@ -176,6 +176,8 @@ function SXtiaozheng(shuxin, a) {
 					SX_Sum++;
 					$("#DianshuDaKuang_TTR").html(SX_Sum);
 					$("#DianshuDaKuang_TR2_Pinheng").html(SX_Pinheng);
+					$("#DianshuguanlianXiaoKuang_s_wendinzhi").html(mSX_Pinheng.wendinzhi(SX_Pinheng));
+					$("#DianshuguanlianXiaoKuang_s_wendinhuifu").html(mSX_Pinheng.wendinhuifu(SX_Pinheng));
 				}
 				break;
 		}
@@ -207,9 +209,9 @@ function SXtiaozheng(shuxin, a) {
 					SX_Sum--;
 					$("#DianshuDaKuang_TTR").html(SX_Sum);
 					$("#DianshuDaKuang_TR2_Zhili").html(SX_Zhili);
-					$("#DianshuguanlianXiaoKuang_s_baojijilv").html(mSX_ZhiLi.baojijilv(SX_Zhili)*100 + "%");
-					$("#DianshuguanlianXiaoKuang_s_gongjifudongjilv").html(mSX_ZhiLi.gongjifudongjilv(SX_Zhili)*100 + "%");
-					$("#DianshuguanlianXiaoKuang_s_minzhongxz").html(Add_zh(mSX_ZhiLi.minzhongxz(SX_Zhili)*100) + "%");
+					$("#DianshuguanlianXiaoKuang_s_baojijilv").html(mSX_ZhiLi.baojijilv(SX_Zhili) * 100 + "%");
+					$("#DianshuguanlianXiaoKuang_s_gongjifudongjilv").html(mSX_ZhiLi.gongjifudongjilv(SX_Zhili) * 100 + "%");
+					$("#DianshuguanlianXiaoKuang_s_minzhongxz").html(Add_zh(mSX_ZhiLi.minzhongxz(SX_Zhili) * 100) + "%");
 					$("#DianshuguanlianXiaoKuang_s_qinbao").html(SX_Zhili);
 				}
 				break;
@@ -220,9 +222,9 @@ function SXtiaozheng(shuxin, a) {
 					$("#DianshuDaKuang_TTR").html(SX_Sum);
 					$("#DianshuDaKuang_TR2_Tizhi").html(SX_Tizhi);
 					$("#DianshuguanlianXiaoKuang_s_fangyujilv").html(SX_Tizhi);
-					$("#DianshuguanlianXiaoKuang_s_yibanfanshuang").html(mSX_Tizhi.yibanfanshuang(SX_Tizhi)*100 + "%");
-					$("#DianshuguanlianXiaoKuang_s_fangyufanshuang").html(mSX_Tizhi.fangyufanshuang(SX_Tizhi)*100 + "%");
-					$("#DianshuguanlianXiaoKuang_s_wendinfantan").html(mSX_Tizhi.wendinfantan(SX_Tizhi)*100 + "%");
+					$("#DianshuguanlianXiaoKuang_s_yibanfanshuang").html(mSX_Tizhi.yibanfanshuang(SX_Tizhi) * 100 + "%");
+					$("#DianshuguanlianXiaoKuang_s_fangyufanshuang").html(mSX_Tizhi.fangyufanshuang(SX_Tizhi) * 100 + "%");
+					$("#DianshuguanlianXiaoKuang_s_wendinfantan").html(mSX_Tizhi.wendinfantan(SX_Tizhi) * 100 + "%");
 				}
 				break;
 			case "Pinheng":
@@ -231,6 +233,8 @@ function SXtiaozheng(shuxin, a) {
 					SX_Sum--;
 					$("#DianshuDaKuang_TTR").html(SX_Sum);
 					$("#DianshuDaKuang_TR2_Pinheng").html(SX_Pinheng);
+					$("#DianshuguanlianXiaoKuang_s_wendinzhi").html(mSX_Pinheng.wendinzhi(SX_Pinheng));
+					$("#DianshuguanlianXiaoKuang_s_wendinhuifu").html(mSX_Pinheng.wendinhuifu(SX_Pinheng));
 				}
 				break;
 		}
@@ -285,8 +289,40 @@ function SXtiaozheng(shuxin, a) {
 
 }
 
-/*关联数值变红*/
+
 $(document).ready(function () {
+
+	//开启tooltip ui;
+	/*	$(function () {
+			$(document).tooltip({
+				position: {
+					my: "left+170"
+				}
+			});
+		});*/
+
+	$(function () {
+		$(document).tooltip({
+			items: "[data-geo], [title]",
+			position: {
+				my: "left+170"
+			},
+			content: function () {
+				var element = $(this);
+				if (element.is("[data-geo]")) {
+					var text = element.text();
+					return "<div style='color:#a50000'>" + text + "</div>";
+				}
+				if (element.is("[title]")) {
+					return element.attr("title");
+				}
+			}
+		});
+	});
+
+
+
+	/*点数-关联数值变红*/
 	$("#DianshuDaKuang_T_Liliang").hover(
 		function () {
 			$("#DianshuguanlianXiaoKuang_gongjiJC").addClass("DianshuguanlianXiaoKuangS");
@@ -373,4 +409,148 @@ $(document).ready(function () {
 			$("#DianshuguanlianXiaoKuang_s_wendinhuifu").removeClass("redfont");
 		}
 	);
+
+
+	/*关联显示信息*/
+	$("#DianshuguanlianXiaoKuang_gongjiJC").hover(
+		function () {
+			$("#DianshuguanlianXiaoKuang_gongjiJC").addClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_gongjiJC").addClass("redfont");
+		},
+		function () {
+			$("#DianshuguanlianXiaoKuang_gongjiJC").removeClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_gongjiJC").removeClass("redfont");
+		}
+	);
+	$("#DianshuguanlianXiaoKuang_baojishanghai").hover(
+		function () {
+			$("#DianshuguanlianXiaoKuang_baojishanghai").addClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_baojishanghai").addClass("redfont");
+		},
+		function () {
+			$("#DianshuguanlianXiaoKuang_baojishanghai").removeClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_baojishanghai").removeClass("redfont");
+		}
+	);
+	$("#DianshuguanlianXiaoKuang_shudu").hover(
+		function () {
+			$("#DianshuguanlianXiaoKuang_shudu").addClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_shudu").addClass("redfont");
+		},
+		function () {
+			$("#DianshuguanlianXiaoKuang_shudu").removeClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_shudu").removeClass("redfont");
+		}
+	);
+	$("#DianshuguanlianXiaoKuang_shanbi").hover(
+		function () {
+			$("#DianshuguanlianXiaoKuang_shanbi").addClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_shanbi").addClass("redfont");
+		},
+		function () {
+			$("#DianshuguanlianXiaoKuang_shanbi").removeClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_shanbi").removeClass("redfont");
+		}
+	);
+	$("#DianshuguanlianXiaoKuang_baojijilv").hover(
+		function () {
+			$("#DianshuguanlianXiaoKuang_baojijilv").addClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_baojijilv").addClass("redfont");
+		},
+		function () {
+			$("#DianshuguanlianXiaoKuang_baojijilv").removeClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_baojijilv").removeClass("redfont");
+		}
+	);
+	$("#DianshuguanlianXiaoKuang_gongjifudongjilv").hover(
+		function () {
+			$("#DianshuguanlianXiaoKuang_gongjifudongjilv").addClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_gongjifudongjilv").addClass("redfont");
+		},
+		function () {
+			$("#DianshuguanlianXiaoKuang_gongjifudongjilv").removeClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_gongjifudongjilv").removeClass("redfont");
+		}
+	);
+	$("#DianshuguanlianXiaoKuang_minzhongxz").hover(
+		function () {
+			$("#DianshuguanlianXiaoKuang_minzhongxz").addClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_minzhongxz").addClass("redfont");
+		},
+		function () {
+			$("#DianshuguanlianXiaoKuang_minzhongxz").removeClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_minzhongxz").removeClass("redfont");
+		}
+	);
+	$("#DianshuguanlianXiaoKuang_qinbao").hover(
+		function () {
+			$("#DianshuguanlianXiaoKuang_qinbao").addClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_qinbao").addClass("redfont");
+		},
+		function () {
+			$("#DianshuguanlianXiaoKuang_qinbao").removeClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_qinbao").removeClass("redfont");
+		}
+	);
+	$("#DianshuguanlianXiaoKuang_fangyujilv").hover(
+		function () {
+			$("#DianshuguanlianXiaoKuang_fangyujilv").addClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_fangyujilv").addClass("redfont");
+		},
+		function () {
+			$("#DianshuguanlianXiaoKuang_fangyujilv").removeClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_fangyujilv").removeClass("redfont");
+		}
+	);
+	$("#DianshuguanlianXiaoKuang_yibanfanshuang").hover(
+		function () {
+			$("#DianshuguanlianXiaoKuang_yibanfanshuang").addClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_yibanfanshuang").addClass("redfont");
+		},
+		function () {
+			$("#DianshuguanlianXiaoKuang_yibanfanshuang").removeClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_yibanfanshuang").removeClass("redfont");
+		}
+	);
+	$("#DianshuguanlianXiaoKuang_fangyufanshuang").hover(
+		function () {
+			$("#DianshuguanlianXiaoKuang_fangyufanshuang").addClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_fangyufanshuang").addClass("redfont");
+		},
+		function () {
+			$("#DianshuguanlianXiaoKuang_fangyufanshuang").removeClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_fangyufanshuang").removeClass("redfont");
+		}
+	);
+	$("#DianshuguanlianXiaoKuang_wendinfantan").hover(
+		function () {
+			$("#DianshuguanlianXiaoKuang_wendinfantan").addClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_wendinfantan").addClass("redfont");
+		},
+		function () {
+			$("#DianshuguanlianXiaoKuang_wendinfantan").removeClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_wendinfantan").removeClass("redfont");
+		}
+	);
+	$("#DianshuguanlianXiaoKuang_wendinzhi").hover(
+		function () {
+			$("#DianshuguanlianXiaoKuang_wendinzhi").addClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_wendinzhi").addClass("redfont");
+		},
+		function () {
+			$("#DianshuguanlianXiaoKuang_wendinzhi").removeClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_wendinzhi").removeClass("redfont");
+		}
+	);
+	$("#DianshuguanlianXiaoKuang_wendinhuifu").hover(
+		function () {
+			$("#DianshuguanlianXiaoKuang_wendinhuifu").addClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_wendinhuifu").addClass("redfont");
+		},
+		function () {
+			$("#DianshuguanlianXiaoKuang_wendinhuifu").removeClass("DianshuguanlianXiaoKuangS");
+			$("#DianshuguanlianXiaoKuang_s_wendinhuifu").removeClass("redfont");
+		}
+	);
+
 });
