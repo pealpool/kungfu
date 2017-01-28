@@ -120,11 +120,11 @@ function Add_zh(a) {
 
 // “+-”号 点击
 function SXtiaozheng(shuxin, a) {
-/*	var mSX_LiLiang = ShuX_LiLiang.createNew();
-	//var mSX_Minjie = ShuX_Minjie.createNew();
-	var mSX_ZhiLi = ShuX_ZhiLi.createNew();
-	var mSX_Tizhi = ShuX_Tizhi.createNew();
-	var mSX_Pinheng = ShuX_PinHeng.createNew();*/
+	/*	var mSX_LiLiang = ShuX_LiLiang.createNew();
+		//var mSX_Minjie = ShuX_Minjie.createNew();
+		var mSX_ZhiLi = ShuX_ZhiLi.createNew();
+		var mSX_Tizhi = ShuX_Tizhi.createNew();
+		var mSX_Pinheng = ShuX_PinHeng.createNew();*/
 	if (a === 0) {
 		switch (shuxin) {
 			case "Liliang":
@@ -156,7 +156,7 @@ function SXtiaozheng(shuxin, a) {
 					$("#DianshuguanlianXiaoKuang_s_baojijilv").html(mSX_ZhiLi.baojijilv(SX_Zhili) * 100 + "%");
 					$("#DianshuguanlianXiaoKuang_s_gongjifudongjilv").html(mSX_ZhiLi.gongjifudongjilv(SX_Zhili) * 100 + "%");
 					$("#DianshuguanlianXiaoKuang_s_minzhongxz").html(Add_zh(mSX_ZhiLi.minzhongxz(SX_Zhili) * 100) + "%");
-					$("#DianshuguanlianXiaoKuang_s_qinbao").html(SX_Zhili);
+					$("#DianshuguanlianXiaoKuang_s_qinbao").html(mSX_ZhiLi.qinbao(SX_Zhili));
 				}
 				break;
 			case "Tizhi":
@@ -213,7 +213,7 @@ function SXtiaozheng(shuxin, a) {
 					$("#DianshuguanlianXiaoKuang_s_baojijilv").html(mSX_ZhiLi.baojijilv(SX_Zhili) * 100 + "%");
 					$("#DianshuguanlianXiaoKuang_s_gongjifudongjilv").html(mSX_ZhiLi.gongjifudongjilv(SX_Zhili) * 100 + "%");
 					$("#DianshuguanlianXiaoKuang_s_minzhongxz").html(Add_zh(mSX_ZhiLi.minzhongxz(SX_Zhili) * 100) + "%");
-					$("#DianshuguanlianXiaoKuang_s_qinbao").html(SX_Zhili);
+					$("#DianshuguanlianXiaoKuang_s_qinbao").html(mSX_ZhiLi.qinbao(SX_Zhili));
 				}
 				break;
 			case "Tizhi":
@@ -285,22 +285,38 @@ function SXtiaozheng(shuxin, a) {
 	} else {
 		$("#DianshuDaKuang_TR1_Pinheng").addClass("DDK_T_jj");
 	}
-
-
-
 }
+
+
+//情报解释 文字输出tooltip
+function qinbaotooltip(a){
+	switch(a){
+		case 5:
+			return "清楚彼此损伤细节，知晓对方能力强弱点。";
+		case 4:
+			return "清楚自身损伤细节及对方伤恙，知晓对方能力强弱点。";
+		case 3:
+			return "清楚自身损伤细节及对方伤恙。";
+		case 2:
+			return "清楚自身损伤细节";
+		default:
+			return "老子只需知道打！";
+	}
+}
+
+
 
 
 $(document).ready(function () {
 
-	
+
 	window.mSX_LiLiang = ShuX_LiLiang.createNew();
 	window.mSX_Minjie = ShuX_MinJie.createNew();
 	window.mSX_ZhiLi = ShuX_ZhiLi.createNew();
 	window.mSX_Tizhi = ShuX_Tizhi.createNew();
 	window.mSX_Pinheng = ShuX_PinHeng.createNew();
-	
-	
+
+
 	//开启tooltip ui;
 	/*	$(function () {
 			$(document).tooltip({
@@ -327,37 +343,37 @@ $(document).ready(function () {
 				}*/
 				if (element.is("[title]")) {
 					return element.attr("title");
-				}else if (element.is("[title_gongjiJC]")) {
-					return "攻击招式的攻击力 " + "<strong style='color:#a50000'>" + Add_zh(Math.round((mSX_LiLiang.gongjiJC(SX_Liliang) - 1) * 100)) + "%" +  "</strong>";
-				}else if (element.is("[title_fangyujilv]")) {
-					return "<div style='color:#a50000'>" + element.attr("id") +  "</div>";
-				}else if (element.is("[title_baojishanghai]")) {
-					return "攻击招式的暴击伤害 " + "<strong style='color:#a50000'>" + Add_zh(Math.round((mSX_LiLiang.baojishanghai(SX_Liliang) - 1) * 100)) + "%" +  "</strong>";
-				}else if (element.is("[title_yibanfanshuang]")) {
-					return "攻击招式命中目标且未被防御时，招式伤害的 " + "<strong style='color:#a50000'>" + mSX_Tizhi.yibanfanshuang(SX_Tizhi) * 100 + "%" +  "</strong>" + " 会无视防御反弹给攻击者。<p>反弹的伤害由攻击者招式发出的部位及上级连带部位平均分摊。</p><p style='color:#7d7d7d; line-height:0px; text-align:right'>*杀敌一万，自损三千。 —— 孙子</p>";
-				}else if (element.is("[title_shudu]")) {
-					return "攻击前摇： <strong style='color:#a50000'>" + Add_zh(mSX_Minjie.shuduJC_Q(SX_Minjie))  + "s</strong><p>攻击时长：<strong style='color:#a50000'>"  + Add_zh(mSX_Minjie.shuduJC_Z(SX_Minjie))  + "s</strong></p><p>攻击时长：<strong style='color:#a50000'>" + Add_zh(mSX_Minjie.shuduJC_H(SX_Minjie))  + "s</strong></p>";
-				}else if (element.is("[title_fangyufanshuang]")) {
-					return "攻击招式命中目标且被防御时，招式伤害的 " + "<strong style='color:#a50000'>" + mSX_Tizhi.fangyufanshuang(SX_Tizhi) * 100 + "%" +  "</strong>" + " 会无视防御反弹给攻击者。<p>反弹的伤害由攻击者招式发出的部位及上级连带部位平均分摊。</p><p style='color:#7d7d7d; line-height:0px; text-align:right'>*杀敌一万，自损三千。 —— 孙子</p>";
-				}else if (element.is("[title_shanbi]")) {
-					return "<div style='margin-bottom:5px'>各部位闪避几率：</div><div class='tooltip-fffmydivL'>头部：</div><div class='tooltip-fffmydivR'>" + mSX_Minjie.SB_tou(SX_Minjie)*100 + "%" + "</div><div class='tooltip-fffmydivL'>胸部：</div><div class='tooltip-fffmydivR'>" + mSX_Minjie.SB_xiong(SX_Minjie)*100 + "%" + "</div>";
-				}else if (element.is("[title_wendinfantan]")) {
-					return "攻击招式命中目标且被防御时，招式的稳定度消削 " + "<strong style='color:#a50000'>" + mSX_Tizhi.wendinfantan(SX_Tizhi) * 100 + "%" +  "</strong>" + " 会无视防御反弹给攻击者。<p style='color:#7d7d7d; line-height:0px; text-align:right'>*杀敌一万，自损三千。 —— 孙子</p>";
-				}else if (element.is("[title_baojijilv]")) {
-					return "攻击招式有 " + "<strong style='color:#a50000'>" + mSX_ZhiLi.baojijilv(SX_Zhili) * 100 + "%" +  "</strong>" + " 几率暴击";
-				}else if (element.is("[title_wendinzhi]")) {
-					return "最大稳定值为 " + "<strong style='color:#a50000'>" + mSX_Pinheng.wendinzhi(SX_Pinheng) +  "</strong>" + "<p>所有招式均消耗稳定值，稳定值不足则不能行动，待恢复够所需稳定值为止。</p>";
-				}else if (element.is("[title_gongjifudongjilv]")) {
-					return "攻击招式攻击力会在 ±10% 间浮动，<br />" + "现有" + "<strong style='color:#a50000'>" + mSX_ZhiLi.gongjifudongjilv(SX_Zhili) * 100 + "%" +  "</strong>" + " 几率为正浮动。";
-				}else if (element.is("[title_wendinhuifu]")) {
+				} else if (element.is("[title_gongjiJC]")) {
+					return "攻击招式的攻击力 " + "<strong style='color:#a50000'>" + Add_zh(Math.round((mSX_LiLiang.gongjiJC(SX_Liliang) - 1) * 100)) + "%" + "</strong>";
+				} else if (element.is("[title_fangyujilv]")) {
+					return "<div style='margin-bottom:5px'>各部位防御几率：</div><div class='tooltip-fffmydiv3L'>头部：</div><div class='tooltip-fffmydiv3R'>" + mSX_Tizhi.FY_tou(SX_Tizhi) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>胸部：</div><div class='tooltip-fffmydiv3R'>" + mSX_Tizhi.FY_xiong(SX_Tizhi) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>腹部：</div><div class='tooltip-fffmydiv3R'>" + mSX_Tizhi.FY_fu(SX_Tizhi) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>腰部：</div><div class='tooltip-fffmydiv3R'>" + mSX_Tizhi.FY_yao(SX_Tizhi) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>肩关节：</div><div class='tooltip-fffmydiv3R'>" + mSX_Tizhi.FY_jian(SX_Tizhi) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>上臂：</div><div class='tooltip-fffmydiv3R'>" + mSX_Tizhi.FY_shangbi(SX_Tizhi) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>前臂：</div><div class='tooltip-fffmydiv3R'>" + mSX_Tizhi.FY_qianbi(SX_Tizhi) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>手肘：</div><div class='tooltip-fffmydiv3R'>" + mSX_Tizhi.FY_zhou(SX_Tizhi) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>手腕：</div><div class='tooltip-fffmydiv3R'>" + mSX_Tizhi.FY_shouwan(SX_Tizhi) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>大腿：</div><div class='tooltip-fffmydiv3R'>" + mSX_Tizhi.FY_datui(SX_Tizhi) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>小腿：</div><div class='tooltip-fffmydiv3R'>" + mSX_Tizhi.FY_xiaotui(SX_Tizhi) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>膝关节：</div><div class='tooltip-fffmydiv3R'>" + mSX_Tizhi.FY_xi(SX_Tizhi) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>踝关节：</div><div class='tooltip-fffmydiv3R'>" + mSX_Tizhi.FY_kuai(SX_Tizhi) * 100 + "%" + "</div>";
+				} else if (element.is("[title_baojishanghai]")) {
+					return "攻击招式的暴击伤害 " + "<strong style='color:#a50000'>" + Add_zh(Math.round((mSX_LiLiang.baojishanghai(SX_Liliang) - 1) * 100)) + "%" + "</strong>";
+				} else if (element.is("[title_yibanfanshuang]")) {
+					return "攻击招式命中目标且未被防御时，招式伤害的 " + "<strong style='color:#a50000'>" + mSX_Tizhi.yibanfanshuang(SX_Tizhi) * 100 + "%" + "</strong>" + " 会无视防御反弹给攻击者。<p>反弹的伤害由攻击者招式发出的部位及上级连带部位平均分摊。</p><p style='color:#7d7d7d; line-height:0px; text-align:right'>*杀敌一万，自损三千。 —— 孙子</p>";
+				} else if (element.is("[title_shudu]")) {
+					return "<div style='width:130px'><div class='tooltip-fffmydiv2L'>攻击前摇：</div><div class='tooltip-fffmydiv2R'>" + Add_zh(mSX_Minjie.shuduJC_Q(SX_Minjie)) + "s</div><div class='tooltip-fffmydiv2L'>招式时长：</div><div class='tooltip-fffmydiv2R'>" + Add_zh(mSX_Minjie.shuduJC_Z(SX_Minjie)) + "s</div><div class='tooltip-fffmydiv2L'>攻击后摇：</div><div class='tooltip-fffmydiv2R'>" + Add_zh(mSX_Minjie.shuduJC_H(SX_Minjie)) + "s</div></div>";
+				} else if (element.is("[title_fangyufanshuang]")) {
+					return "攻击招式命中目标且被防御时，招式伤害的 " + "<strong style='color:#a50000'>" + mSX_Tizhi.fangyufanshuang(SX_Tizhi) * 100 + "%" + "</strong>" + " 会无视防御反弹给攻击者。<p>反弹的伤害由攻击者招式发出的部位及上级连带部位平均分摊。</p><p style='color:#7d7d7d; line-height:0px; text-align:right'>*杀敌一万，自损三千。 —— 孙子</p>";
+				} else if (element.is("[title_shanbi]")) {
+					return "<div style='margin-bottom:5px'>各部位闪避几率：</div><div class='tooltip-fffmydiv3L'>头部：</div><div class='tooltip-fffmydiv3R'>" + mSX_Minjie.SB_tou(SX_Minjie) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>胸部：</div><div class='tooltip-fffmydiv3R'>" + mSX_Minjie.SB_xiong(SX_Minjie) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>腹部：</div><div class='tooltip-fffmydiv3R'>" + mSX_Minjie.SB_fu(SX_Minjie) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>腰部：</div><div class='tooltip-fffmydiv3R'>" + mSX_Minjie.SB_yao(SX_Minjie) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>肩关节：</div><div class='tooltip-fffmydiv3R'>" + mSX_Minjie.SB_jian(SX_Minjie) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>上臂：</div><div class='tooltip-fffmydiv3R'>" + mSX_Minjie.SB_shangbi(SX_Minjie) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>前臂：</div><div class='tooltip-fffmydiv3R'>" + mSX_Minjie.SB_qianbi(SX_Minjie) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>手肘：</div><div class='tooltip-fffmydiv3R'>" + mSX_Minjie.SB_zhou(SX_Minjie) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>手腕：</div><div class='tooltip-fffmydiv3R'>" + mSX_Minjie.SB_shouwan(SX_Minjie) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>大腿：</div><div class='tooltip-fffmydiv3R'>" + mSX_Minjie.SB_datui(SX_Minjie) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>小腿：</div><div class='tooltip-fffmydiv3R'>" + mSX_Minjie.SB_xiaotui(SX_Minjie) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>膝关节：</div><div class='tooltip-fffmydiv3R'>" + mSX_Minjie.SB_xi(SX_Minjie) * 100 + "%" + "</div><div class='tooltip-fffmydiv3L'>踝关节：</div><div class='tooltip-fffmydiv3R'>" + mSX_Minjie.SB_kuai(SX_Minjie) * 100 + "%" + "</div>";
+				} else if (element.is("[title_wendinfantan]")) {
+					return "攻击招式命中目标且被防御时，招式的稳定度消削 " + "<strong style='color:#a50000'>" + mSX_Tizhi.wendinfantan(SX_Tizhi) * 100 + "%" + "</strong>" + " 会无视防御反弹给攻击者。<p style='color:#7d7d7d; line-height:0px; text-align:right'>*杀敌一万，自损三千。 —— 孙子</p>";
+				} else if (element.is("[title_baojijilv]")) {
+					return "攻击招式有 " + "<strong style='color:#a50000'>" + mSX_ZhiLi.baojijilv(SX_Zhili) * 100 + "%" + "</strong>" + " 几率暴击";
+				} else if (element.is("[title_wendinzhi]")) {
+					return "最大稳定值为 " + "<strong style='color:#a50000'>" + mSX_Pinheng.wendinzhi(SX_Pinheng) + "</strong>" + "<p>所有招式均消耗稳定值，稳定值不足则不能行动，待恢复够所需稳定值为止。</p>";
+				} else if (element.is("[title_gongjifudongjilv]")) {
+					return "攻击招式攻击力会在 ±10% 间浮动，<br />" + "现有" + "<strong style='color:#a50000'>" + mSX_ZhiLi.gongjifudongjilv(SX_Zhili) * 100 + "%" + "</strong>" + " 几率为正浮动。";
+				} else if (element.is("[title_wendinhuifu]")) {
 					return "每 0.1s 恢复 " + "<strong style='color:#a50000'>" + mSX_Pinheng.wendinhuifu(SX_Pinheng) + "</strong>" + " 稳定度 <p>稳定度只在无动作时恢复。</p>";
-				}else if (element.is("[title_minzhongxz]")) {
+				} else if (element.is("[title_minzhongxz]")) {
 					return "攻击招式的命中率 " + "<strong style='color:#a50000'>" + Add_zh(mSX_ZhiLi.minzhongxz(SX_Zhili) * 100) + "%" + "</strong>";
-				}else if (element.is("[title_qinbao]")) {
-					return "<div style='color:#a50000'>" + element.attr("id") +  "</div>";
+				} else if (element.is("[title_qinbao]")) {
+					return qinbaotooltip(SX_Zhili);
 				}
-				
-				
+
+
 
 			}
 		});

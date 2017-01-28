@@ -755,7 +755,24 @@ var ShuX_ZhiLi = {
 				case 0:
 					return -0.1;
 			}
-		};		
+		};
+		//情报
+		wwa.qinbao = function (a) {
+			switch (a) {
+				case 5:
+					return "天眼";
+				case 4:
+					return "明敌";
+				case 3:
+					return "觉彼";
+				case 2:
+					return "自知";
+				case 1:
+					return "无知";
+				case 0:
+					return "无知";
+			}
+		};
 		return wwa;
 	}
 };
