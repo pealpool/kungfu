@@ -318,13 +318,6 @@ $(document).ready(function () {
 
 
 	//开启tooltip ui;
-	/*	$(function () {
-			$(document).tooltip({
-				position: {
-					my: "left+170"
-				}
-			});
-		});*/
 	$(function () {
 		$(document).tooltip({
 			items: "[title],[title_gongjiJC],[title_fangyujilv],[title_baojishanghai],[title_yibanfanshuang],[title_shudu],[title_fangyufanshuang],[title_shanbi],[title_wendinfantan],[title_baojijilv],[title_wendinzhi],[title_gongjifudongjilv],[title_wendinhuifu],[title_minzhongxz],[title_qinbao]",
@@ -612,4 +605,26 @@ $(document).ready(function () {
 		}
 	);
 
+	//点数栏变派别说明
+	$("#ZhaoshiMinXiao").hover(
+		function () {
+			if (PaiBei === "Taiji"){
+				$("#DianshuDaKuang_jx").html("太极，<br />以慢打快，以静制动，借力打力。有内伤伤害打击高防御的对手，也有高消削平衡的招式牵制对手。<br />防御方面也有直接化减直接所受伤害的技能。");
+			}else{
+				$("#DianshuDaKuang_jx").html("泰拳，<br />攻击猛锐迅捷，杀伤力大。<br />并具有高抗打能力。");
+			}
+			$("#DianshuDaKuang_jx").show("fade", 300);
+		},
+		function () {
+			$("#DianshuDaKuang_jx").hide("fade", 300);
+		}
+	);
+	
+	
+	
+	
+	
+	
+	
+	
 });
