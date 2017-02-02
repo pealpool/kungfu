@@ -8,16 +8,16 @@
 <link type="text/css" href="./css/cssTaiji.css" rel="stylesheet" id="cssStyle"/>
 <link type="text/css" href="./js/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet"/>
 <style></style>
-<script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="./js/jquery-ui-1.12.1/jquery-ui.js"></script>
-<script type="text/javascript" src="./js/pace.js"></script>
-<script type="text/javascript" src="./js/buttonScript.js"></script>
-<script type="text/javascript" src="./js/PB_Taiji.js"></script>
-<script type="text/javascript" src="./js/PB_Taiquan.js"></script>
-<script type="text/javascript" src="./js/PB_All.js"></script>
-<script type="text/javascript" src="./js/ShuX.js"></script>
-<script type="text/javascript" src="./js/Hp.js"></script>
-<script type="text/javascript">
+<script src="./js/jquery-3.1.1.min.js"></script>
+<script src="./js/jquery-ui-1.12.1/jquery-ui.js"></script>
+<script src="./js/pace.js"></script>
+<script src="./js/buttonScript.js"></script>
+<script src="./js/PB_Taiji.js"></script>
+<script src="./js/PB_Taiquan.js"></script>
+<script src="./js/PB_All.js"></script>
+<script src="./js/ShuX.js"></script>
+<script src="./js/Hp.js"></script>
+<script>
 	
 	window.mSX_LiLiang = ShuX_LiLiang.createNew();
 	window.mSX_Minjie = ShuX_MinJie.createNew();
@@ -45,9 +45,8 @@
 	
 </script>
 
-
-<!--<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>-->
-<!--<script type="text/javascript" src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>-->
+<!--<script  src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<!--<script  src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>-->
 
 </head>
 <body onselectstart ="return false">
@@ -220,6 +219,9 @@
             <div class="zhaoshiTitle11 zhaoshiTitleG">耗衡</div>
             <div class="zhaoshiTitle12 zhaoshiTitleG">特</div>
           </div>
+          
+          
+          
           <div id="zhaoshineirong">
             <div class="zhaoshiLB">
               <div class="zhaoshiLB1 zhaoshiLBG">
@@ -232,14 +234,14 @@
                   <div class="zy_buttomR">右</div>
                 </div>
                 &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG"><script type="text/javascript">document.write(tj_panda.AttW);</script></div>
-              <div class="zhaoshiLB5 zhaoshiLBG">0</div>
-              <div class="zhaoshiLB6 zhaoshiLBG">+0%</div>
-              <div class="zhaoshiLB7 zhaoshiLBG">0.3</div>
-              <div class="zhaoshiLB8 zhaoshiLBG">1</div>
-              <div class="zhaoshiLB9 zhaoshiLBG">0.3</div>
-              <div class="zhaoshiLB10 zhaoshiLBG">5</div>
-              <div class="zhaoshiLB11 zhaoshiLBG">3</div>
+              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW1"></div>
+              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN1"></div>
+              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz1"></div>
+              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ1"></div>
+              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime1"></div>
+              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH1"></div>
+              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt1"></div>
+              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH1"></div>
               <div class="zhaoshiLB12 zhaoshiLBG">
                 <div class="zhaoshite" Taiji_panda_te="">特</div>
               </div>
@@ -255,14 +257,14 @@
                   <div class="zy_buttomR org">右</div>
                 </div>
                 &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG">20</div>
-              <div class="zhaoshiLB5 zhaoshiLBG">30</div>
-              <div class="zhaoshiLB6 zhaoshiLBG">+0%</div>
-              <div class="zhaoshiLB7 zhaoshiLBG">0.3</div>
-              <div class="zhaoshiLB8 zhaoshiLBG">1</div>
-              <div class="zhaoshiLB9 zhaoshiLBG">0.3</div>
-              <div class="zhaoshiLB10 zhaoshiLBG">80</div>
-              <div class="zhaoshiLB11 zhaoshiLBG">10</div>
+              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW2"></div>
+              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN2"></div>
+              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz2"></div>
+              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ2"></div>
+              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime2"></div>
+              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH2"></div>
+              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt2"></div>
+              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH2"></div>
               <div class="zhaoshiLB12 zhaoshiLBG"></div>
             </div>
             <div class="zhaoshiLB">
@@ -276,14 +278,14 @@
                   <div class="zy_buttomR">右</div>
                 </div>
                 &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG">0</div>
-              <div class="zhaoshiLB5 zhaoshiLBG">100</div>
-              <div class="zhaoshiLB6 zhaoshiLBG">+0%</div>
-              <div class="zhaoshiLB7 zhaoshiLBG">0.4</div>
-              <div class="zhaoshiLB8 zhaoshiLBG">1</div>
-              <div class="zhaoshiLB9 zhaoshiLBG">0.3</div>
-              <div class="zhaoshiLB10 zhaoshiLBG">10</div>
-              <div class="zhaoshiLB11 zhaoshiLBG">5</div>
+              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW3"></div>
+              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN3"></div>
+              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz3"></div>
+              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ3"></div>
+              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime3"></div>
+              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH3"></div>
+              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt3"></div>
+              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH3"></div>
               <div class="zhaoshiLB12 zhaoshiLBG"></div>
             </div>
             <div class="zhaoshiLB">
@@ -297,14 +299,14 @@
                   <div class="zy_buttomR org">右</div>
                 </div>
                 &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG">150</div>
-              <div class="zhaoshiLB5 zhaoshiLBG">150</div>
-              <div class="zhaoshiLB6 zhaoshiLBG">-10%</div>
-              <div class="zhaoshiLB7 zhaoshiLBG">0.5</div>
-              <div class="zhaoshiLB8 zhaoshiLBG">1</div>
-              <div class="zhaoshiLB9 zhaoshiLBG">0.5</div>
-              <div class="zhaoshiLB10 zhaoshiLBG">10</div>
-              <div class="zhaoshiLB11 zhaoshiLBG">5</div>
+              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW4"></div>
+              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN4"></div>
+              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz4"></div>
+              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ4"></div>
+              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime4"></div>
+              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH4"></div>
+              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt4"></div>
+              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH4"></div>
               <div class="zhaoshiLB12 zhaoshiLBG"></div>
             </div>
             <div class="zhaoshiLB">
@@ -318,14 +320,14 @@
                   <div class="zy_buttomR">右</div>
                 </div>
                 &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG">120</div>
-              <div class="zhaoshiLB5 zhaoshiLBG">120</div>
-              <div class="zhaoshiLB6 zhaoshiLBG">-5%</div>
-              <div class="zhaoshiLB7 zhaoshiLBG">0.4</div>
-              <div class="zhaoshiLB8 zhaoshiLBG">1</div>
-              <div class="zhaoshiLB9 zhaoshiLBG">0.4</div>
-              <div class="zhaoshiLB10 zhaoshiLBG">15</div>
-              <div class="zhaoshiLB11 zhaoshiLBG">5</div>
+              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW5"></div>
+              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN5"></div>
+              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz5"></div>
+              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ5"></div>
+              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime5"></div>
+              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH5"></div>
+              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt5"></div>
+              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH5"></div>
               <div class="zhaoshiLB12 zhaoshiLBG">
                 <div class="zhaoshite" Taiji_zhoudicui_te="">特</div>
               </div>
@@ -341,14 +343,14 @@
                   <div class="zy_buttomR org">右</div>
                 </div>
                 &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG">100</div>
-              <div class="zhaoshiLB5 zhaoshiLBG">200</div>
-              <div class="zhaoshiLB6 zhaoshiLBG">+0%</div>
-              <div class="zhaoshiLB7 zhaoshiLBG">0.6</div>
-              <div class="zhaoshiLB8 zhaoshiLBG">1</div>
-              <div class="zhaoshiLB9 zhaoshiLBG">0.5</div>
-              <div class="zhaoshiLB10 zhaoshiLBG">60</div>
-              <div class="zhaoshiLB11 zhaoshiLBG">15</div>
+              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW6"></div>
+              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN6"></div>
+              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz6"></div>
+              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ6"></div>
+              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime6"></div>
+              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH6"></div>
+              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt6"></div>
+              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH6"></div>
               <div class="zhaoshiLB12 zhaoshiLBG"></div>
             </div>
             <div class="zhaoshiLB">
@@ -362,14 +364,14 @@
                   <div class="zy_buttomR">右</div>
                 </div>
                 &nbsp;脚 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG">200</div>
-              <div class="zhaoshiLB5 zhaoshiLBG">0</div>
-              <div class="zhaoshiLB6 zhaoshiLBG">+0%</div>
-              <div class="zhaoshiLB7 zhaoshiLBG">0.5</div>
-              <div class="zhaoshiLB8 zhaoshiLBG">1</div>
-              <div class="zhaoshiLB9 zhaoshiLBG">0.5</div>
-              <div class="zhaoshiLB10 zhaoshiLBG">25</div>
-              <div class="zhaoshiLB11 zhaoshiLBG">15</div>
+              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW7"></div>
+              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN7"></div>
+              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz7"></div>
+              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ7"></div>
+              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime7"></div>
+              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH7"></div>
+              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt7"></div>
+              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH7"></div>
               <div class="zhaoshiLB12 zhaoshiLBG">
                 <div class="zhaoshite" Taiji_yuanyangtui_te>特</div>
               </div>
@@ -385,19 +387,173 @@
                   <div class="zy_buttomR">右</div>
                 </div>
                 &nbsp;脚 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG">0</div>
-              <div class="zhaoshiLB5 zhaoshiLBG">200</div>
-              <div class="zhaoshiLB6 zhaoshiLBG">-10%</div>
-              <div class="zhaoshiLB7 zhaoshiLBG">0.4</div>
-              <div class="zhaoshiLB8 zhaoshiLBG">1</div>
-              <div class="zhaoshiLB9 zhaoshiLBG">0.4</div>
-              <div class="zhaoshiLB10 zhaoshiLBG">200</div>
-              <div class="zhaoshiLB11 zhaoshiLBG">15</div>
+              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW8"></div>
+              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN8"></div>
+              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz8"></div>
+              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ8"></div>
+              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime8"></div>
+              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH8"></div>
+              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt8"></div>
+              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH8"></div>
               <div class="zhaoshiLB12 zhaoshiLBG">
                 <div class="zhaoshite" Taiji_banshuai_te>特</div>
               </div>
             </div>
           </div>
+          
+          
+          
+          <!--<div id="zhaoshineirong">
+            <div class="zhaoshiLB">
+              <div class="zhaoshiLB1 zhaoshiLBG">
+                <div class="smallyuanKuang color_gong">攻</div>
+              </div>
+              <div class="zhaoshiLB2 zhaoshiLBG">直拳</div>
+              <div class="zhaoshiLB3 zhaoshiLBG">
+                <div class="zy_buttom handarrow">
+                  <div class="zy_buttomL org">左</div>
+                  <div class="zy_buttomR">右</div>
+                </div>
+                &nbsp;手 </div>
+              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW1"></div>
+              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN1"></div>
+              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz1"></div>
+              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ1"></div>
+              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime1"></div>
+              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH1"></div>
+              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt1"></div>
+              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH1"></div>
+              <div class="zhaoshiLB12 zhaoshiLBG"></div>
+            </div>
+            <div class="zhaoshiLB">
+              <div class="zhaoshiLB1 zhaoshiLBG">
+                <div class="smallyuanKuang color_gong">攻</div>
+              </div>
+              <div class="zhaoshiLB2 zhaoshiLBG">左右勾拳</div>
+              <div class="zhaoshiLB3 zhaoshiLBG">
+                <div class="zy_buttom">
+                  <div class="zy_buttomL">左</div>
+                  <div class="zy_buttomR org">右</div>
+                </div>
+                &nbsp;手 </div>
+              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW2"></div>
+              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN2"></div>
+              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz2"></div>
+              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ2"></div>
+              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime2"></div>
+              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH2"></div>
+              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt2"></div>
+              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH2"></div>
+              <div class="zhaoshiLB12 zhaoshiLBG"></div>
+            </div>
+            <div class="zhaoshiLB">
+              <div class="zhaoshiLB1 zhaoshiLBG">
+                <div class="smallyuanKuang color_gong">攻</div>
+              </div>
+              <div class="zhaoshiLB2 zhaoshiLBG">上勾拳</div>
+              <div class="zhaoshiLB3 zhaoshiLBG">
+                <div class="zy_buttom handarrow">
+                  <div class="zy_buttomL org">左</div>
+                  <div class="zy_buttomR">右</div>
+                </div>
+                &nbsp;手 </div>
+              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW3"></div>
+              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN3"></div>
+              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz3"></div>
+              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ3"></div>
+              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime3"></div>
+              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH3"></div>
+              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt3"></div>
+              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH3"></div>
+              <div class="zhaoshiLB12 zhaoshiLBG"></div>
+            </div>
+            <div class="zhaoshiLB">
+              <div class="zhaoshiLB1 zhaoshiLBG">
+                <div class="smallyuanKuang color_gong">攻</div>
+              </div>
+              <div class="zhaoshiLB2 zhaoshiLBG">肘击</div>
+              <div class="zhaoshiLB3 zhaoshiLBG">
+                <div class="zy_buttom">
+                  <div class="zy_buttomL">左</div>
+                  <div class="zy_buttomR org">右</div>
+                </div>
+                &nbsp;肘 </div>
+              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW4"></div>
+              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN4"></div>
+              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz4"></div>
+              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ4"></div>
+              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime4"></div>
+              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH4"></div>
+              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt4"></div>
+              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH4"></div>
+              <div class="zhaoshiLB12 zhaoshiLBG"></div>
+            </div>
+            <div class="zhaoshiLB">
+              <div class="zhaoshiLB1 zhaoshiLBG">
+                <div class="smallyuanKuang color_gong">攻</div>
+              </div>
+              <div class="zhaoshiLB2 zhaoshiLBG">膝撞</div>
+              <div class="zhaoshiLB3 zhaoshiLBG">
+                <div class="zy_buttom handarrow">
+                  <div class="zy_buttomL org">左</div>
+                  <div class="zy_buttomR">右</div>
+                </div>
+                &nbsp;膝 </div>
+              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW5"></div>
+              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN5"></div>
+              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz5"></div>
+              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ5"></div>
+              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime5"></div>
+              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH5"></div>
+              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt5"></div>
+              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH5"></div>
+              <div class="zhaoshiLB12 zhaoshiLBG"></div>
+            </div>
+            <div class="zhaoshiLB">
+              <div class="zhaoshiLB1 zhaoshiLBG">
+                <div class="smallyuanKuang color_gong">攻</div>
+              </div>
+              <div class="zhaoshiLB2 zhaoshiLBG">蹬腿</div>
+              <div class="zhaoshiLB3 zhaoshiLBG">
+                <div class="zy_buttom">
+                  <div class="zy_buttomL">左</div>
+                  <div class="zy_buttomR org">右</div>
+                </div>
+                &nbsp;脚 </div>
+              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW6"></div>
+              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN6"></div>
+              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz6"></div>
+              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ6"></div>
+              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime6"></div>
+              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH6"></div>
+              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt6"></div>
+              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH6"></div>
+              <div class="zhaoshiLB12 zhaoshiLBG"></div>
+            </div>
+            <div class="zhaoshiLB">
+              <div class="zhaoshiLB1 zhaoshiLBG">
+                <div class="smallyuanKuang color_gong">攻</div>
+              </div>
+              <div class="zhaoshiLB2 zhaoshiLBG">扫腿</div>
+              <div class="zhaoshiLB3 zhaoshiLBG">
+                <div class="zy_buttom handarrow">
+                  <div class="zy_buttomL org">左</div>
+                  <div class="zy_buttomR">右</div>
+                </div>
+                &nbsp;脚 </div>
+              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW7"></div>
+              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN7"></div>
+              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz7"></div>
+              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ7"></div>
+              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime7"></div>
+              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH7"></div>
+              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt7"></div>
+              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH7"></div>
+              <div class="zhaoshiLB12 zhaoshiLBG"></div>
+            </div>
+          </div>-->
+
+          
         </div>
       </div>
     </div>
