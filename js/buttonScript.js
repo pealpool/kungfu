@@ -310,19 +310,39 @@ function qinbaotooltip(a){
 $(document).ready(function () {
 
 
-	window.mSX_LiLiang = ShuX_LiLiang.createNew();
+/*	window.mSX_LiLiang = ShuX_LiLiang.createNew();
 	window.mSX_Minjie = ShuX_MinJie.createNew();
 	window.mSX_ZhiLi = ShuX_ZhiLi.createNew();
 	window.mSX_Tizhi = ShuX_Tizhi.createNew();
 	window.mSX_Pinheng = ShuX_PinHeng.createNew();
-
+	
+	window.tj_panda = TJ_panda.createNew();
+	window.tj_tuishou = TJ_tuishou.createNew();
+	window.tj_qingna = TJ_qingna.createNew();
+	window.tj_shuangfong = TJ_shuangfong.createNew();
+	window.tj_zhoudicui = TJ_zhoudicui.createNew();
+	window.tj_paocui = TJ_paocui.createNew();
+	window.tj_yuanyangtui = TJ_yuanyangtui.createNew();
+	window.tj_banshuai = TJ_banshuai.createNew();
+	
+	window.tq_zhiquan = TQ_zhiquan.createNew();
+	window.tq_lrgouquan = TQ_lrgouquan.createNew();
+	window.tq_sgouquan = TQ_sgouquan.createNew();
+	window.tq_zhouji = TQ_zhouji.createNew();
+	window.tq_xizhuang = TQ_xizhuang.createNew();
+	window.tq_dengtui = TQ_dengtui.createNew();
+	window.tq_shaotui = TQ_shaotui.createNew();
+*/
 
 	//开启tooltip ui;
 	$(function () {
 		$(document).tooltip({
-			items: "[title],[title_gongjiJC],[title_fangyujilv],[title_baojishanghai],[title_yibanfanshuang],[title_shudu],[title_fangyufanshuang],[title_shanbi],[title_wendinfantan],[title_baojijilv],[title_wendinzhi],[title_gongjifudongjilv],[title_wendinhuifu],[title_minzhongxz],[title_qinbao]",
-			position: {
+			items: "[title],[title_gongjiJC],[title_fangyujilv],[title_baojishanghai],[title_yibanfanshuang],[title_shudu],[title_fangyufanshuang],[title_shanbi],[title_wendinfantan],[title_baojijilv],[title_wendinzhi],[title_gongjifudongjilv],[title_wendinhuifu],[title_minzhongxz],[title_qinbao],[Taiji_panda_te],[Taiji_zhoudicui_te],[Taiji_yuanyangtui_te],[Taiji_banshuai_te]",
+			/*position: {
 				my: "left+170 top-26"
+			},*/
+			position: {
+				my: "left top+9"
 			},
 			content: function () {
 				var element = $(this);
@@ -364,6 +384,14 @@ $(document).ready(function () {
 					return "攻击招式的命中率 " + "<strong style='color:#a50000'>" + Add_zh(mSX_ZhiLi.minzhongxz(SX_Zhili) * 100) + "%" + "</strong>";
 				} else if (element.is("[title_qinbao]")) {
 					return qinbaotooltip(SX_Zhili);
+				}else if (element.is("[Taiji_panda_te]")) {
+					return tj_panda.Beizhu;
+				}else if (element.is("[Taiji_zhoudicui_te]")) {
+					return tj_zhoudicui.Beizhu;
+				}else if (element.is("[Taiji_yuanyangtui_te]")) {
+					return tj_yuanyangtui.Beizhu;
+				}else if (element.is("[Taiji_banshuai_te]")) {
+					return tj_banshuai.Beizhu;
 				}
 
 
