@@ -6,11 +6,11 @@
 <link type="text/css" href="./css/loading.css" rel="stylesheet"/>
 <link type="text/css" href="./css/base.css" rel="stylesheet"/>
 <link type="text/css" href="./css/cssTaiji.css" rel="stylesheet" id="cssStyle"/>
-<link type="text/css" href="./js/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet"/>
+<link type="text/css" href="./css/jquery-ui.css" rel="stylesheet"/>
 <link type="text/css" href="./css/jquery-confirm.css" rel="stylesheet"/>
 <style></style>
 <script src="./js/jquery-3.1.1.min.js"></script>
-<script src="./js/jquery-ui-1.12.1/jquery-ui.js"></script>
+<script src="./js/jquery-ui.js"></script>
 <script src="./js/pace.js"></script>
 <script src="./js/buttonScript.js"></script>
 <script src="./js/PB_Taiji.js"></script>
@@ -72,7 +72,7 @@
 
 </head>
 <body onselectstart ="return false">
-<div class="mask"> </div>
+<div class="mask" id="aaamask"> </div>
 <div class="choiceBigKuang" id="choiceBigKuang">
   <div class="choiceDaBiaoTi" id="choiceDaBiaoTi">聚 · 功夫</div>
   <div class="choicePaiBei cPBTaiji0" id="choicePaiBei">
@@ -86,7 +86,7 @@
       </div>
       <div class="choiceJinDuLan_Jt"><img src="Img/image/rightarrow.png" width="31" height="26" alt=""/></div>
       <div class="choiceJinDuLanButtomK">
-        <div class="choiceJinDuLanButtom gray" id="choiceJinDuLan_XZwancheng">完成</div>
+        <div class="choiceJinDuLanButtom gray" id="choiceJinDuLan_XZwancheng" onClick="choiceQianqiWanCheng()">完成</div>
       </div>
     </div>
     <div id="choiceZhaoshiDaKuang">
