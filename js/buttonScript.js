@@ -15,18 +15,20 @@ function ChangechoiceBG(ZhaoShi) {
 	var hrhr = document.getElementById("cssStyle");
 	switch (ZhaoShi) {
 		case "Taiji":
-			Ditu.setAttribute("class", "choicePaiBei cPBTaiji");
+			Ditu.setAttribute("class", "choicePaiBei cPBTaiji0");
 			shiTimu.innerHTML = "太极";
 			shi01.innerHTML = "攻击具有渗透性，高消削。";
 			shi02.innerHTML = "借力打力，化解冲击力。";
 			hrhr.setAttribute("href", "./css/cssTaiji.css");
+			$("#choiceShuxinZhongKuangR").removeClass().addClass("choiceShuxinZhongKuangR Kuang10 cPBTaiji1");
 			break;
 		case "Taiquan":
-			Ditu.setAttribute("class", "choicePaiBei cPBTaiquan");
+			Ditu.setAttribute("class", "choicePaiBei cPBTaiquan0");
 			shiTimu.innerHTML = "泰拳";
 			shi01.innerHTML = "攻击猛锐迅捷，杀伤力大。";
 			shi02.innerHTML = "并具有高抗打能力。";
 			hrhr.setAttribute("href", "./css/cssTaiquan.css");
+			$("#choiceShuxinZhongKuangR").removeClass().addClass("choiceShuxinZhongKuangR Kuang10 cPBTaiquan1");
 			break;
 	}
 }
@@ -122,6 +124,30 @@ function choicePB_h() {
 			$("#PinHengAtt8").html(tj_banshuai.PinHengAtt);
 			$("#PinHengXH8").html(tj_banshuai.PinHengXH);
 */
+			
+			$("#PinHengAtt1").html(tj_panda.PinHengAtt);
+			$("#PinHengXH1").html(tj_panda.PinHengXH);
+
+			$("#PinHengAtt2").html(tj_tuishou.PinHengAtt);
+			$("#PinHengXH2").html(tj_tuishou.PinHengXH);
+
+			$("#PinHengAtt3").html(tj_qingna.PinHengAtt);
+			$("#PinHengXH3").html(tj_qingna.PinHengXH);
+
+			$("#PinHengAtt4").html(tj_shuangfong.PinHengAtt);
+			$("#PinHengXH4").html(tj_shuangfong.PinHengXH);
+
+			$("#PinHengAtt5").html(tj_zhoudicui.PinHengAtt);
+			$("#PinHengXH5").html(tj_zhoudicui.PinHengXH);
+
+			$("#PinHengAtt6").html(tj_paocui.PinHengAtt);
+			$("#PinHengXH6").html(tj_paocui.PinHengXH);
+
+			$("#PinHengAtt7").html(tj_yuanyangtui.PinHengAtt);
+			$("#PinHengXH7").html(tj_yuanyangtui.PinHengXH);
+
+			$("#PinHengAtt8").html(tj_banshuai.PinHengAtt);
+			$("#PinHengXH8").html(tj_banshuai.PinHengXH);
 
 
 
@@ -200,6 +226,30 @@ function choicePB_h() {
 			$("#PinHengXH7").html(tq_shaotui.PinHengXH);
 
 */
+			
+
+			$("#PinHengAtt1").html(tq_zhiquan.PinHengAtt);
+			$("#PinHengXH1").html(tq_zhiquan.PinHengXH);
+
+			$("#PinHengAtt2").html(tq_lrgouquan.PinHengAtt);
+			$("#PinHengXH2").html(tq_lrgouquan.PinHengXH);
+
+			$("#PinHengAtt3").html(tq_sgouquan.PinHengAtt);
+			$("#PinHengXH3").html(tq_sgouquan.PinHengXH);
+
+			$("#PinHengAtt4").html(tq_zhouji.PinHengAtt);
+			$("#PinHengXH4").html(tq_zhouji.PinHengXH);
+
+			$("#PinHengAtt5").html(tq_xizhuang.PinHengAtt);
+			$("#PinHengXH5").html(tq_xizhuang.PinHengXH);
+
+			$("#PinHengAtt6").html(tq_dengtui.PinHengAtt);
+			$("#PinHengXH6").html(tq_dengtui.PinHengXH);
+
+			$("#PinHengAtt7").html(tq_shaotui.PinHengAtt);
+			$("#PinHengXH7").html(tq_shaotui.PinHengXH);
+			
+			
 
 			break;
 	}
@@ -210,8 +260,8 @@ function choicePB_h() {
 	BDgl_Liliang();
 	BDgl_Minjie();
 	BDgl_Zhili();
-	BDgl_Tizhi();
-	BDgl_Pinheng();
+	//BDgl_Tizhi();
+	//BDgl_Pinheng();
 }
 
 
@@ -243,9 +293,9 @@ function XZbottomFF(Bu) {
 			//document.getElementById("choiceShuxinDaKuang").style.display = "inline";
 			$("#choiceZhaoshiDaKuang").hide("fade", 300, DaKuangHtS_ps);
 			if (PaiBei === "Taiji") {
-				document.getElementById("choicePaiBei").setAttribute("class", "choicePaiBei cPBTaiji");
+				document.getElementById("choicePaiBei").setAttribute("class", "choicePaiBei cPBTaiji0");
 			} else if (PaiBei === "Taiquan") {
-				document.getElementById("choicePaiBei").setAttribute("class", "choicePaiBei cPBTaiquan");
+				document.getElementById("choicePaiBei").setAttribute("class", "choicePaiBei cPBTaiquan0");
 			}
 		}
 	} else {
@@ -728,6 +778,12 @@ $(document).ready(function () {
 		window.tq_dengtui = TQ_dengtui.createNew();
 		window.tq_shaotui = TQ_shaotui.createNew();
 	*/
+	
+	
+	$.confirm();
+	
+	
+	
 
 	//开启tooltip ui;
 	$(function () {

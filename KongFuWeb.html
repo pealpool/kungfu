@@ -7,6 +7,7 @@
 <link type="text/css" href="./css/base.css" rel="stylesheet"/>
 <link type="text/css" href="./css/cssTaiji.css" rel="stylesheet" id="cssStyle"/>
 <link type="text/css" href="./js/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet"/>
+<link type="text/css" href="./css/jquery-confirm.css" rel="stylesheet"/>
 <style></style>
 <script src="./js/jquery-3.1.1.min.js"></script>
 <script src="./js/jquery-ui-1.12.1/jquery-ui.js"></script>
@@ -17,8 +18,10 @@
 <script src="./js/PB_All.js"></script>
 <script src="./js/ShuX.js"></script>
 <script src="./js/Hp.js"></script>
+<script src="./js/jquery-confirm.js"></script>
 <script>
 	
+
 	window.mSX_LiLiang = ShuX_LiLiang.createNew();
 	window.mSX_Minjie = ShuX_MinJie.createNew();
 	window.mSX_ZhiLi = ShuX_ZhiLi.createNew();
@@ -72,7 +75,7 @@
 <div class="mask"> </div>
 <div class="choiceBigKuang" id="choiceBigKuang">
   <div class="choiceDaBiaoTi" id="choiceDaBiaoTi">聚 · 功夫</div>
-  <div class="choicePaiBei cPBTaiji" id="choicePaiBei">
+  <div class="choicePaiBei cPBTaiji0" id="choicePaiBei">
     <div class="choiceJinDuLan">
       <div class="choiceJinDuLanButtomK">
         <div class="choiceJinDuLanButtom red" id="choiceJinDuLan_XZpaibei" onClick="XZbottomFF(0)">选择派别</div>
@@ -217,12 +220,12 @@
           </div>
         </div>
       </div>
-      <div class="choiceShuxinZhongKuangR Kuang10">
+      <div class="choiceShuxinZhongKuangR Kuang10 cPBTaiji1" id="choiceShuxinZhongKuangR">
         <div class="choiceShuxinXiaoKuang1">
           <div class="smallyuanKuang color_gong">攻</div>
           <div class="smallyuanKuang handarrow">防</div>
           <div class="smallyuanKuang handarrow">被</div>
-          <div class="">*内外伤害均为平价期望值。</div>
+          <div class="choiceShuxinXiaoKuangBZ">*内外伤害均为平价期望值。</div>
         </div>
         <div class="choiceShuxinXiaoKuang2">
           <div class="zhaoshiTitle">
