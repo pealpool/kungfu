@@ -1136,8 +1136,28 @@ $(document).ready(function () {
 	);
 
 
+	$("#BiaoTi_Logo_cxbp").hover(
+		function () {
+			$("#BiaoTi_Logo_cxbp").html("[  重选派别  ]");
+		},
+		function () {
+			$("#BiaoTi_Logo_cxbp").html("[ 重选派别 ]");
+		}
+	);
+	$("#BiaoTi_Logo_cxbp").click(
+		function () {
+			$("#choiceBigKuang").show("fade", 300);
+			$("#aaamask").show("fade", 300);
+			$("#baseKuang").addClass("blur");
+		}
+	);
 
-
+	//进度条HP
+	$(function () {
+		$("#progressbar1").progressbar({
+			value: 37,
+		});
+	});
 
 
 
