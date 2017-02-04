@@ -775,22 +775,44 @@ function choiceQianqiWanCheng() {
 					text: '继续',
 					btnClass: 'btn-red',
 					action: function () {
-						$("#choiceBigKuang").hide("fade", 300);
-						$("#aaamask").hide("fade", 300);
-						$("#baseKuang").removeClass("blur");
+						ChuShiHua();
 					}
 				}
 			}
 		});
 	} else {
-		$("#choiceBigKuang").hide("fade", 300);
-		$("#aaamask").hide("fade", 300);
-		$("#baseKuang").removeClass("blur");
+		ChuShiHua();
 	}
 
 }
 
+//初始化
+function ChuShiHua() {
+	$("#choiceBigKuang").hide("fade", 300);
+	$("#aaamask").hide("fade", 300);
+	$("#baseKuang").removeClass("blur");
+	$("#TuKuang_A_Liliang").html("力量：" + SX_Liliang);
+	$("#TuKuang_A_Minjie").html("敏捷：" + SX_Minjie);
+	$("#TuKuang_A_Zhili").html("智力：" + SX_Zhili);
+	$("#TuKuang_A_Tizhi").html("体质：" + SX_Tizhi);
+	$("#TuKuang_A_Pinheng").html("平衡：" + SX_Pinheng);
+}
 
+//属性关联弹出
+window.sxTanChu = 0;
+function ShuXinTanChu(){
+	if(sxTanChu === 0){
+		$("#TuKuangshuxinTanchuDK_A").show("fold",100);
+		$(".TuKuangshuxinDaK").addClass("TuKuangshuxinDaKaa");
+		$("#TuKuangshuxinDaKd_A").css("line-height","4px");
+		sxTanChu = 1;
+	}else{
+		$("#TuKuangshuxinTanchuDK_A").hide("fold",100);
+		$(".TuKuangshuxinDaK").removeClass("TuKuangshuxinDaKaa");
+		$("#TuKuangshuxinDaKd_A").css("line-height","11px");
+		sxTanChu = 0;
+	}
+}
 
 
 $(document).ready(function () {
@@ -1152,12 +1174,82 @@ $(document).ready(function () {
 		}
 	);
 
+
+
+
+
 	//进度条HP
-	$(function () {
-		$("#progressbar1").progressbar({
-			value: 37,
-		});
+	$("#progressbar_A_tou").progressbar({
+		value: 37,
 	});
+	$("#progressbar_A_xiong").progressbar({
+		value: 50,
+	});
+	$("#progressbar_A_fu").progressbar({
+		value: 50,
+	});
+	$("#progressbar_A_yaoL").progressbar({
+		value: 50,
+	});
+	$("#progressbar_A_yaoR").progressbar({
+		value: 50,
+	});
+	$("#progressbar_A_jianL").progressbar({
+		value: 50,
+	});
+	$("#progressbar_A_jianR").progressbar({
+		value: 50,
+	});
+	$("#progressbar_A_shangbiL").progressbar({
+		value: 50,
+	});
+	$("#progressbar_A_shangbiR").progressbar({
+		value: 50,
+	});
+	$("#progressbar_A_qianbiL").progressbar({
+		value: 50,
+	});
+	$("#progressbar_A_qianbiR").progressbar({
+		value: 50,
+	});
+	$("#progressbar_A_zhouL").progressbar({
+		value: 50,
+	});
+	$("#progressbar_A_zhouR").progressbar({
+		value: 50,
+	});
+	$("#progressbar_A_shouwanL").progressbar({
+		value: 50,
+	});
+	$("#progressbar_A_shouwanR").progressbar({
+		value: 50,
+	});
+	$("#progressbar_A_datuiL").progressbar({
+		value: 50,
+	});
+	$("#progressbar_A_datuiR").progressbar({
+		value: 50,
+	});
+	$("#progressbar_A_xiaotuiL").progressbar({
+		value: 50,
+	});
+	$("#progressbar_A_xiaotuiR").progressbar({
+		value: 50,
+	});
+	$("#progressbar_A_xiL").progressbar({
+		value: 50,
+	});
+	$("#progressbar_A_xiR").progressbar({
+		value: 50,
+	});
+	$("#progressbar_A_huaiL").progressbar({
+		value: 50,
+	});
+	$("#progressbar_A_huaiR").progressbar({
+		value: 50,
+	});
+
+
 
 
 

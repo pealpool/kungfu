@@ -583,44 +583,216 @@
     <div class="BiaoTi_Logo_cxbp" id="BiaoTi_Logo_cxbp">[ 重选派别 ]</div>
   </div>
   <div class="XiaDaKuang">
-  	<div class="NeiRongKuangDl">
-  		<div class="NeiRongKuangzl1 BDYJK">
-  			<div class="TuKuangTitle">
-  				<div class="TuKuangTitle_name">喵喵</div>
-  				<div class="TuKuangTitle_paibie">太极</div>
-  				<div class="bodyDaKuang"></div>
-  				<div class="TuKuangshuxinDaK">
-  					<div class="TuKuangshuxinDaKt">
-						<div class="TuKuangshuxinDaK1">力量：2</div>
-						<div class="TuKuangshuxinDaK2">敏捷：2</div>
-						<div class="TuKuangshuxinDaK3">智力：2</div>
-						<div class="TuKuangshuxinDaK4">体质：2</div>
-						<div class="TuKuangshuxinDaK5">平衡：2</div>
-  					</div>
-  					<div class="TuKuangshuxinDaKd">-----</div>
-  				</div>
-  			</div>
-  		</div>
-  		<div class="NeiRongKuangzl2 BDYJK">
-  			<div class="NeiRongKuangHPdaK">
-  				<div class="NeiRongKuangHPxK">
-  					<div class="NeiRongKuangHPxK1">头部</div>
-  					<div class="NeiRongKuangHPxK2">500</div>
-  					<div class="NeiRongKuangHPxK3">
-  						<div class="p1_Hp HP_blue" id="progressbar1"></div>
-					</div>
-  				</div>
-  			</div>
-  		</div>
-  	</div>
-  	<div class="NeiRongKuangDz">
-  		<div class="NeiRongKuangzz1 BDYJK"></div>
-  		<div class="NeiRongKuangzz2 BDYJK"></div>
-  	</div>
-  	<div class="NeiRongKuangDr">
-  		<div class="NeiRongKuangzl1 BDYJK"></div>
-  		<div class="NeiRongKuangzl2 BDYJK"></div>
-  	</div>
+    <div class="NeiRongKuangDl">
+      <div class="NeiRongKuangzl1 BDYJK">
+        <div class="TuKuangTitle">
+          <div class="TuKuangTitle_name">喵喵</div>
+          <div class="TuKuangTitle_paibie">太极</div>
+          <div class="bodyDaKuang"></div>
+          <div class="TuKuangshuxinDaK" onClick="ShuXinTanChu()">
+            <div class="TuKuangshuxinDaKt">
+              <div class="TuKuangshuxinDaK1" id="TuKuang_A_Liliang">力量：2</div>
+              <div class="TuKuangshuxinDaK2" id="TuKuang_A_Minjie">敏捷：2</div>
+              <div class="TuKuangshuxinDaK3" id="TuKuang_A_Zhili">智力：2</div>
+              <div class="TuKuangshuxinDaK4" id="TuKuang_A_Tizhi">体质：2</div>
+              <div class="TuKuangshuxinDaK5" id="TuKuang_A_Pinheng">平衡：2</div>
+            </div>
+            <div class="TuKuangshuxinDaKd" id="TuKuangshuxinDaKd_A">-----</div>
+          </div>
+          <div class="TuKuangshuxinTanchuDK" id="TuKuangshuxinTanchuDK_A">
+            <div class="TuchuKuang" id="TuchuKuang_gongjiJC" title_gongjiJC="">
+              <div class="TuchuKuang1">加攻：</div>
+              <div class="TuchuKuang2" id="TuchuKuang_s_gongjiJC">+0%</div>
+            </div>
+            <div class="TuchuKuang" id="TuchuKuang_fangyujilv" title_fangyujilv="">
+              <div class="TuchuKuang1">防御：</div>
+              <div class="TuchuKuang2" id="TuchuKuang_s_fangyujilv">3</div>
+            </div>
+            <div class="TuchuKuang" id="TuchuKuang_baojishanghai" title_baojishanghai="">
+              <div class="TuchuKuang1">暴伤：</div>
+              <div class="TuchuKuang2" id="TuchuKuang_s_baojishanghai">+45%</div>
+            </div>
+            <div class="TuchuKuang" id="TuchuKuang_yibanfanshuang" title_yibanfanshuang="">
+              <div class="TuchuKuang1">普反：</div>
+              <div class="TuchuKuang2" id="TuchuKuang_s_yibanfanshuang">5%</div>
+            </div>
+            <div class="TuchuKuang" id="TuchuKuang_shudu" title_shudu="">
+              <div class="TuchuKuang1">速度：</div>
+              <div class="TuchuKuang2" id="TuchuKuang_s_shudu">2</div>
+            </div>
+            <div class="TuchuKuang" id="TuchuKuang_fangyufanshuang" title_fangyufanshuang="">
+              <div class="TuchuKuang1">防反：</div>
+              <div class="TuchuKuang2" id="TuchuKuang_s_fangyufanshuang">20%</div>
+            </div>
+            <div class="TuchuKuang" id="TuchuKuang_shanbi" title_shanbi="">
+              <div class="TuchuKuang1">闪避：</div>
+              <div class="TuchuKuang2" id="TuchuKuang_s_shanbi">2</div>
+            </div>
+            <div class="TuchuKuang" id="TuchuKuang_wendinfantan" title_wendinfantan="">
+              <div class="TuchuKuang1">稳反：</div>
+              <div class="TuchuKuang2" id="TuchuKuang_s_wendinfantan">30%</div>
+            </div>
+            <div class="TuchuKuang" id="TuchuKuang_baojijilv" title_baojijilv="">
+              <div class="TuchuKuang1">暴率：</div>
+              <div class="TuchuKuang2" id="TuchuKuang_s_baojijilv">10%</div>
+            </div>
+            <div class="TuchuKuang" id="TuchuKuang_wendinzhi" title_wendinzhi="">
+              <div class="TuchuKuang1">稳定：</div>
+              <div class="TuchuKuang2" id="TuchuKuang_s_wendinzhi">120</div>
+            </div>
+            <div class="TuchuKuang" id="TuchuKuang_gongjifudongjilv" title_gongjifudongjilv="">
+              <div class="TuchuKuang1">浮动：</div>
+              <div class="TuchuKuang2" id="TuchuKuang_s_gongjifudongjilv">50%</div>
+            </div>
+            <div class="TuchuKuang" id="TuchuKuang_wendinhuifu" title_wendinhuifu="">
+              <div class="TuchuKuang1">回稳：</div>
+              <div class="TuchuKuang2" id="TuchuKuang_s_wendinhuifu"> 2</div>
+            </div>
+            <div class="TuchuKuang" id="TuchuKuang_minzhongxz" title_minzhongxz="">
+              <div class="TuchuKuang1">命中：</div>
+              <div class="TuchuKuang2" id="TuchuKuang_s_minzhongxz">+0%</div>
+            </div>
+            <div class="TuchuKuang" id="TuchuKuang_qinbao" title_qinbao="">
+              <div class="TuchuKuang1">情报：</div>
+              <div class="TuchuKuang2" id="TuchuKuang_s_qinbao">自知</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="NeiRongKuangzl2 BDYJK">
+        <div class="NeiRongKuangHPdaK">
+          <div class="NeiRongKuangHPxK">
+            <div class="NeiRongKuangHPxK1">头部</div>
+            <div class="NeiRongKuangHPxK2">500</div>
+            <div class="NeiRongKuangHPxK3">
+              <div class="HPwzD HP_blue" id="progressbar_A_tou"></div>
+            </div>
+          </div>
+          <div class="NeiRongKuangHPxK">
+            <div class="NeiRongKuangHPxK1">胸部</div>
+            <div class="NeiRongKuangHPxK2">900</div>
+            <div class="NeiRongKuangHPxK3">
+              <div class="HPwzD HP_blue" id="progressbar_A_xiong"></div>
+            </div>
+          </div>
+          <div class="NeiRongKuangHPxK">
+            <div class="NeiRongKuangHPxK1">腹部</div>
+            <div class="NeiRongKuangHPxK2">700</div>
+            <div class="NeiRongKuangHPxK3">
+              <div class="HPwzD HP_blue" id="progressbar_A_fu"></div>
+            </div>
+          </div>
+          <div class="NeiRongKuangHPxK">
+            <div class="NeiRongKuangHPxK1">腰部</div>
+            <div class="NeiRongKuangHPxK2a">610</div>
+            <div class="NeiRongKuangHPxK2b">|</div>
+            <div class="NeiRongKuangHPxK2c">610</div>
+            <div class="NeiRongKuangHPxK3">
+              <div class="HPwzS HP_blue" id="progressbar_A_yaoL"></div>
+              <div class="HP_blue" id="progressbar_A_yaoR"></div>
+            </div>
+          </div>
+          <div class="NeiRongKuangHPxK">
+            <div class="NeiRongKuangHPxK1">肩关节</div>
+            <div class="NeiRongKuangHPxK2a">400</div>
+            <div class="NeiRongKuangHPxK2b">|</div>
+            <div class="NeiRongKuangHPxK2c">610</div>
+            <div class="NeiRongKuangHPxK3">
+              <div class="HPwzS HP_blue" id="progressbar_A_jianL"></div>
+              <div class="HP_blue" id="progressbar_A_jianR"></div>
+            </div>
+          </div>
+          <div class="NeiRongKuangHPxK">
+            <div class="NeiRongKuangHPxK1">上臂</div>
+            <div class="NeiRongKuangHPxK2a">900</div>
+            <div class="NeiRongKuangHPxK2b">|</div>
+            <div class="NeiRongKuangHPxK2c">610</div>
+            <div class="NeiRongKuangHPxK3">
+              <div class="HPwzS HP_blue" id="progressbar_A_shangbiL"></div>
+              <div class="HP_blue" id="progressbar_A_shangbiR"></div>
+            </div>
+          </div>
+          <div class="NeiRongKuangHPxK">
+            <div class="NeiRongKuangHPxK1">前臂</div>
+            <div class="NeiRongKuangHPxK2a">610</div>
+            <div class="NeiRongKuangHPxK2b">|</div>
+            <div class="NeiRongKuangHPxK2c">610</div>
+            <div class="NeiRongKuangHPxK3">
+              <div class="HPwzS HP_blue" id="progressbar_A_qianbiL"></div>
+              <div class="HP_blue" id="progressbar_A_qianbiR"></div>
+            </div>
+          </div>
+          <div class="NeiRongKuangHPxK">
+            <div class="NeiRongKuangHPxK1">手肘</div>
+            <div class="NeiRongKuangHPxK2a">310</div>
+            <div class="NeiRongKuangHPxK2b">|</div>
+            <div class="NeiRongKuangHPxK2c">610</div>
+            <div class="NeiRongKuangHPxK3">
+              <div class="HPwzS HP_blue" id="progressbar_A_zhouL"></div>
+              <div class="HP_blue" id="progressbar_A_zhouR"></div>
+            </div>
+          </div>
+          <div class="NeiRongKuangHPxK">
+            <div class="NeiRongKuangHPxK1">手腕</div>
+            <div class="NeiRongKuangHPxK2a">280</div>
+            <div class="NeiRongKuangHPxK2b">|</div>
+            <div class="NeiRongKuangHPxK2c">610</div>
+            <div class="NeiRongKuangHPxK3">
+              <div class="HPwzS HP_blue" id="progressbar_A_shouwanL"></div>
+              <div class="HP_blue" id="progressbar_A_shouwanR"></div>
+            </div>
+          </div>
+          <div class="NeiRongKuangHPxK">
+            <div class="NeiRongKuangHPxK1">大腿</div>
+            <div class="NeiRongKuangHPxK2a">1000</div>
+            <div class="NeiRongKuangHPxK2b">|</div>
+            <div class="NeiRongKuangHPxK2c">1000</div>
+            <div class="NeiRongKuangHPxK3">
+              <div class="HPwzS HP_blue" id="progressbar_A_datuiL"></div>
+              <div class="HP_blue" id="progressbar_A_datuiR"></div>
+            </div>
+          </div>
+          <div class="NeiRongKuangHPxK">
+            <div class="NeiRongKuangHPxK1">小腿</div>
+            <div class="NeiRongKuangHPxK2a">800</div>
+            <div class="NeiRongKuangHPxK2b">|</div>
+            <div class="NeiRongKuangHPxK2c">610</div>
+            <div class="NeiRongKuangHPxK3">
+              <div class="HPwzS HP_blue" id="progressbar_A_xiaotuiL"></div>
+              <div class="HP_blue" id="progressbar_A_xiaotuiR"></div>
+            </div>
+          </div>
+          <div class="NeiRongKuangHPxK">
+            <div class="NeiRongKuangHPxK1">膝关节</div>
+            <div class="NeiRongKuangHPxK2a">310</div>
+            <div class="NeiRongKuangHPxK2b">|</div>
+            <div class="NeiRongKuangHPxK2c">610</div>
+            <div class="NeiRongKuangHPxK3">
+              <div class="HPwzS HP_blue" id="progressbar_A_xiL"></div>
+              <div class="HP_blue" id="progressbar_A_xiR"></div>
+            </div>
+          </div>
+          <div class="NeiRongKuangHPxK">
+            <div class="NeiRongKuangHPxK1">踝关节</div>
+            <div class="NeiRongKuangHPxK2a">310</div>
+            <div class="NeiRongKuangHPxK2b">|</div>
+            <div class="NeiRongKuangHPxK2c">610</div>
+            <div class="NeiRongKuangHPxK3">
+              <div class="HPwzS HP_blue" id="progressbar_A_huaiL"></div>
+              <div class="HP_blue" id="progressbar_A_huaiR"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="NeiRongKuangDz">
+      <div class="NeiRongKuangzz1 BDYJK"></div>
+      <div class="NeiRongKuangzz2 BDYJK"></div>
+    </div>
+    <div class="NeiRongKuangDr">
+      <div class="NeiRongKuangzl1 BDYJK"></div>
+      <div class="NeiRongKuangzl2 BDYJK"></div>
+    </div>
   </div>
 </div>
 </body>
