@@ -42,7 +42,6 @@ html, body {
 .baseKuang {
 	width: 1000px;
 	margin: 0 auto;
-	background: #fff;
 }
 /*前置大框*/
 .choiceBigKuang {
@@ -686,3 +685,11 @@ html, body {
 	line-height: 20px;
 	color: #7d7d7d;
 }
+.BiaoTi_Logo_Kuang {
+	border-bottom: 10px solid #000;
+}
+.BiaoTi_Logo {
+	font-size: 62px;
+}
+
+
