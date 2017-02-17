@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>聚 · 功夫</title>
 <link type="text/css" href="./css/loading.css" rel="stylesheet"/>
+<!--载入进度条-->
 <link type="text/css" href="./css/base.css" rel="stylesheet"/>
 <link type="text/css" href="./css/cssTaiji.css" rel="stylesheet" id="cssStyle"/>
 <link type="text/css" href="./css/jquery-ui.css" rel="stylesheet"/>
@@ -11,7 +12,7 @@
 <style></style>
 <script src="./js/jquery-3.1.1.min.js"></script>
 <script src="./js/jquery-ui.js"></script>
-<script src="./js/pace.js"></script>
+<script src="./js/pace.js"></script><!--载入进度条-->
 <script src="./js/buttonScript.js"></script>
 <script src="./js/PB_Taiji.js"></script>
 <script src="./js/PB_Taiquan.js"></script>
@@ -800,7 +801,6 @@
           <div class="ckZhaoShiButtom gray" id="ckZhaoShiButtom_B">招式</div>
         </div>
       </div>
-      <div class="NeiRongKuangzz2 BDYJK">45</div>
       <div class="NeiRongchoiceZSdaK" id="NeiRongchoiceZSdaK">
         <div class="NeiRongchoiceZSdaK_Title1">挑选招式</div>
         <div class="choiceShuxinXiaoKuang2qq">
@@ -818,12 +818,7 @@
             <div class="zhaoshiTitle11 zhaoshiTitleG">耗衡</div>
             <div class="zhaoshiTitle12 zhaoshiTitleG">特</div>
           </div>
-          
-          
-          
           <div id="zhaoshineirongqq">
-          
-          
             <div class="zhaoshiLBqq" id="ZSdiv_tj_panda" onClick="xzF_tj_panda()">
               <div class="zhaoshiLB1 zhaoshiLBG">
                 <div class="smallyuanKuang color_gong">攻</div>
@@ -1000,9 +995,6 @@
                 <div class="zhaoshite" Taiji_banshuai_te>特</div>
               </div>
             </div>
-            
-            
-            
           </div>
           
           <!--        <div id="zhaoshineirongqq">
@@ -1166,18 +1158,62 @@
             <div class="zhaoshiTitle3 zhaoshiTitleG">发动部位</div>
             <div class="zhaoshiTitle4 zhaoshiTitleG">外伤</div>
             <div class="zhaoshiTitle5 zhaoshiTitleG">内伤</div>
-            <div class="zhaoshiTitle6 zhaoshiTitleG">命中</div>
-            <div class="zhaoshiTitle7 zhaoshiTitleG">前摇</div>
-            <div class="zhaoshiTitle8 zhaoshiTitleG">动作</div>
-            <div class="zhaoshiTitle9 zhaoshiTitleG">后摇</div>
-            <div class="zhaoshiTitle10 zhaoshiTitleG">削衡</div>
-            <div class="zhaoshiTitle11 zhaoshiTitleG">耗衡</div>
             <div class="zhaoshiTitle12 zhaoshiTitleG">特</div>
+            <div class="zhaoshiTitle13 zhaoshiTitleG"></div>
+            <div class="zhaoshiTitle14 zhaoshiTitleG">攻击部位</div>
+            <div class="zhaoshiTitle15 zhaoshiTitleG">
+            	<div class="yuanXXX" id="choiceRemove00">×</div>
+            </div>
+            
           </div>
-          <div id="chicoZhaoShiTianjiaK"></div>
+          <div id="chicoZhaoShiTianjiaK">
+            <div class="zhaoshiLBqqs" id="ZSdiv_tj_panda01">
+              <div class="zhaoshiLB1 zhaoshiLBG">
+                <div class="smallyuanKuang color_gong">攻</div>
+              </div>
+              <div class="zhaoshiLB2 zhaoshiLBG">攀打</div>
+              <div class="zhaoshiLB3 zhaoshiLBG">
+                <div class="zy_buttom handarrow" id="ZSdiv_tj_panda_flr01">
+                  <div class="zy_buttomL org">左</div>
+                  <div class="zy_buttomR">右</div>
+                </div>
+                &nbsp;手 </div>
+              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW1qq01"></div>
+              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN1qq01"></div>
+              <div class="zhaoshiLB12 zhaoshiLBG">
+                <div class="zhaoshite" Taiji_panda_te="">特</div>
+              </div>
+              <div class="zhaoshiLB13 zhaoshiLBG">----></div>
+              <div class="zhaoshiLB14 zhaoshiLBG">
+                <div class="zy_buttom handarrow">
+                  <div class="zy_buttomL org">左</div>
+                  <div class="zy_buttomR">右</div>
+                </div>
+                <select class="choiceXiaLa" id="choiceXiaLa">
+                  <option selected="selected">头部</option>
+                  <option>胸部</option>
+                  <option>腹部</option>
+                  <option>腰部</option>
+                  <option>肩关节</option>
+                  <option>上臂</option>
+                  <option>前臂</option>
+                  <option>手肘</option>
+                  <option>手腕</option>
+                  <option>大腿</option>
+                  <option>小腿</option>
+                  <option>膝关节</option>
+                  <option>踝关节</option>
+                </select>
+              </div>
+              <div class="zhaoshiLB15 zhaoshiLBG">
+              	<div class="yuanXXX" id="choiceRemove01">×</div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="choicezhaoshiButtom" id="choicezhaoshiButtom">完成选择</div>
       </div>
+      <div class="NeiRongKuangzz2 BDYJK"></div>
     </div>
     <div class="NeiRongKuangDr">
       <div class="NeiRongKuangzl1 BDYJK"></div>
