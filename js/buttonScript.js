@@ -8,27 +8,34 @@ var XZbottom = 0;
 
 
 function ChangechoiceBG(ZhaoShi) {
-	var Ditu = document.getElementById("choicePaiBei");
-	var shi01 = document.getElementById("shi_01");
-	var shi02 = document.getElementById("shi_02");
-	var shiTimu = document.getElementById("shi_Timu");
-	var hrhr = document.getElementById("cssStyle");
 	switch (ZhaoShi) {
 		case "Taiji":
-			Ditu.setAttribute("class", "choicePaiBei cPBTaiji0");
-			shiTimu.innerHTML = "太极";
-			shi01.innerHTML = "攻击具有渗透性，高消削。";
-			shi02.innerHTML = "借力打力，化解冲击力。";
-			hrhr.setAttribute("href", "./css/cssTaiji.css");
-			$("#choiceShuxinZhongKuangR").removeClass().addClass("choiceShuxinZhongKuangR Kuang10 cPBTaiji1");
+			//Ditu.setAttribute("class", "choicePaiBei cPBTaiji0");
+			$("#choicePaiBei").attr("class","choicePaiBei cPBTaiji0");
+			//shiTimu.innerHTML = "太极";
+			$("#shi_Timu").html("太极");
+			//shi01.innerHTML = "攻击具有渗透性，高消削。";
+			$("#shi_01").html("攻击具有渗透性，高消削。");
+			//shi02.innerHTML = "借力打力，化解冲击力。";
+			$("#shi_02").html("借力打力，化解冲击力。");
+			//hrhr.setAttribute("href", "./css/cssTaiji.css");
+			$(".shi_hr").css("border-bottom","1px solid #4388bb");
+			//$("#choiceShuxinZhongKuangR").removeClass().addClass("choiceShuxinZhongKuangR Kuang10 cPBTaiji1");
+			$("#choiceShuxinZhongKuangR").attr("class","choiceShuxinZhongKuangR Kuang10 cPBTaiji1");
 			break;
 		case "Taiquan":
-			Ditu.setAttribute("class", "choicePaiBei cPBTaiquan0");
-			shiTimu.innerHTML = "泰拳";
-			shi01.innerHTML = "攻击猛锐迅捷，杀伤力大。";
-			shi02.innerHTML = "并具有高抗打能力。";
-			hrhr.setAttribute("href", "./css/cssTaiquan.css");
-			$("#choiceShuxinZhongKuangR").removeClass().addClass("choiceShuxinZhongKuangR Kuang10 cPBTaiquan1");
+			//Ditu.setAttribute("class", "choicePaiBei cPBTaiquan0");
+			$("#choicePaiBei").attr("class","choicePaiBei cPBTaiquan0");
+			//shiTimu.innerHTML = "泰拳";
+			$("#shi_Timu").html("泰拳");
+			//shi01.innerHTML = "攻击猛锐迅捷，杀伤力大。";
+			$("#shi_01").html("攻击猛锐迅捷，杀伤力大。");
+			//shi02.innerHTML = "并具有高抗打能力。";
+			$("#shi_02").html("并具有高抗打能力。");
+			//hrhr.setAttribute("href", "./css/cssTaiquan.css");
+			$(".shi_hr").css("border-bottom","1px solid #a50000");
+			//$("#choiceShuxinZhongKuangR").removeClass().addClass("choiceShuxinZhongKuangR Kuang10 cPBTaiquan1");
+			$("#choiceShuxinZhongKuangR").attr("class","choiceShuxinZhongKuangR Kuang10 cPBTaiquan1");
 			break;
 	}
 }
