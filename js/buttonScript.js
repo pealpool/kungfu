@@ -819,7 +819,7 @@ function ChuShiHua() {
 			$("#TuKuangTitle_paibie").html("太极");
 			$("#TuKuangTitle_paibie").css("color", "#4388bb");
 
-			window.i_tj_panda = 0;
+			window.i_tj_panda = 1;
 
 			break;
 		case "Taiquan":
@@ -982,46 +982,3 @@ function ShuXinTanChu() {
 
 
 
-
-
-
-
-function xzF_tj_panda() {
-	switch (i_tj_panda) {
-		case 0:
-			i_tj_panda++;
-			$("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_panda01'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>攀打</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow' id='ZSdiv_tj_panda_flr01'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div>&nbsp;手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW1qq01'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN1qq01'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG'>----></div><div class='zhaoshiLB14 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa'><option selected>头部</option><option>胸部</option><option>腹部</option><option>腰部</option><option>肩关节</option><option>上臂</option><option>前臂</option><option>手肘</option><option>手腕</option><option>大腿</option><option>小腿</option><option>膝关节</option><option>踝关节</option></select></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove01'>×</div></div></div>");
-			tj_panda.AttW = (true_tj_panda.AttW * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
-			tj_panda.AttN = (true_tj_panda.AttN * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
-			$("#AttW1qq01").html(Math.round(tj_panda.AttW));
-			$("#AttN1qq01").html(Math.round(tj_panda.AttN));
-			break;
-		case 1:
-			i_tj_panda++;
-			$("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_panda02'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>攀打</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow' id='ZSdiv_tj_panda_flr02'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div>&nbsp;手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW1qq02'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN1qq02'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG'>----></div><div class='zhaoshiLB14 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa'><option selected>头部</option><option>胸部</option><option>腹部</option><option>腰部</option><option>肩关节</option><option>上臂</option><option>前臂</option><option>手肘</option><option>手腕</option><option>大腿</option><option>小腿</option><option>膝关节</option><option>踝关节</option></select></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove02'>×</div></div></div>");
-			tj_panda.AttW = (true_tj_panda.AttW * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
-			tj_panda.AttN = (true_tj_panda.AttN * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
-			$("#AttW1qq02").html(Math.round(tj_panda.AttW));
-			$("#AttN1qq02").html(Math.round(tj_panda.AttN));
-			break;
-		case 2:
-			i_tj_panda++;
-			break;
-		case 3:
-			i_tj_panda++;
-			break;
-		case 4:
-			i_tj_panda++;
-			break;
-	}
-	
-	/*$("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_panda01'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>攀打</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow' id='ZSdiv_tj_panda_flr01'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div>&nbsp;手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW1qq01'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN1qq01'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG'>----></div><div class='zhaoshiLB14 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa'><option selected>头部</option><option>胸部</option><option>腹部</option><option>腰部</option><option>肩关节</option><option>上臂</option><option>前臂</option><option>手肘</option><option>手腕</option><option>大腿</option><option>小腿</option><option>膝关节</option><option>踝关节</option></select></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove01'>×</div></div></div>");
-	tj_panda.AttW = (true_tj_panda.AttW * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
-	tj_panda.AttN = (true_tj_panda.AttN * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
-	$("#AttW1qq01").html(Math.round(tj_panda.AttW));
-	$("#AttN1qq01").html(Math.round(tj_panda.AttN));*/
-
-
-
-
-}
