@@ -767,7 +767,7 @@ $(document).ready(function () {
 			tj_panda.AttN = (true_tj_panda.AttN * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
 			$("#AttW1qq0" + i_tj_panda).html(Math.round(tj_panda.AttW));
 			$("#AttN1qq0" + i_tj_panda).html(Math.round(tj_panda.AttN));
-			
+			choiceZS01.zs_name = "tj_panda";
 			i_tj_panda++;
 		}
 
