@@ -1059,13 +1059,18 @@ background: #a50000;}
 	background-color: #ffe4e4;
 	border-radius: 5px;
 }
+.huise {
+	background-color: #E6E6E6;
+}
 .zhaoshiLBqq:hover {
 	background-color: #fff0f0;
 }
 .zhaoshiLBqqs:hover {
 	background-color: #fff0f0;
 }
-
+.huise:hover {
+	background-color: #E6E6E6;
+}
 .NeiRongchoiceZSdaK_Title2 {
 	float: left;
 	font-size: 20px;
@@ -1102,9 +1107,9 @@ background: #a50000;}
 .NeiRongchoiceZSdaK_Title3 {
 	float: right;
 	color: #737373;
+	width: 120px;
 	font-size: 14px;
 	margin-top: 18px;
-	margin-right: 10px;
 }
 
 

@@ -11,7 +11,7 @@ function ChangechoiceBG(ZhaoShi) {
 	switch (ZhaoShi) {
 		case "Taiji":
 			//Ditu.setAttribute("class", "choicePaiBei cPBTaiji0");
-			$("#choicePaiBei").attr("class","choicePaiBei cPBTaiji0");
+			$("#choicePaiBei").attr("class", "choicePaiBei cPBTaiji0");
 			//shiTimu.innerHTML = "太极";
 			$("#shi_Timu").html("太极");
 			//shi01.innerHTML = "攻击具有渗透性，高消削。";
@@ -19,13 +19,13 @@ function ChangechoiceBG(ZhaoShi) {
 			//shi02.innerHTML = "借力打力，化解冲击力。";
 			$("#shi_02").html("借力打力，化解冲击力。");
 			//hrhr.setAttribute("href", "./css/cssTaiji.css");
-			$(".shi_hr").css("border-bottom","1px solid #4388bb");
+			$(".shi_hr").css("border-bottom", "1px solid #4388bb");
 			//$("#choiceShuxinZhongKuangR").removeClass().addClass("choiceShuxinZhongKuangR Kuang10 cPBTaiji1");
-			$("#choiceShuxinZhongKuangR").attr("class","choiceShuxinZhongKuangR Kuang10 cPBTaiji1");
+			$("#choiceShuxinZhongKuangR").attr("class", "choiceShuxinZhongKuangR Kuang10 cPBTaiji1");
 			break;
 		case "Taiquan":
 			//Ditu.setAttribute("class", "choicePaiBei cPBTaiquan0");
-			$("#choicePaiBei").attr("class","choicePaiBei cPBTaiquan0");
+			$("#choicePaiBei").attr("class", "choicePaiBei cPBTaiquan0");
 			//shiTimu.innerHTML = "泰拳";
 			$("#shi_Timu").html("泰拳");
 			//shi01.innerHTML = "攻击猛锐迅捷，杀伤力大。";
@@ -33,9 +33,9 @@ function ChangechoiceBG(ZhaoShi) {
 			//shi02.innerHTML = "并具有高抗打能力。";
 			$("#shi_02").html("并具有高抗打能力。");
 			//hrhr.setAttribute("href", "./css/cssTaiquan.css");
-			$(".shi_hr").css("border-bottom","1px solid #a50000");
+			$(".shi_hr").css("border-bottom", "1px solid #a50000");
 			//$("#choiceShuxinZhongKuangR").removeClass().addClass("choiceShuxinZhongKuangR Kuang10 cPBTaiquan1");
-			$("#choiceShuxinZhongKuangR").attr("class","choiceShuxinZhongKuangR Kuang10 cPBTaiquan1");
+			$("#choiceShuxinZhongKuangR").attr("class", "choiceShuxinZhongKuangR Kuang10 cPBTaiquan1");
 			break;
 	}
 }
@@ -821,6 +821,9 @@ function ChuShiHua() {
 
 	HPchongzhi();
 
+	window.i_yixuanZS = 1; //已选择招式 计数
+	window.yxZStime = 7.5; //已选招式剩余时间
+
 	switch (PaiBei) {
 		case "Taiji":
 			$("#TuKuangTitle_paibie").html("太极");
@@ -986,6 +989,118 @@ function ShuXinTanChu() {
 }
 
 
+//添加一个招式后共同动作
+function tianjiaZShou() {
+	i_yixuanZS++;
+	xuanshisyTime();
+	if (i_yixuanZS > 5) {
+		switch (PaiBei) {
+			case "Taiji":
+				$("#ZSdiv_tj_panda").addClass("huise");
+				$("#ZSdiv_tj_tuishou").addClass("huise");
+				$("#ZSdiv_tj_qingna").addClass("huise");
+				$("#ZSdiv_tj_shuangfong").addClass("huise");
+				$("#ZSdiv_tj_zhoudicui").addClass("huise");
+				$("#ZSdiv_tj_paocui").addClass("huise");
+				$("#ZSdiv_tj_yuanyangtui").addClass("huise");
+				$("#ZSdiv_tj_banshuai").addClass("huise");
+				break;
+			case "Taiquan":
+				$("#ZSdiv_tq_zhiquan").addClass("huise");
+				$("#ZSdiv_tq_lrgouquan").addClass("huise");
+				$("#ZSdiv_tq_sgouquan").addClass("huise");
+				$("#ZSdiv_tq_zhouji").addClass("huise");
+				$("#ZSdiv_tq_xizhuang").addClass("huise");
+				$("#ZSdiv_tq_dengtui").addClass("huise");
+				$("#ZSdiv_tq_shaotui").addClass("huise");
+				break;
+		}
+	} else {
+		switch (PaiBei) {
+			case "Taiji":
+				if ((tj_panda.ATimeQ + tj_panda.ATime) > yxZStime) {
+					$("#ZSdiv_tj_panda").addClass("huise");
+				}
+				if ((tj_tuishou.ATimeQ + tj_tuishou.ATime) > yxZStime) {
+					$("#ZSdiv_tj_tuishou").addClass("huise");
+				}
+				if ((tj_qingna.ATimeQ + tj_qingna.ATime) > yxZStime) {
+					$("#ZSdiv_tj_qingna").addClass("huise");
+				}
+				if ((tj_shuangfong.ATimeQ + tj_shuangfong.ATime) > yxZStime) {
+					$("#ZSdiv_tj_shuangfong").addClass("huise");
+				}
+				if ((tj_zhoudicui.ATimeQ + tj_zhoudicui.ATime) > yxZStime) {
+					$("#ZSdiv_tj_zhoudicui").addClass("huise");
+				}
+				if ((tj_paocui.ATimeQ + tj_paocui.ATime) > yxZStime) {
+					$("#ZSdiv_tj_paocui").addClass("huise");
+				}
+				if ((tj_yuanyangtui.ATimeQ + tj_yuanyangtui.ATime) > yxZStime) {
+					$("#ZSdiv_tj_yuanyangtui").addClass("huise");
+				}
+				if ((tj_banshuai.ATimeQ + tj_banshuai.ATime) > yxZStime) {
+					$("#ZSdiv_tj_banshuai").addClass("huise");
+				}
+				break;
+			case "Taiquan":
+				break;
+		}
+	}
+}
 
 
+//删除一个招式后共同动作
+function shanchuZShou() {
+	xuanshisyTime();
+	switch (PaiBei) {
+		case "Taiji":
+			if ((tj_panda.ATimeQ + tj_panda.ATime) <= yxZStime) {
+				$("#ZSdiv_tj_panda").removeClass("huise");
+			}
+			if ((tj_tuishou.ATimeQ + tj_tuishou.ATime) <= yxZStime) {
+				$("#ZSdiv_tj_tuishou").removeClass("huise");
+			}
+			if ((tj_qingna.ATimeQ + tj_qingna.ATime) <= yxZStime) {
+				$("#ZSdiv_tj_qingna").removeClass("huise");
+			}
+			if ((tj_shuangfong.ATimeQ + tj_shuangfong.ATime) <= yxZStime) {
+				$("#ZSdiv_tj_shuangfong").removeClass("huise");
+			}
+			if ((tj_zhoudicui.ATimeQ + tj_zhoudicui.ATime) <= yxZStime) {
+				$("#ZSdiv_tj_zhoudicui").removeClass("huise");
+			}
+			if ((tj_paocui.ATimeQ + tj_paocui.ATime) <= yxZStime) {
+				$("#ZSdiv_tj_paocui").removeClass("huise");
+			}
+			if ((tj_yuanyangtui.ATimeQ + tj_yuanyangtui.ATime) <= yxZStime) {
+				$("#ZSdiv_tj_yuanyangtui").removeClass("huise");
+			}
+			if ((tj_banshuai.ATimeQ + tj_banshuai.ATime) <= yxZStime) {
+				$("#ZSdiv_tj_banshuai").removeClass("huise");
+			}
+			break;
+		case "Taiquan":
+			break;
+	}
+}
 
+//加回删除招式的时间
+function jiahuitime(zsName) {
+	switch (PaiBei) {
+		case "Taiji":
+			switch (zsName) {
+				case "tj_panda":
+					yxZStime = yxZStime + tj_panda.ATimeQ + tj_panda.ATime;
+					break;
+			}
+			break;
+		case "Taiquan":
+			break;
+	}
+}
+
+//剩余时间显示
+function xuanshisyTime(){
+	$("#xuanZSsyTime").html(yxZStime.toFixed(1));
+}
