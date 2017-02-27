@@ -751,6 +751,10 @@ $(document).ready(function () {
 				$("#choiceRemove03").attr("id", "choiceRemove02");
 				$("#choiceRemove04").attr("id", "choiceRemove03");
 				$("#choiceRemove05").attr("id", "choiceRemove04");
+				$("#choiceRemove01").parent().parent().attr("px", "1");
+				$("#choiceRemove02").parent().parent().attr("px", "2");
+				$("#choiceRemove03").parent().parent().attr("px", "3");
+				$("#choiceRemove04").parent().parent().attr("px", "4");
 				choiceZS01.zs_name = choiceZS02.zs_name;
 				choiceZS01.zs_frome = choiceZS02.zs_frome;
 				choiceZS01.zs_to = choiceZS02.zs_to;
@@ -780,6 +784,9 @@ $(document).ready(function () {
 				$("#choiceRemove03").attr("id", "choiceRemove02");
 				$("#choiceRemove04").attr("id", "choiceRemove03");
 				$("#choiceRemove05").attr("id", "choiceRemove04");
+				$("#choiceRemove02").parent().parent().attr("px", "2");
+				$("#choiceRemove03").parent().parent().attr("px", "3");
+				$("#choiceRemove04").parent().parent().attr("px", "4");
 				choiceZS02.zs_name = choiceZS03.zs_name;
 				choiceZS02.zs_frome = choiceZS03.zs_frome;
 				choiceZS02.zs_to = choiceZS03.zs_to;
@@ -805,6 +812,8 @@ $(document).ready(function () {
 				jiahuitime(choiceZS03.zs_name);
 				$("#choiceRemove04").attr("id", "choiceRemove03");
 				$("#choiceRemove05").attr("id", "choiceRemove04");
+				$("#choiceRemove03").parent().parent().attr("px", "3");
+				$("#choiceRemove04").parent().parent().attr("px", "4");
 				choiceZS03.zs_name = choiceZS04.zs_name;
 				choiceZS03.zs_frome = choiceZS04.zs_frome;
 				choiceZS03.zs_to = choiceZS04.zs_to;
@@ -826,6 +835,7 @@ $(document).ready(function () {
 				i_yixuanZS--;
 				jiahuitime(choiceZS04.zs_name);
 				$("#choiceRemove05").attr("id", "choiceRemove04");
+				$("#choiceRemove04").parent().parent().attr("px", "4");
 				choiceZS04.zs_name = choiceZS05.zs_name;
 				choiceZS04.zs_frome = choiceZS05.zs_frome;
 				choiceZS04.zs_to = choiceZS05.zs_to;
@@ -856,7 +866,7 @@ $(document).ready(function () {
 		var okornot = $("#ZSdiv_tj_panda").attr("class");
 		if (okornot != "zhaoshiLBqqs huise") {
 			//if (i_yixuanZS <= 5) {
-			$("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_panda0" + i_tj_panda + "'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>攀打</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow' id='ZSdiv_tj_panda_flr0" + i_tj_panda + "'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG'>----></div><div class='zhaoshiLB14 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa0" + i_tj_panda + "'><option selected>头部</option><option>胸部</option><option>腹部</option><option>腰部</option><option>肩关节</option><option>上臂</option><option>前臂</option><option>手肘</option><option>手腕</option><option>大腿</option><option>小腿</option><option>膝关节</option><option>踝关节</option></select></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove0" + i_yixuanZS + "'>×</div></div></div>");
+			$("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_panda0" + i_tj_panda + "' px='" + i_yixuanZS + "'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>攀打</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow' id='ZSdiv_tj_panda_flr0" + i_tj_panda + "'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG'>----></div><div class='zhaoshiLB14 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa0" + i_tj_panda + "'><option selected>头部</option><option>胸部</option><option>腹部</option><option>腰部</option><option>肩关节</option><option>上臂</option><option>前臂</option><option>手肘</option><option>手腕</option><option>大腿</option><option>小腿</option><option>膝关节</option><option>踝关节</option></select></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove0" + i_yixuanZS + "'>×</div></div></div>");
 			tj_panda.AttW = (true_tj_panda.AttW * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
 			tj_panda.AttN = (true_tj_panda.AttN * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
 			$("#AttW1qq0" + i_tj_panda).html(Math.round(tj_panda.AttW));
@@ -895,6 +905,55 @@ $(document).ready(function () {
 		}
 
 	});
+
+
+	//手动排序移动
+	$(function () {
+		$("#chicoZhaoShiTianjiaK").sortable({
+			axis: "y",
+			cursor: "move",
+			/*update: function (event, ui) {
+				var text = "排序为：";
+				$("#chicoZhaoShiTianjiaK").children().each(function () {
+					//text = text + $(this).attr("px") + " ";
+					$(this).attr("px", "1");
+				})
+				alert(text); //把排序的ID弹出
+			}*/
+		});
+		$("#chicoZhaoShiTianjiaK").disableSelection();
+	});
+
+
+	//完成招式选择
+	$("#choicezhaoshiButtom").click(
+		function () {
+			var text = "排序为：";
+			var i = 1;
+			$("#chicoZhaoShiTianjiaK").children().each(function () {
+				//text = text + $(this).attr("px") + " ";
+				//$(this).attr("px", "1");
+				switch (i) {
+					case 1:
+						//slice(6, -2)从第6个后截取，到倒数第3个。
+						choiceZS01.zs_name = $(this).attr("id").slice(6, -2);
+						choiceZS01.zs_frome = "shoul";
+						choiceZS01.zs_to = "tou";
+						break;
+					case 2:
+						break;
+					case 3:
+						break;
+					case 4:
+						break;
+					case 5:
+						break;
+				}
+				i++;
+			});
+			alert(choiceZS01.zs_name); //把排序的ID弹出
+		}
+	);
 
 
 
