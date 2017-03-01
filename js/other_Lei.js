@@ -8,6 +8,7 @@ var choiceZS = {
 		aaa.zs_name = "";
 		aaa.zs_frome = "";
 		aaa.zs_to = "";
+		aaa.zs_torl = "";
 		return aaa;
 	}
 };

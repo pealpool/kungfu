@@ -720,20 +720,10 @@ $(document).ready(function () {
 			i_tj_panda = 1;
 			i_yixuanZS = 1;
 			choiceZS01.zs_name = "";
-			choiceZS01.zs_frome = "";
-			choiceZS01.zs_to = "";
 			choiceZS02.zs_name = "";
-			choiceZS02.zs_frome = "";
-			choiceZS02.zs_to = "";
 			choiceZS03.zs_name = "";
-			choiceZS03.zs_frome = "";
-			choiceZS03.zs_to = "";
 			choiceZS04.zs_name = "";
-			choiceZS04.zs_frome = "";
-			choiceZS04.zs_to = "";
 			choiceZS05.zs_name = "";
-			choiceZS05.zs_frome = "";
-			choiceZS05.zs_to = "";
 			yxZStime = 7.5;
 			shanchuZShou();
 		}
@@ -751,25 +741,14 @@ $(document).ready(function () {
 				$("#choiceRemove03").attr("id", "choiceRemove02");
 				$("#choiceRemove04").attr("id", "choiceRemove03");
 				$("#choiceRemove05").attr("id", "choiceRemove04");
-				$("#choiceRemove01").parent().parent().attr("px", "1");
-				$("#choiceRemove02").parent().parent().attr("px", "2");
-				$("#choiceRemove03").parent().parent().attr("px", "3");
-				$("#choiceRemove04").parent().parent().attr("px", "4");
+				$("#choiceXiaLa02").attr("id", "choiceXiaLa01");
+				$("#choiceXiaLa03").attr("id", "choiceXiaLa02");
+				$("#choiceXiaLa04").attr("id", "choiceXiaLa03");
+				$("#choiceXiaLa05").attr("id", "choiceXiaLa04");
 				choiceZS01.zs_name = choiceZS02.zs_name;
-				choiceZS01.zs_frome = choiceZS02.zs_frome;
-				choiceZS01.zs_to = choiceZS02.zs_to;
 				choiceZS02.zs_name = choiceZS03.zs_name;
-				choiceZS02.zs_frome = choiceZS03.zs_frome;
-				choiceZS02.zs_to = choiceZS03.zs_to;
 				choiceZS03.zs_name = choiceZS04.zs_name;
-				choiceZS03.zs_frome = choiceZS04.zs_frome;
-				choiceZS03.zs_to = choiceZS04.zs_to;
 				choiceZS04.zs_name = choiceZS05.zs_name;
-				choiceZS04.zs_frome = choiceZS05.zs_frome;
-				choiceZS04.zs_to = choiceZS05.zs_to;
-				choiceZS05.zs_name = "";
-				choiceZS05.zs_frome = "";
-				choiceZS05.zs_to = "";
 				shanchuZShou();
 			});
 		});
@@ -784,21 +763,12 @@ $(document).ready(function () {
 				$("#choiceRemove03").attr("id", "choiceRemove02");
 				$("#choiceRemove04").attr("id", "choiceRemove03");
 				$("#choiceRemove05").attr("id", "choiceRemove04");
-				$("#choiceRemove02").parent().parent().attr("px", "2");
-				$("#choiceRemove03").parent().parent().attr("px", "3");
-				$("#choiceRemove04").parent().parent().attr("px", "4");
+				$("#choiceXiaLa03").attr("id", "choiceXiaLa02");
+				$("#choiceXiaLa04").attr("id", "choiceXiaLa03");
+				$("#choiceXiaLa05").attr("id", "choiceXiaLa04");
 				choiceZS02.zs_name = choiceZS03.zs_name;
-				choiceZS02.zs_frome = choiceZS03.zs_frome;
-				choiceZS02.zs_to = choiceZS03.zs_to;
 				choiceZS03.zs_name = choiceZS04.zs_name;
-				choiceZS03.zs_frome = choiceZS04.zs_frome;
-				choiceZS03.zs_to = choiceZS04.zs_to;
 				choiceZS04.zs_name = choiceZS05.zs_name;
-				choiceZS04.zs_frome = choiceZS05.zs_frome;
-				choiceZS04.zs_to = choiceZS05.zs_to;
-				choiceZS05.zs_name = "";
-				choiceZS05.zs_frome = "";
-				choiceZS05.zs_to = "";
 				shanchuZShou();
 			});
 		});
@@ -812,17 +782,10 @@ $(document).ready(function () {
 				jiahuitime(choiceZS03.zs_name);
 				$("#choiceRemove04").attr("id", "choiceRemove03");
 				$("#choiceRemove05").attr("id", "choiceRemove04");
-				$("#choiceRemove03").parent().parent().attr("px", "3");
-				$("#choiceRemove04").parent().parent().attr("px", "4");
+				$("#choiceXiaLa04").attr("id", "choiceXiaLa03");
+				$("#choiceXiaLa05").attr("id", "choiceXiaLa04");
 				choiceZS03.zs_name = choiceZS04.zs_name;
-				choiceZS03.zs_frome = choiceZS04.zs_frome;
-				choiceZS03.zs_to = choiceZS04.zs_to;
 				choiceZS04.zs_name = choiceZS05.zs_name;
-				choiceZS04.zs_frome = choiceZS05.zs_frome;
-				choiceZS04.zs_to = choiceZS05.zs_to;
-				choiceZS05.zs_name = "";
-				choiceZS05.zs_frome = "";
-				choiceZS05.zs_to = "";
 				shanchuZShou();
 			});
 		});
@@ -835,13 +798,8 @@ $(document).ready(function () {
 				i_yixuanZS--;
 				jiahuitime(choiceZS04.zs_name);
 				$("#choiceRemove05").attr("id", "choiceRemove04");
-				$("#choiceRemove04").parent().parent().attr("px", "4");
+				$("#choiceXiaLa05").attr("id", "choiceXiaLa04");
 				choiceZS04.zs_name = choiceZS05.zs_name;
-				choiceZS04.zs_frome = choiceZS05.zs_frome;
-				choiceZS04.zs_to = choiceZS05.zs_to;
-				choiceZS05.zs_name = "";
-				choiceZS05.zs_frome = "";
-				choiceZS05.zs_to = "";
 				shanchuZShou();
 			});
 		});
@@ -853,9 +811,6 @@ $(document).ready(function () {
 				$(this).remove(); //then remove from the DOM
 				i_yixuanZS--;
 				jiahuitime(choiceZS05.zs_name);
-				choiceZS05.zs_name = "";
-				choiceZS05.zs_frome = "";
-				choiceZS05.zs_to = "";
 				shanchuZShou();
 			});
 		});
@@ -863,10 +818,9 @@ $(document).ready(function () {
 
 	//添加招式
 	$(document).on("click", "#ZSdiv_tj_panda", function () {
-		var okornot = $("#ZSdiv_tj_panda").attr("class");
-		if (okornot != "zhaoshiLBqqs huise") {
+		if ($("#ZSdiv_tj_panda").attr("class") !== "zhaoshiLBqqs huise") {
 			//if (i_yixuanZS <= 5) {
-			$("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_panda0" + i_tj_panda + "' px='" + i_yixuanZS + "'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>攀打</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow' id='ZSdiv_tj_panda_flr0" + i_tj_panda + "'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG'>----></div><div class='zhaoshiLB14 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa0" + i_tj_panda + "'><option selected>头部</option><option>胸部</option><option>腹部</option><option>腰部</option><option>肩关节</option><option>上臂</option><option>前臂</option><option>手肘</option><option>手腕</option><option>大腿</option><option>小腿</option><option>膝关节</option><option>踝关节</option></select></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove0" + i_yixuanZS + "'>×</div></div></div>");
+			$("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_panda0" + i_tj_panda + "'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>攀打</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow' id='ZSdiv_tj_panda_flr0" + i_tj_panda + "'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG'>----></div><div class='zhaoshiLB14 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa0" + i_yixuanZS + "'><option selected>头部</option><option>胸部</option><option>腹部</option><option>腰部</option><option>肩关节</option><option>上臂</option><option>前臂</option><option>手肘</option><option>手腕</option><option>大腿</option><option>小腿</option><option>膝关节</option><option>踝关节</option></select></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove0" + i_yixuanZS + "'>×</div></div></div>");
 			tj_panda.AttW = (true_tj_panda.AttW * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
 			tj_panda.AttN = (true_tj_panda.AttN * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
 			$("#AttW1qq0" + i_tj_panda).html(Math.round(tj_panda.AttW));
@@ -875,28 +829,18 @@ $(document).ready(function () {
 			switch (i_yixuanZS) {
 				case 1:
 					choiceZS01.zs_name = "tj_panda";
-					choiceZS01.zs_frome = "shoul";
-					choiceZS01.zs_to = "tou";
 					break;
 				case 2:
 					choiceZS02.zs_name = "tj_panda";
-					choiceZS02.zs_frome = "shoul";
-					choiceZS02.zs_to = "tou";
 					break;
 				case 3:
 					choiceZS03.zs_name = "tj_panda";
-					choiceZS03.zs_frome = "shoul";
-					choiceZS03.zs_to = "tou";
 					break;
 				case 4:
 					choiceZS04.zs_name = "tj_panda";
-					choiceZS04.zs_frome = "shoul";
-					choiceZS04.zs_to = "tou";
 					break;
 				case 5:
 					choiceZS05.zs_name = "tj_panda";
-					choiceZS05.zs_frome = "shoul";
-					choiceZS05.zs_to = "tou";
 					break;
 			}
 			i_tj_panda++;
@@ -931,14 +875,44 @@ $(document).ready(function () {
 			var text = "排序为：";
 			var i = 1;
 			$("#chicoZhaoShiTianjiaK").children().each(function () {
-				//text = text + $(this).attr("px") + " ";
-				//$(this).attr("px", "1");
 				switch (i) {
 					case 1:
 						//slice(6, -2)从第6个后截取，到倒数第3个。
+						//alert($(this).find(".zhaoshiLB3.zhaoshiLBG").html());
 						choiceZS01.zs_name = $(this).attr("id").slice(6, -2);
-						choiceZS01.zs_frome = "shoul";
-						choiceZS01.zs_to = "tou";
+						var gz01 = new RegExp("手");
+						var gz02 = new RegExp("脚");
+						if (gz01.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+							if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+								if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+									choiceZS01.zs_frome = "shoul";
+								} else {
+									choiceZS01.zs_frome = "shour";
+								}
+							} else {
+								choiceZS01.zs_frome = "shou"; //双手
+							}
+						} else if (gz02.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+							if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+								if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+									choiceZS01.zs_frome = "jiaol";
+								} else {
+									choiceZS01.zs_frome = "jiaor";
+								}
+							} else {
+								choiceZS01.zs_frome = "jiao";
+							}
+						}
+						choiceZS01.zs_to = $(this).find("select").val();
+						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+								if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+									choiceZS01.zs_torl = "l";
+								} else {
+									choiceZS01.zs_torl = "r";
+								}
+							} else {
+								choiceZS01.zs_torl = "b";
+							}
 						break;
 					case 2:
 						break;
@@ -951,12 +925,54 @@ $(document).ready(function () {
 				}
 				i++;
 			});
-			alert(choiceZS01.zs_name); //把排序的ID弹出
+			alert(choiceZS01.zs_name + " " + choiceZS01.zs_frome + " " + choiceZS01.zs_to + " " + choiceZS01.zs_torl); //把排序的ID弹出
 		}
 	);
 
+	//选择攻击部位限制左右按钮
+	$(document).on("change", "#choiceXiaLa01, #choiceXiaLa02, #choiceXiaLa03, #choiceXiaLa04, #choiceXiaLa05", function () {
+		//alert($(this).val());
+		switch($(this).val()){
+			case "头部":
+				alert($(this).attr("id"));
+				break;
+			case "胸部":
+				alert($(this).val());
+				break;
+			case "腹部":
+				break;
+			case "腰部":
+				break;
+			case "肩关节":
+				break;
+			case "上臂":
+				break;
+			case "前臂":
+				break;
+			case "手肘":
+				break;
+			case "手腕":
+				break;
+			case "大腿":
+				break;
+			case "小腿":
+				break;
+			case "膝关节":
+				break;
+			case "踝关节":
+				break;
+		}
+	});
 
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 
