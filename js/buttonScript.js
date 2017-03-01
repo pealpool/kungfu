@@ -830,6 +830,21 @@ function ChuShiHua() {
 			$("#TuKuangTitle_paibie").css("color", "#4388bb");
 
 			window.i_tj_panda = 1;
+			window.i_tj_tuishou = 1;
+			window.i_tj_qingna = 1;
+			window.i_tj_shuangfong = 1;
+			window.i_tj_zhoudicui = 1;
+			window.i_tj_paocui = 1;
+			window.i_tj_yuanyangtui = 1;
+			window.i_tj_banshuai = 1;
+			
+			window.i_tq_zhiquan = 1;
+			window.i_tq_lrgouquan = 1;
+			window.i_tq_sgouquan = 1;
+			window.i_tq_zhouji = 1;
+			window.i_tq_xizhuang = 1;
+			window.i_tq_dengtui = 1;
+			window.i_tq_shaotui = 1;
 
 			break;
 		case "Taiquan":
@@ -1018,28 +1033,28 @@ function tianjiaZShou() {
 	} else {
 		switch (PaiBei) {
 			case "Taiji":
-				if ((tj_panda.ATimeQ + tj_panda.ATime) > yxZStime) {
+				if ((tj_panda.ATimeQ + tj_panda.ATime).toFixed(1) > yxZStime.toFixed(1)) {
 					$("#ZSdiv_tj_panda").addClass("huise");
 				}
-				if ((tj_tuishou.ATimeQ + tj_tuishou.ATime) > yxZStime) {
+				if ((tj_tuishou.ATimeQ + tj_tuishou.ATime).toFixed(1) > yxZStime.toFixed(1)) {
 					$("#ZSdiv_tj_tuishou").addClass("huise");
 				}
-				if ((tj_qingna.ATimeQ + tj_qingna.ATime) > yxZStime) {
+				if ((tj_qingna.ATimeQ + tj_qingna.ATime).toFixed(1) > yxZStime.toFixed(1)) {
 					$("#ZSdiv_tj_qingna").addClass("huise");
 				}
-				if ((tj_shuangfong.ATimeQ + tj_shuangfong.ATime) > yxZStime) {
+				if ((tj_shuangfong.ATimeQ + tj_shuangfong.ATime).toFixed(1) > yxZStime.toFixed(1)) {
 					$("#ZSdiv_tj_shuangfong").addClass("huise");
 				}
-				if ((tj_zhoudicui.ATimeQ + tj_zhoudicui.ATime) > yxZStime) {
+				if ((tj_zhoudicui.ATimeQ + tj_zhoudicui.ATime).toFixed(1) > yxZStime.toFixed(1)) {
 					$("#ZSdiv_tj_zhoudicui").addClass("huise");
 				}
-				if ((tj_paocui.ATimeQ + tj_paocui.ATime) > yxZStime) {
+				if ((tj_paocui.ATimeQ + tj_paocui.ATime).toFixed(1) > yxZStime.toFixed(1)) {
 					$("#ZSdiv_tj_paocui").addClass("huise");
 				}
-				if ((tj_yuanyangtui.ATimeQ + tj_yuanyangtui.ATime) > yxZStime) {
+				if ((tj_yuanyangtui.ATimeQ + tj_yuanyangtui.ATime).toFixed(1) > yxZStime.toFixed(1)) {
 					$("#ZSdiv_tj_yuanyangtui").addClass("huise");
 				}
-				if ((tj_banshuai.ATimeQ + tj_banshuai.ATime) > yxZStime) {
+				if ((tj_banshuai.ATimeQ + tj_banshuai.ATime).toFixed(1) > yxZStime.toFixed(1)) {
 					$("#ZSdiv_tj_banshuai").addClass("huise");
 				}
 				break;
@@ -1055,28 +1070,28 @@ function shanchuZShou() {
 	xuanshisyTime();
 	switch (PaiBei) {
 		case "Taiji":
-			if ((tj_panda.ATimeQ + tj_panda.ATime) <= yxZStime) {
+			if ((tj_panda.ATimeQ + tj_panda.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
 				$("#ZSdiv_tj_panda").removeClass("huise");
 			}
-			if ((tj_tuishou.ATimeQ + tj_tuishou.ATime) <= yxZStime) {
+			if ((tj_tuishou.ATimeQ + tj_tuishou.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
 				$("#ZSdiv_tj_tuishou").removeClass("huise");
 			}
-			if ((tj_qingna.ATimeQ + tj_qingna.ATime) <= yxZStime) {
+			if ((tj_qingna.ATimeQ + tj_qingna.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
 				$("#ZSdiv_tj_qingna").removeClass("huise");
 			}
-			if ((tj_shuangfong.ATimeQ + tj_shuangfong.ATime) <= yxZStime) {
+			if ((tj_shuangfong.ATimeQ + tj_shuangfong.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
 				$("#ZSdiv_tj_shuangfong").removeClass("huise");
 			}
-			if ((tj_zhoudicui.ATimeQ + tj_zhoudicui.ATime) <= yxZStime) {
+			if ((tj_zhoudicui.ATimeQ + tj_zhoudicui.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
 				$("#ZSdiv_tj_zhoudicui").removeClass("huise");
 			}
-			if ((tj_paocui.ATimeQ + tj_paocui.ATime) <= yxZStime) {
+			if ((tj_paocui.ATimeQ + tj_paocui.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
 				$("#ZSdiv_tj_paocui").removeClass("huise");
 			}
-			if ((tj_yuanyangtui.ATimeQ + tj_yuanyangtui.ATime) <= yxZStime) {
+			if ((tj_yuanyangtui.ATimeQ + tj_yuanyangtui.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
 				$("#ZSdiv_tj_yuanyangtui").removeClass("huise");
 			}
-			if ((tj_banshuai.ATimeQ + tj_banshuai.ATime) <= yxZStime) {
+			if ((tj_banshuai.ATimeQ + tj_banshuai.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
 				$("#ZSdiv_tj_banshuai").removeClass("huise");
 			}
 			break;
@@ -1092,6 +1107,27 @@ function jiahuitime(zsName) {
 			switch (zsName) {
 				case "tj_panda":
 					yxZStime = yxZStime + tj_panda.ATimeQ + tj_panda.ATime;
+					break;
+				case "tj_tuishou":
+					yxZStime = yxZStime + tj_tuishou.ATimeQ + tj_tuishou.ATime;
+					break;
+				case "tj_qingna":
+					yxZStime = yxZStime + tj_qingna.ATimeQ + tj_qingna.ATime;
+					break;
+				case "tj_shuangfong":
+					yxZStime = yxZStime + tj_shuangfong.ATimeQ + tj_shuangfong.ATime;
+					break;
+				case "tj_zhoudicui":
+					yxZStime = yxZStime + tj_zhoudicui.ATimeQ + tj_zhoudicui.ATime;
+					break;
+				case "tj_paocui":
+					yxZStime = yxZStime + tj_paocui.ATimeQ + tj_paocui.ATime;
+					break;
+				case "tj_yuanyangtui":
+					yxZStime = yxZStime + tj_yuanyangtui.ATimeQ + tj_yuanyangtui.ATime;
+					break;
+				case "tj_banshuai":
+					yxZStime = yxZStime + tj_banshuai.ATimeQ + tj_banshuai.ATime;
 					break;
 			}
 			break;

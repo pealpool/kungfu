@@ -504,6 +504,9 @@ html, body {
 .handarrow {
 	cursor: pointer;
 }
+.handarrow:hover {
+	color: #BEBEBE;
+}
 .zhaoshiTitle {
 	width: 480px;
 	height: 25px;
@@ -556,12 +559,15 @@ html, body {
 	width: 24px;
 }
 .zhaoshiTitle13 {
-	width: 63px;
+	width: 40px;
 }
 .zhaoshiTitle14 {
-	width:115px;
+	width:23px;
 }
 .zhaoshiTitle15 {
+	width: 115px;
+}
+.zhaoshiTitle16 {
 	width: 25px;
 }
 
@@ -671,13 +677,16 @@ html, body {
 	width: 24px;
 }
 .zhaoshiLB13 {
-	width: 63px;
+	width: 40px;
 }
 .zhaoshiLB14 {
+	width: 23px;
+}
+.zhaoshiLB15 {
 	width:113px;
 	padding-left: 2px;
 }
-.zhaoshiLB15 {
+.zhaoshiLB16 {
 	width:22px;
 }
 .zhaoshiTitle12 {

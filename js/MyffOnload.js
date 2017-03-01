@@ -372,10 +372,7 @@ $(document).ready(function () {
 			xuanshisyTime();
 			if (PaiBei === "Taiji") {
 
-				$("#zhaoshineirongqq").html("<div class='zhaoshiLBqqs' id='ZSdiv_tj_panda'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>攀打</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow' id='ZSdiv_tj_panda_flr'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW1qq'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN1qq'></div><div class='zhaoshiLB6 zhaoshiLBG' id='Mzxz1qq'></div><div class='zhaoshiLB7 zhaoshiLBG' id='ATimeQ1qq'></div><div class='zhaoshiLB8 zhaoshiLBG' id='ATime1qq'></div><div class='zhaoshiLB9 zhaoshiLBG' id='ATimeH1qq'></div><div class='zhaoshiLB10 zhaoshiLBG' id='PinHengAtt1qq'></div><div class='zhaoshiLB11 zhaoshiLBG' id='PinHengXH1qq'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div></div><div class='zhaoshiLBqq' id='ZSdiv_tj_tuishou'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>推手</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom'><div class='zy_buttomL org'>左</div><div class='zy_buttomR org'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW2qq'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN2qq'></div><div class='zhaoshiLB6 zhaoshiLBG' id='Mzxz2qq'></div><div class='zhaoshiLB7 zhaoshiLBG' id='ATimeQ2qq'></div><div class='zhaoshiLB8 zhaoshiLBG' id='ATime2qq'></div><div class='zhaoshiLB9 zhaoshiLBG' id='ATimeH2qq'></div><div class='zhaoshiLB10 zhaoshiLBG' id='PinHengAtt2qq'></div><div class='zhaoshiLB11 zhaoshiLBG' id='PinHengXH2qq'></div><div class='zhaoshiLB12 zhaoshiLBG'></div></div><div class='zhaoshiLBqq' id='ZSdiv_tj_qingna'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>擒拿</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow' id='ZSdiv_tj_qingna_flr'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW3qq'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN3qq'></div><div class='zhaoshiLB6 zhaoshiLBG' id='Mzxz3qq'></div><div class='zhaoshiLB7 zhaoshiLBG' id='ATimeQ3qq'></div><div class='zhaoshiLB8 zhaoshiLBG' id='ATime3qq'></div><div class='zhaoshiLB9 zhaoshiLBG' id='ATimeH3qq'></div><div class='zhaoshiLB10 zhaoshiLBG' id='PinHengAtt3qq'></div><div class='zhaoshiLB11 zhaoshiLBG' id='PinHengXH3qq'></div><div class='zhaoshiLB12 zhaoshiLBG'></div></div><div class='zhaoshiLBqq' id='ZSdiv_tj_shuangfong'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>双峰贯耳</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom'><div class='zy_buttomL org'>左</div><div class='zy_buttomR org'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW4qq'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN4qq'></div><div class='zhaoshiLB6 zhaoshiLBG' id='Mzxz4qq'></div><div class='zhaoshiLB7 zhaoshiLBG' id='ATimeQ4qq'></div><div class='zhaoshiLB8 zhaoshiLBG' id='ATime4qq'></div><div class='zhaoshiLB9 zhaoshiLBG' id='ATimeH4qq'></div><div class='zhaoshiLB10 zhaoshiLBG' id='PinHengAtt4qq'></div><div class='zhaoshiLB11 zhaoshiLBG' id='PinHengXH4qq'></div><div class='zhaoshiLB12 zhaoshiLBG'></div></div><div class='zhaoshiLBqq' id='ZSdiv_tj_zhoudicui'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>肘底捶</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow' id='ZSdiv_tj_zhoudicui_flr'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW5qq'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN5qq'></div><div class='zhaoshiLB6 zhaoshiLBG' id='Mzxz5qq'></div><div class='zhaoshiLB7 zhaoshiLBG' id='ATimeQ5qq'></div><div class='zhaoshiLB8 zhaoshiLBG' id='ATime5qq'></div><div class='zhaoshiLB9 zhaoshiLBG' id='ATimeH5qq'></div><div class='zhaoshiLB10 zhaoshiLBG' id='PinHengAtt5qq'></div><div class='zhaoshiLB11 zhaoshiLBG' id='PinHengXH5qq'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_zhoudicui_te=''>特</div></div></div><div class='zhaoshiLBqq' id='ZSdiv_tj_paocui'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>炮锤</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom'><div class='zy_buttomL org'>左</div><div class='zy_buttomR org'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW6qq'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN6qq'></div><div class='zhaoshiLB6 zhaoshiLBG' id='Mzxz6qq'></div><div class='zhaoshiLB7 zhaoshiLBG' id='ATimeQ6qq'></div><div class='zhaoshiLB8 zhaoshiLBG' id='ATime6qq'></div><div class='zhaoshiLB9 zhaoshiLBG' id='ATimeH6qq'></div><div class='zhaoshiLB10 zhaoshiLBG' id='PinHengAtt6qq'></div><div class='zhaoshiLB11 zhaoshiLBG' id='PinHengXH6qq'></div><div class='zhaoshiLB12 zhaoshiLBG'></div></div><div class='zhaoshiLBqq' id='ZSdiv_tj_yuanyangtui'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>鸳鸯腿</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow' id='ZSdiv_tj_yuanyangtui_flr'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 脚</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW7qq'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN7qq'></div><div class='zhaoshiLB6 zhaoshiLBG' id='Mzxz7qq'></div><div class='zhaoshiLB7 zhaoshiLBG' id='ATimeQ7qq'></div><div class='zhaoshiLB8 zhaoshiLBG' id='ATime7qq'></div><div class='zhaoshiLB9 zhaoshiLBG' id='ATimeH7qq'></div><div class='zhaoshiLB10 zhaoshiLBG' id='PinHengAtt7qq'></div><div class='zhaoshiLB11 zhaoshiLBG' id='PinHengXH7qq'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_yuanyangtui_te>特</div></div></div><div class='zhaoshiLBqq' id='ZSdiv_tj_banshuai'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>绊摔</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow' id='ZSdiv_tj_banshuai_flr'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 脚</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW8qq'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN8qq'></div><div class='zhaoshiLB6 zhaoshiLBG' id='Mzxz8qq'></div><div class='zhaoshiLB7 zhaoshiLBG' id='ATimeQ8qq'></div><div class='zhaoshiLB8 zhaoshiLBG' id='ATime8qq'></div><div class='zhaoshiLB9 zhaoshiLBG' id='ATimeH8qq'></div><div class='zhaoshiLB10 zhaoshiLBG' id='PinHengAtt8qq'></div><div class='zhaoshiLB11 zhaoshiLBG' id='PinHengXH8qq'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_banshuai_te>特</div></div></div>");
-
-
-
+				$("#zhaoshineirongqq").html("<div class='zhaoshiLBqqs huise' id='ZSdiv_tj_panda'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>攀打</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom' id='ZSdiv_tj_panda_flr'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div>&nbsp;手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW1qq'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN1qq'></div><div class='zhaoshiLB6 zhaoshiLBG' id='Mzxz1qq'></div><div class='zhaoshiLB7 zhaoshiLBG' id='ATimeQ1qq'></div><div class='zhaoshiLB8 zhaoshiLBG' id='ATime1qq'></div><div class='zhaoshiLB9 zhaoshiLBG' id='ATimeH1qq'></div><div class='zhaoshiLB10 zhaoshiLBG' id='PinHengAtt1qq'></div><div class='zhaoshiLB11 zhaoshiLBG' id='PinHengXH1qq'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div></div><div class='zhaoshiLBqqs huise' id='ZSdiv_tj_tuishou'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>推手</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom'><div class='zy_buttomL org'>左</div><div class='zy_buttomR org'>右</div></div>&nbsp;手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW2qq'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN2qq'></div><div class='zhaoshiLB6 zhaoshiLBG' id='Mzxz2qq'></div><div class='zhaoshiLB7 zhaoshiLBG' id='ATimeQ2qq'></div><div class='zhaoshiLB8 zhaoshiLBG' id='ATime2qq'></div><div class='zhaoshiLB9 zhaoshiLBG' id='ATimeH2qq'></div><div class='zhaoshiLB10 zhaoshiLBG' id='PinHengAtt2qq'></div><div class='zhaoshiLB11 zhaoshiLBG' id='PinHengXH2qq'></div><div class='zhaoshiLB12 zhaoshiLBG'></div></div><div class='zhaoshiLBqqs huise' id='ZSdiv_tj_qingna'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>擒拿</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom' id='ZSdiv_tj_qingna_flr'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div>&nbsp;手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW3qq'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN3qq'></div><div class='zhaoshiLB6 zhaoshiLBG' id='Mzxz3qq'></div><div class='zhaoshiLB7 zhaoshiLBG' id='ATimeQ3qq'></div><div class='zhaoshiLB8 zhaoshiLBG' id='ATime3qq'></div><div class='zhaoshiLB9 zhaoshiLBG' id='ATimeH3qq'></div><div class='zhaoshiLB10 zhaoshiLBG' id='PinHengAtt3qq'></div><div class='zhaoshiLB11 zhaoshiLBG' id='PinHengXH3qq'></div><div class='zhaoshiLB12 zhaoshiLBG'></div></div><div class='zhaoshiLBqqs huise' id='ZSdiv_tj_shuangfong'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>双峰贯耳</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom'><div class='zy_buttomL org'>左</div><div class='zy_buttomR org'>右</div></div>&nbsp;手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW4qq'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN4qq'></div><div class='zhaoshiLB6 zhaoshiLBG' id='Mzxz4qq'></div><div class='zhaoshiLB7 zhaoshiLBG' id='ATimeQ4qq'></div><div class='zhaoshiLB8 zhaoshiLBG' id='ATime4qq'></div><div class='zhaoshiLB9 zhaoshiLBG' id='ATimeH4qq'></div><div class='zhaoshiLB10 zhaoshiLBG' id='PinHengAtt4qq'></div><div class='zhaoshiLB11 zhaoshiLBG' id='PinHengXH4qq'></div><div class='zhaoshiLB12 zhaoshiLBG'></div></div><div class='zhaoshiLBqqs huise' id='ZSdiv_tj_zhoudicui'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>肘底捶</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom' id='ZSdiv_tj_zhoudicui_flr'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div>&nbsp;手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW5qq'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN5qq'></div><div class='zhaoshiLB6 zhaoshiLBG' id='Mzxz5qq'></div><div class='zhaoshiLB7 zhaoshiLBG' id='ATimeQ5qq'></div><div class='zhaoshiLB8 zhaoshiLBG' id='ATime5qq'></div><div class='zhaoshiLB9 zhaoshiLBG' id='ATimeH5qq'></div><div class='zhaoshiLB10 zhaoshiLBG' id='PinHengAtt5qq'></div><div class='zhaoshiLB11 zhaoshiLBG' id='PinHengXH5qq'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_zhoudicui_te=''>特</div></div></div><div class='zhaoshiLBqqs huise' id='ZSdiv_tj_paocui'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>炮锤</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom'><div class='zy_buttomL org'>左</div><div class='zy_buttomR org'>右</div></div>&nbsp;手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW6qq'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN6qq'></div><div class='zhaoshiLB6 zhaoshiLBG' id='Mzxz6qq'></div><div class='zhaoshiLB7 zhaoshiLBG' id='ATimeQ6qq'></div><div class='zhaoshiLB8 zhaoshiLBG' id='ATime6qq'></div><div class='zhaoshiLB9 zhaoshiLBG' id='ATimeH6qq'></div><div class='zhaoshiLB10 zhaoshiLBG' id='PinHengAtt6qq'></div><div class='zhaoshiLB11 zhaoshiLBG' id='PinHengXH6qq'></div><div class='zhaoshiLB12 zhaoshiLBG'></div></div><div class='zhaoshiLBqqs huise' id='ZSdiv_tj_yuanyangtui'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>鸳鸯腿</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom' id='ZSdiv_tj_yuanyangtui_flr'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div>&nbsp;脚</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW7qq'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN7qq'></div><div class='zhaoshiLB6 zhaoshiLBG' id='Mzxz7qq'></div><div class='zhaoshiLB7 zhaoshiLBG' id='ATimeQ7qq'></div><div class='zhaoshiLB8 zhaoshiLBG' id='ATime7qq'></div><div class='zhaoshiLB9 zhaoshiLBG' id='ATimeH7qq'></div><div class='zhaoshiLB10 zhaoshiLBG' id='PinHengAtt7qq'></div><div class='zhaoshiLB11 zhaoshiLBG' id='PinHengXH7qq'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_yuanyangtui_te>特</div></div></div><div class='zhaoshiLBqqs huise' id='ZSdiv_tj_banshuai'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>绊摔</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom' id='ZSdiv_tj_banshuai_flr'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div>&nbsp;脚</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW8qq'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN8qq'></div><div class='zhaoshiLB6 zhaoshiLBG' id='Mzxz8qq'></div><div class='zhaoshiLB7 zhaoshiLBG' id='ATimeQ8qq'></div><div class='zhaoshiLB8 zhaoshiLBG' id='ATime8qq'></div><div class='zhaoshiLB9 zhaoshiLBG' id='ATimeH8qq'></div><div class='zhaoshiLB10 zhaoshiLBG' id='PinHengAtt8qq'></div><div class='zhaoshiLB11 zhaoshiLBG' id='PinHengXH8qq'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_banshuai_te>特</div></div></div>");
 
 				tj_panda.AttW = (true_tj_panda.AttW * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
 				tj_panda.AttN = (true_tj_panda.AttN * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
@@ -516,6 +513,8 @@ $(document).ready(function () {
 
 				$("#PinHengAtt8qq").html(tj_banshuai.PinHengAtt);
 				$("#PinHengXH8qq").html(tj_banshuai.PinHengXH);
+
+				shanchuZShou();
 
 			} else if (PaiBei === "Taiquan") {
 
@@ -717,8 +716,25 @@ $(document).ready(function () {
 					$(this).remove(); //then remove from the DOM;
 				});
 			});
-			i_tj_panda = 1;
 			i_yixuanZS = 1;
+
+			i_tj_panda = 1;
+			i_tj_tuishou = 1;
+			i_tj_qingna = 1;
+			i_tj_shuangfong = 1;
+			i_tj_zhoudicui = 1;
+			i_tj_paocui = 1;
+			i_tj_yuanyangtui = 1;
+			i_tj_banshuai = 1;
+
+			i_tq_zhiquan = 1;
+			i_tq_lrgouquan = 1;
+			i_tq_sgouquan = 1;
+			i_tq_zhouji = 1;
+			i_tq_xizhuang = 1;
+			i_tq_dengtui = 1;
+			i_tq_shaotui = 1;
+
 			choiceZS01.zs_name = "";
 			choiceZS02.zs_name = "";
 			choiceZS03.zs_name = "";
@@ -820,11 +836,15 @@ $(document).ready(function () {
 	$(document).on("click", "#ZSdiv_tj_panda", function () {
 		if ($("#ZSdiv_tj_panda").attr("class") !== "zhaoshiLBqqs huise") {
 			//if (i_yixuanZS <= 5) {
-			$("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_panda0" + i_tj_panda + "'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>攀打</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow' id='ZSdiv_tj_panda_flr0" + i_tj_panda + "'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG'>----></div><div class='zhaoshiLB14 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa0" + i_yixuanZS + "'><option selected>头部</option><option>胸部</option><option>腹部</option><option>腰部</option><option>肩关节</option><option>上臂</option><option>前臂</option><option>手肘</option><option>手腕</option><option>大腿</option><option>小腿</option><option>膝关节</option><option>踝关节</option></select></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove0" + i_yixuanZS + "'>×</div></div></div>");
+			$("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_panda0" + i_tj_panda + "'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>攀打</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG' id='ATimeAll1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB14 zhaoshiLBG'>-></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='zy_buttom'><div class='zy_buttomL org'>左</div><div class='zy_buttomR org'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa0" + i_yixuanZS + "'><option selected>头部</option><option>胸部</option><option>腹部</option><option>腰部</option><option>肩关节</option><option>上臂</option><option>前臂</option><option>手肘</option><option>手腕</option><option>大腿</option><option>小腿</option><option>膝关节</option><option>踝关节</option></select></div><div class='zhaoshiLB16 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove0" + i_yixuanZS + "'>×</div></div></div>");
 			tj_panda.AttW = (true_tj_panda.AttW * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
 			tj_panda.AttN = (true_tj_panda.AttN * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
+			tj_panda.ATimeQ = true_tj_panda.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+			tj_panda.ATime = true_tj_panda.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
 			$("#AttW1qq0" + i_tj_panda).html(Math.round(tj_panda.AttW));
 			$("#AttN1qq0" + i_tj_panda).html(Math.round(tj_panda.AttN));
+			$("#ATimeAll1qq0" + i_tj_panda).html((tj_panda.ATimeQ + tj_panda.ATime).toFixed(1));
 
 			switch (i_yixuanZS) {
 				case 1:
@@ -847,8 +867,260 @@ $(document).ready(function () {
 			yxZStime = yxZStime - tj_panda.ATimeQ - tj_panda.ATime;
 			tianjiaZShou();
 		}
-
 	});
+	$(document).on("click", "#ZSdiv_tj_tuishou", function () {
+		if ($("#ZSdiv_tj_tuishou").attr("class") !== "zhaoshiLBqqs huise") {
+			//if (i_yixuanZS <= 5) {
+			$("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_tuishou0" + i_tj_tuishou + "'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>推手</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW2qq0" + i_tj_tuishou + "'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN2qq0" + i_tj_tuishou + "'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG' id='ATimeAll2qq0" + i_tj_tuishou + "'></div><div class='zhaoshiLB14 zhaoshiLBG'>-></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='zy_buttom'><div class='zy_buttomL org'>左</div><div class='zy_buttomR org'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa0" + i_yixuanZS + "'><option selected>头部</option><option>胸部</option><option>腹部</option><option>腰部</option><option>肩关节</option><option>上臂</option><option>前臂</option><option>手肘</option><option>手腕</option><option>大腿</option><option>小腿</option><option>膝关节</option><option>踝关节</option></select></div><div class='zhaoshiLB16 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove0" + i_yixuanZS + "'>×</div></div></div>");
+			tj_tuishou.AttW = (true_tj_tuishou.AttW * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
+			tj_tuishou.AttN = (true_tj_tuishou.AttN * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
+			tj_tuishou.ATimeQ = true_tj_tuishou.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+			tj_tuishou.ATime = true_tj_tuishou.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+			$("#AttW2qq0" + i_tj_tuishou).html(Math.round(tj_tuishou.AttW));
+			$("#AttN2qq0" + i_tj_tuishou).html(Math.round(tj_tuishou.AttN));
+			$("#ATimeAll2qq0" + i_tj_tuishou).html((tj_tuishou.ATimeQ + tj_tuishou.ATime).toFixed(1));
+
+			switch (i_yixuanZS) {
+				case 1:
+					choiceZS01.zs_name = "tj_tuishou";
+					break;
+				case 2:
+					choiceZS02.zs_name = "tj_tuishou";
+					break;
+				case 3:
+					choiceZS03.zs_name = "tj_tuishou";
+					break;
+				case 4:
+					choiceZS04.zs_name = "tj_tuishou";
+					break;
+				case 5:
+					choiceZS05.zs_name = "tj_tuishou";
+					break;
+			}
+			i_tj_tuishou++;
+			yxZStime = yxZStime - tj_tuishou.ATimeQ - tj_tuishou.ATime;
+			tianjiaZShou();
+		}
+	});
+	$(document).on("click", "#ZSdiv_tj_qingna", function () {
+		if ($("#ZSdiv_tj_qingna").attr("class") !== "zhaoshiLBqqs huise") {
+			//if (i_yixuanZS <= 5) {
+			$("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_qingna0" + i_tj_qingna + "'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>擒拿</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW3qq0" + i_tj_qingna + "'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN3qq0" + i_tj_qingna + "'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG' id='ATimeAll3qq0" + i_tj_qingna + "'></div><div class='zhaoshiLB14 zhaoshiLBG'>-></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='zy_buttom'><div class='zy_buttomL org'>左</div><div class='zy_buttomR org'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa0" + i_yixuanZS + "'><option selected>头部</option><option>胸部</option><option>腹部</option><option>腰部</option><option>肩关节</option><option>上臂</option><option>前臂</option><option>手肘</option><option>手腕</option><option>大腿</option><option>小腿</option><option>膝关节</option><option>踝关节</option></select></div><div class='zhaoshiLB16 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove0" + i_yixuanZS + "'>×</div></div></div>");
+			tj_qingna.AttW = (true_tj_qingna.AttW * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
+			tj_qingna.AttN = (true_tj_qingna.AttN * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
+			tj_qingna.ATimeQ = true_tj_qingna.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+			tj_qingna.ATime = true_tj_qingna.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+			$("#AttW3qq0" + i_tj_qingna).html(Math.round(tj_qingna.AttW));
+			$("#AttN3qq0" + i_tj_qingna).html(Math.round(tj_qingna.AttN));
+			$("#ATimeAll3qq0" + i_tj_qingna).html((tj_qingna.ATimeQ + tj_qingna.ATime).toFixed(1));
+
+			switch (i_yixuanZS) {
+				case 1:
+					choiceZS01.zs_name = "tj_qingna";
+					break;
+				case 2:
+					choiceZS02.zs_name = "tj_qingna";
+					break;
+				case 3:
+					choiceZS03.zs_name = "tj_qingna";
+					break;
+				case 4:
+					choiceZS04.zs_name = "tj_qingna";
+					break;
+				case 5:
+					choiceZS05.zs_name = "tj_qingna";
+					break;
+			}
+			i_tj_qingna++;
+			yxZStime = yxZStime - tj_qingna.ATimeQ - tj_qingna.ATime;
+			tianjiaZShou();
+		}
+	});
+	$(document).on("click", "#ZSdiv_tj_shuangfong", function () {
+		if ($("#ZSdiv_tj_shuangfong").attr("class") !== "zhaoshiLBqqs huise") {
+			//if (i_yixuanZS <= 5) {
+			$("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_shuangfong0" + i_tj_shuangfong + "'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>双峰贯耳</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW4qq0" + i_tj_shuangfong + "'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN4qq0" + i_tj_shuangfong + "'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG' id='ATimeAll4qq0" + i_tj_shuangfong + "'></div><div class='zhaoshiLB14 zhaoshiLBG'>-></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='zy_buttom'><div class='zy_buttomL org'>左</div><div class='zy_buttomR org'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa0" + i_yixuanZS + "'><option selected>头部</option><option>胸部</option><option>腹部</option><option>腰部</option><option>肩关节</option><option>上臂</option><option>前臂</option><option>手肘</option><option>手腕</option><option>大腿</option><option>小腿</option><option>膝关节</option><option>踝关节</option></select></div><div class='zhaoshiLB16 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove0" + i_yixuanZS + "'>×</div></div></div>");
+			tj_shuangfong.AttW = (true_tj_shuangfong.AttW * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
+			tj_shuangfong.AttN = (true_tj_shuangfong.AttN * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
+			tj_shuangfong.ATimeQ = true_tj_shuangfong.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+			tj_shuangfong.ATime = true_tj_shuangfong.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+			$("#AttW4qq0" + i_tj_shuangfong).html(Math.round(tj_shuangfong.AttW));
+			$("#AttN4qq0" + i_tj_shuangfong).html(Math.round(tj_shuangfong.AttN));
+			$("#ATimeAll4qq0" + i_tj_shuangfong).html((tj_shuangfong.ATimeQ + tj_shuangfong.ATime).toFixed(1));
+
+			switch (i_yixuanZS) {
+				case 1:
+					choiceZS01.zs_name = "tj_shuangfong";
+					break;
+				case 2:
+					choiceZS02.zs_name = "tj_shuangfong";
+					break;
+				case 3:
+					choiceZS03.zs_name = "tj_shuangfong";
+					break;
+				case 4:
+					choiceZS04.zs_name = "tj_shuangfong";
+					break;
+				case 5:
+					choiceZS05.zs_name = "tj_shuangfong";
+					break;
+			}
+			i_tj_shuangfong++;
+			yxZStime = yxZStime - tj_shuangfong.ATimeQ - tj_shuangfong.ATime;
+			tianjiaZShou();
+		}
+	});
+	$(document).on("click", "#ZSdiv_tj_zhoudicui", function () {
+		if ($("#ZSdiv_tj_zhoudicui").attr("class") !== "zhaoshiLBqqs huise") {
+			//if (i_yixuanZS <= 5) {
+			$("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_zhoudicui0" + i_tj_zhoudicui + "'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>肘底捶</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW5qq0" + i_tj_zhoudicui + "'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN5qq0" + i_tj_zhoudicui + "'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG' id='ATimeAll5qq0" + i_tj_zhoudicui + "'></div><div class='zhaoshiLB14 zhaoshiLBG'>-></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='zy_buttom'><div class='zy_buttomL org'>左</div><div class='zy_buttomR org'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa0" + i_yixuanZS + "'><option selected>头部</option><option>胸部</option><option>腹部</option><option>腰部</option><option>肩关节</option><option>上臂</option><option>前臂</option><option>手肘</option><option>手腕</option><option>大腿</option><option>小腿</option><option>膝关节</option><option>踝关节</option></select></div><div class='zhaoshiLB16 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove0" + i_yixuanZS + "'>×</div></div></div>");
+			tj_zhoudicui.AttW = (true_tj_zhoudicui.AttW * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
+			tj_zhoudicui.AttN = (true_tj_zhoudicui.AttN * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
+			tj_zhoudicui.ATimeQ = true_tj_zhoudicui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+			tj_zhoudicui.ATime = true_tj_zhoudicui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+			$("#AttW5qq0" + i_tj_zhoudicui).html(Math.round(tj_zhoudicui.AttW));
+			$("#AttN5qq0" + i_tj_zhoudicui).html(Math.round(tj_zhoudicui.AttN));
+			$("#ATimeAll5qq0" + i_tj_zhoudicui).html((tj_zhoudicui.ATimeQ + tj_zhoudicui.ATime).toFixed(1));
+
+			switch (i_yixuanZS) {
+				case 1:
+					choiceZS01.zs_name = "tj_zhoudicui";
+					break;
+				case 2:
+					choiceZS02.zs_name = "tj_zhoudicui";
+					break;
+				case 3:
+					choiceZS03.zs_name = "tj_zhoudicui";
+					break;
+				case 4:
+					choiceZS04.zs_name = "tj_zhoudicui";
+					break;
+				case 5:
+					choiceZS05.zs_name = "tj_zhoudicui";
+					break;
+			}
+			i_tj_zhoudicui++;
+			yxZStime = yxZStime - tj_zhoudicui.ATimeQ - tj_zhoudicui.ATime;
+			tianjiaZShou();
+		}
+	});
+	$(document).on("click", "#ZSdiv_tj_paocui", function () {
+		if ($("#ZSdiv_tj_paocui").attr("class") !== "zhaoshiLBqqs huise") {
+			//if (i_yixuanZS <= 5) {
+			$("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_paocui0" + i_tj_paocui + "'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>炮锤</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW6qq0" + i_tj_paocui + "'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN6qq0" + i_tj_paocui + "'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG' id='ATimeAll6qq0" + i_tj_paocui + "'></div><div class='zhaoshiLB14 zhaoshiLBG'>-></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='zy_buttom'><div class='zy_buttomL org'>左</div><div class='zy_buttomR org'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa0" + i_yixuanZS + "'><option selected>头部</option><option>胸部</option><option>腹部</option><option>腰部</option><option>肩关节</option><option>上臂</option><option>前臂</option><option>手肘</option><option>手腕</option><option>大腿</option><option>小腿</option><option>膝关节</option><option>踝关节</option></select></div><div class='zhaoshiLB16 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove0" + i_yixuanZS + "'>×</div></div></div>");
+			tj_paocui.AttW = (true_tj_paocui.AttW * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
+			tj_paocui.AttN = (true_tj_paocui.AttN * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
+			tj_paocui.ATimeQ = true_tj_paocui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+			tj_paocui.ATime = true_tj_paocui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+			$("#AttW6qq0" + i_tj_paocui).html(Math.round(tj_paocui.AttW));
+			$("#AttN6qq0" + i_tj_paocui).html(Math.round(tj_paocui.AttN));
+			$("#ATimeAll6qq0" + i_tj_paocui).html((tj_paocui.ATimeQ + tj_paocui.ATime).toFixed(1));
+
+			switch (i_yixuanZS) {
+				case 1:
+					choiceZS01.zs_name = "tj_paocui";
+					break;
+				case 2:
+					choiceZS02.zs_name = "tj_paocui";
+					break;
+				case 3:
+					choiceZS03.zs_name = "tj_paocui";
+					break;
+				case 4:
+					choiceZS04.zs_name = "tj_paocui";
+					break;
+				case 5:
+					choiceZS05.zs_name = "tj_paocui";
+					break;
+			}
+			i_tj_paocui++;
+			yxZStime = yxZStime - tj_paocui.ATimeQ - tj_paocui.ATime;
+			tianjiaZShou();
+		}
+	});
+	$(document).on("click", "#ZSdiv_tj_yuanyangtui", function () {
+		if ($("#ZSdiv_tj_yuanyangtui").attr("class") !== "zhaoshiLBqqs huise") {
+			//if (i_yixuanZS <= 5) {
+			$("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_yuanyangtui0" + i_tj_yuanyangtui + "'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>鸳鸯腿</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 脚</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW7qq0" + i_tj_yuanyangtui + "'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN7qq0" + i_tj_yuanyangtui + "'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG' id='ATimeAll7qq0" + i_tj_yuanyangtui + "'></div><div class='zhaoshiLB14 zhaoshiLBG'>-></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='zy_buttom'><div class='zy_buttomL org'>左</div><div class='zy_buttomR org'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa0" + i_yixuanZS + "'><option selected>头部</option><option>胸部</option><option>腹部</option><option>腰部</option><option>肩关节</option><option>上臂</option><option>前臂</option><option>手肘</option><option>手腕</option><option>大腿</option><option>小腿</option><option>膝关节</option><option>踝关节</option></select></div><div class='zhaoshiLB16 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove0" + i_yixuanZS + "'>×</div></div></div>");
+			tj_yuanyangtui.AttW = (true_tj_yuanyangtui.AttW * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
+			tj_yuanyangtui.AttN = (true_tj_yuanyangtui.AttN * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
+			tj_yuanyangtui.ATimeQ = true_tj_yuanyangtui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+			tj_yuanyangtui.ATime = true_tj_yuanyangtui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+			$("#AttW7qq0" + i_tj_yuanyangtui).html(Math.round(tj_yuanyangtui.AttW));
+			$("#AttN7qq0" + i_tj_yuanyangtui).html(Math.round(tj_yuanyangtui.AttN));
+			$("#ATimeAll7qq0" + i_tj_yuanyangtui).html((tj_yuanyangtui.ATimeQ + tj_yuanyangtui.ATime).toFixed(1));
+
+			switch (i_yixuanZS) {
+				case 1:
+					choiceZS01.zs_name = "tj_yuanyangtui";
+					break;
+				case 2:
+					choiceZS02.zs_name = "tj_yuanyangtui";
+					break;
+				case 3:
+					choiceZS03.zs_name = "tj_yuanyangtui";
+					break;
+				case 4:
+					choiceZS04.zs_name = "tj_yuanyangtui";
+					break;
+				case 5:
+					choiceZS05.zs_name = "tj_yuanyangtui";
+					break;
+			}
+			i_tj_yuanyangtui++;
+			yxZStime = yxZStime - tj_yuanyangtui.ATimeQ - tj_yuanyangtui.ATime;
+			tianjiaZShou();
+		}
+	});
+	$(document).on("click", "#ZSdiv_tj_banshuai", function () {
+		if ($("#ZSdiv_tj_banshuai").attr("class") !== "zhaoshiLBqqs huise") {
+			//if (i_yixuanZS <= 5) {
+			$("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_banshuai0" + i_tj_banshuai + "'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>绊摔</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 脚</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW8qq0" + i_tj_banshuai + "'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN8qq0" + i_tj_banshuai + "'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG' id='ATimeAll8qq0" + i_tj_banshuai + "'></div><div class='zhaoshiLB14 zhaoshiLBG'>-></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='zy_buttom'><div class='zy_buttomL org'>左</div><div class='zy_buttomR org'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa0" + i_yixuanZS + "'><option selected>头部</option><option>胸部</option><option>腹部</option><option>腰部</option><option>肩关节</option><option>上臂</option><option>前臂</option><option>手肘</option><option>手腕</option><option>大腿</option><option>小腿</option><option>膝关节</option><option>踝关节</option></select></div><div class='zhaoshiLB16 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove0" + i_yixuanZS + "'>×</div></div></div>");
+			tj_banshuai.AttW = (true_tj_banshuai.AttW * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
+			tj_banshuai.AttN = (true_tj_banshuai.AttN * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
+			tj_banshuai.ATimeQ = true_tj_banshuai.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+			tj_banshuai.ATime = true_tj_banshuai.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+			$("#AttW8qq0" + i_tj_banshuai).html(Math.round(tj_banshuai.AttW));
+			$("#AttN8qq0" + i_tj_banshuai).html(Math.round(tj_banshuai.AttN));
+			$("#ATimeAll8qq0" + i_tj_banshuai).html((tj_banshuai.ATimeQ + tj_banshuai.ATime).toFixed(1));
+
+			switch (i_yixuanZS) {
+				case 1:
+					choiceZS01.zs_name = "tj_banshuai";
+					break;
+				case 2:
+					choiceZS02.zs_name = "tj_banshuai";
+					break;
+				case 3:
+					choiceZS03.zs_name = "tj_banshuai";
+					break;
+				case 4:
+					choiceZS04.zs_name = "tj_banshuai";
+					break;
+				case 5:
+					choiceZS05.zs_name = "tj_banshuai";
+					break;
+			}
+			i_tj_banshuai++;
+			yxZStime = yxZStime - tj_banshuai.ATimeQ - tj_banshuai.ATime;
+			tianjiaZShou();
+		}
+	});
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 	//手动排序移动
@@ -879,9 +1151,12 @@ $(document).ready(function () {
 					case 1:
 						//slice(6, -2)从第6个后截取，到倒数第3个。
 						//alert($(this).find(".zhaoshiLB3.zhaoshiLBG").html());
-						choiceZS01.zs_name = $(this).attr("id").slice(6, -2);
+						var gz00 = /\D*/;
 						var gz01 = new RegExp("手");
 						var gz02 = new RegExp("脚");
+						var gz03 = new RegExp("肘");
+						var gz04 = new RegExp("膝");
+						choiceZS01.zs_name = gz00.exec(($(this).attr("id")).slice(6, -2));
 						if (gz01.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
 							if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
 								if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
@@ -902,17 +1177,37 @@ $(document).ready(function () {
 							} else {
 								choiceZS01.zs_frome = "jiao";
 							}
+						} else if (gz03.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+							if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+								if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+									choiceZS01.zs_frome = "zhoul";
+								} else {
+									choiceZS01.zs_frome = "zhour";
+								}
+							} else {
+								choiceZS01.zs_frome = "zhou";
+							}
+						} else if (gz04.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+							if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+								if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+									choiceZS01.zs_frome = "xil";
+								} else {
+									choiceZS01.zs_frome = "xir";
+								}
+							} else {
+								choiceZS01.zs_frome = "xi";
+							}
 						}
 						choiceZS01.zs_to = $(this).find("select").val();
 						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-								if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-									choiceZS01.zs_torl = "l";
-								} else {
-									choiceZS01.zs_torl = "r";
-								}
+							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+								choiceZS01.zs_torl = "l";
 							} else {
-								choiceZS01.zs_torl = "b";
+								choiceZS01.zs_torl = "r";
 							}
+						} else {
+							choiceZS01.zs_torl = "b";
+						}
 						break;
 					case 2:
 						break;
@@ -932,47 +1227,88 @@ $(document).ready(function () {
 	//选择攻击部位限制左右按钮
 	$(document).on("change", "#choiceXiaLa01, #choiceXiaLa02, #choiceXiaLa03, #choiceXiaLa04, #choiceXiaLa05", function () {
 		//alert($(this).val());
-		switch($(this).val()){
+		switch ($(this).val()) {
 			case "头部":
-				alert($(this).attr("id"));
+				$(this).prev("div").removeClass("handarrow");
+				$(this).prev("div").children("div").eq(0).addClass("org");
+				$(this).prev("div").children("div").eq(1).addClass("org");
 				break;
 			case "胸部":
-				alert($(this).val());
+				$(this).prev("div").removeClass("handarrow");
+				$(this).prev("div").children("div").eq(0).addClass("org");
+				$(this).prev("div").children("div").eq(1).addClass("org");
 				break;
 			case "腹部":
+				$(this).prev("div").removeClass("handarrow");
+				$(this).prev("div").children("div").eq(0).addClass("org");
+				$(this).prev("div").children("div").eq(1).addClass("org");
 				break;
 			case "腰部":
+				$(this).prev("div").addClass("handarrow");
+				$(this).prev("div").children("div").eq(0).addClass("org");
+				$(this).prev("div").children("div").eq(1).removeClass("org");
 				break;
 			case "肩关节":
+				$(this).prev("div").addClass("handarrow");
+				$(this).prev("div").children("div").eq(0).addClass("org");
+				$(this).prev("div").children("div").eq(1).removeClass("org");
 				break;
 			case "上臂":
+				$(this).prev("div").addClass("handarrow");
+				$(this).prev("div").children("div").eq(0).addClass("org");
+				$(this).prev("div").children("div").eq(1).removeClass("org");
 				break;
 			case "前臂":
+				$(this).prev("div").addClass("handarrow");
+				$(this).prev("div").children("div").eq(0).addClass("org");
+				$(this).prev("div").children("div").eq(1).removeClass("org");
 				break;
 			case "手肘":
+				$(this).prev("div").addClass("handarrow");
+				$(this).prev("div").children("div").eq(0).addClass("org");
+				$(this).prev("div").children("div").eq(1).removeClass("org");
 				break;
 			case "手腕":
+				$(this).prev("div").addClass("handarrow");
+				$(this).prev("div").children("div").eq(0).addClass("org");
+				$(this).prev("div").children("div").eq(1).removeClass("org");
 				break;
 			case "大腿":
+				$(this).prev("div").addClass("handarrow");
+				$(this).prev("div").children("div").eq(0).addClass("org");
+				$(this).prev("div").children("div").eq(1).removeClass("org");
 				break;
 			case "小腿":
+				$(this).prev("div").addClass("handarrow");
+				$(this).prev("div").children("div").eq(0).addClass("org");
+				$(this).prev("div").children("div").eq(1).removeClass("org");
 				break;
 			case "膝关节":
+				$(this).prev("div").addClass("handarrow");
+				$(this).prev("div").children("div").eq(0).addClass("org");
+				$(this).prev("div").children("div").eq(1).removeClass("org");
 				break;
 			case "踝关节":
+				$(this).prev("div").addClass("handarrow");
+				$(this).prev("div").children("div").eq(0).addClass("org");
+				$(this).prev("div").children("div").eq(1).removeClass("org");
 				break;
 		}
 	});
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	//左右选择
+	$(document).on("click", ".zy_buttom.handarrow", function () {
+		if ($(this).children().eq(0).attr("class") === "zy_buttomL org") {
+			$(this).children().eq(0).removeClass("org");
+			$(this).children().eq(1).addClass("org");
+		} else {
+			$(this).children().eq(0).addClass("org");
+			$(this).children().eq(1).removeClass("org");
+		}
+	});
+
+
+
 
 
 
