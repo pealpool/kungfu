@@ -260,8 +260,8 @@ function choicePB_h() {
 
 			break;
 	}
-	document.getElementById("choiceJinDuLan_XZpaibei").setAttribute("class", "choiceJinDuLanButtom gray");
-	document.getElementById("choiceJinDuLan_XZshuxin").setAttribute("class", "choiceJinDuLanButtom red");
+	document.getElementById("choiceJinDuLan_XZpaibei").setAttribute("class", "choiceJinDuLanButtom grayButtom");
+	document.getElementById("choiceJinDuLan_XZshuxin").setAttribute("class", "choiceJinDuLanButtom myred");
 	XZbottom = 1;
 	ChangechoiceBG(PaiBei);
 	BDgl_Liliang();
@@ -310,8 +310,8 @@ function XZbottomFF(Bu) {
 			//document.getElementById("choiceZhaoshiDaKuang").style.display = "inline";
 			//document.getElementById("choiceShuxinDaKuang").style.display = "none";
 			$("#choiceShuxinDaKuang").hide("fade", 300, DaKuangHtS_sp);
-			document.getElementById("choiceJinDuLan_XZpaibei").setAttribute("class", "choiceJinDuLanButtom red");
-			document.getElementById("choiceJinDuLan_XZshuxin").setAttribute("class", "choiceJinDuLanButtom gray");
+			document.getElementById("choiceJinDuLan_XZpaibei").setAttribute("class", "choiceJinDuLanButtom myred");
+			document.getElementById("choiceJinDuLan_XZshuxin").setAttribute("class", "choiceJinDuLanButtom grayButtom");
 			XZbottom = 0;
 		}
 	}
@@ -823,6 +823,8 @@ function ChuShiHua() {
 
 	window.i_yixuanZS = 1; //已选择招式 计数
 	window.yxZStime = 7.5; //已选招式剩余时间
+	
+	window.mymyname = $("#My_name").text();
 
 	switch (PaiBei) {
 		case "Taiji":

@@ -91,15 +91,15 @@
   <div class="choicePaiBei cPBTaiji0" id="choicePaiBei">
     <div class="choiceJinDuLan">
       <div class="choiceJinDuLanButtomK">
-        <div class="choiceJinDuLanButtom red" id="choiceJinDuLan_XZpaibei" onClick="XZbottomFF(0)">选择派别</div>
+        <div class="choiceJinDuLanButtom myred" id="choiceJinDuLan_XZpaibei" onClick="XZbottomFF(0)">选择派别</div>
       </div>
       <div class="choiceJinDuLan_Jt"><img src="Img/image/rightarrow.png" width="31" height="26" alt=""/></div>
       <div class="choiceJinDuLanButtomK">
-        <div class="choiceJinDuLanButtom gray" id="choiceJinDuLan_XZshuxin" onClick="XZbottomFF(1)">选择属性</div>
+        <div class="choiceJinDuLanButtom grayButtom" id="choiceJinDuLan_XZshuxin" onClick="XZbottomFF(1)">选择属性</div>
       </div>
       <div class="choiceJinDuLan_Jt"><img src="Img/image/rightarrow.png" width="31" height="26" alt=""/></div>
       <div class="choiceJinDuLanButtomK">
-        <div class="choiceJinDuLanButtom gray" id="choiceJinDuLan_XZwancheng" onClick="choiceQianqiWanCheng()">完成</div>
+        <div class="choiceJinDuLanButtom grayButtom" id="choiceJinDuLan_XZwancheng" onClick="choiceQianqiWanCheng()">完成</div>
       </div>
     </div>
     <div id="choiceZhaoshiDaKuang">
@@ -598,10 +598,23 @@
   <div class="XiaDaKuang">
     <div class="NeiRongKuangDl">
       <div class="NeiRongKuangzl1 BDYJK">
-        <div class="TuKuangTitle">
-          <div class="TuKuangTitle_name">喵喵</div>
-          <div class="TuKuangTitle_paibie" id="TuKuangTitle_paibie">太极</div>
-          <div class="bodyDaKuang"></div>
+        <div class="TuKuangTitle0">
+          <div class="TuKuangTitle1">
+            <div class="TuKuangTitle_name" id="TuKuangTitle_name">
+              <div id="My_name">喵喵</div>
+              <!--<input class="shuru_name" id="shuru_name">
+              <div class="xfangButtomw">
+                <div class="xfangButtom redButtom" id="dui_name">√</div>
+              </div>
+              <div class="xfangButtomw">
+                <div class="xfangButtom grayButtom" id="cuo_name">×</div>
+              </div>--> 
+            </div>
+            <div class="TuKuangTitle_paibie" id="TuKuangTitle_paibie">太极</div>
+          </div>
+          <div class="bodyDaKuang">
+          	<div class="aTu_tou tuhptu" id="my_t_tou"></div>
+          </div>
           <div class="TuKuangshuxinDaK" onClick="ShuXinTanChu()">
             <div class="TuKuangshuxinDaKt">
               <div class="TuKuangshuxinDaK1" id="TuKuang_A_Liliang">力量：2</div>
@@ -672,6 +685,7 @@
           </div>
         </div>
       </div>
+      
       <div class="NeiRongKuangzl2 BDYJK">
         <div class="NeiRongKuangHPdaK">
           <div class="NeiRongKuangHPxK">
@@ -800,13 +814,21 @@
     </div>
     <div class="NeiRongKuangDz">
       <div class="NeiRongKuangzz1 BDYJK">
-        <div class="ckZhaoShiButtom gray" id="ckZhaoShiButtom_A">招式</div>
+        <div class="ckZhaoShiButtomL">
+          <div class="xiaoButtomWl">
+            <div class="xiaoButtom redButtom" id="rengshuButtom">认输</div>
+          </div>
+          <div class="ckZhaoShiButtom grayButtom" id="ckZhaoShiButtom_A">招式</div>
+        </div>
         <div class="StartButtomDaKuang">
           <div class="StartButtomYuanKuang yuan_blue" id="StartButtomYuanKuang">选择招式</div>
         </div>
-        <div class="ckZhaoShiButtomW">
+        <div class="ckZhaoShiButtomR">
           <div class="huiheclass" id="huiheclass">回合：1</div>
-          <div class="ckZhaoShiButtom gray" id="ckZhaoShiButtom_B">招式</div>
+          <div class="xiaoButtomWr">
+            <div class="xiaoButtom redButtom" id="huanrenButtom">换人</div>
+          </div>
+          <div class="ckZhaoShiButtom grayButtom" id="ckZhaoShiButtom_B">招式</div>
         </div>
       </div>
       <div class="NeiRongchoiceZSdaK" id="NeiRongchoiceZSdaK">
@@ -826,7 +848,6 @@
             <div class="zhaoshiTitle11 zhaoshiTitleG">耗衡</div>
             <div class="zhaoshiTitle12 zhaoshiTitleG">特</div>
           </div>
-          
           <div id="zhaoshineirongqq">
             <div class="zhaoshiLBqqs" id="ZSdiv_tj_panda">
               <div class="zhaoshiLB1 zhaoshiLBG">
@@ -1006,7 +1027,7 @@
             </div>
           </div>
           
-		  <!--<div id="zhaoshineirongqq">
+          <!--<div id="zhaoshineirongqq">
             <div class="zhaoshiLBqqs" id="ZSdiv_tq_zhiquan">
               <div class="zhaoshiLB1 zhaoshiLBG">
                 <div class="smallyuanKuang color_gong">攻</div>
@@ -1154,7 +1175,7 @@
               <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH7qq"></div>
               <div class="zhaoshiLB12 zhaoshiLBG"></div>
             </div>
-          </div>-->
+          </div>--> 
           
         </div>
         <div class="NeiRongchoiceZSdaK_Title2">已选招式</div>
@@ -1171,11 +1192,10 @@
             <div class="zhaoshiTitle14 zhaoshiTitleG"></div>
             <div class="zhaoshiTitle15 zhaoshiTitleG">攻击部位</div>
             <div class="zhaoshiTitle16 zhaoshiTitleG">
-            	<div class="yuanXXX" id="choiceRemove00">×</div>
+              <div class="yuanXXX" id="choiceRemove00">×</div>
             </div>
-            
           </div>
-          <div id="chicoZhaoShiTianjiaK">
+          <div id="chicoZhaoShiTianjiaK"> 
             <!--<div class="zhaoshiLBqqs" id="ZSdiv_tj_panda01">
               <div class="zhaoshiLB1 zhaoshiLBG">
                 <div class="smallyuanKuang color_gong">攻</div>
@@ -1217,13 +1237,15 @@
               <div class="zhaoshiLB15 zhaoshiLBG">
               	<div class="yuanXXX" id="choiceRemove01">×</div>
               </div>
-            </div>-->
+            </div>--> 
           </div>
         </div>
-        <div class="choicezhaoshiButtomCw">
-        	<div class="choicezhaoshiButtomC gray" id="choicezhaoshiButtomC">返回</div>
+        <div class="choicezhaoshiButtomCwl">
+          <div class="choicezhaoshiButtomC grayButtom" id="choicezhaoshiButtomC">返回</div>
         </div>
-        <div class="choicezhaoshiButtom" id="choicezhaoshiButtom">完成</div>
+        <div class="choicezhaoshiButtomCwr">
+          <div class="choicezhaoshiButtom redButtom" id="choicezhaoshiButtom">完成</div>
+        </div>
       </div>
       <div class="NeiRongKuangzz2 BDYJK"></div>
     </div>

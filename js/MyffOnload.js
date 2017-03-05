@@ -1485,6 +1485,31 @@ $(document).ready(function () {
 		}
 	});
 
+	//点击改名
+	$(document).on("click", "#My_name", function () {
+		$("#TuKuangTitle_name").html("<input class='shuru_name' id='shuru_name' maxlength='6'><div class='xfangButtomw'><div class='xfangButtom redButtom' id='dui_name'>√</div></div><div class='xfangButtomw'><div class='xfangButtom grayButtom' id='cuo_name'>×</div></div>");
+		$("#shuru_name").focus();
+	});
+	$(document).on("click", "#dui_name", function () {
+		var qqq = $("#shuru_name").val();
+		$("#TuKuangTitle_name").html("<div id='My_name'></div>");
+		if (qqq !== "") {
+			$("#My_name").text(qqq);
+			mymyname = qqq;
+		} else {
+			$("#My_name").text(mymyname);
+		}
+	});
+	$(document).on("blur", "#shuru_name", function () {
+		setTimeout(function () {
+			$("#TuKuangTitle_name").html("<div id='My_name'></div>");
+			$("#My_name").text(mymyname);
+		}, 100);
+	});
+
+
+
+
 
 
 
