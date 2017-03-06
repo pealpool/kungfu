@@ -802,11 +802,11 @@ html, body {
 }
 .bodyDaKuang {
 	float: left;
-	width: 210px;
+	width: 211px;
 	height: 259px;
 	background-image: url(../Img/image/body-all-b.png);
 	background-repeat: no-repeat;
-	background-position: 3px 0px;
+	background-position: 4px 0px;
 	margin-top: 20px;
 	position:relative;
 }
@@ -1251,14 +1251,7 @@ background: #a50000;}
 	margin-left: 3px;
 	margin-top: 7px;
 }
-.aTu_tou {
-	z-index: 10;
-	width: 30px;
-	height: 35px;
-	margin-left: 89px;
-	margin-top: 12px;
-	background-position: -86px -13px;
-}
+
 .tuhptu {
 	background-color: #ddd;
 	position:absolute;
@@ -1276,4 +1269,20 @@ background: #a50000;}
     100% {
         opacity: 0.8;
     }
+}
+.aTu_tou {
+	z-index: 10;
+	width: 29px;
+	height: 35px;
+	margin-left: 90px;
+	margin-top: 12px;
+	background-position: -87px -13px;
+}
+.aTu_xiong {
+	z-index: 10;
+	width: 53px;
+	height: 35px;
+	margin-left: 78px;
+	margin-top: 47px;
+	background-position: -78px -47px;
 }
