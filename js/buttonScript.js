@@ -820,7 +820,10 @@ function ChuShiHua() {
 	$("#TuchuKuang_s_wendinhuifu").html(mSX_Pinheng.wendinhuifu(SX_Pinheng));
 
 	HPchongzhi();
-
+	//属性关联弹出标记
+	window.sxTanChu_A = 0;
+	window.sxTanChu_B = 0;
+	
 	window.i_yixuanZS = 1; //已选择招式 计数
 	window.yxZStime = 7.5; //已选招式剩余时间
 	
@@ -880,6 +883,30 @@ function HPchongzhi() {
 	$("#Hp_A_xiR").html(HpA.xiR);
 	$("#Hp_A_huaiL").html(HpA.huaiL);
 	$("#Hp_A_huaiR").html(HpA.huaiR);
+	
+	$("#Hp_B_tou").html(HpB.tou);
+	$("#Hp_B_xiong").html(HpB.xiong);
+	$("#Hp_B_fu").html(HpB.fu);
+	$("#Hp_B_yaoL").html(HpB.yaoL);
+	$("#Hp_B_yaoR").html(HpB.yaoR);
+	$("#Hp_B_jianL").html(HpB.jianL);
+	$("#Hp_B_jianR").html(HpB.jianR);
+	$("#Hp_B_shangbiL").html(HpB.shangbiL);
+	$("#Hp_B_shangbiR").html(HpB.shangbiR);
+	$("#Hp_B_qianbiL").html(HpB.qianbiL);
+	$("#Hp_B_qianbiR").html(HpB.qianbiR);
+	$("#Hp_B_zhouL").html(HpB.zhouL);
+	$("#Hp_B_zhouR").html(HpB.zhouR);
+	$("#Hp_B_shouwanL").html(HpB.shouwanL);
+	$("#Hp_B_shouwanR").html(HpB.shouwanR);
+	$("#Hp_B_datuiL").html(HpB.datuiL);
+	$("#Hp_B_datuiR").html(HpB.datuiR);
+	$("#Hp_B_xiaotuiL").html(HpB.xiaotuiL);
+	$("#Hp_B_xiaotuiR").html(HpB.xiaotuiR);
+	$("#Hp_B_xiL").html(HpB.xiL);
+	$("#Hp_B_xiR").html(HpB.xiR);
+	$("#Hp_B_huaiL").html(HpB.huaiL);
+	$("#Hp_B_huaiR").html(HpB.huaiR);
 
 	var m = 97 / Math.max(HpX.tou, HpX.xiong, HpX.fu, HpX.yaoL, HpX.jianL, HpX.shangbiL, HpX.qianbiL, HpX.zhouL, HpX.shouwanL, HpX.datuiL, HpX.xiaotuiL, HpX.xiL, HpX.huaiL);
 
@@ -907,6 +934,30 @@ function HPchongzhi() {
 	$("#progressbar_A_xiR").css("width", Math.round(HpA.xiR * m));
 	$("#progressbar_A_huaiL").css("width", Math.round(HpA.huaiL * m));
 	$("#progressbar_A_huaiR").css("width", Math.round(HpA.huaiR * m));
+	
+	$("#progressbar_B_tou").css("width", Math.round(HpB.tou * m));
+	$("#progressbar_B_xiong").css("width", Math.round(HpB.xiong * m));
+	$("#progressbar_B_fu").css("width", Math.round(HpB.fu * m));
+	$("#progressbar_B_yaoL").css("width", Math.round(HpB.yaoL * m));
+	$("#progressbar_B_yaoR").css("width", Math.round(HpB.yaoR * m));
+	$("#progressbar_B_jianL").css("width", Math.round(HpB.jianL * m));
+	$("#progressbar_B_jianR").css("width", Math.round(HpB.jianR * m));
+	$("#progressbar_B_shangbiL").css("width", Math.round(HpB.shangbiL * m));
+	$("#progressbar_B_shangbiR").css("width", Math.round(HpB.shangbiR * m));
+	$("#progressbar_B_qianbiL").css("width", Math.round(HpB.qianbiL * m));
+	$("#progressbar_B_qianbiR").css("width", Math.round(HpB.qianbiR * m));
+	$("#progressbar_B_zhouL").css("width", Math.round(HpB.zhouL * m));
+	$("#progressbar_B_zhouR").css("width", Math.round(HpB.zhouR * m));
+	$("#progressbar_B_shouwanL").css("width", Math.round(HpB.shouwanL * m));
+	$("#progressbar_B_shouwanR").css("width", Math.round(HpB.shouwanR * m));
+	$("#progressbar_B_datuiL").css("width", Math.round(HpB.datuiL * m));
+	$("#progressbar_B_datuiR").css("width", Math.round(HpB.datuiR * m));
+	$("#progressbar_B_xiaotuiL").css("width", Math.round(HpB.xiaotuiL * m));
+	$("#progressbar_B_xiaotuiR").css("width", Math.round(HpB.xiaotuiR * m));
+	$("#progressbar_B_xiL").css("width", Math.round(HpB.xiL * m));
+	$("#progressbar_B_xiR").css("width", Math.round(HpB.xiR * m));
+	$("#progressbar_B_huaiL").css("width", Math.round(HpB.huaiL * m));
+	$("#progressbar_B_huaiR").css("width", Math.round(HpB.huaiR * m));
 
 	$("#progressbar_A_tou").progressbar({
 		value: 100,
@@ -978,29 +1029,79 @@ function HPchongzhi() {
 		value: 100,
 	});
 
+	
+	$("#progressbar_B_tou").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_xiong").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_fu").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_yaoL").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_yaoR").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_jianL").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_jianR").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_shangbiL").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_shangbiR").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_qianbiL").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_qianbiR").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_zhouL").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_zhouR").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_shouwanL").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_shouwanR").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_datuiL").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_datuiR").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_xiaotuiL").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_xiaotuiR").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_xiL").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_xiR").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_huaiL").progressbar({
+		value: 100,
+	});
+	$("#progressbar_B_huaiR").progressbar({
+		value: 100,
+	});
 
 }
 
-
-
-
-
-//属性关联弹出
-window.sxTanChu = 0;
-
-function ShuXinTanChu() {
-	if (sxTanChu === 0) {
-		$("#TuKuangshuxinTanchuDK_A").show("fold", 100);
-		$(".TuKuangshuxinDaK").addClass("TuKuangshuxinDaKaa");
-		$("#TuKuangshuxinDaKd_A").css("line-height", "4px");
-		sxTanChu = 1;
-	} else {
-		$("#TuKuangshuxinTanchuDK_A").hide("fold", 100);
-		$(".TuKuangshuxinDaK").removeClass("TuKuangshuxinDaKaa");
-		$("#TuKuangshuxinDaKd_A").css("line-height", "11px");
-		sxTanChu = 0;
-	}
-}
 
 function man5() {
 	switch (PaiBei) {
