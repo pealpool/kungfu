@@ -2,11 +2,6 @@
 //http://www.ruanyifeng.com/blog/2012/07/three_ways_to_define_a_javascript_class.html
 "use strict";
 
-/*function abcde(){
-	var aaaf = ShuX_LiLiang.createNew();
-	alert(aaaf.gongjiJC(SX_Liliang));
-};*/
-
 var SX_Sum = 3;
 var SX_Liliang = 2;
 var SX_Minjie = 2;
@@ -14,11 +9,14 @@ var SX_Zhili = 2;
 var SX_Tizhi = 2;
 var SX_Pinheng = 2;
 
-//var mSX_LiLiang = ShuX_LiLiang.createNew();
-//var mSX_Minjie = ShuX_Minjie.createNew();
-//var mSX_Zhili = ShuX_Zhili.createNew();
-//var mSX_Tizhi = ShuX_Tizhi.createNew();
-//var mSX_Pinheng = ShuX_Pinheng.createNew();
+//敌方属性
+var SXB_Sum = 3;
+var SXB_Liliang = 2;
+var SXB_Minjie = 2;
+var SXB_Zhili = 2;
+var SXB_Tizhi = 2;
+var SXB_Pinheng = 2;
+
 
 //力量
 var ShuX_LiLiang = {
