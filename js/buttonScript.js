@@ -1,7 +1,8 @@
 // JavaScript Document
 "use strict";
 //派别标记
-var PaiBei = "Taiji";
+var PaiBei_A = "Taiji";
+var PaiBei_B = "Taiji";
 //选择派别0 & 选择属性1 按钮激活标记
 var XZbottom = 0;
 
@@ -50,7 +51,7 @@ function ChangechoiceBG(ZhaoShi) {
 
 //选择派别后的动作
 function choicePB_h() {
-	switch (PaiBei) {
+	switch (PaiBei_A) {
 		case "Taiji":
 			document.getElementById("choiceZhaoshishiXiaoKuang_Taiji").style.backgroundColor = "#8ec4ec";
 			document.getElementById("choiceZhaoshishiXiaoKuang_Taiquan").style.backgroundColor = "#fff";
@@ -263,7 +264,7 @@ function choicePB_h() {
 	document.getElementById("choiceJinDuLan_XZpaibei").setAttribute("class", "choiceJinDuLanButtom grayButtom");
 	document.getElementById("choiceJinDuLan_XZshuxin").setAttribute("class", "choiceJinDuLanButtom myred");
 	XZbottom = 1;
-	ChangechoiceBG(PaiBei);
+	ChangechoiceBG(PaiBei_A);
 	BDgl_Liliang();
 	BDgl_Minjie();
 	BDgl_Zhili();
@@ -276,7 +277,7 @@ function choicePB_h() {
 function choicePB(pbpb) {
 	//var XZpaibei = document.getElementById("choiceJinDuLan_XZpaibei");
 	//var XZshuxin = document.getElementById("choiceJinDuLan_XZshuxin");
-	PaiBei = pbpb;
+	PaiBei_A = pbpb;
 	choicePB_h();
 	//document.getElementById("choiceZhaoshiDaKuang").style.display = "none";
 	$("#choiceZhaoshiDaKuang").hide("fade", 300, DaKuangHtS_ps);
@@ -299,9 +300,9 @@ function XZbottomFF(Bu) {
 			//document.getElementById("choiceZhaoshiDaKuang").style.display = "none";
 			//document.getElementById("choiceShuxinDaKuang").style.display = "inline";
 			$("#choiceZhaoshiDaKuang").hide("fade", 300, DaKuangHtS_ps);
-			if (PaiBei === "Taiji") {
+			if (PaiBei_A === "Taiji") {
 				document.getElementById("choicePaiBei").setAttribute("class", "choicePaiBei cPBTaiji0");
-			} else if (PaiBei === "Taiquan") {
+			} else if (PaiBei_A === "Taiquan") {
 				document.getElementById("choicePaiBei").setAttribute("class", "choicePaiBei cPBTaiquan0");
 			}
 		}
@@ -335,7 +336,7 @@ function BDgl_Liliang() {
 	$("#DianshuDaKuang_TR2_Liliang").html(SX_Liliang);
 	$("#DianshuguanlianXiaoKuang_s_gongjiJC").html(Add_zh(Math.round((mSX_LiLiang.gongjiJC(SX_Liliang) - 1) * 100)) + "%");
 	$("#DianshuguanlianXiaoKuang_s_baojishanghai").html(Add_zh(Math.round((mSX_LiLiang.baojishanghai(SX_Liliang) - 1) * 100)) + "%");
-	if (PaiBei === "Taiji") {
+	if (PaiBei_A === "Taiji") {
 		tj_panda.AttW = (true_tj_panda.AttW * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
 		tj_panda.AttN = (true_tj_panda.AttN * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
 		tj_tuishou.AttW = (true_tj_tuishou.AttW * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
@@ -369,7 +370,7 @@ function BDgl_Liliang() {
 		$("#AttW8").html(Math.round(tj_banshuai.AttW));
 		$("#AttN8").html(Math.round(tj_banshuai.AttN));
 
-	} else if (PaiBei === "Taiquan") {
+	} else if (PaiBei_A === "Taiquan") {
 		tq_zhiquan.AttW = (true_tq_zhiquan.AttW * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
 		tq_zhiquan.AttN = (true_tq_zhiquan.AttN * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
 		tq_lrgouquan.AttW = (true_tq_lrgouquan.AttW * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
@@ -407,7 +408,7 @@ function BDgl_Minjie() {
 	$("#DianshuDaKuang_TR2_Minjie").html(SX_Minjie);
 	$("#DianshuguanlianXiaoKuang_s_shudu").html(SX_Minjie);
 	$("#DianshuguanlianXiaoKuang_s_shanbi").html(SX_Minjie);
-	if (PaiBei === "Taiji") {
+	if (PaiBei_A === "Taiji") {
 		tj_panda.ATimeQ = true_tj_panda.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
 		tj_panda.ATime = true_tj_panda.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
 		tj_panda.ATimeH = true_tj_panda.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie);
@@ -472,7 +473,7 @@ function BDgl_Minjie() {
 		$("#ATime8").html(tj_banshuai.ATime.toFixed(1));
 		$("#ATimeH8").html(tj_banshuai.ATimeH.toFixed(1));
 
-	} else if (PaiBei === "Taiquan") {
+	} else if (PaiBei_A === "Taiquan") {
 
 		tq_zhiquan.ATimeQ = true_tq_zhiquan.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
 		tq_zhiquan.ATime = true_tq_zhiquan.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
@@ -541,7 +542,7 @@ function BDgl_Zhili() {
 	$("#DianshuguanlianXiaoKuang_s_minzhongxz").html(Add_zh(mSX_ZhiLi.minzhongxz(SX_Zhili) * 100) + "%");
 	$("#DianshuguanlianXiaoKuang_s_qinbao").html(mSX_ZhiLi.qinbao(SX_Zhili));
 	BDgl_Liliang();
-	if (PaiBei === "Taiji") {
+	if (PaiBei_A === "Taiji") {
 		tj_panda.Mzxz = true_tj_panda.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili);
 		tj_tuishou.Mzxz = true_tj_tuishou.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili);
 		tj_qingna.Mzxz = true_tj_qingna.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili);
@@ -559,7 +560,7 @@ function BDgl_Zhili() {
 		$("#Mzxz6").html(Add_zh(Math.round(tj_paocui.Mzxz * 100)) + "%");
 		$("#Mzxz7").html(Add_zh(Math.round(tj_yuanyangtui.Mzxz * 100)) + "%");
 		$("#Mzxz8").html(Add_zh(Math.round(tj_banshuai.Mzxz * 100)) + "%");
-	} else if (PaiBei === "Taiquan") {
+	} else if (PaiBei_A === "Taiquan") {
 		tq_zhiquan.Mzxz = true_tq_zhiquan.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili);
 		tq_lrgouquan.Mzxz = true_tq_lrgouquan.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili);
 		tq_sgouquan.Mzxz = true_tq_sgouquan.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili);
@@ -806,12 +807,6 @@ function ChuShiHua() {
 	$("#TuKuang_A_Tizhi").html("体质：" + SX_Tizhi);
 	$("#TuKuang_A_Pinheng").html("平衡：" + SX_Pinheng);
 
-	$("#TuKuang_B_Liliang").html("力量：" + SXB_Liliang);
-	$("#TuKuang_B_Minjie").html("敏捷：" + SXB_Minjie);
-	$("#TuKuang_B_Zhili").html("智力：" + SXB_Zhili);
-	$("#TuKuang_B_Tizhi").html("体质：" + SXB_Tizhi);
-	$("#TuKuang_B_Pinheng").html("平衡：" + SXB_Pinheng);
-
 	$("#TuchuKuang_A_gongjiJC").html(Add_zh(Math.round((mSX_LiLiang.gongjiJC(SX_Liliang) - 1) * 100)) + "%");
 	$("#TuchuKuang_A_baojishanghai").html(Add_zh(Math.round((mSX_LiLiang.baojishanghai(SX_Liliang) - 1) * 100)) + "%");
 	$("#TuchuKuang_A_shudu").html(SX_Minjie);
@@ -827,20 +822,7 @@ function ChuShiHua() {
 	$("#TuchuKuang_A_wendinzhi").html(mSX_Pinheng.wendinzhi(SX_Pinheng));
 	$("#TuchuKuang_A_wendinhuifu").html(mSX_Pinheng.wendinhuifu(SX_Pinheng));
 
-	$("#TuchuKuang_B_gongjiJC").html(Add_zh(Math.round((mSX_LiLiang.gongjiJC(SXB_Liliang) - 1) * 100)) + "%");
-	$("#TuchuKuang_B_baojishanghai").html(Add_zh(Math.round((mSX_LiLiang.baojishanghai(SXB_Liliang) - 1) * 100)) + "%");
-	$("#TuchuKuang_B_shudu").html(SXB_Minjie);
-	$("#TuchuKuang_B_shanbi").html(SXB_Minjie);
-	$("#TuchuKuang_B_baojijilv").html(mSX_ZhiLi.baojijilv(SXB_Zhili) * 100 + "%");
-	$("#TuchuKuang_B_gongjifudongjilv").html(mSX_ZhiLi.gongjifudongjilv(SXB_Zhili) * 100 + "%");
-	$("#TuchuKuang_B_minzhongxz").html(Add_zh(mSX_ZhiLi.minzhongxz(SXB_Zhili) * 100) + "%");
-	$("#TuchuKuang_B_qinbao").html(mSX_ZhiLi.qinbao(SXB_Zhili));
-	$("#TuchuKuang_B_fangyujilv").html(SXB_Tizhi);
-	$("#TuchuKuang_B_yibanfanshuang").html(mSX_Tizhi.yibanfanshuang(SXB_Tizhi) * 100 + "%");
-	$("#TuchuKuang_B_fangyufanshuang").html(mSX_Tizhi.fangyufanshuang(SXB_Tizhi) * 100 + "%");
-	$("#TuchuKuang_B_wendinfantan").html(mSX_Tizhi.wendinfantan(SXB_Tizhi) * 100 + "%");
-	$("#TuchuKuang_B_wendinzhi").html(mSX_Pinheng.wendinzhi(SXB_Pinheng));
-	$("#TuchuKuang_B_wendinhuifu").html(mSX_Pinheng.wendinhuifu(SXB_Pinheng));
+	Shuxingshuaxin_B();
 
 	HPchongzhi();
 	//属性关联弹出标记
@@ -852,7 +834,7 @@ function ChuShiHua() {
 
 	window.mymyname = $("#My_name").text();
 
-	switch (PaiBei) {
+	switch (PaiBei_A) {
 		case "Taiji":
 			$("#TuKuangTitle_paibie").html("太极");
 			$("#TuKuangTitle_paibie").css("color", "#4388bb");
@@ -1127,7 +1109,7 @@ function HPchongzhi() {
 
 
 function man5() {
-	switch (PaiBei) {
+	switch (PaiBei_A) {
 		case "Taiji":
 			$("#ZSdiv_tj_panda").addClass("huise");
 			$("#ZSdiv_tj_tuishou").addClass("huise");
@@ -1158,7 +1140,7 @@ function tianjiaZShou() {
 	if (i_yixuanZS > 5) {
 		man5();
 	} else {
-		switch (PaiBei) {
+		switch (PaiBei_A) {
 			case "Taiji":
 				if ((tj_panda.ATimeQ + tj_panda.ATime).toFixed(1) > yxZStime.toFixed(1)) {
 					$("#ZSdiv_tj_panda").addClass("huise");
@@ -1216,7 +1198,7 @@ function tianjiaZShou() {
 //删除一个招式后共同动作
 function shanchuZShou() {
 	xuanshisyTime();
-	switch (PaiBei) {
+	switch (PaiBei_A) {
 		case "Taiji":
 			if ((tj_panda.ATimeQ + tj_panda.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
 				$("#ZSdiv_tj_panda").removeClass("huise");
@@ -1271,7 +1253,7 @@ function shanchuZShou() {
 
 //加回删除招式的时间
 function jiahuitime(zsName) {
-	switch (PaiBei) {
+	switch (PaiBei_A) {
 		case "Taiji":
 			switch (zsName) {
 				case "tj_panda":
@@ -1336,7 +1318,7 @@ function xuanshisyTime() {
 //已选招式初始化
 function zschushihua() {
 	i_yixuanZS = 1;
-	switch (PaiBei) {
+	switch (PaiBei_A) {
 		case "Taiji":
 			i_tj_panda = 1;
 			i_tj_tuishou = 1;
@@ -1395,24 +1377,20 @@ function DFshuxingchushihua() {
 	} else {
 		SXB_Pinheng = 3;
 	}
-	
-	
-	//红包算法
-	var x1 = Math.floor(Math.random() * 6);
-	var x2 = Math.floor(Math.random() * 6);
-	SXB_Sum = 13 - SXB_Pinheng - x1 - x2;
-	var x3 = Math.floor(Math.random() * (SXB_Sum + 1));
-	var x4 = SXB_Sum - x3;
-	
-	
-	
-	
-	
-	
-	
-	var tempArray = [ 1, 2, 3, 4 ]
+
+
+	do {
+		var x1 = Math.floor(Math.random() * 6);
+		var x2 = Math.floor(Math.random() * 6);
+		SXB_Sum = 13 - SXB_Pinheng - x1 - x2;
+		var x3 = Math.floor(Math.random() * (SXB_Sum + 1));
+		var x4 = SXB_Sum - x3;
+	}
+	while (x1 > 5 || x2 > 5 || x3 > 5 || x4 > 5);
+
+	var tempArray = [1, 2, 3, 4]
 	tempArray.shuffle();
-	switch(tempArray[0]){
+	switch (tempArray[0]) {
 		case 1:
 			SXB_Liliang = x1;
 			break;
@@ -1426,7 +1404,7 @@ function DFshuxingchushihua() {
 			SXB_Liliang = x4;
 			break;
 	}
-	switch(tempArray[1]){
+	switch (tempArray[1]) {
 		case 1:
 			SXB_Minjie = x1;
 			break;
@@ -1440,35 +1418,76 @@ function DFshuxingchushihua() {
 			SXB_Minjie = x4;
 			break;
 	}
-	switch(tempArray[2]){
+	switch (tempArray[2]) {
 		case 1:
-			SXB_Zhili  = x1;
+			SXB_Zhili = x1;
 			break;
 		case 2:
-			SXB_Zhili  = x2;
+			SXB_Zhili = x2;
 			break;
 		case 3:
-			SXB_Zhili  = x3;
+			SXB_Zhili = x3;
 			break;
 		case 4:
-			SXB_Zhili  = x4;
+			SXB_Zhili = x4;
 			break;
 	}
-	switch(tempArray[3]){
+	switch (tempArray[3]) {
 		case 1:
-			SXB_Tizhi  = x1;
+			SXB_Tizhi = x1;
 			break;
 		case 2:
-			SXB_Tizhi  = x2;
+			SXB_Tizhi = x2;
 			break;
 		case 3:
-			SXB_Tizhi  = x3;
+			SXB_Tizhi = x3;
 			break;
 		case 4:
-			SXB_Tizhi  = x4;
+			SXB_Tizhi = x4;
 			break;
 	}
-	alert(SXB_Liliang + "," + SXB_Minjie + "," + SXB_Zhili + "," +  SXB_Tizhi); 
+
+
+}
+
+
+
+
+function Shuxingshuaxin_B() {
+	shuijiPaibei();
 	
+	$("#TuKuang_B_Liliang").html("力量：" + SXB_Liliang);
+	$("#TuKuang_B_Minjie").html("敏捷：" + SXB_Minjie);
+	$("#TuKuang_B_Zhili").html("智力：" + SXB_Zhili);
+	$("#TuKuang_B_Tizhi").html("体质：" + SXB_Tizhi);
+	$("#TuKuang_B_Pinheng").html("平衡：" + SXB_Pinheng);
+
+	$("#TuchuKuang_B_gongjiJC").html(Add_zh(Math.round((mSX_LiLiang.gongjiJC(SXB_Liliang) - 1) * 100)) + "%");
+	$("#TuchuKuang_B_baojishanghai").html(Add_zh(Math.round((mSX_LiLiang.baojishanghai(SXB_Liliang) - 1) * 100)) + "%");
+	$("#TuchuKuang_B_shudu").html(SXB_Minjie);
+	$("#TuchuKuang_B_shanbi").html(SXB_Minjie);
+	$("#TuchuKuang_B_baojijilv").html(mSX_ZhiLi.baojijilv(SXB_Zhili) * 100 + "%");
+	$("#TuchuKuang_B_gongjifudongjilv").html(mSX_ZhiLi.gongjifudongjilv(SXB_Zhili) * 100 + "%");
+	$("#TuchuKuang_B_minzhongxz").html(Add_zh(mSX_ZhiLi.minzhongxz(SXB_Zhili) * 100) + "%");
+	$("#TuchuKuang_B_qinbao").html(mSX_ZhiLi.qinbao(SXB_Zhili));
+	$("#TuchuKuang_B_fangyujilv").html(SXB_Tizhi);
+	$("#TuchuKuang_B_yibanfanshuang").html(mSX_Tizhi.yibanfanshuang(SXB_Tizhi) * 100 + "%");
+	$("#TuchuKuang_B_fangyufanshuang").html(mSX_Tizhi.fangyufanshuang(SXB_Tizhi) * 100 + "%");
+	$("#TuchuKuang_B_wendinfantan").html(mSX_Tizhi.wendinfantan(SXB_Tizhi) * 100 + "%");
+	$("#TuchuKuang_B_wendinzhi").html(mSX_Pinheng.wendinzhi(SXB_Pinheng));
+	$("#TuchuKuang_B_wendinhuifu").html(mSX_Pinheng.wendinhuifu(SXB_Pinheng));
+}
+
+//[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
+function shuijiPaibei(){
+	if(Math.floor(Math.random()*2)){
+		PaiBei_B = "Taiji";
+		$("#TuKuangTitle_He_paibie").html("太极");
+		$("#TuKuangTitle_He_paibie").css("color", "#4388bb");
+	}else{
+		PaiBei_B = "Taiquan";
+		$("#TuKuangTitle_He_paibie").html("泰拳");
+		$("#TuKuangTitle_He_paibie").css("color", "#a50000");
+	}
 	
 }
