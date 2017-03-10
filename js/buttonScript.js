@@ -833,6 +833,8 @@ function ChuShiHua() {
 	window.yxZStime = 7.5; //已选招式剩余时间
 
 	window.mymyname = $("#My_name").text();
+	
+	window.izsxx = 0;//大圆按钮标记
 
 	switch (PaiBei_A) {
 		case "Taiji":
