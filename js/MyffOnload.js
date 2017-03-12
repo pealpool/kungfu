@@ -1344,18 +1344,17 @@ $(document).ready(function () {
 
 	//完成招式选择
 	$("#choicezhaoshiButtom").click(function () {
-		var text = "排序为：";
 		var i = 1;
+		//slice(6, -2)从第6个后截取，到倒数第3个。
+		//alert($(this).find(".zhaoshiLB3.zhaoshiLBG").html());
+		var gz00 = /\D*/;
+		var gz01 = new RegExp("手");
+		var gz02 = new RegExp("脚");
+		var gz03 = new RegExp("肘");
+		var gz04 = new RegExp("膝");
 		$("#chicoZhaoShiTianjiaK").children().each(function () {
 			switch (i) {
 				case 1:
-					//slice(6, -2)从第6个后截取，到倒数第3个。
-					//alert($(this).find(".zhaoshiLB3.zhaoshiLBG").html());
-					var gz00 = /\D*/;
-					var gz01 = new RegExp("手");
-					var gz02 = new RegExp("脚");
-					var gz03 = new RegExp("肘");
-					var gz04 = new RegExp("膝");
 					AchoiceZS01.zs_name = gz00.exec(($(this).attr("id")).slice(6, -2));
 					if (gz01.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
 						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
@@ -1410,17 +1409,225 @@ $(document).ready(function () {
 					}
 					break;
 				case 2:
+					AchoiceZS02.zs_name = gz00.exec(($(this).attr("id")).slice(6, -2));
+					if (gz01.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+								AchoiceZS02.zs_frome = "shoul";
+							} else {
+								AchoiceZS02.zs_frome = "shour";
+							}
+						} else {
+							AchoiceZS02.zs_frome = "shou"; //双手
+						}
+					} else if (gz02.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+								AchoiceZS02.zs_frome = "jiaol";
+							} else {
+								AchoiceZS02.zs_frome = "jiaor";
+							}
+						} else {
+							AchoiceZS02.zs_frome = "jiao";
+						}
+					} else if (gz03.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+								AchoiceZS02.zs_frome = "zhoul";
+							} else {
+								AchoiceZS02.zs_frome = "zhour";
+							}
+						} else {
+							AchoiceZS02.zs_frome = "zhou";
+						}
+					} else if (gz04.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+								AchoiceZS02.zs_frome = "xil";
+							} else {
+								AchoiceZS02.zs_frome = "xir";
+							}
+						} else {
+							AchoiceZS02.zs_frome = "xi";
+						}
+					}
+					AchoiceZS02.zs_to = $(this).find("select").val();
+					if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+						if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+							AchoiceZS02.zs_torl = "l";
+						} else {
+							AchoiceZS02.zs_torl = "r";
+						}
+					} else {
+						AchoiceZS02.zs_torl = "b";
+					}
 					break;
 				case 3:
+					AchoiceZS03.zs_name = gz00.exec(($(this).attr("id")).slice(6, -2));
+					if (gz01.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+								AchoiceZS03.zs_frome = "shoul";
+							} else {
+								AchoiceZS03.zs_frome = "shour";
+							}
+						} else {
+							AchoiceZS03.zs_frome = "shou"; //双手
+						}
+					} else if (gz02.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+								AchoiceZS03.zs_frome = "jiaol";
+							} else {
+								AchoiceZS03.zs_frome = "jiaor";
+							}
+						} else {
+							AchoiceZS03.zs_frome = "jiao";
+						}
+					} else if (gz03.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+								AchoiceZS03.zs_frome = "zhoul";
+							} else {
+								AchoiceZS03.zs_frome = "zhour";
+							}
+						} else {
+							AchoiceZS03.zs_frome = "zhou";
+						}
+					} else if (gz04.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+								AchoiceZS03.zs_frome = "xil";
+							} else {
+								AchoiceZS03.zs_frome = "xir";
+							}
+						} else {
+							AchoiceZS03.zs_frome = "xi";
+						}
+					}
+					AchoiceZS03.zs_to = $(this).find("select").val();
+					if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+						if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+							AchoiceZS03.zs_torl = "l";
+						} else {
+							AchoiceZS03.zs_torl = "r";
+						}
+					} else {
+						AchoiceZS03.zs_torl = "b";
+					}
 					break;
 				case 4:
+					AchoiceZS04.zs_name = gz00.exec(($(this).attr("id")).slice(6, -2));
+					if (gz01.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+								AchoiceZS04.zs_frome = "shoul";
+							} else {
+								AchoiceZS04.zs_frome = "shour";
+							}
+						} else {
+							AchoiceZS04.zs_frome = "shou"; //双手
+						}
+					} else if (gz02.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+								AchoiceZS04.zs_frome = "jiaol";
+							} else {
+								AchoiceZS04.zs_frome = "jiaor";
+							}
+						} else {
+							AchoiceZS04.zs_frome = "jiao";
+						}
+					} else if (gz03.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+								AchoiceZS04.zs_frome = "zhoul";
+							} else {
+								AchoiceZS04.zs_frome = "zhour";
+							}
+						} else {
+							AchoiceZS04.zs_frome = "zhou";
+						}
+					} else if (gz04.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+								AchoiceZS04.zs_frome = "xil";
+							} else {
+								AchoiceZS04.zs_frome = "xir";
+							}
+						} else {
+							AchoiceZS04.zs_frome = "xi";
+						}
+					}
+					AchoiceZS04.zs_to = $(this).find("select").val();
+					if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+						if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+							AchoiceZS04.zs_torl = "l";
+						} else {
+							AchoiceZS04.zs_torl = "r";
+						}
+					} else {
+						AchoiceZS04.zs_torl = "b";
+					}
 					break;
 				case 5:
+					AchoiceZS05.zs_name = gz00.exec(($(this).attr("id")).slice(6, -2));
+					if (gz01.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+								AchoiceZS05.zs_frome = "shoul";
+							} else {
+								AchoiceZS05.zs_frome = "shour";
+							}
+						} else {
+							AchoiceZS05.zs_frome = "shou"; //双手
+						}
+					} else if (gz02.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+								AchoiceZS05.zs_frome = "jiaol";
+							} else {
+								AchoiceZS05.zs_frome = "jiaor";
+							}
+						} else {
+							AchoiceZS05.zs_frome = "jiao";
+						}
+					} else if (gz03.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+								AchoiceZS05.zs_frome = "zhoul";
+							} else {
+								AchoiceZS05.zs_frome = "zhour";
+							}
+						} else {
+							AchoiceZS05.zs_frome = "zhou";
+						}
+					} else if (gz04.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+								AchoiceZS05.zs_frome = "xil";
+							} else {
+								AchoiceZS05.zs_frome = "xir";
+							}
+						} else {
+							AchoiceZS05.zs_frome = "xi";
+						}
+					}
+					AchoiceZS05.zs_to = $(this).find("select").val();
+					if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+						if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+							AchoiceZS05.zs_torl = "l";
+						} else {
+							AchoiceZS05.zs_torl = "r";
+						}
+					} else {
+						AchoiceZS05.zs_torl = "b";
+					}
 					break;
 			}
 			i++;
 		});
-		alert(AchoiceZS01.zs_name + " " + AchoiceZS01.zs_frome + " " + AchoiceZS01.zs_to + " " + AchoiceZS01.zs_torl); //把排序的ID弹出
+		alert(AchoiceZS01.zs_name + " " + AchoiceZS01.zs_frome + " " + AchoiceZS01.zs_to + " " + AchoiceZS01.zs_torl + "\n" + AchoiceZS02.zs_name + " " + AchoiceZS02.zs_frome + " " + AchoiceZS02.zs_to + " " + AchoiceZS02.zs_torl + "\n" + AchoiceZS03.zs_name + " " + AchoiceZS03.zs_frome + " " + AchoiceZS03.zs_to + " " + AchoiceZS03.zs_torl + "\n" + AchoiceZS04.zs_name + " " + AchoiceZS04.zs_frome + " " + AchoiceZS04.zs_to + " " + AchoiceZS04.zs_torl + "\n" + AchoiceZS05.zs_name + " " + AchoiceZS05.zs_frome + " " + AchoiceZS05.zs_to + " " + AchoiceZS05.zs_torl); //把排序的ID弹出
 		$("#StartButtomYuanKuang").removeClass("yuan_blue").addClass("yuan_red");
 		$("#NeiRongchoiceZSdaK").hide("drop", {
 			direction: 'up'
