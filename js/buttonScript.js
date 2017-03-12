@@ -833,8 +833,8 @@ function ChuShiHua() {
 	window.yxZStime = 7.5; //已选招式剩余时间
 
 	window.mymyname = $("#My_name").text();
-	
-	window.izsxx = 0;//大圆按钮标记
+
+	window.izsxx = 0; //大圆按钮标记
 
 	switch (PaiBei_A) {
 		case "Taiji":
@@ -1110,7 +1110,7 @@ function HPchongzhi() {
 }
 
 
-function man5() {
+function biamWuXiaoZS() {
 	switch (PaiBei_A) {
 		case "Taiji":
 			$("#ZSdiv_tj_panda").addClass("huise");
@@ -1140,7 +1140,7 @@ function tianjiaZShou() {
 	i_yixuanZS++;
 	xuanshisyTime();
 	if (i_yixuanZS > 5) {
-		man5();
+		biamWuXiaoZS();
 	} else {
 		switch (PaiBei_A) {
 			case "Taiji":
@@ -1341,11 +1341,11 @@ function zschushihua() {
 			i_tq_shaotui = 1;
 			break;
 	}
-	choiceZS01.zs_name = "";
-	choiceZS02.zs_name = "";
-	choiceZS03.zs_name = "";
-	choiceZS04.zs_name = "";
-	choiceZS05.zs_name = "";
+	AchoiceZS01.zs_name = "";
+	AchoiceZS02.zs_name = "";
+	AchoiceZS03.zs_name = "";
+	AchoiceZS04.zs_name = "";
+	AchoiceZS05.zs_name = "";
 	yxZStime = 7.5;
 	shanchuZShou();
 }
@@ -1457,7 +1457,7 @@ function DFshuxingchushihua() {
 
 function Shuxingshuaxin_B() {
 	shuijiPaibei();
-	
+
 	$("#TuKuang_B_Liliang").html("力量：" + SXB_Liliang);
 	$("#TuKuang_B_Minjie").html("敏捷：" + SXB_Minjie);
 	$("#TuKuang_B_Zhili").html("智力：" + SXB_Zhili);
@@ -1481,15 +1481,111 @@ function Shuxingshuaxin_B() {
 }
 
 //[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
-function shuijiPaibei(){
-	if(Math.floor(Math.random()*2)){
+function shuijiPaibei() {
+	if (Math.floor(Math.random() * 2)) {
 		PaiBei_B = "Taiji";
 		$("#TuKuangTitle_He_paibie").html("太极");
 		$("#TuKuangTitle_He_paibie").css("color", "#4388bb");
-	}else{
+	} else {
 		PaiBei_B = "Taiquan";
 		$("#TuKuangTitle_He_paibie").html("泰拳");
 		$("#TuKuangTitle_He_paibie").css("color", "#a50000");
 	}
-	
+}
+
+//随机招式
+function DifangshujiZS() {
+	var DFyxZStime = 7.5;
+	var i_DFyixuanZS = 0;
+	do {
+		var a = 0; //可选招式数
+		var ZSjihe = Array(); //招式集合
+		switch (PaiBei_A) {
+			case "Taiji":
+				Btj_panda.ATimeQ = true_tj_panda.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+				Btj_panda.ATime = true_tj_panda.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+				Btj_tuishou.ATimeQ = true_tj_tuishou.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+				Btj_tuishou.ATime = true_tj_tuishou.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+				Btj_qingna.ATimeQ = true_tj_qingna.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+				Btj_qingna.ATime = true_tj_qingna.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+				Btj_shuangfong.ATimeQ = true_tj_shuangfong.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+				Btj_shuangfong.ATime = true_tj_shuangfong.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+				Btj_zhoudicui.ATimeQ = true_tj_zhoudicui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+				Btj_zhoudicui.ATime = true_tj_zhoudicui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+				Btj_paocui.ATimeQ = true_tj_paocui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+				Btj_paocui.ATime = true_tj_paocui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+				Btj_yuanyangtui.ATimeQ = true_tj_yuanyangtui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+				Btj_yuanyangtui.ATime = true_tj_yuanyangtui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+				Btj_banshuai.ATimeQ = true_tj_banshuai.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+				Btj_banshuai.ATime = true_tj_banshuai.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+				if ((Btj_panda.ATimeQ + Btj_panda.ATime).toFixed(1) <= DFyxZStime) {
+					ZSjihe[a] = "tj_panda";
+					a++;
+				}
+
+				//[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
+				switch (Math.floor(Math.random() * 8)) {
+					case 0:
+
+						break;
+					case 1:
+						break;
+					case 2:
+						break;
+					case 3:
+						break;
+					case 4:
+						break;
+					case 5:
+						break;
+					case 6:
+						break;
+					case 7:
+						break;
+				}
+
+
+
+
+
+
+				break;
+			case "Taiquan":
+
+
+
+				Btq_zhiquan.ATimeQ = true_tq_zhiquan.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+				Btq_zhiquan.ATime = true_tq_zhiquan.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+				Btq_lrgouquan.ATimeQ = true_tq_lrgouquan.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+				Btq_lrgouquan.ATime = true_tq_lrgouquan.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+				Btq_sgouquan.ATimeQ = true_tq_sgouquan.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+				Btq_sgouquan.ATime = true_tq_sgouquan.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+				Btq_zhouji.ATimeQ = true_tq_zhouji.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+				Btq_zhouji.ATime = true_tq_zhouji.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+				Btq_xizhuang.ATimeQ = true_tq_xizhuang.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+				Btq_xizhuang.ATime = true_tq_xizhuang.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+				Btq_dengtui.ATimeQ = true_tq_dengtui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+				Btq_dengtui.ATime = true_tq_dengtui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+				Btq_shaotui.ATimeQ = true_tq_shaotui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
+				Btq_shaotui.ATime = true_tq_shaotui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie);
+
+
+
+				break;
+		}
+	} while (i_DFyixuanZS <= 5);
 }
