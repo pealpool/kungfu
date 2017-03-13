@@ -1709,33 +1709,21 @@ function BzsHouxuanBuwei(zsname, a) {
 					} else {
 						BchoiceZS01.zs_frome = "shour";
 					}
-					sjs = Math.floor(Math.random() * 13);
-					if(sjs<=0){
+					sjs = Math.floor(Math.random() * 5);
+					if (sjs <= 0) {
 						BchoiceZS01.zs_to = "头部";
-					}else if(sjs<=1){
+					} else if (sjs <= 1) {
 						BchoiceZS01.zs_to = "胸部";
-					}else if(sjs<=2){
+					} else if (sjs <= 2) {
 						BchoiceZS01.zs_to = "腹部";
-					}else if(sjs<=3){
-						BchoiceZS01.zs_to = "腰部";
-					}else if(sjs<=4){
+					} else if (sjs <= 3) {
 						BchoiceZS01.zs_to = "肩关节";
-					}else if(sjs<=5){
-						BchoiceZS01.zs_to = "上臂";
-					}else if(sjs<=6){
-						BchoiceZS01.zs_to = "手肘";
-					}else if(sjs<=7){
-						BchoiceZS01.zs_to = "前臂";
-					}else if(sjs<=8){
-						BchoiceZS01.zs_to = "手腕";
-					}else if(sjs<=9){
-						BchoiceZS01.zs_to = "大腿";
-					}else if(sjs<=10){
-						BchoiceZS01.zs_to = "膝关节";
-					}else if(sjs<=11){
-						BchoiceZS01.zs_to = "小腿";
-					}else if(sjs<=12){
-						BchoiceZS01.zs_to = "踝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
 					}
 					break;
 				case 2:
