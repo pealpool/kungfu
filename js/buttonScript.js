@@ -1709,6 +1709,730 @@ function BzsHouxuanBuwei(zsname, a) {
 					} else {
 						BchoiceZS01.zs_frome = "shour";
 					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS01.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS01.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS01.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS01.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					}
+					break;
+				case 2:
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS02.zs_frome = "shoul";
+					} else {
+						BchoiceZS02.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS02.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS02.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS02.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS02.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					}
+					break;
+				case 3:
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS03.zs_frome = "shoul";
+					} else {
+						BchoiceZS03.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS03.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS03.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS03.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS03.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					}
+					break;
+				case 4:
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS04.zs_frome = "shoul";
+					} else {
+						BchoiceZS04.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS04.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS04.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS04.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS04.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					}
+					break;
+				case 5:
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS05.zs_frome = "shoul";
+					} else {
+						BchoiceZS05.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS05.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS05.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS05.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS05.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					}
+					break;
+			}
+			break;
+		case "tj_tuishou":
+			switch (a) {
+				case 1:
+					//[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
+					BchoiceZS01.zs_frome = "shou";
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs <= 0) {
+						BchoiceZS01.zs_to = "胸部";
+					} else if (sjs <= 1) {
+						BchoiceZS01.zs_to = "腹部";
+					}
+					break;
+				case 2:
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS02.zs_frome = "shoul";
+					} else {
+						BchoiceZS02.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs <= 0) {
+						BchoiceZS02.zs_to = "胸部";
+					} else if (sjs <= 1) {
+						BchoiceZS02.zs_to = "腹部";
+					}
+					break;
+				case 3:
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS03.zs_frome = "shoul";
+					} else {
+						BchoiceZS03.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs <= 0) {
+						BchoiceZS03.zs_to = "胸部";
+					} else if (sjs <= 1) {
+						BchoiceZS03.zs_to = "腹部";
+					}
+					break;
+				case 4:
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS04.zs_frome = "shoul";
+					} else {
+						BchoiceZS04.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs <= 0) {
+						BchoiceZS04.zs_to = "胸部";
+					} else if (sjs <= 1) {
+						BchoiceZS04.zs_to = "腹部";
+					}
+					break;
+				case 5:
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS05.zs_frome = "shoul";
+					} else {
+						BchoiceZS05.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs <= 0) {
+						BchoiceZS05.zs_to = "胸部";
+					} else if (sjs <= 1) {
+						BchoiceZS05.zs_to = "腹部";
+					}
+					break;
+			}
+			break;
+		case "tj_qingna":
+			switch (a) {
+				case 1:
+					//[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS01.zs_frome = "shoul";
+					} else {
+						BchoiceZS01.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 3);
+					if (sjs <= 0) {
+						BchoiceZS01.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					} else if (sjs <= 1) {
+						BchoiceZS01.zs_to = "手肘";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					} else if (sjs <= 2) {
+						BchoiceZS01.zs_to = "手腕";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					}
+					break;
+				case 2:
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS02.zs_frome = "shoul";
+					} else {
+						BchoiceZS02.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 3);
+					if (sjs <= 0) {
+						BchoiceZS02.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					} else if (sjs <= 1) {
+						BchoiceZS02.zs_to = "手肘";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					} else if (sjs <= 2) {
+						BchoiceZS02.zs_to = "手腕";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					}
+					break;
+				case 3:
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS03.zs_frome = "shoul";
+					} else {
+						BchoiceZS03.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 3);
+					if (sjs <= 0) {
+						BchoiceZS03.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					} else if (sjs <= 1) {
+						BchoiceZS03.zs_to = "手肘";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					} else if (sjs <= 2) {
+						BchoiceZS03.zs_to = "手腕";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					}
+					break;
+				case 4:
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS04.zs_frome = "shoul";
+					} else {
+						BchoiceZS04.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 3);
+					if (sjs <= 0) {
+						BchoiceZS04.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					} else if (sjs <= 1) {
+						BchoiceZS04.zs_to = "手肘";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					} else if (sjs <= 2) {
+						BchoiceZS04.zs_to = "手腕";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					}
+					break;
+				case 5:
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS05.zs_frome = "shoul";
+					} else {
+						BchoiceZS05.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 3);
+					if (sjs <= 0) {
+						BchoiceZS05.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					} else if (sjs <= 1) {
+						BchoiceZS05.zs_to = "手肘";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					} else if (sjs <= 2) {
+						BchoiceZS05.zs_to = "手腕";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					}
+					break;
+			}
+			break;
+		case "tj_shuangfong":
+			switch (a) {
+				case 1:
+					BchoiceZS01.zs_frome = "shou";
+					BchoiceZS01.zs_to = "头部";
+					break;
+				case 2:
+					BchoiceZS02.zs_frome = "shou";
+					BchoiceZS02.zs_to = "头部";
+					break;
+				case 3:
+					BchoiceZS03.zs_frome = "shou";
+					BchoiceZS03.zs_to = "头部";
+					break;
+				case 4:
+					BchoiceZS04.zs_frome = "shou";
+					BchoiceZS04.zs_to = "头部";
+					break;
+				case 5:
+					BchoiceZS05.zs_frome = "shou";
+					BchoiceZS05.zs_to = "头部";
+					break;
+			}
+			break;
+		case "tj_zhoudicui":
+			switch (a) {
+				case 1:
+					//[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS01.zs_frome = "shoul";
+					} else {
+						BchoiceZS01.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS01.zs_to = "胸部";
+					} else if (sjs <= 1) {
+						BchoiceZS01.zs_to = "腹部";
+					} else if (sjs <= 2) {
+						BchoiceZS01.zs_to = "腰部";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS01.zs_to = "大腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					}
+					break;
+				case 2:
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS02.zs_frome = "shoul";
+					} else {
+						BchoiceZS02.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS02.zs_to = "胸部";
+					} else if (sjs <= 1) {
+						BchoiceZS02.zs_to = "腹部";
+					} else if (sjs <= 2) {
+						BchoiceZS02.zs_to = "腰部";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS02.zs_to = "大腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					}
+					break;
+				case 3:
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS03.zs_frome = "shoul";
+					} else {
+						BchoiceZS03.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS03.zs_to = "胸部";
+					} else if (sjs <= 1) {
+						BchoiceZS03.zs_to = "腹部";
+					} else if (sjs <= 2) {
+						BchoiceZS03.zs_to = "腰部";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS03.zs_to = "大腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					}
+					break;
+				case 4:
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS04.zs_frome = "shoul";
+					} else {
+						BchoiceZS04.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS04.zs_to = "胸部";
+					} else if (sjs <= 1) {
+						BchoiceZS04.zs_to = "腹部";
+					} else if (sjs <= 2) {
+						BchoiceZS04.zs_to = "腰部";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS04.zs_to = "大腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					}
+					break;
+				case 5:
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS05.zs_frome = "shoul";
+					} else {
+						BchoiceZS05.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS05.zs_to = "胸部";
+					} else if (sjs <= 1) {
+						BchoiceZS05.zs_to = "腹部";
+					} else if (sjs <= 2) {
+						BchoiceZS05.zs_to = "腰部";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS05.zs_to = "大腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					}
+					break;
+			}
+			break;
+		case "tj_paocui":
+			switch (a) {
+				case 1:
+					//[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
+					BchoiceZS01.zs_frome = "shou";
+					sjs = Math.floor(Math.random() * 3);
+					if (sjs <= 0) {
+						BchoiceZS01.zs_to = "胸部";
+					} else if (sjs <= 1) {
+						BchoiceZS01.zs_to = "腹部";
+					} else if (sjs <= 2) {
+						BchoiceZS01.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					}
+					break;
+				case 2:
+					BchoiceZS02.zs_frome = "shou";
+					sjs = Math.floor(Math.random() * 3);
+					if (sjs <= 0) {
+						BchoiceZS02.zs_to = "胸部";
+					} else if (sjs <= 1) {
+						BchoiceZS02.zs_to = "腹部";
+					} else if (sjs <= 2) {
+						BchoiceZS02.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					}
+					break;
+				case 3:
+					BchoiceZS03.zs_frome = "shou";
+					sjs = Math.floor(Math.random() * 3);
+					if (sjs <= 0) {
+						BchoiceZS03.zs_to = "胸部";
+					} else if (sjs <= 1) {
+						BchoiceZS03.zs_to = "腹部";
+					} else if (sjs <= 2) {
+						BchoiceZS03.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					}
+					break;
+				case 4:
+					BchoiceZS04.zs_frome = "shou";
+					sjs = Math.floor(Math.random() * 3);
+					if (sjs <= 0) {
+						BchoiceZS04.zs_to = "胸部";
+					} else if (sjs <= 1) {
+						BchoiceZS04.zs_to = "腹部";
+					} else if (sjs <= 2) {
+						BchoiceZS04.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					}
+					break;
+				case 5:
+					BchoiceZS05.zs_frome = "shou";
+					sjs = Math.floor(Math.random() * 3);
+					if (sjs <= 0) {
+						BchoiceZS05.zs_to = "胸部";
+					} else if (sjs <= 1) {
+						BchoiceZS05.zs_to = "腹部";
+					} else if (sjs <= 2) {
+						BchoiceZS05.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					}
+					break;
+			}
+			break;
+		case "tj_yuanyangtui":
+			switch (a) {
+				case 1:
+					//[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS01.zs_frome = "shoul";
+					} else {
+						BchoiceZS01.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 3);
+					if (sjs <= 0) {
+						BchoiceZS01.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS01.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS01.zs_to = "腹部";
+					}
+					break;
+				case 2:
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS02.zs_frome = "shoul";
+					} else {
+						BchoiceZS02.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 3);
+					if (sjs <= 0) {
+						BchoiceZS02.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS02.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS02.zs_to = "腹部";
+					}
+					break;
+				case 3:
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS03.zs_frome = "shoul";
+					} else {
+						BchoiceZS03.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 3);
+					if (sjs <= 0) {
+						BchoiceZS03.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS03.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS03.zs_to = "腹部";
+					}
+					break;
+				case 4:
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS04.zs_frome = "shoul";
+					} else {
+						BchoiceZS04.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 3);
+					if (sjs <= 0) {
+						BchoiceZS04.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS04.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS04.zs_to = "腹部";
+					}
+					break;
+				case 5:
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS05.zs_frome = "shoul";
+					} else {
+						BchoiceZS05.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 3);
+					if (sjs <= 0) {
+						BchoiceZS05.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS05.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS05.zs_to = "腹部";
+					}
+					break;
+			}
+			break;
+		case "tj_banshuai":
+			switch (a) {
+				case 1:
+					//[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS01.zs_frome = "shoul";
+					} else {
+						BchoiceZS01.zs_frome = "shour";
+					}
 					sjs = Math.floor(Math.random() * 5);
 					if (sjs <= 0) {
 						BchoiceZS01.zs_to = "头部";
@@ -1727,42 +2451,305 @@ function BzsHouxuanBuwei(zsname, a) {
 					}
 					break;
 				case 2:
+
 					break;
 				case 3:
+
 					break;
 				case 4:
+
 					break;
 				case 5:
+
 					break;
 			}
 			break;
-		case "tj_tuishou":
-			break;
-		case "tj_qingna":
-			break;
-		case "tj_shuangfong":
-			break;
-		case "tj_zhoudicui":
-			break;
-		case "tj_paocui":
-			break;
-		case "tj_yuanyangtui":
-			break;
-		case "tj_banshuai":
-			break;
 		case "tq_zhiquan":
+			switch (a) {
+				case 1:
+					//[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS01.zs_frome = "shoul";
+					} else {
+						BchoiceZS01.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 5);
+					if (sjs <= 0) {
+						BchoiceZS01.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS01.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS01.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS01.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					}
+					break;
+				case 2:
+
+					break;
+				case 3:
+
+					break;
+				case 4:
+
+					break;
+				case 5:
+
+					break;
+			}
 			break;
 		case "tq_lrgouquan":
+			switch (a) {
+				case 1:
+					//[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS01.zs_frome = "shoul";
+					} else {
+						BchoiceZS01.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 5);
+					if (sjs <= 0) {
+						BchoiceZS01.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS01.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS01.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS01.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					}
+					break;
+				case 2:
+
+					break;
+				case 3:
+
+					break;
+				case 4:
+
+					break;
+				case 5:
+
+					break;
+			}
 			break;
 		case "tq_sgouquan":
+			switch (a) {
+				case 1:
+					//[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS01.zs_frome = "shoul";
+					} else {
+						BchoiceZS01.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 5);
+					if (sjs <= 0) {
+						BchoiceZS01.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS01.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS01.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS01.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					}
+					break;
+				case 2:
+
+					break;
+				case 3:
+
+					break;
+				case 4:
+
+					break;
+				case 5:
+
+					break;
+			}
 			break;
 		case "tq_zhouji":
+			switch (a) {
+				case 1:
+					//[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS01.zs_frome = "shoul";
+					} else {
+						BchoiceZS01.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 5);
+					if (sjs <= 0) {
+						BchoiceZS01.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS01.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS01.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS01.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					}
+					break;
+				case 2:
+
+					break;
+				case 3:
+
+					break;
+				case 4:
+
+					break;
+				case 5:
+
+					break;
+			}
 			break;
 		case "tq_xizhuang":
+			switch (a) {
+				case 1:
+					//[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS01.zs_frome = "shoul";
+					} else {
+						BchoiceZS01.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 5);
+					if (sjs <= 0) {
+						BchoiceZS01.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS01.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS01.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS01.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					}
+					break;
+				case 2:
+
+					break;
+				case 3:
+
+					break;
+				case 4:
+
+					break;
+				case 5:
+
+					break;
+			}
 			break;
 		case "tq_dengtui":
+			switch (a) {
+				case 1:
+					//[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS01.zs_frome = "shoul";
+					} else {
+						BchoiceZS01.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 5);
+					if (sjs <= 0) {
+						BchoiceZS01.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS01.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS01.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS01.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					}
+					break;
+				case 2:
+
+					break;
+				case 3:
+
+					break;
+				case 4:
+
+					break;
+				case 5:
+
+					break;
+			}
 			break;
 		case "tq_shaotui":
+			switch (a) {
+				case 1:
+					//[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS01.zs_frome = "shoul";
+					} else {
+						BchoiceZS01.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 5);
+					if (sjs <= 0) {
+						BchoiceZS01.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS01.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS01.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS01.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					}
+					break;
+				case 2:
+
+					break;
+				case 3:
+
+					break;
+				case 4:
+
+					break;
+				case 5:
+
+					break;
+			}
 			break;
 	}
 }
