@@ -1579,8 +1579,8 @@ function DifangshujiZS() {
 					}
 				} else {
 					//[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
-					x = Math.floor(Math.random() * (a + 1) + 1);
-					alert("a=" + a + "，" + "x=" + x );
+					//共8个，数组后序为0-7，a++后a为8，
+					x = Math.floor(Math.random() * a);
 					switch (i_DFyixuanZS) {
 						case 0:
 							BchoiceZS01.zs_name = ZSjihe[x];
@@ -1670,7 +1670,7 @@ function DifangshujiZS() {
 					}
 				} else {
 					//[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
-					x = Math.floor(Math.random() * (a + 1) + 1);
+					x = Math.floor(Math.random() * a);
 					switch (i_DFyixuanZS) {
 						case 0:
 							BchoiceZS01.zs_name = ZSjihe[x];
@@ -1696,8 +1696,10 @@ function DifangshujiZS() {
 				}
 				break;
 		}
+		//alert("a=" + a + "，" + "选第[" + x + "]招" + "\n" + BchoiceZS01.zs_name + "\n" + BchoiceZS02.zs_name + "\n" + BchoiceZS03.zs_name + "\n" + BchoiceZS04.zs_name + "\n" + BchoiceZS05.zs_name);
 		i_DFyixuanZS++;
-	} while (i_DFyixuanZS <= 5);
+	}
+	while (i_DFyixuanZS < 5);
 	alert(BchoiceZS01.zs_name + "\n" + BchoiceZS02.zs_name + "\n" + BchoiceZS03.zs_name + "\n" + BchoiceZS04.zs_name + "\n" + BchoiceZS05.zs_name);
 }
 
