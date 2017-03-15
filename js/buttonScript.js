@@ -1580,6 +1580,7 @@ function DifangshujiZS() {
 				} else {
 					//[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
 					x = Math.floor(Math.random() * (a + 1) + 1);
+					alert("a=" + a + "，" + "x=" + x );
 					switch (i_DFyixuanZS) {
 						case 0:
 							BchoiceZS01.zs_name = ZSjihe[x];
@@ -1677,15 +1678,19 @@ function DifangshujiZS() {
 							break;
 						case 1:
 							BchoiceZS02.zs_name = ZSjihe[x];
+							BzsHouxuanBuwei(BchoiceZS02.zs_name, 2);
 							break;
 						case 2:
 							BchoiceZS03.zs_name = ZSjihe[x];
+							BzsHouxuanBuwei(BchoiceZS03.zs_name, 3);
 							break;
 						case 3:
 							BchoiceZS04.zs_name = ZSjihe[x];
+							BzsHouxuanBuwei(BchoiceZS04.zs_name, 4);
 							break;
 						case 4:
 							BchoiceZS05.zs_name = ZSjihe[x];
+							BzsHouxuanBuwei(BchoiceZS05.zs_name, 5);
 							break;
 					}
 				}
@@ -1693,7 +1698,7 @@ function DifangshujiZS() {
 		}
 		i_DFyixuanZS++;
 	} while (i_DFyixuanZS <= 5);
-	alert(BchoiceZS01.zs_name + "," + BchoiceZS02.zs_name + "," + BchoiceZS03.zs_name + "," + BchoiceZS04.zs_name + "," + BchoiceZS05.zs_name);
+	alert(BchoiceZS01.zs_name + "\n" + BchoiceZS02.zs_name + "\n" + BchoiceZS03.zs_name + "\n" + BchoiceZS04.zs_name + "\n" + BchoiceZS05.zs_name);
 }
 
 function BzsHouxuanBuwei(zsname, a) {
@@ -2433,15 +2438,33 @@ function BzsHouxuanBuwei(zsname, a) {
 					} else {
 						BchoiceZS01.zs_frome = "shour";
 					}
-					sjs = Math.floor(Math.random() * 5);
+					sjs = Math.floor(Math.random() * 4);
 					if (sjs <= 0) {
-						BchoiceZS01.zs_to = "头部";
+						BchoiceZS01.zs_to = "手肘";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
 					} else if (sjs <= 1) {
-						BchoiceZS01.zs_to = "胸部";
+						BchoiceZS01.zs_to = "手腕";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
 					} else if (sjs <= 2) {
-						BchoiceZS01.zs_to = "腹部";
+						BchoiceZS01.zs_to = "膝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
 					} else if (sjs <= 3) {
-						BchoiceZS01.zs_to = "肩关节";
+						BchoiceZS01.zs_to = "踝关节";
 						sjs = Math.floor(Math.random() * 2);
 						if (sjs) {
 							BchoiceZS01.zs_torl = "l";
@@ -2451,16 +2474,172 @@ function BzsHouxuanBuwei(zsname, a) {
 					}
 					break;
 				case 2:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS02.zs_frome = "shoul";
+					} else {
+						BchoiceZS02.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS02.zs_to = "手肘";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					} else if (sjs <= 1) {
+						BchoiceZS02.zs_to = "手腕";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					} else if (sjs <= 2) {
+						BchoiceZS02.zs_to = "膝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS02.zs_to = "踝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					}
 					break;
 				case 3:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS03.zs_frome = "shoul";
+					} else {
+						BchoiceZS03.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS03.zs_to = "手肘";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					} else if (sjs <= 1) {
+						BchoiceZS03.zs_to = "手腕";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					} else if (sjs <= 2) {
+						BchoiceZS03.zs_to = "膝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS03.zs_to = "踝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					}
 					break;
 				case 4:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS04.zs_frome = "shoul";
+					} else {
+						BchoiceZS04.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS04.zs_to = "手肘";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					} else if (sjs <= 1) {
+						BchoiceZS04.zs_to = "手腕";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					} else if (sjs <= 2) {
+						BchoiceZS04.zs_to = "膝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS04.zs_to = "踝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					}
 					break;
 				case 5:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS05.zs_frome = "shoul";
+					} else {
+						BchoiceZS05.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS05.zs_to = "手肘";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					} else if (sjs <= 1) {
+						BchoiceZS05.zs_to = "手腕";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					} else if (sjs <= 2) {
+						BchoiceZS05.zs_to = "膝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS05.zs_to = "踝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					}
 					break;
 			}
 			break;
@@ -2474,7 +2653,7 @@ function BzsHouxuanBuwei(zsname, a) {
 					} else {
 						BchoiceZS01.zs_frome = "shour";
 					}
-					sjs = Math.floor(Math.random() * 5);
+					sjs = Math.floor(Math.random() * 4);
 					if (sjs <= 0) {
 						BchoiceZS01.zs_to = "头部";
 					} else if (sjs <= 1) {
@@ -2492,16 +2671,100 @@ function BzsHouxuanBuwei(zsname, a) {
 					}
 					break;
 				case 2:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS02.zs_frome = "shoul";
+					} else {
+						BchoiceZS02.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS02.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS02.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS02.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS02.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					}
 					break;
 				case 3:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS03.zs_frome = "shoul";
+					} else {
+						BchoiceZS03.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS03.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS03.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS03.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS03.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					}
 					break;
 				case 4:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS04.zs_frome = "shoul";
+					} else {
+						BchoiceZS04.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS04.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS04.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS04.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS04.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					}
 					break;
 				case 5:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS05.zs_frome = "shoul";
+					} else {
+						BchoiceZS05.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS05.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS05.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS05.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS05.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					}
 					break;
 			}
 			break;
@@ -2515,15 +2778,27 @@ function BzsHouxuanBuwei(zsname, a) {
 					} else {
 						BchoiceZS01.zs_frome = "shour";
 					}
-					sjs = Math.floor(Math.random() * 5);
+					sjs = Math.floor(Math.random() * 4);
 					if (sjs <= 0) {
 						BchoiceZS01.zs_to = "头部";
 					} else if (sjs <= 1) {
-						BchoiceZS01.zs_to = "胸部";
+						BchoiceZS01.zs_to = "腰部";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
 					} else if (sjs <= 2) {
-						BchoiceZS01.zs_to = "腹部";
-					} else if (sjs <= 3) {
 						BchoiceZS01.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS01.zs_to = "上臂";
 						sjs = Math.floor(Math.random() * 2);
 						if (sjs) {
 							BchoiceZS01.zs_torl = "l";
@@ -2533,16 +2808,148 @@ function BzsHouxuanBuwei(zsname, a) {
 					}
 					break;
 				case 2:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS02.zs_frome = "shoul";
+					} else {
+						BchoiceZS02.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS02.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS02.zs_to = "腰部";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					} else if (sjs <= 2) {
+						BchoiceZS02.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS02.zs_to = "上臂";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					}
 					break;
 				case 3:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS03.zs_frome = "shoul";
+					} else {
+						BchoiceZS03.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS03.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS03.zs_to = "腰部";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					} else if (sjs <= 2) {
+						BchoiceZS03.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS03.zs_to = "上臂";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					}
 					break;
 				case 4:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS04.zs_frome = "shoul";
+					} else {
+						BchoiceZS04.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS04.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS04.zs_to = "腰部";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					} else if (sjs <= 2) {
+						BchoiceZS04.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS04.zs_to = "上臂";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					}
 					break;
 				case 5:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS05.zs_frome = "shoul";
+					} else {
+						BchoiceZS05.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS05.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS05.zs_to = "腰部";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					} else if (sjs <= 2) {
+						BchoiceZS05.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS05.zs_to = "上臂";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					}
 					break;
 			}
 			break;
@@ -2556,7 +2963,7 @@ function BzsHouxuanBuwei(zsname, a) {
 					} else {
 						BchoiceZS01.zs_frome = "shour";
 					}
-					sjs = Math.floor(Math.random() * 5);
+					sjs = Math.floor(Math.random() * 4);
 					if (sjs <= 0) {
 						BchoiceZS01.zs_to = "头部";
 					} else if (sjs <= 1) {
@@ -2574,16 +2981,100 @@ function BzsHouxuanBuwei(zsname, a) {
 					}
 					break;
 				case 2:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS02.zs_frome = "shoul";
+					} else {
+						BchoiceZS02.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS02.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS02.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS02.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS02.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					}
 					break;
 				case 3:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS03.zs_frome = "shoul";
+					} else {
+						BchoiceZS03.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS03.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS03.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS03.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS03.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					}
 					break;
 				case 4:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS04.zs_frome = "shoul";
+					} else {
+						BchoiceZS04.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS04.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS04.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS04.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS04.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					}
 					break;
 				case 5:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS05.zs_frome = "shoul";
+					} else {
+						BchoiceZS05.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS05.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS05.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS05.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS05.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					}
 					break;
 			}
 			break;
@@ -2597,15 +3088,21 @@ function BzsHouxuanBuwei(zsname, a) {
 					} else {
 						BchoiceZS01.zs_frome = "shour";
 					}
-					sjs = Math.floor(Math.random() * 5);
+					sjs = Math.floor(Math.random() * 4);
 					if (sjs <= 0) {
 						BchoiceZS01.zs_to = "头部";
 					} else if (sjs <= 1) {
 						BchoiceZS01.zs_to = "胸部";
 					} else if (sjs <= 2) {
-						BchoiceZS01.zs_to = "腹部";
-					} else if (sjs <= 3) {
 						BchoiceZS01.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS01.zs_to = "上臂";
 						sjs = Math.floor(Math.random() * 2);
 						if (sjs) {
 							BchoiceZS01.zs_torl = "l";
@@ -2615,16 +3112,124 @@ function BzsHouxuanBuwei(zsname, a) {
 					}
 					break;
 				case 2:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS02.zs_frome = "shoul";
+					} else {
+						BchoiceZS02.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS02.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS02.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS02.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS02.zs_to = "上臂";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					}
 					break;
 				case 3:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS03.zs_frome = "shoul";
+					} else {
+						BchoiceZS03.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS03.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS03.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS03.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS03.zs_to = "上臂";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					}
 					break;
 				case 4:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS04.zs_frome = "shoul";
+					} else {
+						BchoiceZS04.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS04.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS04.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS04.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS04.zs_to = "上臂";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					}
 					break;
 				case 5:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS05.zs_frome = "shoul";
+					} else {
+						BchoiceZS05.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 4);
+					if (sjs <= 0) {
+						BchoiceZS05.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS05.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS05.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS05.zs_to = "上臂";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					}
 					break;
 			}
 			break;
@@ -2638,34 +3243,78 @@ function BzsHouxuanBuwei(zsname, a) {
 					} else {
 						BchoiceZS01.zs_frome = "shour";
 					}
-					sjs = Math.floor(Math.random() * 5);
+					sjs = Math.floor(Math.random() * 3);
 					if (sjs <= 0) {
 						BchoiceZS01.zs_to = "头部";
 					} else if (sjs <= 1) {
 						BchoiceZS01.zs_to = "胸部";
 					} else if (sjs <= 2) {
 						BchoiceZS01.zs_to = "腹部";
-					} else if (sjs <= 3) {
-						BchoiceZS01.zs_to = "肩关节";
-						sjs = Math.floor(Math.random() * 2);
-						if (sjs) {
-							BchoiceZS01.zs_torl = "l";
-						} else {
-							BchoiceZS01.zs_torl = "r";
-						}
 					}
 					break;
 				case 2:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS02.zs_frome = "shoul";
+					} else {
+						BchoiceZS02.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 3);
+					if (sjs <= 0) {
+						BchoiceZS02.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS02.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS02.zs_to = "腹部";
+					}
 					break;
 				case 3:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS03.zs_frome = "shoul";
+					} else {
+						BchoiceZS03.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 3);
+					if (sjs <= 0) {
+						BchoiceZS03.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS03.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS03.zs_to = "腹部";
+					}
 					break;
 				case 4:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS04.zs_frome = "shoul";
+					} else {
+						BchoiceZS04.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 3);
+					if (sjs <= 0) {
+						BchoiceZS04.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS04.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS04.zs_to = "腹部";
+					}
 					break;
 				case 5:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS05.zs_frome = "shoul";
+					} else {
+						BchoiceZS05.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 3);
+					if (sjs <= 0) {
+						BchoiceZS05.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS05.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS05.zs_to = "腹部";
+					}
 					break;
 			}
 			break;
@@ -2679,7 +3328,7 @@ function BzsHouxuanBuwei(zsname, a) {
 					} else {
 						BchoiceZS01.zs_frome = "shour";
 					}
-					sjs = Math.floor(Math.random() * 5);
+					sjs = Math.floor(Math.random() * 6);
 					if (sjs <= 0) {
 						BchoiceZS01.zs_to = "头部";
 					} else if (sjs <= 1) {
@@ -2687,7 +3336,23 @@ function BzsHouxuanBuwei(zsname, a) {
 					} else if (sjs <= 2) {
 						BchoiceZS01.zs_to = "腹部";
 					} else if (sjs <= 3) {
-						BchoiceZS01.zs_to = "肩关节";
+						BchoiceZS01.zs_to = "大腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					} else if (sjs <= 4) {
+						BchoiceZS01.zs_to = "小腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					} else if (sjs <= 5) {
+						BchoiceZS01.zs_to = "膝关节";
 						sjs = Math.floor(Math.random() * 2);
 						if (sjs) {
 							BchoiceZS01.zs_torl = "l";
@@ -2697,16 +3362,164 @@ function BzsHouxuanBuwei(zsname, a) {
 					}
 					break;
 				case 2:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS02.zs_frome = "shoul";
+					} else {
+						BchoiceZS02.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 6);
+					if (sjs <= 0) {
+						BchoiceZS02.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS02.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS02.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS02.zs_to = "大腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					} else if (sjs <= 4) {
+						BchoiceZS02.zs_to = "小腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					} else if (sjs <= 5) {
+						BchoiceZS02.zs_to = "膝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					}
 					break;
 				case 3:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS03.zs_frome = "shoul";
+					} else {
+						BchoiceZS03.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 6);
+					if (sjs <= 0) {
+						BchoiceZS03.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS03.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS03.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS03.zs_to = "大腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					} else if (sjs <= 4) {
+						BchoiceZS03.zs_to = "小腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					} else if (sjs <= 5) {
+						BchoiceZS03.zs_to = "膝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					}
 					break;
 				case 4:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS04.zs_frome = "shoul";
+					} else {
+						BchoiceZS04.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 6);
+					if (sjs <= 0) {
+						BchoiceZS04.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS04.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS04.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS04.zs_to = "大腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					} else if (sjs <= 4) {
+						BchoiceZS04.zs_to = "小腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					} else if (sjs <= 5) {
+						BchoiceZS04.zs_to = "膝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					}
 					break;
 				case 5:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS05.zs_frome = "shoul";
+					} else {
+						BchoiceZS05.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 6);
+					if (sjs <= 0) {
+						BchoiceZS05.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS05.zs_to = "胸部";
+					} else if (sjs <= 2) {
+						BchoiceZS05.zs_to = "腹部";
+					} else if (sjs <= 3) {
+						BchoiceZS05.zs_to = "大腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					} else if (sjs <= 4) {
+						BchoiceZS05.zs_to = "小腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					} else if (sjs <= 5) {
+						BchoiceZS05.zs_to = "膝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					}
 					break;
 			}
 			break;
@@ -2720,15 +3533,77 @@ function BzsHouxuanBuwei(zsname, a) {
 					} else {
 						BchoiceZS01.zs_frome = "shour";
 					}
-					sjs = Math.floor(Math.random() * 5);
+					sjs = Math.floor(Math.random() * 10);
 					if (sjs <= 0) {
 						BchoiceZS01.zs_to = "头部";
 					} else if (sjs <= 1) {
-						BchoiceZS01.zs_to = "胸部";
+						BchoiceZS01.zs_to = "腰部";
 					} else if (sjs <= 2) {
-						BchoiceZS01.zs_to = "腹部";
-					} else if (sjs <= 3) {
 						BchoiceZS01.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS01.zs_to = "上臂";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					} else if (sjs <= 4) {
+						BchoiceZS01.zs_to = "前臂";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					} else if (sjs <= 5) {
+						BchoiceZS01.zs_to = "手肘";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					} else if (sjs <= 6) {
+						BchoiceZS01.zs_to = "手腕";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					} else if (sjs <= 7) {
+						BchoiceZS01.zs_to = "大腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					} else if (sjs <= 8) {
+						BchoiceZS01.zs_to = "小腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					} else if (sjs <= 9) {
+						BchoiceZS01.zs_to = "膝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS01.zs_torl = "l";
+						} else {
+							BchoiceZS01.zs_torl = "r";
+						}
+					} else if (sjs <= 10) {
+						BchoiceZS01.zs_to = "踝关节";
 						sjs = Math.floor(Math.random() * 2);
 						if (sjs) {
 							BchoiceZS01.zs_torl = "l";
@@ -2738,16 +3613,348 @@ function BzsHouxuanBuwei(zsname, a) {
 					}
 					break;
 				case 2:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS02.zs_frome = "shoul";
+					} else {
+						BchoiceZS02.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 10);
+					if (sjs <= 0) {
+						BchoiceZS02.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS02.zs_to = "腰部";
+					} else if (sjs <= 2) {
+						BchoiceZS02.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS02.zs_to = "上臂";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					} else if (sjs <= 4) {
+						BchoiceZS02.zs_to = "前臂";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					} else if (sjs <= 5) {
+						BchoiceZS02.zs_to = "手肘";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					} else if (sjs <= 6) {
+						BchoiceZS02.zs_to = "手腕";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					} else if (sjs <= 7) {
+						BchoiceZS02.zs_to = "大腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					} else if (sjs <= 8) {
+						BchoiceZS02.zs_to = "小腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					} else if (sjs <= 9) {
+						BchoiceZS02.zs_to = "膝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					} else if (sjs <= 10) {
+						BchoiceZS02.zs_to = "踝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS02.zs_torl = "l";
+						} else {
+							BchoiceZS02.zs_torl = "r";
+						}
+					}
 					break;
 				case 3:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS03.zs_frome = "shoul";
+					} else {
+						BchoiceZS03.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 10);
+					if (sjs <= 0) {
+						BchoiceZS03.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS03.zs_to = "腰部";
+					} else if (sjs <= 2) {
+						BchoiceZS03.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS03.zs_to = "上臂";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					} else if (sjs <= 4) {
+						BchoiceZS03.zs_to = "前臂";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					} else if (sjs <= 5) {
+						BchoiceZS03.zs_to = "手肘";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					} else if (sjs <= 6) {
+						BchoiceZS03.zs_to = "手腕";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					} else if (sjs <= 7) {
+						BchoiceZS03.zs_to = "大腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					} else if (sjs <= 8) {
+						BchoiceZS03.zs_to = "小腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					} else if (sjs <= 9) {
+						BchoiceZS03.zs_to = "膝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					} else if (sjs <= 10) {
+						BchoiceZS03.zs_to = "踝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS03.zs_torl = "l";
+						} else {
+							BchoiceZS03.zs_torl = "r";
+						}
+					}
 					break;
 				case 4:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS04.zs_frome = "shoul";
+					} else {
+						BchoiceZS04.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 10);
+					if (sjs <= 0) {
+						BchoiceZS04.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS04.zs_to = "腰部";
+					} else if (sjs <= 2) {
+						BchoiceZS04.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS04.zs_to = "上臂";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					} else if (sjs <= 4) {
+						BchoiceZS04.zs_to = "前臂";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					} else if (sjs <= 5) {
+						BchoiceZS04.zs_to = "手肘";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					} else if (sjs <= 6) {
+						BchoiceZS04.zs_to = "手腕";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					} else if (sjs <= 7) {
+						BchoiceZS04.zs_to = "大腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					} else if (sjs <= 8) {
+						BchoiceZS04.zs_to = "小腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					} else if (sjs <= 9) {
+						BchoiceZS04.zs_to = "膝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					} else if (sjs <= 10) {
+						BchoiceZS04.zs_to = "踝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS04.zs_torl = "l";
+						} else {
+							BchoiceZS04.zs_torl = "r";
+						}
+					}
 					break;
 				case 5:
-
+					sjs = Math.floor(Math.random() * 2);
+					if (sjs) {
+						BchoiceZS05.zs_frome = "shoul";
+					} else {
+						BchoiceZS05.zs_frome = "shour";
+					}
+					sjs = Math.floor(Math.random() * 10);
+					if (sjs <= 0) {
+						BchoiceZS05.zs_to = "头部";
+					} else if (sjs <= 1) {
+						BchoiceZS05.zs_to = "腰部";
+					} else if (sjs <= 2) {
+						BchoiceZS05.zs_to = "肩关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					} else if (sjs <= 3) {
+						BchoiceZS05.zs_to = "上臂";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					} else if (sjs <= 4) {
+						BchoiceZS05.zs_to = "前臂";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					} else if (sjs <= 5) {
+						BchoiceZS05.zs_to = "手肘";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					} else if (sjs <= 6) {
+						BchoiceZS05.zs_to = "手腕";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					} else if (sjs <= 7) {
+						BchoiceZS05.zs_to = "大腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					} else if (sjs <= 8) {
+						BchoiceZS05.zs_to = "小腿";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					} else if (sjs <= 9) {
+						BchoiceZS05.zs_to = "膝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					} else if (sjs <= 10) {
+						BchoiceZS05.zs_to = "踝关节";
+						sjs = Math.floor(Math.random() * 2);
+						if (sjs) {
+							BchoiceZS05.zs_torl = "l";
+						} else {
+							BchoiceZS05.zs_torl = "r";
+						}
+					}
 					break;
 			}
 			break;

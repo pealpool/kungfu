@@ -2330,10 +2330,12 @@ $(document).ready(function () {
 			sxTanChu_B = 0;
 		}
 	});
-
+	
+	//换人
 	$("#huanrenButtom").click(function () {
 		DFshuxingchushihua();
 		Shuxingshuaxin_B();
+		DifangshujiZS();
 	});
 
 
