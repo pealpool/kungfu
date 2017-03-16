@@ -1344,6 +1344,13 @@ $(document).ready(function () {
 
 	//完成招式选择
 	$("#choicezhaoshiButtom").click(function () {
+		//挑选发动的人
+		window.HadChoice_Who = "";
+		//挑选发动的招式
+		window.HadChoice_What = "";
+		//先发动招式的后摇时间
+		window.HadChoice_ATimeH = 0;
+		
 		var i = 1;
 		//slice(6, -2)从第6个后截取，到倒数第3个。
 		//alert($(this).find(".zhaoshiLB3.zhaoshiLBG").html());
@@ -1634,6 +1641,7 @@ $(document).ready(function () {
 		}, 300);
 		izsxx = 1;
 		DifangshujiZS();
+		fighting();
 	});
 
 	//选择攻击部位限制左右按钮
@@ -2335,7 +2343,7 @@ $(document).ready(function () {
 	$("#huanrenButtom").click(function () {
 		DFshuxingchushihua();
 		Shuxingshuaxin_B();
-		DifangshujiZS();
+		//DifangshujiZS();
 	});
 
 

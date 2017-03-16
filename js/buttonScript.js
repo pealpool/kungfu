@@ -3962,3 +3962,18 @@ function BzsHouxuanBuwei(zsname, a) {
 			break;
 	}
 }
+
+//选谁先发招，发啥招
+function ChoiceFirst() {
+	switch (HadChoice_Who) {
+		case "A":
+			break;
+		case "B":
+			break;
+	}
+}
+
+//战斗总框架
+function fighting() {
+	ChoiceFirst();
+}
