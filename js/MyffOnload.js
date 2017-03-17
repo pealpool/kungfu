@@ -699,7 +699,7 @@ $(document).ready(function () {
 			$(this).slideUp("fast", function () { //slide up
 				$(this).remove(); //then remove from the DOM
 				i_yixuanZS--;
-				jiahuitime(AchoiceZS01.zs_name);
+				jiahuitime(AchoiceZS[0].zs_name);
 				$("#choiceRemove02").attr("id", "choiceRemove01");
 				$("#choiceRemove03").attr("id", "choiceRemove02");
 				$("#choiceRemove04").attr("id", "choiceRemove03");
@@ -708,10 +708,10 @@ $(document).ready(function () {
 				$("#choiceXiaLa03").attr("id", "choiceXiaLa02");
 				$("#choiceXiaLa04").attr("id", "choiceXiaLa03");
 				$("#choiceXiaLa05").attr("id", "choiceXiaLa04");
-				AchoiceZS01.zs_name = AchoiceZS02.zs_name;
-				AchoiceZS02.zs_name = AchoiceZS03.zs_name;
-				AchoiceZS03.zs_name = AchoiceZS04.zs_name;
-				AchoiceZS04.zs_name = AchoiceZS05.zs_name;
+				AchoiceZS[0].zs_name = AchoiceZS[1].zs_name;
+				AchoiceZS[1].zs_name = AchoiceZS[2].zs_name;
+				AchoiceZS[2].zs_name = AchoiceZS[3].zs_name;
+				AchoiceZS[3].zs_name = AchoiceZS[4].zs_name;
 				shanchuZShou();
 			});
 		});
@@ -722,16 +722,16 @@ $(document).ready(function () {
 			$(this).slideUp("fast", function () { //slide up
 				$(this).remove(); //then remove from the DOM
 				i_yixuanZS--;
-				jiahuitime(AchoiceZS02.zs_name);
+				jiahuitime(AchoiceZS[1].zs_name);
 				$("#choiceRemove03").attr("id", "choiceRemove02");
 				$("#choiceRemove04").attr("id", "choiceRemove03");
 				$("#choiceRemove05").attr("id", "choiceRemove04");
 				$("#choiceXiaLa03").attr("id", "choiceXiaLa02");
 				$("#choiceXiaLa04").attr("id", "choiceXiaLa03");
 				$("#choiceXiaLa05").attr("id", "choiceXiaLa04");
-				AchoiceZS02.zs_name = AchoiceZS03.zs_name;
-				AchoiceZS03.zs_name = AchoiceZS04.zs_name;
-				AchoiceZS04.zs_name = AchoiceZS05.zs_name;
+				AchoiceZS[1].zs_name = AchoiceZS[2].zs_name;
+				AchoiceZS[2].zs_name = AchoiceZS[3].zs_name;
+				AchoiceZS[3].zs_name = AchoiceZS[4].zs_name;
 				shanchuZShou();
 			});
 		});
@@ -742,13 +742,13 @@ $(document).ready(function () {
 			$(this).slideUp("fast", function () { //slide up
 				$(this).remove(); //then remove from the DOM
 				i_yixuanZS--;
-				jiahuitime(AchoiceZS03.zs_name);
+				jiahuitime(AchoiceZS[2].zs_name);
 				$("#choiceRemove04").attr("id", "choiceRemove03");
 				$("#choiceRemove05").attr("id", "choiceRemove04");
 				$("#choiceXiaLa04").attr("id", "choiceXiaLa03");
 				$("#choiceXiaLa05").attr("id", "choiceXiaLa04");
-				AchoiceZS03.zs_name = AchoiceZS04.zs_name;
-				AchoiceZS04.zs_name = AchoiceZS05.zs_name;
+				AchoiceZS[2].zs_name = AchoiceZS[3].zs_name;
+				AchoiceZS[3].zs_name = AchoiceZS[4].zs_name;
 				shanchuZShou();
 			});
 		});
@@ -759,10 +759,10 @@ $(document).ready(function () {
 			$(this).slideUp("fast", function () { //slide up
 				$(this).remove(); //then remove from the DOM
 				i_yixuanZS--;
-				jiahuitime(AchoiceZS04.zs_name);
+				jiahuitime(AchoiceZS[3].zs_name);
 				$("#choiceRemove05").attr("id", "choiceRemove04");
 				$("#choiceXiaLa05").attr("id", "choiceXiaLa04");
-				AchoiceZS04.zs_name = AchoiceZS05.zs_name;
+				AchoiceZS[3].zs_name = AchoiceZS[4].zs_name;
 				shanchuZShou();
 			});
 		});
@@ -773,7 +773,7 @@ $(document).ready(function () {
 			$(this).slideUp("fast", function () { //slide up
 				$(this).remove(); //then remove from the DOM
 				i_yixuanZS--;
-				jiahuitime(AchoiceZS05.zs_name);
+				jiahuitime(AchoiceZS[4].zs_name);
 				shanchuZShou();
 			});
 		});
@@ -793,23 +793,7 @@ $(document).ready(function () {
 			$("#AttN1qq0" + i_tj_panda).html(Math.round(tj_panda.AttN));
 			$("#ATimeAll1qq0" + i_tj_panda).html((tj_panda.ATimeQ + tj_panda.ATime).toFixed(1));
 
-			switch (i_yixuanZS) {
-				case 1:
-					AchoiceZS01.zs_name = "tj_panda";
-					break;
-				case 2:
-					AchoiceZS02.zs_name = "tj_panda";
-					break;
-				case 3:
-					AchoiceZS03.zs_name = "tj_panda";
-					break;
-				case 4:
-					AchoiceZS04.zs_name = "tj_panda";
-					break;
-				case 5:
-					AchoiceZS05.zs_name = "tj_panda";
-					break;
-			}
+			choiceZS[i_yixuanZS - 1].zs_name = "tj_panda";
 			i_tj_panda++;
 			yxZStime = yxZStime - tj_panda.ATimeQ - tj_panda.ATime;
 			tianjiaZShou();
@@ -828,23 +812,7 @@ $(document).ready(function () {
 			$("#AttN2qq0" + i_tj_tuishou).html(Math.round(tj_tuishou.AttN));
 			$("#ATimeAll2qq0" + i_tj_tuishou).html((tj_tuishou.ATimeQ + tj_tuishou.ATime).toFixed(1));
 
-			switch (i_yixuanZS) {
-				case 1:
-					AchoiceZS01.zs_name = "tj_tuishou";
-					break;
-				case 2:
-					AchoiceZS02.zs_name = "tj_tuishou";
-					break;
-				case 3:
-					AchoiceZS03.zs_name = "tj_tuishou";
-					break;
-				case 4:
-					AchoiceZS04.zs_name = "tj_tuishou";
-					break;
-				case 5:
-					AchoiceZS05.zs_name = "tj_tuishou";
-					break;
-			}
+			AchoiceZS[i_yixuanZS - 1].zs_name = "tj_tuishou";
 			i_tj_tuishou++;
 			yxZStime = yxZStime - tj_tuishou.ATimeQ - tj_tuishou.ATime;
 			tianjiaZShou();
@@ -863,23 +831,7 @@ $(document).ready(function () {
 			$("#AttN3qq0" + i_tj_qingna).html(Math.round(tj_qingna.AttN));
 			$("#ATimeAll3qq0" + i_tj_qingna).html((tj_qingna.ATimeQ + tj_qingna.ATime).toFixed(1));
 
-			switch (i_yixuanZS) {
-				case 1:
-					AchoiceZS01.zs_name = "tj_qingna";
-					break;
-				case 2:
-					AchoiceZS02.zs_name = "tj_qingna";
-					break;
-				case 3:
-					AchoiceZS03.zs_name = "tj_qingna";
-					break;
-				case 4:
-					AchoiceZS04.zs_name = "tj_qingna";
-					break;
-				case 5:
-					AchoiceZS05.zs_name = "tj_qingna";
-					break;
-			}
+			AchoiceZS[i_yixuanZS - 1].zs_name = "tj_qingna";
 			i_tj_qingna++;
 			yxZStime = yxZStime - tj_qingna.ATimeQ - tj_qingna.ATime;
 			tianjiaZShou();
@@ -898,23 +850,7 @@ $(document).ready(function () {
 			$("#AttN4qq0" + i_tj_shuangfong).html(Math.round(tj_shuangfong.AttN));
 			$("#ATimeAll4qq0" + i_tj_shuangfong).html((tj_shuangfong.ATimeQ + tj_shuangfong.ATime).toFixed(1));
 
-			switch (i_yixuanZS) {
-				case 1:
-					AchoiceZS01.zs_name = "tj_shuangfong";
-					break;
-				case 2:
-					AchoiceZS02.zs_name = "tj_shuangfong";
-					break;
-				case 3:
-					AchoiceZS03.zs_name = "tj_shuangfong";
-					break;
-				case 4:
-					AchoiceZS04.zs_name = "tj_shuangfong";
-					break;
-				case 5:
-					AchoiceZS05.zs_name = "tj_shuangfong";
-					break;
-			}
+			AchoiceZS[i_yixuanZS - 1].zs_name = "tj_shuangfong";
 			i_tj_shuangfong++;
 			yxZStime = yxZStime - tj_shuangfong.ATimeQ - tj_shuangfong.ATime;
 			tianjiaZShou();
@@ -933,23 +869,7 @@ $(document).ready(function () {
 			$("#AttN5qq0" + i_tj_zhoudicui).html(Math.round(tj_zhoudicui.AttN));
 			$("#ATimeAll5qq0" + i_tj_zhoudicui).html((tj_zhoudicui.ATimeQ + tj_zhoudicui.ATime).toFixed(1));
 
-			switch (i_yixuanZS) {
-				case 1:
-					AchoiceZS01.zs_name = "tj_zhoudicui";
-					break;
-				case 2:
-					AchoiceZS02.zs_name = "tj_zhoudicui";
-					break;
-				case 3:
-					AchoiceZS03.zs_name = "tj_zhoudicui";
-					break;
-				case 4:
-					AchoiceZS04.zs_name = "tj_zhoudicui";
-					break;
-				case 5:
-					AchoiceZS05.zs_name = "tj_zhoudicui";
-					break;
-			}
+			AchoiceZS[i_yixuanZS - 1].zs_name = "tj_zhoudicui";
 			i_tj_zhoudicui++;
 			yxZStime = yxZStime - tj_zhoudicui.ATimeQ - tj_zhoudicui.ATime;
 			tianjiaZShou();
@@ -968,23 +888,7 @@ $(document).ready(function () {
 			$("#AttN6qq0" + i_tj_paocui).html(Math.round(tj_paocui.AttN));
 			$("#ATimeAll6qq0" + i_tj_paocui).html((tj_paocui.ATimeQ + tj_paocui.ATime).toFixed(1));
 
-			switch (i_yixuanZS) {
-				case 1:
-					AchoiceZS01.zs_name = "tj_paocui";
-					break;
-				case 2:
-					AchoiceZS02.zs_name = "tj_paocui";
-					break;
-				case 3:
-					AchoiceZS03.zs_name = "tj_paocui";
-					break;
-				case 4:
-					AchoiceZS04.zs_name = "tj_paocui";
-					break;
-				case 5:
-					AchoiceZS05.zs_name = "tj_paocui";
-					break;
-			}
+			AchoiceZS[i_yixuanZS - 1].zs_name = "tj_paocui";
 			i_tj_paocui++;
 			yxZStime = yxZStime - tj_paocui.ATimeQ - tj_paocui.ATime;
 			tianjiaZShou();
@@ -1003,23 +907,7 @@ $(document).ready(function () {
 			$("#AttN7qq0" + i_tj_yuanyangtui).html(Math.round(tj_yuanyangtui.AttN));
 			$("#ATimeAll7qq0" + i_tj_yuanyangtui).html((tj_yuanyangtui.ATimeQ + tj_yuanyangtui.ATime).toFixed(1));
 
-			switch (i_yixuanZS) {
-				case 1:
-					AchoiceZS01.zs_name = "tj_yuanyangtui";
-					break;
-				case 2:
-					AchoiceZS02.zs_name = "tj_yuanyangtui";
-					break;
-				case 3:
-					AchoiceZS03.zs_name = "tj_yuanyangtui";
-					break;
-				case 4:
-					AchoiceZS04.zs_name = "tj_yuanyangtui";
-					break;
-				case 5:
-					AchoiceZS05.zs_name = "tj_yuanyangtui";
-					break;
-			}
+			AchoiceZS[i_yixuanZS - 1].zs_name = "tj_yuanyangtui";
 			i_tj_yuanyangtui++;
 			yxZStime = yxZStime - tj_yuanyangtui.ATimeQ - tj_yuanyangtui.ATime;
 			tianjiaZShou();
@@ -1038,23 +926,7 @@ $(document).ready(function () {
 			$("#AttN8qq0" + i_tj_banshuai).html(Math.round(tj_banshuai.AttN));
 			$("#ATimeAll8qq0" + i_tj_banshuai).html((tj_banshuai.ATimeQ + tj_banshuai.ATime).toFixed(1));
 
-			switch (i_yixuanZS) {
-				case 1:
-					AchoiceZS01.zs_name = "tj_banshuai";
-					break;
-				case 2:
-					AchoiceZS02.zs_name = "tj_banshuai";
-					break;
-				case 3:
-					AchoiceZS03.zs_name = "tj_banshuai";
-					break;
-				case 4:
-					AchoiceZS04.zs_name = "tj_banshuai";
-					break;
-				case 5:
-					AchoiceZS05.zs_name = "tj_banshuai";
-					break;
-			}
+			AchoiceZS[i_yixuanZS - 1].zs_name = "tj_banshuai";
 			i_tj_banshuai++;
 			yxZStime = yxZStime - tj_banshuai.ATimeQ - tj_banshuai.ATime;
 			tianjiaZShou();
@@ -1075,23 +947,7 @@ $(document).ready(function () {
 			$("#AttN1qq0" + i_tq_zhiquan).html(Math.round(tq_zhiquan.AttN));
 			$("#ATimeAll1qq0" + i_tq_zhiquan).html((tq_zhiquan.ATimeQ + tq_zhiquan.ATime).toFixed(1));
 
-			switch (i_yixuanZS) {
-				case 1:
-					AchoiceZS01.zs_name = "tq_zhiquan";
-					break;
-				case 2:
-					AchoiceZS02.zs_name = "tq_zhiquan";
-					break;
-				case 3:
-					AchoiceZS03.zs_name = "tq_zhiquan";
-					break;
-				case 4:
-					AchoiceZS04.zs_name = "tq_zhiquan";
-					break;
-				case 5:
-					AchoiceZS05.zs_name = "tq_zhiquan";
-					break;
-			}
+			AchoiceZS[i_yixuanZS - 1].zs_name = "tq_zhiquan";
 			i_tq_zhiquan++;
 			yxZStime = yxZStime - tq_zhiquan.ATimeQ - tq_zhiquan.ATime;
 			tianjiaZShou();
@@ -1110,23 +966,7 @@ $(document).ready(function () {
 			$("#AttN2qq0" + i_tq_lrgouquan).html(Math.round(tq_lrgouquan.AttN));
 			$("#ATimeAll2qq0" + i_tq_lrgouquan).html((tq_lrgouquan.ATimeQ + tq_lrgouquan.ATime).toFixed(1));
 
-			switch (i_yixuanZS) {
-				case 1:
-					AchoiceZS01.zs_name = "tq_lrgouquan";
-					break;
-				case 2:
-					AchoiceZS02.zs_name = "tq_lrgouquan";
-					break;
-				case 3:
-					AchoiceZS03.zs_name = "tq_lrgouquan";
-					break;
-				case 4:
-					AchoiceZS04.zs_name = "tq_lrgouquan";
-					break;
-				case 5:
-					AchoiceZS05.zs_name = "tq_lrgouquan";
-					break;
-			}
+			AchoiceZS[i_yixuanZS - 1].zs_name = "tq_lrgouquan";
 			i_tq_lrgouquan++;
 			yxZStime = yxZStime - tq_lrgouquan.ATimeQ - tq_lrgouquan.ATime;
 			tianjiaZShou();
@@ -1145,23 +985,7 @@ $(document).ready(function () {
 			$("#AttN3qq0" + i_tq_sgouquan).html(Math.round(tq_sgouquan.AttN));
 			$("#ATimeAll3qq0" + i_tq_sgouquan).html((tq_sgouquan.ATimeQ + tq_sgouquan.ATime).toFixed(1));
 
-			switch (i_yixuanZS) {
-				case 1:
-					AchoiceZS01.zs_name = "tq_sgouquan";
-					break;
-				case 2:
-					AchoiceZS02.zs_name = "tq_sgouquan";
-					break;
-				case 3:
-					AchoiceZS03.zs_name = "tq_sgouquan";
-					break;
-				case 4:
-					AchoiceZS04.zs_name = "tq_sgouquan";
-					break;
-				case 5:
-					AchoiceZS05.zs_name = "tq_sgouquan";
-					break;
-			}
+			AchoiceZS[i_yixuanZS - 1].zs_name = "tq_sgouquan";
 			i_tq_sgouquan++;
 			yxZStime = yxZStime - tq_sgouquan.ATimeQ - tq_sgouquan.ATime;
 			tianjiaZShou();
@@ -1180,23 +1004,7 @@ $(document).ready(function () {
 			$("#AttN4qq0" + i_tq_zhouji).html(Math.round(tq_zhouji.AttN));
 			$("#ATimeAll4qq0" + i_tq_zhouji).html((tq_zhouji.ATimeQ + tq_zhouji.ATime).toFixed(1));
 
-			switch (i_yixuanZS) {
-				case 1:
-					AchoiceZS01.zs_name = "tq_zhouji";
-					break;
-				case 2:
-					AchoiceZS02.zs_name = "tq_zhouji";
-					break;
-				case 3:
-					AchoiceZS03.zs_name = "tq_zhouji";
-					break;
-				case 4:
-					AchoiceZS04.zs_name = "tq_zhouji";
-					break;
-				case 5:
-					AchoiceZS05.zs_name = "tq_zhouji";
-					break;
-			}
+			AchoiceZS[i_yixuanZS - 1].zs_name = "tq_zhouji";
 			i_tq_zhouji++;
 			yxZStime = yxZStime - tq_zhouji.ATimeQ - tq_zhouji.ATime;
 			tianjiaZShou();
@@ -1215,23 +1023,7 @@ $(document).ready(function () {
 			$("#AttN5qq0" + i_tq_xizhuang).html(Math.round(tq_xizhuang.AttN));
 			$("#ATimeAll5qq0" + i_tq_xizhuang).html((tq_xizhuang.ATimeQ + tq_xizhuang.ATime).toFixed(1));
 
-			switch (i_yixuanZS) {
-				case 1:
-					AchoiceZS01.zs_name = "tq_xizhuang";
-					break;
-				case 2:
-					AchoiceZS02.zs_name = "tq_xizhuang";
-					break;
-				case 3:
-					AchoiceZS03.zs_name = "tq_xizhuang";
-					break;
-				case 4:
-					AchoiceZS04.zs_name = "tq_xizhuang";
-					break;
-				case 5:
-					AchoiceZS05.zs_name = "tq_xizhuang";
-					break;
-			}
+			AchoiceZS[i_yixuanZS - 1].zs_name = "tq_xizhuang";
 			i_tq_xizhuang++;
 			yxZStime = yxZStime - tq_xizhuang.ATimeQ - tq_xizhuang.ATime;
 			tianjiaZShou();
@@ -1250,23 +1042,7 @@ $(document).ready(function () {
 			$("#AttN6qq0" + i_tq_dengtui).html(Math.round(tq_dengtui.AttN));
 			$("#ATimeAll6qq0" + i_tq_dengtui).html((tq_dengtui.ATimeQ + tq_dengtui.ATime).toFixed(1));
 
-			switch (i_yixuanZS) {
-				case 1:
-					AchoiceZS01.zs_name = "tq_dengtui";
-					break;
-				case 2:
-					AchoiceZS02.zs_name = "tq_dengtui";
-					break;
-				case 3:
-					AchoiceZS03.zs_name = "tq_dengtui";
-					break;
-				case 4:
-					AchoiceZS04.zs_name = "tq_dengtui";
-					break;
-				case 5:
-					AchoiceZS05.zs_name = "tq_dengtui";
-					break;
-			}
+			AchoiceZS[i_yixuanZS - 1].zs_name = "tq_dengtui";
 			i_tq_dengtui++;
 			yxZStime = yxZStime - tq_dengtui.ATimeQ - tq_dengtui.ATime;
 			tianjiaZShou();
@@ -1285,35 +1061,12 @@ $(document).ready(function () {
 			$("#AttN7qq0" + i_tq_shaotui).html(Math.round(tq_shaotui.AttN));
 			$("#ATimeAll7qq0" + i_tq_shaotui).html((tq_shaotui.ATimeQ + tq_shaotui.ATime).toFixed(1));
 
-			switch (i_yixuanZS) {
-				case 1:
-					AchoiceZS01.zs_name = "tq_shaotui";
-					break;
-				case 2:
-					AchoiceZS02.zs_name = "tq_shaotui";
-					break;
-				case 3:
-					AchoiceZS03.zs_name = "tq_shaotui";
-					break;
-				case 4:
-					AchoiceZS04.zs_name = "tq_shaotui";
-					break;
-				case 5:
-					AchoiceZS05.zs_name = "tq_shaotui";
-					break;
-			}
+			AchoiceZS[i_yixuanZS - 1].zs_name = "tq_shaotui";
 			i_tq_shaotui++;
 			yxZStime = yxZStime - tq_shaotui.ATimeQ - tq_shaotui.ATime;
 			tianjiaZShou();
 		}
 	});
-
-
-
-
-
-
-
 
 
 	//手动排序移动
@@ -1350,8 +1103,8 @@ $(document).ready(function () {
 		window.HadChoice_What = "";
 		//先发动招式的后摇时间
 		window.HadChoice_ATimeH = 0;
-		
-		var i = 1;
+
+		var i = 0;
 		//slice(6, -2)从第6个后截取，到倒数第3个。
 		//alert($(this).find(".zhaoshiLB3.zhaoshiLBG").html());
 		var gz00 = /\D*/;
@@ -1360,281 +1113,61 @@ $(document).ready(function () {
 		var gz03 = new RegExp("肘");
 		var gz04 = new RegExp("膝");
 		$("#chicoZhaoShiTianjiaK").children().each(function () {
-			switch (i) {
-				case 1:
-					AchoiceZS01.zs_name = gz00.exec(($(this).attr("id")).slice(6, -2));
-					if (gz01.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-								AchoiceZS01.zs_frome = "shoul";
-							} else {
-								AchoiceZS01.zs_frome = "shour";
-							}
-						} else {
-							AchoiceZS01.zs_frome = "shou"; //双手
-						}
-					} else if (gz02.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-								AchoiceZS01.zs_frome = "jiaol";
-							} else {
-								AchoiceZS01.zs_frome = "jiaor";
-							}
-						} else {
-							AchoiceZS01.zs_frome = "jiao";
-						}
-					} else if (gz03.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-								AchoiceZS01.zs_frome = "zhoul";
-							} else {
-								AchoiceZS01.zs_frome = "zhour";
-							}
-						} else {
-							AchoiceZS01.zs_frome = "zhou";
-						}
-					} else if (gz04.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-								AchoiceZS01.zs_frome = "xil";
-							} else {
-								AchoiceZS01.zs_frome = "xir";
-							}
-						} else {
-							AchoiceZS01.zs_frome = "xi";
-						}
-					}
-					AchoiceZS01.zs_to = $(this).find("select").val();
-					if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-						if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-							AchoiceZS01.zs_torl = "l";
-						} else {
-							AchoiceZS01.zs_torl = "r";
-						}
+			AchoiceZS[i].zs_name = gz00.exec(($(this).attr("id")).slice(6, -2));
+			if (gz01.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+				if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+					if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+						AchoiceZS[i].zs_frome = "shoul";
 					} else {
-						AchoiceZS01.zs_torl = "b";
+						AchoiceZS[i].zs_frome = "shour";
 					}
-					break;
-				case 2:
-					AchoiceZS02.zs_name = gz00.exec(($(this).attr("id")).slice(6, -2));
-					if (gz01.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-								AchoiceZS02.zs_frome = "shoul";
-							} else {
-								AchoiceZS02.zs_frome = "shour";
-							}
-						} else {
-							AchoiceZS02.zs_frome = "shou"; //双手
-						}
-					} else if (gz02.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-								AchoiceZS02.zs_frome = "jiaol";
-							} else {
-								AchoiceZS02.zs_frome = "jiaor";
-							}
-						} else {
-							AchoiceZS02.zs_frome = "jiao";
-						}
-					} else if (gz03.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-								AchoiceZS02.zs_frome = "zhoul";
-							} else {
-								AchoiceZS02.zs_frome = "zhour";
-							}
-						} else {
-							AchoiceZS02.zs_frome = "zhou";
-						}
-					} else if (gz04.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-								AchoiceZS02.zs_frome = "xil";
-							} else {
-								AchoiceZS02.zs_frome = "xir";
-							}
-						} else {
-							AchoiceZS02.zs_frome = "xi";
-						}
-					}
-					AchoiceZS02.zs_to = $(this).find("select").val();
-					if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-						if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-							AchoiceZS02.zs_torl = "l";
-						} else {
-							AchoiceZS02.zs_torl = "r";
-						}
+				} else {
+					AchoiceZS[i].zs_frome = "shou"; //双手
+				}
+			} else if (gz02.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+				if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+					if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+						AchoiceZS[i].zs_frome = "jiaol";
 					} else {
-						AchoiceZS02.zs_torl = "b";
+						AchoiceZS[i].zs_frome = "jiaor";
 					}
-					break;
-				case 3:
-					AchoiceZS03.zs_name = gz00.exec(($(this).attr("id")).slice(6, -2));
-					if (gz01.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-								AchoiceZS03.zs_frome = "shoul";
-							} else {
-								AchoiceZS03.zs_frome = "shour";
-							}
-						} else {
-							AchoiceZS03.zs_frome = "shou"; //双手
-						}
-					} else if (gz02.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-								AchoiceZS03.zs_frome = "jiaol";
-							} else {
-								AchoiceZS03.zs_frome = "jiaor";
-							}
-						} else {
-							AchoiceZS03.zs_frome = "jiao";
-						}
-					} else if (gz03.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-								AchoiceZS03.zs_frome = "zhoul";
-							} else {
-								AchoiceZS03.zs_frome = "zhour";
-							}
-						} else {
-							AchoiceZS03.zs_frome = "zhou";
-						}
-					} else if (gz04.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-								AchoiceZS03.zs_frome = "xil";
-							} else {
-								AchoiceZS03.zs_frome = "xir";
-							}
-						} else {
-							AchoiceZS03.zs_frome = "xi";
-						}
-					}
-					AchoiceZS03.zs_to = $(this).find("select").val();
-					if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-						if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-							AchoiceZS03.zs_torl = "l";
-						} else {
-							AchoiceZS03.zs_torl = "r";
-						}
+				} else {
+					AchoiceZS[i].zs_frome = "jiao";
+				}
+			} else if (gz03.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+				if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+					if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+						AchoiceZS[i].zs_frome = "zhoul";
 					} else {
-						AchoiceZS03.zs_torl = "b";
+						AchoiceZS[i].zs_frome = "zhour";
 					}
-					break;
-				case 4:
-					AchoiceZS04.zs_name = gz00.exec(($(this).attr("id")).slice(6, -2));
-					if (gz01.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-								AchoiceZS04.zs_frome = "shoul";
-							} else {
-								AchoiceZS04.zs_frome = "shour";
-							}
-						} else {
-							AchoiceZS04.zs_frome = "shou"; //双手
-						}
-					} else if (gz02.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-								AchoiceZS04.zs_frome = "jiaol";
-							} else {
-								AchoiceZS04.zs_frome = "jiaor";
-							}
-						} else {
-							AchoiceZS04.zs_frome = "jiao";
-						}
-					} else if (gz03.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-								AchoiceZS04.zs_frome = "zhoul";
-							} else {
-								AchoiceZS04.zs_frome = "zhour";
-							}
-						} else {
-							AchoiceZS04.zs_frome = "zhou";
-						}
-					} else if (gz04.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-								AchoiceZS04.zs_frome = "xil";
-							} else {
-								AchoiceZS04.zs_frome = "xir";
-							}
-						} else {
-							AchoiceZS04.zs_frome = "xi";
-						}
-					}
-					AchoiceZS04.zs_to = $(this).find("select").val();
-					if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-						if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-							AchoiceZS04.zs_torl = "l";
-						} else {
-							AchoiceZS04.zs_torl = "r";
-						}
+				} else {
+					AchoiceZS[i].zs_frome = "zhou";
+				}
+			} else if (gz04.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
+				if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+					if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+						AchoiceZS[i].zs_frome = "xil";
 					} else {
-						AchoiceZS04.zs_torl = "b";
+						AchoiceZS[i].zs_frome = "xir";
 					}
-					break;
-				case 5:
-					AchoiceZS05.zs_name = gz00.exec(($(this).attr("id")).slice(6, -2));
-					if (gz01.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-								AchoiceZS05.zs_frome = "shoul";
-							} else {
-								AchoiceZS05.zs_frome = "shour";
-							}
-						} else {
-							AchoiceZS05.zs_frome = "shou"; //双手
-						}
-					} else if (gz02.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-								AchoiceZS05.zs_frome = "jiaol";
-							} else {
-								AchoiceZS05.zs_frome = "jiaor";
-							}
-						} else {
-							AchoiceZS05.zs_frome = "jiao";
-						}
-					} else if (gz03.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-								AchoiceZS05.zs_frome = "zhoul";
-							} else {
-								AchoiceZS05.zs_frome = "zhour";
-							}
-						} else {
-							AchoiceZS05.zs_frome = "zhou";
-						}
-					} else if (gz04.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-						if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-							if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-								AchoiceZS05.zs_frome = "xil";
-							} else {
-								AchoiceZS05.zs_frome = "xir";
-							}
-						} else {
-							AchoiceZS05.zs_frome = "xi";
-						}
-					}
-					AchoiceZS05.zs_to = $(this).find("select").val();
-					if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-						if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
-							AchoiceZS05.zs_torl = "l";
-						} else {
-							AchoiceZS05.zs_torl = "r";
-						}
-					} else {
-						AchoiceZS05.zs_torl = "b";
-					}
-					break;
+				} else {
+					AchoiceZS[i].zs_frome = "xi";
+				}
+			}
+			AchoiceZS[i].zs_to = $(this).find("select").val();
+			if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+				if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+					AchoiceZS[i].zs_torl = "l";
+				} else {
+					AchoiceZS[i].zs_torl = "r";
+				}
+			} else {
+				AchoiceZS[i].zs_torl = "b";
 			}
 			i++;
 		});
-		alert(AchoiceZS01.zs_name + " " + AchoiceZS01.zs_frome + " " + AchoiceZS01.zs_to + " " + AchoiceZS01.zs_torl + "\n" + AchoiceZS02.zs_name + " " + AchoiceZS02.zs_frome + " " + AchoiceZS02.zs_to + " " + AchoiceZS02.zs_torl + "\n" + AchoiceZS03.zs_name + " " + AchoiceZS03.zs_frome + " " + AchoiceZS03.zs_to + " " + AchoiceZS03.zs_torl + "\n" + AchoiceZS04.zs_name + " " + AchoiceZS04.zs_frome + " " + AchoiceZS04.zs_to + " " + AchoiceZS04.zs_torl + "\n" + AchoiceZS05.zs_name + " " + AchoiceZS05.zs_frome + " " + AchoiceZS05.zs_to + " " + AchoiceZS05.zs_torl); //把排序的ID弹出
+		alert(AchoiceZS[0].zs_name + " " + AchoiceZS[0].zs_frome + " " + AchoiceZS[0].zs_to + " " + AchoiceZS[0].zs_torl + "\n" + AchoiceZS[1].zs_name + " " + AchoiceZS[1].zs_frome + " " + AchoiceZS[1].zs_to + " " + AchoiceZS[1].zs_torl + "\n" + AchoiceZS[2].zs_name + " " + AchoiceZS[2].zs_frome + " " + AchoiceZS[2].zs_to + " " + AchoiceZS[2].zs_torl + "\n" + AchoiceZS[3].zs_name + " " + AchoiceZS[3].zs_frome + " " + AchoiceZS[3].zs_to + " " + AchoiceZS[3].zs_torl + "\n" + AchoiceZS[4].zs_name + " " + AchoiceZS[4].zs_frome + " " + AchoiceZS[4].zs_to + " " + AchoiceZS[4].zs_torl); //把排序的ID弹出
 		$("#StartButtomYuanKuang").removeClass("yuan_blue").addClass("yuan_red");
 		$("#NeiRongchoiceZSdaK").hide("drop", {
 			direction: 'up'
@@ -2338,13 +1871,14 @@ $(document).ready(function () {
 			sxTanChu_B = 0;
 		}
 	});
-	
+
 	//换人
 	$("#huanrenButtom").click(function () {
 		DFshuxingchushihua();
 		Shuxingshuaxin_B();
 		//DifangshujiZS();
 	});
+
 
 
 

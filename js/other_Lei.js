@@ -12,12 +12,3 @@ var choiceZS = {
 		return aaa;
 	}
 };
-
-
-var bb123[0] = {
-	createNew: function(){
-		var aaa = {};
-		aaa.ffa1 = "";
-		return aaa;
-	}
-};
