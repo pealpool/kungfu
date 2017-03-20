@@ -101,7 +101,7 @@ $(document).ready(function () {
 
 
 
-	/*点数-关联数值变红*/
+	//分配点数时-关联数值变红
 	$("#DianshuDaKuang_T_Liliang").hover(
 		function () {
 			$("#DianshuguanlianXiaoKuang_gongjiJC").addClass("grayBg");
@@ -1879,6 +1879,98 @@ $(document).ready(function () {
 		//DifangshujiZS();
 	});
 
+	
+	//分配点数时-关联数值变红
+	$("#TuKuang_A_Liliang").hover(
+		function () {
+			$("#TuchuKuangX_A_gongjiJC").addClass("grayBg");
+			//$("#TuchuKuang_A_gongjiJC").addClass("redfont");
+			$("#TuchuKuangX_A_baojishanghai").addClass("grayBg");
+			//$("#TuchuKuang_A_baojishanghai").addClass("redfont");
+		},
+		function () {
+			$("#TuchuKuangX_A_gongjiJC").removeClass("grayBg");
+			//$("#TuchuKuang_A_gongjiJC").removeClass("redfont");
+			$("#TuchuKuangX_A_baojishanghai").removeClass("grayBg");
+			//$("#TuchuKuang_A_baojishanghai").removeClass("redfont");
+		}
+	);
+	$("#TuKuang_A_Minjie").hover(
+		function () {
+			$("#TuchuKuangX_A_shudu").addClass("grayBg");
+			$("#TuchuKuangX_A_s_shudu").addClass("redfont");
+			$("#TuchuKuangX_A_shanbi").addClass("grayBg");
+			$("#TuchuKuangX_A_s_shanbi").addClass("redfont");
+		},
+		function () {
+			$("#TuchuKuangX_A_shudu").removeClass("grayBg");
+			$("#TuchuKuangX_A_s_shudu").removeClass("redfont");
+			$("#TuchuKuangX_A_shanbi").removeClass("grayBg");
+			$("#TuchuKuangX_A_s_shanbi").removeClass("redfont");
+		}
+	);
+	$("#TuKuang_A_Zhili").hover(
+		function () {
+			$("#TuchuKuangX_A_baojijilv").addClass("grayBg");
+			$("#TuchuKuangX_A_s_baojijilv").addClass("redfont");
+			$("#TuchuKuangX_A_gongjifudongjilv").addClass("grayBg");
+			$("#TuchuKuangX_A_s_gongjifudongjilv").addClass("redfont");
+			$("#TuchuKuangX_A_minzhongxz").addClass("grayBg");
+			$("#TuchuKuangX_A_s_minzhongxz").addClass("redfont");
+			$("#TuchuKuangX_A_qinbao").addClass("grayBg");
+			$("#TuchuKuangX_A_s_qinbao").addClass("redfont");
+		},
+		function () {
+			$("#TuchuKuangX_A_baojijilv").removeClass("grayBg");
+			$("#TuchuKuangX_A_s_baojijilv").removeClass("redfont");
+			$("#TuchuKuangX_A_gongjifudongjilv").removeClass("grayBg");
+			$("#TuchuKuangX_A_s_gongjifudongjilv").removeClass("redfont");
+			$("#TuchuKuangX_A_minzhongxz").removeClass("grayBg");
+			$("#TuchuKuangX_A_s_minzhongxz").removeClass("redfont");
+			$("#TuchuKuangX_A_qinbao").removeClass("grayBg");
+			$("#TuchuKuangX_A_s_qinbao").removeClass("redfont");
+		}
+	);
+	$("#TuKuang_A_Tizhi").hover(
+		function () {
+			$("#TuchuKuangX_A_fangyujilv").addClass("grayBg");
+			$("#TuchuKuangX_A_s_fangyujilv").addClass("redfont");
+			$("#TuchuKuangX_A_yibanfanshuang").addClass("grayBg");
+			$("#TuchuKuangX_A_s_yibanfanshuang").addClass("redfont");
+			$("#TuchuKuangX_A_fangyufanshuang").addClass("grayBg");
+			$("#TuchuKuangX_A_s_fangyufanshuang").addClass("redfont");
+			$("#TuchuKuangX_A_wendinfantan").addClass("grayBg");
+			$("#TuchuKuangX_A_s_wendinfantan").addClass("redfont");
+		},
+		function () {
+			$("#TuchuKuangX_A_fangyujilv").removeClass("grayBg");
+			$("#TuchuKuangX_A_s_fangyujilv").removeClass("redfont");
+			$("#TuchuKuangX_A_yibanfanshuang").removeClass("grayBg");
+			$("#TuchuKuangX_A_s_yibanfanshuang").removeClass("redfont");
+			$("#TuchuKuangX_A_fangyufanshuang").removeClass("grayBg");
+			$("#TuchuKuangX_A_s_fangyufanshuang").removeClass("redfont");
+			$("#TuchuKuangX_A_wendinfantan").removeClass("grayBg");
+			$("#TuchuKuangX_A_s_wendinfantan").removeClass("redfont");
+		}
+	);
+	$("#TuKuang_A_Pinheng").hover(
+		function () {
+			$("#TuchuKuangX_A_wendinzhi").addClass("grayBg");
+			$("#TuchuKuangX_A_s_wendinzhi").addClass("redfont");
+			$("#TuchuKuangX_A_wendinhuifu").addClass("grayBg");
+			$("#TuchuKuangX_A_s_wendinhuifu").addClass("redfont");
+		},
+		function () {
+			$("#TuchuKuangX_A_wendinzhi").removeClass("grayBg");
+			$("#TuchuKuangX_A_s_wendinzhi").removeClass("redfont");
+			$("#TuchuKuangX_A_wendinhuifu").removeClass("grayBg");
+			$("#TuchuKuangX_A_s_wendinhuifu").removeClass("redfont");
+		}
+	);
+	
+	
+	
+	
 
 
 

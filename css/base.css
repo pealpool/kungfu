@@ -325,13 +325,13 @@ html, body {
 	margin-top: 5px;
 	line-height: 26px;
 }
-.DianshuDaKuang_T:hover {
+/*.DianshuDaKuang_T:hover {
 	background: linear-gradient(left, rgb(255, 255, 255), rgb(235, 235, 235) 10%, rgb(235, 235, 235) 90%, rgb(255, 255, 255) 100%);
 	background: -o-linear-gradient(left, rgb(255, 255, 255), rgb(235, 235, 235) 10%, rgb(235, 235, 235) 90%, rgb(255, 255, 255) 100%);
 	background: -ms-linear-gradient(left, rgb(255, 255, 255), rgb(235, 235, 235) 10%, rgb(235, 235, 235) 90%, rgb(255, 255, 255) 100%);
 	background: -moz-linear-gradient(left, rgb(255, 255, 255), rgb(235, 235, 235) 10%, rgb(235, 235, 235) 90%, rgb(255, 255, 255) 100%);
 	background: -webkit-linear-gradient(left, rgb(255, 255, 255), rgb(235, 235, 235) 10%, rgb(235, 235, 235) 90%, rgb(255, 255, 255) 100%);
-}
+}*/
 /*剩余点数最内框 左*/
 .DianshuDaKuang_TTL {
 	float: left;
@@ -402,6 +402,13 @@ html, body {
 	margin-top: 4px;
 }
 .grayBg {
+	background: linear-gradient(left, rgb(255, 255, 255), rgb(235, 235, 235) 10%, rgb(235, 235, 235) 90%, rgb(255, 255, 255) 100%);
+	background: -o-linear-gradient(left, rgb(255, 255, 255), rgb(235, 235, 235) 10%, rgb(235, 235, 235) 90%, rgb(255, 255, 255) 100%);
+	background: -ms-linear-gradient(left, rgb(255, 255, 255), rgb(235, 235, 235) 10%, rgb(235, 235, 235) 90%, rgb(255, 255, 255) 100%);
+	background: -moz-linear-gradient(left, rgb(255, 255, 255), rgb(235, 235, 235) 10%, rgb(235, 235, 235) 90%, rgb(255, 255, 255) 100%);
+	background: -webkit-linear-gradient(left, rgb(255, 255, 255), rgb(235, 235, 235) 10%, rgb(235, 235, 235) 90%, rgb(255, 255, 255) 100%);
+}
+.grayBgHover:hover {
 	background: linear-gradient(left, rgb(255, 255, 255), rgb(235, 235, 235) 10%, rgb(235, 235, 235) 90%, rgb(255, 255, 255) 100%);
 	background: -o-linear-gradient(left, rgb(255, 255, 255), rgb(235, 235, 235) 10%, rgb(235, 235, 235) 90%, rgb(255, 255, 255) 100%);
 	background: -ms-linear-gradient(left, rgb(255, 255, 255), rgb(235, 235, 235) 10%, rgb(235, 235, 235) 90%, rgb(255, 255, 255) 100%);
