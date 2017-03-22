@@ -783,7 +783,7 @@ $(document).ready(function () {
 	$(document).on("click", "#ZSdiv_tj_panda", function () {
 		if ($("#ZSdiv_tj_panda").attr("class") !== "zhaoshiLBqqs huise") {
 			//if (i_yixuanZS <= 5) {
-			$("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_panda0" + i_tj_panda + "'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>攀打</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG' id='ATimeAll1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB14 zhaoshiLBG'>-></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='zy_buttom'><div class='zy_buttomL org'>左</div><div class='zy_buttomR org'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa0" + i_yixuanZS + "'><option>头部</option><option>胸部</option><option>腹部</option><option>肩关节</option></select></div><div class='zhaoshiLB16 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove0" + i_yixuanZS + "'>×</div></div></div>");
+			$("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_panda0" + i_tj_panda + "'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>攀打</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='	zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG' id='ATimeAll1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB14 zhaoshiLBG'>-></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='zy_buttom'><div class='zy_buttomL org'>左</div><div class='zy_buttomR org'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa0" + i_yixuanZS + "'><option>头部</option><option>胸部</option><option>腹部</option><option>肩关节</option></select></div><div class='zhaoshiLB16 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove0" + i_yixuanZS + "'>×</div></div></div>");
 			tj_panda.AttW = (true_tj_panda.AttW * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
 			tj_panda.AttN = (true_tj_panda.AttN * mSX_LiLiang.gongjiJC(SX_Liliang) + mSX_LiLiang.baojishanghai(SX_Liliang) * mSX_ZhiLi.baojijilv(SX_Zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(SX_Zhili) - 0.05);
 			tj_panda.ATimeQ = true_tj_panda.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie);
@@ -1880,94 +1880,124 @@ $(document).ready(function () {
 	});
 
 	
-	//分配点数时-关联数值变红
+	//A关联数值变红
 	$("#TuKuang_A_Liliang").hover(
 		function () {
 			$("#TuchuKuangX_A_gongjiJC").addClass("grayBg");
-			//$("#TuchuKuang_A_gongjiJC").addClass("redfont");
 			$("#TuchuKuangX_A_baojishanghai").addClass("grayBg");
-			//$("#TuchuKuang_A_baojishanghai").addClass("redfont");
 		},
 		function () {
 			$("#TuchuKuangX_A_gongjiJC").removeClass("grayBg");
-			//$("#TuchuKuang_A_gongjiJC").removeClass("redfont");
 			$("#TuchuKuangX_A_baojishanghai").removeClass("grayBg");
-			//$("#TuchuKuang_A_baojishanghai").removeClass("redfont");
 		}
 	);
 	$("#TuKuang_A_Minjie").hover(
 		function () {
 			$("#TuchuKuangX_A_shudu").addClass("grayBg");
-			$("#TuchuKuangX_A_s_shudu").addClass("redfont");
 			$("#TuchuKuangX_A_shanbi").addClass("grayBg");
-			$("#TuchuKuangX_A_s_shanbi").addClass("redfont");
 		},
 		function () {
 			$("#TuchuKuangX_A_shudu").removeClass("grayBg");
-			$("#TuchuKuangX_A_s_shudu").removeClass("redfont");
 			$("#TuchuKuangX_A_shanbi").removeClass("grayBg");
-			$("#TuchuKuangX_A_s_shanbi").removeClass("redfont");
 		}
 	);
 	$("#TuKuang_A_Zhili").hover(
 		function () {
 			$("#TuchuKuangX_A_baojijilv").addClass("grayBg");
-			$("#TuchuKuangX_A_s_baojijilv").addClass("redfont");
 			$("#TuchuKuangX_A_gongjifudongjilv").addClass("grayBg");
-			$("#TuchuKuangX_A_s_gongjifudongjilv").addClass("redfont");
 			$("#TuchuKuangX_A_minzhongxz").addClass("grayBg");
-			$("#TuchuKuangX_A_s_minzhongxz").addClass("redfont");
 			$("#TuchuKuangX_A_qinbao").addClass("grayBg");
-			$("#TuchuKuangX_A_s_qinbao").addClass("redfont");
 		},
 		function () {
 			$("#TuchuKuangX_A_baojijilv").removeClass("grayBg");
-			$("#TuchuKuangX_A_s_baojijilv").removeClass("redfont");
 			$("#TuchuKuangX_A_gongjifudongjilv").removeClass("grayBg");
-			$("#TuchuKuangX_A_s_gongjifudongjilv").removeClass("redfont");
 			$("#TuchuKuangX_A_minzhongxz").removeClass("grayBg");
-			$("#TuchuKuangX_A_s_minzhongxz").removeClass("redfont");
 			$("#TuchuKuangX_A_qinbao").removeClass("grayBg");
-			$("#TuchuKuangX_A_s_qinbao").removeClass("redfont");
 		}
 	);
 	$("#TuKuang_A_Tizhi").hover(
 		function () {
 			$("#TuchuKuangX_A_fangyujilv").addClass("grayBg");
-			$("#TuchuKuangX_A_s_fangyujilv").addClass("redfont");
 			$("#TuchuKuangX_A_yibanfanshuang").addClass("grayBg");
-			$("#TuchuKuangX_A_s_yibanfanshuang").addClass("redfont");
 			$("#TuchuKuangX_A_fangyufanshuang").addClass("grayBg");
-			$("#TuchuKuangX_A_s_fangyufanshuang").addClass("redfont");
 			$("#TuchuKuangX_A_wendinfantan").addClass("grayBg");
-			$("#TuchuKuangX_A_s_wendinfantan").addClass("redfont");
 		},
 		function () {
 			$("#TuchuKuangX_A_fangyujilv").removeClass("grayBg");
-			$("#TuchuKuangX_A_s_fangyujilv").removeClass("redfont");
 			$("#TuchuKuangX_A_yibanfanshuang").removeClass("grayBg");
-			$("#TuchuKuangX_A_s_yibanfanshuang").removeClass("redfont");
 			$("#TuchuKuangX_A_fangyufanshuang").removeClass("grayBg");
-			$("#TuchuKuangX_A_s_fangyufanshuang").removeClass("redfont");
 			$("#TuchuKuangX_A_wendinfantan").removeClass("grayBg");
-			$("#TuchuKuangX_A_s_wendinfantan").removeClass("redfont");
 		}
 	);
 	$("#TuKuang_A_Pinheng").hover(
 		function () {
 			$("#TuchuKuangX_A_wendinzhi").addClass("grayBg");
-			$("#TuchuKuangX_A_s_wendinzhi").addClass("redfont");
 			$("#TuchuKuangX_A_wendinhuifu").addClass("grayBg");
-			$("#TuchuKuangX_A_s_wendinhuifu").addClass("redfont");
 		},
 		function () {
 			$("#TuchuKuangX_A_wendinzhi").removeClass("grayBg");
-			$("#TuchuKuangX_A_s_wendinzhi").removeClass("redfont");
 			$("#TuchuKuangX_A_wendinhuifu").removeClass("grayBg");
-			$("#TuchuKuangX_A_s_wendinhuifu").removeClass("redfont");
 		}
 	);
-	
+	//B关联数值变红
+	$("#TuKuang_B_Liliang").hover(
+		function () {
+			$("#TuchuKuangX_B_gongjiJC").addClass("grayBg");
+			$("#TuchuKuangX_B_baojishanghai").addClass("grayBg");
+		},
+		function () {
+			$("#TuchuKuangX_B_gongjiJC").removeClass("grayBg");
+			$("#TuchuKuangX_B_baojishanghai").removeClass("grayBg");
+		}
+	);
+	$("#TuKuang_B_Minjie").hover(
+		function () {
+			$("#TuchuKuangX_B_shudu").addClass("grayBg");
+			$("#TuchuKuangX_B_shanbi").addClass("grayBg");
+		},
+		function () {
+			$("#TuchuKuangX_B_shudu").removeClass("grayBg");
+			$("#TuchuKuangX_B_shanbi").removeClass("grayBg");
+		}
+	);
+	$("#TuKuang_B_Zhili").hover(
+		function () {
+			$("#TuchuKuangX_B_baojijilv").addClass("grayBg");
+			$("#TuchuKuangX_B_gongjifudongjilv").addClass("grayBg");
+			$("#TuchuKuangX_B_minzhongxz").addClass("grayBg");
+			$("#TuchuKuangX_B_qinbao").addClass("grayBg");
+		},
+		function () {
+			$("#TuchuKuangX_B_baojijilv").removeClass("grayBg");
+			$("#TuchuKuangX_B_gongjifudongjilv").removeClass("grayBg");
+			$("#TuchuKuangX_B_minzhongxz").removeClass("grayBg");
+			$("#TuchuKuangX_B_qinbao").removeClass("grayBg");
+		}
+	);
+	$("#TuKuang_B_Tizhi").hover(
+		function () {
+			$("#TuchuKuangX_B_fangyujilv").addClass("grayBg");
+			$("#TuchuKuangX_B_yibanfanshuang").addClass("grayBg");
+			$("#TuchuKuangX_B_fangyufanshuang").addClass("grayBg");
+			$("#TuchuKuangX_B_wendinfantan").addClass("grayBg");
+		},
+		function () {
+			$("#TuchuKuangX_B_fangyujilv").removeClass("grayBg");
+			$("#TuchuKuangX_B_yibanfanshuang").removeClass("grayBg");
+			$("#TuchuKuangX_B_fangyufanshuang").removeClass("grayBg");
+			$("#TuchuKuangX_B_wendinfantan").removeClass("grayBg");
+		}
+	);
+	$("#TuKuang_B_Pinheng").hover(
+		function () {
+			$("#TuchuKuangX_B_wendinzhi").addClass("grayBg");
+			$("#TuchuKuangX_B_wendinhuifu").addClass("grayBg");
+		},
+		function () {
+			$("#TuchuKuangX_B_wendinzhi").removeClass("grayBg");
+			$("#TuchuKuangX_B_wendinhuifu").removeClass("grayBg");
+		}
+	);
 	
 	
 	
