@@ -1920,16 +1920,29 @@ function BzsHouxuanBuwei(zsname, a) {
 	}
 }
 
+//读入招式数据
+function duruZSshuju(who,a){
+	switch(who){
+		case "A":
+			
+			break;
+		case "B":
+			break;
+	}
+}
+
+
 //选谁先发招，发啥招
 function ChoiceFirst() {
 	
-	
-	
-	
 	switch (HadChoice_Who) {
 		case "":
-			if(AchoiceZS[a] > BchoiceZS[a] ){
-				
+			
+			
+			
+			
+			if (AchoiceZS[0] > BchoiceZS[0]) {
+
 			}
 			break;
 		case "A":
