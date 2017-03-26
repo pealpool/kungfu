@@ -1,22 +1,30 @@
 // JavaScript Document
 //http://www.ruanyifeng.com/blog/2012/07/three_ways_to_define_a_javascript_class.html
 "use strict";
+/*
+var SX_Sum = new Array();
+var SX_Liliang = new Array();
+var SX_Minjie = new Array();
+var SX_Zhili = new Array();
+var SX_Tizhi = new Array();
+var SX_Pinheng = new Array();
 
-var SX_Sum = 3;
-var SX_Liliang = 2;
-var SX_Minjie = 2;
-var SX_Zhili = 2;
-var SX_Tizhi = 2;
-var SX_Pinheng = 2;
+//我方属性
+var SX_Sum[0] = 3;
+var SX_Liliang[0] = 2;
+var SX_Minjie[0] = 2;
+var SX_Zhili[0] = 2;
+var SX_Tizhi[0] = 2;
+var SX_Pinheng[0] = 2;
 
 //敌方属性
-var SXB_Sum = 3;
-var SXB_Liliang = 2;
-var SXB_Minjie = 2;
-var SXB_Zhili = 2;
-var SXB_Tizhi = 2;
-var SXB_Pinheng = 2;
-
+var SX_Sum[1] = 3;
+var SX_Liliang[1] = 2;
+var SX_Minjie[1] = 2;
+var SX_Zhili[1] = 2;
+var SX_Tizhi[1] = 2;
+var SX_Pinheng[1] = 2;
+*/
 
 //力量
 var ShuX_LiLiang = {

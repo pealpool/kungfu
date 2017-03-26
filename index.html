@@ -104,6 +104,42 @@
 	window.BchoiceZS[3] = choiceZS.createNew();
 	window.BchoiceZS[4] = choiceZS.createNew();
 
+	
+	
+	window.SX_Sum = new Array();
+	window.SX_Liliang = new Array();
+	window.SX_Minjie = new Array();
+	window.SX_Zhili = new Array();
+	window.SX_Tizhi = new Array();
+	window.SX_Pinheng = new Array();
+	
+	//我方属性
+	window.SX_Sum[0] = 3;
+	window.SX_Liliang[0] = 2;
+	window.SX_Minjie[0] = 2;
+	window.SX_Zhili[0] = 2;
+	window.SX_Tizhi[0] = 2;
+	window.SX_Pinheng[0] = 2;
+	
+	//敌方属性
+	window.SX_Sum[1] = 3;
+	window.SX_Liliang[1] = 2;
+	window.SX_Minjie[1] = 2;
+	window.SX_Zhili[1] = 2;
+	window.SX_Tizhi[1] = 2;
+	window.SX_Pinheng[1] = 2;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </script>
 
 <!--<script  src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>-->
@@ -639,29 +675,29 @@
             <div class="TuKuangTitle_paibie" id="TuKuangTitle_paibie">太极</div>
           </div>
           <div class="bodyDaKuang">
-          	<div class="aTu_tou tuhptu" id="my_t_tou"></div>
-          	<div class="aTu_xiong tuhptu" id="my_t_xiong"></div>
-          	<div class="aTu_fu tuhptu" id="my_t_fu"></div>
-          	<div class="aTu_yaoL tuhptu" id="my_t_yaoL"></div>
-          	<div class="aTu_yaoR tuhptu" id="my_t_yaoR"></div>
-          	<div class="aTu_jianL tuhptu" id="my_t_jianL"></div>
-          	<div class="aTu_jianR tuhptu" id="my_t_jianR"></div>
-          	<div class="aTu_shangbiL tuhptu" id="my_t_shangbiL"></div>
-          	<div class="aTu_shangbiR tuhptu" id="my_t_shangbiR"></div>
-          	<div class="aTu_zhouL tuhptu" id="my_t_zhouL"></div>
-          	<div class="aTu_zhouR tuhptu" id="my_t_zhouR"></div>
-          	<div class="aTu_qianbiL tuhptu" id="my_t_qianbiL"></div>
-          	<div class="aTu_qianbiR tuhptu" id="my_t_qianbiR"></div>
-          	<div class="aTu_shouwanL tuhptu" id="my_t_shouwanL"></div>
-          	<div class="aTu_shouwanR tuhptu" id="my_t_shouwanR"></div>
-          	<div class="aTu_datuiL tuhptu" id="my_t_datuiL"></div>
-          	<div class="aTu_datuiR tuhptu" id="my_t_datuiR"></div>
-          	<div class="aTu_xiL tuhptu" id="my_t_xiL"></div>
-          	<div class="aTu_xiR tuhptu" id="my_t_xiR"></div>
-          	<div class="aTu_xiaotuiL tuhptu" id="my_t_xiaotuiL"></div>
-          	<div class="aTu_xiaotuiR tuhptu" id="my_t_xiaotuiR"></div>
-          	<div class="aTu_huaiL tuhptu" id="my_t_huaiL"></div>
-          	<div class="aTu_huaiR tuhptu" id="my_t_huaiR"></div>
+            <div class="aTu_tou tuhptu" id="my_t_tou"></div>
+            <div class="aTu_xiong tuhptu" id="my_t_xiong"></div>
+            <div class="aTu_fu tuhptu" id="my_t_fu"></div>
+            <div class="aTu_yaoL tuhptu" id="my_t_yaoL"></div>
+            <div class="aTu_yaoR tuhptu" id="my_t_yaoR"></div>
+            <div class="aTu_jianL tuhptu" id="my_t_jianL"></div>
+            <div class="aTu_jianR tuhptu" id="my_t_jianR"></div>
+            <div class="aTu_shangbiL tuhptu" id="my_t_shangbiL"></div>
+            <div class="aTu_shangbiR tuhptu" id="my_t_shangbiR"></div>
+            <div class="aTu_zhouL tuhptu" id="my_t_zhouL"></div>
+            <div class="aTu_zhouR tuhptu" id="my_t_zhouR"></div>
+            <div class="aTu_qianbiL tuhptu" id="my_t_qianbiL"></div>
+            <div class="aTu_qianbiR tuhptu" id="my_t_qianbiR"></div>
+            <div class="aTu_shouwanL tuhptu" id="my_t_shouwanL"></div>
+            <div class="aTu_shouwanR tuhptu" id="my_t_shouwanR"></div>
+            <div class="aTu_datuiL tuhptu" id="my_t_datuiL"></div>
+            <div class="aTu_datuiR tuhptu" id="my_t_datuiR"></div>
+            <div class="aTu_xiL tuhptu" id="my_t_xiL"></div>
+            <div class="aTu_xiR tuhptu" id="my_t_xiR"></div>
+            <div class="aTu_xiaotuiL tuhptu" id="my_t_xiaotuiL"></div>
+            <div class="aTu_xiaotuiR tuhptu" id="my_t_xiaotuiR"></div>
+            <div class="aTu_huaiL tuhptu" id="my_t_huaiL"></div>
+            <div class="aTu_huaiR tuhptu" id="my_t_huaiR"></div>
           </div>
           <div class="TuKuangshuxinDaK" id="TuKuangshuxinDaK_my">
             <div class="TuKuangshuxinDaKt">
@@ -733,7 +769,6 @@
           </div>
         </div>
       </div>
-      
       <div class="NeiRongKuangzl2 BDYJK">
         <div class="NeiRongKuangHPdaK">
           <div class="NeiRongKuangHPxK" id="Hphh_tou">
@@ -1307,29 +1342,29 @@
             <div class="TuKuangTitle_paibie" id="TuKuangTitle_He_paibie">太极</div>
           </div>
           <div class="bodyDaKuang">
-          	<div class="aTu_tou tuhptu" id="he_t_tou"></div>
-          	<div class="aTu_xiong tuhptu" id="he_t_xiong"></div>
-          	<div class="aTu_fu tuhptu" id="he_t_fu"></div>
-          	<div class="aTu_yaoL tuhptu" id="he_t_yaoL"></div>
-          	<div class="aTu_yaoR tuhptu" id="he_t_yaoR"></div>
-          	<div class="aTu_jianL tuhptu" id="he_t_jianL"></div>
-          	<div class="aTu_jianR tuhptu" id="he_t_jianR"></div>
-          	<div class="aTu_shangbiL tuhptu" id="he_t_shangbiL"></div>
-          	<div class="aTu_shangbiR tuhptu" id="he_t_shangbiR"></div>
-          	<div class="aTu_zhouL tuhptu" id="he_t_zhouL"></div>
-          	<div class="aTu_zhouR tuhptu" id="he_t_zhouR"></div>
-          	<div class="aTu_qianbiL tuhptu" id="he_t_qianbiL"></div>
-          	<div class="aTu_qianbiR tuhptu" id="he_t_qianbiR"></div>
-          	<div class="aTu_shouwanL tuhptu" id="he_t_shouwanL"></div>
-          	<div class="aTu_shouwanR tuhptu" id="he_t_shouwanR"></div>
-          	<div class="aTu_datuiL tuhptu" id="he_t_datuiL"></div>
-          	<div class="aTu_datuiR tuhptu" id="he_t_datuiR"></div>
-          	<div class="aTu_xiL tuhptu" id="he_t_xiL"></div>
-          	<div class="aTu_xiR tuhptu" id="he_t_xiR"></div>
-          	<div class="aTu_xiaotuiL tuhptu" id="he_t_xiaotuiL"></div>
-          	<div class="aTu_xiaotuiR tuhptu" id="he_t_xiaotuiR"></div>
-          	<div class="aTu_huaiL tuhptu" id="he_t_huaiL"></div>
-          	<div class="aTu_huaiR tuhptu" id="he_t_huaiR"></div>
+            <div class="aTu_tou tuhptu" id="he_t_tou"></div>
+            <div class="aTu_xiong tuhptu" id="he_t_xiong"></div>
+            <div class="aTu_fu tuhptu" id="he_t_fu"></div>
+            <div class="aTu_yaoL tuhptu" id="he_t_yaoL"></div>
+            <div class="aTu_yaoR tuhptu" id="he_t_yaoR"></div>
+            <div class="aTu_jianL tuhptu" id="he_t_jianL"></div>
+            <div class="aTu_jianR tuhptu" id="he_t_jianR"></div>
+            <div class="aTu_shangbiL tuhptu" id="he_t_shangbiL"></div>
+            <div class="aTu_shangbiR tuhptu" id="he_t_shangbiR"></div>
+            <div class="aTu_zhouL tuhptu" id="he_t_zhouL"></div>
+            <div class="aTu_zhouR tuhptu" id="he_t_zhouR"></div>
+            <div class="aTu_qianbiL tuhptu" id="he_t_qianbiL"></div>
+            <div class="aTu_qianbiR tuhptu" id="he_t_qianbiR"></div>
+            <div class="aTu_shouwanL tuhptu" id="he_t_shouwanL"></div>
+            <div class="aTu_shouwanR tuhptu" id="he_t_shouwanR"></div>
+            <div class="aTu_datuiL tuhptu" id="he_t_datuiL"></div>
+            <div class="aTu_datuiR tuhptu" id="he_t_datuiR"></div>
+            <div class="aTu_xiL tuhptu" id="he_t_xiL"></div>
+            <div class="aTu_xiR tuhptu" id="he_t_xiR"></div>
+            <div class="aTu_xiaotuiL tuhptu" id="he_t_xiaotuiL"></div>
+            <div class="aTu_xiaotuiR tuhptu" id="he_t_xiaotuiR"></div>
+            <div class="aTu_huaiL tuhptu" id="he_t_huaiL"></div>
+            <div class="aTu_huaiR tuhptu" id="he_t_huaiR"></div>
           </div>
           <div class="TuKuangshuxinDaK" id="TuKuangshuxinDaK_he">
             <div class="TuKuangshuxinDaKt">
