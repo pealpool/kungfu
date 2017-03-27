@@ -1845,28 +1845,28 @@ $(document).ready(function () {
 
 
 
-	$("#TuKuangshuxinDaK_my").click(function () {
+	$("#TuKuangshuxinDaK_A").click(function () {
 		if (sxTanChu_A === 0) {
 			$("#TuKuangshuxinTanchuDK_A").show("fold", 100);
-			$(".TuKuangshuxinDaK").addClass("TuKuangshuxinDaKaa");
+			$("#TuKuangshuxinDaK_A").addClass("TuKuangshuxinDaKaa");
 			$("#TuKuangshuxinDaKd_A").css("line-height", "4px");
 			sxTanChu_A = 1;
 		} else {
 			$("#TuKuangshuxinTanchuDK_A").hide("fold", 100);
-			$(".TuKuangshuxinDaK").removeClass("TuKuangshuxinDaKaa");
+			$("#TuKuangshuxinDaK_A").removeClass("TuKuangshuxinDaKaa");
 			$("#TuKuangshuxinDaKd_A").css("line-height", "11px");
 			sxTanChu_A = 0;
 		}
 	});
-	$("#TuKuangshuxinDaK_he").click(function () {
+	$("#TuKuangshuxinDaK_B").click(function () {
 		if (sxTanChu_B === 0) {
 			$("#TuKuangshuxinTanchuDK_B").show("fold", 100);
-			$(".TuKuangshuxinDaK").addClass("TuKuangshuxinDaKaa");
+			$("#TuKuangshuxinDaK_B").addClass("TuKuangshuxinDaKaa");
 			$("#TuKuangshuxinDaKd_B").css("line-height", "4px");
 			sxTanChu_B = 1;
 		} else {
 			$("#TuKuangshuxinTanchuDK_B").hide("fold", 100);
-			$(".TuKuangshuxinDaK").removeClass("TuKuangshuxinDaKaa");
+			$("#TuKuangshuxinDaK_B").removeClass("TuKuangshuxinDaKaa");
 			$("#TuKuangshuxinDaKd_B").css("line-height", "11px");
 			sxTanChu_B = 0;
 		}
