@@ -628,14 +628,14 @@ function choiceQianqiWanCheng() {
 					text: '继续',
 					btnClass: 'btn-red',
 					action: function () {
-						DFshuxingchushihua();
+						Bshuxingchushihua();
 						ChuShiHua();
 					}
 				}
 			}
 		});
 	} else {
-		DFshuxingchushihua();
+		Bshuxingchushihua();
 		ChuShiHua();
 	}
 }
@@ -674,8 +674,8 @@ function ChuShiHua() {
 	window.sxTanChu_A = 0;
 	window.sxTanChu_B = 0;
 
-	window.i_yixuanZS = 1; //已选择招式 计数
-	window.yxZStime = 7.5; //已选招式剩余时间
+	window.i_AyixuanZS = 1; //已选择招式 计数
+	window.AyxZStime = 7.5; //已选招式剩余时间
 
 	window.mymyname = $("#My_name").text();
 
@@ -982,58 +982,58 @@ function biamWuXiaoZS() {
 
 //添加一个招式后共同动作
 function tianjiaZShou() {
-	i_yixuanZS++;
+	i_AyixuanZS++;
 	xuanshisyTime();
-	if (i_yixuanZS > 5) {
+	if (i_AyixuanZS > 5) {
 		biamWuXiaoZS();
 	} else {
 		switch (PaiBei_A) {
 			case "Taiji":
-				if ((tj_panda.ATimeQ + tj_panda.ATime).toFixed(1) > yxZStime.toFixed(1)) {
+				if ((tj_panda.ATimeQ + tj_panda.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
 					$("#ZSdiv_tj_panda").addClass("huise");
 				}
-				if ((tj_tuishou.ATimeQ + tj_tuishou.ATime).toFixed(1) > yxZStime.toFixed(1)) {
+				if ((tj_tuishou.ATimeQ + tj_tuishou.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
 					$("#ZSdiv_tj_tuishou").addClass("huise");
 				}
-				if ((tj_qingna.ATimeQ + tj_qingna.ATime).toFixed(1) > yxZStime.toFixed(1)) {
+				if ((tj_qingna.ATimeQ + tj_qingna.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
 					$("#ZSdiv_tj_qingna").addClass("huise");
 				}
-				if ((tj_shuangfong.ATimeQ + tj_shuangfong.ATime).toFixed(1) > yxZStime.toFixed(1)) {
+				if ((tj_shuangfong.ATimeQ + tj_shuangfong.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
 					$("#ZSdiv_tj_shuangfong").addClass("huise");
 				}
-				if ((tj_zhoudicui.ATimeQ + tj_zhoudicui.ATime).toFixed(1) > yxZStime.toFixed(1)) {
+				if ((tj_zhoudicui.ATimeQ + tj_zhoudicui.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
 					$("#ZSdiv_tj_zhoudicui").addClass("huise");
 				}
-				if ((tj_paocui.ATimeQ + tj_paocui.ATime).toFixed(1) > yxZStime.toFixed(1)) {
+				if ((tj_paocui.ATimeQ + tj_paocui.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
 					$("#ZSdiv_tj_paocui").addClass("huise");
 				}
-				if ((tj_yuanyangtui.ATimeQ + tj_yuanyangtui.ATime).toFixed(1) > yxZStime.toFixed(1)) {
+				if ((tj_yuanyangtui.ATimeQ + tj_yuanyangtui.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
 					$("#ZSdiv_tj_yuanyangtui").addClass("huise");
 				}
-				if ((tj_banshuai.ATimeQ + tj_banshuai.ATime).toFixed(1) > yxZStime.toFixed(1)) {
+				if ((tj_banshuai.ATimeQ + tj_banshuai.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
 					$("#ZSdiv_tj_banshuai").addClass("huise");
 				}
 				break;
 			case "Taiquan":
-				if ((tq_zhiquan.ATimeQ + tq_zhiquan.ATime).toFixed(1) > yxZStime.toFixed(1)) {
+				if ((tq_zhiquan.ATimeQ + tq_zhiquan.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
 					$("#ZSdiv_tq_zhiquan").addClass("huise");
 				}
-				if ((tq_lrgouquan.ATimeQ + tq_lrgouquan.ATime).toFixed(1) > yxZStime.toFixed(1)) {
+				if ((tq_lrgouquan.ATimeQ + tq_lrgouquan.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
 					$("#ZSdiv_tj_tq_lrgouquan").addClass("huise");
 				}
-				if ((tq_sgouquan.ATimeQ + tq_sgouquan.ATime).toFixed(1) > yxZStime.toFixed(1)) {
+				if ((tq_sgouquan.ATimeQ + tq_sgouquan.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
 					$("#ZSdiv_tq_sgouquan").addClass("huise");
 				}
-				if ((tq_zhouji.ATimeQ + tq_zhouji.ATime).toFixed(1) > yxZStime.toFixed(1)) {
+				if ((tq_zhouji.ATimeQ + tq_zhouji.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
 					$("#ZSdiv_tq_zhouji").addClass("huise");
 				}
-				if ((tq_xizhuang.ATimeQ + tq_xizhuang.ATime).toFixed(1) > yxZStime.toFixed(1)) {
+				if ((tq_xizhuang.ATimeQ + tq_xizhuang.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
 					$("#ZSdiv_tq_xizhuang").addClass("huise");
 				}
-				if ((tq_dengtui.ATimeQ + tq_dengtui.ATime).toFixed(1) > yxZStime.toFixed(1)) {
+				if ((tq_dengtui.ATimeQ + tq_dengtui.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
 					$("#ZSdiv_tq_dengtui").addClass("huise");
 				}
-				if ((tq_shaotui.ATimeQ + tq_shaotui.ATime).toFixed(1) > yxZStime.toFixed(1)) {
+				if ((tq_shaotui.ATimeQ + tq_shaotui.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
 					$("#ZSdiv_tq_shaotui").addClass("huise");
 				}
 				break;
@@ -1047,51 +1047,51 @@ function shanchuZShou() {
 	xuanshisyTime();
 	switch (PaiBei_A) {
 		case "Taiji":
-			if ((tj_panda.ATimeQ + tj_panda.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
+			if ((tj_panda.ATimeQ + tj_panda.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
 				$("#ZSdiv_tj_panda").removeClass("huise");
 			}
-			if ((tj_tuishou.ATimeQ + tj_tuishou.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
+			if ((tj_tuishou.ATimeQ + tj_tuishou.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
 				$("#ZSdiv_tj_tuishou").removeClass("huise");
 			}
-			if ((tj_qingna.ATimeQ + tj_qingna.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
+			if ((tj_qingna.ATimeQ + tj_qingna.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
 				$("#ZSdiv_tj_qingna").removeClass("huise");
 			}
-			if ((tj_shuangfong.ATimeQ + tj_shuangfong.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
+			if ((tj_shuangfong.ATimeQ + tj_shuangfong.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
 				$("#ZSdiv_tj_shuangfong").removeClass("huise");
 			}
-			if ((tj_zhoudicui.ATimeQ + tj_zhoudicui.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
+			if ((tj_zhoudicui.ATimeQ + tj_zhoudicui.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
 				$("#ZSdiv_tj_zhoudicui").removeClass("huise");
 			}
-			if ((tj_paocui.ATimeQ + tj_paocui.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
+			if ((tj_paocui.ATimeQ + tj_paocui.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
 				$("#ZSdiv_tj_paocui").removeClass("huise");
 			}
-			if ((tj_yuanyangtui.ATimeQ + tj_yuanyangtui.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
+			if ((tj_yuanyangtui.ATimeQ + tj_yuanyangtui.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
 				$("#ZSdiv_tj_yuanyangtui").removeClass("huise");
 			}
-			if ((tj_banshuai.ATimeQ + tj_banshuai.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
+			if ((tj_banshuai.ATimeQ + tj_banshuai.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
 				$("#ZSdiv_tj_banshuai").removeClass("huise");
 			}
 			break;
 		case "Taiquan":
-			if ((tq_zhiquan.ATimeQ + tq_zhiquan.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
+			if ((tq_zhiquan.ATimeQ + tq_zhiquan.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
 				$("#ZSdiv_tq_zhiquan").removeClass("huise");
 			}
-			if ((tq_lrgouquan.ATimeQ + tq_lrgouquan.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
+			if ((tq_lrgouquan.ATimeQ + tq_lrgouquan.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
 				$("#ZSdiv_tq_lrgouquan").removeClass("huise");
 			}
-			if ((tq_sgouquan.ATimeQ + tq_sgouquan.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
+			if ((tq_sgouquan.ATimeQ + tq_sgouquan.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
 				$("#ZSdiv_tq_sgouquan").removeClass("huise");
 			}
-			if ((tq_zhouji.ATimeQ + tq_zhouji.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
+			if ((tq_zhouji.ATimeQ + tq_zhouji.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
 				$("#ZSdiv_tq_zhouji").removeClass("huise");
 			}
-			if ((tq_xizhuang.ATimeQ + tq_xizhuang.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
+			if ((tq_xizhuang.ATimeQ + tq_xizhuang.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
 				$("#ZSdiv_tq_xizhuang").removeClass("huise");
 			}
-			if ((tq_dengtui.ATimeQ + tq_dengtui.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
+			if ((tq_dengtui.ATimeQ + tq_dengtui.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
 				$("#ZSdiv_tq_dengtui").removeClass("huise");
 			}
-			if ((tq_shaotui.ATimeQ + tq_shaotui.ATime).toFixed(1) <= yxZStime.toFixed(1)) {
+			if ((tq_shaotui.ATimeQ + tq_shaotui.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
 				$("#ZSdiv_tq_shaotui").removeClass("huise");
 			}
 			break;
@@ -1104,53 +1104,53 @@ function jiahuitime(zsName) {
 		case "Taiji":
 			switch (zsName) {
 				case "tj_panda":
-					yxZStime = yxZStime + tj_panda.ATimeQ + tj_panda.ATime;
+					AyxZStime = AyxZStime + tj_panda.ATimeQ + tj_panda.ATime;
 					break;
 				case "tj_tuishou":
-					yxZStime = yxZStime + tj_tuishou.ATimeQ + tj_tuishou.ATime;
+					AyxZStime = AyxZStime + tj_tuishou.ATimeQ + tj_tuishou.ATime;
 					break;
 				case "tj_qingna":
-					yxZStime = yxZStime + tj_qingna.ATimeQ + tj_qingna.ATime;
+					AyxZStime = AyxZStime + tj_qingna.ATimeQ + tj_qingna.ATime;
 					break;
 				case "tj_shuangfong":
-					yxZStime = yxZStime + tj_shuangfong.ATimeQ + tj_shuangfong.ATime;
+					AyxZStime = AyxZStime + tj_shuangfong.ATimeQ + tj_shuangfong.ATime;
 					break;
 				case "tj_zhoudicui":
-					yxZStime = yxZStime + tj_zhoudicui.ATimeQ + tj_zhoudicui.ATime;
+					AyxZStime = AyxZStime + tj_zhoudicui.ATimeQ + tj_zhoudicui.ATime;
 					break;
 				case "tj_paocui":
-					yxZStime = yxZStime + tj_paocui.ATimeQ + tj_paocui.ATime;
+					AyxZStime = AyxZStime + tj_paocui.ATimeQ + tj_paocui.ATime;
 					break;
 				case "tj_yuanyangtui":
-					yxZStime = yxZStime + tj_yuanyangtui.ATimeQ + tj_yuanyangtui.ATime;
+					AyxZStime = AyxZStime + tj_yuanyangtui.ATimeQ + tj_yuanyangtui.ATime;
 					break;
 				case "tj_banshuai":
-					yxZStime = yxZStime + tj_banshuai.ATimeQ + tj_banshuai.ATime;
+					AyxZStime = AyxZStime + tj_banshuai.ATimeQ + tj_banshuai.ATime;
 					break;
 			}
 			break;
 		case "Taiquan":
 			switch (zsName) {
 				case "tq_zhiquan":
-					yxZStime = yxZStime + tq_zhiquan.ATimeQ + tq_zhiquan.ATime;
+					AyxZStime = AyxZStime + tq_zhiquan.ATimeQ + tq_zhiquan.ATime;
 					break;
 				case "tq_lrgouquan":
-					yxZStime = yxZStime + tq_lrgouquan.ATimeQ + tq_lrgouquan.ATime;
+					AyxZStime = AyxZStime + tq_lrgouquan.ATimeQ + tq_lrgouquan.ATime;
 					break;
 				case "tq_sgouquan":
-					yxZStime = yxZStime + tq_sgouquan.ATimeQ + tq_sgouquan.ATime;
+					AyxZStime = AyxZStime + tq_sgouquan.ATimeQ + tq_sgouquan.ATime;
 					break;
 				case "tq_zhouji":
-					yxZStime = yxZStime + tq_zhouji.ATimeQ + tq_zhouji.ATime;
+					AyxZStime = AyxZStime + tq_zhouji.ATimeQ + tq_zhouji.ATime;
 					break;
 				case "tq_xizhuang":
-					yxZStime = yxZStime + tq_xizhuang.ATimeQ + tq_xizhuang.ATime;
+					AyxZStime = AyxZStime + tq_xizhuang.ATimeQ + tq_xizhuang.ATime;
 					break;
 				case "tq_dengtui":
-					yxZStime = yxZStime + tq_dengtui.ATimeQ + tq_dengtui.ATime;
+					AyxZStime = AyxZStime + tq_dengtui.ATimeQ + tq_dengtui.ATime;
 					break;
 				case "tq_shaotui":
-					yxZStime = yxZStime + tq_shaotui.ATimeQ + tq_shaotui.ATime;
+					AyxZStime = AyxZStime + tq_shaotui.ATimeQ + tq_shaotui.ATime;
 					break;
 			}
 			break;
@@ -1159,12 +1159,12 @@ function jiahuitime(zsName) {
 
 //剩余时间显示
 function xuanshisyTime() {
-	$("#xuanZSsyTime").html(yxZStime.toFixed(1));
+	$("#xuanZSsyTime").html(AyxZStime.toFixed(1));
 }
 
 //已选招式初始化
 function zschushihua() {
-	i_yixuanZS = 1;
+	i_AyixuanZS = 1;
 	switch (PaiBei_A) {
 		case "Taiji":
 			i_tj_panda = 1;
@@ -1191,7 +1191,8 @@ function zschushihua() {
 	AchoiceZS[2].zs_name = "";
 	AchoiceZS[3].zs_name = "";
 	AchoiceZS[4].zs_name = "";
-	yxZStime = 7.5;
+	AchoiceZS_bj = 0;
+	AyxZStime = 7.5;
 	shanchuZShou();
 }
 
@@ -1212,7 +1213,7 @@ Array.prototype.shuffle = function () {
 
 //敌方属性随机生成
 //[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
-function DFshuxingchushihua() {
+function Bshuxingchushihua() {
 	//0-100
 	var a = Math.floor(Math.random() * 101);
 	if (a <= 11) {
@@ -1338,10 +1339,11 @@ function shuijiPaibei() {
 	}
 }
 
-//随机招式
-function DifangshujiZS() {
-	var DFyxZStime = 7.5;
-	var i_DFyixuanZS = 0;
+//B随机招式
+function BshujiZS() {
+	var ByxZStime = 7.5;
+	//B招式数据边界
+	var i_ByixuanZS = 0;
 	do {
 		var a = 0; //可选招式数
 		var ZSjihe = Array(); //招式集合
@@ -1372,46 +1374,37 @@ function DifangshujiZS() {
 				Btj_banshuai.ATimeQ = true_tj_banshuai.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[1]);
 				Btj_banshuai.ATime = true_tj_banshuai.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[1]);
 
-				if ((Btj_panda.ATimeQ + Btj_panda.ATime).toFixed(1) <= DFyxZStime) {
+				if ((Btj_panda.ATimeQ + Btj_panda.ATime).toFixed(1) <= ByxZStime) {
 					ZSjihe[a] = "tj_panda";
 					a++;
 				}
-				if ((Btj_tuishou.ATimeQ + Btj_tuishou.ATime).toFixed(1) <= DFyxZStime) {
+				if ((Btj_tuishou.ATimeQ + Btj_tuishou.ATime).toFixed(1) <= ByxZStime) {
 					ZSjihe[a] = "tj_tuishou";
 					a++;
 				}
-				if ((Btj_qingna.ATimeQ + Btj_qingna.ATime).toFixed(1) <= DFyxZStime) {
+				if ((Btj_qingna.ATimeQ + Btj_qingna.ATime).toFixed(1) <= ByxZStime) {
 					ZSjihe[a] = "tj_qingna";
 					a++;
 				}
-				if ((Btj_shuangfong.ATimeQ + Btj_shuangfong.ATime).toFixed(1) <= DFyxZStime) {
+				if ((Btj_shuangfong.ATimeQ + Btj_shuangfong.ATime).toFixed(1) <= ByxZStime) {
 					ZSjihe[a] = "tj_shuangfong";
 					a++;
 				}
-				if ((Btj_zhoudicui.ATimeQ + Btj_zhoudicui.ATime).toFixed(1) <= DFyxZStime) {
+				if ((Btj_zhoudicui.ATimeQ + Btj_zhoudicui.ATime).toFixed(1) <= ByxZStime) {
 					ZSjihe[a] = "tj_zhoudicui";
 					a++;
 				}
-				if ((Btj_paocui.ATimeQ + Btj_paocui.ATime).toFixed(1) <= DFyxZStime) {
+				if ((Btj_paocui.ATimeQ + Btj_paocui.ATime).toFixed(1) <= ByxZStime) {
 					ZSjihe[a] = "tj_paocui";
 					a++;
 				}
-				if ((Btj_yuanyangtui.ATimeQ + Btj_yuanyangtui.ATime).toFixed(1) <= DFyxZStime) {
+				if ((Btj_yuanyangtui.ATimeQ + Btj_yuanyangtui.ATime).toFixed(1) <= ByxZStime) {
 					ZSjihe[a] = "tj_yuanyangtui";
 					a++;
 				}
-				if ((Btj_banshuai.ATimeQ + Btj_banshuai.ATime).toFixed(1) <= DFyxZStime) {
+				if ((Btj_banshuai.ATimeQ + Btj_banshuai.ATime).toFixed(1) <= ByxZStime) {
 					ZSjihe[a] = "tj_banshuai";
 					a++;
-				}
-				if (a === 0) {
-					BchoiceZS[i_DFyixuanZS].zs_name = "";
-				} else {
-					//[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
-					//共8个，数组后序为0-7，a++后a为8，
-					x = Math.floor(Math.random() * a);
-					BchoiceZS[i_DFyixuanZS].zs_name = ZSjihe[x];
-					BzsHouxuanBuwei(BchoiceZS[i_DFyixuanZS].zs_name, i_DFyixuanZS);
 				}
 				break;
 			case "Taiquan":
@@ -1436,51 +1429,55 @@ function DifangshujiZS() {
 				Btq_shaotui.ATimeQ = true_tq_shaotui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[1]);
 				Btq_shaotui.ATime = true_tq_shaotui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[1]);
 
-				if ((Btq_zhiquan.ATimeQ + Btq_zhiquan.ATime).toFixed(1) <= DFyxZStime) {
+				if ((Btq_zhiquan.ATimeQ + Btq_zhiquan.ATime).toFixed(1) <= ByxZStime) {
 					ZSjihe[a] = "tq_zhiquan";
 					a++;
 				}
-				if ((Btq_lrgouquan.ATimeQ + Btq_lrgouquan.ATime).toFixed(1) <= DFyxZStime) {
+				if ((Btq_lrgouquan.ATimeQ + Btq_lrgouquan.ATime).toFixed(1) <= ByxZStime) {
 					ZSjihe[a] = "tq_lrgouquan";
 					a++;
 				}
-				if ((Btq_sgouquan.ATimeQ + Btq_sgouquan.ATime).toFixed(1) <= DFyxZStime) {
+				if ((Btq_sgouquan.ATimeQ + Btq_sgouquan.ATime).toFixed(1) <= ByxZStime) {
 					ZSjihe[a] = "tq_sgouquan";
 					a++;
 				}
-				if ((Btq_zhouji.ATimeQ + Btq_zhouji.ATime).toFixed(1) <= DFyxZStime) {
+				if ((Btq_zhouji.ATimeQ + Btq_zhouji.ATime).toFixed(1) <= ByxZStime) {
 					ZSjihe[a] = "tq_zhouji";
 					a++;
 				}
-				if ((Btq_xizhuang.ATimeQ + Btq_xizhuang.ATime).toFixed(1) <= DFyxZStime) {
+				if ((Btq_xizhuang.ATimeQ + Btq_xizhuang.ATime).toFixed(1) <= ByxZStime) {
 					ZSjihe[a] = "tq_xizhuang";
 					a++;
 				}
-				if ((Btq_dengtui.ATimeQ + Btq_dengtui.ATime).toFixed(1) <= DFyxZStime) {
+				if ((Btq_dengtui.ATimeQ + Btq_dengtui.ATime).toFixed(1) <= ByxZStime) {
 					ZSjihe[a] = "tq_dengtui";
 					a++;
 				}
-				if ((Btq_shaotui.ATimeQ + Btq_shaotui.ATime).toFixed(1) <= DFyxZStime) {
+				if ((Btq_shaotui.ATimeQ + Btq_shaotui.ATime).toFixed(1) <= ByxZStime) {
 					ZSjihe[a] = "tq_shaotui";
 					a++;
 				}
-				if (a === 0) {
-					BchoiceZS[i_DFyixuanZS].zs_name = "";
-				} else {
-					//[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
-					x = Math.floor(Math.random() * a);
-					BchoiceZS[i_DFyixuanZS].zs_name = ZSjihe[x];
-					BzsHouxuanBuwei(BchoiceZS[i_DFyixuanZS].zs_name, i_DFyixuanZS);
-				}
 				break;
 		}
+		if (a === 0) {
+			BchoiceZS[i_ByixuanZS].zs_name = "";
+			BchoiceZS_bj = i_ByixuanZS - 1;
+			i_ByixuanZS = 5; //大于循环条件，跳出循环
+		} else {
+			//[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
+			//共8个，数组后序为0-7，a++后a为8，
+			x = Math.floor(Math.random() * a);
+			BchoiceZS[i_ByixuanZS].zs_name = ZSjihe[x];
+			BzsHouxuanBuwei(BchoiceZS[i_ByixuanZS].zs_name, i_ByixuanZS);
+		}
 		alert("a=" + a + "，" + "选第[" + x + "]招" + "\n" + BchoiceZS[0].zs_name + "\n" + BchoiceZS[1].zs_name + "\n" + BchoiceZS[2].zs_name + "\n" + BchoiceZS[3].zs_name + "\n" + BchoiceZS[4].zs_name);
-		i_DFyixuanZS++;
+		i_ByixuanZS++;
 	}
-	while (i_DFyixuanZS < 5);
+	while (i_ByixuanZS < 5);
 	alert(BchoiceZS[0].zs_name + "\n" + BchoiceZS[1].zs_name + "\n" + BchoiceZS[2].zs_name + "\n" + BchoiceZS[3].zs_name + "\n" + BchoiceZS[4].zs_name);
 }
 
+//B随机左右手与进攻部位
 function BzsHouxuanBuwei(zsname, a) {
 	var sjs = 0;
 	switch (zsname) {
@@ -2077,13 +2074,13 @@ function duruZSshuju(who, a) {
 }
 
 
-//选谁先发招，发啥招。a为第几招数组序号
-function ChoiceFirst(a) {
+//选谁先发招，发啥招。a为A第几招数组序号,b为B第几招数组序号
+function ChoiceFirst(a, b) {
 	switch (HadChoice_Who) {
 		case "A":
-			if (AchoiceZS[a].ATimeH + AchoiceZS[a].ATimeQ > BchoiceZS[a].ATimeQ) {
+			if (AchoiceZS[a].ATimeH + AchoiceZS[a].ATimeQ > BchoiceZS[b].ATimeQ) {
 				HadChoice_Who = "B";
-			} else if (AchoiceZS[a].ATimeH + AchoiceZS[a].ATimeQ < BchoiceZS[a].ATimeQ) {
+			} else if (AchoiceZS[a].ATimeH + AchoiceZS[a].ATimeQ < BchoiceZS[b].ATimeQ) {
 				HadChoice_Who = "A";
 			} else {
 				if (HadChoice_Who === "A") {
@@ -2094,9 +2091,9 @@ function ChoiceFirst(a) {
 			}
 			break;
 		case "B":
-			if (AchoiceZS[a].ATimeQ > BchoiceZS[a].ATimeH + BchoiceZS[a].ATimeQ) {
+			if (AchoiceZS[a].ATimeQ > BchoiceZS[b].ATimeH + BchoiceZS[b].ATimeQ) {
 				HadChoice_Who = "B";
-			} else if (AchoiceZS[a].ATimeQ < BchoiceZS[a].ATimeH + BchoiceZS[a].ATimeQ) {
+			} else if (AchoiceZS[a].ATimeQ < BchoiceZS[b].ATimeH + BchoiceZS[b].ATimeQ) {
 				HadChoice_Who = "A";
 			} else {
 				if (HadChoice_Who === "A") {
@@ -2107,9 +2104,9 @@ function ChoiceFirst(a) {
 			}
 			break;
 		case "":
-			if (AchoiceZS[a].ATimeQ > BchoiceZS[a].ATimeQ) {
+			if (AchoiceZS[a].ATimeQ > BchoiceZS[b].ATimeQ) {
 				HadChoice_Who = "B";
-			} else if (AchoiceZS[a].ATimeQ < BchoiceZS[a].ATimeQ) {
+			} else if (AchoiceZS[a].ATimeQ < BchoiceZS[b].ATimeQ) {
 				HadChoice_Who = "A";
 			} else {
 				if (HadChoice_Who === "A") {
@@ -2122,7 +2119,20 @@ function ChoiceFirst(a) {
 	}
 }
 
+//输出战斗文本
+function shuchuZDwenben() {
+
+}
+
 //战斗总框架
 function fighting() {
-	ChoiceFirst();
+	//a为A第几招数组序号,b为B第几招数组序号
+	var a = 0;
+	var b = 0;
+	ChoiceFirst(a, b);
+	if (HadChoice_Who === "A") {
+		a++;
+	} else {
+		b++;
+	}
 }
