@@ -2077,23 +2077,47 @@ function duruZSshuju(who, a) {
 }
 
 
-//选谁先发招，发啥招
-function ChoiceFirst() {
-
+//选谁先发招，发啥招。a为第几招数组序号
+function ChoiceFirst(a) {
 	switch (HadChoice_Who) {
-		case "":
-
-
-
-
-			if (AchoiceZS[0] > BchoiceZS[0]) {
-
+		case "A":
+			if (AchoiceZS[a].ATimeH + AchoiceZS[a].ATimeQ > BchoiceZS[a].ATimeQ) {
+				HadChoice_Who = "B";
+			} else if (AchoiceZS[a].ATimeH + AchoiceZS[a].ATimeQ < BchoiceZS[a].ATimeQ) {
+				HadChoice_Who = "A";
+			} else {
+				if (HadChoice_Who === "A") {
+					HadChoice_Who = "B";
+				} else {
+					HadChoice_Who === "A";
+				}
 			}
 			break;
-		case "A":
-
-			break;
 		case "B":
+			if (AchoiceZS[a].ATimeQ > BchoiceZS[a].ATimeH + BchoiceZS[a].ATimeQ) {
+				HadChoice_Who = "B";
+			} else if (AchoiceZS[a].ATimeQ < BchoiceZS[a].ATimeH + BchoiceZS[a].ATimeQ) {
+				HadChoice_Who = "A";
+			} else {
+				if (HadChoice_Who === "A") {
+					HadChoice_Who = "B";
+				} else {
+					HadChoice_Who === "A";
+				}
+			}
+			break;
+		case "":
+			if (AchoiceZS[a].ATimeQ > BchoiceZS[a].ATimeQ) {
+				HadChoice_Who = "B";
+			} else if (AchoiceZS[a].ATimeQ < BchoiceZS[a].ATimeQ) {
+				HadChoice_Who = "A";
+			} else {
+				if (HadChoice_Who === "A") {
+					HadChoice_Who = "B";
+				} else {
+					HadChoice_Who === "A";
+				}
+			}
 			break;
 	}
 }
