@@ -784,13 +784,6 @@ html, body {
 	border-left: 10px solid #2d83ea;
 	border-right: 10px solid #2d83ea;
 }
-.NeiRongKuangzz2 {
-	width: 500px;
-	height: 470px;
-	margin: 8px;
-	z-index: 2;
-	position: relative;
-}
 .TuKuangTitle0 {
 	float: left;
 	margin: 16px 16px 0px 16px;
@@ -1490,4 +1483,20 @@ background: #a50000;}
 }
 .choiceXiaLa{
 	width: 65px;
+}
+.NeiRongKuangzz2 {
+	width: 500px;
+	height: 470px;
+	margin: 8px;
+	z-index: 2;
+	position: relative;
+}
+#ZDwenbenWK {
+	position: relative;
+	float: left;
+	width:480px;
+	height: 430px;
+	margin-left: 10px;
+	margin-top: 20px;
+	overflow: hidden;
 }

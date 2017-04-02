@@ -1101,8 +1101,9 @@ $(document).ready(function () {
 		window.HadChoice_Who = "";
 		//挑选发动的招式
 		window.HadChoice_What = "";
-		//先发动招式的后摇时间
-		window.HadChoice_ATimeH = 0;
+		//已选招式数组序号
+		window.HadChoice_Aa = 0;
+		window.HadChoice_Bb = 0;
 
 		var i = 0;
 		//slice(6, -2)从第6个后截取，到倒数第3个。
@@ -1168,7 +1169,7 @@ $(document).ready(function () {
 			i++;
 		});
 		AchoiceZS_bj = i - 1;
-		alert(AchoiceZS[0].zs_name + " " + AchoiceZS[0].zs_frome + " " + AchoiceZS[0].zs_to + " " + AchoiceZS[0].zs_torl + "\n" + AchoiceZS[1].zs_name + " " + AchoiceZS[1].zs_frome + " " + AchoiceZS[1].zs_to + " " + AchoiceZS[1].zs_torl + "\n" + AchoiceZS[2].zs_name + " " + AchoiceZS[2].zs_frome + " " + AchoiceZS[2].zs_to + " " + AchoiceZS[2].zs_torl + "\n" + AchoiceZS[3].zs_name + " " + AchoiceZS[3].zs_frome + " " + AchoiceZS[3].zs_to + " " + AchoiceZS[3].zs_torl + "\n" + AchoiceZS[4].zs_name + " " + AchoiceZS[4].zs_frome + " " + AchoiceZS[4].zs_to + " " + AchoiceZS[4].zs_torl); //把排序的ID弹出
+		//alert(AchoiceZS[0].zs_name + " " + AchoiceZS[0].zs_frome + " " + AchoiceZS[0].zs_to + " " + AchoiceZS[0].zs_torl + "\n" + AchoiceZS[1].zs_name + " " + AchoiceZS[1].zs_frome + " " + AchoiceZS[1].zs_to + " " + AchoiceZS[1].zs_torl + "\n" + AchoiceZS[2].zs_name + " " + AchoiceZS[2].zs_frome + " " + AchoiceZS[2].zs_to + " " + AchoiceZS[2].zs_torl + "\n" + AchoiceZS[3].zs_name + " " + AchoiceZS[3].zs_frome + " " + AchoiceZS[3].zs_to + " " + AchoiceZS[3].zs_torl + "\n" + AchoiceZS[4].zs_name + " " + AchoiceZS[4].zs_frome + " " + AchoiceZS[4].zs_to + " " + AchoiceZS[4].zs_torl); //把排序的ID弹出
 		$("#StartButtomYuanKuang").removeClass("yuan_blue").addClass("yuan_red");
 		$("#NeiRongchoiceZSdaK").hide("drop", {
 			direction: 'up'
@@ -2000,6 +2001,10 @@ $(document).ready(function () {
 		}
 	);
 
+	//初始化滚动条
+	$(function ($) {
+		$("#ZDwenbenWK").perfectScrollbar();
+	});
 
 
 

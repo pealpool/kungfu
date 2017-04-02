@@ -1470,11 +1470,11 @@ function BshujiZS() {
 			BchoiceZS[i_ByixuanZS].zs_name = ZSjihe[x];
 			BzsHouxuanBuwei(BchoiceZS[i_ByixuanZS].zs_name, i_ByixuanZS);
 		}
-		alert("a=" + a + "，" + "选第[" + x + "]招" + "\n" + BchoiceZS[0].zs_name + "\n" + BchoiceZS[1].zs_name + "\n" + BchoiceZS[2].zs_name + "\n" + BchoiceZS[3].zs_name + "\n" + BchoiceZS[4].zs_name);
+		//alert("a=" + a + "，" + "选第[" + x + "]招" + "\n" + BchoiceZS[0].zs_name + "\n" + BchoiceZS[1].zs_name + "\n" + BchoiceZS[2].zs_name + "\n" + BchoiceZS[3].zs_name + "\n" + BchoiceZS[4].zs_name);
 		i_ByixuanZS++;
 	}
 	while (i_ByixuanZS < 5);
-	alert(BchoiceZS[0].zs_name + "\n" + BchoiceZS[1].zs_name + "\n" + BchoiceZS[2].zs_name + "\n" + BchoiceZS[3].zs_name + "\n" + BchoiceZS[4].zs_name);
+	//alert(BchoiceZS[0].zs_name + "\n" + BchoiceZS[1].zs_name + "\n" + BchoiceZS[2].zs_name + "\n" + BchoiceZS[3].zs_name + "\n" + BchoiceZS[4].zs_name);
 }
 
 //B随机左右手与进攻部位
@@ -2080,39 +2080,51 @@ function ChoiceFirst(a, b) {
 		case "A":
 			if (AchoiceZS[a].ATimeH + AchoiceZS[a].ATimeQ > BchoiceZS[b].ATimeQ) {
 				HadChoice_Who = "B";
+				HadChoice_Bb = b;
 			} else if (AchoiceZS[a].ATimeH + AchoiceZS[a].ATimeQ < BchoiceZS[b].ATimeQ) {
 				HadChoice_Who = "A";
+				HadChoice_Aa = a;
 			} else {
 				if (HadChoice_Who === "A") {
 					HadChoice_Who = "B";
+					HadChoice_Bb = b;
 				} else {
-					HadChoice_Who === "A";
+					HadChoice_Who = "A";
+					HadChoice_Aa = a;
 				}
 			}
 			break;
 		case "B":
 			if (AchoiceZS[a].ATimeQ > BchoiceZS[b].ATimeH + BchoiceZS[b].ATimeQ) {
 				HadChoice_Who = "B";
+				HadChoice_Bb = b;
 			} else if (AchoiceZS[a].ATimeQ < BchoiceZS[b].ATimeH + BchoiceZS[b].ATimeQ) {
 				HadChoice_Who = "A";
+				HadChoice_Aa = a;
 			} else {
 				if (HadChoice_Who === "A") {
 					HadChoice_Who = "B";
+					HadChoice_Bb = b;
 				} else {
-					HadChoice_Who === "A";
+					HadChoice_Who = "A";
+					HadChoice_Aa = a;
 				}
 			}
 			break;
 		case "":
 			if (AchoiceZS[a].ATimeQ > BchoiceZS[b].ATimeQ) {
 				HadChoice_Who = "B";
+				HadChoice_Bb = b;
 			} else if (AchoiceZS[a].ATimeQ < BchoiceZS[b].ATimeQ) {
 				HadChoice_Who = "A";
+				HadChoice_Aa = a;
 			} else {
 				if (HadChoice_Who === "A") {
 					HadChoice_Who = "B";
+					HadChoice_Bb = b;
 				} else {
-					HadChoice_Who === "A";
+					HadChoice_Who = "A";
+					HadChoice_Aa = a;
 				}
 			}
 			break;
@@ -2121,7 +2133,11 @@ function ChoiceFirst(a, b) {
 
 //输出战斗文本
 function shuchuZDwenben() {
-
+	if (HadChoice_Who === "A") {
+		$("#ZDwenbenWK").prepend("<div>" + "A," + AchoiceZS[HadChoice_Aa].zs_name + "</div>");
+	} else {
+		$("#ZDwenbenWK").prepend("<div>" + "B," + BchoiceZS[HadChoice_Bb].zs_name + "</div>");
+	}
 }
 
 //战斗总框架
@@ -2129,10 +2145,17 @@ function fighting() {
 	//a为A第几招数组序号,b为B第几招数组序号
 	var a = 0;
 	var b = 0;
-	ChoiceFirst(a, b);
-	if (HadChoice_Who === "A") {
-		a++;
-	} else {
-		b++;
-	}
+	do {
+		ChoiceFirst(a, b);
+		if (HadChoice_Who === "A") {
+			if (a < AchoiceZS_bj) {
+				a++;
+			}
+		} else {
+			if (b < BchoiceZS_bj) {
+				b++;
+			}
+		}
+		shuchuZDwenben();
+	} while (a < AchoiceZS_bj || b < BchoiceZS_bj);
 }
