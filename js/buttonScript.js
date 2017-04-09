@@ -1926,157 +1926,318 @@ function BzsHouxuanBuwei(zsname, a) {
 
 //读入招式数据,who为我0，或敌1;a为招式数组号
 function duruZSshuju(who, a) {
-	switch (AchoiceZS[a].zs_name) {
-		case "tj_panda":
-			AchoiceZS[a].AttW = true_tj_panda.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].AttN = true_tj_panda.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].ATimeQ = true_tj_panda.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
-			AchoiceZS[a].ATime = true_tj_panda.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
-			AchoiceZS[a].ATimeH = true_tj_panda.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
-			AchoiceZS[a].Mzxz = true_tj_panda.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
-			AchoiceZS[a].PinHengAtt = true_tj_panda.PinHengAtt;
-			AchoiceZS[a].PinHengXH = true_tj_panda.PinHengXH;
-			break;
-		case "tj_tuishou":
-			AchoiceZS[a].AttW = true_tj_tuishou.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].AttN = true_tj_tuishou.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].ATimeQ = true_tj_tuishou.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
-			AchoiceZS[a].ATime = true_tj_tuishou.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
-			AchoiceZS[a].ATimeH = true_tj_tuishou.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
-			AchoiceZS[a].Mzxz = true_tj_tuishou.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
-			AchoiceZS[a].PinHengAtt = true_tj_tuishou.PinHengAtt;
-			AchoiceZS[a].PinHengXH = true_tj_tuishou.PinHengXH;
-			break;
-		case "tj_qingna":
-			AchoiceZS[a].AttW = true_tj_qingna.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].AttN = true_tj_qingna.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].ATimeQ = true_tj_qingna.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
-			AchoiceZS[a].ATime = true_tj_qingna.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
-			AchoiceZS[a].ATimeH = true_tj_qingna.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
-			AchoiceZS[a].Mzxz = true_tj_qingna.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
-			AchoiceZS[a].PinHengAtt = true_tj_qingna.PinHengAtt;
-			AchoiceZS[a].PinHengXH = true_tj_qingna.PinHengXH;
-			break;
-		case "tj_shuangfong":
-			AchoiceZS[a].AttW = true_tj_shuangfong.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].AttN = true_tj_shuangfong.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].ATimeQ = true_tj_shuangfong.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
-			AchoiceZS[a].ATime = true_tj_shuangfong.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
-			AchoiceZS[a].ATimeH = true_tj_shuangfong.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
-			AchoiceZS[a].Mzxz = true_tj_shuangfong.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
-			AchoiceZS[a].PinHengAtt = true_tj_shuangfong.PinHengAtt;
-			AchoiceZS[a].PinHengXH = true_tj_shuangfong.PinHengXH;
-			break;
-		case "tj_zhoudicui":
-			AchoiceZS[a].AttW = true_tj_zhoudicui.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].AttN = true_tj_zhoudicui.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].ATimeQ = true_tj_zhoudicui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
-			AchoiceZS[a].ATime = true_tj_zhoudicui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
-			AchoiceZS[a].ATimeH = true_tj_zhoudicui.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
-			AchoiceZS[a].Mzxz = true_tj_zhoudicui.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
-			AchoiceZS[a].PinHengAtt = true_tj_zhoudicui.PinHengAtt;
-			AchoiceZS[a].PinHengXH = true_tj_zhoudicui.PinHengXH;
-			break;
-		case "tj_paocui":
-			AchoiceZS[a].AttW = true_tj_paocui.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].AttN = true_tj_paocui.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].ATimeQ = true_tj_paocui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
-			AchoiceZS[a].ATime = true_tj_paocui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
-			AchoiceZS[a].ATimeH = true_tj_paocui.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
-			AchoiceZS[a].Mzxz = true_tj_paocui.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
-			AchoiceZS[a].PinHengAtt = true_tj_paocui.PinHengAtt;
-			AchoiceZS[a].PinHengXH = true_tj_paocui.PinHengXH;
-			break;
-		case "tj_yuanyangtui":
-			AchoiceZS[a].AttW = true_tj_yuanyangtui.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].AttN = true_tj_yuanyangtui.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].ATimeQ = true_tj_yuanyangtui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
-			AchoiceZS[a].ATime = true_tj_yuanyangtui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
-			AchoiceZS[a].ATimeH = true_tj_yuanyangtui.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
-			AchoiceZS[a].Mzxz = true_tj_yuanyangtui.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
-			AchoiceZS[a].PinHengAtt = true_tj_yuanyangtui.PinHengAtt;
-			AchoiceZS[a].PinHengXH = true_tj_yuanyangtui.PinHengXH;
-			break;
-		case "tj_banshuai":
-			AchoiceZS[a].AttW = true_tj_banshuai.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].AttN = true_tj_banshuai.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].ATimeQ = true_tj_banshuai.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
-			AchoiceZS[a].ATime = true_tj_banshuai.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
-			AchoiceZS[a].ATimeH = true_tj_banshuai.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
-			AchoiceZS[a].Mzxz = true_tj_banshuai.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
-			AchoiceZS[a].PinHengAtt = true_tj_banshuai.PinHengAtt;
-			AchoiceZS[a].PinHengXH = true_tj_banshuai.PinHengXH;
-			break;
-		case "tq_zhiquan":
-			AchoiceZS[a].AttW = true_tq_zhiquan.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].AttN = true_tq_zhiquan.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].ATimeQ = true_tq_zhiquan.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
-			AchoiceZS[a].ATime = true_tq_zhiquan.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
-			AchoiceZS[a].ATimeH = true_tq_zhiquan.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
-			AchoiceZS[a].Mzxz = true_tq_zhiquan.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
-			AchoiceZS[a].PinHengAtt = true_tq_zhiquan.PinHengAtt;
-			AchoiceZS[a].PinHengXH = true_tq_zhiquan.PinHengXH;
-			break;
-		case "tq_lrgouquan":
-			AchoiceZS[a].AttW = true_tq_lrgouquan.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].AttN = true_tq_lrgouquan.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].ATimeQ = true_tq_lrgouquan.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
-			AchoiceZS[a].ATime = true_tq_lrgouquan.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
-			AchoiceZS[a].ATimeH = true_tq_lrgouquan.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
-			AchoiceZS[a].Mzxz = true_tq_lrgouquan.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
-			AchoiceZS[a].PinHengAtt = true_tq_lrgouquan.PinHengAtt;
-			AchoiceZS[a].PinHengXH = true_tq_lrgouquan.PinHengXH;
-			break;
-		case "tq_sgouquan":
-			AchoiceZS[a].AttW = true_tq_sgouquan.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].AttN = true_tq_sgouquan.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].ATimeQ = true_tq_sgouquan.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
-			AchoiceZS[a].ATime = true_tq_sgouquan.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
-			AchoiceZS[a].ATimeH = true_tq_sgouquan.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
-			AchoiceZS[a].Mzxz = true_tq_sgouquan.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
-			AchoiceZS[a].PinHengAtt = true_tq_sgouquan.PinHengAtt;
-			AchoiceZS[a].PinHengXH = true_tq_sgouquan.PinHengXH;
-			break;
-		case "tq_zhouji":
-			AchoiceZS[a].AttW = true_tq_zhouji.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].AttN = true_tq_zhouji.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].ATimeQ = true_tq_zhouji.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
-			AchoiceZS[a].ATime = true_tq_zhouji.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
-			AchoiceZS[a].ATimeH = true_tq_zhouji.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
-			AchoiceZS[a].Mzxz = true_tq_zhouji.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
-			AchoiceZS[a].PinHengAtt = true_tq_zhouji.PinHengAtt;
-			AchoiceZS[a].PinHengXH = true_tq_zhouji.PinHengXH;
-			break;
-		case "tq_xizhuang":
-			AchoiceZS[a].AttW = true_tq_xizhuang.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].AttN = true_tq_xizhuang.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].ATimeQ = true_tq_xizhuang.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
-			AchoiceZS[a].ATime = true_tq_xizhuang.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
-			AchoiceZS[a].ATimeH = true_tq_xizhuang.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
-			AchoiceZS[a].Mzxz = true_tq_xizhuang.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
-			AchoiceZS[a].PinHengAtt = true_tq_xizhuang.PinHengAtt;
-			AchoiceZS[a].PinHengXH = true_tq_xizhuang.PinHengXH;
-			break;
-		case "tq_dengtui":
-			AchoiceZS[a].AttW = true_tq_dengtui.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].AttN = true_tq_dengtui.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].ATimeQ = true_tq_dengtui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
-			AchoiceZS[a].ATime = true_tq_dengtui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
-			AchoiceZS[a].ATimeH = true_tq_dengtui.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
-			AchoiceZS[a].Mzxz = true_tq_dengtui.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
-			AchoiceZS[a].PinHengAtt = true_tq_dengtui.PinHengAtt;
-			AchoiceZS[a].PinHengXH = true_tq_dengtui.PinHengXH;
-			break;
-		case "tq_shaotui":
-			AchoiceZS[a].AttW = true_tq_shaotui.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].AttN = true_tq_shaotui.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
-			AchoiceZS[a].ATimeQ = true_tq_shaotui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
-			AchoiceZS[a].ATime = true_tq_shaotui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
-			AchoiceZS[a].ATimeH = true_tq_shaotui.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
-			AchoiceZS[a].Mzxz = true_tq_shaotui.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
-			AchoiceZS[a].PinHengAtt = true_tq_shaotui.PinHengAtt;
-			AchoiceZS[a].PinHengXH = true_tq_shaotui.PinHengXH;
-			break;
+	if (who === 0) {
+		switch (AchoiceZS[a].zs_name.toString()) {
+			case "tj_panda":
+				AchoiceZS[a].AttW = true_tj_panda.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].AttN = true_tj_panda.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].ATimeQ = true_tj_panda.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				AchoiceZS[a].ATime = true_tj_panda.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				AchoiceZS[a].ATimeH = true_tj_panda.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				AchoiceZS[a].Mzxz = true_tj_panda.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				AchoiceZS[a].PinHengAtt = true_tj_panda.PinHengAtt;
+				AchoiceZS[a].PinHengXH = true_tj_panda.PinHengXH;
+				alert(AchoiceZS[a].zs_name);
+				break;
+			case "tj_tuishou":
+				AchoiceZS[a].AttW = true_tj_tuishou.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].AttN = true_tj_tuishou.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].ATimeQ = true_tj_tuishou.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				AchoiceZS[a].ATime = true_tj_tuishou.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				AchoiceZS[a].ATimeH = true_tj_tuishou.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				AchoiceZS[a].Mzxz = true_tj_tuishou.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				AchoiceZS[a].PinHengAtt = true_tj_tuishou.PinHengAtt;
+				AchoiceZS[a].PinHengXH = true_tj_tuishou.PinHengXH;
+				break;
+			case "tj_qingna":
+				AchoiceZS[a].AttW = true_tj_qingna.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].AttN = true_tj_qingna.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].ATimeQ = true_tj_qingna.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				AchoiceZS[a].ATime = true_tj_qingna.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				AchoiceZS[a].ATimeH = true_tj_qingna.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				AchoiceZS[a].Mzxz = true_tj_qingna.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				AchoiceZS[a].PinHengAtt = true_tj_qingna.PinHengAtt;
+				AchoiceZS[a].PinHengXH = true_tj_qingna.PinHengXH;
+				break;
+			case "tj_shuangfong":
+				AchoiceZS[a].AttW = true_tj_shuangfong.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].AttN = true_tj_shuangfong.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].ATimeQ = true_tj_shuangfong.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				AchoiceZS[a].ATime = true_tj_shuangfong.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				AchoiceZS[a].ATimeH = true_tj_shuangfong.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				AchoiceZS[a].Mzxz = true_tj_shuangfong.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				AchoiceZS[a].PinHengAtt = true_tj_shuangfong.PinHengAtt;
+				AchoiceZS[a].PinHengXH = true_tj_shuangfong.PinHengXH;
+				break;
+			case "tj_zhoudicui":
+				AchoiceZS[a].AttW = true_tj_zhoudicui.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].AttN = true_tj_zhoudicui.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].ATimeQ = true_tj_zhoudicui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				AchoiceZS[a].ATime = true_tj_zhoudicui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				AchoiceZS[a].ATimeH = true_tj_zhoudicui.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				AchoiceZS[a].Mzxz = true_tj_zhoudicui.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				AchoiceZS[a].PinHengAtt = true_tj_zhoudicui.PinHengAtt;
+				AchoiceZS[a].PinHengXH = true_tj_zhoudicui.PinHengXH;
+				break;
+			case "tj_paocui":
+				AchoiceZS[a].AttW = true_tj_paocui.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].AttN = true_tj_paocui.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].ATimeQ = true_tj_paocui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				AchoiceZS[a].ATime = true_tj_paocui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				AchoiceZS[a].ATimeH = true_tj_paocui.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				AchoiceZS[a].Mzxz = true_tj_paocui.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				AchoiceZS[a].PinHengAtt = true_tj_paocui.PinHengAtt;
+				AchoiceZS[a].PinHengXH = true_tj_paocui.PinHengXH;
+				break;
+			case "tj_yuanyangtui":
+				AchoiceZS[a].AttW = true_tj_yuanyangtui.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].AttN = true_tj_yuanyangtui.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].ATimeQ = true_tj_yuanyangtui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				AchoiceZS[a].ATime = true_tj_yuanyangtui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				AchoiceZS[a].ATimeH = true_tj_yuanyangtui.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				AchoiceZS[a].Mzxz = true_tj_yuanyangtui.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				AchoiceZS[a].PinHengAtt = true_tj_yuanyangtui.PinHengAtt;
+				AchoiceZS[a].PinHengXH = true_tj_yuanyangtui.PinHengXH;
+				break;
+			case "tj_banshuai":
+				AchoiceZS[a].AttW = true_tj_banshuai.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].AttN = true_tj_banshuai.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].ATimeQ = true_tj_banshuai.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				AchoiceZS[a].ATime = true_tj_banshuai.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				AchoiceZS[a].ATimeH = true_tj_banshuai.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				AchoiceZS[a].Mzxz = true_tj_banshuai.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				AchoiceZS[a].PinHengAtt = true_tj_banshuai.PinHengAtt;
+				AchoiceZS[a].PinHengXH = true_tj_banshuai.PinHengXH;
+				break;
+			case "tq_zhiquan":
+				AchoiceZS[a].AttW = true_tq_zhiquan.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].AttN = true_tq_zhiquan.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].ATimeQ = true_tq_zhiquan.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				AchoiceZS[a].ATime = true_tq_zhiquan.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				AchoiceZS[a].ATimeH = true_tq_zhiquan.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				AchoiceZS[a].Mzxz = true_tq_zhiquan.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				AchoiceZS[a].PinHengAtt = true_tq_zhiquan.PinHengAtt;
+				AchoiceZS[a].PinHengXH = true_tq_zhiquan.PinHengXH;
+				break;
+			case "tq_lrgouquan":
+				AchoiceZS[a].AttW = true_tq_lrgouquan.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].AttN = true_tq_lrgouquan.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].ATimeQ = true_tq_lrgouquan.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				AchoiceZS[a].ATime = true_tq_lrgouquan.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				AchoiceZS[a].ATimeH = true_tq_lrgouquan.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				AchoiceZS[a].Mzxz = true_tq_lrgouquan.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				AchoiceZS[a].PinHengAtt = true_tq_lrgouquan.PinHengAtt;
+				AchoiceZS[a].PinHengXH = true_tq_lrgouquan.PinHengXH;
+				break;
+			case "tq_sgouquan":
+				AchoiceZS[a].AttW = true_tq_sgouquan.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].AttN = true_tq_sgouquan.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].ATimeQ = true_tq_sgouquan.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				AchoiceZS[a].ATime = true_tq_sgouquan.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				AchoiceZS[a].ATimeH = true_tq_sgouquan.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				AchoiceZS[a].Mzxz = true_tq_sgouquan.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				AchoiceZS[a].PinHengAtt = true_tq_sgouquan.PinHengAtt;
+				AchoiceZS[a].PinHengXH = true_tq_sgouquan.PinHengXH;
+				break;
+			case "tq_zhouji":
+				AchoiceZS[a].AttW = true_tq_zhouji.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].AttN = true_tq_zhouji.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].ATimeQ = true_tq_zhouji.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				AchoiceZS[a].ATime = true_tq_zhouji.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				AchoiceZS[a].ATimeH = true_tq_zhouji.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				AchoiceZS[a].Mzxz = true_tq_zhouji.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				AchoiceZS[a].PinHengAtt = true_tq_zhouji.PinHengAtt;
+				AchoiceZS[a].PinHengXH = true_tq_zhouji.PinHengXH;
+				break;
+			case "tq_xizhuang":
+				AchoiceZS[a].AttW = true_tq_xizhuang.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].AttN = true_tq_xizhuang.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].ATimeQ = true_tq_xizhuang.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				AchoiceZS[a].ATime = true_tq_xizhuang.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				AchoiceZS[a].ATimeH = true_tq_xizhuang.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				AchoiceZS[a].Mzxz = true_tq_xizhuang.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				AchoiceZS[a].PinHengAtt = true_tq_xizhuang.PinHengAtt;
+				AchoiceZS[a].PinHengXH = true_tq_xizhuang.PinHengXH;
+				break;
+			case "tq_dengtui":
+				AchoiceZS[a].AttW = true_tq_dengtui.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].AttN = true_tq_dengtui.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].ATimeQ = true_tq_dengtui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				AchoiceZS[a].ATime = true_tq_dengtui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				AchoiceZS[a].ATimeH = true_tq_dengtui.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				AchoiceZS[a].Mzxz = true_tq_dengtui.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				AchoiceZS[a].PinHengAtt = true_tq_dengtui.PinHengAtt;
+				AchoiceZS[a].PinHengXH = true_tq_dengtui.PinHengXH;
+				break;
+			case "tq_shaotui":
+				AchoiceZS[a].AttW = true_tq_shaotui.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].AttN = true_tq_shaotui.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				AchoiceZS[a].ATimeQ = true_tq_shaotui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				AchoiceZS[a].ATime = true_tq_shaotui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				AchoiceZS[a].ATimeH = true_tq_shaotui.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				AchoiceZS[a].Mzxz = true_tq_shaotui.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				AchoiceZS[a].PinHengAtt = true_tq_shaotui.PinHengAtt;
+				AchoiceZS[a].PinHengXH = true_tq_shaotui.PinHengXH;
+				break;
+			default:
+				alert("default");
+				break;
+		}
+		//alert("aaa" + AchoiceZS[a].ATimeQ);
+	} else {
+		switch (BchoiceZS[a].zs_name) {
+			case "tj_panda":
+				BchoiceZS[a].AttW = true_tj_panda.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].AttN = true_tj_panda.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].ATimeQ = true_tj_panda.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				BchoiceZS[a].ATime = true_tj_panda.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				BchoiceZS[a].ATimeH = true_tj_panda.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				BchoiceZS[a].Mzxz = true_tj_panda.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				BchoiceZS[a].PinHengAtt = true_tj_panda.PinHengAtt;
+				BchoiceZS[a].PinHengXH = true_tj_panda.PinHengXH;
+				break;
+			case "tj_tuishou":
+				BchoiceZS[a].AttW = true_tj_tuishou.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].AttN = true_tj_tuishou.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].ATimeQ = true_tj_tuishou.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				BchoiceZS[a].ATime = true_tj_tuishou.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				BchoiceZS[a].ATimeH = true_tj_tuishou.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				BchoiceZS[a].Mzxz = true_tj_tuishou.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				BchoiceZS[a].PinHengAtt = true_tj_tuishou.PinHengAtt;
+				BchoiceZS[a].PinHengXH = true_tj_tuishou.PinHengXH;
+				break;
+			case "tj_qingna":
+				BchoiceZS[a].AttW = true_tj_qingna.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].AttN = true_tj_qingna.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].ATimeQ = true_tj_qingna.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				BchoiceZS[a].ATime = true_tj_qingna.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				BchoiceZS[a].ATimeH = true_tj_qingna.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				BchoiceZS[a].Mzxz = true_tj_qingna.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				BchoiceZS[a].PinHengAtt = true_tj_qingna.PinHengAtt;
+				BchoiceZS[a].PinHengXH = true_tj_qingna.PinHengXH;
+				break;
+			case "tj_shuangfong":
+				BchoiceZS[a].AttW = true_tj_shuangfong.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].AttN = true_tj_shuangfong.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].ATimeQ = true_tj_shuangfong.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				BchoiceZS[a].ATime = true_tj_shuangfong.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				BchoiceZS[a].ATimeH = true_tj_shuangfong.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				BchoiceZS[a].Mzxz = true_tj_shuangfong.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				BchoiceZS[a].PinHengAtt = true_tj_shuangfong.PinHengAtt;
+				BchoiceZS[a].PinHengXH = true_tj_shuangfong.PinHengXH;
+				break;
+			case "tj_zhoudicui":
+				BchoiceZS[a].AttW = true_tj_zhoudicui.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].AttN = true_tj_zhoudicui.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].ATimeQ = true_tj_zhoudicui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				BchoiceZS[a].ATime = true_tj_zhoudicui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				BchoiceZS[a].ATimeH = true_tj_zhoudicui.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				BchoiceZS[a].Mzxz = true_tj_zhoudicui.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				BchoiceZS[a].PinHengAtt = true_tj_zhoudicui.PinHengAtt;
+				BchoiceZS[a].PinHengXH = true_tj_zhoudicui.PinHengXH;
+				break;
+			case "tj_paocui":
+				BchoiceZS[a].AttW = true_tj_paocui.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].AttN = true_tj_paocui.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].ATimeQ = true_tj_paocui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				BchoiceZS[a].ATime = true_tj_paocui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				BchoiceZS[a].ATimeH = true_tj_paocui.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				BchoiceZS[a].Mzxz = true_tj_paocui.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				BchoiceZS[a].PinHengAtt = true_tj_paocui.PinHengAtt;
+				BchoiceZS[a].PinHengXH = true_tj_paocui.PinHengXH;
+				break;
+			case "tj_yuanyangtui":
+				BchoiceZS[a].AttW = true_tj_yuanyangtui.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].AttN = true_tj_yuanyangtui.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].ATimeQ = true_tj_yuanyangtui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				BchoiceZS[a].ATime = true_tj_yuanyangtui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				BchoiceZS[a].ATimeH = true_tj_yuanyangtui.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				BchoiceZS[a].Mzxz = true_tj_yuanyangtui.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				BchoiceZS[a].PinHengAtt = true_tj_yuanyangtui.PinHengAtt;
+				BchoiceZS[a].PinHengXH = true_tj_yuanyangtui.PinHengXH;
+				break;
+			case "tj_banshuai":
+				BchoiceZS[a].AttW = true_tj_banshuai.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].AttN = true_tj_banshuai.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].ATimeQ = true_tj_banshuai.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				BchoiceZS[a].ATime = true_tj_banshuai.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				BchoiceZS[a].ATimeH = true_tj_banshuai.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				BchoiceZS[a].Mzxz = true_tj_banshuai.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				BchoiceZS[a].PinHengAtt = true_tj_banshuai.PinHengAtt;
+				BchoiceZS[a].PinHengXH = true_tj_banshuai.PinHengXH;
+				break;
+			case "tq_zhiquan":
+				BchoiceZS[a].AttW = true_tq_zhiquan.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].AttN = true_tq_zhiquan.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].ATimeQ = true_tq_zhiquan.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				BchoiceZS[a].ATime = true_tq_zhiquan.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				BchoiceZS[a].ATimeH = true_tq_zhiquan.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				BchoiceZS[a].Mzxz = true_tq_zhiquan.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				BchoiceZS[a].PinHengAtt = true_tq_zhiquan.PinHengAtt;
+				BchoiceZS[a].PinHengXH = true_tq_zhiquan.PinHengXH;
+				break;
+			case "tq_lrgouquan":
+				BchoiceZS[a].AttW = true_tq_lrgouquan.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].AttN = true_tq_lrgouquan.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].ATimeQ = true_tq_lrgouquan.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				BchoiceZS[a].ATime = true_tq_lrgouquan.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				BchoiceZS[a].ATimeH = true_tq_lrgouquan.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				BchoiceZS[a].Mzxz = true_tq_lrgouquan.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				BchoiceZS[a].PinHengAtt = true_tq_lrgouquan.PinHengAtt;
+				BchoiceZS[a].PinHengXH = true_tq_lrgouquan.PinHengXH;
+				break;
+			case "tq_sgouquan":
+				BchoiceZS[a].AttW = true_tq_sgouquan.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].AttN = true_tq_sgouquan.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].ATimeQ = true_tq_sgouquan.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				BchoiceZS[a].ATime = true_tq_sgouquan.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				BchoiceZS[a].ATimeH = true_tq_sgouquan.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				BchoiceZS[a].Mzxz = true_tq_sgouquan.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				BchoiceZS[a].PinHengAtt = true_tq_sgouquan.PinHengAtt;
+				BchoiceZS[a].PinHengXH = true_tq_sgouquan.PinHengXH;
+				break;
+			case "tq_zhouji":
+				BchoiceZS[a].AttW = true_tq_zhouji.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].AttN = true_tq_zhouji.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].ATimeQ = true_tq_zhouji.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				BchoiceZS[a].ATime = true_tq_zhouji.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				BchoiceZS[a].ATimeH = true_tq_zhouji.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				BchoiceZS[a].Mzxz = true_tq_zhouji.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				BchoiceZS[a].PinHengAtt = true_tq_zhouji.PinHengAtt;
+				BchoiceZS[a].PinHengXH = true_tq_zhouji.PinHengXH;
+				break;
+			case "tq_xizhuang":
+				BchoiceZS[a].AttW = true_tq_xizhuang.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].AttN = true_tq_xizhuang.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].ATimeQ = true_tq_xizhuang.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				BchoiceZS[a].ATime = true_tq_xizhuang.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				BchoiceZS[a].ATimeH = true_tq_xizhuang.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				BchoiceZS[a].Mzxz = true_tq_xizhuang.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				BchoiceZS[a].PinHengAtt = true_tq_xizhuang.PinHengAtt;
+				BchoiceZS[a].PinHengXH = true_tq_xizhuang.PinHengXH;
+				break;
+			case "tq_dengtui":
+				BchoiceZS[a].AttW = true_tq_dengtui.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].AttN = true_tq_dengtui.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].ATimeQ = true_tq_dengtui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				BchoiceZS[a].ATime = true_tq_dengtui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				BchoiceZS[a].ATimeH = true_tq_dengtui.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				BchoiceZS[a].Mzxz = true_tq_dengtui.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				BchoiceZS[a].PinHengAtt = true_tq_dengtui.PinHengAtt;
+				BchoiceZS[a].PinHengXH = true_tq_dengtui.PinHengXH;
+				break;
+			case "tq_shaotui":
+				BchoiceZS[a].AttW = true_tq_shaotui.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].AttN = true_tq_shaotui.AttN * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
+				BchoiceZS[a].ATimeQ = true_tq_shaotui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[who]);
+				BchoiceZS[a].ATime = true_tq_shaotui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[who]);
+				BchoiceZS[a].ATimeH = true_tq_shaotui.ATimeH + mSX_Minjie.shuduJC_H(SX_Minjie[who]);
+				BchoiceZS[a].Mzxz = true_tq_shaotui.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
+				BchoiceZS[a].PinHengAtt = true_tq_shaotui.PinHengAtt;
+				BchoiceZS[a].PinHengXH = true_tq_shaotui.PinHengXH;
+				break;
+		}
+		//alert(BchoiceZS[a].ATimeQ);
 	}
 }
 
@@ -2085,6 +2246,7 @@ function duruZSshuju(who, a) {
 function ChoiceFirst(a, b) {
 	switch (HadChoice_Who) {
 		case "A":
+			//alert("A--:" + AchoiceZS[a].ATimeH + "+" + AchoiceZS[a].ATimeQ + "?" + BchoiceZS[b].ATimeQ);
 			if (AchoiceZS[a].ATimeH + AchoiceZS[a].ATimeQ > BchoiceZS[b].ATimeQ) {
 				HadChoice_Who = "B";
 				HadChoice_Bb = b;
@@ -2102,6 +2264,7 @@ function ChoiceFirst(a, b) {
 			}
 			break;
 		case "B":
+			//alert("B--:" + AchoiceZS[a].ATimeQ + "?" + BchoiceZS[b].ATimeQ + "+" + BchoiceZS[b].ATimeQ);
 			if (AchoiceZS[a].ATimeQ > BchoiceZS[b].ATimeH + BchoiceZS[b].ATimeQ) {
 				HadChoice_Who = "B";
 				HadChoice_Bb = b;
@@ -2152,23 +2315,44 @@ function fighting() {
 	//a为A第几招数组序号,b为B第几招数组序号
 	var a = 0;
 	var b = 0;
+	var x = 0;
 	//var i = 0;
+	for (var i = 0; i <= AchoiceZS_bj; i++) {
+		duruZSshuju(0, i);
+	}
+	for (var j = 0; j <= BchoiceZS_bj; j++) {
+		duruZSshuju(1, j);
+	}
 	do {
 		ChoiceFirst(a, b);
+		//alert("AchoiceZS_bj:" + AchoiceZS_bj + "a:" + a);
 		if (HadChoice_Who === "A") {
-			if (a < AchoiceZS_bj) {
+			if (a <= AchoiceZS_bj) {
 				a++;
-				alert("a:" + a);
+				//alert("a:" + a);
+			} else {
+				AchoiceZS[HadChoice_Aa].zs_name = "";
+				AchoiceZS[HadChoice_Aa].ATimeH = 99;
 			}
 		} else {
-			if (b < BchoiceZS_bj) {
+			if (b <= BchoiceZS_bj) {
 				b++;
-				alert("b:" + b);
+				//alert("b:" + b);
+			} else {
+				BchoiceZS[HadChoice_Bb].zs_name = "";
+				BchoiceZS[HadChoice_Bb].ATimeH = 99;
 			}
 		}
 		shuchuZDwenben();
 		//i++;
 		//alert("i:" + i);
-	} while (a < AchoiceZS_bj || b < BchoiceZS_bj);
-	alert("555");
+		alert((a <= AchoiceZS_bj) + "," + (b <= BchoiceZS_bj) + "," + ((a <= AchoiceZS_bj) || (b <= BchoiceZS_bj)) + "，x=" + x + "，a:" + a + "，b:" + b);
+		if((a <= AchoiceZS_bj) || (b <= BchoiceZS_bj)){
+			x = 0;
+		}else{
+			x = 1;
+			alert("x=" + x);
+		}
+	} while (x<1);
+	alert("dxx=" + x);
 }
