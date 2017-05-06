@@ -1,1575 +1,1624 @@
 ﻿<!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>聚 · 功夫</title>
-<link type="text/css" href="./css/loading.css" rel="stylesheet"/>
-<link type="text/css" href="./css/base.css" rel="stylesheet"/>
-<link type="text/css" href="./css/jquery-ui.css" rel="stylesheet"/>
-<link type="text/css" href="./css/jquery-confirm.css" rel="stylesheet"/>
-<link type="text/css" href="./css/perfect-scrollbar.css" rel="stylesheet">
-<style></style>
-<script src="./js/jquery-3.1.1.min.js"></script>
-<script src="./js/jquery-ui.js"></script>
-<!--<script src="./js/preload.js"></script>载入进度条-->
-<script src="./js/pace.js"></script>
-<script src="./js/buttonScript.js"></script>
-<script src="./js/PB_Taiji.js"></script>
-<script src="./js/PB_Taiquan.js"></script>
-<script src="./js/PB_All.js"></script>
-<script src="./js/ShuX.js"></script>
-<script src="./js/Hp.js"></script>
-<script src="./js/jquery-confirm.js"></script>
-<script src="./js/MyffOnload.js"></script>
-<script src="./js/other_Lei.js"></script>
-<script src="./js/jquery.mousewheel.js"></script>
-<script src="./js/perfect-scrollbar.js"></script>
-<script>
-	
+    <meta charset="utf-8">
+    <title>聚 · 功夫</title>
+    <link type="text/css" href="./css/loading.css" rel="stylesheet"/>
+    <link type="text/css" href="./css/base.css" rel="stylesheet"/>
+    <link type="text/css" href="./css/jquery-ui.css" rel="stylesheet"/>
+    <link type="text/css" href="./css/jquery-confirm.css" rel="stylesheet"/>
+    <link type="text/css" href="./css/perfect-scrollbar.css" rel="stylesheet">
+    <style></style>
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <!--<script src="./js/preload.js"></script>载入进度条-->
+    <script src="./js/pace.js"></script>
+    <script src="./js/buttonScript.js"></script>
+    <script src="./js/PB_Taiji.js"></script>
+    <script src="./js/PB_Taiquan.js"></script>
+    <script src="./js/PB_All.js"></script>
+    <script src="./js/ShuX.js"></script>
+    <script src="./js/Hp.js"></script>
+    <script src="./js/jquery-confirm.js"></script>
+    <script src="./js/MyffOnload.js"></script>
+    <script src="./js/other_Lei.js"></script>
+    <script src="./js/jquery.mousewheel.js"></script>
+    <script src="./js/perfect-scrollbar.js"></script>
+    <script>
 
-	window.mSX_LiLiang = ShuX_LiLiang.createNew();
-	window.mSX_Minjie = ShuX_MinJie.createNew();
-	window.mSX_ZhiLi = ShuX_ZhiLi.createNew();
-	window.mSX_Tizhi = ShuX_Tizhi.createNew();
-	window.mSX_Pinheng = ShuX_PinHeng.createNew();
-	
-	//表格显示数据
-	window.tj_panda = TJ_panda.createNew();
-	window.tj_tuishou = TJ_tuishou.createNew();
-	window.tj_qingna = TJ_qingna.createNew();
-	window.tj_shuangfong = TJ_shuangfong.createNew();
-	window.tj_zhoudicui = TJ_zhoudicui.createNew();
-	window.tj_paocui = TJ_paocui.createNew();
-	window.tj_yuanyangtui = TJ_yuanyangtui.createNew();
-	window.tj_banshuai = TJ_banshuai.createNew();
-	//表格显示数据
-	window.tq_zhiquan = TQ_zhiquan.createNew();
-	window.tq_lrgouquan = TQ_lrgouquan.createNew();
-	window.tq_sgouquan = TQ_sgouquan.createNew();
-	window.tq_zhouji = TQ_zhouji.createNew();
-	window.tq_xizhuang = TQ_xizhuang.createNew();
-	window.tq_dengtui = TQ_dengtui.createNew();
-	window.tq_shaotui = TQ_shaotui.createNew();
-	
-	//敌方招式容器
-	window.Btj_panda = TJ_panda.createNew();
-	window.Btj_tuishou = TJ_tuishou.createNew();
-	window.Btj_qingna = TJ_qingna.createNew();
-	window.Btj_shuangfong = TJ_shuangfong.createNew();
-	window.Btj_zhoudicui = TJ_zhoudicui.createNew();
-	window.Btj_paocui = TJ_paocui.createNew();
-	window.Btj_yuanyangtui = TJ_yuanyangtui.createNew();
-	window.Btj_banshuai = TJ_banshuai.createNew();
 
-	window.Btq_zhiquan = TQ_zhiquan.createNew();
-	window.Btq_lrgouquan = TQ_lrgouquan.createNew();
-	window.Btq_sgouquan = TQ_sgouquan.createNew();
-	window.Btq_zhouji = TQ_zhouji.createNew();
-	window.Btq_xizhuang = TQ_xizhuang.createNew();
-	window.Btq_dengtui = TQ_dengtui.createNew();
-	window.Btq_shaotui = TQ_shaotui.createNew();
-	
-	//原始数据
-	window.true_tj_panda = TJ_panda.createNew();
-	window.true_tj_tuishou = TJ_tuishou.createNew();
-	window.true_tj_qingna = TJ_qingna.createNew();
-	window.true_tj_shuangfong = TJ_shuangfong.createNew();
-	window.true_tj_zhoudicui = TJ_zhoudicui.createNew();
-	window.true_tj_paocui = TJ_paocui.createNew();
-	window.true_tj_yuanyangtui = TJ_yuanyangtui.createNew();
-	window.true_tj_banshuai = TJ_banshuai.createNew();
-	//原始数据
-	window.true_tq_zhiquan = TQ_zhiquan.createNew();
-	window.true_tq_lrgouquan = TQ_lrgouquan.createNew();
-	window.true_tq_sgouquan = TQ_sgouquan.createNew();
-	window.true_tq_zhouji = TQ_zhouji.createNew();
-	window.true_tq_xizhuang = TQ_xizhuang.createNew();
-	window.true_tq_dengtui = TQ_dengtui.createNew();
-	window.true_tq_shaotui = TQ_shaotui.createNew();
-	
-	//HP
-	window.HpA = Hp.createNew();
-	window.HpB = Hp.createNew();
-	
-	//选择的招式
-	window.AchoiceZS = new Array();
-	window.BchoiceZS = new Array();
-	
-	window.AchoiceZS[0] = choiceZS.createNew();
-	window.AchoiceZS[1] = choiceZS.createNew();
-	window.AchoiceZS[2] = choiceZS.createNew();
-	window.AchoiceZS[3] = choiceZS.createNew();
-	window.AchoiceZS[4] = choiceZS.createNew();
-	
-	window.BchoiceZS[0] = choiceZS.createNew();
-	window.BchoiceZS[1] = choiceZS.createNew();
-	window.BchoiceZS[2] = choiceZS.createNew();
-	window.BchoiceZS[3] = choiceZS.createNew();
-	window.BchoiceZS[4] = choiceZS.createNew();
-	//选择招式数量数组边界
-	window.AchoiceZS_bj = 0;
-	window.BchoiceZS_bj = 0;
-	
-	window.SX_Sum = new Array();
-	window.SX_Liliang = new Array();
-	window.SX_Minjie = new Array();
-	window.SX_Zhili = new Array();
-	window.SX_Tizhi = new Array();
-	window.SX_Pinheng = new Array();
-	
-	//我方属性
-	window.SX_Sum[0] = 3;
-	window.SX_Liliang[0] = 2;
-	window.SX_Minjie[0] = 2;
-	window.SX_Zhili[0] = 2;
-	window.SX_Tizhi[0] = 2;
-	window.SX_Pinheng[0] = 2;
-	
-	//敌方属性
-	window.SX_Sum[1] = 3;
-	window.SX_Liliang[1] = 2;
-	window.SX_Minjie[1] = 2;
-	window.SX_Zhili[1] = 2;
-	window.SX_Tizhi[1] = 2;
-	window.SX_Pinheng[1] = 2;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-</script>
+        window.mSX_LiLiang = ShuX_LiLiang.createNew();
+        window.mSX_Minjie = ShuX_MinJie.createNew();
+        window.mSX_ZhiLi = ShuX_ZhiLi.createNew();
+        window.mSX_Tizhi = ShuX_Tizhi.createNew();
+        window.mSX_Pinheng = ShuX_PinHeng.createNew();
 
-<!--<script  src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>-->
-<!--<script  src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>-->
+        //表格显示数据
+        window.tj_panda = TJ_panda.createNew();
+        window.tj_tuishou = TJ_tuishou.createNew();
+        window.tj_qingna = TJ_qingna.createNew();
+        window.tj_shuangfong = TJ_shuangfong.createNew();
+        window.tj_zhoudicui = TJ_zhoudicui.createNew();
+        window.tj_paocui = TJ_paocui.createNew();
+        window.tj_yuanyangtui = TJ_yuanyangtui.createNew();
+        window.tj_banshuai = TJ_banshuai.createNew();
+        //表格显示数据
+        window.tq_zhiquan = TQ_zhiquan.createNew();
+        window.tq_lrgouquan = TQ_lrgouquan.createNew();
+        window.tq_sgouquan = TQ_sgouquan.createNew();
+        window.tq_zhouji = TQ_zhouji.createNew();
+        window.tq_xizhuang = TQ_xizhuang.createNew();
+        window.tq_dengtui = TQ_dengtui.createNew();
+        window.tq_shaotui = TQ_shaotui.createNew();
+
+        //敌方招式容器
+        window.Btj_panda = TJ_panda.createNew();
+        window.Btj_tuishou = TJ_tuishou.createNew();
+        window.Btj_qingna = TJ_qingna.createNew();
+        window.Btj_shuangfong = TJ_shuangfong.createNew();
+        window.Btj_zhoudicui = TJ_zhoudicui.createNew();
+        window.Btj_paocui = TJ_paocui.createNew();
+        window.Btj_yuanyangtui = TJ_yuanyangtui.createNew();
+        window.Btj_banshuai = TJ_banshuai.createNew();
+
+        window.Btq_zhiquan = TQ_zhiquan.createNew();
+        window.Btq_lrgouquan = TQ_lrgouquan.createNew();
+        window.Btq_sgouquan = TQ_sgouquan.createNew();
+        window.Btq_zhouji = TQ_zhouji.createNew();
+        window.Btq_xizhuang = TQ_xizhuang.createNew();
+        window.Btq_dengtui = TQ_dengtui.createNew();
+        window.Btq_shaotui = TQ_shaotui.createNew();
+
+        //原始数据
+        window.true_tj_panda = TJ_panda.createNew();
+        window.true_tj_tuishou = TJ_tuishou.createNew();
+        window.true_tj_qingna = TJ_qingna.createNew();
+        window.true_tj_shuangfong = TJ_shuangfong.createNew();
+        window.true_tj_zhoudicui = TJ_zhoudicui.createNew();
+        window.true_tj_paocui = TJ_paocui.createNew();
+        window.true_tj_yuanyangtui = TJ_yuanyangtui.createNew();
+        window.true_tj_banshuai = TJ_banshuai.createNew();
+        //原始数据
+        window.true_tq_zhiquan = TQ_zhiquan.createNew();
+        window.true_tq_lrgouquan = TQ_lrgouquan.createNew();
+        window.true_tq_sgouquan = TQ_sgouquan.createNew();
+        window.true_tq_zhouji = TQ_zhouji.createNew();
+        window.true_tq_xizhuang = TQ_xizhuang.createNew();
+        window.true_tq_dengtui = TQ_dengtui.createNew();
+        window.true_tq_shaotui = TQ_shaotui.createNew();
+
+        //HP
+        window.HpA = Hp.createNew();
+        window.HpB = Hp.createNew();
+
+        //选择的招式
+        window.AchoiceZS = new Array();
+        window.BchoiceZS = new Array();
+
+        window.AchoiceZS[0] = choiceZS.createNew();
+        window.AchoiceZS[1] = choiceZS.createNew();
+        window.AchoiceZS[2] = choiceZS.createNew();
+        window.AchoiceZS[3] = choiceZS.createNew();
+        window.AchoiceZS[4] = choiceZS.createNew();
+
+        window.BchoiceZS[0] = choiceZS.createNew();
+        window.BchoiceZS[1] = choiceZS.createNew();
+        window.BchoiceZS[2] = choiceZS.createNew();
+        window.BchoiceZS[3] = choiceZS.createNew();
+        window.BchoiceZS[4] = choiceZS.createNew();
+        //选择招式数量数组边界
+        window.AchoiceZS_bj = 0;
+        window.BchoiceZS_bj = 0;
+
+        window.SX_Sum = new Array();
+        window.SX_Liliang = new Array();
+        window.SX_Minjie = new Array();
+        window.SX_Zhili = new Array();
+        window.SX_Tizhi = new Array();
+        window.SX_Pinheng = new Array();
+
+        //我方属性
+        window.SX_Sum[0] = 3;
+        window.SX_Liliang[0] = 2;
+        window.SX_Minjie[0] = 2;
+        window.SX_Zhili[0] = 2;
+        window.SX_Tizhi[0] = 2;
+        window.SX_Pinheng[0] = 2;
+
+        //敌方属性
+        window.SX_Sum[1] = 3;
+        window.SX_Liliang[1] = 2;
+        window.SX_Minjie[1] = 2;
+        window.SX_Zhili[1] = 2;
+        window.SX_Tizhi[1] = 2;
+        window.SX_Pinheng[1] = 2;
+
+
+    </script>
+
+    <!--<script  src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>-->
+    <!--<script  src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>-->
 
 </head>
-<body onselectstart ="return false">
-<div class="mask" id="aaamask"> </div>
+<body onselectstart="return false">
+<div class="mask" id="aaamask"></div>
 <div class="choiceBigKuang" id="choiceBigKuang">
-  <div class="choiceDaBiaoTi" id="choiceDaBiaoTi">聚 · 功夫</div>
-  <div class="choicePaiBei cPBTaiji0" id="choicePaiBei">
-    <div class="choiceJinDuLan">
-      <div class="choiceJinDuLanButtomK">
-        <div class="choiceJinDuLanButtom myred" id="choiceJinDuLan_XZpaibei" onClick="XZbottomFF(0)">选择派别</div>
-      </div>
-      <div class="choiceJinDuLan_Jt"><img src="Img/image/rightarrow.png" width="31" height="26" alt=""/></div>
-      <div class="choiceJinDuLanButtomK">
-        <div class="choiceJinDuLanButtom grayButtom" id="choiceJinDuLan_XZshuxin" onClick="XZbottomFF(1)">选择属性</div>
-      </div>
-      <div class="choiceJinDuLan_Jt"><img src="Img/image/rightarrow.png" width="31" height="26" alt=""/></div>
-      <div class="choiceJinDuLanButtomK">
-        <div class="choiceJinDuLanButtom grayButtom" id="choiceJinDuLan_XZwancheng" onClick="choiceQianqiWanCheng()">完成</div>
-      </div>
+    <div class="choiceDaBiaoTi" id="choiceDaBiaoTi">聚 · 功夫</div>
+    <div class="choicePaiBei cPBTaiji0" id="choicePaiBei">
+        <div class="choiceJinDuLan">
+            <div class="choiceJinDuLanButtomK">
+                <div class="choiceJinDuLanButtom myred" id="choiceJinDuLan_XZpaibei" onClick="XZbottomFF(0)">选择派别</div>
+            </div>
+            <div class="choiceJinDuLan_Jt"><img src="Img/image/rightarrow.png" width="31" height="26" alt=""/></div>
+            <div class="choiceJinDuLanButtomK">
+                <div class="choiceJinDuLanButtom grayButtom" id="choiceJinDuLan_XZshuxin" onClick="XZbottomFF(1)">选择属性
+                </div>
+            </div>
+            <div class="choiceJinDuLan_Jt"><img src="Img/image/rightarrow.png" width="31" height="26" alt=""/></div>
+            <div class="choiceJinDuLanButtomK">
+                <div class="choiceJinDuLanButtom grayButtom" id="choiceJinDuLan_XZwancheng"
+                     onClick="choiceQianqiWanCheng()">完成
+                </div>
+            </div>
+        </div>
+        <div id="choiceZhaoshiDaKuang">
+            <div class="choiceZhaoshiZhongKuang">
+                <div class="choiceZhaoshiXiaoKuangW">
+                    <div class="choiceZhaoshiXiaoKuang" id="choiceZhaoshishiXiaoKuang_Taiji"
+                         onMouseOver="ChangechoiceBG('Taiji')" onClick="choicePB('Taiji')">太极
+                    </div>
+                </div>
+                <div class="choiceZhaoshiXiaoKuangW">
+                    <div class="choiceZhaoshiXiaoKuang" id="choiceZhaoshishiXiaoKuang_Taiquan"
+                         onMouseOver="ChangechoiceBG('Taiquan')" onClick="choicePB('Taiquan')">泰拳
+                    </div>
+                </div>
+                <div class="choiceZhaoshiXiaoKuangW">
+                    <div class="choiceZhaoshiXiaoKuang choiceZhaoshishiXiaoKuang_QIdai"
+                         id="choiceZhaoshishiXiaoKuang_Liumai">六脉
+                    </div>
+                </div>
+                <div class="choiceZhaoshiXiaoKuangW">
+                    <div class="choiceZhaoshiXiaoKuang choiceZhaoshishiXiaoKuang_QIdai"
+                         id="choiceZhaoshishiXiaoKuang_Wudu">五毒
+                    </div>
+                </div>
+            </div>
+            <div class="shi_TimuK">
+                <hr class="shi_hr">
+                <div class="shi_Timu" id="shi_Timu">太极</div>
+                <hr class="shi_hr">
+            </div>
+            <div class="shi" id="shi_01">攻击具有渗透性，高消削。</div>
+            <div class="shi" id="shi_02">借力打力，化解冲击力。</div>
+        </div>
+        <div id="choiceShuxinDaKuang" style="display: none;">
+            <div class="choiceShuxinZhongKuangL">
+                <div class="ZhaoshiMinXiao Kuang10 ZsMX_Taiji" id="ZhaoshiMinXiao">太<br/>
+                    极
+                </div>
+                <div class="DianshuDaKuang Kuang10">
+                    <div id="DianshuDaKuang_ds">
+                        <div class="DianshuDaKuang_T0">
+                            <div class="DianshuDaKuang_TTL">剩余点数：</div>
+                            <div id="DianshuDaKuang_TTR">3</div>
+                        </div>
+                        <div class="DianshuDaKuang_T grayBgHover" id="DianshuDaKuang_T_Liliang">
+                            <div class="DianshuDaKuang_TL">力量：</div>
+                            <div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Liliang"
+                                 onClick="SXtiaozheng('Liliang',0)">-
+                            </div>
+                            <div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Liliang">2</div>
+                            <div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Liliang"
+                                 onClick="SXtiaozheng('Liliang',1)">+
+                            </div>
+                        </div>
+                        <div class="DianshuDaKuang_T grayBgHover" id="DianshuDaKuang_T_Minjie">
+                            <div class="DianshuDaKuang_TL">敏捷：</div>
+                            <div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Minjie"
+                                 onClick="SXtiaozheng('Minjie',0)">-
+                            </div>
+                            <div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Minjie">2</div>
+                            <div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Minjie"
+                                 onClick="SXtiaozheng('Minjie',1)">+
+                            </div>
+                        </div>
+                        <div class="DianshuDaKuang_T grayBgHover" id="DianshuDaKuang_T_Zhili">
+                            <div class="DianshuDaKuang_TL">智力：</div>
+                            <div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Zhili"
+                                 onClick="SXtiaozheng('Zhili',0)">-
+                            </div>
+                            <div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Zhili">2</div>
+                            <div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Zhili"
+                                 onClick="SXtiaozheng('Zhili',1)">+
+                            </div>
+                        </div>
+                        <div class="DianshuDaKuang_T grayBgHover" id="DianshuDaKuang_T_Tizhi">
+                            <div class="DianshuDaKuang_TL">体质：</div>
+                            <div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Tizhi"
+                                 onClick="SXtiaozheng('Tizhi',0)">-
+                            </div>
+                            <div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Tizhi">2</div>
+                            <div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Tizhi"
+                                 onClick="SXtiaozheng('Tizhi',1)">+
+                            </div>
+                        </div>
+                        <div class="DianshuDaKuang_T grayBgHover" id="DianshuDaKuang_T_Pinheng">
+                            <div class="DianshuDaKuang_TL">平衡：</div>
+                            <div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Pinheng"
+                                 onClick="SXtiaozheng('Pinheng',0)">-
+                            </div>
+                            <div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Pinheng">2</div>
+                            <div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Pinheng"
+                                 onClick="SXtiaozheng('Pinheng',1)">+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="DianshuDaKuang_jx" id="DianshuDaKuang_jx" style="display: none">太极，<br/>
+                        以慢打快，以静制动，借力打力。有内伤伤害打击高防御的对手，也有高消削平衡的招式牵制对手。<br/>
+                        防御方面也有直接化减直接所受伤害的技能。
+                    </div>
+                </div>
+                <div class="DianshuguanlianDaKuang Kuang10">
+                    <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_gongjiJC" title_gongjiJC="">
+                        <div class="DianshuguanlianXiaoKuangL1">攻击力加成：</div>
+                        <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_gongjiJC">+0%</div>
+                    </div>
+                    <div class="DianshuguanlianXiaoKuangR" id="DianshuguanlianXiaoKuang_fangyujilv" title_fangyujilv="">
+                        <div class="DianshuguanlianXiaoKuangR1">防御几率：</div>
+                        <div class="DianshuguanlianXiaoKuangR2" id="DianshuguanlianXiaoKuang_s_fangyujilv">3</div>
+                    </div>
+                    <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_baojishanghai"
+                         title_baojishanghai="">
+                        <div class="DianshuguanlianXiaoKuangL1">暴击伤害：</div>
+                        <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_baojishanghai">+45%</div>
+                    </div>
+                    <div class="DianshuguanlianXiaoKuangR" id="DianshuguanlianXiaoKuang_yibanfanshuang"
+                         title_yibanfanshuang="">
+                        <div class="DianshuguanlianXiaoKuangR1">一般反伤：</div>
+                        <div class="DianshuguanlianXiaoKuangR2" id="DianshuguanlianXiaoKuang_s_yibanfanshuang">5%</div>
+                    </div>
+                    <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_shudu" title_shudu="">
+                        <div class="DianshuguanlianXiaoKuangL1">速度：</div>
+                        <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_shudu">2</div>
+                    </div>
+                    <div class="DianshuguanlianXiaoKuangR" id="DianshuguanlianXiaoKuang_fangyufanshuang"
+                         title_fangyufanshuang="">
+                        <div class="DianshuguanlianXiaoKuangR1">防御后反伤：</div>
+                        <div class="DianshuguanlianXiaoKuangR2" id="DianshuguanlianXiaoKuang_s_fangyufanshuang">20%
+                        </div>
+                    </div>
+                    <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_shanbi" title_shanbi="">
+                        <div class="DianshuguanlianXiaoKuangL1">闪避：</div>
+                        <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_shanbi">2</div>
+                    </div>
+                    <div class="DianshuguanlianXiaoKuangR" id="DianshuguanlianXiaoKuang_wendinfantan"
+                         title_wendinfantan="">
+                        <div class="DianshuguanlianXiaoKuangR1">防御反弹稳定：</div>
+                        <div class="DianshuguanlianXiaoKuangR2" id="DianshuguanlianXiaoKuang_s_wendinfantan">30%</div>
+                    </div>
+                    <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_baojijilv" title_baojijilv="">
+                        <div class="DianshuguanlianXiaoKuangL1">暴击几率：</div>
+                        <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_baojijilv">10%</div>
+                    </div>
+                    <div class="DianshuguanlianXiaoKuangR" id="DianshuguanlianXiaoKuang_wendinzhi" title_wendinzhi="">
+                        <div class="DianshuguanlianXiaoKuangR1">稳定度：</div>
+                        <div class="DianshuguanlianXiaoKuangR2" id="DianshuguanlianXiaoKuang_s_wendinzhi">120</div>
+                    </div>
+                    <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_gongjifudongjilv"
+                         title_gongjifudongjilv="">
+                        <div class="DianshuguanlianXiaoKuangL1">攻击正浮动率：</div>
+                        <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_gongjifudongjilv">50%
+                        </div>
+                    </div>
+                    <div class="DianshuguanlianXiaoKuangR" id="DianshuguanlianXiaoKuang_wendinhuifu"
+                         title_wendinhuifu="">
+                        <div class="DianshuguanlianXiaoKuangR1">恢复稳定/0.1s：</div>
+                        <div class="DianshuguanlianXiaoKuangR2" id="DianshuguanlianXiaoKuang_s_wendinhuifu"> 2</div>
+                    </div>
+                    <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_minzhongxz" title_minzhongxz="">
+                        <div class="DianshuguanlianXiaoKuangL1">命中修正：</div>
+                        <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_minzhongxz">+0%</div>
+                    </div>
+                    <div class="DianshuguanlianXiaoKuangR">
+                        <div class="DianshuguanlianXiaoKuangR1"></div>
+                        <div class="DianshuguanlianXiaoKuangR2"></div>
+                    </div>
+                    <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_qinbao" title_qinbao="">
+                        <div class="DianshuguanlianXiaoKuangL1">情报：</div>
+                        <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_qinbao">自知</div>
+                    </div>
+                </div>
+            </div>
+            <div class="choiceShuxinZhongKuangR Kuang10 cPBTaiji1" id="choiceShuxinZhongKuangR">
+                <div class="choiceShuxinXiaoKuang1">
+                    <div class="smallyuanKuang color_gong">攻</div>
+                    <div class="smallyuanKuang handarrow">防</div>
+                    <div class="smallyuanKuang handarrow">被</div>
+                    <div class="choiceShuxinXiaoKuangBZ">*内外伤害均为平价期望值。</div>
+                </div>
+                <div class="choiceShuxinXiaoKuang2">
+                    <div class="zhaoshiTitle">
+                        <div class="zhaoshiTitle1 zhaoshiTitleG">类</div>
+                        <div class="zhaoshiTitle2 zhaoshiTitleG">招式名称</div>
+                        <div class="zhaoshiTitle3 zhaoshiTitleG">发动部位</div>
+                        <div class="zhaoshiTitle4 zhaoshiTitleG">外伤</div>
+                        <div class="zhaoshiTitle5 zhaoshiTitleG">内伤</div>
+                        <div class="zhaoshiTitle6 zhaoshiTitleG">命中</div>
+                        <div class="zhaoshiTitle7 zhaoshiTitleG">前摇</div>
+                        <div class="zhaoshiTitle8 zhaoshiTitleG">动作</div>
+                        <div class="zhaoshiTitle9 zhaoshiTitleG">后摇</div>
+                        <div class="zhaoshiTitle10 zhaoshiTitleG">削衡</div>
+                        <div class="zhaoshiTitle11 zhaoshiTitleG">耗衡</div>
+                        <div class="zhaoshiTitle12 zhaoshiTitleG">特</div>
+                    </div>
+                    <div id="zhaoshineirong">
+                        <div class="zhaoshiLB">
+                            <div class="zhaoshiLB1 zhaoshiLBG">
+                                <div class="smallyuanKuang color_gong">攻</div>
+                            </div>
+                            <div class="zhaoshiLB2 zhaoshiLBG">攀打</div>
+                            <div class="zhaoshiLB3 zhaoshiLBG">
+                                <div class="zy_buttom">
+                                    <div class="zy_buttomL org">左</div>
+                                    <div class="zy_buttomR">右</div>
+                                </div>
+                                &nbsp;手
+                            </div>
+                            <div class="zhaoshiLB4 zhaoshiLBG" id="AttW1"></div>
+                            <div class="zhaoshiLB5 zhaoshiLBG" id="AttN1"></div>
+                            <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz1"></div>
+                            <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ1"></div>
+                            <div class="zhaoshiLB8 zhaoshiLBG" id="ATime1"></div>
+                            <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH1"></div>
+                            <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt1"></div>
+                            <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH1"></div>
+                            <div class="zhaoshiLB12 zhaoshiLBG">
+                                <div class="zhaoshite" Taiji_panda_te="">特</div>
+                            </div>
+                        </div>
+                        <div class="zhaoshiLB">
+                            <div class="zhaoshiLB1 zhaoshiLBG">
+                                <div class="smallyuanKuang color_gong">攻</div>
+                            </div>
+                            <div class="zhaoshiLB2 zhaoshiLBG">推手</div>
+                            <div class="zhaoshiLB3 zhaoshiLBG">
+                                <div class="zy_buttom">
+                                    <div class="zy_buttomL org">左</div>
+                                    <div class="zy_buttomR org">右</div>
+                                </div>
+                                &nbsp;手
+                            </div>
+                            <div class="zhaoshiLB4 zhaoshiLBG" id="AttW2"></div>
+                            <div class="zhaoshiLB5 zhaoshiLBG" id="AttN2"></div>
+                            <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz2"></div>
+                            <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ2"></div>
+                            <div class="zhaoshiLB8 zhaoshiLBG" id="ATime2"></div>
+                            <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH2"></div>
+                            <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt2"></div>
+                            <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH2"></div>
+                            <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                        </div>
+                        <div class="zhaoshiLB">
+                            <div class="zhaoshiLB1 zhaoshiLBG">
+                                <div class="smallyuanKuang color_gong">攻</div>
+                            </div>
+                            <div class="zhaoshiLB2 zhaoshiLBG">擒拿</div>
+                            <div class="zhaoshiLB3 zhaoshiLBG">
+                                <div class="zy_buttom">
+                                    <div class="zy_buttomL org">左</div>
+                                    <div class="zy_buttomR">右</div>
+                                </div>
+                                &nbsp;手
+                            </div>
+                            <div class="zhaoshiLB4 zhaoshiLBG" id="AttW3"></div>
+                            <div class="zhaoshiLB5 zhaoshiLBG" id="AttN3"></div>
+                            <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz3"></div>
+                            <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ3"></div>
+                            <div class="zhaoshiLB8 zhaoshiLBG" id="ATime3"></div>
+                            <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH3"></div>
+                            <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt3"></div>
+                            <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH3"></div>
+                            <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                        </div>
+                        <div class="zhaoshiLB">
+                            <div class="zhaoshiLB1 zhaoshiLBG">
+                                <div class="smallyuanKuang color_gong">攻</div>
+                            </div>
+                            <div class="zhaoshiLB2 zhaoshiLBG">双峰贯耳</div>
+                            <div class="zhaoshiLB3 zhaoshiLBG">
+                                <div class="zy_buttom">
+                                    <div class="zy_buttomL org">左</div>
+                                    <div class="zy_buttomR org">右</div>
+                                </div>
+                                &nbsp;手
+                            </div>
+                            <div class="zhaoshiLB4 zhaoshiLBG" id="AttW4"></div>
+                            <div class="zhaoshiLB5 zhaoshiLBG" id="AttN4"></div>
+                            <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz4"></div>
+                            <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ4"></div>
+                            <div class="zhaoshiLB8 zhaoshiLBG" id="ATime4"></div>
+                            <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH4"></div>
+                            <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt4"></div>
+                            <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH4"></div>
+                            <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                        </div>
+                        <div class="zhaoshiLB">
+                            <div class="zhaoshiLB1 zhaoshiLBG">
+                                <div class="smallyuanKuang color_gong">攻</div>
+                            </div>
+                            <div class="zhaoshiLB2 zhaoshiLBG">肘底捶</div>
+                            <div class="zhaoshiLB3 zhaoshiLBG">
+                                <div class="zy_buttom">
+                                    <div class="zy_buttomL org">左</div>
+                                    <div class="zy_buttomR">右</div>
+                                </div>
+                                &nbsp;手
+                            </div>
+                            <div class="zhaoshiLB4 zhaoshiLBG" id="AttW5"></div>
+                            <div class="zhaoshiLB5 zhaoshiLBG" id="AttN5"></div>
+                            <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz5"></div>
+                            <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ5"></div>
+                            <div class="zhaoshiLB8 zhaoshiLBG" id="ATime5"></div>
+                            <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH5"></div>
+                            <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt5"></div>
+                            <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH5"></div>
+                            <div class="zhaoshiLB12 zhaoshiLBG">
+                                <div class="zhaoshite" Taiji_zhoudicui_te="">特</div>
+                            </div>
+                        </div>
+                        <div class="zhaoshiLB">
+                            <div class="zhaoshiLB1 zhaoshiLBG">
+                                <div class="smallyuanKuang color_gong">攻</div>
+                            </div>
+                            <div class="zhaoshiLB2 zhaoshiLBG">炮锤</div>
+                            <div class="zhaoshiLB3 zhaoshiLBG">
+                                <div class="zy_buttom">
+                                    <div class="zy_buttomL org">左</div>
+                                    <div class="zy_buttomR org">右</div>
+                                </div>
+                                &nbsp;手
+                            </div>
+                            <div class="zhaoshiLB4 zhaoshiLBG" id="AttW6"></div>
+                            <div class="zhaoshiLB5 zhaoshiLBG" id="AttN6"></div>
+                            <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz6"></div>
+                            <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ6"></div>
+                            <div class="zhaoshiLB8 zhaoshiLBG" id="ATime6"></div>
+                            <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH6"></div>
+                            <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt6"></div>
+                            <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH6"></div>
+                            <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                        </div>
+                        <div class="zhaoshiLB">
+                            <div class="zhaoshiLB1 zhaoshiLBG">
+                                <div class="smallyuanKuang color_gong">攻</div>
+                            </div>
+                            <div class="zhaoshiLB2 zhaoshiLBG">鸳鸯腿</div>
+                            <div class="zhaoshiLB3 zhaoshiLBG">
+                                <div class="zy_buttom">
+                                    <div class="zy_buttomL org">左</div>
+                                    <div class="zy_buttomR">右</div>
+                                </div>
+                                &nbsp;脚
+                            </div>
+                            <div class="zhaoshiLB4 zhaoshiLBG" id="AttW7"></div>
+                            <div class="zhaoshiLB5 zhaoshiLBG" id="AttN7"></div>
+                            <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz7"></div>
+                            <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ7"></div>
+                            <div class="zhaoshiLB8 zhaoshiLBG" id="ATime7"></div>
+                            <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH7"></div>
+                            <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt7"></div>
+                            <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH7"></div>
+                            <div class="zhaoshiLB12 zhaoshiLBG">
+                                <div class="zhaoshite" Taiji_yuanyangtui_te>特</div>
+                            </div>
+                        </div>
+                        <div class="zhaoshiLB">
+                            <div class="zhaoshiLB1 zhaoshiLBG">
+                                <div class="smallyuanKuang color_gong">攻</div>
+                            </div>
+                            <div class="zhaoshiLB2 zhaoshiLBG">绊摔</div>
+                            <div class="zhaoshiLB3 zhaoshiLBG">
+                                <div class="zy_buttom">
+                                    <div class="zy_buttomL org">左</div>
+                                    <div class="zy_buttomR">右</div>
+                                </div>
+                                &nbsp;脚
+                            </div>
+                            <div class="zhaoshiLB4 zhaoshiLBG" id="AttW8"></div>
+                            <div class="zhaoshiLB5 zhaoshiLBG" id="AttN8"></div>
+                            <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz8"></div>
+                            <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ8"></div>
+                            <div class="zhaoshiLB8 zhaoshiLBG" id="ATime8"></div>
+                            <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH8"></div>
+                            <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt8"></div>
+                            <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH8"></div>
+                            <div class="zhaoshiLB12 zhaoshiLBG">
+                                <div class="zhaoshite" Taiji_banshuai_te>特</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--<div id="zhaoshineirong">
+                      <div class="zhaoshiLB">
+                        <div class="zhaoshiLB1 zhaoshiLBG">
+                          <div class="smallyuanKuang color_gong">攻</div>
+                        </div>
+                        <div class="zhaoshiLB2 zhaoshiLBG">直拳</div>
+                        <div class="zhaoshiLB3 zhaoshiLBG">
+                          <div class="zy_buttom">
+                            <div class="zy_buttomL org">左</div>
+                            <div class="zy_buttomR">右</div>
+                          </div>
+                          &nbsp;手 </div>
+                        <div class="zhaoshiLB4 zhaoshiLBG" id="AttW1"></div>
+                        <div class="zhaoshiLB5 zhaoshiLBG" id="AttN1"></div>
+                        <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz1"></div>
+                        <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ1"></div>
+                        <div class="zhaoshiLB8 zhaoshiLBG" id="ATime1"></div>
+                        <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH1"></div>
+                        <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt1"></div>
+                        <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH1"></div>
+                        <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                      </div>
+                      <div class="zhaoshiLB">
+                        <div class="zhaoshiLB1 zhaoshiLBG">
+                          <div class="smallyuanKuang color_gong">攻</div>
+                        </div>
+                        <div class="zhaoshiLB2 zhaoshiLBG">左右勾拳</div>
+                        <div class="zhaoshiLB3 zhaoshiLBG">
+                          <div class="zy_buttom">
+                            <div class="zy_buttomL">左</div>
+                            <div class="zy_buttomR org">右</div>
+                          </div>
+                          &nbsp;手 </div>
+                        <div class="zhaoshiLB4 zhaoshiLBG" id="AttW2"></div>
+                        <div class="zhaoshiLB5 zhaoshiLBG" id="AttN2"></div>
+                        <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz2"></div>
+                        <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ2"></div>
+                        <div class="zhaoshiLB8 zhaoshiLBG" id="ATime2"></div>
+                        <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH2"></div>
+                        <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt2"></div>
+                        <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH2"></div>
+                        <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                      </div>
+                      <div class="zhaoshiLB">
+                        <div class="zhaoshiLB1 zhaoshiLBG">
+                          <div class="smallyuanKuang color_gong">攻</div>
+                        </div>
+                        <div class="zhaoshiLB2 zhaoshiLBG">上勾拳</div>
+                        <div class="zhaoshiLB3 zhaoshiLBG">
+                          <div class="zy_buttom">
+                            <div class="zy_buttomL org">左</div>
+                            <div class="zy_buttomR">右</div>
+                          </div>
+                          &nbsp;手 </div>
+                        <div class="zhaoshiLB4 zhaoshiLBG" id="AttW3"></div>
+                        <div class="zhaoshiLB5 zhaoshiLBG" id="AttN3"></div>
+                        <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz3"></div>
+                        <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ3"></div>
+                        <div class="zhaoshiLB8 zhaoshiLBG" id="ATime3"></div>
+                        <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH3"></div>
+                        <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt3"></div>
+                        <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH3"></div>
+                        <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                      </div>
+                      <div class="zhaoshiLB">
+                        <div class="zhaoshiLB1 zhaoshiLBG">
+                          <div class="smallyuanKuang color_gong">攻</div>
+                        </div>
+                        <div class="zhaoshiLB2 zhaoshiLBG">肘击</div>
+                        <div class="zhaoshiLB3 zhaoshiLBG">
+                          <div class="zy_buttom">
+                            <div class="zy_buttomL">左</div>
+                            <div class="zy_buttomR org">右</div>
+                          </div>
+                          &nbsp;肘 </div>
+                        <div class="zhaoshiLB4 zhaoshiLBG" id="AttW4"></div>
+                        <div class="zhaoshiLB5 zhaoshiLBG" id="AttN4"></div>
+                        <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz4"></div>
+                        <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ4"></div>
+                        <div class="zhaoshiLB8 zhaoshiLBG" id="ATime4"></div>
+                        <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH4"></div>
+                        <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt4"></div>
+                        <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH4"></div>
+                        <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                      </div>
+                      <div class="zhaoshiLB">
+                        <div class="zhaoshiLB1 zhaoshiLBG">
+                          <div class="smallyuanKuang color_gong">攻</div>
+                        </div>
+                        <div class="zhaoshiLB2 zhaoshiLBG">膝撞</div>
+                        <div class="zhaoshiLB3 zhaoshiLBG">
+                          <div class="zy_buttom">
+                            <div class="zy_buttomL org">左</div>
+                            <div class="zy_buttomR">右</div>
+                          </div>
+                          &nbsp;膝 </div>
+                        <div class="zhaoshiLB4 zhaoshiLBG" id="AttW5"></div>
+                        <div class="zhaoshiLB5 zhaoshiLBG" id="AttN5"></div>
+                        <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz5"></div>
+                        <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ5"></div>
+                        <div class="zhaoshiLB8 zhaoshiLBG" id="ATime5"></div>
+                        <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH5"></div>
+                        <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt5"></div>
+                        <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH5"></div>
+                        <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                      </div>
+                      <div class="zhaoshiLB">
+                        <div class="zhaoshiLB1 zhaoshiLBG">
+                          <div class="smallyuanKuang color_gong">攻</div>
+                        </div>
+                        <div class="zhaoshiLB2 zhaoshiLBG">蹬腿</div>
+                        <div class="zhaoshiLB3 zhaoshiLBG">
+                          <div class="zy_buttom">
+                            <div class="zy_buttomL">左</div>
+                            <div class="zy_buttomR org">右</div>
+                          </div>
+                          &nbsp;脚 </div>
+                        <div class="zhaoshiLB4 zhaoshiLBG" id="AttW6"></div>
+                        <div class="zhaoshiLB5 zhaoshiLBG" id="AttN6"></div>
+                        <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz6"></div>
+                        <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ6"></div>
+                        <div class="zhaoshiLB8 zhaoshiLBG" id="ATime6"></div>
+                        <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH6"></div>
+                        <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt6"></div>
+                        <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH6"></div>
+                        <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                      </div>
+                      <div class="zhaoshiLB">
+                        <div class="zhaoshiLB1 zhaoshiLBG">
+                          <div class="smallyuanKuang color_gong">攻</div>
+                        </div>
+                        <div class="zhaoshiLB2 zhaoshiLBG">扫腿</div>
+                        <div class="zhaoshiLB3 zhaoshiLBG">
+                          <div class="zy_buttom">
+                            <div class="zy_buttomL org">左</div>
+                            <div class="zy_buttomR">右</div>
+                          </div>
+                          &nbsp;脚 </div>
+                        <div class="zhaoshiLB4 zhaoshiLBG" id="AttW7"></div>
+                        <div class="zhaoshiLB5 zhaoshiLBG" id="AttN7"></div>
+                        <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz7"></div>
+                        <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ7"></div>
+                        <div class="zhaoshiLB8 zhaoshiLBG" id="ATime7"></div>
+                        <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH7"></div>
+                        <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt7"></div>
+                        <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH7"></div>
+                        <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                      </div>
+                    </div>-->
+
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="choiceZhaoshiDaKuang">
-      <div class="choiceZhaoshiZhongKuang">
-        <div class="choiceZhaoshiXiaoKuangW">
-          <div class="choiceZhaoshiXiaoKuang" id="choiceZhaoshishiXiaoKuang_Taiji" onMouseOver="ChangechoiceBG('Taiji')" onClick="choicePB('Taiji')">太极</div>
-        </div>
-        <div class="choiceZhaoshiXiaoKuangW">
-          <div class="choiceZhaoshiXiaoKuang" id="choiceZhaoshishiXiaoKuang_Taiquan" onMouseOver="ChangechoiceBG('Taiquan')" onClick="choicePB('Taiquan')">泰拳</div>
-        </div>
-        <div class="choiceZhaoshiXiaoKuangW">
-          <div class="choiceZhaoshiXiaoKuang choiceZhaoshishiXiaoKuang_QIdai" id="choiceZhaoshishiXiaoKuang_Liumai">六脉</div>
-        </div>
-        <div class="choiceZhaoshiXiaoKuangW">
-          <div class="choiceZhaoshiXiaoKuang choiceZhaoshishiXiaoKuang_QIdai" id="choiceZhaoshishiXiaoKuang_Wudu">五毒</div>
-        </div>
-      </div>
-      <div class="shi_TimuK">
-        <hr class="shi_hr">
-        <div class="shi_Timu" id="shi_Timu">太极</div>
-        <hr class="shi_hr">
-      </div>
-      <div class="shi" id="shi_01">攻击具有渗透性，高消削。</div>
-      <div class="shi" id="shi_02">借力打力，化解冲击力。</div>
-    </div>
-    <div id="choiceShuxinDaKuang"  style="display: none;">
-      <div class="choiceShuxinZhongKuangL">
-        <div class="ZhaoshiMinXiao Kuang10 ZsMX_Taiji" id="ZhaoshiMinXiao">太<br />
-          极</div>
-        <div class="DianshuDaKuang Kuang10">
-          <div id="DianshuDaKuang_ds">
-            <div class="DianshuDaKuang_T0">
-              <div class="DianshuDaKuang_TTL">剩余点数：</div>
-              <div id="DianshuDaKuang_TTR">3</div>
-            </div>
-            <div class="DianshuDaKuang_T grayBgHover" id="DianshuDaKuang_T_Liliang">
-              <div class="DianshuDaKuang_TL">力量：</div>
-              <div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Liliang" onClick="SXtiaozheng('Liliang',0)">-</div>
-              <div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Liliang">2</div>
-              <div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Liliang" onClick="SXtiaozheng('Liliang',1)">+</div>
-            </div>
-            <div class="DianshuDaKuang_T grayBgHover" id="DianshuDaKuang_T_Minjie">
-              <div class="DianshuDaKuang_TL">敏捷：</div>
-              <div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Minjie" onClick="SXtiaozheng('Minjie',0)">-</div>
-              <div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Minjie">2</div>
-              <div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Minjie" onClick="SXtiaozheng('Minjie',1)">+</div>
-            </div>
-            <div class="DianshuDaKuang_T grayBgHover" id="DianshuDaKuang_T_Zhili">
-              <div class="DianshuDaKuang_TL">智力：</div>
-              <div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Zhili" onClick="SXtiaozheng('Zhili',0)">-</div>
-              <div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Zhili">2</div>
-              <div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Zhili" onClick="SXtiaozheng('Zhili',1)">+</div>
-            </div>
-            <div class="DianshuDaKuang_T grayBgHover" id="DianshuDaKuang_T_Tizhi">
-              <div class="DianshuDaKuang_TL">体质：</div>
-              <div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Tizhi" onClick="SXtiaozheng('Tizhi',0)">-</div>
-              <div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Tizhi">2</div>
-              <div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Tizhi" onClick="SXtiaozheng('Tizhi',1)">+</div>
-            </div>
-            <div class="DianshuDaKuang_T grayBgHover" id="DianshuDaKuang_T_Pinheng">
-              <div class="DianshuDaKuang_TL">平衡：</div>
-              <div class="DianshuDaKuang_TR1 DDK_T_jj" id="DianshuDaKuang_TR1_Pinheng" onClick="SXtiaozheng('Pinheng',0)">-</div>
-              <div class="DianshuDaKuang_TR2" id="DianshuDaKuang_TR2_Pinheng">2</div>
-              <div class="DianshuDaKuang_TR3 DDK_T_jj" id="DianshuDaKuang_TR3_Pinheng" onClick="SXtiaozheng('Pinheng',1)">+</div>
-            </div>
-          </div>
-          <div class="DianshuDaKuang_jx" id="DianshuDaKuang_jx" style="display: none">太极，<br />
-            以慢打快，以静制动，借力打力。有内伤伤害打击高防御的对手，也有高消削平衡的招式牵制对手。<br />
-            防御方面也有直接化减直接所受伤害的技能。</div>
-        </div>
-        <div class="DianshuguanlianDaKuang Kuang10">
-          <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_gongjiJC" title_gongjiJC="">
-            <div class="DianshuguanlianXiaoKuangL1">攻击力加成：</div>
-            <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_gongjiJC">+0%</div>
-          </div>
-          <div class="DianshuguanlianXiaoKuangR" id="DianshuguanlianXiaoKuang_fangyujilv" title_fangyujilv="">
-            <div class="DianshuguanlianXiaoKuangR1">防御几率：</div>
-            <div class="DianshuguanlianXiaoKuangR2" id="DianshuguanlianXiaoKuang_s_fangyujilv">3</div>
-          </div>
-          <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_baojishanghai" title_baojishanghai="">
-            <div class="DianshuguanlianXiaoKuangL1">暴击伤害：</div>
-            <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_baojishanghai">+45%</div>
-          </div>
-          <div class="DianshuguanlianXiaoKuangR" id="DianshuguanlianXiaoKuang_yibanfanshuang" title_yibanfanshuang="">
-            <div class="DianshuguanlianXiaoKuangR1">一般反伤：</div>
-            <div class="DianshuguanlianXiaoKuangR2" id="DianshuguanlianXiaoKuang_s_yibanfanshuang">5%</div>
-          </div>
-          <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_shudu" title_shudu="">
-            <div class="DianshuguanlianXiaoKuangL1">速度：</div>
-            <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_shudu">2</div>
-          </div>
-          <div class="DianshuguanlianXiaoKuangR" id="DianshuguanlianXiaoKuang_fangyufanshuang" title_fangyufanshuang="">
-            <div class="DianshuguanlianXiaoKuangR1">防御后反伤：</div>
-            <div class="DianshuguanlianXiaoKuangR2" id="DianshuguanlianXiaoKuang_s_fangyufanshuang">20%</div>
-          </div>
-          <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_shanbi" title_shanbi="">
-            <div class="DianshuguanlianXiaoKuangL1">闪避：</div>
-            <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_shanbi">2</div>
-          </div>
-          <div class="DianshuguanlianXiaoKuangR" id="DianshuguanlianXiaoKuang_wendinfantan" title_wendinfantan="">
-            <div class="DianshuguanlianXiaoKuangR1">防御反弹稳定：</div>
-            <div class="DianshuguanlianXiaoKuangR2" id="DianshuguanlianXiaoKuang_s_wendinfantan">30%</div>
-          </div>
-          <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_baojijilv" title_baojijilv="">
-            <div class="DianshuguanlianXiaoKuangL1">暴击几率：</div>
-            <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_baojijilv">10%</div>
-          </div>
-          <div class="DianshuguanlianXiaoKuangR" id="DianshuguanlianXiaoKuang_wendinzhi" title_wendinzhi="">
-            <div class="DianshuguanlianXiaoKuangR1">稳定度：</div>
-            <div class="DianshuguanlianXiaoKuangR2" id="DianshuguanlianXiaoKuang_s_wendinzhi">120</div>
-          </div>
-          <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_gongjifudongjilv" title_gongjifudongjilv="">
-            <div class="DianshuguanlianXiaoKuangL1">攻击正浮动率：</div>
-            <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_gongjifudongjilv">50%</div>
-          </div>
-          <div class="DianshuguanlianXiaoKuangR" id="DianshuguanlianXiaoKuang_wendinhuifu" title_wendinhuifu="">
-            <div class="DianshuguanlianXiaoKuangR1">恢复稳定/0.1s：</div>
-            <div class="DianshuguanlianXiaoKuangR2" id="DianshuguanlianXiaoKuang_s_wendinhuifu"> 2</div>
-          </div>
-          <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_minzhongxz" title_minzhongxz="">
-            <div class="DianshuguanlianXiaoKuangL1">命中修正：</div>
-            <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_minzhongxz">+0%</div>
-          </div>
-          <div class="DianshuguanlianXiaoKuangR">
-            <div class="DianshuguanlianXiaoKuangR1"> </div>
-            <div class="DianshuguanlianXiaoKuangR2"> </div>
-          </div>
-          <div class="DianshuguanlianXiaoKuangL" id="DianshuguanlianXiaoKuang_qinbao" title_qinbao="">
-            <div class="DianshuguanlianXiaoKuangL1">情报：</div>
-            <div class="DianshuguanlianXiaoKuangL2" id="DianshuguanlianXiaoKuang_s_qinbao">自知</div>
-          </div>
-        </div>
-      </div>
-      <div class="choiceShuxinZhongKuangR Kuang10 cPBTaiji1" id="choiceShuxinZhongKuangR">
-        <div class="choiceShuxinXiaoKuang1">
-          <div class="smallyuanKuang color_gong">攻</div>
-          <div class="smallyuanKuang handarrow">防</div>
-          <div class="smallyuanKuang handarrow">被</div>
-          <div class="choiceShuxinXiaoKuangBZ">*内外伤害均为平价期望值。</div>
-        </div>
-        <div class="choiceShuxinXiaoKuang2">
-          <div class="zhaoshiTitle">
-            <div class="zhaoshiTitle1 zhaoshiTitleG">类</div>
-            <div class="zhaoshiTitle2 zhaoshiTitleG">招式名称</div>
-            <div class="zhaoshiTitle3 zhaoshiTitleG">发动部位</div>
-            <div class="zhaoshiTitle4 zhaoshiTitleG">外伤</div>
-            <div class="zhaoshiTitle5 zhaoshiTitleG">内伤</div>
-            <div class="zhaoshiTitle6 zhaoshiTitleG">命中</div>
-            <div class="zhaoshiTitle7 zhaoshiTitleG">前摇</div>
-            <div class="zhaoshiTitle8 zhaoshiTitleG">动作</div>
-            <div class="zhaoshiTitle9 zhaoshiTitleG">后摇</div>
-            <div class="zhaoshiTitle10 zhaoshiTitleG">削衡</div>
-            <div class="zhaoshiTitle11 zhaoshiTitleG">耗衡</div>
-            <div class="zhaoshiTitle12 zhaoshiTitleG">特</div>
-          </div>
-          <div id="zhaoshineirong">
-            <div class="zhaoshiLB">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">攀打</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW1"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN1"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz1"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ1"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime1"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH1"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt1"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH1"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG">
-                <div class="zhaoshite" Taiji_panda_te="">特</div>
-              </div>
-            </div>
-            <div class="zhaoshiLB">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">推手</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR org">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW2"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN2"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz2"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ2"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime2"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH2"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt2"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH2"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-            <div class="zhaoshiLB">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">擒拿</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW3"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN3"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz3"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ3"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime3"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH3"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt3"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH3"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-            <div class="zhaoshiLB">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">双峰贯耳</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR org">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW4"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN4"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz4"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ4"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime4"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH4"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt4"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH4"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-            <div class="zhaoshiLB">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">肘底捶</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW5"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN5"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz5"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ5"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime5"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH5"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt5"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH5"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG">
-                <div class="zhaoshite" Taiji_zhoudicui_te="">特</div>
-              </div>
-            </div>
-            <div class="zhaoshiLB">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">炮锤</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR org">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW6"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN6"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz6"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ6"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime6"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH6"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt6"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH6"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-            <div class="zhaoshiLB">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">鸳鸯腿</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                &nbsp;脚 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW7"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN7"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz7"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ7"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime7"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH7"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt7"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH7"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG">
-                <div class="zhaoshite" Taiji_yuanyangtui_te>特</div>
-              </div>
-            </div>
-            <div class="zhaoshiLB">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">绊摔</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                &nbsp;脚 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW8"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN8"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz8"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ8"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime8"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH8"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt8"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH8"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG">
-                <div class="zhaoshite" Taiji_banshuai_te>特</div>
-              </div>
-            </div>
-          </div>
-          
-          <!--<div id="zhaoshineirong">
-            <div class="zhaoshiLB">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">直拳</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW1"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN1"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz1"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ1"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime1"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH1"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt1"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH1"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-            <div class="zhaoshiLB">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">左右勾拳</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL">左</div>
-                  <div class="zy_buttomR org">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW2"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN2"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz2"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ2"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime2"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH2"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt2"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH2"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-            <div class="zhaoshiLB">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">上勾拳</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW3"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN3"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz3"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ3"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime3"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH3"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt3"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH3"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-            <div class="zhaoshiLB">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">肘击</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL">左</div>
-                  <div class="zy_buttomR org">右</div>
-                </div>
-                &nbsp;肘 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW4"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN4"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz4"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ4"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime4"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH4"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt4"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH4"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-            <div class="zhaoshiLB">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">膝撞</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                &nbsp;膝 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW5"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN5"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz5"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ5"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime5"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH5"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt5"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH5"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-            <div class="zhaoshiLB">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">蹬腿</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL">左</div>
-                  <div class="zy_buttomR org">右</div>
-                </div>
-                &nbsp;脚 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW6"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN6"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz6"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ6"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime6"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH6"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt6"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH6"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-            <div class="zhaoshiLB">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">扫腿</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                &nbsp;脚 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW7"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN7"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz7"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ7"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime7"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH7"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt7"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH7"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-          </div>--> 
-          
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 <div class="baseKuang blur" id="baseKuang">
-  <div class="BiaoTi_Logo_Kuang">
-    <div class="BiaoTi_Logo">聚 · 功夫</div>
-    <div class="BiaoTi_Logo_Di"></div>
-    <div class="BiaoTi_Logo_cxbp" id="BiaoTi_Logo_cxbp">[ 重选派别 ]</div>
-  </div>
-  <div class="XiaDaKuang">
-    <div class="NeiRongKuangDl">
-      <div class="NeiRongKuangzl1 BDYJK">
-        <div class="TuKuangTitle0">
-          <div class="TuKuangTitle1">
-            <div class="TuKuangTitle_name" id="TuKuangTitle_name">
-              <div id="My_name">喵喵</div>
-              <!--<input class="shuru_name" id="shuru_name">
-              <div class="xfangButtomw">
-                <div class="xfangButtom redButtom" id="dui_name">√</div>
-              </div>
-              <div class="xfangButtomw">
-                <div class="xfangButtom grayButtom" id="cuo_name">×</div>
-              </div>--> 
-            </div>
-            <div class="TuKuangTitle_paibie" id="TuKuangTitle_paibie">太极</div>
-          </div>
-          <div class="bodyDaKuang">
-            <div class="aTu_tou tuhptu" id="my_t_tou"></div>
-            <div class="aTu_xiong tuhptu" id="my_t_xiong"></div>
-            <div class="aTu_fu tuhptu" id="my_t_fu"></div>
-            <div class="aTu_yaoL tuhptu" id="my_t_yaoL"></div>
-            <div class="aTu_yaoR tuhptu" id="my_t_yaoR"></div>
-            <div class="aTu_jianL tuhptu" id="my_t_jianL"></div>
-            <div class="aTu_jianR tuhptu" id="my_t_jianR"></div>
-            <div class="aTu_shangbiL tuhptu" id="my_t_shangbiL"></div>
-            <div class="aTu_shangbiR tuhptu" id="my_t_shangbiR"></div>
-            <div class="aTu_zhouL tuhptu" id="my_t_zhouL"></div>
-            <div class="aTu_zhouR tuhptu" id="my_t_zhouR"></div>
-            <div class="aTu_qianbiL tuhptu" id="my_t_qianbiL"></div>
-            <div class="aTu_qianbiR tuhptu" id="my_t_qianbiR"></div>
-            <div class="aTu_shouwanL tuhptu" id="my_t_shouwanL"></div>
-            <div class="aTu_shouwanR tuhptu" id="my_t_shouwanR"></div>
-            <div class="aTu_datuiL tuhptu" id="my_t_datuiL"></div>
-            <div class="aTu_datuiR tuhptu" id="my_t_datuiR"></div>
-            <div class="aTu_xiL tuhptu" id="my_t_xiL"></div>
-            <div class="aTu_xiR tuhptu" id="my_t_xiR"></div>
-            <div class="aTu_xiaotuiL tuhptu" id="my_t_xiaotuiL"></div>
-            <div class="aTu_xiaotuiR tuhptu" id="my_t_xiaotuiR"></div>
-            <div class="aTu_huaiL tuhptu" id="my_t_huaiL"></div>
-            <div class="aTu_huaiR tuhptu" id="my_t_huaiR"></div>
-          </div>
-          <div class="TuKuangshuxinDaK" id="TuKuangshuxinDaK_A">
-            <div class="TuKuangshuxinDaKt">
-              <div class="TuKuangshuxinDaK1 grayBgHover" id="TuKuang_A_Liliang">力量：2</div>
-              <div class="TuKuangshuxinDaK2 grayBgHover" id="TuKuang_A_Minjie">敏捷：2</div>
-              <div class="TuKuangshuxinDaK3 grayBgHover" id="TuKuang_A_Zhili">智力：2</div>
-              <div class="TuKuangshuxinDaK4 grayBgHover" id="TuKuang_A_Tizhi">体质：2</div>
-              <div class="TuKuangshuxinDaK5 grayBgHover" id="TuKuang_A_Pinheng">平衡：2</div>
-            </div>
-            <div class="TuKuangshuxinDaKd" id="TuKuangshuxinDaKd_A">-----</div>
-          </div>
-          <div class="TuKuangshuxinTanchuDK" id="TuKuangshuxinTanchuDK_A">
-            <div class="TuchuKuang" id="TuchuKuangX_A_gongjiJC" title_gongjiJC="">
-              <div class="TuchuKuang1">加攻：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_A_gongjiJC">+0%</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_A_fangyujilv" title_fangyujilv="">
-              <div class="TuchuKuang1">防御：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_A_fangyujilv">3</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_A_baojishanghai" title_baojishanghai="">
-              <div class="TuchuKuang1">暴伤：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_A_baojishanghai">+45%</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_A_yibanfanshuang" title_yibanfanshuang="">
-              <div class="TuchuKuang1">普反：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_A_yibanfanshuang">5%</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_A_shudu" title_shudu="">
-              <div class="TuchuKuang1">速度：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_A_shudu">2</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_A_fangyufanshuang" title_fangyufanshuang="">
-              <div class="TuchuKuang1">防反：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_A_fangyufanshuang">20%</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_A_shanbi" title_shanbi="">
-              <div class="TuchuKuang1">闪避：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_A_shanbi">2</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_A_wendinfantan" title_wendinfantan="">
-              <div class="TuchuKuang1">稳反：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_A_wendinfantan">30%</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_A_baojijilv" title_baojijilv="">
-              <div class="TuchuKuang1">暴率：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_A_baojijilv">10%</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_A_wendinzhi" title_wendinzhi="">
-              <div class="TuchuKuang1">稳定：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_A_wendinzhi">120</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_A_gongjifudongjilv" title_gongjifudongjilv="">
-              <div class="TuchuKuang1">浮动：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_A_gongjifudongjilv">50%</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_A_wendinhuifu" title_wendinhuifu="">
-              <div class="TuchuKuang1">回稳：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_A_wendinhuifu"> 2</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_A_minzhongxz" title_minzhongxz="">
-              <div class="TuchuKuang1">命中：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_A_minzhongxz">+0%</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_A_qinbao" title_qinbao="">
-              <div class="TuchuKuang1">情报：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_A_qinbao">自知</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="NeiRongKuangzl2 BDYJK">
-        <div class="NeiRongKuangHPdaK">
-          <div class="NeiRongKuangHPxK" id="Hphh_tou">
-            <div class="NeiRongKuangHPxK1">头部</div>
-            <div class="NeiRongKuangHPxK2" id="Hp_A_tou">500</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzD HP_blue" id="progressbar_A_tou"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphh_xiong">
-            <div class="NeiRongKuangHPxK1">胸部</div>
-            <div class="NeiRongKuangHPxK2" id="Hp_A_xiong">900</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzD HP_blue" id="progressbar_A_xiong"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphh_fu">
-            <div class="NeiRongKuangHPxK1">腹部</div>
-            <div class="NeiRongKuangHPxK2" id="Hp_A_fu">700</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzD HP_blue" id="progressbar_A_fu"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphh_yao">
-            <div class="NeiRongKuangHPxK1">腰部</div>
-            <div class="NeiRongKuangHPxK2a" id="Hp_A_yaoL">610</div>
-            <div class="NeiRongKuangHPxK2b">|</div>
-            <div class="NeiRongKuangHPxK2c" id="Hp_A_yaoR">610</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzS HP_blue" id="progressbar_A_yaoL"></div>
-              <div class="HP_blue" id="progressbar_A_yaoR"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphh_jian">
-            <div class="NeiRongKuangHPxK1">肩关节</div>
-            <div class="NeiRongKuangHPxK2a" id="Hp_A_jianL">400</div>
-            <div class="NeiRongKuangHPxK2b">|</div>
-            <div class="NeiRongKuangHPxK2c" id="Hp_A_jianR">610</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzS HP_blue" id="progressbar_A_jianL"></div>
-              <div class="HP_blue" id="progressbar_A_jianR"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphh_shangbi">
-            <div class="NeiRongKuangHPxK1">上臂</div>
-            <div class="NeiRongKuangHPxK2a" id="Hp_A_shangbiL">900</div>
-            <div class="NeiRongKuangHPxK2b">|</div>
-            <div class="NeiRongKuangHPxK2c" id="Hp_A_shangbiR">610</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzS HP_blue" id="progressbar_A_shangbiL"></div>
-              <div class="HP_blue" id="progressbar_A_shangbiR"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphh_zhou">
-            <div class="NeiRongKuangHPxK1">手肘</div>
-            <div class="NeiRongKuangHPxK2a" id="Hp_A_zhouL">310</div>
-            <div class="NeiRongKuangHPxK2b">|</div>
-            <div class="NeiRongKuangHPxK2c" id="Hp_A_zhouR">610</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzS HP_blue" id="progressbar_A_zhouL"></div>
-              <div class="HP_blue" id="progressbar_A_zhouR"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphh_qianbi">
-            <div class="NeiRongKuangHPxK1">前臂</div>
-            <div class="NeiRongKuangHPxK2a" id="Hp_A_qianbiL">610</div>
-            <div class="NeiRongKuangHPxK2b">|</div>
-            <div class="NeiRongKuangHPxK2c" id="Hp_A_qianbiR">610</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzS HP_blue" id="progressbar_A_qianbiL"></div>
-              <div class="HP_blue" id="progressbar_A_qianbiR"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphh_shouwan">
-            <div class="NeiRongKuangHPxK1">手腕</div>
-            <div class="NeiRongKuangHPxK2a" id="Hp_A_shouwanL">280</div>
-            <div class="NeiRongKuangHPxK2b">|</div>
-            <div class="NeiRongKuangHPxK2c" id="Hp_A_shouwanR">610</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzS HP_blue" id="progressbar_A_shouwanL"></div>
-              <div class="HP_blue" id="progressbar_A_shouwanR"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphh_datui">
-            <div class="NeiRongKuangHPxK1">大腿</div>
-            <div class="NeiRongKuangHPxK2a" id="Hp_A_datuiL">1000</div>
-            <div class="NeiRongKuangHPxK2b">|</div>
-            <div class="NeiRongKuangHPxK2c" id="Hp_A_datuiR">1000</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzS HP_blue" id="progressbar_A_datuiL"></div>
-              <div class="HP_blue" id="progressbar_A_datuiR"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphh_xi">
-            <div class="NeiRongKuangHPxK1">膝关节</div>
-            <div class="NeiRongKuangHPxK2a" id="Hp_A_xiL">310</div>
-            <div class="NeiRongKuangHPxK2b">|</div>
-            <div class="NeiRongKuangHPxK2c" id="Hp_A_xiR">610</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzS HP_blue" id="progressbar_A_xiL"></div>
-              <div class="HP_blue" id="progressbar_A_xiR"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphh_xiaotui">
-            <div class="NeiRongKuangHPxK1">小腿</div>
-            <div class="NeiRongKuangHPxK2a" id="Hp_A_xiaotuiL">800</div>
-            <div class="NeiRongKuangHPxK2b">|</div>
-            <div class="NeiRongKuangHPxK2c" id="Hp_A_xiaotuiR">610</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzS HP_blue" id="progressbar_A_xiaotuiL"></div>
-              <div class="HP_blue" id="progressbar_A_xiaotuiR"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphh_huai">
-            <div class="NeiRongKuangHPxK1">踝关节</div>
-            <div class="NeiRongKuangHPxK2a" id="Hp_A_huaiL">310</div>
-            <div class="NeiRongKuangHPxK2b">|</div>
-            <div class="NeiRongKuangHPxK2c" id="Hp_A_huaiR">610</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzS HP_blue" id="progressbar_A_huaiL"></div>
-              <div class="HP_blue" id="progressbar_A_huaiR"></div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="BiaoTi_Logo_Kuang">
+        <div class="BiaoTi_Logo">聚 · 功夫</div>
+        <div class="BiaoTi_Logo_Di"></div>
+        <div class="BiaoTi_Logo_cxbp" id="BiaoTi_Logo_cxbp">[ 重选派别 ]</div>
     </div>
-    <div class="NeiRongKuangDz">
-      <div class="NeiRongKuangzz1 BDYJK">
-        <div class="ckZhaoShiButtomL">
-          <div class="xiaoButtomWl">
-            <div class="xiaoButtom redButtom" id="rengshuButtom">认输</div>
-          </div>
-          <div class="ckZhaoShiButtom grayButtom" id="ckZhaoShiButtom_A">招式</div>
+    <div class="XiaDaKuang">
+        <div class="NeiRongKuangDl">
+            <div class="NeiRongKuangzl1 BDYJK">
+                <div class="TuKuangTitle0">
+                    <div class="TuKuangTitle1">
+                        <div class="TuKuangTitle_name" id="TuKuangTitle_name">
+                            <div id="My_name">喵喵</div>
+                            <!--<input class="shuru_name" id="shuru_name">
+                            <div class="xfangButtomw">
+                              <div class="xfangButtom redButtom" id="dui_name">√</div>
+                            </div>
+                            <div class="xfangButtomw">
+                              <div class="xfangButtom grayButtom" id="cuo_name">×</div>
+                            </div>-->
+                        </div>
+                        <div class="TuKuangTitle_paibie" id="TuKuangTitle_paibie">太极</div>
+                    </div>
+                    <div class="bodyDaKuang">
+                        <div class="aTu_tou tuhptu" id="my_t_tou"></div>
+                        <div class="aTu_xiong tuhptu" id="my_t_xiong"></div>
+                        <div class="aTu_fu tuhptu" id="my_t_fu"></div>
+                        <div class="aTu_yaoL tuhptu" id="my_t_yaoL"></div>
+                        <div class="aTu_yaoR tuhptu" id="my_t_yaoR"></div>
+                        <div class="aTu_jianL tuhptu" id="my_t_jianL"></div>
+                        <div class="aTu_jianR tuhptu" id="my_t_jianR"></div>
+                        <div class="aTu_shangbiL tuhptu" id="my_t_shangbiL"></div>
+                        <div class="aTu_shangbiR tuhptu" id="my_t_shangbiR"></div>
+                        <div class="aTu_zhouL tuhptu" id="my_t_zhouL"></div>
+                        <div class="aTu_zhouR tuhptu" id="my_t_zhouR"></div>
+                        <div class="aTu_qianbiL tuhptu" id="my_t_qianbiL"></div>
+                        <div class="aTu_qianbiR tuhptu" id="my_t_qianbiR"></div>
+                        <div class="aTu_shouwanL tuhptu" id="my_t_shouwanL"></div>
+                        <div class="aTu_shouwanR tuhptu" id="my_t_shouwanR"></div>
+                        <div class="aTu_datuiL tuhptu" id="my_t_datuiL"></div>
+                        <div class="aTu_datuiR tuhptu" id="my_t_datuiR"></div>
+                        <div class="aTu_xiL tuhptu" id="my_t_xiL"></div>
+                        <div class="aTu_xiR tuhptu" id="my_t_xiR"></div>
+                        <div class="aTu_xiaotuiL tuhptu" id="my_t_xiaotuiL"></div>
+                        <div class="aTu_xiaotuiR tuhptu" id="my_t_xiaotuiR"></div>
+                        <div class="aTu_huaiL tuhptu" id="my_t_huaiL"></div>
+                        <div class="aTu_huaiR tuhptu" id="my_t_huaiR"></div>
+                    </div>
+                    <div class="TuKuangshuxinDaK" id="TuKuangshuxinDaK_A">
+                        <div class="TuKuangshuxinDaKt">
+                            <div class="TuKuangshuxinDaK1 grayBgHover" id="TuKuang_A_Liliang">力量：2</div>
+                            <div class="TuKuangshuxinDaK2 grayBgHover" id="TuKuang_A_Minjie">敏捷：2</div>
+                            <div class="TuKuangshuxinDaK3 grayBgHover" id="TuKuang_A_Zhili">智力：2</div>
+                            <div class="TuKuangshuxinDaK4 grayBgHover" id="TuKuang_A_Tizhi">体质：2</div>
+                            <div class="TuKuangshuxinDaK5 grayBgHover" id="TuKuang_A_Pinheng">平衡：2</div>
+                        </div>
+                        <div class="TuKuangshuxinDaKd" id="TuKuangshuxinDaKd_A">-----</div>
+                    </div>
+                    <div class="TuKuangshuxinTanchuDK" id="TuKuangshuxinTanchuDK_A">
+                        <div class="TuchuKuang" id="TuchuKuangX_A_gongjiJC" title_gongjiJC="">
+                            <div class="TuchuKuang1">加攻：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_A_gongjiJC">+0%</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_A_fangyujilv" title_fangyujilv="">
+                            <div class="TuchuKuang1">防御：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_A_fangyujilv">3</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_A_baojishanghai" title_baojishanghai="">
+                            <div class="TuchuKuang1">暴伤：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_A_baojishanghai">+45%</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_A_yibanfanshuang" title_yibanfanshuang="">
+                            <div class="TuchuKuang1">普反：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_A_yibanfanshuang">5%</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_A_shudu" title_shudu="">
+                            <div class="TuchuKuang1">速度：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_A_shudu">2</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_A_fangyufanshuang" title_fangyufanshuang="">
+                            <div class="TuchuKuang1">防反：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_A_fangyufanshuang">20%</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_A_shanbi" title_shanbi="">
+                            <div class="TuchuKuang1">闪避：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_A_shanbi">2</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_A_wendinfantan" title_wendinfantan="">
+                            <div class="TuchuKuang1">稳反：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_A_wendinfantan">30%</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_A_baojijilv" title_baojijilv="">
+                            <div class="TuchuKuang1">暴率：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_A_baojijilv">10%</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_A_wendinzhi" title_wendinzhi="">
+                            <div class="TuchuKuang1">稳定：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_A_wendinzhi">120</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_A_gongjifudongjilv" title_gongjifudongjilv="">
+                            <div class="TuchuKuang1">浮动：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_A_gongjifudongjilv">50%</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_A_wendinhuifu" title_wendinhuifu="">
+                            <div class="TuchuKuang1">回稳：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_A_wendinhuifu"> 2</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_A_minzhongxz" title_minzhongxz="">
+                            <div class="TuchuKuang1">命中：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_A_minzhongxz">+0%</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_A_qinbao" title_qinbao="">
+                            <div class="TuchuKuang1">情报：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_A_qinbao">自知</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="NeiRongKuangzl2 BDYJK">
+                <div class="NeiRongKuangHPdaK">
+                    <div class="NeiRongKuangHPxK" id="Hphh_tou">
+                        <div class="NeiRongKuangHPxK1">头部</div>
+                        <div class="NeiRongKuangHPxK2" id="Hp_A_tou">500</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzD HP_blue" id="progressbar_A_tou"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphh_xiong">
+                        <div class="NeiRongKuangHPxK1">胸部</div>
+                        <div class="NeiRongKuangHPxK2" id="Hp_A_xiong">900</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzD HP_blue" id="progressbar_A_xiong"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphh_fu">
+                        <div class="NeiRongKuangHPxK1">腹部</div>
+                        <div class="NeiRongKuangHPxK2" id="Hp_A_fu">700</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzD HP_blue" id="progressbar_A_fu"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphh_yao">
+                        <div class="NeiRongKuangHPxK1">腰部</div>
+                        <div class="NeiRongKuangHPxK2a" id="Hp_A_yaoL">610</div>
+                        <div class="NeiRongKuangHPxK2b">|</div>
+                        <div class="NeiRongKuangHPxK2c" id="Hp_A_yaoR">610</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzS HP_blue" id="progressbar_A_yaoL"></div>
+                            <div class="HP_blue" id="progressbar_A_yaoR"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphh_jian">
+                        <div class="NeiRongKuangHPxK1">肩关节</div>
+                        <div class="NeiRongKuangHPxK2a" id="Hp_A_jianL">400</div>
+                        <div class="NeiRongKuangHPxK2b">|</div>
+                        <div class="NeiRongKuangHPxK2c" id="Hp_A_jianR">610</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzS HP_blue" id="progressbar_A_jianL"></div>
+                            <div class="HP_blue" id="progressbar_A_jianR"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphh_shangbi">
+                        <div class="NeiRongKuangHPxK1">上臂</div>
+                        <div class="NeiRongKuangHPxK2a" id="Hp_A_shangbiL">900</div>
+                        <div class="NeiRongKuangHPxK2b">|</div>
+                        <div class="NeiRongKuangHPxK2c" id="Hp_A_shangbiR">610</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzS HP_blue" id="progressbar_A_shangbiL"></div>
+                            <div class="HP_blue" id="progressbar_A_shangbiR"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphh_zhou">
+                        <div class="NeiRongKuangHPxK1">手肘</div>
+                        <div class="NeiRongKuangHPxK2a" id="Hp_A_zhouL">310</div>
+                        <div class="NeiRongKuangHPxK2b">|</div>
+                        <div class="NeiRongKuangHPxK2c" id="Hp_A_zhouR">610</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzS HP_blue" id="progressbar_A_zhouL"></div>
+                            <div class="HP_blue" id="progressbar_A_zhouR"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphh_qianbi">
+                        <div class="NeiRongKuangHPxK1">前臂</div>
+                        <div class="NeiRongKuangHPxK2a" id="Hp_A_qianbiL">610</div>
+                        <div class="NeiRongKuangHPxK2b">|</div>
+                        <div class="NeiRongKuangHPxK2c" id="Hp_A_qianbiR">610</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzS HP_blue" id="progressbar_A_qianbiL"></div>
+                            <div class="HP_blue" id="progressbar_A_qianbiR"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphh_shouwan">
+                        <div class="NeiRongKuangHPxK1">手腕</div>
+                        <div class="NeiRongKuangHPxK2a" id="Hp_A_shouwanL">280</div>
+                        <div class="NeiRongKuangHPxK2b">|</div>
+                        <div class="NeiRongKuangHPxK2c" id="Hp_A_shouwanR">610</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzS HP_blue" id="progressbar_A_shouwanL"></div>
+                            <div class="HP_blue" id="progressbar_A_shouwanR"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphh_datui">
+                        <div class="NeiRongKuangHPxK1">大腿</div>
+                        <div class="NeiRongKuangHPxK2a" id="Hp_A_datuiL">1000</div>
+                        <div class="NeiRongKuangHPxK2b">|</div>
+                        <div class="NeiRongKuangHPxK2c" id="Hp_A_datuiR">1000</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzS HP_blue" id="progressbar_A_datuiL"></div>
+                            <div class="HP_blue" id="progressbar_A_datuiR"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphh_xi">
+                        <div class="NeiRongKuangHPxK1">膝关节</div>
+                        <div class="NeiRongKuangHPxK2a" id="Hp_A_xiL">310</div>
+                        <div class="NeiRongKuangHPxK2b">|</div>
+                        <div class="NeiRongKuangHPxK2c" id="Hp_A_xiR">610</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzS HP_blue" id="progressbar_A_xiL"></div>
+                            <div class="HP_blue" id="progressbar_A_xiR"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphh_xiaotui">
+                        <div class="NeiRongKuangHPxK1">小腿</div>
+                        <div class="NeiRongKuangHPxK2a" id="Hp_A_xiaotuiL">800</div>
+                        <div class="NeiRongKuangHPxK2b">|</div>
+                        <div class="NeiRongKuangHPxK2c" id="Hp_A_xiaotuiR">610</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzS HP_blue" id="progressbar_A_xiaotuiL"></div>
+                            <div class="HP_blue" id="progressbar_A_xiaotuiR"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphh_huai">
+                        <div class="NeiRongKuangHPxK1">踝关节</div>
+                        <div class="NeiRongKuangHPxK2a" id="Hp_A_huaiL">310</div>
+                        <div class="NeiRongKuangHPxK2b">|</div>
+                        <div class="NeiRongKuangHPxK2c" id="Hp_A_huaiR">610</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzS HP_blue" id="progressbar_A_huaiL"></div>
+                            <div class="HP_blue" id="progressbar_A_huaiR"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="StartButtomDaKuang">
-          <div class="StartButtomYuanKuang yuan_blue" id="StartButtomYuanKuang">选择招式</div>
+        <div class="NeiRongKuangDz">
+            <div class="NeiRongKuangzz1 BDYJK">
+                <div class="ckZhaoShiButtomL">
+                    <div class="xiaoButtomWl">
+                        <div class="xiaoButtom redButtom" id="rengshuButtom">认输</div>
+                    </div>
+                    <div class="ckZhaoShiButtom grayButtom" id="ckZhaoShiButtom_A">招式</div>
+                </div>
+                <div class="StartButtomDaKuang">
+                    <div class="StartButtomYuanKuang yuan_blue" id="StartButtomYuanKuang">选择招式</div>
+                </div>
+                <div class="ckZhaoShiButtomR">
+                    <div class="huiheclass" id="huiheclass">回合：1</div>
+                    <div class="xiaoButtomWr">
+                        <div class="xiaoButtom redButtom" id="huanrenButtom">换人</div>
+                    </div>
+                    <div class="ckZhaoShiButtom grayButtom" id="ckZhaoShiButtom_B">招式</div>
+                </div>
+            </div>
+            <div class="NeiRongchoiceZSdaK" id="NeiRongchoiceZSdaK">
+                <div class="NeiRongchoiceZSdaK_Title1">挑选招式</div>
+                <div class="choiceShuxinXiaoKuang2qq">
+                    <div class="zhaoshiTitleqq">
+                        <div class="zhaoshiTitle1 zhaoshiTitleG">类</div>
+                        <div class="zhaoshiTitle2 zhaoshiTitleG">招式名称</div>
+                        <div class="zhaoshiTitle3 zhaoshiTitleG">发动部位</div>
+                        <div class="zhaoshiTitle4 zhaoshiTitleG">外伤</div>
+                        <div class="zhaoshiTitle5 zhaoshiTitleG">内伤</div>
+                        <div class="zhaoshiTitle6 zhaoshiTitleG">命中</div>
+                        <div class="zhaoshiTitle7 zhaoshiTitleG">前摇</div>
+                        <div class="zhaoshiTitle8 zhaoshiTitleG">动作</div>
+                        <div class="zhaoshiTitle9 zhaoshiTitleG">后摇</div>
+                        <div class="zhaoshiTitle10 zhaoshiTitleG">削衡</div>
+                        <div class="zhaoshiTitle11 zhaoshiTitleG">耗衡</div>
+                        <div class="zhaoshiTitle12 zhaoshiTitleG">特</div>
+                    </div>
+                    <div id="zhaoshineirongqq">
+                        <div class="zhaoshiLBqqs" id="ZSdiv_tj_panda">
+                            <div class="zhaoshiLB1 zhaoshiLBG">
+                                <div class="smallyuanKuang color_gong">攻</div>
+                            </div>
+                            <div class="zhaoshiLB2 zhaoshiLBG">攀打</div>
+                            <div class="zhaoshiLB3 zhaoshiLBG">
+                                <div class="zy_buttom">
+                                    <div class="zy_buttomL org">左</div>
+                                    <div class="zy_buttomR">右</div>
+                                </div>
+                                &nbsp;手
+                            </div>
+                            <div class="zhaoshiLB4 zhaoshiLBG" id="AttW1qq"></div>
+                            <div class="zhaoshiLB5 zhaoshiLBG" id="AttN1qq"></div>
+                            <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz1qq"></div>
+                            <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ1qq"></div>
+                            <div class="zhaoshiLB8 zhaoshiLBG" id="ATime1qq"></div>
+                            <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH1qq"></div>
+                            <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt1qq"></div>
+                            <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH1qq"></div>
+                            <div class="zhaoshiLB12 zhaoshiLBG">
+                                <div class="zhaoshite" Taiji_panda_te="">特</div>
+                            </div>
+                        </div>
+                        <div class="zhaoshiLBqqs" id="ZSdiv_tj_tuishou">
+                            <div class="zhaoshiLB1 zhaoshiLBG">
+                                <div class="smallyuanKuang color_gong">攻</div>
+                            </div>
+                            <div class="zhaoshiLB2 zhaoshiLBG">推手</div>
+                            <div class="zhaoshiLB3 zhaoshiLBG">
+                                <div class="zy_buttom">
+                                    <div class="zy_buttomL org">左</div>
+                                    <div class="zy_buttomR org">右</div>
+                                </div>
+                                &nbsp;手
+                            </div>
+                            <div class="zhaoshiLB4 zhaoshiLBG" id="AttW2qq"></div>
+                            <div class="zhaoshiLB5 zhaoshiLBG" id="AttN2qq"></div>
+                            <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz2qq"></div>
+                            <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ2qq"></div>
+                            <div class="zhaoshiLB8 zhaoshiLBG" id="ATime2qq"></div>
+                            <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH2qq"></div>
+                            <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt2qq"></div>
+                            <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH2qq"></div>
+                            <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                        </div>
+                        <div class="zhaoshiLBqqs" id="ZSdiv_tj_qingna">
+                            <div class="zhaoshiLB1 zhaoshiLBG">
+                                <div class="smallyuanKuang color_gong">攻</div>
+                            </div>
+                            <div class="zhaoshiLB2 zhaoshiLBG">擒拿</div>
+                            <div class="zhaoshiLB3 zhaoshiLBG">
+                                <div class="zy_buttom">
+                                    <div class="zy_buttomL org">左</div>
+                                    <div class="zy_buttomR">右</div>
+                                </div>
+                                &nbsp;手
+                            </div>
+                            <div class="zhaoshiLB4 zhaoshiLBG" id="AttW3qq"></div>
+                            <div class="zhaoshiLB5 zhaoshiLBG" id="AttN3qq"></div>
+                            <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz3qq"></div>
+                            <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ3qq"></div>
+                            <div class="zhaoshiLB8 zhaoshiLBG" id="ATime3qq"></div>
+                            <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH3qq"></div>
+                            <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt3qq"></div>
+                            <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH3qq"></div>
+                            <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                        </div>
+                        <div class="zhaoshiLBqqs" id="ZSdiv_tj_shuangfong">
+                            <div class="zhaoshiLB1 zhaoshiLBG">
+                                <div class="smallyuanKuang color_gong">攻</div>
+                            </div>
+                            <div class="zhaoshiLB2 zhaoshiLBG">双峰贯耳</div>
+                            <div class="zhaoshiLB3 zhaoshiLBG">
+                                <div class="zy_buttom">
+                                    <div class="zy_buttomL org">左</div>
+                                    <div class="zy_buttomR org">右</div>
+                                </div>
+                                &nbsp;手
+                            </div>
+                            <div class="zhaoshiLB4 zhaoshiLBG" id="AttW4qq"></div>
+                            <div class="zhaoshiLB5 zhaoshiLBG" id="AttN4qq"></div>
+                            <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz4qq"></div>
+                            <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ4qq"></div>
+                            <div class="zhaoshiLB8 zhaoshiLBG" id="ATime4qq"></div>
+                            <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH4qq"></div>
+                            <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt4qq"></div>
+                            <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH4qq"></div>
+                            <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                        </div>
+                        <div class="zhaoshiLBqqs" id="ZSdiv_tj_zhoudicui">
+                            <div class="zhaoshiLB1 zhaoshiLBG">
+                                <div class="smallyuanKuang color_gong">攻</div>
+                            </div>
+                            <div class="zhaoshiLB2 zhaoshiLBG">肘底捶</div>
+                            <div class="zhaoshiLB3 zhaoshiLBG">
+                                <div class="zy_buttom">
+                                    <div class="zy_buttomL org">左</div>
+                                    <div class="zy_buttomR">右</div>
+                                </div>
+                                &nbsp;手
+                            </div>
+                            <div class="zhaoshiLB4 zhaoshiLBG" id="AttW5qq"></div>
+                            <div class="zhaoshiLB5 zhaoshiLBG" id="AttN5qq"></div>
+                            <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz5qq"></div>
+                            <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ5qq"></div>
+                            <div class="zhaoshiLB8 zhaoshiLBG" id="ATime5qq"></div>
+                            <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH5qq"></div>
+                            <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt5qq"></div>
+                            <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH5qq"></div>
+                            <div class="zhaoshiLB12 zhaoshiLBG">
+                                <div class="zhaoshite" Taiji_zhoudicui_te="">特</div>
+                            </div>
+                        </div>
+                        <div class="zhaoshiLBqqs" id="ZSdiv_tj_paocui">
+                            <div class="zhaoshiLB1 zhaoshiLBG">
+                                <div class="smallyuanKuang color_gong">攻</div>
+                            </div>
+                            <div class="zhaoshiLB2 zhaoshiLBG">炮锤</div>
+                            <div class="zhaoshiLB3 zhaoshiLBG">
+                                <div class="zy_buttom">
+                                    <div class="zy_buttomL org">左</div>
+                                    <div class="zy_buttomR org">右</div>
+                                </div>
+                                &nbsp;手
+                            </div>
+                            <div class="zhaoshiLB4 zhaoshiLBG" id="AttW6qq"></div>
+                            <div class="zhaoshiLB5 zhaoshiLBG" id="AttN6qq"></div>
+                            <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz6qq"></div>
+                            <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ6qq"></div>
+                            <div class="zhaoshiLB8 zhaoshiLBG" id="ATime6qq"></div>
+                            <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH6qq"></div>
+                            <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt6qq"></div>
+                            <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH6qq"></div>
+                            <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                        </div>
+                        <div class="zhaoshiLBqqs" id="ZSdiv_tj_yuanyangtui">
+                            <div class="zhaoshiLB1 zhaoshiLBG">
+                                <div class="smallyuanKuang color_gong">攻</div>
+                            </div>
+                            <div class="zhaoshiLB2 zhaoshiLBG">鸳鸯腿</div>
+                            <div class="zhaoshiLB3 zhaoshiLBG">
+                                <div class="zy_buttom">
+                                    <div class="zy_buttomL org">左</div>
+                                    <div class="zy_buttomR">右</div>
+                                </div>
+                                &nbsp;脚
+                            </div>
+                            <div class="zhaoshiLB4 zhaoshiLBG" id="AttW7qq"></div>
+                            <div class="zhaoshiLB5 zhaoshiLBG" id="AttN7qq"></div>
+                            <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz7qq"></div>
+                            <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ7qq"></div>
+                            <div class="zhaoshiLB8 zhaoshiLBG" id="ATime7qq"></div>
+                            <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH7qq"></div>
+                            <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt7qq"></div>
+                            <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH7qq"></div>
+                            <div class="zhaoshiLB12 zhaoshiLBG">
+                                <div class="zhaoshite" Taiji_yuanyangtui_te>特</div>
+                            </div>
+                        </div>
+                        <div class="zhaoshiLBqqs" id="ZSdiv_tj_banshuai">
+                            <div class="zhaoshiLB1 zhaoshiLBG">
+                                <div class="smallyuanKuang color_gong">攻</div>
+                            </div>
+                            <div class="zhaoshiLB2 zhaoshiLBG">绊摔</div>
+                            <div class="zhaoshiLB3 zhaoshiLBG">
+                                <div class="zy_buttom">
+                                    <div class="zy_buttomL org">左</div>
+                                    <div class="zy_buttomR">右</div>
+                                </div>
+                                &nbsp;脚
+                            </div>
+                            <div class="zhaoshiLB4 zhaoshiLBG" id="AttW8qq"></div>
+                            <div class="zhaoshiLB5 zhaoshiLBG" id="AttN8qq"></div>
+                            <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz8qq"></div>
+                            <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ8qq"></div>
+                            <div class="zhaoshiLB8 zhaoshiLBG" id="ATime8qq"></div>
+                            <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH8qq"></div>
+                            <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt8qq"></div>
+                            <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH8qq"></div>
+                            <div class="zhaoshiLB12 zhaoshiLBG">
+                                <div class="zhaoshite" Taiji_banshuai_te>特</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--<div id="zhaoshineirongqq">
+                      <div class="zhaoshiLBqqs" id="ZSdiv_tq_zhiquan">
+                        <div class="zhaoshiLB1 zhaoshiLBG">
+                          <div class="smallyuanKuang color_gong">攻</div>
+                        </div>
+                        <div class="zhaoshiLB2 zhaoshiLBG">直拳</div>
+                        <div class="zhaoshiLB3 zhaoshiLBG">
+                          <div class="zy_buttom">
+                            <div class="zy_buttomL org">左</div>
+                            <div class="zy_buttomR">右</div>
+                          </div>
+                          &nbsp;手 </div>
+                        <div class="zhaoshiLB4 zhaoshiLBG" id="AttW1qq"></div>
+                        <div class="zhaoshiLB5 zhaoshiLBG" id="AttN1qq"></div>
+                        <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz1qq"></div>
+                        <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ1qq"></div>
+                        <div class="zhaoshiLB8 zhaoshiLBG" id="ATime1qq"></div>
+                        <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH1qq"></div>
+                        <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt1qq"></div>
+                        <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH1qq"></div>
+                        <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                      </div>
+                      <div class="zhaoshiLBqqs" id="ZSdiv_tq_lrgouquan">
+                        <div class="zhaoshiLB1 zhaoshiLBG">
+                          <div class="smallyuanKuang color_gong">攻</div>
+                        </div>
+                        <div class="zhaoshiLB2 zhaoshiLBG">左右勾拳</div>
+                        <div class="zhaoshiLB3 zhaoshiLBG">
+                          <div class="zy_buttom">
+                            <div class="zy_buttomL org">左</div>
+                            <div class="zy_buttomR org">右</div>
+                          </div>
+                          &nbsp;手 </div>
+                        <div class="zhaoshiLB4 zhaoshiLBG" id="AttW2qq"></div>
+                        <div class="zhaoshiLB5 zhaoshiLBG" id="AttN2qq"></div>
+                        <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz2qq"></div>
+                        <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ2qq"></div>
+                        <div class="zhaoshiLB8 zhaoshiLBG" id="ATime2qq"></div>
+                        <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH2qq"></div>
+                        <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt2qq"></div>
+                        <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH2qq"></div>
+                        <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                      </div>
+                      <div class="zhaoshiLBqqs" id="ZSdiv_tq_sgouquan">
+                        <div class="zhaoshiLB1 zhaoshiLBG">
+                          <div class="smallyuanKuang color_gong">攻</div>
+                        </div>
+                        <div class="zhaoshiLB2 zhaoshiLBG">上勾拳</div>
+                        <div class="zhaoshiLB3 zhaoshiLBG">
+                          <div class="zy_buttom">
+                            <div class="zy_buttomL org">左</div>
+                            <div class="zy_buttomR">右</div>
+                          </div>
+                          &nbsp;手 </div>
+                        <div class="zhaoshiLB4 zhaoshiLBG" id="AttW3qq"></div>
+                        <div class="zhaoshiLB5 zhaoshiLBG" id="AttN3qq"></div>
+                        <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz3qq"></div>
+                        <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ3qq"></div>
+                        <div class="zhaoshiLB8 zhaoshiLBG" id="ATime3qq"></div>
+                        <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH3qq"></div>
+                        <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt3qq"></div>
+                        <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH3qq"></div>
+                        <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                      </div>
+                      <div class="zhaoshiLBqqs" id="ZSdiv_tq_zhouji">
+                        <div class="zhaoshiLB1 zhaoshiLBG">
+                          <div class="smallyuanKuang color_gong">攻</div>
+                        </div>
+                        <div class="zhaoshiLB2 zhaoshiLBG">肘击</div>
+                        <div class="zhaoshiLB3 zhaoshiLBG">
+                          <div class="zy_buttom">
+                            <div class="zy_buttomL org">左</div>
+                            <div class="zy_buttomR">右</div>
+                          </div>
+                          &nbsp;手 </div>
+                        <div class="zhaoshiLB4 zhaoshiLBG" id="AttW4qq"></div>
+                        <div class="zhaoshiLB5 zhaoshiLBG" id="AttN4qq"></div>
+                        <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz4qq"></div>
+                        <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ4qq"></div>
+                        <div class="zhaoshiLB8 zhaoshiLBG" id="ATime4qq"></div>
+                        <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH4qq"></div>
+                        <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt4qq"></div>
+                        <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH4qq"></div>
+                        <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                      </div>
+                      <div class="zhaoshiLBqqs" id="ZSdiv_tq_xizhuang">
+                        <div class="zhaoshiLB1 zhaoshiLBG">
+                          <div class="smallyuanKuang color_gong">攻</div>
+                        </div>
+                        <div class="zhaoshiLB2 zhaoshiLBG">膝撞</div>
+                        <div class="zhaoshiLB3 zhaoshiLBG">
+                          <div class="zy_buttom">
+                            <div class="zy_buttomL org">左</div>
+                            <div class="zy_buttomR">右</div>
+                          </div>
+                          &nbsp;手 </div>
+                        <div class="zhaoshiLB4 zhaoshiLBG" id="AttW5qq"></div>
+                        <div class="zhaoshiLB5 zhaoshiLBG" id="AttN5qq"></div>
+                        <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz5qq"></div>
+                        <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ5qq"></div>
+                        <div class="zhaoshiLB8 zhaoshiLBG" id="ATime5qq"></div>
+                        <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH5qq"></div>
+                        <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt5qq"></div>
+                        <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH5qq"></div>
+                        <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                      </div>
+                      <div class="zhaoshiLBqqs" id="ZSdiv_tq_dengtui">
+                        <div class="zhaoshiLB1 zhaoshiLBG">
+                          <div class="smallyuanKuang color_gong">攻</div>
+                        </div>
+                        <div class="zhaoshiLB2 zhaoshiLBG">蹬腿</div>
+                        <div class="zhaoshiLB3 zhaoshiLBG">
+                          <div class="zy_buttom">
+                            <div class="zy_buttomL org">左</div>
+                            <div class="zy_buttomR">右</div>
+                          </div>
+                          &nbsp;手 </div>
+                        <div class="zhaoshiLB4 zhaoshiLBG" id="AttW6qq"></div>
+                        <div class="zhaoshiLB5 zhaoshiLBG" id="AttN6qq"></div>
+                        <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz6qq"></div>
+                        <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ6qq"></div>
+                        <div class="zhaoshiLB8 zhaoshiLBG" id="ATime6qq"></div>
+                        <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH6qq"></div>
+                        <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt6qq"></div>
+                        <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH6qq"></div>
+                        <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                      </div>
+                      <div class="zhaoshiLBqqs" id="ZSdiv_tq_shaotui">
+                        <div class="zhaoshiLB1 zhaoshiLBG">
+                          <div class="smallyuanKuang color_gong">攻</div>
+                        </div>
+                        <div class="zhaoshiLB2 zhaoshiLBG">扫腿</div>
+                        <div class="zhaoshiLB3 zhaoshiLBG">
+                          <div class="zy_buttom">
+                            <div class="zy_buttomL org">左</div>
+                            <div class="zy_buttomR">右</div>
+                          </div>
+                          &nbsp;脚 </div>
+                        <div class="zhaoshiLB4 zhaoshiLBG" id="AttW7qq"></div>
+                        <div class="zhaoshiLB5 zhaoshiLBG" id="AttN7qq"></div>
+                        <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz7qq"></div>
+                        <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ7qq"></div>
+                        <div class="zhaoshiLB8 zhaoshiLBG" id="ATime7qq"></div>
+                        <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH7qq"></div>
+                        <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt7qq"></div>
+                        <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH7qq"></div>
+                        <div class="zhaoshiLB12 zhaoshiLBG"></div>
+                      </div>
+                    </div>-->
+
+                </div>
+                <div class="NeiRongchoiceZSdaK_Title2">已选招式</div>
+                <div class="NeiRongchoiceZSdaK_Title3" title="招式的 前摇时间 及 动作时间 会占用剩余时间">剩余时间：<span class="redfont"
+                                                                                                  id="xuanZSsyTime">7.5</span>&nbsp;s
+                </div>
+                <div class="yichoiceZSdaK">
+                    <div class="zhaoshiTitleqq">
+                        <div class="zhaoshiTitle1 zhaoshiTitleG">类</div>
+                        <div class="zhaoshiTitle2 zhaoshiTitleG">招式名称</div>
+                        <div class="zhaoshiTitle3 zhaoshiTitleG">发动部位</div>
+                        <div class="zhaoshiTitle4 zhaoshiTitleG">外伤</div>
+                        <div class="zhaoshiTitle5 zhaoshiTitleG">内伤</div>
+                        <div class="zhaoshiTitle12 zhaoshiTitleG">特</div>
+                        <div class="zhaoshiTitle13 zhaoshiTitleG">用时</div>
+                        <div class="zhaoshiTitle14 zhaoshiTitleG"></div>
+                        <div class="zhaoshiTitle15 zhaoshiTitleG">攻击部位</div>
+                        <div class="zhaoshiTitle16 zhaoshiTitleG">
+                            <div class="yuanXXX" id="choiceRemove00">×</div>
+                        </div>
+                    </div>
+                    <div id="chicoZhaoShiTianjiaK">
+                        <!--<div class="zhaoshiLBqqs" id="ZSdiv_tj_panda01">
+                          <div class="zhaoshiLB1 zhaoshiLBG">
+                            <div class="smallyuanKuang color_gong">攻</div>
+                          </div>
+                          <div class="zhaoshiLB2 zhaoshiLBG">攀打</div>
+                          <div class="zhaoshiLB3 zhaoshiLBG">
+                            <div class="zy_buttom" id="ZSdiv_tj_panda_flr01">
+                              <div class="zy_buttomL org">左</div>
+                              <div class="zy_buttomR">右</div>
+                            </div>
+                            &nbsp;手 </div>
+                          <div class="zhaoshiLB4 zhaoshiLBG" id="AttW1qq01"></div>
+                          <div class="zhaoshiLB5 zhaoshiLBG" id="AttN1qq01"></div>
+                          <div class="zhaoshiLB12 zhaoshiLBG">
+                            <div class="zhaoshite" Taiji_panda_te="">特</div>
+                          </div>
+                          <div class="zhaoshiLB13 zhaoshiLBG">——></div>
+                          <div class="zhaoshiLB14 zhaoshiLBG">
+                            <div class="zy_buttom">
+                              <div class="zy_buttomL org">左</div>
+                              <div class="zy_buttomR">右</div>
+                            </div>
+                            <select class="choiceXiaLa" id="choiceXiaLa">
+                              <option selected="selected">头部</option>
+                              <option>胸部</option>
+                              <option>腹部</option>
+                              <option>腰部</option>
+                              <option>肩关节</option>
+                              <option>上臂</option>
+                              <option>前臂</option>
+                              <option>手肘</option>
+                              <option>手腕</option>
+                              <option>大腿</option>
+                              <option>小腿</option>
+                              <option>膝关节</option>
+                              <option>踝关节</option>
+                            </select>
+                          </div>
+                          <div class="zhaoshiLB15 zhaoshiLBG">
+                              <div class="yuanXXX" id="choiceRemove01">×</div>
+                          </div>
+                        </div>-->
+                    </div>
+                </div>
+                <div class="choicezhaoshiButtomCwl">
+                    <div class="choicezhaoshiButtomC grayButtom" id="choicezhaoshiButtomC">返回</div>
+                </div>
+                <div class="choicezhaoshiButtomCwr">
+                    <div class="choicezhaoshiButtom redButtom" id="choicezhaoshiButtom">完成</div>
+                </div>
+            </div>
+            <div class="NeiRongKuangzz2 BDYJK">
+                <div class="contentHolder ps-container" id="ZDwenbenWK">
+                </div>
+            </div>
         </div>
-        <div class="ckZhaoShiButtomR">
-          <div class="huiheclass" id="huiheclass">回合：1</div>
-          <div class="xiaoButtomWr">
-            <div class="xiaoButtom redButtom" id="huanrenButtom">换人</div>
-          </div>
-          <div class="ckZhaoShiButtom grayButtom" id="ckZhaoShiButtom_B">招式</div>
+        <div class="NeiRongKuangDr">
+            <div class="NeiRongKuangzl1 BDYJK">
+                <div class="TuKuangTitle0">
+                    <div class="TuKuangTitle1">
+                        <div class="TuKuangTitle_name">
+                            <div id="He_name">Amery</div>
+                        </div>
+                        <div class="TuKuangTitle_paibie" id="TuKuangTitle_He_paibie">太极</div>
+                    </div>
+                    <div class="bodyDaKuang">
+                        <div class="aTu_tou tuhptu" id="he_t_tou"></div>
+                        <div class="aTu_xiong tuhptu" id="he_t_xiong"></div>
+                        <div class="aTu_fu tuhptu" id="he_t_fu"></div>
+                        <div class="aTu_yaoL tuhptu" id="he_t_yaoL"></div>
+                        <div class="aTu_yaoR tuhptu" id="he_t_yaoR"></div>
+                        <div class="aTu_jianL tuhptu" id="he_t_jianL"></div>
+                        <div class="aTu_jianR tuhptu" id="he_t_jianR"></div>
+                        <div class="aTu_shangbiL tuhptu" id="he_t_shangbiL"></div>
+                        <div class="aTu_shangbiR tuhptu" id="he_t_shangbiR"></div>
+                        <div class="aTu_zhouL tuhptu" id="he_t_zhouL"></div>
+                        <div class="aTu_zhouR tuhptu" id="he_t_zhouR"></div>
+                        <div class="aTu_qianbiL tuhptu" id="he_t_qianbiL"></div>
+                        <div class="aTu_qianbiR tuhptu" id="he_t_qianbiR"></div>
+                        <div class="aTu_shouwanL tuhptu" id="he_t_shouwanL"></div>
+                        <div class="aTu_shouwanR tuhptu" id="he_t_shouwanR"></div>
+                        <div class="aTu_datuiL tuhptu" id="he_t_datuiL"></div>
+                        <div class="aTu_datuiR tuhptu" id="he_t_datuiR"></div>
+                        <div class="aTu_xiL tuhptu" id="he_t_xiL"></div>
+                        <div class="aTu_xiR tuhptu" id="he_t_xiR"></div>
+                        <div class="aTu_xiaotuiL tuhptu" id="he_t_xiaotuiL"></div>
+                        <div class="aTu_xiaotuiR tuhptu" id="he_t_xiaotuiR"></div>
+                        <div class="aTu_huaiL tuhptu" id="he_t_huaiL"></div>
+                        <div class="aTu_huaiR tuhptu" id="he_t_huaiR"></div>
+                    </div>
+                    <div class="TuKuangshuxinDaK" id="TuKuangshuxinDaK_B">
+                        <div class="TuKuangshuxinDaKt">
+                            <div class="TuKuangshuxinDaK1 grayBgHover" id="TuKuang_B_Liliang">力量：2</div>
+                            <div class="TuKuangshuxinDaK2 grayBgHover" id="TuKuang_B_Minjie">敏捷：2</div>
+                            <div class="TuKuangshuxinDaK3 grayBgHover" id="TuKuang_B_Zhili">智力：2</div>
+                            <div class="TuKuangshuxinDaK4 grayBgHover" id="TuKuang_B_Tizhi">体质：2</div>
+                            <div class="TuKuangshuxinDaK5 grayBgHover" id="TuKuang_B_Pinheng">平衡：2</div>
+                        </div>
+                        <div class="TuKuangshuxinDaKd" id="TuKuangshuxinDaKd_B">-----</div>
+                    </div>
+                    <div class="TuKuangshuxinTanchuDK" id="TuKuangshuxinTanchuDK_B">
+                        <div class="TuchuKuang" id="TuchuKuangX_B_gongjiJC" title_B_gongjiJC="">
+                            <div class="TuchuKuang1">加攻：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_B_gongjiJC">+0%</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_B_fangyujilv" title_B_fangyujilv="">
+                            <div class="TuchuKuang1">防御：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_B_fangyujilv">3</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_B_baojishanghai" title_B_baojishanghai="">
+                            <div class="TuchuKuang1">暴伤：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_B_baojishanghai">+45%</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_B_yibanfanshuang" title_B_yibanfanshuang="">
+                            <div class="TuchuKuang1">普反：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_B_yibanfanshuang">5%</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_B_shudu" title_B_shudu="">
+                            <div class="TuchuKuang1">速度：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_B_shudu">2</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_B_fangyufanshuang" title_B_fangyufanshuang="">
+                            <div class="TuchuKuang1">防反：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_B_fangyufanshuang">20%</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_B_shanbi" title_B_shanbi="">
+                            <div class="TuchuKuang1">闪避：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_B_shanbi">2</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_B_wendinfantan" title_B_wendinfantan="">
+                            <div class="TuchuKuang1">稳反：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_B_wendinfantan">30%</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_B_baojijilv" title_B_baojijilv="">
+                            <div class="TuchuKuang1">暴率：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_B_baojijilv">10%</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_B_wendinzhi" title_B_wendinzhi="">
+                            <div class="TuchuKuang1">稳定：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_B_wendinzhi">120</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_B_gongjifudongjilv" title_B_gongjifudongjilv="">
+                            <div class="TuchuKuang1">浮动：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_B_gongjifudongjilv">50%</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_B_wendinhuifu" title_B_wendinhuifu="">
+                            <div class="TuchuKuang1">回稳：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_B_wendinhuifu"> 2</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_B_minzhongxz" title_B_minzhongxz="">
+                            <div class="TuchuKuang1">命中：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_B_minzhongxz">+0%</div>
+                        </div>
+                        <div class="TuchuKuang" id="TuchuKuangX_B_qinbao" title_B_qinbao="">
+                            <div class="TuchuKuang1">情报：</div>
+                            <div class="TuchuKuang2" id="TuchuKuang_B_qinbao">自知</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="NeiRongKuangzl2 BDYJK">
+                <div class="NeiRongKuangHPdaK">
+                    <div class="NeiRongKuangHPxK" id="Hphe_tou">
+                        <div class="NeiRongKuangHPxK1">头部</div>
+                        <div class="NeiRongKuangHPxK2" id="Hp_B_tou">500</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzD HP_blue" id="progressbar_B_tou"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphe_xiong">
+                        <div class="NeiRongKuangHPxK1">胸部</div>
+                        <div class="NeiRongKuangHPxK2" id="Hp_B_xiong">900</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzD HP_blue" id="progressbar_B_xiong"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphe_fu">
+                        <div class="NeiRongKuangHPxK1">腹部</div>
+                        <div class="NeiRongKuangHPxK2" id="Hp_B_fu">700</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzD HP_blue" id="progressbar_B_fu"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphe_yao">
+                        <div class="NeiRongKuangHPxK1">腰部</div>
+                        <div class="NeiRongKuangHPxK2a" id="Hp_B_yaoL">610</div>
+                        <div class="NeiRongKuangHPxK2b">|</div>
+                        <div class="NeiRongKuangHPxK2c" id="Hp_B_yaoR">610</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzS HP_blue" id="progressbar_B_yaoL"></div>
+                            <div class="HP_blue" id="progressbar_B_yaoR"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphe_jian">
+                        <div class="NeiRongKuangHPxK1">肩关节</div>
+                        <div class="NeiRongKuangHPxK2a" id="Hp_B_jianL">400</div>
+                        <div class="NeiRongKuangHPxK2b">|</div>
+                        <div class="NeiRongKuangHPxK2c" id="Hp_B_jianR">610</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzS HP_blue" id="progressbar_B_jianL"></div>
+                            <div class="HP_blue" id="progressbar_B_jianR"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphe_shangbi">
+                        <div class="NeiRongKuangHPxK1">上臂</div>
+                        <div class="NeiRongKuangHPxK2a" id="Hp_B_shangbiL">900</div>
+                        <div class="NeiRongKuangHPxK2b">|</div>
+                        <div class="NeiRongKuangHPxK2c" id="Hp_B_shangbiR">610</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzS HP_blue" id="progressbar_B_shangbiL"></div>
+                            <div class="HP_blue" id="progressbar_B_shangbiR"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphe_zhou">
+                        <div class="NeiRongKuangHPxK1">手肘</div>
+                        <div class="NeiRongKuangHPxK2a" id="Hp_B_zhouL">310</div>
+                        <div class="NeiRongKuangHPxK2b">|</div>
+                        <div class="NeiRongKuangHPxK2c" id="Hp_B_zhouR">610</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzS HP_blue" id="progressbar_B_zhouL"></div>
+                            <div class="HP_blue" id="progressbar_B_zhouR"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphe_qianbi">
+                        <div class="NeiRongKuangHPxK1">前臂</div>
+                        <div class="NeiRongKuangHPxK2a" id="Hp_B_qianbiL">610</div>
+                        <div class="NeiRongKuangHPxK2b">|</div>
+                        <div class="NeiRongKuangHPxK2c" id="Hp_B_qianbiR">610</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzS HP_blue" id="progressbar_B_qianbiL"></div>
+                            <div class="HP_blue" id="progressbar_B_qianbiR"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphe_shouwan">
+                        <div class="NeiRongKuangHPxK1">手腕</div>
+                        <div class="NeiRongKuangHPxK2a" id="Hp_B_shouwanL">280</div>
+                        <div class="NeiRongKuangHPxK2b">|</div>
+                        <div class="NeiRongKuangHPxK2c" id="Hp_B_shouwanR">610</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzS HP_blue" id="progressbar_B_shouwanL"></div>
+                            <div class="HP_blue" id="progressbar_B_shouwanR"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphe_datui">
+                        <div class="NeiRongKuangHPxK1">大腿</div>
+                        <div class="NeiRongKuangHPxK2a" id="Hp_B_datuiL">1000</div>
+                        <div class="NeiRongKuangHPxK2b">|</div>
+                        <div class="NeiRongKuangHPxK2c" id="Hp_B_datuiR">1000</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzS HP_blue" id="progressbar_B_datuiL"></div>
+                            <div class="HP_blue" id="progressbar_B_datuiR"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphe_xi">
+                        <div class="NeiRongKuangHPxK1">膝关节</div>
+                        <div class="NeiRongKuangHPxK2a" id="Hp_B_xiL">310</div>
+                        <div class="NeiRongKuangHPxK2b">|</div>
+                        <div class="NeiRongKuangHPxK2c" id="Hp_B_xiR">610</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzS HP_blue" id="progressbar_B_xiL"></div>
+                            <div class="HP_blue" id="progressbar_B_xiR"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphe_xiaotui">
+                        <div class="NeiRongKuangHPxK1">小腿</div>
+                        <div class="NeiRongKuangHPxK2a" id="Hp_B_xiaotuiL">800</div>
+                        <div class="NeiRongKuangHPxK2b">|</div>
+                        <div class="NeiRongKuangHPxK2c" id="Hp_B_xiaotuiR">610</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzS HP_blue" id="progressbar_B_xiaotuiL"></div>
+                            <div class="HP_blue" id="progressbar_B_xiaotuiR"></div>
+                        </div>
+                    </div>
+                    <div class="NeiRongKuangHPxK" id="Hphe_huai">
+                        <div class="NeiRongKuangHPxK1">踝关节</div>
+                        <div class="NeiRongKuangHPxK2a" id="Hp_B_huaiL">310</div>
+                        <div class="NeiRongKuangHPxK2b">|</div>
+                        <div class="NeiRongKuangHPxK2c" id="Hp_B_huaiR">610</div>
+                        <div class="NeiRongKuangHPxK3">
+                            <div class="HPwzS HP_blue" id="progressbar_B_huaiL"></div>
+                            <div class="HP_blue" id="progressbar_B_huaiR"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="NeiRongchoiceZSdaK" id="NeiRongchoiceZSdaK">
-        <div class="NeiRongchoiceZSdaK_Title1">挑选招式</div>
-        <div class="choiceShuxinXiaoKuang2qq">
-          <div class="zhaoshiTitleqq">
-            <div class="zhaoshiTitle1 zhaoshiTitleG">类</div>
-            <div class="zhaoshiTitle2 zhaoshiTitleG">招式名称</div>
-            <div class="zhaoshiTitle3 zhaoshiTitleG">发动部位</div>
-            <div class="zhaoshiTitle4 zhaoshiTitleG">外伤</div>
-            <div class="zhaoshiTitle5 zhaoshiTitleG">内伤</div>
-            <div class="zhaoshiTitle6 zhaoshiTitleG">命中</div>
-            <div class="zhaoshiTitle7 zhaoshiTitleG">前摇</div>
-            <div class="zhaoshiTitle8 zhaoshiTitleG">动作</div>
-            <div class="zhaoshiTitle9 zhaoshiTitleG">后摇</div>
-            <div class="zhaoshiTitle10 zhaoshiTitleG">削衡</div>
-            <div class="zhaoshiTitle11 zhaoshiTitleG">耗衡</div>
-            <div class="zhaoshiTitle12 zhaoshiTitleG">特</div>
-          </div>
-          <div id="zhaoshineirongqq">
-            <div class="zhaoshiLBqqs" id="ZSdiv_tj_panda">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">攀打</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW1qq"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN1qq"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz1qq"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ1qq"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime1qq"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH1qq"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt1qq"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH1qq"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG">
-                <div class="zhaoshite" Taiji_panda_te="">特</div>
-              </div>
-            </div>
-            <div class="zhaoshiLBqqs" id="ZSdiv_tj_tuishou">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">推手</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR org">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW2qq"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN2qq"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz2qq"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ2qq"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime2qq"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH2qq"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt2qq"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH2qq"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-            <div class="zhaoshiLBqqs" id="ZSdiv_tj_qingna">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">擒拿</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW3qq"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN3qq"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz3qq"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ3qq"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime3qq"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH3qq"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt3qq"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH3qq"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-            <div class="zhaoshiLBqqs" id="ZSdiv_tj_shuangfong">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">双峰贯耳</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR org">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW4qq"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN4qq"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz4qq"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ4qq"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime4qq"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH4qq"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt4qq"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH4qq"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-            <div class="zhaoshiLBqqs" id="ZSdiv_tj_zhoudicui">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">肘底捶</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW5qq"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN5qq"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz5qq"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ5qq"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime5qq"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH5qq"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt5qq"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH5qq"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG">
-                <div class="zhaoshite" Taiji_zhoudicui_te="">特</div>
-              </div>
-            </div>
-            <div class="zhaoshiLBqqs" id="ZSdiv_tj_paocui">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">炮锤</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR org">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW6qq"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN6qq"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz6qq"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ6qq"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime6qq"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH6qq"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt6qq"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH6qq"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-            <div class="zhaoshiLBqqs" id="ZSdiv_tj_yuanyangtui">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">鸳鸯腿</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                &nbsp;脚 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW7qq"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN7qq"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz7qq"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ7qq"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime7qq"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH7qq"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt7qq"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH7qq"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG">
-                <div class="zhaoshite" Taiji_yuanyangtui_te>特</div>
-              </div>
-            </div>
-            <div class="zhaoshiLBqqs" id="ZSdiv_tj_banshuai">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">绊摔</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                &nbsp;脚 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW8qq"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN8qq"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz8qq"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ8qq"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime8qq"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH8qq"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt8qq"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH8qq"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG">
-                <div class="zhaoshite" Taiji_banshuai_te>特</div>
-              </div>
-            </div>
-          </div>
-          
-          <!--<div id="zhaoshineirongqq">
-            <div class="zhaoshiLBqqs" id="ZSdiv_tq_zhiquan">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">直拳</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW1qq"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN1qq"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz1qq"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ1qq"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime1qq"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH1qq"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt1qq"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH1qq"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-            <div class="zhaoshiLBqqs" id="ZSdiv_tq_lrgouquan">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">左右勾拳</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR org">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW2qq"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN2qq"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz2qq"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ2qq"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime2qq"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH2qq"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt2qq"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH2qq"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-            <div class="zhaoshiLBqqs" id="ZSdiv_tq_sgouquan">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">上勾拳</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW3qq"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN3qq"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz3qq"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ3qq"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime3qq"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH3qq"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt3qq"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH3qq"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-            <div class="zhaoshiLBqqs" id="ZSdiv_tq_zhouji">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">肘击</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW4qq"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN4qq"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz4qq"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ4qq"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime4qq"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH4qq"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt4qq"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH4qq"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-            <div class="zhaoshiLBqqs" id="ZSdiv_tq_xizhuang">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">膝撞</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW5qq"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN5qq"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz5qq"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ5qq"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime5qq"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH5qq"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt5qq"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH5qq"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-            <div class="zhaoshiLBqqs" id="ZSdiv_tq_dengtui">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">蹬腿</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW6qq"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN6qq"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz6qq"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ6qq"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime6qq"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH6qq"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt6qq"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH6qq"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-            <div class="zhaoshiLBqqs" id="ZSdiv_tq_shaotui">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">扫腿</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                &nbsp;脚 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW7qq"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN7qq"></div>
-              <div class="zhaoshiLB6 zhaoshiLBG" id="Mzxz7qq"></div>
-              <div class="zhaoshiLB7 zhaoshiLBG" id="ATimeQ7qq"></div>
-              <div class="zhaoshiLB8 zhaoshiLBG" id="ATime7qq"></div>
-              <div class="zhaoshiLB9 zhaoshiLBG" id="ATimeH7qq"></div>
-              <div class="zhaoshiLB10 zhaoshiLBG" id="PinHengAtt7qq"></div>
-              <div class="zhaoshiLB11 zhaoshiLBG" id="PinHengXH7qq"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG"></div>
-            </div>
-          </div>--> 
-          
-        </div>
-        <div class="NeiRongchoiceZSdaK_Title2">已选招式</div>
-        <div class="NeiRongchoiceZSdaK_Title3" title="招式的 前摇时间 及 动作时间 会占用剩余时间">剩余时间：<span class="redfont" id="xuanZSsyTime">7.5</span>&nbsp;s</div>
-        <div class="yichoiceZSdaK">
-          <div class="zhaoshiTitleqq">
-            <div class="zhaoshiTitle1 zhaoshiTitleG">类</div>
-            <div class="zhaoshiTitle2 zhaoshiTitleG">招式名称</div>
-            <div class="zhaoshiTitle3 zhaoshiTitleG">发动部位</div>
-            <div class="zhaoshiTitle4 zhaoshiTitleG">外伤</div>
-            <div class="zhaoshiTitle5 zhaoshiTitleG">内伤</div>
-            <div class="zhaoshiTitle12 zhaoshiTitleG">特</div>
-            <div class="zhaoshiTitle13 zhaoshiTitleG">用时</div>
-            <div class="zhaoshiTitle14 zhaoshiTitleG"></div>
-            <div class="zhaoshiTitle15 zhaoshiTitleG">攻击部位</div>
-            <div class="zhaoshiTitle16 zhaoshiTitleG">
-              <div class="yuanXXX" id="choiceRemove00">×</div>
-            </div>
-          </div>
-          <div id="chicoZhaoShiTianjiaK"> 
-            <!--<div class="zhaoshiLBqqs" id="ZSdiv_tj_panda01">
-              <div class="zhaoshiLB1 zhaoshiLBG">
-                <div class="smallyuanKuang color_gong">攻</div>
-              </div>
-              <div class="zhaoshiLB2 zhaoshiLBG">攀打</div>
-              <div class="zhaoshiLB3 zhaoshiLBG">
-                <div class="zy_buttom" id="ZSdiv_tj_panda_flr01">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                &nbsp;手 </div>
-              <div class="zhaoshiLB4 zhaoshiLBG" id="AttW1qq01"></div>
-              <div class="zhaoshiLB5 zhaoshiLBG" id="AttN1qq01"></div>
-              <div class="zhaoshiLB12 zhaoshiLBG">
-                <div class="zhaoshite" Taiji_panda_te="">特</div>
-              </div>
-              <div class="zhaoshiLB13 zhaoshiLBG">——></div>
-              <div class="zhaoshiLB14 zhaoshiLBG">
-                <div class="zy_buttom">
-                  <div class="zy_buttomL org">左</div>
-                  <div class="zy_buttomR">右</div>
-                </div>
-                <select class="choiceXiaLa" id="choiceXiaLa">
-                  <option selected="selected">头部</option>
-                  <option>胸部</option>
-                  <option>腹部</option>
-                  <option>腰部</option>
-                  <option>肩关节</option>
-                  <option>上臂</option>
-                  <option>前臂</option>
-                  <option>手肘</option>
-                  <option>手腕</option>
-                  <option>大腿</option>
-                  <option>小腿</option>
-                  <option>膝关节</option>
-                  <option>踝关节</option>
-                </select>
-              </div>
-              <div class="zhaoshiLB15 zhaoshiLBG">
-              	<div class="yuanXXX" id="choiceRemove01">×</div>
-              </div>
-            </div>--> 
-          </div>
-        </div>
-        <div class="choicezhaoshiButtomCwl">
-          <div class="choicezhaoshiButtomC grayButtom" id="choicezhaoshiButtomC">返回</div>
-        </div>
-        <div class="choicezhaoshiButtomCwr">
-          <div class="choicezhaoshiButtom redButtom" id="choicezhaoshiButtom">完成</div>
-        </div>
-      </div>
-      <div class="NeiRongKuangzz2 BDYJK">
-		<div class="contentHolder ps-container" id="ZDwenbenWK">
-		</div>
-   </div>
     </div>
-    <div class="NeiRongKuangDr">
-      <div class="NeiRongKuangzl1 BDYJK">
-        <div class="TuKuangTitle0">
-          <div class="TuKuangTitle1">
-            <div class="TuKuangTitle_name">
-              <div id="He_name">Amery</div>
-            </div>
-            <div class="TuKuangTitle_paibie" id="TuKuangTitle_He_paibie">太极</div>
-          </div>
-          <div class="bodyDaKuang">
-            <div class="aTu_tou tuhptu" id="he_t_tou"></div>
-            <div class="aTu_xiong tuhptu" id="he_t_xiong"></div>
-            <div class="aTu_fu tuhptu" id="he_t_fu"></div>
-            <div class="aTu_yaoL tuhptu" id="he_t_yaoL"></div>
-            <div class="aTu_yaoR tuhptu" id="he_t_yaoR"></div>
-            <div class="aTu_jianL tuhptu" id="he_t_jianL"></div>
-            <div class="aTu_jianR tuhptu" id="he_t_jianR"></div>
-            <div class="aTu_shangbiL tuhptu" id="he_t_shangbiL"></div>
-            <div class="aTu_shangbiR tuhptu" id="he_t_shangbiR"></div>
-            <div class="aTu_zhouL tuhptu" id="he_t_zhouL"></div>
-            <div class="aTu_zhouR tuhptu" id="he_t_zhouR"></div>
-            <div class="aTu_qianbiL tuhptu" id="he_t_qianbiL"></div>
-            <div class="aTu_qianbiR tuhptu" id="he_t_qianbiR"></div>
-            <div class="aTu_shouwanL tuhptu" id="he_t_shouwanL"></div>
-            <div class="aTu_shouwanR tuhptu" id="he_t_shouwanR"></div>
-            <div class="aTu_datuiL tuhptu" id="he_t_datuiL"></div>
-            <div class="aTu_datuiR tuhptu" id="he_t_datuiR"></div>
-            <div class="aTu_xiL tuhptu" id="he_t_xiL"></div>
-            <div class="aTu_xiR tuhptu" id="he_t_xiR"></div>
-            <div class="aTu_xiaotuiL tuhptu" id="he_t_xiaotuiL"></div>
-            <div class="aTu_xiaotuiR tuhptu" id="he_t_xiaotuiR"></div>
-            <div class="aTu_huaiL tuhptu" id="he_t_huaiL"></div>
-            <div class="aTu_huaiR tuhptu" id="he_t_huaiR"></div>
-          </div>
-          <div class="TuKuangshuxinDaK" id="TuKuangshuxinDaK_B">
-            <div class="TuKuangshuxinDaKt">
-              <div class="TuKuangshuxinDaK1 grayBgHover" id="TuKuang_B_Liliang">力量：2</div>
-              <div class="TuKuangshuxinDaK2 grayBgHover" id="TuKuang_B_Minjie">敏捷：2</div>
-              <div class="TuKuangshuxinDaK3 grayBgHover" id="TuKuang_B_Zhili">智力：2</div>
-              <div class="TuKuangshuxinDaK4 grayBgHover" id="TuKuang_B_Tizhi">体质：2</div>
-              <div class="TuKuangshuxinDaK5 grayBgHover" id="TuKuang_B_Pinheng">平衡：2</div>
-            </div>
-            <div class="TuKuangshuxinDaKd" id="TuKuangshuxinDaKd_B">-----</div>
-          </div>
-          <div class="TuKuangshuxinTanchuDK" id="TuKuangshuxinTanchuDK_B">
-            <div class="TuchuKuang" id="TuchuKuangX_B_gongjiJC" title_B_gongjiJC="">
-              <div class="TuchuKuang1">加攻：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_B_gongjiJC">+0%</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_B_fangyujilv" title_B_fangyujilv="">
-              <div class="TuchuKuang1">防御：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_B_fangyujilv">3</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_B_baojishanghai" title_B_baojishanghai="">
-              <div class="TuchuKuang1">暴伤：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_B_baojishanghai">+45%</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_B_yibanfanshuang" title_B_yibanfanshuang="">
-              <div class="TuchuKuang1">普反：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_B_yibanfanshuang">5%</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_B_shudu"  title_B_shudu="">
-              <div class="TuchuKuang1">速度：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_B_shudu">2</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_B_fangyufanshuang"  title_B_fangyufanshuang="">
-              <div class="TuchuKuang1">防反：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_B_fangyufanshuang">20%</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_B_shanbi" title_B_shanbi="">
-              <div class="TuchuKuang1">闪避：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_B_shanbi">2</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_B_wendinfantan" title_B_wendinfantan="">
-              <div class="TuchuKuang1">稳反：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_B_wendinfantan">30%</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_B_baojijilv" title_B_baojijilv="">
-              <div class="TuchuKuang1">暴率：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_B_baojijilv">10%</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_B_wendinzhi" title_B_wendinzhi="">
-              <div class="TuchuKuang1">稳定：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_B_wendinzhi">120</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_B_gongjifudongjilv" title_B_gongjifudongjilv="">
-              <div class="TuchuKuang1">浮动：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_B_gongjifudongjilv">50%</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_B_wendinhuifu" title_B_wendinhuifu="">
-              <div class="TuchuKuang1">回稳：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_B_wendinhuifu"> 2</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_B_minzhongxz" title_B_minzhongxz="">
-              <div class="TuchuKuang1">命中：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_B_minzhongxz">+0%</div>
-            </div>
-            <div class="TuchuKuang" id="TuchuKuangX_B_qinbao" title_B_qinbao="">
-              <div class="TuchuKuang1">情报：</div>
-              <div class="TuchuKuang2" id="TuchuKuang_B_qinbao">自知</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="NeiRongKuangzl2 BDYJK">
-        <div class="NeiRongKuangHPdaK">
-          <div class="NeiRongKuangHPxK" id="Hphe_tou">
-            <div class="NeiRongKuangHPxK1">头部</div>
-            <div class="NeiRongKuangHPxK2" id="Hp_B_tou">500</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzD HP_blue" id="progressbar_B_tou"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphe_xiong">
-            <div class="NeiRongKuangHPxK1">胸部</div>
-            <div class="NeiRongKuangHPxK2" id="Hp_B_xiong">900</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzD HP_blue" id="progressbar_B_xiong"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphe_fu">
-            <div class="NeiRongKuangHPxK1">腹部</div>
-            <div class="NeiRongKuangHPxK2" id="Hp_B_fu">700</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzD HP_blue" id="progressbar_B_fu"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphe_yao">
-            <div class="NeiRongKuangHPxK1">腰部</div>
-            <div class="NeiRongKuangHPxK2a" id="Hp_B_yaoL">610</div>
-            <div class="NeiRongKuangHPxK2b">|</div>
-            <div class="NeiRongKuangHPxK2c" id="Hp_B_yaoR">610</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzS HP_blue" id="progressbar_B_yaoL"></div>
-              <div class="HP_blue" id="progressbar_B_yaoR"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphe_jian">
-            <div class="NeiRongKuangHPxK1">肩关节</div>
-            <div class="NeiRongKuangHPxK2a" id="Hp_B_jianL">400</div>
-            <div class="NeiRongKuangHPxK2b">|</div>
-            <div class="NeiRongKuangHPxK2c" id="Hp_B_jianR">610</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzS HP_blue" id="progressbar_B_jianL"></div>
-              <div class="HP_blue" id="progressbar_B_jianR"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphe_shangbi">
-            <div class="NeiRongKuangHPxK1">上臂</div>
-            <div class="NeiRongKuangHPxK2a" id="Hp_B_shangbiL">900</div>
-            <div class="NeiRongKuangHPxK2b">|</div>
-            <div class="NeiRongKuangHPxK2c" id="Hp_B_shangbiR">610</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzS HP_blue" id="progressbar_B_shangbiL"></div>
-              <div class="HP_blue" id="progressbar_B_shangbiR"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphe_zhou">
-            <div class="NeiRongKuangHPxK1">手肘</div>
-            <div class="NeiRongKuangHPxK2a" id="Hp_B_zhouL">310</div>
-            <div class="NeiRongKuangHPxK2b">|</div>
-            <div class="NeiRongKuangHPxK2c" id="Hp_B_zhouR">610</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzS HP_blue" id="progressbar_B_zhouL"></div>
-              <div class="HP_blue" id="progressbar_B_zhouR"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphe_qianbi">
-            <div class="NeiRongKuangHPxK1">前臂</div>
-            <div class="NeiRongKuangHPxK2a" id="Hp_B_qianbiL">610</div>
-            <div class="NeiRongKuangHPxK2b">|</div>
-            <div class="NeiRongKuangHPxK2c" id="Hp_B_qianbiR">610</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzS HP_blue" id="progressbar_B_qianbiL"></div>
-              <div class="HP_blue" id="progressbar_B_qianbiR"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphe_shouwan">
-            <div class="NeiRongKuangHPxK1">手腕</div>
-            <div class="NeiRongKuangHPxK2a" id="Hp_B_shouwanL">280</div>
-            <div class="NeiRongKuangHPxK2b">|</div>
-            <div class="NeiRongKuangHPxK2c" id="Hp_B_shouwanR">610</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzS HP_blue" id="progressbar_B_shouwanL"></div>
-              <div class="HP_blue" id="progressbar_B_shouwanR"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphe_datui">
-            <div class="NeiRongKuangHPxK1">大腿</div>
-            <div class="NeiRongKuangHPxK2a" id="Hp_B_datuiL">1000</div>
-            <div class="NeiRongKuangHPxK2b">|</div>
-            <div class="NeiRongKuangHPxK2c" id="Hp_B_datuiR">1000</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzS HP_blue" id="progressbar_B_datuiL"></div>
-              <div class="HP_blue" id="progressbar_B_datuiR"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphe_xi">
-            <div class="NeiRongKuangHPxK1">膝关节</div>
-            <div class="NeiRongKuangHPxK2a" id="Hp_B_xiL">310</div>
-            <div class="NeiRongKuangHPxK2b">|</div>
-            <div class="NeiRongKuangHPxK2c" id="Hp_B_xiR">610</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzS HP_blue" id="progressbar_B_xiL"></div>
-              <div class="HP_blue" id="progressbar_B_xiR"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphe_xiaotui">
-            <div class="NeiRongKuangHPxK1">小腿</div>
-            <div class="NeiRongKuangHPxK2a" id="Hp_B_xiaotuiL">800</div>
-            <div class="NeiRongKuangHPxK2b">|</div>
-            <div class="NeiRongKuangHPxK2c" id="Hp_B_xiaotuiR">610</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzS HP_blue" id="progressbar_B_xiaotuiL"></div>
-              <div class="HP_blue" id="progressbar_B_xiaotuiR"></div>
-            </div>
-          </div>
-          <div class="NeiRongKuangHPxK" id="Hphe_huai">
-            <div class="NeiRongKuangHPxK1">踝关节</div>
-            <div class="NeiRongKuangHPxK2a" id="Hp_B_huaiL">310</div>
-            <div class="NeiRongKuangHPxK2b">|</div>
-            <div class="NeiRongKuangHPxK2c" id="Hp_B_huaiR">610</div>
-            <div class="NeiRongKuangHPxK3">
-              <div class="HPwzS HP_blue" id="progressbar_B_huaiL"></div>
-              <div class="HP_blue" id="progressbar_B_huaiR"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 </body>
 </html>
