@@ -1843,6 +1843,1130 @@ $(document).ready(function () {
 
 
 
+	$("#Hp_A_tou").hover(
+		function () {
+			$("#Hp_A_tou").addClass("shanshan");
+            $("#progressbar_A_tou").addClass("shanshan");
+            $("#my_t_tou").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_tou").removeClass("shanshan");
+            $("#progressbar_A_tou").removeClass("shanshan");
+            $("#my_t_tou").removeClass("shanshan");
+        }
+	);
+    $("#Hp_A_xiong").hover(
+        function () {
+            $("#Hp_A_xiong").addClass("shanshan");
+            $("#my_t_xiong").addClass("shanshan");
+            $("#progressbar_A_xiong").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_xiong").removeClass("shanshan");
+            $("#my_t_xiong").removeClass("shanshan");
+            $("#progressbar_A_xiong").removeClass("shanshan");
+        }
+    );
+    $("#Hp_A_fu").hover(
+        function () {
+            $("#my_t_fu").addClass("shanshan");
+            $("#Hp_A_fu").addClass("shanshan");
+            $("#progressbar_A_fu").addClass("shanshan");
+        },
+        function () {
+            $("#my_t_fu").removeClass("shanshan");
+            $("#Hp_A_fu").removeClass("shanshan");
+            $("#progressbar_A_fu").removeClass("shanshan");
+        }
+    );
+    $("#Hp_A_yaoL").hover(
+        function () {
+            $("#Hp_A_yaoL").addClass("shanshan");
+            $("#my_t_yaoL").addClass("shanshan");
+            $("#progressbar_A_yaoL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_yaoL").removeClass("shanshan");
+            $("#my_t_yaoL").removeClass("shanshan");
+            $("#progressbar_A_yaoL").removeClass("shanshan");
+        }
+    );
+    $("#Hp_A_yaoR").hover(
+        function () {
+            $("#Hp_A_yaoR").addClass("shanshan");
+            $("#my_t_yaoR").addClass("shanshan");
+            $("#progressbar_A_yaoR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_yaoR").removeClass("shanshan");
+            $("#my_t_yaoR").removeClass("shanshan");
+            $("#progressbar_A_yaoR").removeClass("shanshan");
+        }
+    );
+    $("#Hp_A_jianL").hover(
+        function () {
+            $("#Hp_A_jianL").addClass("shanshan");
+            $("#my_t_jianL").addClass("shanshan");
+            $("#progressbar_A_jianL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_jianL").removeClass("shanshan");
+            $("#my_t_jianL").removeClass("shanshan");
+            $("#progressbar_A_jianL").removeClass("shanshan");
+        }
+    );
+    $("#Hp_A_jianR").hover(
+        function () {
+            $("#Hp_A_jianR").addClass("shanshan");
+            $("#my_t_jianR").addClass("shanshan");
+            $("#progressbar_A_jianR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_jianR").removeClass("shanshan");
+            $("#my_t_jianR").removeClass("shanshan");
+            $("#progressbar_A_jianR").removeClass("shanshan");
+        }
+    );
+    $("#Hp_A_shangbiL").hover(
+        function () {
+            $("#Hp_A_shangbiL").addClass("shanshan");
+            $("#my_t_shangbiL").addClass("shanshan");
+            $("#progressbar_A_shangbiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_shangbiL").removeClass("shanshan");
+            $("#my_t_shangbiL").removeClass("shanshan");
+            $("#progressbar_A_shangbiL").removeClass("shanshan");
+        }
+    );
+    $("#Hp_A_shangbiR").hover(
+        function () {
+            $("#Hp_A_shangbiR").addClass("shanshan");
+            $("#my_t_shangbiR").addClass("shanshan");
+            $("#progressbar_A_shangbiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_shangbiR").removeClass("shanshan");
+            $("#my_t_shangbiR").removeClass("shanshan");
+            $("#progressbar_A_shangbiR").removeClass("shanshan");
+        }
+    );
+    $("#Hp_A_zhouL").hover(
+        function () {
+            $("#Hp_A_zhouL").addClass("shanshan");
+            $("#my_t_zhouL").addClass("shanshan");
+            $("#progressbar_A_zhouL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_zhouL").removeClass("shanshan");
+            $("#my_t_zhouL").removeClass("shanshan");
+            $("#progressbar_A_zhouL").removeClass("shanshan");
+        }
+    );
+    $("#Hp_A_zhouR").hover(
+        function () {
+            $("#Hp_A_zhouR").addClass("shanshan");
+            $("#my_t_zhouR").addClass("shanshan");
+            $("#progressbar_A_zhouR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_zhouR").removeClass("shanshan");
+            $("#my_t_zhouR").removeClass("shanshan");
+            $("#progressbar_A_zhouR").removeClass("shanshan");
+        }
+    );
+    $("#Hp_A_qianbiL").hover(
+        function () {
+            $("#Hp_A_qianbiL").addClass("shanshan");
+            $("#my_t_qianbiL").addClass("shanshan");
+            $("#progressbar_A_qianbiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_qianbiL").removeClass("shanshan");
+            $("#my_t_qianbiL").removeClass("shanshan");
+            $("#progressbar_A_qianbiL").removeClass("shanshan");
+        }
+    );
+    $("#Hp_A_qianbiR").hover(
+        function () {
+            $("#Hp_A_qianbiR").addClass("shanshan");
+            $("#my_t_qianbiR").addClass("shanshan");
+            $("#progressbar_A_qianbiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_qianbiR").removeClass("shanshan");
+            $("#my_t_qianbiR").removeClass("shanshan");
+            $("#progressbar_A_qianbiR").removeClass("shanshan");
+        }
+    );
+    $("#Hp_A_shouwanL").hover(
+        function () {
+            $("#Hp_A_shouwanL").addClass("shanshan");
+            $("#my_t_shouwanL").addClass("shanshan");
+            $("#progressbar_A_shouwanL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_shouwanL").removeClass("shanshan");
+            $("#my_t_shouwanL").removeClass("shanshan");
+            $("#progressbar_A_shouwanL").removeClass("shanshan");
+        }
+    );
+    $("#Hp_A_shouwanR").hover(
+        function () {
+            $("#Hp_A_shouwanR").addClass("shanshan");
+            $("#my_t_shouwanR").addClass("shanshan");
+            $("#progressbar_A_shouwanR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_shouwanR").removeClass("shanshan");
+            $("#my_t_shouwanR").removeClass("shanshan");
+            $("#progressbar_A_shouwanR").removeClass("shanshan");
+        }
+    );
+    $("#Hp_A_datuiL").hover(
+        function () {
+            $("#Hp_A_datuiL").addClass("shanshan");
+            $("#my_t_datuiL").addClass("shanshan");
+            $("#progressbar_A_datuiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_datuiL").removeClass("shanshan");
+            $("#my_t_datuiL").removeClass("shanshan");
+            $("#progressbar_A_datuiL").removeClass("shanshan");
+        }
+    );
+    $("#Hp_A_datuiR").hover(
+        function () {
+            $("#Hp_A_datuiR").addClass("shanshan");
+            $("#my_t_datuiR").addClass("shanshan");
+            $("#progressbar_A_datuiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_datuiR").removeClass("shanshan");
+            $("#my_t_datuiR").removeClass("shanshan");
+            $("#progressbar_A_datuiR").removeClass("shanshan");
+        }
+    );
+    $("#Hp_A_xiL").hover(
+        function () {
+            $("#Hp_A_xiL").addClass("shanshan");
+            $("#my_t_xiL").addClass("shanshan");
+            $("#progressbar_A_xiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_xiL").removeClass("shanshan");
+            $("#my_t_xiL").removeClass("shanshan");
+            $("#progressbar_A_xiL").removeClass("shanshan");
+        }
+    );
+    $("#Hp_A_xiR").hover(
+        function () {
+            $("#Hp_A_xiR").addClass("shanshan");
+            $("#my_t_xiR").addClass("shanshan");
+            $("#progressbar_A_xiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_xiR").removeClass("shanshan");
+            $("#my_t_xiR").removeClass("shanshan");
+            $("#progressbar_A_xiR").removeClass("shanshan");
+        }
+    );
+    $("#Hp_A_xiaotuiL").hover(
+        function () {
+            $("#Hp_A_xiaotuiL").addClass("shanshan");
+            $("#my_t_xiaotuiL").addClass("shanshan");
+            $("#progressbar_A_xiaotuiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_xiaotuiL").removeClass("shanshan");
+            $("#my_t_xiaotuiL").removeClass("shanshan");
+            $("#progressbar_A_xiaotuiL").removeClass("shanshan");
+        }
+    );
+    $("#Hp_A_xiaotuiR").hover(
+        function () {
+            $("#Hp_A_xiaotuiR").addClass("shanshan");
+            $("#my_t_xiaotuiR").addClass("shanshan");
+            $("#progressbar_A_xiaotuiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_xiaotuiR").removeClass("shanshan");
+            $("#my_t_xiaotuiR").removeClass("shanshan");
+            $("#progressbar_A_xiaotuiR").removeClass("shanshan");
+        }
+    );
+    $("#Hp_A_huaiL").hover(
+        function () {
+            $("#Hp_A_huaiL").addClass("shanshan");
+            $("#my_t_huaiL").addClass("shanshan");
+            $("#progressbar_A_huaiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_huaiL").removeClass("shanshan");
+            $("#my_t_huaiL").removeClass("shanshan");
+            $("#progressbar_A_huaiL").removeClass("shanshan");
+        }
+    );
+    $("#Hp_A_huaiR").hover(
+        function () {
+            $("#Hp_A_huaiR").addClass("shanshan");
+            $("#my_t_huaiR").addClass("shanshan");
+            $("#progressbar_A_huaiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_huaiR").removeClass("shanshan");
+            $("#my_t_huaiR").removeClass("shanshan");
+            $("#progressbar_A_huaiR").removeClass("shanshan");
+        }
+    );
+
+    $("#Hp_B_tou").hover(
+        function () {
+            $("#Hp_B_tou").addClass("shanshan");
+            $("#he_t_tou").addClass("shanshan");
+            $("#progressbar_B_tou").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_tou").removeClass("shanshan");
+            $("#he_t_tou").removeClass("shanshan");
+            $("#progressbar_B_tou").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_xiong").hover(
+        function () {
+            $("#Hp_B_xiong").addClass("shanshan");
+            $("#he_t_xiong").addClass("shanshan");
+            $("#progressbar_B_xiong").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_xiong").removeClass("shanshan");
+            $("#he_t_xiong").removeClass("shanshan");
+            $("#progressbar_B_xiong").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_fu").hover(
+        function () {
+            $("#Hp_B_fu").addClass("shanshan");
+            $("#he_t_fu").addClass("shanshan");
+            $("#progressbar_B_fu").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_fu").removeClass("shanshan");
+            $("#he_t_fu").removeClass("shanshan");
+            $("#progressbar_B_fu").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_yaoL").hover(
+        function () {
+            $("#Hp_B_yaoL").addClass("shanshan");
+            $("#he_t_yaoL").addClass("shanshan");
+            $("#progressbar_B_yaoL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_yaoL").removeClass("shanshan");
+            $("#he_t_yaoL").removeClass("shanshan");
+            $("#progressbar_B_yaoL").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_yaoR").hover(
+        function () {
+            $("#Hp_B_yaoR").addClass("shanshan");
+            $("#he_t_yaoR").addClass("shanshan");
+            $("#progressbar_B_yaoR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_yaoR").removeClass("shanshan");
+            $("#he_t_yaoR").removeClass("shanshan");
+            $("#progressbar_B_yaoR").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_jianL").hover(
+        function () {
+            $("#Hp_B_jianL").addClass("shanshan");
+            $("#he_t_jianL").addClass("shanshan");
+            $("#progressbar_B_jianL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_jianL").removeClass("shanshan");
+            $("#he_t_jianL").removeClass("shanshan");
+            $("#progressbar_B_jianL").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_jianR").hover(
+        function () {
+            $("#Hp_B_jianR").addClass("shanshan");
+            $("#he_t_jianR").addClass("shanshan");
+            $("#progressbar_B_jianR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_jianR").removeClass("shanshan");
+            $("#he_t_jianR").removeClass("shanshan");
+            $("#progressbar_B_jianR").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_shangbiL").hover(
+        function () {
+            $("#Hp_B_shangbiL").addClass("shanshan");
+            $("#he_t_shangbiL").addClass("shanshan");
+            $("#progressbar_B_shangbiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_shangbiL").removeClass("shanshan");
+            $("#he_t_shangbiL").removeClass("shanshan");
+            $("#progressbar_B_shangbiL").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_shangbiR").hover(
+        function () {
+            $("#Hp_B_shangbiR").addClass("shanshan");
+            $("#he_t_shangbiR").addClass("shanshan");
+            $("#progressbar_B_shangbiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_shangbiR").removeClass("shanshan");
+            $("#he_t_shangbiR").removeClass("shanshan");
+            $("#progressbar_B_shangbiR").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_zhouL").hover(
+        function () {
+            $("#Hp_B_zhouL").addClass("shanshan");
+            $("#he_t_zhouL").addClass("shanshan");
+            $("#progressbar_B_zhouL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_zhouL").removeClass("shanshan");
+            $("#he_t_zhouL").removeClass("shanshan");
+            $("#progressbar_B_zhouL").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_zhouR").hover(
+        function () {
+            $("#Hp_B_zhouR").addClass("shanshan");
+            $("#he_t_zhouR").addClass("shanshan");
+            $("#progressbar_B_zhouR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_zhouR").removeClass("shanshan");
+            $("#he_t_zhouR").removeClass("shanshan");
+            $("#progressbar_B_zhouR").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_qianbiL").hover(
+        function () {
+            $("#Hp_B_qianbiL").addClass("shanshan");
+            $("#he_t_qianbiL").addClass("shanshan");
+            $("#progressbar_B_qianbiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_qianbiL").removeClass("shanshan");
+            $("#he_t_qianbiL").removeClass("shanshan");
+            $("#progressbar_B_qianbiL").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_qianbiR").hover(
+        function () {
+            $("#Hp_B_qianbiR").addClass("shanshan");
+            $("#he_t_qianbiR").addClass("shanshan");
+            $("#progressbar_B_qianbiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_qianbiR").removeClass("shanshan");
+            $("#he_t_qianbiR").removeClass("shanshan");
+            $("#progressbar_B_qianbiR").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_shouwanL").hover(
+        function () {
+            $("#Hp_B_shouwanL").addClass("shanshan");
+            $("#he_t_shouwanL").addClass("shanshan");
+            $("#progressbar_B_shouwanL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_shouwanL").removeClass("shanshan");
+            $("#he_t_shouwanL").removeClass("shanshan");
+            $("#progressbar_B_shouwanL").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_shouwanR").hover(
+        function () {
+            $("#Hp_B_shouwanR").addClass("shanshan");
+            $("#he_t_shouwanR").addClass("shanshan");
+            $("#progressbar_B_shouwanR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_shouwanR").removeClass("shanshan");
+            $("#he_t_shouwanR").removeClass("shanshan");
+            $("#progressbar_B_shouwanR").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_datuiL").hover(
+        function () {
+            $("#Hp_B_datuiL").addClass("shanshan");
+            $("#he_t_datuiL").addClass("shanshan");
+            $("#progressbar_B_datuiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_datuiL").removeClass("shanshan");
+            $("#he_t_datuiL").removeClass("shanshan");
+            $("#progressbar_B_datuiL").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_datuiR").hover(
+        function () {
+            $("#Hp_B_datuiR").addClass("shanshan");
+            $("#he_t_datuiR").addClass("shanshan");
+            $("#progressbar_B_datuiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_datuiR").removeClass("shanshan");
+            $("#he_t_datuiR").removeClass("shanshan");
+            $("#progressbar_B_datuiR").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_xiL").hover(
+        function () {
+            $("#Hp_B_xiL").addClass("shanshan");
+            $("#he_t_xiL").addClass("shanshan");
+            $("#progressbar_B_xiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_xiL").removeClass("shanshan");
+            $("#he_t_xiL").removeClass("shanshan");
+            $("#progressbar_B_xiL").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_xiR").hover(
+        function () {
+            $("#Hp_B_xiR").addClass("shanshan");
+            $("#he_t_xiR").addClass("shanshan");
+            $("#progressbar_B_xiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_xiR").removeClass("shanshan");
+            $("#he_t_xiR").removeClass("shanshan");
+            $("#progressbar_B_xiR").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_xiaotuiL").hover(
+        function () {
+            $("#Hp_B_xiaotuiL").addClass("shanshan");
+            $("#he_t_xiaotuiL").addClass("shanshan");
+            $("#progressbar_B_xiaotuiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_xiaotuiL").removeClass("shanshan");
+            $("#he_t_xiaotuiL").removeClass("shanshan");
+            $("#progressbar_B_xiaotuiL").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_xiaotuiR").hover(
+        function () {
+            $("#Hp_B_xiaotuiR").addClass("shanshan");
+            $("#he_t_xiaotuiR").addClass("shanshan");
+            $("#progressbar_B_xiaotuiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_xiaotuiR").removeClass("shanshan");
+            $("#he_t_xiaotuiR").removeClass("shanshan");
+            $("#progressbar_B_xiaotuiR").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_huaiL").hover(
+        function () {
+            $("#Hp_B_huaiL").addClass("shanshan");
+            $("#he_t_huaiL").addClass("shanshan");
+            $("#progressbar_B_huaiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_huaiL").removeClass("shanshan");
+            $("#he_t_huaiL").removeClass("shanshan");
+            $("#progressbar_B_huaiL").removeClass("shanshan");
+        }
+    );
+    $("#Hp_B_huaiR").hover(
+        function () {
+            $("#Hp_B_huaiR").addClass("shanshan");
+            $("#he_t_huaiR").addClass("shanshan");
+            $("#progressbar_B_huaiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_huaiR").removeClass("shanshan");
+            $("#he_t_huaiR").removeClass("shanshan");
+            $("#progressbar_B_huaiR").removeClass("shanshan");
+        }
+    );
+
+
+
+
+
+
+
+
+    $("#progressbar_A_tou").hover(
+        function () {
+            $("#Hp_A_tou").addClass("shanshan");
+            $("#progressbar_A_tou").addClass("shanshan");
+            $("#my_t_tou").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_tou").removeClass("shanshan");
+            $("#progressbar_A_tou").removeClass("shanshan");
+            $("#my_t_tou").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_xiong").hover(
+        function () {
+            $("#Hp_A_xiong").addClass("shanshan");
+            $("#my_t_xiong").addClass("shanshan");
+            $("#progressbar_A_xiong").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_xiong").removeClass("shanshan");
+            $("#my_t_xiong").removeClass("shanshan");
+            $("#progressbar_A_xiong").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_fu").hover(
+        function () {
+            $("#my_t_fu").addClass("shanshan");
+            $("#Hp_A_fu").addClass("shanshan");
+            $("#progressbar_A_fu").addClass("shanshan");
+        },
+        function () {
+            $("#my_t_fu").removeClass("shanshan");
+            $("#Hp_A_fu").removeClass("shanshan");
+            $("#progressbar_A_fu").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_yaoL").hover(
+        function () {
+            $("#Hp_A_yaoL").addClass("shanshan");
+            $("#my_t_yaoL").addClass("shanshan");
+            $("#progressbar_A_yaoL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_yaoL").removeClass("shanshan");
+            $("#my_t_yaoL").removeClass("shanshan");
+            $("#progressbar_A_yaoL").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_yaoR").hover(
+        function () {
+            $("#Hp_A_yaoR").addClass("shanshan");
+            $("#my_t_yaoR").addClass("shanshan");
+            $("#progressbar_A_yaoR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_yaoR").removeClass("shanshan");
+            $("#my_t_yaoR").removeClass("shanshan");
+            $("#progressbar_A_yaoR").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_jianL").hover(
+        function () {
+            $("#Hp_A_jianL").addClass("shanshan");
+            $("#my_t_jianL").addClass("shanshan");
+            $("#progressbar_A_jianL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_jianL").removeClass("shanshan");
+            $("#my_t_jianL").removeClass("shanshan");
+            $("#progressbar_A_jianL").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_jianR").hover(
+        function () {
+            $("#Hp_A_jianR").addClass("shanshan");
+            $("#my_t_jianR").addClass("shanshan");
+            $("#progressbar_A_jianR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_jianR").removeClass("shanshan");
+            $("#my_t_jianR").removeClass("shanshan");
+            $("#progressbar_A_jianR").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_shangbiL").hover(
+        function () {
+            $("#Hp_A_shangbiL").addClass("shanshan");
+            $("#my_t_shangbiL").addClass("shanshan");
+            $("#progressbar_A_shangbiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_shangbiL").removeClass("shanshan");
+            $("#my_t_shangbiL").removeClass("shanshan");
+            $("#progressbar_A_shangbiL").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_shangbiR").hover(
+        function () {
+            $("#Hp_A_shangbiR").addClass("shanshan");
+            $("#my_t_shangbiR").addClass("shanshan");
+            $("#progressbar_A_shangbiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_shangbiR").removeClass("shanshan");
+            $("#my_t_shangbiR").removeClass("shanshan");
+            $("#progressbar_A_shangbiR").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_zhouL").hover(
+        function () {
+            $("#Hp_A_zhouL").addClass("shanshan");
+            $("#my_t_zhouL").addClass("shanshan");
+            $("#progressbar_A_zhouL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_zhouL").removeClass("shanshan");
+            $("#my_t_zhouL").removeClass("shanshan");
+            $("#progressbar_A_zhouL").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_zhouR").hover(
+        function () {
+            $("#Hp_A_zhouR").addClass("shanshan");
+            $("#my_t_zhouR").addClass("shanshan");
+            $("#progressbar_A_zhouR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_zhouR").removeClass("shanshan");
+            $("#my_t_zhouR").removeClass("shanshan");
+            $("#progressbar_A_zhouR").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_qianbiL").hover(
+        function () {
+            $("#Hp_A_qianbiL").addClass("shanshan");
+            $("#my_t_qianbiL").addClass("shanshan");
+            $("#progressbar_A_qianbiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_qianbiL").removeClass("shanshan");
+            $("#my_t_qianbiL").removeClass("shanshan");
+            $("#progressbar_A_qianbiL").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_qianbiR").hover(
+        function () {
+            $("#Hp_A_qianbiR").addClass("shanshan");
+            $("#my_t_qianbiR").addClass("shanshan");
+            $("#progressbar_A_qianbiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_qianbiR").removeClass("shanshan");
+            $("#my_t_qianbiR").removeClass("shanshan");
+            $("#progressbar_A_qianbiR").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_shouwanL").hover(
+        function () {
+            $("#Hp_A_shouwanL").addClass("shanshan");
+            $("#my_t_shouwanL").addClass("shanshan");
+            $("#progressbar_A_shouwanL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_shouwanL").removeClass("shanshan");
+            $("#my_t_shouwanL").removeClass("shanshan");
+            $("#progressbar_A_shouwanL").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_shouwanR").hover(
+        function () {
+            $("#Hp_A_shouwanR").addClass("shanshan");
+            $("#my_t_shouwanR").addClass("shanshan");
+            $("#progressbar_A_shouwanR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_shouwanR").removeClass("shanshan");
+            $("#my_t_shouwanR").removeClass("shanshan");
+            $("#progressbar_A_shouwanR").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_datuiL").hover(
+        function () {
+            $("#Hp_A_datuiL").addClass("shanshan");
+            $("#my_t_datuiL").addClass("shanshan");
+            $("#progressbar_A_datuiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_datuiL").removeClass("shanshan");
+            $("#my_t_datuiL").removeClass("shanshan");
+            $("#progressbar_A_datuiL").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_datuiR").hover(
+        function () {
+            $("#Hp_A_datuiR").addClass("shanshan");
+            $("#my_t_datuiR").addClass("shanshan");
+            $("#progressbar_A_datuiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_datuiR").removeClass("shanshan");
+            $("#my_t_datuiR").removeClass("shanshan");
+            $("#progressbar_A_datuiR").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_xiL").hover(
+        function () {
+            $("#Hp_A_xiL").addClass("shanshan");
+            $("#my_t_xiL").addClass("shanshan");
+            $("#progressbar_A_xiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_xiL").removeClass("shanshan");
+            $("#my_t_xiL").removeClass("shanshan");
+            $("#progressbar_A_xiL").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_xiR").hover(
+        function () {
+            $("#Hp_A_xiR").addClass("shanshan");
+            $("#my_t_xiR").addClass("shanshan");
+            $("#progressbar_A_xiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_xiR").removeClass("shanshan");
+            $("#my_t_xiR").removeClass("shanshan");
+            $("#progressbar_A_xiR").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_xiaotuiL").hover(
+        function () {
+            $("#Hp_A_xiaotuiL").addClass("shanshan");
+            $("#my_t_xiaotuiL").addClass("shanshan");
+            $("#progressbar_A_xiaotuiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_xiaotuiL").removeClass("shanshan");
+            $("#my_t_xiaotuiL").removeClass("shanshan");
+            $("#progressbar_A_xiaotuiL").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_xiaotuiR").hover(
+        function () {
+            $("#Hp_A_xiaotuiR").addClass("shanshan");
+            $("#my_t_xiaotuiR").addClass("shanshan");
+            $("#progressbar_A_xiaotuiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_xiaotuiR").removeClass("shanshan");
+            $("#my_t_xiaotuiR").removeClass("shanshan");
+            $("#progressbar_A_xiaotuiR").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_huaiL").hover(
+        function () {
+            $("#Hp_A_huaiL").addClass("shanshan");
+            $("#my_t_huaiL").addClass("shanshan");
+            $("#progressbar_A_huaiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_huaiL").removeClass("shanshan");
+            $("#my_t_huaiL").removeClass("shanshan");
+            $("#progressbar_A_huaiL").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_A_huaiR").hover(
+        function () {
+            $("#Hp_A_huaiR").addClass("shanshan");
+            $("#my_t_huaiR").addClass("shanshan");
+            $("#progressbar_A_huaiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_A_huaiR").removeClass("shanshan");
+            $("#my_t_huaiR").removeClass("shanshan");
+            $("#progressbar_A_huaiR").removeClass("shanshan");
+        }
+    );
+
+    $("#progressbar_B_tou").hover(
+        function () {
+            $("#Hp_B_tou").addClass("shanshan");
+            $("#he_t_tou").addClass("shanshan");
+            $("#progressbar_B_tou").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_tou").removeClass("shanshan");
+            $("#he_t_tou").removeClass("shanshan");
+            $("#progressbar_B_tou").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_xiong").hover(
+        function () {
+            $("#Hp_B_xiong").addClass("shanshan");
+            $("#he_t_xiong").addClass("shanshan");
+            $("#progressbar_B_xiong").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_xiong").removeClass("shanshan");
+            $("#he_t_xiong").removeClass("shanshan");
+            $("#progressbar_B_xiong").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_fu").hover(
+        function () {
+            $("#Hp_B_fu").addClass("shanshan");
+            $("#he_t_fu").addClass("shanshan");
+            $("#progressbar_B_fu").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_fu").removeClass("shanshan");
+            $("#he_t_fu").removeClass("shanshan");
+            $("#progressbar_B_fu").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_yaoL").hover(
+        function () {
+            $("#Hp_B_yaoL").addClass("shanshan");
+            $("#he_t_yaoL").addClass("shanshan");
+            $("#progressbar_B_yaoL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_yaoL").removeClass("shanshan");
+            $("#he_t_yaoL").removeClass("shanshan");
+            $("#progressbar_B_yaoL").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_yaoR").hover(
+        function () {
+            $("#Hp_B_yaoR").addClass("shanshan");
+            $("#he_t_yaoR").addClass("shanshan");
+            $("#progressbar_B_yaoR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_yaoR").removeClass("shanshan");
+            $("#he_t_yaoR").removeClass("shanshan");
+            $("#progressbar_B_yaoR").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_jianL").hover(
+        function () {
+            $("#Hp_B_jianL").addClass("shanshan");
+            $("#he_t_jianL").addClass("shanshan");
+            $("#progressbar_B_jianL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_jianL").removeClass("shanshan");
+            $("#he_t_jianL").removeClass("shanshan");
+            $("#progressbar_B_jianL").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_jianR").hover(
+        function () {
+            $("#Hp_B_jianR").addClass("shanshan");
+            $("#he_t_jianR").addClass("shanshan");
+            $("#progressbar_B_jianR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_jianR").removeClass("shanshan");
+            $("#he_t_jianR").removeClass("shanshan");
+            $("#progressbar_B_jianR").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_shangbiL").hover(
+        function () {
+            $("#Hp_B_shangbiL").addClass("shanshan");
+            $("#he_t_shangbiL").addClass("shanshan");
+            $("#progressbar_B_shangbiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_shangbiL").removeClass("shanshan");
+            $("#he_t_shangbiL").removeClass("shanshan");
+            $("#progressbar_B_shangbiL").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_shangbiR").hover(
+        function () {
+            $("#Hp_B_shangbiR").addClass("shanshan");
+            $("#he_t_shangbiR").addClass("shanshan");
+            $("#progressbar_B_shangbiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_shangbiR").removeClass("shanshan");
+            $("#he_t_shangbiR").removeClass("shanshan");
+            $("#progressbar_B_shangbiR").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_zhouL").hover(
+        function () {
+            $("#Hp_B_zhouL").addClass("shanshan");
+            $("#he_t_zhouL").addClass("shanshan");
+            $("#progressbar_B_zhouL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_zhouL").removeClass("shanshan");
+            $("#he_t_zhouL").removeClass("shanshan");
+            $("#progressbar_B_zhouL").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_zhouR").hover(
+        function () {
+            $("#Hp_B_zhouR").addClass("shanshan");
+            $("#he_t_zhouR").addClass("shanshan");
+            $("#progressbar_B_zhouR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_zhouR").removeClass("shanshan");
+            $("#he_t_zhouR").removeClass("shanshan");
+            $("#progressbar_B_zhouR").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_qianbiL").hover(
+        function () {
+            $("#Hp_B_qianbiL").addClass("shanshan");
+            $("#he_t_qianbiL").addClass("shanshan");
+            $("#progressbar_B_qianbiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_qianbiL").removeClass("shanshan");
+            $("#he_t_qianbiL").removeClass("shanshan");
+            $("#progressbar_B_qianbiL").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_qianbiR").hover(
+        function () {
+            $("#Hp_B_qianbiR").addClass("shanshan");
+            $("#he_t_qianbiR").addClass("shanshan");
+            $("#progressbar_B_qianbiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_qianbiR").removeClass("shanshan");
+            $("#he_t_qianbiR").removeClass("shanshan");
+            $("#progressbar_B_qianbiR").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_shouwanL").hover(
+        function () {
+            $("#Hp_B_shouwanL").addClass("shanshan");
+            $("#he_t_shouwanL").addClass("shanshan");
+            $("#progressbar_B_shouwanL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_shouwanL").removeClass("shanshan");
+            $("#he_t_shouwanL").removeClass("shanshan");
+            $("#progressbar_B_shouwanL").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_shouwanR").hover(
+        function () {
+            $("#Hp_B_shouwanR").addClass("shanshan");
+            $("#he_t_shouwanR").addClass("shanshan");
+            $("#progressbar_B_shouwanR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_shouwanR").removeClass("shanshan");
+            $("#he_t_shouwanR").removeClass("shanshan");
+            $("#progressbar_B_shouwanR").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_datuiL").hover(
+        function () {
+            $("#Hp_B_datuiL").addClass("shanshan");
+            $("#he_t_datuiL").addClass("shanshan");
+            $("#progressbar_B_datuiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_datuiL").removeClass("shanshan");
+            $("#he_t_datuiL").removeClass("shanshan");
+            $("#progressbar_B_datuiL").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_datuiR").hover(
+        function () {
+            $("#Hp_B_datuiR").addClass("shanshan");
+            $("#he_t_datuiR").addClass("shanshan");
+            $("#progressbar_B_datuiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_datuiR").removeClass("shanshan");
+            $("#he_t_datuiR").removeClass("shanshan");
+            $("#progressbar_B_datuiR").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_xiL").hover(
+        function () {
+            $("#Hp_B_xiL").addClass("shanshan");
+            $("#he_t_xiL").addClass("shanshan");
+            $("#progressbar_B_xiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_xiL").removeClass("shanshan");
+            $("#he_t_xiL").removeClass("shanshan");
+            $("#progressbar_B_xiL").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_xiR").hover(
+        function () {
+            $("#Hp_B_xiR").addClass("shanshan");
+            $("#he_t_xiR").addClass("shanshan");
+            $("#progressbar_B_xiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_xiR").removeClass("shanshan");
+            $("#he_t_xiR").removeClass("shanshan");
+            $("#progressbar_B_xiR").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_xiaotuiL").hover(
+        function () {
+            $("#Hp_B_xiaotuiL").addClass("shanshan");
+            $("#he_t_xiaotuiL").addClass("shanshan");
+            $("#progressbar_B_xiaotuiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_xiaotuiL").removeClass("shanshan");
+            $("#he_t_xiaotuiL").removeClass("shanshan");
+            $("#progressbar_B_xiaotuiL").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_xiaotuiR").hover(
+        function () {
+            $("#Hp_B_xiaotuiR").addClass("shanshan");
+            $("#he_t_xiaotuiR").addClass("shanshan");
+            $("#progressbar_B_xiaotuiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_xiaotuiR").removeClass("shanshan");
+            $("#he_t_xiaotuiR").removeClass("shanshan");
+            $("#progressbar_B_xiaotuiR").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_huaiL").hover(
+        function () {
+            $("#Hp_B_huaiL").addClass("shanshan");
+            $("#he_t_huaiL").addClass("shanshan");
+            $("#progressbar_B_huaiL").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_huaiL").removeClass("shanshan");
+            $("#he_t_huaiL").removeClass("shanshan");
+            $("#progressbar_B_huaiL").removeClass("shanshan");
+        }
+    );
+    $("#progressbar_B_huaiR").hover(
+        function () {
+            $("#Hp_B_huaiR").addClass("shanshan");
+            $("#he_t_huaiR").addClass("shanshan");
+            $("#progressbar_B_huaiR").addClass("shanshan");
+        },
+        function () {
+            $("#Hp_B_huaiR").removeClass("shanshan");
+            $("#he_t_huaiR").removeClass("shanshan");
+            $("#progressbar_B_huaiR").removeClass("shanshan");
+        }
+    );
+
+
+
+
+
+
+
+
+
+
 
 
 
