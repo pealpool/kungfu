@@ -895,7 +895,7 @@ var jconfirm, Jconfirm;
             boxHeight = (this.$body.outerHeight() - paneHeight) + contentHeight;
 
             var topMargin = (windowHeight - boxHeight) / 2;
-            var minMargin = 100; // todo: include this in options
+            var minMargin = 100; // include this in options
             if (boxHeight > (windowHeight - minMargin)) {
                 style = {
                     'margin-top': minMargin / 2,

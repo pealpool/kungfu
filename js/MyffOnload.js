@@ -385,6 +385,7 @@ $(document).ready(function () {
 						$("#chicoZhaoShiTianjiaK").empty();
 						zschushihua();
 						$("#StartButtomYuanKuang").removeClass("yuan_red").addClass("yuan_blue");
+						$("#ZDwenbenWK").empty();
 					}
 				}
 			}
@@ -395,6 +396,7 @@ $(document).ready(function () {
 
 	//选择招式按钮  圆
 	$("#StartButtomYuanKuang").click(function () {
+		//izsxx 按钮是否能点击的标记
 		if (izsxx === 0) {
 			$("#NeiRongchoiceZSdaK").show("drop", {
 				direction: 'up'
@@ -793,7 +795,7 @@ $(document).ready(function () {
 			$("#AttN1qq0" + i_tj_panda).html(Math.round(tj_panda.AttN));
 			$("#ATimeAll1qq0" + i_tj_panda).html((tj_panda.ATimeQ + tj_panda.ATime).toFixed(1));
 
-			choiceZS[i_AyixuanZS - 1].zs_name = "tj_panda";
+            AchoiceZS[i_AyixuanZS - 1].zs_name = "tj_panda";
 			i_tj_panda++;
 			AyxZStime = AyxZStime - tj_panda.ATimeQ - tj_panda.ATime;
 			tianjiaZShou();
@@ -3125,10 +3127,23 @@ $(document).ready(function () {
 		}
 	);
 
-	//初始化滚动条
-	$(function ($) {
-		$("#ZDwenbenWK").perfectScrollbar();
-	});
+	//认输按钮
+	$("#rengshuButtom").click(function () {
+        $("#ZDwenbenWK").children("div").fadeTo("normal", 0.1, function () { //fade
+            $(this).slideUp("normal", function () { //slide up
+                $(this).remove(); //then remove from the DOM;
+            });
+        });
+        zschushihua();
+        $("#StartButtomYuanKuang").removeClass("yuan_red",300).addClass("yuan_blue",100);
+        izsxx = 0;
+    });
+
+
+
+
+
+
 
 
 
