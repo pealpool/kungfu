@@ -811,144 +811,144 @@ function HPchongzhi() {
     $("#progressbar_B_huaiR").css("width", Math.round(HpB.huaiR * m));
 
     $("#progressbar_A_tou").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_xiong").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_fu").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_yaoL").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_yaoR").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_jianL").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_jianR").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_shangbiL").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_shangbiR").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_qianbiL").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_qianbiR").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_zhouL").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_zhouR").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_shouwanL").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_shouwanR").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_datuiL").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_datuiR").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_xiaotuiL").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_xiaotuiR").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_xiL").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_xiR").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_huaiL").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_A_huaiR").progressbar({
-        value: 100,
+        value: 100
     });
 
 
     $("#progressbar_B_tou").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_xiong").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_fu").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_yaoL").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_yaoR").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_jianL").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_jianR").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_shangbiL").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_shangbiR").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_qianbiL").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_qianbiR").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_zhouL").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_zhouR").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_shouwanL").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_shouwanR").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_datuiL").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_datuiR").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_xiaotuiL").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_xiaotuiR").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_xiL").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_xiR").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_huaiL").progressbar({
-        value: 100,
+        value: 100
     });
     $("#progressbar_B_huaiR").progressbar({
-        value: 100,
+        value: 100
     });
 
 }
@@ -1234,7 +1234,7 @@ function Bshuxingchushihua() {
     }
     while (x1 > 5 || x2 > 5 || x3 > 5 || x4 > 5);
 
-    var tempArray = [1, 2, 3, 4]
+    var tempArray = [1, 2, 3, 4];
     tempArray.shuffle();
     switch (tempArray[0]) {
         case 1:
@@ -2307,6 +2307,7 @@ function shuchuZDwenben() {
 }
 
 //战斗总框架
+//todo
 function fighting() {
     //a为A第几招数组序号,b为B第几招数组序号
     var a = 0;

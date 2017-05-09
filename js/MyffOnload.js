@@ -1098,6 +1098,7 @@ $(document).ready(function () {
 
 
 	//完成招式选择
+    //todo
 	$("#choicezhaoshiButtom").click(function () {
 		//挑选发动的人
 		window.HadChoice_Who = "";
@@ -3134,6 +3135,7 @@ $(document).ready(function () {
                 $(this).remove(); //then remove from the DOM;
             });
         });
+        $("#chicoZhaoShiTianjiaK").empty();
         zschushihua();
         $("#StartButtomYuanKuang").removeClass("yuan_red",300).addClass("yuan_blue",100);
         izsxx = 0;

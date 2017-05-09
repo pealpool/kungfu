@@ -320,7 +320,6 @@
 
       // bind handlers
       var bindMouseWheelHandler = function () {
-        // FIXME: Backward compatibility.
         // After e.deltaFactor applied, wheelSpeed should have smaller value.
         // Currently, there's no way to change the settings after the scrollbar initialized.
         // But if the way is implemented in the future, wheelSpeed should be reset.
