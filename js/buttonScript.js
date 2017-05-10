@@ -2242,6 +2242,8 @@ function duruZSshuju(who, a) {
 function ChoiceFirst(a, b) {
     switch (HadChoice_Who) {
         case "A":
+            $("#ZDwenbenWK").prepend("<div>" + "A之前先手," + "的后摇前摇分别为" + "</div>");
+            //todo 后摇问题
             //alert("A--:" + AchoiceZS[a].ATimeH + "+" + AchoiceZS[a].ATimeQ + "?" + BchoiceZS[b].ATimeQ);
             if (AchoiceZS[a].ATimeH + AchoiceZS[a].ATimeQ > BchoiceZS[b].ATimeQ) {
                 HadChoice_Who = "B";
