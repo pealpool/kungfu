@@ -1190,9 +1190,12 @@ function zschushihua() {
     AchoiceZS[2].zs_name = "";
     AchoiceZS[3].zs_name = "";
     AchoiceZS[4].zs_name = "";
-    AchoiceZS_bj = 0;
+    AchoiceZS[5].zs_name = "";
+    AchoiceZS_bj = 1;
     AyxZStime = 7.5;
     shanchuZShou();
+    AchoiceZS[0].ATimeH = 0;
+    BchoiceZS[0].ATimeH = 0;
 }
 
 
@@ -1339,7 +1342,7 @@ function shuijiPaibei() {
 function BshujiZS() {
     var ByxZStime = 7.5;
     //B招式数据边界
-    var i_ByixuanZS = 0;
+    var i_ByixuanZS = 1;
     switch (PaiBei_B) {
         case "Taiji":
             Btj_panda.ATimeQ = true_tj_panda.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[1]);
@@ -1464,7 +1467,7 @@ function BshujiZS() {
         if (a === 0) {
             BchoiceZS[i_ByixuanZS].zs_name = "";
             //BchoiceZS_bj = i_ByixuanZS - 1;
-            i_ByixuanZS = 5; //大于循环条件，跳出循环
+            i_ByixuanZS = 6; //大于循环条件，跳出循环
         } else {
             //[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
             //共8个，数组后序为0-7，a++后a为8，
@@ -1475,8 +1478,8 @@ function BshujiZS() {
         //alert("a=" + a + "，" + "选第[" + x + "]招" + "\n" + BchoiceZS[0].zs_name + "\n" + BchoiceZS[1].zs_name + "\n" + BchoiceZS[2].zs_name + "\n" + BchoiceZS[3].zs_name + "\n" + BchoiceZS[4].zs_name);
         i_ByixuanZS++;
     }
-    while (i_ByixuanZS < 5);
-    BchoiceZS_bj = i_ByixuanZS - 1;
+    while (i_ByixuanZS < 6);
+    BchoiceZS_bj = i_ByixuanZS - 1 ;
     //alert(BchoiceZS[0].zs_name + "\n" + BchoiceZS[1].zs_name + "\n" + BchoiceZS[2].zs_name + "\n" + BchoiceZS[3].zs_name + "\n" + BchoiceZS[4].zs_name);
 }
 
@@ -2242,13 +2245,13 @@ function duruZSshuju(who, a) {
 function ChoiceFirst(a, b) {
     switch (HadChoice_Who) {
         case "A":
-            $("#ZDwenbenWK").prepend("<div>" + "A之前先手," + "的后摇前摇分别为" + "</div>");
+            $("#ZDwenbenWK").prepend("<div>" + "A之前先手," + "后摇前摇分别为" + AchoiceZS[a-1].ATimeH + "，" + AchoiceZS[a].ATimeQ + "。B前摇为" + BchoiceZS[b].ATimeQ + "</div>");
             //todo 后摇问题
-            //alert("A--:" + AchoiceZS[a].ATimeH + "+" + AchoiceZS[a].ATimeQ + "?" + BchoiceZS[b].ATimeQ);
-            if (AchoiceZS[a].ATimeH + AchoiceZS[a].ATimeQ > BchoiceZS[b].ATimeQ) {
+            //alert("A--:" + AchoiceZS[a-1].ATimeH + "+" + AchoiceZS[a].ATimeQ + "?" + BchoiceZS[b].ATimeQ);
+            if (AchoiceZS[a-1].ATimeH + AchoiceZS[a].ATimeQ > BchoiceZS[b].ATimeQ) {
                 HadChoice_Who = "B";
                 HadChoice_Bb = b;
-            } else if (AchoiceZS[a].ATimeH + AchoiceZS[a].ATimeQ < BchoiceZS[b].ATimeQ) {
+            } else if (AchoiceZS[a-1].ATimeH + AchoiceZS[a].ATimeQ < BchoiceZS[b].ATimeQ) {
                 HadChoice_Who = "A";
                 HadChoice_Aa = a;
             } else {
@@ -2263,10 +2266,10 @@ function ChoiceFirst(a, b) {
             break;
         case "B":
             //alert("B--:" + AchoiceZS[a].ATimeQ + "?" + BchoiceZS[b].ATimeQ + "+" + BchoiceZS[b].ATimeQ);
-            if (AchoiceZS[a].ATimeQ > BchoiceZS[b].ATimeH + BchoiceZS[b].ATimeQ) {
+            if (AchoiceZS[a].ATimeQ > BchoiceZS[b-1].ATimeH + BchoiceZS[b].ATimeQ) {
                 HadChoice_Who = "B";
                 HadChoice_Bb = b;
-            } else if (AchoiceZS[a].ATimeQ < BchoiceZS[b].ATimeH + BchoiceZS[b].ATimeQ) {
+            } else if (AchoiceZS[a].ATimeQ < BchoiceZS[b-1].ATimeH + BchoiceZS[b].ATimeQ) {
                 HadChoice_Who = "A";
                 HadChoice_Aa = a;
             } else {
@@ -2312,14 +2315,14 @@ function shuchuZDwenben() {
 //todo
 function fighting() {
     //a为A第几招数组序号,b为B第几招数组序号
-    var a = 0;
-    var b = 0;
+    var a = 1;
+    var b = 1;
     var x = 0;
     //var i = 0;
-    for (var i = 0; i <= AchoiceZS_bj; i++) {
+    for (var i = 1; i <= AchoiceZS_bj; i++) {
         duruZSshuju(0, i);
     }
-    for (var j = 0; j <= BchoiceZS_bj; j++) {
+    for (var j = 1; j <= BchoiceZS_bj; j++) {
         duruZSshuju(1, j);
     }
     do {

@@ -1108,7 +1108,7 @@ $(document).ready(function () {
 		window.HadChoice_Aa = 0;
 		window.HadChoice_Bb = 0;
 
-		var i = 0;
+		var i = 1;
 		//slice(6, -2)从第6个后截取，到倒数第3个。
 		//alert($(this).find(".zhaoshiLB3.zhaoshiLBG").html());
 		var gz00 = /\D*/;
