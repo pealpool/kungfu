@@ -2966,14 +2966,6 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
-
-
-
 	$("#TuKuangshuxinDaK_A").click(function () {
 		if (sxTanChu_A === 0) {
 			$("#TuKuangshuxinTanchuDK_A").show("fold", 100);
@@ -3141,7 +3133,10 @@ $(document).ready(function () {
         izsxx = 0;
     });
 
-
+//初始化滚动条
+    $(function ($) {
+        $("#ZDwenbenWK").perfectScrollbar();
+    });
 
 
 

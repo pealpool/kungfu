@@ -1299,7 +1299,7 @@ function Bshuxingchushihua() {
 
 }
 
-
+//B属性刷新
 function Shuxingshuaxin_B() {
     shuijiPaibei();
 
@@ -1479,7 +1479,7 @@ function BshujiZS() {
         i_ByixuanZS++;
     }
     while (i_ByixuanZS < 6);
-    BchoiceZS_bj = i_ByixuanZS - 1 ;
+    BchoiceZS_bj = i_ByixuanZS - 1;
     //alert(BchoiceZS[0].zs_name + "\n" + BchoiceZS[1].zs_name + "\n" + BchoiceZS[2].zs_name + "\n" + BchoiceZS[3].zs_name + "\n" + BchoiceZS[4].zs_name);
 }
 
@@ -1936,7 +1936,6 @@ function duruZSshuju(who, a) {
                 AchoiceZS[a].Mzxz = true_tj_panda.Mzxz + mSX_ZhiLi.minzhongxz(SX_Zhili[who]);
                 AchoiceZS[a].PinHengAtt = true_tj_panda.PinHengAtt;
                 AchoiceZS[a].PinHengXH = true_tj_panda.PinHengXH;
-                alert(AchoiceZS[a].zs_name);
                 break;
             case "tj_tuishou":
                 AchoiceZS[a].AttW = true_tj_tuishou.AttW * mSX_LiLiang.gongjiJC(SX_Liliang[who]);
@@ -2240,63 +2239,94 @@ function duruZSshuju(who, a) {
     }
 }
 
-
 //选谁先发招，发啥招。a为A第几招数组序号,b为B第几招数组序号
+//todo
 function ChoiceFirst(a, b) {
     switch (HadChoice_Who) {
         case "A":
-            $("#ZDwenbenWK").prepend("<div>" + "A之前先手," + "后摇前摇分别为" + AchoiceZS[a-1].ATimeH + "，" + AchoiceZS[a].ATimeQ + "。B前摇为" + BchoiceZS[b].ATimeQ + "</div>");
-            //todo 后摇问题
-            //alert("A--:" + AchoiceZS[a-1].ATimeH + "+" + AchoiceZS[a].ATimeQ + "?" + BchoiceZS[b].ATimeQ);
-            if (AchoiceZS[a-1].ATimeH + AchoiceZS[a].ATimeQ > BchoiceZS[b].ATimeQ) {
-                HadChoice_Who = "B";
-                HadChoice_Bb = b;
-            } else if (AchoiceZS[a-1].ATimeH + AchoiceZS[a].ATimeQ < BchoiceZS[b].ATimeQ) {
-                HadChoice_Who = "A";
-                HadChoice_Aa = a;
-            } else {
-                if (HadChoice_Who === "A") {
+            if (a <= AchoiceZS_bj && b <= BchoiceZS_bj) {
+                $("#ZDwenbenWK").append("<div>" + "A之前先手," + "A后摇前摇分别为" + AchoiceZS[a - 1].ATimeH.toFixed(1) + "，" + AchoiceZS[a].ATimeQ.toFixed(1) + "。B前摇为" + BchoiceZS[b].ATimeQ.toFixed(1) + "</div>");
+                //alert("A--:" + AchoiceZS[a-1].ATimeH + "+" + AchoiceZS[a].ATimeQ + "?" + BchoiceZS[b].ATimeQ);
+                if (AchoiceZS[a - 1].ATimeH + AchoiceZS[a].ATimeQ > BchoiceZS[b].ATimeQ) {
                     HadChoice_Who = "B";
                     HadChoice_Bb = b;
-                } else {
+                } else if (AchoiceZS[a - 1].ATimeH + AchoiceZS[a].ATimeQ < BchoiceZS[b].ATimeQ) {
                     HadChoice_Who = "A";
                     HadChoice_Aa = a;
+                } else {
+                    if (HadChoice_Who === "A") {
+                        HadChoice_Who = "B";
+                        HadChoice_Bb = b;
+                    } else {
+                        HadChoice_Who = "A";
+                        HadChoice_Aa = a;
+                    }
                 }
+            } else if (a > AchoiceZS_bj && b <= BchoiceZS_bj) {
+                $("#ZDwenbenWK").append("<div>" + "A之前先手,A招式已用完" + "</div>");
+                HadChoice_Who = "B";
+                HadChoice_Bb = b;
+            } else {
+                $("#ZDwenbenWK").append("<div>" + "A之前先手,B招式已用完" + "</div>");
+                HadChoice_Who = "A";
+                HadChoice_Aa = a;
             }
             break;
         case "B":
-            //alert("B--:" + AchoiceZS[a].ATimeQ + "?" + BchoiceZS[b].ATimeQ + "+" + BchoiceZS[b].ATimeQ);
-            if (AchoiceZS[a].ATimeQ > BchoiceZS[b-1].ATimeH + BchoiceZS[b].ATimeQ) {
-                HadChoice_Who = "B";
-                HadChoice_Bb = b;
-            } else if (AchoiceZS[a].ATimeQ < BchoiceZS[b-1].ATimeH + BchoiceZS[b].ATimeQ) {
-                HadChoice_Who = "A";
-                HadChoice_Aa = a;
-            } else {
-                if (HadChoice_Who === "A") {
+            if (a <= AchoiceZS_bj && b <= BchoiceZS_bj) {
+                $("#ZDwenbenWK").append("<div>" + "B之前先手," + "B后摇前摇分别为" + BchoiceZS[b - 1].ATimeH.toFixed(1) + "，" + BchoiceZS[b].ATimeQ.toFixed(1) + "。A前摇为" + AchoiceZS[a].ATimeQ.toFixed(1) + "</div>");
+                //alert("B--:" + AchoiceZS[a].ATimeQ + "?" + BchoiceZS[b].ATimeQ + "+" + BchoiceZS[b].ATimeQ);
+                if (AchoiceZS[a].ATimeQ > BchoiceZS[b - 1].ATimeH + BchoiceZS[b].ATimeQ) {
                     HadChoice_Who = "B";
                     HadChoice_Bb = b;
-                } else {
+                } else if (AchoiceZS[a].ATimeQ < BchoiceZS[b - 1].ATimeH + BchoiceZS[b].ATimeQ) {
                     HadChoice_Who = "A";
                     HadChoice_Aa = a;
+                } else {
+                    if (HadChoice_Who === "A") {
+                        HadChoice_Who = "B";
+                        HadChoice_Bb = b;
+                    } else {
+                        HadChoice_Who = "A";
+                        HadChoice_Aa = a;
+                    }
                 }
+            } else if (a > AchoiceZS_bj && b <= BchoiceZS_bj) {
+                $("#ZDwenbenWK").append("<div>" + "B之前先手,A招式已用完" + "</div>");
+                HadChoice_Who = "B";
+                HadChoice_Bb = b;
+            } else {
+                $("#ZDwenbenWK").append("<div>" + "B之前先手,B招式已用完" + "</div>");
+                HadChoice_Who = "A";
+                HadChoice_Aa = a;
             }
             break;
         case "":
-            if (AchoiceZS[a].ATimeQ > BchoiceZS[b].ATimeQ) {
-                HadChoice_Who = "B";
-                HadChoice_Bb = b;
-            } else if (AchoiceZS[a].ATimeQ < BchoiceZS[b].ATimeQ) {
-                HadChoice_Who = "A";
-                HadChoice_Aa = a;
-            } else {
-                if (HadChoice_Who === "A") {
+            if (a <= AchoiceZS_bj && b <= BchoiceZS_bj) {
+                $("#ZDwenbenWK").append("<div>" + "之前无先手," + "A前摇为" + AchoiceZS[a].ATimeQ.toFixed(1) + "。B前摇为" + BchoiceZS[b].ATimeQ.toFixed(1) + "</div>");
+                if (AchoiceZS[a].ATimeQ > BchoiceZS[b].ATimeQ) {
                     HadChoice_Who = "B";
                     HadChoice_Bb = b;
-                } else {
+                } else if (AchoiceZS[a].ATimeQ < BchoiceZS[b].ATimeQ) {
                     HadChoice_Who = "A";
                     HadChoice_Aa = a;
+                } else {
+                    if (HadChoice_Who === "A") {
+                        HadChoice_Who = "B";
+                        HadChoice_Bb = b;
+                    } else {
+                        HadChoice_Who = "A";
+                        HadChoice_Aa = a;
+                    }
                 }
+            } else if (a > AchoiceZS_bj && b <= BchoiceZS_bj) {
+                $("#ZDwenbenWK").append("<div>" + "之前无先手,A招式已用完" + "</div>");
+                HadChoice_Who = "B";
+                HadChoice_Bb = b;
+            } else {
+                $("#ZDwenbenWK").append("<div>" + "之前无先手,B招式已用完" + "</div>");
+                HadChoice_Who = "A";
+                HadChoice_Aa = a;
             }
             break;
     }
@@ -2305,19 +2335,19 @@ function ChoiceFirst(a, b) {
 //输出战斗文本
 function shuchuZDwenben() {
     if (HadChoice_Who === "A") {
-        $("#ZDwenbenWK").prepend("<div>" + "A," + AchoiceZS[HadChoice_Aa].zs_name + "</div>");
+        $("#ZDwenbenWK").append("<div>" + "A," + AchoiceZS[HadChoice_Aa].zs_name + "</div>");
     } else {
-        $("#ZDwenbenWK").prepend("<div>" + "B," + BchoiceZS[HadChoice_Bb].zs_name + "</div>");
+        $("#ZDwenbenWK").append("<div>" + "B," + BchoiceZS[HadChoice_Bb].zs_name + "</div>");
     }
 }
 
 //战斗总框架
-//todo
+//todo fighting
 function fighting() {
     //a为A第几招数组序号,b为B第几招数组序号
     var a = 1;
     var b = 1;
-    var x = 0;
+    var xix = 0;
     //var i = 0;
     for (var i = 1; i <= AchoiceZS_bj; i++) {
         duruZSshuju(0, i);
@@ -2348,13 +2378,10 @@ function fighting() {
         shuchuZDwenben();
         //i++;
         //alert("i:" + i);
-        alert((a <= AchoiceZS_bj) + "," + (b <= BchoiceZS_bj) + "," + ((a <= AchoiceZS_bj) || (b <= BchoiceZS_bj)) + "，x=" + x + "，a:" + a + "，b:" + b);
-        if ((a <= AchoiceZS_bj) || (b <= BchoiceZS_bj)) {
-            x = 0;
-        } else {
-            x = 1;
-            alert("x=" + x);
+        //alert((a <= AchoiceZS_bj) + "," + (b <= BchoiceZS_bj) + "," + ((a <= AchoiceZS_bj) || (b <= BchoiceZS_bj)) + "，x=" + x + "，a:" + a + "，b:" + b);
+        if ((a > AchoiceZS_bj) && (b > BchoiceZS_bj)) {
+            xix = 1;
         }
-    } while (x < 1);
-    alert("dxx=" + x);
+    } while (xix < 1);
+    $("#ZDwenbenWK").append("<div>" + "完成" + "</div>");
 }
