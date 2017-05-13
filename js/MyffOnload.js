@@ -782,6 +782,7 @@ $(document).ready(function () {
 	});
 
 	//添加招式-太极
+	//todo 提取部位
 	$(document).on("click", "#ZSdiv_tj_panda", function () {
 		if ($("#ZSdiv_tj_panda").attr("class") !== "zhaoshiLBqqs huise") {
 			//if (i_AyixuanZS <= 5) {
@@ -1097,8 +1098,7 @@ $(document).ready(function () {
 	});
 
 
-	//完成招式选择
-    //todo
+	//todo 完成招式选择按钮
 	$("#choicezhaoshiButtom").click(function () {
 		//挑选发动的人
 		window.HadChoice_Who = "";

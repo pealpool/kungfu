@@ -2332,12 +2332,12 @@ function ChoiceFirst(a, b) {
     }
 }
 
-//输出战斗文本
-function shuchuZDwenben() {
+//todo 输出招式名称
+function ShuchuZSmingchen() {
     if (HadChoice_Who === "A") {
-        $("#ZDwenbenWK").append("<div>" + "A," + AchoiceZS[HadChoice_Aa].zs_name + "</div>");
+        $("#ZDwenbenWK").append("<div>" + "A用" + AchoiceZS[HadChoice_Aa].zs_frome + "使出了【" + AchoiceZS[HadChoice_Aa].zs_CNname() + "】击向B的" + AchoiceZS[HadChoice_Aa].torl + AchoiceZS[HadChoice_Aa].to + "</div>");
     } else {
-        $("#ZDwenbenWK").append("<div>" + "B," + BchoiceZS[HadChoice_Bb].zs_name + "</div>");
+        $("#ZDwenbenWK").append("<div>" + "B用" + BchoiceZS[HadChoice_Bb].zs_frome + "使出了【" + BchoiceZS[HadChoice_Bb].zs_CNname() + "】击向A的" + BchoiceZS[HadChoice_Bb].torl + BchoiceZS[HadChoice_Bb].to + "</div>");
     }
 }
 
@@ -2357,7 +2357,6 @@ function fighting() {
     }
     do {
         ChoiceFirst(a, b);
-        //alert("AchoiceZS_bj:" + AchoiceZS_bj + "a:" + a);
         if (HadChoice_Who === "A") {
             if (a <= AchoiceZS_bj) {
                 a++;
@@ -2375,13 +2374,16 @@ function fighting() {
                 BchoiceZS[HadChoice_Bb].ATimeH = 99;
             }
         }
-        shuchuZDwenben();
-        //i++;
-        //alert("i:" + i);
-        //alert((a <= AchoiceZS_bj) + "," + (b <= BchoiceZS_bj) + "," + ((a <= AchoiceZS_bj) || (b <= BchoiceZS_bj)) + "，x=" + x + "，a:" + a + "，b:" + b);
+        Shuanghaijisuan();
         if ((a > AchoiceZS_bj) && (b > BchoiceZS_bj)) {
             xix = 1;
         }
     } while (xix < 1);
     $("#ZDwenbenWK").append("<div>" + "完成" + "</div>");
+}
+
+//伤害计算
+//todo 伤害计算
+function Shuanghaijisuan() {
+    ShuchuZSmingchen();
 }
