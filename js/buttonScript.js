@@ -247,6 +247,7 @@ function BDgl_Liliang() {
 }
 
 //关联数据变动输出【Minjie】
+//todo this
 function BDgl_Minjie() {
     $("#DianshuDaKuang_TTR").html(SX_Sum[0]);
     $("#DianshuDaKuang_TR2_Minjie").html(SX_Minjie[0]);

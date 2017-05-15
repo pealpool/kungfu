@@ -37,7 +37,7 @@ var choiceZS = {
                 case "tj_qingna":
                     return "擒拿";
                 case "tj_shuangfong":
-                    return "双峰贯耳"
+                    return "双峰贯耳";
                 case "tj_zhoudicui":
                     return "肘底捶";
                 case "tj_paocui":
