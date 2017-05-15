@@ -2240,7 +2240,7 @@ function duruZSshuju(who, a) {
 }
 
 //选谁先发招，发啥招。a为A第几招数组序号,b为B第几招数组序号
-//todo
+//todo 选先手
 function ChoiceFirst(a, b) {
     switch (HadChoice_Who) {
         case "A":
@@ -2335,9 +2335,9 @@ function ChoiceFirst(a, b) {
 //todo 输出招式名称
 function ShuchuZSmingchen() {
     if (HadChoice_Who === "A") {
-        $("#ZDwenbenWK").append("<div>" + "A用" + AchoiceZS[HadChoice_Aa].zs_frome + "使出了【" + AchoiceZS[HadChoice_Aa].zs_CNname() + "】击向B的" + AchoiceZS[HadChoice_Aa].torl + AchoiceZS[HadChoice_Aa].to + "</div>");
+        $("#ZDwenbenWK").append("<div>" + "A用" + AchoiceZS[HadChoice_Aa].zs_frome + "使出了【" + AchoiceZS[HadChoice_Aa].zs_CNname() + "】击向B的" + AchoiceZS[HadChoice_Aa].zs_torl + AchoiceZS[HadChoice_Aa].zs_to + "</div>");
     } else {
-        $("#ZDwenbenWK").append("<div>" + "B用" + BchoiceZS[HadChoice_Bb].zs_frome + "使出了【" + BchoiceZS[HadChoice_Bb].zs_CNname() + "】击向A的" + BchoiceZS[HadChoice_Bb].torl + BchoiceZS[HadChoice_Bb].to + "</div>");
+        $("#ZDwenbenWK").append("<div>" + "B用" + BchoiceZS[HadChoice_Bb].zs_frome + "使出了【" + BchoiceZS[HadChoice_Bb].zs_CNname() + "】击向A的" + BchoiceZS[HadChoice_Bb].zs_torl + BchoiceZS[HadChoice_Bb].zs_to + "</div>");
     }
 }
 
@@ -2385,5 +2385,11 @@ function fighting() {
 //伤害计算
 //todo 伤害计算
 function Shuanghaijisuan() {
+    //输出的伤害
+    var attSum = 0;
+    if (HadChoice_Who === "A") {
+
+    } else {
+    }
     ShuchuZSmingchen();
 }

@@ -1167,12 +1167,11 @@ $(document).ready(function () {
 					AchoiceZS[i].zs_torl = "r";
 				}
 			} else {
-				AchoiceZS[i].zs_torl = "b";
+				AchoiceZS[i].zs_torl = "";
 			}
 			i++;
 		});
 		AchoiceZS_bj = i - 1;
-		//alert(AchoiceZS[0].zs_name + " " + AchoiceZS[0].zs_frome + " " + AchoiceZS[0].zs_to + " " + AchoiceZS[0].zs_torl + "\n" + AchoiceZS[1].zs_name + " " + AchoiceZS[1].zs_frome + " " + AchoiceZS[1].zs_to + " " + AchoiceZS[1].zs_torl + "\n" + AchoiceZS[2].zs_name + " " + AchoiceZS[2].zs_frome + " " + AchoiceZS[2].zs_to + " " + AchoiceZS[2].zs_torl + "\n" + AchoiceZS[3].zs_name + " " + AchoiceZS[3].zs_frome + " " + AchoiceZS[3].zs_to + " " + AchoiceZS[3].zs_torl + "\n" + AchoiceZS[4].zs_name + " " + AchoiceZS[4].zs_frome + " " + AchoiceZS[4].zs_to + " " + AchoiceZS[4].zs_torl); //把排序的ID弹出
 		$("#StartButtomYuanKuang").removeClass("yuan_blue").addClass("yuan_red");
 		$("#NeiRongchoiceZSdaK").hide("drop", {
 			direction: 'up'
