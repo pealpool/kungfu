@@ -264,7 +264,6 @@ var ZhaoShi = {
         };
 
         //前摇
-        //todo not
         zzz.ATimeQ = function (zs_name, minjie) {
             var abc = 0;
             switch (String(zs_name)) {
