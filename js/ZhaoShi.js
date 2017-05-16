@@ -313,7 +313,7 @@ var ZhaoShi = {
                     abc = 0.5;
                     break;
                 default:
-                    break;
+                    return 0;
             }
             return (abc + mSX_Minjie.shuduJC_Q(minjie));
         };
@@ -369,7 +369,7 @@ var ZhaoShi = {
                     abc = 1;
                     break;
                 default:
-                    break;
+                    return 0;
             }
             return (abc + mSX_Minjie.shuduJC_Z(minjie));
         };
@@ -424,7 +424,7 @@ var ZhaoShi = {
                     abc = 0.5;
                     break;
                 default:
-                    break;
+                    return 0;
             }
             return (abc + mSX_Minjie.shuduJC_H(minjie));
         };

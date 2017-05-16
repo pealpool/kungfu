@@ -181,37 +181,67 @@ function BDgl_Liliang() {
     $("#DianshuguanlianXiaoKuang_s_gongjiJC").html(Add_zh(Math.round((mSX_LiLiang.gongjiJC(SX_Liliang[0]) - 1) * 100)) + "%");
     $("#DianshuguanlianXiaoKuang_s_baojishanghai").html(Add_zh(Math.round((mSX_LiLiang.baojishanghai(SX_Liliang[0]) - 1) * 100)) + "%");
     if (PaiBei_A === "Taiji") {
-        $("#AttW1").html(Math.round(ZSglIO.AttW_screen("tj_panda", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttN1").html(Math.round(ZSglIO.AttN_screen("tj_panda", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttW2").html(Math.round(ZSglIO.AttW_screen("tj_tuishou", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttN2").html(Math.round(ZSglIO.AttN_screen("tj_tuishou", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttW3").html(Math.round(ZSglIO.AttW_screen("tj_qingna", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttN3").html(Math.round(ZSglIO.AttN_screen("tj_qingna", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttW4").html(Math.round(ZSglIO.AttW_screen("tj_shuangfong", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttN4").html(Math.round(ZSglIO.AttN_screen("tj_shuangfong", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttW5").html(Math.round(ZSglIO.AttW_screen("tj_zhoudicui", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttN5").html(Math.round(ZSglIO.AttN_screen("tj_zhoudicui", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttW6").html(Math.round(ZSglIO.AttW_screen("tj_paocui", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttN6").html(Math.round(ZSglIO.AttN_screen("tj_paocui", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttW7").html(Math.round(ZSglIO.AttW_screen("tj_yuanyangtui", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttN7").html(Math.round(ZSglIO.AttN_screen("tj_yuanyangtui", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttW8").html(Math.round(ZSglIO.AttW_screen("tj_banshuai", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttN8").html(Math.round(ZSglIO.AttN_screen("tj_banshuai", SX_Liliang[0], SX_Zhili[0])));
+        tj_panda.AttW = ZSglIO.AttW_screen("tj_panda", SX_Liliang[0], SX_Zhili[0]);
+        tj_panda.AttN = ZSglIO.AttN_screen("tj_panda", SX_Liliang[0], SX_Zhili[0]);
+        tj_tuishou.AttW = ZSglIO.AttW_screen("tj_tuishou", SX_Liliang[0], SX_Zhili[0]);
+        tj_tuishou.AttN = ZSglIO.AttN_screen("tj_tuishou", SX_Liliang[0], SX_Zhili[0]);
+        tj_qingna.AttW = ZSglIO.AttW_screen("tj_qingna", SX_Liliang[0], SX_Zhili[0]);
+        tj_qingna.AttN = ZSglIO.AttN_screen("tj_qingna", SX_Liliang[0], SX_Zhili[0]);
+        tj_shuangfong.AttW = ZSglIO.AttW_screen("tj_shuangfong", SX_Liliang[0], SX_Zhili[0]);
+        tj_shuangfong.AttN = ZSglIO.AttN_screen("tj_shuangfong", SX_Liliang[0], SX_Zhili[0]);
+        tj_zhoudicui.AttW = ZSglIO.AttW_screen("tj_zhoudicui", SX_Liliang[0], SX_Zhili[0]);
+        tj_zhoudicui.AttN = ZSglIO.AttN_screen("tj_zhoudicui", SX_Liliang[0], SX_Zhili[0]);
+        tj_paocui.AttW = ZSglIO.AttW_screen("tj_paocui", SX_Liliang[0], SX_Zhili[0]);
+        tj_paocui.AttN = ZSglIO.AttN_screen("tj_paocui", SX_Liliang[0], SX_Zhili[0]);
+        tj_yuanyangtui.AttW = ZSglIO.AttW_screen("tj_yuanyangtui", SX_Liliang[0], SX_Zhili[0]);
+        tj_yuanyangtui.AttN = ZSglIO.AttN_screen("tj_yuanyangtui", SX_Liliang[0], SX_Zhili[0]);
+        tj_banshuai.AttW = ZSglIO.AttW_screen("tj_banshuai", SX_Liliang[0], SX_Zhili[0]);
+        tj_banshuai.AttN = ZSglIO.AttN_screen("tj_banshuai", SX_Liliang[0], SX_Zhili[0]);
+        $("#AttW1").html(Math.round(tj_panda.AttW));
+        $("#AttN1").html(Math.round(tj_panda.AttN));
+        $("#AttW2").html(Math.round(tj_tuishou.AttW));
+        $("#AttN2").html(Math.round(tj_tuishou.AttN));
+        $("#AttW3").html(Math.round(tj_qingna.AttW));
+        $("#AttN3").html(Math.round(tj_qingna.AttN));
+        $("#AttW4").html(Math.round(tj_shuangfong.AttW));
+        $("#AttN4").html(Math.round(tj_shuangfong.AttN));
+        $("#AttW5").html(Math.round(tj_zhoudicui.AttW));
+        $("#AttN5").html(Math.round(tj_zhoudicui.AttN));
+        $("#AttW6").html(Math.round(tj_paocui.AttW));
+        $("#AttN6").html(Math.round(tj_paocui.AttN));
+        $("#AttW7").html(Math.round(tj_yuanyangtui.AttW));
+        $("#AttN7").html(Math.round(tj_yuanyangtui.AttN));
+        $("#AttW8").html(Math.round(tj_banshuai.AttW));
+        $("#AttN8").html(Math.round(tj_banshuai.AttN));
     } else if (PaiBei_A === "Taiquan") {
-        $("#AttW1").html(Math.round(ZSglIO.AttW_screen("tq_zhiquan", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttN1").html(Math.round(ZSglIO.AttN_screen("tq_zhiquan", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttW2").html(Math.round(ZSglIO.AttW_screen("tq_lrgouquan", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttN2").html(Math.round(ZSglIO.AttN_screen("tq_lrgouquan", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttW3").html(Math.round(ZSglIO.AttW_screen("tq_sgouquan", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttN3").html(Math.round(ZSglIO.AttN_screen("tq_sgouquan", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttW4").html(Math.round(ZSglIO.AttW_screen("tq_zhouji", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttN4").html(Math.round(ZSglIO.AttN_screen("tq_zhouji", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttW5").html(Math.round(ZSglIO.AttW_screen("tq_xizhuang", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttN5").html(Math.round(ZSglIO.AttN_screen("tq_xizhuang", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttW6").html(Math.round(ZSglIO.AttW_screen("tq_dengtui", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttN6").html(Math.round(ZSglIO.AttN_screen("tq_dengtui", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttW7").html(Math.round(ZSglIO.AttW_screen("tq_shaotui", SX_Liliang[0], SX_Zhili[0])));
-        $("#AttN7").html(Math.round(ZSglIO.AttN_screen("tq_shaotui", SX_Liliang[0], SX_Zhili[0])));
+        tq_zhiquan.AttW = ZSglIO.AttW_screen("tq_zhiquan", SX_Liliang[0], SX_Zhili[0]);
+        tq_zhiquan.AttN = ZSglIO.AttN_screen("tq_zhiquan", SX_Liliang[0], SX_Zhili[0]);
+        tq_lrgouquan.AttW = ZSglIO.AttW_screen("tq_lrgouquan", SX_Liliang[0], SX_Zhili[0]);
+        tq_lrgouquan.AttN = ZSglIO.AttN_screen("tq_lrgouquan", SX_Liliang[0], SX_Zhili[0]);
+        tq_sgouquan.AttW = ZSglIO.AttW_screen("tq_sgouquan", SX_Liliang[0], SX_Zhili[0]);
+        tq_sgouquan.AttN = ZSglIO.AttN_screen("tq_sgouquan", SX_Liliang[0], SX_Zhili[0]);
+        tq_zhouji.AttW = ZSglIO.AttW_screen("tq_zhouji", SX_Liliang[0], SX_Zhili[0]);
+        tq_zhouji.AttN = ZSglIO.AttN_screen("tq_zhouji", SX_Liliang[0], SX_Zhili[0]);
+        tq_xizhuang.AttW = ZSglIO.AttW_screen("tq_xizhuang", SX_Liliang[0], SX_Zhili[0]);
+        tq_xizhuang.AttN = ZSglIO.AttN_screen("tq_xizhuang", SX_Liliang[0], SX_Zhili[0]);
+        tq_dengtui.AttW = ZSglIO.AttW_screen("tq_dengtui", SX_Liliang[0], SX_Zhili[0]);
+        tq_dengtui.AttN = ZSglIO.AttN_screen("tq_dengtui", SX_Liliang[0], SX_Zhili[0]);
+        tq_shaotui.AttW = ZSglIO.AttW_screen("tq_shaotui", SX_Liliang[0], SX_Zhili[0]);
+        tq_shaotui.AttN = ZSglIO.AttN_screen("tq_shaotui", SX_Liliang[0], SX_Zhili[0]);
+        $("#AttW1").html(Math.round(tq_zhiquan.AttW));
+        $("#AttN1").html(Math.round(tq_zhiquan.AttN));
+        $("#AttW2").html(Math.round(tq_lrgouquan.AttW));
+        $("#AttN2").html(Math.round(tq_lrgouquan.AttN));
+        $("#AttW3").html(Math.round(tq_sgouquan.AttW));
+        $("#AttN3").html(Math.round(tq_sgouquan.AttN));
+        $("#AttW4").html(Math.round(tq_zhouji.AttW));
+        $("#AttN4").html(Math.round(tq_zhouji.AttN));
+        $("#AttW5").html(Math.round(tq_xizhuang.AttW));
+        $("#AttN5").html(Math.round(tq_xizhuang.AttN));
+        $("#AttW6").html(Math.round(tq_dengtui.AttW));
+        $("#AttN6").html(Math.round(tq_dengtui.AttN));
+        $("#AttW7").html(Math.round(tq_shaotui.AttW));
+        $("#AttN7").html(Math.round(tq_shaotui.AttN));
     }
 }
 
@@ -223,56 +253,127 @@ function BDgl_Minjie() {
     $("#DianshuguanlianXiaoKuang_s_shudu").html(SX_Minjie[0]);
     $("#DianshuguanlianXiaoKuang_s_shanbi").html(SX_Minjie[0]);
     if (PaiBei_A === "Taiji") {
-        $("#ATimeQ1").html(ZSglIO.ATimeQ("tj_panda", SX_Minjie[0]).toFixed(1));
-        $("#ATimeQ2").html(ZSglIO.ATimeQ("tj_tuishou", SX_Minjie[0]).toFixed(1));
-        $("#ATimeQ3").html(ZSglIO.ATimeQ("tj_qingna", SX_Minjie[0]).toFixed(1));
-        $("#ATimeQ4").html(ZSglIO.ATimeQ("tj_shuangfong", SX_Minjie[0]).toFixed(1));
-        $("#ATimeQ5").html(ZSglIO.ATimeQ("tj_zhoudicui", SX_Minjie[0]).toFixed(1));
-        $("#ATimeQ6").html(ZSglIO.ATimeQ("tj_paocui", SX_Minjie[0]).toFixed(1));
-        $("#ATimeQ7").html(ZSglIO.ATimeQ("tj_yuanyangtui", SX_Minjie[0]).toFixed(1));
-        $("#ATimeQ8").html(ZSglIO.ATimeQ("tj_banshuai", SX_Minjie[0]).toFixed(1));
+        tj_panda.ATimeQ = ZSglIO.ATimeQ("tj_panda", SX_Minjie[0]);
+        tj_panda.ATime = ZSglIO.ATime("tj_panda", SX_Minjie[0]);
+        tj_panda.ATimeH = ZSglIO.ATimeH("tj_panda", SX_Minjie[0]);
 
-        $("#ATime1").html(ZSglIO.ATime("tj_panda", SX_Minjie[0]).toFixed(1));
-        $("#ATime2").html(ZSglIO.ATime("tj_tuishou", SX_Minjie[0]).toFixed(1));
-        $("#ATime3").html(ZSglIO.ATime("tj_qingna", SX_Minjie[0]).toFixed(1));
-        $("#ATime4").html(ZSglIO.ATime("tj_shuangfong", SX_Minjie[0]).toFixed(1));
-        $("#ATime5").html(ZSglIO.ATime("tj_zhoudicui", SX_Minjie[0]).toFixed(1));
-        $("#ATime6").html(ZSglIO.ATime("tj_paocui", SX_Minjie[0]).toFixed(1));
-        $("#ATime7").html(ZSglIO.ATime("tj_yuanyangtui", SX_Minjie[0]).toFixed(1));
-        $("#ATime8").html(ZSglIO.ATime("tj_banshuai", SX_Minjie[0]).toFixed(1));
+        tj_tuishou.ATimeQ = ZSglIO.ATimeQ("tj_tuishou", SX_Minjie[0]);
+        tj_tuishou.ATime = ZSglIO.ATime("tj_tuishou", SX_Minjie[0]);
+        tj_tuishou.ATimeH = ZSglIO.ATimeH("tj_tuishou", SX_Minjie[0]);
 
-        $("#ATimeH1").html(ZSglIO.ATimeH("tj_panda", SX_Minjie[0]).toFixed(1));
-        $("#ATimeH2").html(ZSglIO.ATimeH("tj_tuishou", SX_Minjie[0]).toFixed(1));
-        $("#ATimeH3").html(ZSglIO.ATimeH("tj_qingna", SX_Minjie[0]).toFixed(1));
-        $("#ATimeH4").html(ZSglIO.ATimeH("tj_shuangfong", SX_Minjie[0]).toFixed(1));
-        $("#ATimeH5").html(ZSglIO.ATimeH("tj_zhoudicui", SX_Minjie[0]).toFixed(1));
-        $("#ATimeH6").html(ZSglIO.ATimeH("tj_paocui", SX_Minjie[0]).toFixed(1));
-        $("#ATimeH7").html(ZSglIO.ATimeH("tj_yuanyangtui", SX_Minjie[0]).toFixed(1));
-        $("#ATimeH8").html(ZSglIO.ATimeH("tj_banshuai", SX_Minjie[0]).toFixed(1));
+        tj_qingna.ATimeQ = ZSglIO.ATimeQ("tj_qingna", SX_Minjie[0]);
+        tj_qingna.ATime = ZSglIO.ATime("tj_qingna", SX_Minjie[0]);
+        tj_qingna.ATimeH = ZSglIO.ATimeH("tj_qingna", SX_Minjie[0]);
+
+        tj_shuangfong.ATimeQ = ZSglIO.ATimeQ("tj_shuangfong", SX_Minjie[0]);
+        tj_shuangfong.ATime = ZSglIO.ATime("tj_shuangfong", SX_Minjie[0]);
+        tj_shuangfong.ATimeH = ZSglIO.ATimeH("tj_shuangfong", SX_Minjie[0]);
+
+        tj_zhoudicui.ATimeQ = ZSglIO.ATimeQ("tj_zhoudicui", SX_Minjie[0]);
+        tj_zhoudicui.ATime = ZSglIO.ATime("tj_zhoudicui", SX_Minjie[0]);
+        tj_zhoudicui.ATimeH = ZSglIO.ATimeH("tj_zhoudicui", SX_Minjie[0]);
+
+        tj_paocui.ATimeQ = ZSglIO.ATimeQ("tj_paocui", SX_Minjie[0]);
+        tj_paocui.ATime = ZSglIO.ATime("tj_paocui", SX_Minjie[0]);
+        tj_paocui.ATimeH = ZSglIO.ATimeH("tj_paocui", SX_Minjie[0]);
+
+        tj_yuanyangtui.ATimeQ = ZSglIO.ATimeQ("tj_yuanyangtui", SX_Minjie[0]);
+        tj_yuanyangtui.ATime = ZSglIO.ATime("tj_yuanyangtui", SX_Minjie[0]);
+        tj_yuanyangtui.ATimeH = ZSglIO.ATimeH("tj_yuanyangtui", SX_Minjie[0]);
+
+        tj_banshuai.ATimeQ = ZSglIO.ATimeQ("tj_banshuai", SX_Minjie[0]);
+        tj_banshuai.ATime = ZSglIO.ATime("tj_banshuai", SX_Minjie[0]);
+        tj_banshuai.ATimeH = ZSglIO.ATimeH("tj_banshuai", SX_Minjie[0]);
+
+        $("#ATimeQ1").html(tj_panda.ATimeQ.toFixed(1));
+        $("#ATime1").html(tj_panda.ATime.toFixed(1));
+        $("#ATimeH1").html(tj_panda.ATimeH.toFixed(1));
+
+        $("#ATimeQ2").html(tj_tuishou.ATimeQ.toFixed(1));
+        $("#ATime2").html(tj_tuishou.ATime.toFixed(1));
+        $("#ATimeH2").html(tj_tuishou.ATimeH.toFixed(1));
+
+        $("#ATimeQ3").html(tj_qingna.ATimeQ.toFixed(1));
+        $("#ATime3").html(tj_qingna.ATime.toFixed(1));
+        $("#ATimeH3").html(tj_qingna.ATimeH.toFixed(1));
+
+        $("#ATimeQ4").html(tj_shuangfong.ATimeQ.toFixed(1));
+        $("#ATime4").html(tj_shuangfong.ATime.toFixed(1));
+        $("#ATimeH4").html(tj_shuangfong.ATimeH.toFixed(1));
+
+        $("#ATimeQ5").html(tj_zhoudicui.ATimeQ.toFixed(1));
+        $("#ATime5").html(tj_zhoudicui.ATime.toFixed(1));
+        $("#ATimeH5").html(tj_zhoudicui.ATimeH.toFixed(1));
+
+        $("#ATimeQ6").html(tj_paocui.ATimeQ.toFixed(1));
+        $("#ATime6").html(tj_paocui.ATime.toFixed(1));
+        $("#ATimeH6").html(tj_paocui.ATimeH.toFixed(1));
+
+        $("#ATimeQ7").html(tj_yuanyangtui.ATimeQ.toFixed(1));
+        $("#ATime7").html(tj_yuanyangtui.ATime.toFixed(1));
+        $("#ATimeH7").html(tj_yuanyangtui.ATimeH.toFixed(1));
+
+        $("#ATimeQ8").html(tj_banshuai.ATimeQ.toFixed(1));
+        $("#ATime8").html(tj_banshuai.ATime.toFixed(1));
+        $("#ATimeH8").html(tj_banshuai.ATimeH.toFixed(1));
+
     } else if (PaiBei_A === "Taiquan") {
-        $("#ATimeQ1").html(ZSglIO.ATimeQ("tq_zhiquan", SX_Minjie[0]).toFixed(1));
-        $("#ATimeQ2").html(ZSglIO.ATimeQ("tq_lrgouquan", SX_Minjie[0]).toFixed(1));
-        $("#ATimeQ3").html(ZSglIO.ATimeQ("tq_sgouquan", SX_Minjie[0]).toFixed(1));
-        $("#ATimeQ4").html(ZSglIO.ATimeQ("tq_zhouji", SX_Minjie[0]).toFixed(1));
-        $("#ATimeQ5").html(ZSglIO.ATimeQ("tq_xizhuang", SX_Minjie[0]).toFixed(1));
-        $("#ATimeQ6").html(ZSglIO.ATimeQ("tq_dengtui", SX_Minjie[0]).toFixed(1));
-        $("#ATimeQ7").html(ZSglIO.ATimeQ("tq_shaotui", SX_Minjie[0]).toFixed(1));
 
-        $("#ATime1").html(ZSglIO.ATime("tq_zhiquan", SX_Minjie[0]).toFixed(1));
-        $("#ATime2").html(ZSglIO.ATime("tq_lrgouquan", SX_Minjie[0]).toFixed(1));
-        $("#ATime3").html(ZSglIO.ATime("tq_sgouquan", SX_Minjie[0]).toFixed(1));
-        $("#ATime4").html(ZSglIO.ATime("tq_zhouji", SX_Minjie[0]).toFixed(1));
-        $("#ATime5").html(ZSglIO.ATime("tq_xizhuang", SX_Minjie[0]).toFixed(1));
-        $("#ATime6").html(ZSglIO.ATime("tq_dengtui", SX_Minjie[0]).toFixed(1));
-        $("#ATime7").html(ZSglIO.ATime("tq_shaotui", SX_Minjie[0]).toFixed(1));
+        tq_zhiquan.ATimeQ = ZSglIO.ATimeQ("tq_zhiquan", SX_Minjie[0]);
+        tq_zhiquan.ATime = ZSglIO.ATime("tq_zhiquan", SX_Minjie[0]);
+        tq_zhiquan.ATimeH = ZSglIO.ATimeH("tq_zhiquan", SX_Minjie[0]);
 
-        $("#ATimeH1").html(ZSglIO.ATimeH("tq_zhiquan", SX_Minjie[0]).toFixed(1));
-        $("#ATimeH2").html(ZSglIO.ATimeH("tq_lrgouquan", SX_Minjie[0]).toFixed(1));
-        $("#ATimeH3").html(ZSglIO.ATimeH("tq_sgouquan", SX_Minjie[0]).toFixed(1));
-        $("#ATimeH4").html(ZSglIO.ATimeH("tq_zhouji", SX_Minjie[0]).toFixed(1));
-        $("#ATimeH5").html(ZSglIO.ATimeH("tq_xizhuang", SX_Minjie[0]).toFixed(1));
-        $("#ATimeH6").html(ZSglIO.ATimeH("tq_dengtui", SX_Minjie[0]).toFixed(1));
-        $("#ATimeH7").html(ZSglIO.ATimeH("tq_shaotui", SX_Minjie[0]).toFixed(1));
+        tq_lrgouquan.ATimeQ = ZSglIO.ATimeQ("tq_lrgouquan", SX_Minjie[0]);
+        tq_lrgouquan.ATime = ZSglIO.ATime("tq_lrgouquan", SX_Minjie[0]);
+        tq_lrgouquan.ATimeH = ZSglIO.ATimeH("tq_lrgouquan", SX_Minjie[0]);
+
+        tq_sgouquan.ATimeQ = ZSglIO.ATimeQ("tq_sgouquan", SX_Minjie[0]);
+        tq_sgouquan.ATime = ZSglIO.ATime("tq_sgouquan", SX_Minjie[0]);
+        tq_sgouquan.ATimeH = ZSglIO.ATimeH("tq_sgouquan", SX_Minjie[0]);
+
+        tq_zhouji.ATimeQ = ZSglIO.ATimeQ("tq_zhouji", SX_Minjie[0]);
+        tq_zhouji.ATime = ZSglIO.ATime("tq_zhouji", SX_Minjie[0]);
+        tq_zhouji.ATimeH = ZSglIO.ATimeH("tq_zhouji", SX_Minjie[0]);
+
+        tq_xizhuang.ATimeQ = ZSglIO.ATimeQ("tq_xizhuang", SX_Minjie[0]);
+        tq_xizhuang.ATime = ZSglIO.ATime("tq_xizhuang", SX_Minjie[0]);
+        tq_xizhuang.ATimeH = ZSglIO.ATimeH("tq_xizhuang", SX_Minjie[0]);
+
+        tq_dengtui.ATimeQ = ZSglIO.ATimeQ("tq_dengtui", SX_Minjie[0]);
+        tq_dengtui.ATime = ZSglIO.ATime("tq_dengtui", SX_Minjie[0]);
+        tq_dengtui.ATimeH = ZSglIO.ATimeH("tq_dengtui", SX_Minjie[0]);
+
+        tq_shaotui.ATimeQ = ZSglIO.ATimeQ("tq_shaotui", SX_Minjie[0]);
+        tq_shaotui.ATime = ZSglIO.ATime("tq_shaotui", SX_Minjie[0]);
+        tq_shaotui.ATimeH = ZSglIO.ATimeH("tq_shaotui", SX_Minjie[0]);
+
+        $("#ATimeQ1").html(tq_zhiquan.ATimeQ.toFixed(1));
+        $("#ATime1").html(tq_zhiquan.ATime.toFixed(1));
+        $("#ATimeH1").html(tq_zhiquan.ATimeH.toFixed(1));
+
+        $("#ATimeQ2").html(tq_lrgouquan.ATimeQ.toFixed(1));
+        $("#ATime2").html(tq_lrgouquan.ATime.toFixed(1));
+        $("#ATimeH2").html(tq_lrgouquan.ATimeH.toFixed(1));
+
+        $("#ATimeQ3").html(tq_sgouquan.ATimeQ.toFixed(1));
+        $("#ATime3").html(tq_sgouquan.ATime.toFixed(1));
+        $("#ATimeH3").html(tq_sgouquan.ATimeH.toFixed(1));
+
+        $("#ATimeQ4").html(tq_zhouji.ATimeQ.toFixed(1));
+        $("#ATime4").html(tq_zhouji.ATime.toFixed(1));
+        $("#ATimeH4").html(tq_zhouji.ATimeH.toFixed(1));
+
+        $("#ATimeQ5").html(tq_xizhuang.ATimeQ.toFixed(1));
+        $("#ATime5").html(tq_xizhuang.ATime.toFixed(1));
+        $("#ATimeH5").html(tq_xizhuang.ATimeH.toFixed(1));
+
+        $("#ATimeQ6").html(tq_dengtui.ATimeQ.toFixed(1));
+        $("#ATime6").html(tq_dengtui.ATime.toFixed(1));
+        $("#ATimeH6").html(tq_dengtui.ATimeH.toFixed(1));
+
+        $("#ATimeQ7").html(tq_shaotui.ATimeQ.toFixed(1));
+        $("#ATime7").html(tq_shaotui.ATime.toFixed(1));
+        $("#ATimeH7").html(tq_shaotui.ATimeH.toFixed(1));
     }
 }
 
@@ -285,23 +386,44 @@ function BDgl_Zhili() {
     $("#DianshuguanlianXiaoKuang_s_minzhongxz").html(Add_zh(mSX_ZhiLi.minzhongxz(SX_Zhili[0]) * 100) + "%");
     $("#DianshuguanlianXiaoKuang_s_qinbao").html(mSX_ZhiLi.qinbao(SX_Zhili[0]));
     BDgl_Liliang();
+
     if (PaiBei_A === "Taiji") {
-        $("#Mzxz1").html(Add_zh(Math.round(ZSglIO.Mzxz("tj_panda", SX_Zhili[0]) * 100)) + "%");
-        $("#Mzxz2").html(Add_zh(Math.round(ZSglIO.Mzxz("tj_tuishou", SX_Zhili[0]) * 100)) + "%");
-        $("#Mzxz3").html(Add_zh(Math.round(ZSglIO.Mzxz("tj_qingna", SX_Zhili[0]) * 100)) + "%");
-        $("#Mzxz4").html(Add_zh(Math.round(ZSglIO.Mzxz("tj_shuangfong", SX_Zhili[0]) * 100)) + "%");
-        $("#Mzxz5").html(Add_zh(Math.round(ZSglIO.Mzxz("tj_zhoudicui", SX_Zhili[0]) * 100)) + "%");
-        $("#Mzxz6").html(Add_zh(Math.round(ZSglIO.Mzxz("tj_paocui", SX_Zhili[0]) * 100)) + "%");
-        $("#Mzxz7").html(Add_zh(Math.round(ZSglIO.Mzxz("tj_yuanyangtui", SX_Zhili[0]) * 100)) + "%");
-        $("#Mzxz8").html(Add_zh(Math.round(ZSglIO.Mzxz("tj_banshuai", SX_Zhili[0]) * 100)) + "%");
+        tj_panda.Mzxz = ZSglIO.Mzxz("tj_panda", SX_Zhili[0]);
+        tj_tuishou.Mzxz = ZSglIO.Mzxz("tj_tuishou", SX_Zhili[0]);
+        tj_qingna.Mzxz = ZSglIO.Mzxz("tj_qingna", SX_Zhili[0]);
+        tj_shuangfong.Mzxz = ZSglIO.Mzxz("tj_shuangfong", SX_Zhili[0]);
+        tj_zhoudicui.Mzxz = ZSglIO.Mzxz("tj_zhoudicui", SX_Zhili[0]);
+        tj_paocui.Mzxz = ZSglIO.Mzxz("tj_paocui", SX_Zhili[0]);
+        tj_yuanyangtui.Mzxz = ZSglIO.Mzxz("tj_yuanyangtui", SX_Zhili[0]);
+        tj_banshuai.Mzxz = ZSglIO.Mzxz("tj_banshuai", SX_Zhili[0]);
+
+        $("#Mzxz1").html(Add_zh(Math.round(tj_panda.Mzxz * 100)) + "%");
+        $("#Mzxz2").html(Add_zh(Math.round(tj_tuishou.Mzxz * 100)) + "%");
+        $("#Mzxz3").html(Add_zh(Math.round(tj_qingna.Mzxz * 100)) + "%");
+        $("#Mzxz4").html(Add_zh(Math.round(tj_shuangfong.Mzxz * 100)) + "%");
+        $("#Mzxz5").html(Add_zh(Math.round(tj_zhoudicui.Mzxz * 100)) + "%");
+        $("#Mzxz6").html(Add_zh(Math.round(tj_paocui.Mzxz * 100)) + "%");
+        $("#Mzxz7").html(Add_zh(Math.round(tj_yuanyangtui.Mzxz * 100)) + "%");
+        $("#Mzxz8").html(Add_zh(Math.round(tj_banshuai.Mzxz * 100)) + "%");
+
     } else if (PaiBei_A === "Taiquan") {
-        $("#Mzxz1").html(Add_zh(Math.round(ZSglIO.Mzxz("tq_zhiquan", SX_Zhili[0]) * 100)) + "%");
-        $("#Mzxz2").html(Add_zh(Math.round(ZSglIO.Mzxz("tq_lrgouquan", SX_Zhili[0]) * 100)) + "%");
-        $("#Mzxz3").html(Add_zh(Math.round(ZSglIO.Mzxz("tq_sgouquan", SX_Zhili[0]) * 100)) + "%");
-        $("#Mzxz4").html(Add_zh(Math.round(ZSglIO.Mzxz("tq_zhouji", SX_Zhili[0]) * 100)) + "%");
-        $("#Mzxz5").html(Add_zh(Math.round(ZSglIO.Mzxz("tq_xizhuang", SX_Zhili[0]) * 100)) + "%");
-        $("#Mzxz6").html(Add_zh(Math.round(ZSglIO.Mzxz("tq_dengtui", SX_Zhili[0]) * 100)) + "%");
-        $("#Mzxz7").html(Add_zh(Math.round(ZSglIO.Mzxz("tq_shaotui", SX_Zhili[0]) * 100)) + "%");
+
+        tq_zhiquan.Mzxz = ZSglIO.Mzxz("tq_zhiquan", SX_Zhili[0]);
+        tq_lrgouquan.Mzxz = ZSglIO.Mzxz("tq_lrgouquan", SX_Zhili[0]);
+        tq_sgouquan.Mzxz = ZSglIO.Mzxz("tq_sgouquan", SX_Zhili[0]);
+        tq_zhouji.Mzxz = ZSglIO.Mzxz("tq_zhouji", SX_Zhili[0]);
+        tq_xizhuang.Mzxz = ZSglIO.Mzxz("tq_xizhuang", SX_Zhili[0]);
+        tq_dengtui.Mzxz = ZSglIO.Mzxz("tq_dengtui", SX_Zhili[0]);
+        tq_shaotui.Mzxz = ZSglIO.Mzxz("tq_shaotui", SX_Zhili[0]);
+
+        $("#Mzxz1").html(Add_zh(Math.round(tq_zhiquan.Mzxz * 100)) + "%");
+        $("#Mzxz2").html(Add_zh(Math.round(tq_lrgouquan.Mzxz * 100)) + "%");
+        $("#Mzxz3").html(Add_zh(Math.round(tq_sgouquan.Mzxz * 100)) + "%");
+        $("#Mzxz4").html(Add_zh(Math.round(tq_zhouji.Mzxz * 100)) + "%");
+        $("#Mzxz5").html(Add_zh(Math.round(tq_xizhuang.Mzxz * 100)) + "%");
+        $("#Mzxz6").html(Add_zh(Math.round(tq_dengtui.Mzxz * 100)) + "%");
+        $("#Mzxz7").html(Add_zh(Math.round(tq_shaotui.Mzxz * 100)) + "%");
+
     }
 }
 
@@ -862,7 +984,6 @@ function biamWuXiaoZS() {
 
 
 //添加一个招式后共同动作
-//todo w
 function tianjiaZShou() {
     i_AyixuanZS++;
     xuanshisyTime();
@@ -871,51 +992,51 @@ function tianjiaZShou() {
     } else {
         switch (PaiBei_A) {
             case "Taiji":
-                if ((ZSglIO.ATimeQ("tj_panda",SX_Minjie[0]) + ZSglIO.ATime("tj_panda",SX_Minjie[0])).toFixed(1) > AyxZStime.toFixed(1)) {
+                if ((tj_panda.ATimeQ + tj_panda.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
                     $("#ZSdiv_tj_panda").addClass("huise");
                 }
-                if ((ZSglIO.ATimeQ("tj_tuishou",SX_Minjie[0]) + ZSglIO.ATime("tj_tuishou",SX_Minjie[0])).toFixed(1) > AyxZStime.toFixed(1)) {
+                if ((tj_tuishou.ATimeQ + tj_tuishou.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
                     $("#ZSdiv_tj_tuishou").addClass("huise");
                 }
-                if ((ZSglIO.ATimeQ("tj_qingna",SX_Minjie[0]) + ZSglIO.ATime("tj_qingna",SX_Minjie[0])).toFixed(1) > AyxZStime.toFixed(1)) {
+                if ((tj_qingna.ATimeQ + tj_qingna.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
                     $("#ZSdiv_tj_qingna").addClass("huise");
                 }
-                if ((ZSglIO.ATimeQ("tj_shuangfong",SX_Minjie[0]) + ZSglIO.ATime("tj_shuangfong",SX_Minjie[0])).toFixed(1) > AyxZStime.toFixed(1)) {
+                if ((tj_shuangfong.ATimeQ + tj_shuangfong.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
                     $("#ZSdiv_tj_shuangfong").addClass("huise");
                 }
-                if ((ZSglIO.ATimeQ("tj_zhoudicui",SX_Minjie[0]) + ZSglIO.ATime("tj_zhoudicui",SX_Minjie[0])).toFixed(1) > AyxZStime.toFixed(1)) {
+                if ((tj_zhoudicui.ATimeQ + tj_zhoudicui.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
                     $("#ZSdiv_tj_zhoudicui").addClass("huise");
                 }
-                if ((ZSglIO.ATimeQ("tj_paocui",SX_Minjie[0]) + ZSglIO.ATime("tj_paocui",SX_Minjie[0])).toFixed(1) > AyxZStime.toFixed(1)) {
+                if ((tj_paocui.ATimeQ + tj_paocui.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
                     $("#ZSdiv_tj_paocui").addClass("huise");
                 }
-                if ((ZSglIO.ATimeQ("tj_yuanyangtui",SX_Minjie[0]) + ZSglIO.ATime("tj_yuanyangtui",SX_Minjie[0])).toFixed(1) > AyxZStime.toFixed(1)) {
+                if ((tj_yuanyangtui.ATimeQ + tj_yuanyangtui.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
                     $("#ZSdiv_tj_yuanyangtui").addClass("huise");
                 }
-                if ((ZSglIO.ATimeQ("tj_banshuai",SX_Minjie[0]) + ZSglIO.ATime("tj_banshuai",SX_Minjie[0])).toFixed(1) > AyxZStime.toFixed(1)) {
+                if ((tj_banshuai.ATimeQ + tj_banshuai.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
                     $("#ZSdiv_tj_banshuai").addClass("huise");
                 }
                 break;
             case "Taiquan":
-                if ((ZSglIO.ATimeQ("tq_zhiquan",SX_Minjie[0]) + ZSglIO.ATime("tq_zhiquan",SX_Minjie[0])).toFixed(1) > AyxZStime.toFixed(1)) {
+                if ((tq_zhiquan.ATimeQ + tq_zhiquan.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
                     $("#ZSdiv_tq_zhiquan").addClass("huise");
                 }
-                if ((ZSglIO.ATimeQ("tq_lrgouquan",SX_Minjie[0]) + ZSglIO.ATime("tq_lrgouquan",SX_Minjie[0])).toFixed(1) > AyxZStime.toFixed(1)) {
+                if ((tq_lrgouquan.ATimeQ + tq_lrgouquan.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
                     $("#ZSdiv_tj_tq_lrgouquan").addClass("huise");
                 }
-                if ((ZSglIO.ATimeQ("tq_sgouquan",SX_Minjie[0]) + ZSglIO.ATime("tq_sgouquan",SX_Minjie[0])).toFixed(1) > AyxZStime.toFixed(1)) {
+                if ((tq_sgouquan.ATimeQ + tq_sgouquan.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
                     $("#ZSdiv_tq_sgouquan").addClass("huise");
                 }
-                if ((ZSglIO.ATimeQ("tq_zhouji",SX_Minjie[0]) + ZSglIO.ATime("tq_zhouji",SX_Minjie[0])).toFixed(1) > AyxZStime.toFixed(1)) {
+                if ((tq_zhouji.ATimeQ + tq_zhouji.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
                     $("#ZSdiv_tq_zhouji").addClass("huise");
                 }
-                if ((ZSglIO.ATimeQ("tq_xizhuang",SX_Minjie[0]) + ZSglIO.ATime("tq_xizhuang",SX_Minjie[0])).toFixed(1) > AyxZStime.toFixed(1)) {
+                if ((tq_xizhuang.ATimeQ + tq_xizhuang.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
                     $("#ZSdiv_tq_xizhuang").addClass("huise");
                 }
-                if ((ZSglIO.ATimeQ("tq_dengtui",SX_Minjie[0]) + ZSglIO.ATime("tq_dengtui",SX_Minjie[0])).toFixed(1) > AyxZStime.toFixed(1)) {
+                if ((tq_dengtui.ATimeQ + tq_dengtui.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
                     $("#ZSdiv_tq_dengtui").addClass("huise");
                 }
-                if ((ZSglIO.ATimeQ("tq_shaotui",SX_Minjie[0]) + ZSglIO.ATime("tq_shaotui",SX_Minjie[0])).toFixed(1) > AyxZStime.toFixed(1)) {
+                if ((tq_shaotui.ATimeQ + tq_shaotui.ATime).toFixed(1) > AyxZStime.toFixed(1)) {
                     $("#ZSdiv_tq_shaotui").addClass("huise");
                 }
                 break;
@@ -929,51 +1050,51 @@ function shanchuZShou() {
     xuanshisyTime();
     switch (PaiBei_A) {
         case "Taiji":
-            if ((ZSglIO.ATimeQ("tj_panda",SX_Minjie[0]) + ZSglIO.ATime("tj_panda",SX_Minjie[0])).toFixed(1) <= AyxZStime.toFixed(1)) {
+            if ((tj_panda.ATimeQ + tj_panda.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
                 $("#ZSdiv_tj_panda").removeClass("huise");
             }
-            if ((ZSglIO.ATimeQ("tj_tuishou",SX_Minjie[0]) + ZSglIO.ATime("tj_tuishou",SX_Minjie[0])).toFixed(1) <= AyxZStime.toFixed(1)) {
+            if ((tj_tuishou.ATimeQ + tj_tuishou.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
                 $("#ZSdiv_tj_tuishou").removeClass("huise");
             }
-            if ((ZSglIO.ATimeQ("tj_qingna",SX_Minjie[0]) + ZSglIO.ATime("tj_qingna",SX_Minjie[0])).toFixed(1) <= AyxZStime.toFixed(1)) {
+            if ((tj_qingna.ATimeQ + tj_qingna.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
                 $("#ZSdiv_tj_qingna").removeClass("huise");
             }
-            if ((ZSglIO.ATimeQ("tj_shuangfong",SX_Minjie[0]) + ZSglIO.ATime("tj_shuangfong",SX_Minjie[0])).toFixed(1) <= AyxZStime.toFixed(1)) {
+            if ((tj_shuangfong.ATimeQ + tj_shuangfong.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
                 $("#ZSdiv_tj_shuangfong").removeClass("huise");
             }
-            if ((ZSglIO.ATimeQ("tj_zhoudicui",SX_Minjie[0]) + ZSglIO.ATime("tj_zhoudicui",SX_Minjie[0])).toFixed(1) <= AyxZStime.toFixed(1)) {
+            if ((tj_zhoudicui.ATimeQ + tj_zhoudicui.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
                 $("#ZSdiv_tj_zhoudicui").removeClass("huise");
             }
-            if ((ZSglIO.ATimeQ("tj_paocui",SX_Minjie[0]) + ZSglIO.ATime("tj_paocui",SX_Minjie[0])).toFixed(1) <= AyxZStime.toFixed(1)) {
+            if ((tj_paocui.ATimeQ + tj_paocui.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
                 $("#ZSdiv_tj_paocui").removeClass("huise");
             }
-            if ((ZSglIO.ATimeQ("tj_yuanyangtui",SX_Minjie[0]) + ZSglIO.ATime("tj_yuanyangtui",SX_Minjie[0])).toFixed(1) <= AyxZStime.toFixed(1)) {
+            if ((tj_yuanyangtui.ATimeQ + tj_yuanyangtui.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
                 $("#ZSdiv_tj_yuanyangtui").removeClass("huise");
             }
-            if ((ZSglIO.ATimeQ("tj_banshuai",SX_Minjie[0]) + ZSglIO.ATime("tj_banshuai",SX_Minjie[0])).toFixed(1) <= AyxZStime.toFixed(1)) {
+            if ((tj_banshuai.ATimeQ + tj_banshuai.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
                 $("#ZSdiv_tj_banshuai").removeClass("huise");
             }
             break;
         case "Taiquan":
-            if ((ZSglIO.ATimeQ("tq_zhiquan",SX_Minjie[0]) + ZSglIO.ATime("tq_zhiquan",SX_Minjie[0])).toFixed(1) <= AyxZStime.toFixed(1)) {
+            if ((tq_zhiquan.ATimeQ + tq_zhiquan.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
                 $("#ZSdiv_tq_zhiquan").removeClass("huise");
             }
-            if ((ZSglIO.ATimeQ("tq_lrgouquan",SX_Minjie[0]) + ZSglIO.ATime("tq_lrgouquan",SX_Minjie[0])).toFixed(1) <= AyxZStime.toFixed(1)) {
+            if ((tq_lrgouquan.ATimeQ + tq_lrgouquan.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
                 $("#ZSdiv_tq_lrgouquan").removeClass("huise");
             }
-            if ((ZSglIO.ATimeQ("tq_sgouquan",SX_Minjie[0]) + ZSglIO.ATime("tq_sgouquan",SX_Minjie[0])).toFixed(1) <= AyxZStime.toFixed(1)) {
+            if ((tq_sgouquan.ATimeQ + tq_sgouquan.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
                 $("#ZSdiv_tq_sgouquan").removeClass("huise");
             }
-            if ((ZSglIO.ATimeQ("tq_zhouji",SX_Minjie[0]) + ZSglIO.ATime("tq_zhouji",SX_Minjie[0])).toFixed(1) <= AyxZStime.toFixed(1)) {
+            if ((tq_zhouji.ATimeQ + tq_zhouji.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
                 $("#ZSdiv_tq_zhouji").removeClass("huise");
             }
-            if ((ZSglIO.ATimeQ("tq_xizhuang",SX_Minjie[0]) + ZSglIO.ATime("tq_xizhuang",SX_Minjie[0])).toFixed(1) <= AyxZStime.toFixed(1)) {
+            if ((tq_xizhuang.ATimeQ + tq_xizhuang.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
                 $("#ZSdiv_tq_xizhuang").removeClass("huise");
             }
-            if ((ZSglIO.ATimeQ("tq_dengtui",SX_Minjie[0]) + ZSglIO.ATime("tq_dengtui",SX_Minjie[0])).toFixed(1) <= AyxZStime.toFixed(1)) {
+            if ((tq_dengtui.ATimeQ + tq_dengtui.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
                 $("#ZSdiv_tq_dengtui").removeClass("huise");
             }
-            if ((ZSglIO.ATimeQ("tq_shaotui",SX_Minjie[0]) + ZSglIO.ATime("tq_shaotui",SX_Minjie[0])).toFixed(1) <= AyxZStime.toFixed(1)) {
+            if ((tq_shaotui.ATimeQ + tq_shaotui.ATime).toFixed(1) <= AyxZStime.toFixed(1)) {
                 $("#ZSdiv_tq_shaotui").removeClass("huise");
             }
             break;
@@ -982,7 +1103,7 @@ function shanchuZShou() {
 
 //加回删除招式的时间
 function jiahuitime(zsName) {
-    AyxZStime = AyxZStime + ZSglIO.ATimeQ(String(zsName),SX_Minjie[0]) + ZSglIO.ATime(String(zsName),SX_Minjie[0]);
+    AyxZStime = AyxZStime + ZSglIO.ATimeQ(String(zsName), SX_Minjie[0]) + ZSglIO.ATime(String(zsName), SX_Minjie[0]);
 }
 
 //剩余时间显示
@@ -1174,52 +1295,67 @@ function BshujiZS() {
     var i_ByixuanZS = 1;
     switch (PaiBei_B) {
         case "Taiji":
-            Btj_panda.ATimeQ = true_tj_panda.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[1]);
-            Btj_panda.ATime = true_tj_panda.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[1]);
+            Btj_panda.ATimeQ = ZSglIO.ATimeQ("tj_panda", SX_Minjie[1]);
+            Btj_panda.ATime = ZSglIO.ATime("tj_panda", SX_Minjie[1]);
+            Btj_panda.ATimeH = ZSglIO.ATimeH("tj_panda", SX_Minjie[1]);
 
-            Btj_tuishou.ATimeQ = true_tj_tuishou.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[1]);
-            Btj_tuishou.ATime = true_tj_tuishou.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[1]);
+            Btj_tuishou.ATimeQ = ZSglIO.ATimeQ("tj_tuishou", SX_Minjie[1]);
+            Btj_tuishou.ATime = ZSglIO.ATime("tj_tuishou", SX_Minjie[1]);
+            Btj_tuishou.ATimeH = ZSglIO.ATimeH("tj_tuishou", SX_Minjie[1]);
 
-            Btj_qingna.ATimeQ = true_tj_qingna.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[1]);
-            Btj_qingna.ATime = true_tj_qingna.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[1]);
+            Btj_qingna.ATimeQ = ZSglIO.ATimeQ("tj_qingna", SX_Minjie[1]);
+            Btj_qingna.ATime = ZSglIO.ATime("tj_qingna", SX_Minjie[1]);
+            Btj_qingna.ATimeH = ZSglIO.ATimeH("tj_qingna", SX_Minjie[1]);
 
-            Btj_shuangfong.ATimeQ = true_tj_shuangfong.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[1]);
-            Btj_shuangfong.ATime = true_tj_shuangfong.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[1]);
+            Btj_shuangfong.ATimeQ = ZSglIO.ATimeQ("tj_shuangfong", SX_Minjie[1]);
+            Btj_shuangfong.ATime = ZSglIO.ATime("tj_shuangfong", SX_Minjie[1]);
+            Btj_shuangfong.ATimeH = ZSglIO.ATimeH("tj_shuangfong", SX_Minjie[1]);
 
-            Btj_zhoudicui.ATimeQ = true_tj_zhoudicui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[1]);
-            Btj_zhoudicui.ATime = true_tj_zhoudicui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[1]);
+            Btj_zhoudicui.ATimeQ = ZSglIO.ATimeQ("tj_zhoudicui", SX_Minjie[1]);
+            Btj_zhoudicui.ATime = ZSglIO.ATime("tj_zhoudicui", SX_Minjie[1]);
+            Btj_zhoudicui.ATimeH = ZSglIO.ATimeH("tj_zhoudicui", SX_Minjie[1]);
 
-            Btj_paocui.ATimeQ = true_tj_paocui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[1]);
-            Btj_paocui.ATime = true_tj_paocui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[1]);
+            Btj_paocui.ATimeQ = ZSglIO.ATimeQ("tj_paocui", SX_Minjie[1]);
+            Btj_paocui.ATime = ZSglIO.ATime("tj_paocui", SX_Minjie[1]);
+            Btj_paocui.ATimeH = ZSglIO.ATimeH("tj_paocui", SX_Minjie[1]);
 
-            Btj_yuanyangtui.ATimeQ = true_tj_yuanyangtui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[1]);
-            Btj_yuanyangtui.ATime = true_tj_yuanyangtui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[1]);
+            Btj_yuanyangtui.ATimeQ = ZSglIO.ATimeQ("tj_yuanyangtui", SX_Minjie[1]);
+            Btj_yuanyangtui.ATime = ZSglIO.ATime("tj_yuanyangtui", SX_Minjie[1]);
+            Btj_yuanyangtui.ATimeH = ZSglIO.ATimeH("tj_yuanyangtui", SX_Minjie[1]);
 
-            Btj_banshuai.ATimeQ = true_tj_banshuai.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[1]);
-            Btj_banshuai.ATime = true_tj_banshuai.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[1]);
-
+            Btj_banshuai.ATimeQ = ZSglIO.ATimeQ("tj_banshuai", SX_Minjie[1]);
+            Btj_banshuai.ATime = ZSglIO.ATime("tj_banshuai", SX_Minjie[1]);
+            Btj_banshuai.ATimeH = ZSglIO.ATimeH("tj_banshuai", SX_Minjie[1]);
             break;
+
         case "Taiquan":
-            Btq_zhiquan.ATimeQ = true_tq_zhiquan.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[1]);
-            Btq_zhiquan.ATime = true_tq_zhiquan.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[1]);
+            Btq_zhiquan.ATimeQ = ZSglIO.ATimeQ("tq_zhiquan", SX_Minjie[1]);
+            Btq_zhiquan.ATime = ZSglIO.ATime("tq_zhiquan", SX_Minjie[1]);
+            Btq_zhiquan.ATimeH = ZSglIO.ATimeH("tq_zhiquan", SX_Minjie[1]);
 
-            Btq_lrgouquan.ATimeQ = true_tq_lrgouquan.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[1]);
-            Btq_lrgouquan.ATime = true_tq_lrgouquan.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[1]);
+            Btq_lrgouquan.ATimeQ = ZSglIO.ATimeQ("tq_lrgouquan", SX_Minjie[1]);
+            Btq_lrgouquan.ATime = ZSglIO.ATime("tq_lrgouquan", SX_Minjie[1]);
+            Btq_lrgouquan.ATimeH = ZSglIO.ATimeH("tq_lrgouquan", SX_Minjie[1]);
 
-            Btq_sgouquan.ATimeQ = true_tq_sgouquan.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[1]);
-            Btq_sgouquan.ATime = true_tq_sgouquan.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[1]);
+            Btq_sgouquan.ATimeQ = ZSglIO.ATimeQ("tq_sgouquan", SX_Minjie[1]);
+            Btq_sgouquan.ATime = ZSglIO.ATime("tq_sgouquan", SX_Minjie[1]);
+            Btq_sgouquan.ATimeH = ZSglIO.ATimeH("tq_sgouquan", SX_Minjie[1]);
 
-            Btq_zhouji.ATimeQ = true_tq_zhouji.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[1]);
-            Btq_zhouji.ATime = true_tq_zhouji.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[1]);
+            Btq_zhouji.ATimeQ = ZSglIO.ATimeQ("tq_zhouji", SX_Minjie[1]);
+            Btq_zhouji.ATime = ZSglIO.ATime("tq_zhouji", SX_Minjie[1]);
+            Btq_zhouji.ATimeH = ZSglIO.ATimeH("tq_zhouji", SX_Minjie[1]);
 
-            Btq_xizhuang.ATimeQ = true_tq_xizhuang.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[1]);
-            Btq_xizhuang.ATime = true_tq_xizhuang.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[1]);
+            Btq_xizhuang.ATimeQ = ZSglIO.ATimeQ("tq_xizhBuang", SX_Minjie[1]);
+            Btq_xizhuang.ATime = ZSglIO.ATime("tq_xizhuang", SX_Minjie[1]);
+            Btq_xizhuang.ATimeH = ZSglIO.ATimeH("tq_xizhuang", SX_Minjie[1]);
 
-            Btq_dengtui.ATimeQ = true_tq_dengtui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[1]);
-            Btq_dengtui.ATime = true_tq_dengtui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[1]);
+            Btq_dengtui.ATimeQ = ZSglIO.ATimeQ("tq_dengtui", SX_Minjie[1]);
+            Btq_dengtui.ATime = ZSglIO.ATime("tq_dengtui", SX_Minjie[1]);
+            Btq_dengtui.ATimeH = ZSglIO.ATimeH("tq_dengtui", SX_Minjie[1]);
 
-            Btq_shaotui.ATimeQ = true_tq_shaotui.ATimeQ + mSX_Minjie.shuduJC_Q(SX_Minjie[1]);
-            Btq_shaotui.ATime = true_tq_shaotui.ATime + mSX_Minjie.shuduJC_Z(SX_Minjie[1]);
+            Btq_shaotui.ATimeQ = ZSglIO.ATimeQ("tq_shaotui", SX_Minjie[1]);
+            Btq_shaotui.ATime = ZSglIO.ATime("tq_shaotui", SX_Minjie[1]);
+            Btq_shaotui.ATimeH = ZSglIO.ATimeH("tq_shaotui", SX_Minjie[1]);
 
             break;
     }
@@ -1753,6 +1889,7 @@ function BzsHouxuanBuwei(zsname, a) {
 }
 
 //读入招式数据,who为我0，或敌1;a为招式数组号
+//todo 没用
 function duruZSshuju(who, a) {
     if (who === 0) {
         switch (AchoiceZS[a].zs_name.toString()) {
@@ -2069,17 +2206,19 @@ function duruZSshuju(who, a) {
 }
 
 //选谁先发招，发啥招。a为A第几招数组序号,b为B第几招数组序号
-//todo 选先手
+//todo 选先手实时计算
 function ChoiceFirst(a, b) {
     switch (HadChoice_Who) {
         case "A":
             if (a <= AchoiceZS_bj && b <= BchoiceZS_bj) {
-                $("#ZDwenbenWK").append("<div>" + "A之前先手," + "A后摇前摇分别为" + AchoiceZS[a - 1].ATimeH.toFixed(1) + "，" + AchoiceZS[a].ATimeQ.toFixed(1) + "。B前摇为" + BchoiceZS[b].ATimeQ.toFixed(1) + "</div>");
+                //$("#ZDwenbenWK").append("<div>" + "A之前先手," + "A后摇前摇分别为" + AchoiceZS[a - 1].ATimeH.toFixed(1) + "，" + AchoiceZS[a].ATimeQ.toFixed(1) + "。B前摇为" + BchoiceZS[b].ATimeQ.toFixed(1) + "</div>");
+
+                $("#ZDwenbenWK").append("<div>" + "A之前先手," + "A后摇前摇分别为" + ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name),SX_Minjie[0]).toFixed(1) + "，" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name),SX_Minjie[0]).toFixed(1) + "。B前摇为" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name),SX_Minjie[1]).toFixed(1) + "</div>");
                 //alert("A--:" + AchoiceZS[a-1].ATimeH + "+" + AchoiceZS[a].ATimeQ + "?" + BchoiceZS[b].ATimeQ);
-                if (AchoiceZS[a - 1].ATimeH + AchoiceZS[a].ATimeQ > BchoiceZS[b].ATimeQ) {
+                if (ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name),SX_Minjie[0]) + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name),SX_Minjie[0]) > ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name),SX_Minjie[1])) {
                     HadChoice_Who = "B";
                     HadChoice_Bb = b;
-                } else if (AchoiceZS[a - 1].ATimeH + AchoiceZS[a].ATimeQ < BchoiceZS[b].ATimeQ) {
+                } else if (ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name),SX_Minjie[0]) + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name),SX_Minjie[0]) < ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name),SX_Minjie[1])) {
                     HadChoice_Who = "A";
                     HadChoice_Aa = a;
                 } else {
@@ -2103,12 +2242,15 @@ function ChoiceFirst(a, b) {
             break;
         case "B":
             if (a <= AchoiceZS_bj && b <= BchoiceZS_bj) {
-                $("#ZDwenbenWK").append("<div>" + "B之前先手," + "B后摇前摇分别为" + BchoiceZS[b - 1].ATimeH.toFixed(1) + "，" + BchoiceZS[b].ATimeQ.toFixed(1) + "。A前摇为" + AchoiceZS[a].ATimeQ.toFixed(1) + "</div>");
+                //$("#ZDwenbenWK").append("<div>" + "B之前先手," + "B后摇前摇分别为" + BchoiceZS[b - 1].ATimeH.toFixed(1) + "，" + BchoiceZS[b].ATimeQ.toFixed(1) + "。A前摇为" + AchoiceZS[a].ATimeQ.toFixed(1) + "</div>");
+
+
+                $("#ZDwenbenWK").append("<div>" + "B之前先手," + "B后摇前摇分别为" + ZSglIO.ATimeH(String(BchoiceZS[b-1].zs_name),SX_Minjie[1]).toFixed(1) + "，" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name),SX_Minjie[1]).toFixed(1) + "。A前摇为" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name),SX_Minjie[0]).toFixed(1) + "</div>");
                 //alert("B--:" + AchoiceZS[a].ATimeQ + "?" + BchoiceZS[b].ATimeQ + "+" + BchoiceZS[b].ATimeQ);
-                if (AchoiceZS[a].ATimeQ > BchoiceZS[b - 1].ATimeH + BchoiceZS[b].ATimeQ) {
+                if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name),SX_Minjie[0]) > ZSglIO.ATimeH(String(BchoiceZS[b-1].zs_name),SX_Minjie[1]) + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name),SX_Minjie[1])) {
                     HadChoice_Who = "B";
                     HadChoice_Bb = b;
-                } else if (AchoiceZS[a].ATimeQ < BchoiceZS[b - 1].ATimeH + BchoiceZS[b].ATimeQ) {
+                } else if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name),SX_Minjie[0]) < ZSglIO.ATimeH(String(BchoiceZS[b-1].zs_name),SX_Minjie[1]) + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name),SX_Minjie[1])) {
                     HadChoice_Who = "A";
                     HadChoice_Aa = a;
                 } else {
@@ -2132,11 +2274,11 @@ function ChoiceFirst(a, b) {
             break;
         case "":
             if (a <= AchoiceZS_bj && b <= BchoiceZS_bj) {
-                $("#ZDwenbenWK").append("<div>" + "之前无先手," + "A前摇为" + AchoiceZS[a].ATimeQ.toFixed(1) + "。B前摇为" + BchoiceZS[b].ATimeQ.toFixed(1) + "</div>");
-                if (AchoiceZS[a].ATimeQ > BchoiceZS[b].ATimeQ) {
+                $("#ZDwenbenWK").append("<div>" + "之前无先手," + "A前摇为" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name),SX_Minjie[0]).toFixed(1) + "。B前摇为" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name),SX_Minjie[1]).toFixed(1) + "</div>");
+                if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name),SX_Minjie[0]) > ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name),SX_Minjie[1])) {
                     HadChoice_Who = "B";
                     HadChoice_Bb = b;
-                } else if (AchoiceZS[a].ATimeQ < BchoiceZS[b].ATimeQ) {
+                } else if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name),SX_Minjie[0]) < ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name),SX_Minjie[1])){
                     HadChoice_Who = "A";
                     HadChoice_Aa = a;
                 } else {
@@ -2178,12 +2320,12 @@ function fighting() {
     var b = 1;
     var xix = 0;
     //var i = 0;
-    for (var i = 1; i <= AchoiceZS_bj; i++) {
-        duruZSshuju(0, i);
-    }
-    for (var j = 1; j <= BchoiceZS_bj; j++) {
-        duruZSshuju(1, j);
-    }
+    // for (var i = 1; i <= AchoiceZS_bj; i++) {
+    //     duruZSshuju(0, i);
+    // }
+    // for (var j = 1; j <= BchoiceZS_bj; j++) {
+    //     duruZSshuju(1, j);
+    // }
     do {
         ChoiceFirst(a, b);
         if (HadChoice_Who === "A") {
