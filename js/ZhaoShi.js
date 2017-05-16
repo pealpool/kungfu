@@ -44,297 +44,460 @@ var ZhaoShi = {
 
         //外伤显示
         zzz.AttW_screen = function (zs_name, liling, zhili) {
-            var att = 0;
+            var abc = 0;
             switch (String(zs_name)) {
                 case "tj_panda":
-                    att = 80;
+                    abc = 80;
                     break;
                 case "tj_tuishou":
-                    att = 20;
+                    abc = 20;
                     break;
                 case "tj_qingna":
-                    att = 0;
+                    abc = 0;
                     break;
                 case "tj_shuangfong":
-                    att = 150;
+                    abc = 150;
                     break;
                 case "tj_zhoudicui":
-                    att = 100;
+                    abc = 100;
                     break;
                 case "tj_paocui":
-                    att = 100;
+                    abc = 100;
                     break;
                 case "tj_yuanyangtui":
-                    att = 200;
+                    abc = 200;
                     break;
                 case "tj_banshuai":
-                    att = 0;
+                    abc = 0;
                     break;
                 case "tq_zhiquan":
-                    att = 100;
+                    abc = 100;
                     break;
                 case "tq_lrgouquan":
-                    att = 200;
+                    abc = 200;
                     break;
                 case "tq_sgouquan":
-                    att = 200;
+                    abc = 200;
                     break;
                 case "tq_zhouji":
-                    att = 300;
+                    abc = 300;
                     break;
                 case "tq_xizhuang":
-                    att = 250;
+                    abc = 250;
                     break;
                 case "tq_dengtui":
-                    att = 200;
+                    abc = 200;
                     break;
                 case "tq_shaotui":
-                    att = 300;
+                    abc = 300;
                     break;
                 default:
                     break;
             }
-            return (att * mSX_LiLiang.gongjiJC(liling) + mSX_LiLiang.baojishanghai(liling) * mSX_ZhiLi.baojijilv(zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(zhili) - 0.05);
+            return (abc * mSX_LiLiang.gongjiJC(liling) + mSX_LiLiang.baojishanghai(liling) * mSX_ZhiLi.baojijilv(zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(zhili) - 0.05);
         };
 
-        //todo 内伤显示
+        //内伤显示
         zzz.AttN_screen = function (zs_name, liling, zhili) {
-            var att = 0;
+            var abc = 0;
             switch (String(zs_name)) {
                 case "tj_panda":
-                    att = 0;
+                    abc = 0;
                     break;
                 case "tj_tuishou":
-                    att = 30;
+                    abc = 30;
                     break;
                 case "tj_qingna":
-                    att = 100;
+                    abc = 100;
                     break;
                 case "tj_shuangfong":
-                    att = 150;
+                    abc = 150;
                     break;
                 case "tj_zhoudicui":
-                    att = 120;
+                    abc = 120;
                     break;
                 case "tj_paocui":
-                    att = 200;
+                    abc = 200;
                     break;
                 case "tj_yuanyangtui":
-                    att = 0;
+                    abc = 0;
                     break;
                 case "tj_banshuai":
-                    att = 200;
+                    abc = 200;
                     break;
                 case "tq_zhiquan":
-                    att = 0;
+                    abc = 0;
                     break;
                 case "tq_lrgouquan":
-                    att = 0;
+                    abc = 0;
                     break;
                 case "tq_sgouquan":
-                    att = 0;
+                    abc = 0;
                     break;
                 case "tq_zhouji":
-                    att = 0;
+                    abc = 0;
                     break;
                 case "tq_xizhuang":
-                    att = 0;
+                    abc = 0;
                     break;
                 case "tq_dengtui":
-                    att = 0;
+                    abc = 0;
                     break;
                 case "tq_shaotui":
-                    att = 0;
+                    abc = 0;
                     break;
                 default:
                     break;
             }
-            return (att * mSX_LiLiang.gongjiJC(liling) + mSX_LiLiang.baojishanghai(liling) * mSX_ZhiLi.baojijilv(zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(zhili) - 0.05);
+            return (abc * mSX_LiLiang.gongjiJC(liling) + mSX_LiLiang.baojishanghai(liling) * mSX_ZhiLi.baojijilv(zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(zhili) - 0.05);
         };
 
 
         //外伤
         zzz.AttW = function (zs_name, liling) {
-            var att = 0;
+            var abc = 0;
             switch (String(zs_name)) {
                 case "tj_panda":
-                    att = 80;
+                    abc = 80;
                     break;
                 case "tj_tuishou":
-                    att = 20;
+                    abc = 20;
                     break;
                 case "tj_qingna":
-                    att = 0;
+                    abc = 0;
                     break;
                 case "tj_shuangfong":
-                    att = 150;
+                    abc = 150;
                     break;
                 case "tj_zhoudicui":
-                    att = 100;
+                    abc = 100;
                     break;
                 case "tj_paocui":
-                    att = 100;
+                    abc = 100;
                     break;
                 case "tj_yuanyangtui":
-                    att = 200;
+                    abc = 200;
                     break;
                 case "tj_banshuai":
-                    att = 0;
+                    abc = 0;
                     break;
                 case "tq_zhiquan":
-                    att = 100;
+                    abc = 100;
                     break;
                 case "tq_lrgouquan":
-                    att = 200;
+                    abc = 200;
                     break;
                 case "tq_sgouquan":
-                    att = 200;
+                    abc = 200;
                     break;
                 case "tq_zhouji":
-                    att = 300;
+                    abc = 300;
                     break;
                 case "tq_xizhuang":
-                    att = 250;
+                    abc = 250;
                     break;
                 case "tq_dengtui":
-                    att = 200;
+                    abc = 200;
                     break;
                 case "tq_shaotui":
-                    att = 300;
+                    abc = 300;
                     break;
                 default:
                     break;
             }
-            return (att * mSX_LiLiang.gongjiJC(liling));
+            return (abc * mSX_LiLiang.gongjiJC(liling));
         };
 
         //内伤
         zzz.AttN = function (zs_name, liling) {
-            var att = 0;
+            var abc = 0;
             switch (String(zs_name)) {
                 case "tj_panda":
-                    att = 0;
+                    abc = 0;
                     break;
                 case "tj_tuishou":
-                    att = 30;
+                    abc = 30;
                     break;
                 case "tj_qingna":
-                    att = 100;
+                    abc = 100;
                     break;
                 case "tj_shuangfong":
-                    att = 150;
+                    abc = 150;
                     break;
                 case "tj_zhoudicui":
-                    att = 120;
+                    abc = 120;
                     break;
                 case "tj_paocui":
-                    att = 200;
+                    abc = 200;
                     break;
                 case "tj_yuanyangtui":
-                    att = 0;
+                    abc = 0;
                     break;
                 case "tj_banshuai":
-                    att = 200;
+                    abc = 200;
                     break;
                 case "tq_zhiquan":
-                    att = 0;
+                    abc = 0;
                     break;
                 case "tq_lrgouquan":
-                    att = 0;
+                    abc = 0;
                     break;
                 case "tq_sgouquan":
-                    att = 0;
+                    abc = 0;
                     break;
                 case "tq_zhouji":
-                    att = 0;
+                    abc = 0;
                     break;
                 case "tq_xizhuang":
-                    att = 0;
+                    abc = 0;
                     break;
                 case "tq_dengtui":
-                    att = 0;
+                    abc = 0;
                     break;
                 case "tq_shaotui":
-                    att = 0;
+                    abc = 0;
                     break;
                 default:
                     break;
             }
-            return (att * mSX_LiLiang.gongjiJC(liling));
+            return (abc * mSX_LiLiang.gongjiJC(liling));
         };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         //前摇
         //todo not
         zzz.ATimeQ = function (zs_name, minjie) {
-            var att = 0;
+            var abc = 0;
             switch (String(zs_name)) {
                 case "tj_panda":
-                    att = 0;
+                    abc = 0.3;
                     break;
                 case "tj_tuishou":
-                    att = 30;
+                    abc = 0.3;
                     break;
                 case "tj_qingna":
-                    att = 100;
+                    abc = 0.3;
                     break;
                 case "tj_shuangfong":
-                    att = 150;
+                    abc = 0.5;
                     break;
                 case "tj_zhoudicui":
-                    att = 120;
+                    abc = 0.4;
                     break;
                 case "tj_paocui":
-                    att = 200;
+                    abc = 0.6;
                     break;
                 case "tj_yuanyangtui":
-                    att = 0;
+                    abc = 0.5;
                     break;
                 case "tj_banshuai":
-                    att = 200;
+                    abc = 0.4;
                     break;
                 case "tq_zhiquan":
-                    att = 0;
+                    abc = 0.2;
                     break;
                 case "tq_lrgouquan":
-                    att = 0;
+                    abc = 0.3;
                     break;
                 case "tq_sgouquan":
-                    att = 0;
+                    abc = 0.3;
                     break;
                 case "tq_zhouji":
-                    att = 0;
+                    abc = 0.3;
                     break;
                 case "tq_xizhuang":
-                    att = 0;
+                    abc = 0.4;
                     break;
                 case "tq_dengtui":
-                    att = 0;
+                    abc = 0.5;
                     break;
                 case "tq_shaotui":
-                    att = 0;
+                    abc = 0.5;
                     break;
                 default:
                     break;
             }
-            return (att * mSX_LiLiang.gongjiJC(liling) + mSX_LiLiang.baojishanghai(liling) * mSX_ZhiLi.baojijilv(zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(zhili) - 0.05);
+            return (abc + mSX_Minjie.shuduJC_Q(minjie));
         };
+
+
+        //招式时长
+        zzz.ATime = function (zs_name, minjie) {
+            var abc = 0;
+            switch (String(zs_name)) {
+                case "tj_panda":
+                    abc = 1;
+                    break;
+                case "tj_tuishou":
+                    abc = 1;
+                    break;
+                case "tj_qingna":
+                    abc = 1;
+                    break;
+                case "tj_shuangfong":
+                    abc = 1;
+                    break;
+                case "tj_zhoudicui":
+                    abc = 1;
+                    break;
+                case "tj_paocui":
+                    abc = 1;
+                    break;
+                case "tj_yuanyangtui":
+                    abc = 1;
+                    break;
+                case "tj_banshuai":
+                    abc = 1;
+                    break;
+                case "tq_zhiquan":
+                    abc = 1;
+                    break;
+                case "tq_lrgouquan":
+                    abc = 1;
+                    break;
+                case "tq_sgouquan":
+                    abc = 1;
+                    break;
+                case "tq_zhouji":
+                    abc = 1;
+                    break;
+                case "tq_xizhuang":
+                    abc = 1;
+                    break;
+                case "tq_dengtui":
+                    abc = 1;
+                    break;
+                case "tq_shaotui":
+                    abc = 1;
+                    break;
+                default:
+                    break;
+            }
+            return (abc + mSX_Minjie.shuduJC_Z(minjie));
+        };
+
+        //后摇
+        zzz.ATimeH = function (zs_name, minjie) {
+            var abc = 0;
+            switch (String(zs_name)) {
+                case "tj_panda":
+                    abc = 0.3;
+                    break;
+                case "tj_tuishou":
+                    abc = 0.3;
+                    break;
+                case "tj_qingna":
+                    abc = 0.3;
+                    break;
+                case "tj_shuangfong":
+                    abc = 0.5;
+                    break;
+                case "tj_zhoudicui":
+                    abc = 0.4;
+                    break;
+                case "tj_paocui":
+                    abc = 0.5;
+                    break;
+                case "tj_yuanyangtui":
+                    abc = 0.5;
+                    break;
+                case "tj_banshuai":
+                    abc = 0.4;
+                    break;
+                case "tq_zhiquan":
+                    abc = 0.2;
+                    break;
+                case "tq_lrgouquan":
+                    abc = 0.3;
+                    break;
+                case "tq_sgouquan":
+                    abc = 0.3;
+                    break;
+                case "tq_zhouji":
+                    abc = 0.3;
+                    break;
+                case "tq_xizhuang":
+                    abc = 0.3;
+                    break;
+                case "tq_dengtui":
+                    abc = 0.4;
+                    break;
+                case "tq_shaotui":
+                    abc = 0.5;
+                    break;
+                default:
+                    break;
+            }
+            return (abc + mSX_Minjie.shuduJC_H(minjie));
+        };
+
+        //命中率修正
+        zzz.Mzxz = function (zs_name, zhili) {
+            var abc = 0;
+            switch (String(zs_name)) {
+                case "tj_panda":
+                    abc = 0;
+                    break;
+                case "tj_tuishou":
+                    abc = 0;
+                    break;
+                case "tj_qingna":
+                    abc = 0;
+                    break;
+                case "tj_shuangfong":
+                    abc = -0.1;
+                    break;
+                case "tj_zhoudicui":
+                    abc = -0.05;
+                    break;
+                case "tj_paocui":
+                    abc = 0;
+                    break;
+                case "tj_yuanyangtui":
+                    abc = 0;
+                    break;
+                case "tj_banshuai":
+                    abc = -0.1;
+                    break;
+                case "tq_zhiquan":
+                    abc = 0;
+                    break;
+                case "tq_lrgouquan":
+                    abc = 0;
+                    break;
+                case "tq_sgouquan":
+                    abc = 0;
+                    break;
+                case "tq_zhouji":
+                    abc = -0.05;
+                    break;
+                case "tq_xizhuang":
+                    abc = -0.05;
+                    break;
+                case "tq_dengtui":
+                    abc = -0.05;
+                    break;
+                case "tq_shaotui":
+                    abc = -0.05;
+                    break;
+                default:
+                    break;
+            }
+            return (abc + mSX_ZhiLi.minzhongxz(zhili));
+        };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         return zzz;
     }

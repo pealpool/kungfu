@@ -1182,7 +1182,8 @@ $(document).ready(function () {
 
 		//todo 测试类
 		var zzss = ZhaoShi.createNew();
-		alert(Math.round(zzss.AttN_screen("tj_tuishou",SX_Liliang[0],SX_Zhili[0])));
+		//alert(Math.round(zzss.AttN_screen("tj_tuishou",SX_Liliang[0],SX_Zhili[0])));
+        alert(zzss.Mzxz("tj_zhoudicui",SX_Zhili[0]));
 	});
 
 	//选择攻击部位限制左右按钮
