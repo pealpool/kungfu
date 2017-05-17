@@ -154,7 +154,7 @@ var ZhaoShi = {
 
 
         //外伤
-        zzz.AttW = function (zs_name, liling) {
+        zzz.AttW = function (zs_name, liling, zhili) {
             var abc = 0;
             switch (String(zs_name)) {
                 case "tj_panda":
@@ -205,11 +205,16 @@ var ZhaoShi = {
                 default:
                     break;
             }
-            return (abc * mSX_LiLiang.gongjiJC(liling));
+            //[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
+            if(Math.floor(Math.random()*11) < mSX_ZhiLi.gongjifudongjilv(zhili)*10){
+                return (abc * mSX_LiLiang.gongjiJC(liling) * (1+ Math.floor(Math.random()*11)*0.01));
+            }else{
+                return (abc * mSX_LiLiang.gongjiJC(liling) * (1- Math.floor(Math.random()*11)*0.01));
+            }
         };
 
         //内伤
-        zzz.AttN = function (zs_name, liling) {
+        zzz.AttN = function (zs_name, liling, zhili) {
             var abc = 0;
             switch (String(zs_name)) {
                 case "tj_panda":
@@ -260,7 +265,11 @@ var ZhaoShi = {
                 default:
                     break;
             }
-            return (abc * mSX_LiLiang.gongjiJC(liling));
+            if(Math.floor(Math.random()*11) < mSX_ZhiLi.gongjifudongjilv(zhili)*10){
+                return (abc * mSX_LiLiang.gongjiJC(liling) * (1+ Math.floor(Math.random()*11)*0.01));
+            }else{
+                return (abc * mSX_LiLiang.gongjiJC(liling) * (1- Math.floor(Math.random()*11)*0.01));
+            }
         };
 
         //前摇
@@ -483,19 +492,6 @@ var ZhaoShi = {
             }
             return (abc + mSX_ZhiLi.minzhongxz(zhili));
         };
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         return zzz;
