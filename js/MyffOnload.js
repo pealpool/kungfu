@@ -384,7 +384,7 @@ $(document).ready(function () {
 						$("#NeiRongchoiceZSdaK").hide();
 						$("#chicoZhaoShiTianjiaK").empty();
 						zschushihua();
-						$("#StartButtomYuanKuang").removeClass("yuan_red").addClass("yuan_blue");
+						$("#StartButtomYuanKuang").removeClass("yuan_02").addClass("yuan_01");
 						$("#ZDwenbenWK").empty();
 					}
 				}
@@ -1112,7 +1112,7 @@ $(document).ready(function () {
 			i++;
 		});
 		AchoiceZS_bj = i - 1;
-		$("#StartButtomYuanKuang").removeClass("yuan_blue").addClass("yuan_red");
+		$("#StartButtomYuanKuang").removeClass("yuan_01").addClass("yuan_02");
 		$("#NeiRongchoiceZSdaK").hide("drop", {
 			direction: 'up'
 		}, 300);
@@ -3068,7 +3068,7 @@ $(document).ready(function () {
         });
         $("#chicoZhaoShiTianjiaK").empty();
         zschushihua();
-        $("#StartButtomYuanKuang").removeClass("yuan_red",300).addClass("yuan_blue",100);
+        $("#StartButtomYuanKuang").removeClass("yuan_02",300).addClass("yuan_01",100);
         izsxx = 0;
     });
 

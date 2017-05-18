@@ -112,7 +112,7 @@ body[class*=jconfirm-no-scroll-] {
 @-webkit-keyframes type-red {
   1%,
   100% {
-    border-color: #a50000;
+    border-color: #bb1c33;
   }
   50% {
     border-color: #d00000;
@@ -121,7 +121,7 @@ body[class*=jconfirm-no-scroll-] {
 @keyframes type-red {
   1%,
   100% {
-    border-color: #a50000;
+    border-color: #bb1c33;
   }
   50% {
     border-color: #d00000;
@@ -198,7 +198,7 @@ body[class*=jconfirm-no-scroll-] {
           animation-name: type-green;
 }
 .jconfirm .jconfirm-box.jconfirm-type-red {
-  border-top: solid 7px #a50000;
+  border-top: solid 7px #bb1c33;
   -webkit-animation-name: type-red;
           animation-name: type-red;
 }
@@ -382,7 +382,7 @@ body[class*=jconfirm-no-scroll-] {
   color: #FFF;
 }
 .jconfirm .jconfirm-box .jconfirm-buttons button.btn-red {
-  background-color: #a50000;
+  background-color: #bb1c33;
   color: #FFF;
   text-shadow: none;
   -webkit-transition: background .2s;

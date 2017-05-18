@@ -19,7 +19,7 @@ function ChangechoiceBG(ZhaoShi) {
             //shi02.innerHTML = "借力打力，化解冲击力。";
             $("#shi_02").html("借力打力，化解冲击力。");
             //hrhr.setAttribute("href", "./css/cssTaiji.css");
-            $(".shi_hr").css("border-bottom", "1px solid #4388bb");
+            $(".shi_hr").css("border-bottom", "1px solid #003179");
             //$("#choiceShuxinZhongKuangR").removeClass().addClass("choiceShuxinZhongKuangR Kuang10 cPBTaiji1");
             $("#choiceShuxinZhongKuangR").attr("class", "choiceShuxinZhongKuangR Kuang10 cPBTaiji1");
             break;
@@ -33,7 +33,7 @@ function ChangechoiceBG(ZhaoShi) {
             //shi02.innerHTML = "并具有高抗打能力。";
             $("#shi_02").html("并具有高抗打能力。");
             //hrhr.setAttribute("href", "./css/cssTaiquan.css");
-            $(".shi_hr").css("border-bottom", "1px solid #a50000");
+            $(".shi_hr").css("border-bottom", "1px solid #bb1c33");
             //$("#choiceShuxinZhongKuangR").removeClass().addClass("choiceShuxinZhongKuangR Kuang10 cPBTaiquan1");
             $("#choiceShuxinZhongKuangR").attr("class", "choiceShuxinZhongKuangR Kuang10 cPBTaiquan1");
             break;
@@ -44,7 +44,7 @@ function ChangechoiceBG(ZhaoShi) {
 function choicePB_h() {
     switch (PaiBei_A) {
         case "Taiji":
-            document.getElementById("choiceZhaoshishiXiaoKuang_Taiji").style.backgroundColor = "#8ec4ec";
+            document.getElementById("choiceZhaoshishiXiaoKuang_Taiji").style.backgroundColor = "#e2eaf7";
             document.getElementById("choiceZhaoshishiXiaoKuang_Taiquan").style.backgroundColor = "#fff";
             document.getElementById("ZhaoshiMinXiao").setAttribute("class", "ZhaoshiMinXiao Kuang10 ZsMX_Taiji");
             $("#ZhaoshiMinXiao").html("太<br />极");
@@ -686,7 +686,7 @@ function ChuShiHua() {
     switch (PaiBei_A) {
         case "Taiji":
             $("#TuKuangTitle_paibie").html("太极");
-            $("#TuKuangTitle_paibie").css("color", "#4388bb");
+            $("#TuKuangTitle_paibie").css("color", "#003179");
             window.i_tj_panda = 1;
             window.i_tj_tuishou = 1;
             window.i_tj_qingna = 1;
@@ -698,7 +698,7 @@ function ChuShiHua() {
             break;
         case "Taiquan":
             $("#TuKuangTitle_paibie").html("泰拳");
-            $("#TuKuangTitle_paibie").css("color", "#a50000");
+            $("#TuKuangTitle_paibie").css("color", "#bb1c33");
             window.i_tq_zhiquan = 1;
             window.i_tq_lrgouquan = 1;
             window.i_tq_sgouquan = 1;
@@ -1279,11 +1279,11 @@ function shuijiPaibei() {
     if (Math.floor(Math.random() * 2)) {
         PaiBei_B = "Taiji";
         $("#TuKuangTitle_He_paibie").html("太极");
-        $("#TuKuangTitle_He_paibie").css("color", "#4388bb");
+        $("#TuKuangTitle_He_paibie").css("color", "#003179");
     } else {
         PaiBei_B = "Taiquan";
         $("#TuKuangTitle_He_paibie").html("泰拳");
-        $("#TuKuangTitle_He_paibie").css("color", "#a50000");
+        $("#TuKuangTitle_He_paibie").css("color", "#bb1c33");
     }
 }
 
