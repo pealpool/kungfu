@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb5e816f-4d1b-427d-8b73-abc6c84978cd" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/MyffOnload.js" afterPath="$PROJECT_DIR$/js/MyffOnload.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ZhaoShi.js" afterPath="$PROJECT_DIR$/js/ZhaoShi.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/buttonScript.js" afterPath="$PROJECT_DIR$/js/buttonScript.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,71 +19,99 @@
     <favorites_list name="pealpool.github.io" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2641">
-              <caret line="139" column="8" lean-forward="false" selection-start-line="139" selection-start-column="8" selection-end-line="139" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="buttonScript.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="1891" column="22" lean-forward="true" selection-start-line="1891" selection-start-column="22" selection-end-line="1891" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyffOnload.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/MyffOnload.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1040" column="6" lean-forward="false" selection-start-line="1040" selection-start-column="6" selection-end-line="1040" selection-end-column="6" />
-              <folding>
-                <marker date="1494991311721" expanded="true" signature="1510:1527" ph="..." />
-                <marker date="1494991311721" expanded="true" signature="3684:3732" ph="..." />
-                <marker date="1494991311721" expanded="true" signature="3829:3840" ph="..." />
-                <marker date="1494991311721" expanded="true" signature="4495:4543" ph="..." />
-                <marker date="1494991311721" expanded="true" signature="4641:4658" ph="..." />
-                <marker date="1494991311721" expanded="true" signature="6600:6648" ph="..." />
-                <marker date="1494991311721" expanded="true" signature="7988:8005" ph="..." />
-                <marker date="1494991311721" expanded="true" signature="10166:10214" ph="..." />
-                <marker date="1494991311721" expanded="true" signature="10313:10324" ph="..." />
-                <marker date="1494991311721" expanded="true" signature="10981:11029" ph="..." />
-                <marker date="1494991311721" expanded="true" signature="11129:11146" ph="..." />
-                <marker date="1494991311721" expanded="true" signature="13090:13138" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ZhaoShi.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/ZhaoShi.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="206" column="13" lean-forward="false" selection-start-line="206" selection-start-column="13" selection-end-line="206" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShuX.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/ShuX.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="50" column="8" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.4857143">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="buttonScript.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="570">
+                  <caret line="1907" column="48" lean-forward="true" selection-start-line="1907" selection-start-column="48" selection-end-line="1907" selection-end-column="48" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MyffOnload.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/MyffOnload.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="19">
+                  <caret line="1040" column="6" lean-forward="false" selection-start-line="1040" selection-start-column="6" selection-end-line="1040" selection-end-column="6" />
+                  <folding>
+                    <marker date="1494991311721" expanded="true" signature="1510:1527" ph="..." />
+                    <marker date="1494991311721" expanded="true" signature="3684:3732" ph="..." />
+                    <marker date="1494991311721" expanded="true" signature="3829:3840" ph="..." />
+                    <marker date="1494991311721" expanded="true" signature="4495:4543" ph="..." />
+                    <marker date="1494991311721" expanded="true" signature="4641:4658" ph="..." />
+                    <marker date="1494991311721" expanded="true" signature="6600:6648" ph="..." />
+                    <marker date="1494991311721" expanded="true" signature="7988:8005" ph="..." />
+                    <marker date="1494991311721" expanded="true" signature="10166:10214" ph="..." />
+                    <marker date="1494991311721" expanded="true" signature="10313:10324" ph="..." />
+                    <marker date="1494991311721" expanded="true" signature="10981:11029" ph="..." />
+                    <marker date="1494991311721" expanded="true" signature="11129:11146" ph="..." />
+                    <marker date="1494991311721" expanded="true" signature="13090:13138" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ShuX.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/ShuX.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1007">
+                  <caret line="54" column="23" lean-forward="true" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="PB_Taiji.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/PB_Taiji.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="19">
+                  <caret line="393" column="19" lean-forward="false" selection-start-line="393" selection-start-column="8" selection-end-line="393" selection-end-column="19" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="PB_Taiquan.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/PB_Taiquan.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="19">
+                  <caret line="297" column="14" lean-forward="false" selection-start-line="297" selection-start-column="14" selection-end-line="297" selection-end-column="14" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="PB_All.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/js/PB_All.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-57">
+                  <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="ZhaoShi.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/js/ZhaoShi.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-4883">
+                  <caret line="212" column="13" lean-forward="true" selection-start-line="212" selection-start-column="13" selection-end-line="212" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -221,7 +245,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -251,6 +274,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -391,11 +415,13 @@
       <workItem from="1494982335836" duration="281000" />
       <workItem from="1494986526453" duration="3641000" />
       <workItem from="1494996023818" duration="10881000" />
+      <workItem from="1495071912899" duration="147000" />
+      <workItem from="1495072126625" duration="1710000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105086000" />
+    <option name="totallyTimeSpent" value="106943000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -410,7 +436,7 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11485775" sideWeight="0.50858366" order="2" side_tool="true" content_ui="combo" x="206" y="72" width="474" height="932" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11485775" sideWeight="0.50858366" order="2" side_tool="true" content_ui="combo" x="206" y="72" width="474" height="932" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21781115" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879582" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -903,30 +929,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/PB_All.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/PB_Taiji.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="393" column="19" lean-forward="false" selection-start-line="393" selection-start-column="8" selection-end-line="393" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/PB_Taiquan.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="297" column="14" lean-forward="false" selection-start-line="297" selection-start-column="14" selection-end-line="297" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2641">
+        <state relative-caret-position="19">
           <caret line="139" column="8" lean-forward="false" selection-start-line="139" selection-start-column="8" selection-end-line="139" selection-end-column="8" />
           <folding />
         </state>
@@ -953,26 +958,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/ShuX.js">
+    <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="50" column="8" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
+        <state relative-caret-position="570">
+          <caret line="1907" column="48" lean-forward="true" selection-start-line="1907" selection-start-column="48" selection-end-line="1907" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/ZhaoShi.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="206" column="13" lean-forward="false" selection-start-line="206" selection-start-column="13" selection-end-line="206" selection-end-column="13" />
+        <state relative-caret-position="-4883">
+          <caret line="212" column="13" lean-forward="true" selection-start-line="212" selection-start-column="13" selection-end-line="212" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
+    <entry file="file://$PROJECT_DIR$/js/ShuX.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="1891" column="22" lean-forward="true" selection-start-line="1891" selection-start-column="22" selection-end-line="1891" selection-end-column="22" />
+        <state relative-caret-position="1007">
+          <caret line="54" column="23" lean-forward="true" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/PB_Taiji.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="393" column="19" lean-forward="false" selection-start-line="393" selection-start-column="8" selection-end-line="393" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/PB_Taiquan.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="297" column="14" lean-forward="false" selection-start-line="297" selection-start-column="14" selection-end-line="297" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/PB_All.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
           <folding />
         </state>
       </provider>
