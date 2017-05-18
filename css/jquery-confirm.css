@@ -389,7 +389,7 @@ body[class*=jconfirm-no-scroll-] {
           transition: background .2s;
 }
 .jconfirm .jconfirm-box .jconfirm-buttons button.btn-red:hover {
-  background-color: #ce0000;
+  background-color: #bb4858;
   color: #FFF;
 }
 .jconfirm .jconfirm-box .jconfirm-buttons button.btn-orange {
