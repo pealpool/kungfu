@@ -1135,11 +1135,15 @@ html, body {
 }
 
 .StartButtomDaKuang {
+    position: relative;
     float: left;
     width: 250px;
 }
 
+/*todo css*/
 .StartButtomYuanKuang {
+    position: relative;
+    z-index: 10;
     float: left;
     width: 100px;
     height: 100px;
@@ -1219,7 +1223,7 @@ html, body {
     width: 500px;
     height: 600px;
     margin: 8px;
-    z-index: 4;
+    z-index: 40;
     position: absolute;
     margin-top: -133px;
     border-radius: 5px;
@@ -1723,3 +1727,36 @@ html, body {
     margin-top: 20px;
     overflow: hidden;
 }
+
+/*.Banyuan_KD_l {*/
+    /*position: absolute;*/
+    /*width: 150px;*/
+    /*height: 150px;*/
+    /*top: -30px;*/
+    /*!*left: 0px;*!*/
+    /*border-radius: 50%;*/
+    /*transform: rotate(30deg);*/
+    /*clip: rect(0, 140px, auto, 0);*/
+/*}*/
+
+.Banyuan_KX_l {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: -9px;
+    left: 65px;
+    background: #a0a0a0;
+    border-radius: 50%;
+    transform: rotate(-60deg);
+    clip: rect(0, 75px, auto, 0);
+}
+
+/*.Banyuan_mask{*/
+    /*position: absolute;*/
+    /*width: 120px;*/
+    /*height: 120px;*/
+    /*border-radius: 50%;*/
+    /*left: 80px;*/
+    /*top: 8px;*/
+    /*background: #FFF;*/
+/*}*/
