@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <style>
+        .circle {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            border-radius: 50%;
+            background: #0cc;
+            transform: rotate(-60deg);
+            clip: rect(0, 100px, auto, 0);
+        }
+
+        .circleWK {
+            width: 200px;
+            height: 200px;
+            top: 0;
+            left: 0;
+            position: absolute;
+            border-radius: 50%;
+            transform: rotate(30deg);
+            clip: rect(0, 100px, auto, 0);
+        }
+
+        .pie_left, .pie_right {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .pie_right, .right {
+            clip: rect(0, auto, auto, 100px);
+        }
+
+        .left0 {
+            clip: rect(0, 100px, auto, 0);
+        }
+
+        .mask {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            left: 25px;
+            top: 25px;
+            background: #FFF;
+            position: absolute;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="circleWK">
+    <div class="circle"></div>
+</div>
+<div class="mask"></div>
+
+</body>
+</html>

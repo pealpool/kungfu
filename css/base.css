@@ -216,7 +216,7 @@ html, body {
 }
 
 #choiceZhaoshishiXiaoKuang_Taiquan:active {
-    background-color: #eb8d8d;
+    background-color: #f7e2e8;
 }
 
 .choiceZhaoshishiXiaoKuang_QIdai {
@@ -757,6 +757,8 @@ html, body {
     text-align: left;
     padding-left: 8px;
     font-size: 14px;
+    color: #bb1c33;
+    /*font-weight: 500;*/
 }
 
 .zhaoshiLB3 {
