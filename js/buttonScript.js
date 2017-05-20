@@ -2040,30 +2040,22 @@ function Shuanghaijisuan() {
 
 //圆环值刷新
 function yuanhuanPH() {
-    var a = 0;
     if (mSX_Pinheng.wendinzhi(SX_Pinheng[0]) > mSX_Pinheng.wendinzhi(SX_Pinheng[1])) {
         $("#Banyuan_KX_xl").css("transform", "rotate(-80deg)");
-        a = Math.round(179 - (179 - 80) / mSX_Pinheng.wendinzhi(SX_Pinheng[0]) * HpB.pinheng);
         $("#Banyuan_KX_xr").css("transform", "rotate(" + Math.round(179 - (179 - 80) / mSX_Pinheng.wendinzhi(SX_Pinheng[0]) * HpB.pinheng) + "deg)");
     } else {
         $("#Banyuan_KX_xr").css("transform", "rotate(80deg)");
-        a = Math.round(-50 + 100 / mSX_Pinheng.wendinzhi(SX_Pinheng[1]) * HpA.pinheng);
         $("#Banyuan_KX_xl").css("transform", "rotate(" + Math.round(-179 + (179 - 80) / mSX_Pinheng.wendinzhi(SX_Pinheng[1]) * HpA.pinheng) + "deg)");
     }
-    //alert(HpA.pinheng+","+HpB.pinheng+","+a);
 }
 
-//todo 圆环标志刷新
+//圆环标志刷新
 function yuanhuanBZ() {
-    var a = 0;
     if (mSX_Pinheng.wendinzhi(SX_Pinheng[0]) > mSX_Pinheng.wendinzhi(SX_Pinheng[1])) {
-        $("#Banyuan_line_l").css("transform", "rotate(-80deg)");
-        a = Math.round(179 - (179 - 80) / mSX_Pinheng.wendinzhi(SX_Pinheng[0]) * HpB.pinheng);
-        $("#Banyuan_line_r").css("transform", "rotate(" + Math.round(179 - (179 - 80) / mSX_Pinheng.wendinzhi(SX_Pinheng[0]) * HpB.pinheng) + "deg)");
+        $("#Banyuan_line_l").css("transform", "rotate(50deg)");
+        $("#Banyuan_line_r").css("transform", "rotate(" + Math.round(50 - 100 / mSX_Pinheng.wendinzhi(SX_Pinheng[0]) * mSX_Pinheng.wendinzhi(SX_Pinheng[1])) + "deg)");
     } else {
-        $("#Banyuan_line_r").css("transform", "rotate(80deg)");
-        a = Math.round(-50 + 100 / mSX_Pinheng.wendinzhi(SX_Pinheng[1]) * HpA.pinheng);
-        $("#Banyuan_line_l").css("transform", "rotate(" + Math.round(-179 + (179 - 80) / mSX_Pinheng.wendinzhi(SX_Pinheng[1]) * HpA.pinheng) + "deg)");
+        $("#Banyuan_line_r").css("transform", "rotate(-50deg)");
+        $("#Banyuan_line_l").css("transform", "rotate(" + Math.round(-50 + 100 / mSX_Pinheng.wendinzhi(SX_Pinheng[1]) * mSX_Pinheng.wendinzhi(SX_Pinheng[0])) + "deg)");
     }
-    //alert(HpA.pinheng+","+HpB.pinheng+","+a);
 }
