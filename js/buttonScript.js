@@ -106,7 +106,7 @@ function choicePB_h() {
             break;
     }
     document.getElementById("choiceJinDuLan_XZpaibei").setAttribute("class", "choiceJinDuLanButtom grayButtom");
-    document.getElementById("choiceJinDuLan_XZshuxin").setAttribute("class", "choiceJinDuLanButtom myred");
+    document.getElementById("choiceJinDuLan_XZshuxin").setAttribute("class", "choiceJinDuLanButtom myblack");
     XZbottom = 1;
     ChangechoiceBG(PaiBei_A);
     BDgl_Liliang();
@@ -155,7 +155,7 @@ function XZbottomFF(Bu) {
             //document.getElementById("choiceZhaoshiDaKuang").style.display = "inline";
             //document.getElementById("choiceShuxinDaKuang").style.display = "none";
             $("#choiceShuxinDaKuang").hide("fade", 300, DaKuangHtS_sp);
-            document.getElementById("choiceJinDuLan_XZpaibei").setAttribute("class", "choiceJinDuLanButtom myred");
+            document.getElementById("choiceJinDuLan_XZpaibei").setAttribute("class", "choiceJinDuLanButtom myblack");
             document.getElementById("choiceJinDuLan_XZshuxin").setAttribute("class", "choiceJinDuLanButtom grayButtom");
             XZbottom = 0;
         }
@@ -469,6 +469,7 @@ function SXtiaozheng(shuxin, a) {
                 if (SX_Liliang[0] > 0) {
                     SX_Liliang[0]--;
                     SX_Sum[0]++;
+                    $("#beepone101")[0].play();
                     BDgl_Liliang();
                 }
                 break;
@@ -476,6 +477,7 @@ function SXtiaozheng(shuxin, a) {
                 if (SX_Minjie[0] > 0) {
                     SX_Minjie[0]--;
                     SX_Sum[0]++;
+                    $("#beepone101")[0].play();
                     BDgl_Minjie();
                 }
                 break;
@@ -483,6 +485,7 @@ function SXtiaozheng(shuxin, a) {
                 if (SX_Zhili[0] > 0) {
                     SX_Zhili[0]--;
                     SX_Sum[0]++;
+                    $("#beepone101")[0].play();
                     BDgl_Zhili();
                 }
                 break;
@@ -490,6 +493,7 @@ function SXtiaozheng(shuxin, a) {
                 if (SX_Tizhi[0] > 0) {
                     SX_Tizhi[0]--;
                     SX_Sum[0]++;
+                    $("#beepone101")[0].play();
                     BDgl_Tizhi();
                 }
                 break;
@@ -497,6 +501,7 @@ function SXtiaozheng(shuxin, a) {
                 if (SX_Pinheng[0] > 0) {
                     SX_Pinheng[0]--;
                     SX_Sum[0]++;
+                    $("#beepone101")[0].play();
                     BDgl_Pinheng();
                 }
                 break;
@@ -507,6 +512,7 @@ function SXtiaozheng(shuxin, a) {
                 if (SX_Sum[0] > 0 && SX_Liliang[0] < 5) {
                     SX_Liliang[0]++;
                     SX_Sum[0]--;
+                    $("#beepone101")[0].play();
                     BDgl_Liliang();
                 }
                 break;
@@ -514,6 +520,7 @@ function SXtiaozheng(shuxin, a) {
                 if (SX_Minjie[0] < 5 && SX_Sum[0] > 0) {
                     SX_Minjie[0]++;
                     SX_Sum[0]--;
+                    $("#beepone101")[0].play();
                     BDgl_Minjie();
                 }
                 break;
@@ -521,6 +528,7 @@ function SXtiaozheng(shuxin, a) {
                 if (SX_Zhili[0] < 5 && SX_Sum[0] > 0) {
                     SX_Zhili[0]++;
                     SX_Sum[0]--;
+                    $("#beepone101")[0].play();
                     BDgl_Zhili();
                 }
                 break;
@@ -528,6 +536,7 @@ function SXtiaozheng(shuxin, a) {
                 if (SX_Tizhi[0] < 5 && SX_Sum[0] > 0) {
                     SX_Tizhi[0]++;
                     SX_Sum[0]--;
+                    $("#beepone101")[0].play();
                     BDgl_Tizhi();
                 }
                 break;
@@ -535,6 +544,7 @@ function SXtiaozheng(shuxin, a) {
                 if (SX_Pinheng[0] < 3 && SX_Sum[0] > 0) {
                     SX_Pinheng[0]++;
                     SX_Sum[0]--;
+                    $("#beepone101")[0].play();
                     BDgl_Pinheng();
                 }
                 break;
