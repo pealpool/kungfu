@@ -39,6 +39,33 @@ var Hp = {
 		hp.xiaotuiR = 800;
 		hp.huaiL = 280;
 		hp.huaiR = 280;
+		hp.pinheng = 0;
+		//hp重置
+        hp.resetHP = function () {
+            hp.tou = 500;
+            hp.xiong = 900;
+            hp.fu = 700;
+            hp.yaoL = 610;
+            hp.yaoR = 610;
+            hp.jianL = 400;
+            hp.jianR = 400;
+            hp.shangbiL = 900;
+            hp.shangbiR = 900;
+            hp.zhouL = 310;
+            hp.zhouR = 310;
+            hp.qianbiL = 610;
+            hp.qianbiR = 610;
+            hp.shouwanL = 280;
+            hp.shouwanR = 280;
+            hp.datuiL = 1000;
+            hp.datuiR = 1000;
+            hp.xiL = 310;
+            hp.xiR = 310;
+            hp.xiaotuiL = 800;
+            hp.xiaotuiR = 800;
+            hp.huaiL = 280;
+            hp.huaiR = 280;
+        };
 		//判断挂了没。 0：正常； 1：头hp零失去意识； 2：胸或腹hp零或总hp低于一半，重伤。
 		hp.dead = function () {
 			var sumHp = hp.tou + hp.xiong + hp.fu + hp.yaoL + hp.yaoR + hp.jianL + hp.jianR + hp.shangbiL + hp.shangbiR + hp.qianbiL + hp.qianbiR + hp.zhouL + hp.zhouR + hp.shouwanL + hp.shouwanR + hp.datuiL + hp.datuiR + hp.xiaotuiL + hp.xiaotuiR + hp.xiL + hp.xiR + hp.huaiL + hp.huaiR;

@@ -401,7 +401,8 @@ $(document).ready(function () {
                         $("#baseKuang").addClass("blur");
                         $("#NeiRongchoiceZSdaK").hide();
                         $("#chicoZhaoShiTianjiaK").empty();
-                        zschushihua();
+                        //zschushihua();
+                        ChuShiHua();
                         $("#StartButtomYuanKuang").removeClass("yuan_02").addClass("yuan_01");
                         $("#ZDwenbenWK").empty();
                     }
@@ -707,7 +708,8 @@ $(document).ready(function () {
                 $(this).remove(); //then remove from the DOM;
             });
         });
-        zschushihua();
+        //zschushihua();
+        ChuShiHua();
     });
 
 
@@ -3070,7 +3072,8 @@ $(document).ready(function () {
             });
         });
         $("#chicoZhaoShiTianjiaK").empty();
-        zschushihua();
+        //zschushihua();
+        ChuShiHua();
         $("#StartButtomYuanKuang").removeClass("yuan_02", 300).addClass("yuan_01", 100);
         izsxx = 0;
     });

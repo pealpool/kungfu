@@ -641,6 +641,10 @@ function choiceQianqiWanCheng() {
                     btnClass: 'btn-red',
                     action: function () {
                         Bshuxingchushihua();
+                        $("#choiceBigKuang").hide("fade", 300);
+                        $("#aaamask").hide("fade", 300);
+                        $("#baseKuang").removeClass("blur");
+                        Shuxingshuaxin_B();
                         ChuShiHua();
                     }
                 }
@@ -648,22 +652,21 @@ function choiceQianqiWanCheng() {
         });
     } else {
         Bshuxingchushihua();
+        $("#choiceBigKuang").hide("fade", 300);
+        $("#aaamask").hide("fade", 300);
+        $("#baseKuang").removeClass("blur");
+        Shuxingshuaxin_B();
         ChuShiHua();
     }
 }
 
-//选择派别属性完成，初始化第二页
+//todo 选择派别属性完成，初始化第二页
 function ChuShiHua() {
-    $("#choiceBigKuang").hide("fade", 300);
-    $("#aaamask").hide("fade", 300);
-    $("#baseKuang").removeClass("blur");
-
     $("#TuKuang_A_Liliang").html("力量：" + SX_Liliang[0]);
     $("#TuKuang_A_Minjie").html("敏捷：" + SX_Minjie[0]);
     $("#TuKuang_A_Zhili").html("智力：" + SX_Zhili[0]);
     $("#TuKuang_A_Tizhi").html("体质：" + SX_Tizhi[0]);
     $("#TuKuang_A_Pinheng").html("平衡：" + SX_Pinheng[0]);
-
     $("#TuchuKuang_A_gongjiJC").html(Add_zh(Math.round((mSX_LiLiang.gongjiJC(SX_Liliang[0]) - 1) * 100)) + "%");
     $("#TuchuKuang_A_baojishanghai").html(Add_zh(Math.round((mSX_LiLiang.baojishanghai(SX_Liliang[0]) - 1) * 100)) + "%");
     $("#TuchuKuang_A_shudu").html(SX_Minjie[0]);
@@ -679,20 +682,14 @@ function ChuShiHua() {
     $("#TuchuKuang_A_wendinzhi").html(mSX_Pinheng.wendinzhi(SX_Pinheng[0]));
     $("#TuchuKuang_A_wendinhuifu").html(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]));
 
-    Shuxingshuaxin_B();
-
     HPchongzhi();
     //属性关联弹出标记
     window.sxTanChu_A = 0;
     window.sxTanChu_B = 0;
-
     window.i_AyixuanZS = 1; //已选择招式 计数
     window.AyxZStime = 7.5; //已选招式剩余时间
-
     window.mymyname = $("#My_name").text();
-
     window.izsxx = 0; //大圆按钮标记
-
     switch (PaiBei_A) {
         case "Taiji":
             $("#TuKuangTitle_paibie").html("太极");
@@ -718,12 +715,29 @@ function ChuShiHua() {
             window.i_tq_shaotui = 1;
             break;
     }
+    AchoiceZS[0].zs_name = "";
+    AchoiceZS[1].zs_name = "";
+    AchoiceZS[2].zs_name = "";
+    AchoiceZS[3].zs_name = "";
+    AchoiceZS[4].zs_name = "";
+    AchoiceZS[5].zs_name = "";
+    shanchuZShou();
+    AchoiceZS[0].ATimeH = 0;
+    BchoiceZS[0].ATimeH = 0;
+    fig_a = 1;
+    fig_b = 1;
+    fig_xix = 0;
+    HpA.pinheng = mSX_Pinheng.wendinzhi(SX_Pinheng[0]);
+    HpB.pinheng = mSX_Pinheng.wendinzhi(SX_Pinheng[1]);
+    yuanhuanBZ();
+    yuanhuanPH();
 }
 
 //HP重置
 function HPchongzhi() {
     var HpX = Hp.createNew();
-
+    HpA.resetHP();
+    HpB.resetHP();
     $("#Hp_A_tou").html(HpA.tou);
     $("#Hp_A_xiong").html(HpA.xiong);
     $("#Hp_A_fu").html(HpA.fu);
@@ -1118,46 +1132,6 @@ function jiahuitime(zsName) {
 //剩余时间显示
 function xuanshisyTime() {
     $("#xuanZSsyTime").html(AyxZStime.toFixed(1));
-}
-
-//已选招式初始化
-function zschushihua() {
-    i_AyixuanZS = 1;
-    switch (PaiBei_A) {
-        case "Taiji":
-            i_tj_panda = 1;
-            i_tj_tuishou = 1;
-            i_tj_qingna = 1;
-            i_tj_shuangfong = 1;
-            i_tj_zhoudicui = 1;
-            i_tj_paocui = 1;
-            i_tj_yuanyangtui = 1;
-            i_tj_banshuai = 1;
-            break;
-        case "Taiquan":
-            i_tq_zhiquan = 1;
-            i_tq_lrgouquan = 1;
-            i_tq_sgouquan = 1;
-            i_tq_zhouji = 1;
-            i_tq_xizhuang = 1;
-            i_tq_dengtui = 1;
-            i_tq_shaotui = 1;
-            break;
-    }
-    AchoiceZS[0].zs_name = "";
-    AchoiceZS[1].zs_name = "";
-    AchoiceZS[2].zs_name = "";
-    AchoiceZS[3].zs_name = "";
-    AchoiceZS[4].zs_name = "";
-    AchoiceZS[5].zs_name = "";
-    AchoiceZS_bj = 1;
-    AyxZStime = 7.5;
-    shanchuZShou();
-    AchoiceZS[0].ATimeH = 0;
-    BchoiceZS[0].ATimeH = 0;
-    fig_a = 1;
-    fig_b = 1;
-    fig_xix = 0;
 }
 
 
@@ -2062,4 +2036,34 @@ function Shuanghaijisuan() {
         }
     }
     $("#ZDwenbenWK").scrollTop($("#ZDwenbenWK")[0].scrollHeight);
+}
+
+//圆环值刷新
+function yuanhuanPH() {
+    var a = 0;
+    if (mSX_Pinheng.wendinzhi(SX_Pinheng[0]) > mSX_Pinheng.wendinzhi(SX_Pinheng[1])) {
+        $("#Banyuan_KX_xl").css("transform", "rotate(-80deg)");
+        a = Math.round(179 - (179 - 80) / mSX_Pinheng.wendinzhi(SX_Pinheng[0]) * HpB.pinheng);
+        $("#Banyuan_KX_xr").css("transform", "rotate(" + Math.round(179 - (179 - 80) / mSX_Pinheng.wendinzhi(SX_Pinheng[0]) * HpB.pinheng) + "deg)");
+    } else {
+        $("#Banyuan_KX_xr").css("transform", "rotate(80deg)");
+        a = Math.round(-50 + 100 / mSX_Pinheng.wendinzhi(SX_Pinheng[1]) * HpA.pinheng);
+        $("#Banyuan_KX_xl").css("transform", "rotate(" + Math.round(-179 + (179 - 80) / mSX_Pinheng.wendinzhi(SX_Pinheng[1]) * HpA.pinheng) + "deg)");
+    }
+    //alert(HpA.pinheng+","+HpB.pinheng+","+a);
+}
+
+//todo 圆环标志刷新
+function yuanhuanBZ() {
+    var a = 0;
+    if (mSX_Pinheng.wendinzhi(SX_Pinheng[0]) > mSX_Pinheng.wendinzhi(SX_Pinheng[1])) {
+        $("#Banyuan_line_l").css("transform", "rotate(-80deg)");
+        a = Math.round(179 - (179 - 80) / mSX_Pinheng.wendinzhi(SX_Pinheng[0]) * HpB.pinheng);
+        $("#Banyuan_line_r").css("transform", "rotate(" + Math.round(179 - (179 - 80) / mSX_Pinheng.wendinzhi(SX_Pinheng[0]) * HpB.pinheng) + "deg)");
+    } else {
+        $("#Banyuan_line_r").css("transform", "rotate(80deg)");
+        a = Math.round(-50 + 100 / mSX_Pinheng.wendinzhi(SX_Pinheng[1]) * HpA.pinheng);
+        $("#Banyuan_line_l").css("transform", "rotate(" + Math.round(-179 + (179 - 80) / mSX_Pinheng.wendinzhi(SX_Pinheng[1]) * HpA.pinheng) + "deg)");
+    }
+    //alert(HpA.pinheng+","+HpB.pinheng+","+a);
 }

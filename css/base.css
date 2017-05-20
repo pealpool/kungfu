@@ -1148,7 +1148,6 @@ html, body {
 	top: 3px;
 }
 
-/*todo css*/
 .StartButtomYuanKuang {
     position: relative;
     z-index: 20;
@@ -1749,6 +1748,19 @@ html, body {
     clip: rect(0, 70px, auto, 0);
 }
 
+.Banyuan_KD_xl {
+    position: absolute;
+	z-index: 5;
+    width: 140px;
+    height: 140px;
+    top: -3px;
+    left: 70px;
+    border-radius: 50%;
+	transform-origin:center;
+    transform: rotate(40deg);
+    clip: rect(0, 70px, auto, 0);
+}
+
 .Banyuan_KX_l {
     position: absolute;
     width: 140px;
@@ -1759,8 +1771,29 @@ html, body {
     transform: rotate(-80deg);
     clip: rect(0, 70px, auto, 0);
 }
-
+.Banyuan_KX_xl {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: #252525;
+    border-radius: 50%;
+	transform-origin:center;
+    /*transform: rotate(-80deg);*/
+    clip: rect(0, 70px, auto, 0);
+}
 .Banyuan_KD_r {
+    position: absolute;
+	z-index: 5;
+    width: 140px;
+    height: 140px;
+    top: -3px;
+    left: 70px;
+    border-radius: 50%;
+	transform-origin:center;
+    transform: rotate(-40deg);
+    clip: rect(0, auto, auto, 70px);
+}
+.Banyuan_KD_xr {
     position: absolute;
 	z-index: 5;
     width: 140px;
@@ -1783,6 +1816,16 @@ html, body {
     transform: rotate(80deg);
     clip: rect(0, auto, auto, 70px);
 }
+.Banyuan_KX_xr {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: #252525;
+    border-radius: 50%;
+	transform-origin:center;
+    /*transform: rotate(100deg);*/
+    clip: rect(0, auto, auto, 70px);
+}
 
 .Banyuan_mask{
     position: absolute;
@@ -1802,9 +1845,8 @@ html, body {
 	top: 66px;
 	left: 65px;
 	background: #a0a0a0;
-/*	background: #ff0000;*/
 	transform-origin:right;
-    transform: rotate(48deg);
+    /*transform: rotate(48deg);*/
 }
 .Banyuan_line_r {
     position: absolute;
@@ -1814,7 +1856,6 @@ html, body {
 	top: 66px;
 	left: 140px;
 	background: #a0a0a0;
-/*	background: #ff0000;*/
 	transform-origin:left;
-    transform: rotate(-28deg);
+    /*transform: rotate(-28deg);*/
 }
