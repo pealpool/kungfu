@@ -1155,6 +1155,9 @@ function zschushihua() {
     shanchuZShou();
     AchoiceZS[0].ATimeH = 0;
     BchoiceZS[0].ATimeH = 0;
+    fig_a = 1;
+    fig_b = 1;
+    fig_xix = 0;
 }
 
 
@@ -2000,31 +2003,18 @@ function ChoiceFirst(a, b) {
 //战斗总框架
 //todo fighting
 function fighting() {
-    //a为A第几招数组序号,b为B第几招数组序号
-    var a = 1;
-    var b = 1;
-    var xix = 0;
-    //var i = 0;
-    // for (var i = 1; i <= AchoiceZS_bj; i++) {
-    //     duruZSshuju(0, i);
-    // }
-    // for (var j = 1; j <= BchoiceZS_bj; j++) {
-    //     duruZSshuju(1, j);
-    // }
-    do {
-        ChoiceFirst(a, b);
+    if (fig_xix < 1) {
+        ChoiceFirst(fig_a, fig_b);
         if (HadChoice_Who === "A") {
-            if (a <= AchoiceZS_bj) {
-                a++;
-                //alert("a:" + a);
+            if (fig_a <= AchoiceZS_bj) {
+                fig_a++;
             } else {
                 AchoiceZS[HadChoice_Aa].zs_name = "";
                 AchoiceZS[HadChoice_Aa].ATimeH = 99;
             }
         } else {
-            if (b <= BchoiceZS_bj) {
-                b++;
-                //alert("b:" + b);
+            if (fig_b <= BchoiceZS_bj) {
+                fig_b++;
             } else {
                 BchoiceZS[HadChoice_Bb].zs_name = "";
                 BchoiceZS[HadChoice_Bb].ATimeH = 99;
@@ -2032,12 +2022,14 @@ function fighting() {
         }
         //setTimeout("Shuanghaijisuan()", 2000);
         Shuanghaijisuan();
-        if ((a > AchoiceZS_bj) && (b > BchoiceZS_bj)) {
-            xix = 1;
+        if ((fig_a > AchoiceZS_bj) && (fig_b > BchoiceZS_bj)) {
+            fig_xix = 1;
         }
-    } while (xix < 1);
-    $("#ZDwenbenWK").append("<div>" + "下回合" + "</div>");
-    $("#ZDwenbenWK").scrollTop($("#ZDwenbenWK")[0].scrollHeight);
+    } else {
+        $("#ZDwenbenWK").append("<div>" + "下回合" + "</div>");
+        $("#ZDwenbenWK").scrollTop($("#ZDwenbenWK")[0].scrollHeight);
+        clearInterval(window.fitXH);
+    }
 }
 
 //伤害计算

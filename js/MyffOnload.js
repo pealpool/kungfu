@@ -100,7 +100,6 @@ $(document).ready(function () {
 
 
     //分配点数时-关联数值变红
-    //todo au
     $("#DianshuDaKuang_T_Liliang").hover(
         function () {
             $("#DianshuguanlianXiaoKuang_gongjiJC").addClass("grayBg");
@@ -1135,7 +1134,7 @@ $(document).ready(function () {
         }, 300);
         izsxx = 1;
         BshujiZS();
-        fighting();
+        window.fitXH = setInterval(fighting,100);
     });
 
     //选择攻击部位限制左右按钮
