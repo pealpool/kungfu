@@ -2937,10 +2937,12 @@ $(document).ready(function () {
         }
     });
 
-    //换人
+    //todo 换人
     $("#huanrenButtom").click(function () {
         Bshuxingchushihua();
         Shuxingshuaxin_B();
+        $("#chicoZhaoShiTianjiaK").empty();
+        $("#ZDwenbenWK").empty();
         ChuShiHua();
     });
 
@@ -3097,5 +3099,43 @@ $(document).ready(function () {
     $("#choiceJinDuLan_XZwancheng").click(function () {
         choiceQianqiWanCheng();
     });
+
+    $("#Banyuan_KX_xl").hover(
+        function () {
+            $("#Banyuan_KX_xl").addClass("bianqian");
+        },
+        function () {
+            $("#Banyuan_KX_xl").removeClass("bianqian");
+        }
+    );
+    $("#Banyuan_KX_xr").hover(
+        function () {
+            $("#Banyuan_KX_xr").addClass("bianqian");
+        },
+        function () {
+            $("#Banyuan_KX_xr").removeClass("bianqian");
+        }
+    );
+    $("#Banyuan_ZD_l").hover(
+        function () {
+            $("#Banyuan_KX_xl").addClass("bianqian");
+        },
+        function () {
+            $("#Banyuan_KX_xl").removeClass("bianqian");
+        }
+    );
+    $("#Banyuan_ZD_r").hover(
+        function () {
+            $("#Banyuan_KX_xr").addClass("bianqian");
+        },
+        function () {
+            $("#Banyuan_KX_xr").removeClass("bianqian");
+        }
+    );
+
+
+
+
+
 
 });

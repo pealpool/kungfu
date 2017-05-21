@@ -1785,8 +1785,8 @@ html, body {
     background: #252525;
     border-radius: 50%;
     transform-origin: center;
-    /*transform: rotate(-80deg);*/
     clip: rect(0, 70px, auto, 0);
+    transition:all 300ms ease-in-out 0ms;
 }
 
 .Banyuan_KD_r {
@@ -1833,8 +1833,8 @@ html, body {
     background: #252525;
     border-radius: 50%;
     transform-origin: center;
-    /*transform: rotate(100deg);*/
     clip: rect(0, auto, auto, 70px);
+    transition:all 300ms ease-in-out 0ms;
 }
 
 .Banyuan_mask {
@@ -1857,7 +1857,7 @@ html, body {
     left: 65px;
     background: #a0a0a0;
     transform-origin: right;
-    /*transform: rotate(48deg);*/
+    transition:all 600ms ease-in-out 0ms;
 }
 
 .Banyuan_line_r {
@@ -1869,7 +1869,7 @@ html, body {
     left: 140px;
     background: #a0a0a0;
     transform-origin: left;
-    /*transform: rotate(-28deg);*/
+    transition:all 600ms ease-in-out 0ms;
 }
 
 .SCd_A{
@@ -1893,4 +1893,8 @@ html, body {
 	position: absolute;
 	top: 55px;
 	left: 214px;
+}
+
+.bianqian{
+    opacity: 0.5;
 }
