@@ -860,12 +860,13 @@ html, body {
     z-index: 2;
     position: relative;
 }
+
 .BiaoTi_Logo_DiN {
     position: relative;
-	top: 23px;
-	width: auto;
-	height: 5px;
-	background: #003179;
+    top: 23px;
+    width: auto;
+    height: 5px;
+    background: #003179;
 }
 
 .BiaoTi_Logo_cxbp {
@@ -892,6 +893,11 @@ html, body {
     border-radius: 5px;
     background-color: #ffffff;
     box-shadow: 3px 3px 30px 0 rgba(0, 0, 0, 0.2);
+    transition: all 450ms ease-in-out 0ms;
+}
+
+.BDYJK:hover {
+    box-shadow: 5px 5px 30px 0 rgba(0, 0, 0, 0.4);
 }
 
 .NeiRongKuangDl {
@@ -1144,8 +1150,8 @@ html, body {
 .StartButtomDaKuang {
     position: relative;
     float: left;
-    width: 250px;
-	top: 3px;
+    width: 280px;
+    top: 3px;
 }
 
 .StartButtomYuanKuang {
@@ -1737,26 +1743,26 @@ html, body {
 
 .Banyuan_KD_l {
     position: absolute;
-	z-index: 5;
+    z-index: 5;
     width: 140px;
     height: 140px;
     top: -3px;
     left: 70px;
     border-radius: 50%;
-	transform-origin:center;
+    transform-origin: center;
     transform: rotate(40deg);
     clip: rect(0, 70px, auto, 0);
 }
 
 .Banyuan_KD_xl {
     position: absolute;
-	z-index: 5;
+    z-index: 5;
     width: 140px;
     height: 140px;
     top: -3px;
     left: 70px;
     border-radius: 50%;
-	transform-origin:center;
+    transform-origin: center;
     transform: rotate(40deg);
     clip: rect(0, 70px, auto, 0);
 }
@@ -1767,41 +1773,44 @@ html, body {
     height: 140px;
     background: #a0a0a0;
     border-radius: 50%;
-	transform-origin:center;
+    transform-origin: center;
     transform: rotate(-80deg);
     clip: rect(0, 70px, auto, 0);
 }
+
 .Banyuan_KX_xl {
     position: absolute;
     width: 140px;
     height: 140px;
     background: #252525;
     border-radius: 50%;
-	transform-origin:center;
+    transform-origin: center;
     /*transform: rotate(-80deg);*/
     clip: rect(0, 70px, auto, 0);
 }
+
 .Banyuan_KD_r {
     position: absolute;
-	z-index: 5;
+    z-index: 5;
     width: 140px;
     height: 140px;
     top: -3px;
     left: 70px;
     border-radius: 50%;
-	transform-origin:center;
+    transform-origin: center;
     transform: rotate(-40deg);
     clip: rect(0, auto, auto, 70px);
 }
+
 .Banyuan_KD_xr {
     position: absolute;
-	z-index: 5;
+    z-index: 5;
     width: 140px;
     height: 140px;
     top: -3px;
     left: 70px;
     border-radius: 50%;
-	transform-origin:center;
+    transform-origin: center;
     transform: rotate(-40deg);
     clip: rect(0, auto, auto, 70px);
 }
@@ -1812,24 +1821,25 @@ html, body {
     height: 140px;
     background: #a0a0a0;
     border-radius: 50%;
-	transform-origin:center;
+    transform-origin: center;
     transform: rotate(80deg);
     clip: rect(0, auto, auto, 70px);
 }
+
 .Banyuan_KX_xr {
     position: absolute;
     width: 140px;
     height: 140px;
     background: #252525;
     border-radius: 50%;
-	transform-origin:center;
+    transform-origin: center;
     /*transform: rotate(100deg);*/
     clip: rect(0, auto, auto, 70px);
 }
 
-.Banyuan_mask{
+.Banyuan_mask {
     position: absolute;
-	z-index: 10;
+    z-index: 10;
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -1837,25 +1847,50 @@ html, body {
     top: 7px;
     background: #FFF;
 }
+
 .Banyuan_line_l {
     position: absolute;
-	z-index: 0;
-	width: 75px;
-	height: 1px;
-	top: 66px;
-	left: 65px;
-	background: #a0a0a0;
-	transform-origin:right;
+    z-index: 0;
+    width: 75px;
+    height: 1px;
+    top: 66px;
+    left: 65px;
+    background: #a0a0a0;
+    transform-origin: right;
     /*transform: rotate(48deg);*/
 }
+
 .Banyuan_line_r {
     position: absolute;
-	z-index: 0;
-	width: 75px;
-	height: 1px;
-	top: 66px;
-	left: 140px;
-	background: #a0a0a0;
-	transform-origin:left;
+    z-index: 0;
+    width: 75px;
+    height: 1px;
+    top: 66px;
+    left: 140px;
+    background: #a0a0a0;
+    transform-origin: left;
     /*transform: rotate(-28deg);*/
+}
+
+.SCd_A{
+    text-align: left;
+}
+.SCd_B{
+    text-align: right;
+}
+.Banyuan_ZD {
+	font-size: 12px;
+	line-height: 12px;
+}
+
+#Banyuan_ZD_l {
+	text-align: right;
+	position: absolute;
+	top: 55px;
+	left: 42px;
+}
+#Banyuan_ZD_r {
+	position: absolute;
+	top: 55px;
+	left: 214px;
 }

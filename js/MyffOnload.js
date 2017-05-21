@@ -412,7 +412,7 @@ $(document).ready(function () {
     });
 
 
-    //选择招式按钮  圆
+    //todo 选择招式按钮  圆
     $("#StartButtomYuanKuang").click(function () {
         //izsxx 按钮是否能点击的标记
         if (izsxx === 0) {
@@ -694,7 +694,7 @@ $(document).ready(function () {
             }
             shanchuZShou();
             if (i_AyixuanZS > 5) {
-                biamWuXiaoZS();
+                bianWuXiaoZS();
             }
         }
     });
@@ -2941,7 +2941,7 @@ $(document).ready(function () {
     $("#huanrenButtom").click(function () {
         Bshuxingchushihua();
         Shuxingshuaxin_B();
-        //BshujiZS();
+        ChuShiHua();
     });
 
 
@@ -3064,7 +3064,7 @@ $(document).ready(function () {
         }
     );
 
-    //认输按钮
+    //todo 认输按钮
     $("#rengshuButtom").click(function () {
         $("#ZDwenbenWK").children("div").fadeTo("normal", 0.1, function () { //fade
             $(this).slideUp("normal", function () { //slide up
@@ -3072,7 +3072,6 @@ $(document).ready(function () {
             });
         });
         $("#chicoZhaoShiTianjiaK").empty();
-        //zschushihua();
         ChuShiHua();
         $("#StartButtomYuanKuang").removeClass("yuan_02", 300).addClass("yuan_01", 100);
         izsxx = 0;
