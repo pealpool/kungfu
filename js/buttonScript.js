@@ -1881,8 +1881,6 @@ function ChoiceFirst(a, b) {
     switch (HadChoice_Who) {
         case "A":
             if (a <= AchoiceZS_bj && b <= BchoiceZS_bj) {
-                //$("#ZDwenbenWK").append("<div>" + "A之前先手," + "A后摇前摇分别为" + AchoiceZS[a - 1].ATimeH.toFixed(1) + "，" + AchoiceZS[a].ATimeQ.toFixed(1) + "。B前摇为" + BchoiceZS[b].ATimeQ.toFixed(1) + "</div>");
-
                 $("#ZDwenbenWK").append("<div>" + "A之前先手," + "A后摇前摇分别为" + ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name), SX_Minjie[0]).toFixed(1) + "，" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]).toFixed(1) + "。B前摇为" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1]).toFixed(1) + "</div>");
                 //alert("A--:" + AchoiceZS[a-1].ATimeH + "+" + AchoiceZS[a].ATimeQ + "?" + BchoiceZS[b].ATimeQ);
                 if (ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name), SX_Minjie[0]) + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) > ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
@@ -1912,9 +1910,6 @@ function ChoiceFirst(a, b) {
             break;
         case "B":
             if (a <= AchoiceZS_bj && b <= BchoiceZS_bj) {
-                //$("#ZDwenbenWK").append("<div>" + "B之前先手," + "B后摇前摇分别为" + BchoiceZS[b - 1].ATimeH.toFixed(1) + "，" + BchoiceZS[b].ATimeQ.toFixed(1) + "。A前摇为" + AchoiceZS[a].ATimeQ.toFixed(1) + "</div>");
-
-
                 $("#ZDwenbenWK").append("<div>" + "B之前先手," + "B后摇前摇分别为" + ZSglIO.ATimeH(String(BchoiceZS[b - 1].zs_name), SX_Minjie[1]).toFixed(1) + "，" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1]).toFixed(1) + "。A前摇为" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]).toFixed(1) + "</div>");
                 //alert("B--:" + AchoiceZS[a].ATimeQ + "?" + BchoiceZS[b].ATimeQ + "+" + BchoiceZS[b].ATimeQ);
                 if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) > ZSglIO.ATimeH(String(BchoiceZS[b - 1].zs_name), SX_Minjie[1]) + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
@@ -1994,7 +1989,6 @@ function fighting() {
                 BchoiceZS[HadChoice_Bb].ATimeH = 99;
             }
         }
-        //setTimeout("Shuanghaijisuan()", 2000);
         Shuanghaijisuan();
         if ((fig_a > AchoiceZS_bj) && (fig_b > BchoiceZS_bj)) {
             fig_xix = 1;
@@ -2006,7 +2000,6 @@ function fighting() {
     }
 }
 
-//伤害计算
 //todo 伤害计算
 function Shuanghaijisuan() {
     //输出的伤害

@@ -55,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/js/Hp.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1273">
-              <caret line="68" column="55" lean-forward="true" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
+              <caret line="68" column="55" lean-forward="false" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -64,8 +64,8 @@
       <file leaf-file-name="buttonScript.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="2052" column="23" lean-forward="true" selection-start-line="2052" selection-start-column="23" selection-end-line="2052" selection-end-column="23" />
+            <state relative-caret-position="652">
+              <caret line="2031" column="1" lean-forward="true" selection-start-line="2031" selection-start-column="1" selection-end-line="2031" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -75,7 +75,7 @@
         <entry file="file://$PROJECT_DIR$/js/MyffOnload.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="7657">
-              <caret line="403" column="26" lean-forward="true" selection-start-line="403" selection-start-column="26" selection-end-line="403" selection-end-column="39" />
+              <caret line="403" column="26" lean-forward="false" selection-start-line="403" selection-start-column="26" selection-end-line="403" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -235,6 +235,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -263,7 +264,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -431,11 +431,12 @@
       <workItem from="1495262557389" duration="556000" />
       <workItem from="1495265582589" duration="5915000" />
       <workItem from="1495283470222" duration="2049000" />
+      <workItem from="1495333402229" duration="1183000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167668000" />
+    <option name="totallyTimeSpent" value="168851000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -788,7 +789,7 @@
     <entry file="file://$PROJECT_DIR$/js/Hp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1273">
-          <caret line="68" column="55" lean-forward="true" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
+          <caret line="68" column="55" lean-forward="false" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
           <folding />
         </state>
       </provider>
@@ -812,15 +813,15 @@
     <entry file="file://$PROJECT_DIR$/js/MyffOnload.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7657">
-          <caret line="403" column="26" lean-forward="true" selection-start-line="403" selection-start-column="26" selection-end-line="403" selection-end-column="39" />
+          <caret line="403" column="26" lean-forward="false" selection-start-line="403" selection-start-column="26" selection-end-line="403" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="2052" column="23" lean-forward="true" selection-start-line="2052" selection-start-column="23" selection-end-line="2052" selection-end-column="23" />
+        <state relative-caret-position="652">
+          <caret line="2031" column="1" lean-forward="true" selection-start-line="2031" selection-start-column="1" selection-end-line="2031" selection-end-column="1" />
           <folding />
         </state>
       </provider>
