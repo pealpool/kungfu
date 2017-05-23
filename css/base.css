@@ -1010,13 +1010,14 @@ html, body {
     cursor: pointer;
 }
 
-.HP_blue .ui-progressbar-value {
+.HP_tiao .ui-progressbar-value {
     background: #003179;
 }
 
-.HP_blue {
+.HP_tiao {
     height: 4px !important;
     width: 97px;
+    transition:all 400ms ease-in-out 0ms;
 }
 
 .HPwzD {
@@ -1234,7 +1235,7 @@ html, body {
 .NeiRongchoiceZSdaK {
     float: left;
     width: 500px;
-    height: 600px;
+    /*height: 600px;*/
     margin: 8px;
     z-index: 40;
     position: absolute;
