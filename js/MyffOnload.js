@@ -3132,7 +3132,14 @@ $(document).ready(function () {
             $("#Banyuan_KX_xr").removeClass("bianqian");
         }
     );
-
+$("#lllhand_D").hover(
+        function () {
+            $(".lllhand_X").css("box-shadow","0px 0px 5px 0 rgba(0, 0, 0, 0.5)");
+        },
+        function () {
+            $(".lllhand_X").css("box-shadow","0px 0px 5px 0 rgba(0, 0, 0, 0.2)");
+        }
+    );
 
 
 

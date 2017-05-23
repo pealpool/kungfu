@@ -1256,11 +1256,11 @@ html, body {
     margin-left: 15px;
 }
 
+
 .choiceShuxinXiaoKuang2qq {
     float: left;
     font-size: 12px;
-    margin-top: 10px;
-    margin-left: 4px;
+    margin-top: 2px;
 }
 
 .zhaoshiTitleqq {
@@ -1325,7 +1325,7 @@ html, body {
     margin-bottom: 5px;
 }
 
-.yichoiceZSdaK {
+.yichoiceZSdaK00 {
     float: left;
     font-size: 12px;
     background-color: #f4f1ea;
@@ -1333,6 +1333,17 @@ html, body {
     box-shadow: -0px -0px 10px 0 rgba(0, 0, 0, 0.5) inset;
     width: 490px;
     height: 180px;
+    margin: 5px;
+    padding-top: 10px;
+}
+.yichoiceZSdaK01 {
+    float: left;
+    font-size: 12px;
+    background-color: #f4f1ea;
+    border-radius: 5px;
+    box-shadow: -0px -0px 10px 0 rgba(0, 0, 0, 0.5) inset;
+    width: 490px;
+    height: 273px;
     margin: 5px;
     padding-top: 10px;
 }
@@ -1897,4 +1908,85 @@ html, body {
 
 .bianqian{
     opacity: 0.5;
+}
+
+
+.xianshiZS_KD {
+    float: left;
+    width: 500px;
+    height: 400px;
+    margin: 8px;
+    z-index: 40;
+    position: absolute;
+    margin-top: -133px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 50px 0 rgba(0, 0, 0, 1);
+/*    display: none;*/
+}
+
+.KanZS_KD {
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+	line-height: 35px;
+    color: #252525;
+    margin-left: 10px;
+}
+
+.KanZS_KX_l {
+    border-radius: 5px 0 0 0;
+}
+.KanZS_KX_r {
+	border-radius: 0 5px 0 0;
+}
+.KanZS_KX_C{
+	float: left;
+	text-align: center;
+	height: 35px;
+	width: 240px;
+	background-color: #f4f1ea;
+    box-shadow: -0px -0px 10px 0 rgba(0, 0, 0, 0.5) inset;
+	cursor: pointer;
+}
+
+
+.KanZS_KX_B {
+	color: #fff;
+	background-color: #252525;
+}
+
+.yuanBack {
+	font-family: arial;
+	font-weight: bold;
+	font-size: 25px;
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	background-color: #a0a0a0;
+	color: #fff;
+	text-align: center;
+	line-height: 26px;
+	margin:10px;
+	cursor: pointer;
+    transition:all 400ms ease-in-out 0ms;
+}
+.yuanBack:hover {
+	background-color: #BEBEBE;
+}
+
+.lllhand_D {
+	float: left;
+/*	background-color: #ccc;*/
+	width: 100px;
+	margin-left: 200px;
+	margin-top: 4px;
+}
+
+.lllhand_X {
+	height: 1px;
+	margin-bottom: 5px;
+	background-color: #c3c3c3;
+    transition:all 400ms ease-in-out 0ms;
+    box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.2);
 }
