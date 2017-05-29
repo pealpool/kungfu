@@ -398,7 +398,7 @@ $(document).ready(function () {
                     action: function () {
                         $("#choiceBigKuang").show("fade", 300);
                         $("#aaamask").show("fade", 300);
-                        $("#baseKuang").addClass("blur");
+                        $("#baseKuang").addClass("bigblur");
                         $("#NeiRongchoiceZSdaK").hide();
                         $("#chicoZhaoShiTianjiaK").empty();
                         //zschushihua();
@@ -1239,7 +1239,7 @@ $(document).ready(function () {
             $("#My_name").text(mymyname);
         }
     });
-    $(document).on("blur", "#shuru_name", function () {
+    $(document).on("bigblur", "#shuru_name", function () {
         setTimeout(function () {
             $("#TuKuangTitle_name").html("<div id='My_name'></div>");
             $("#My_name").text(mymyname);

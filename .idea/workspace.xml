@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb5e816f-4d1b-427d-8b73-abc6c84978cd" name="默认的" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Img/image/6430434403_145e123a63_b.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/_notes/base.css.mno" afterPath="$PROJECT_DIR$/css/_notes/base.css.mno" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/base.css" afterPath="$PROJECT_DIR$/css/base.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/MyffOnload.js" afterPath="$PROJECT_DIR$/js/MyffOnload.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/buttonScript.js" afterPath="$PROJECT_DIR$/js/buttonScript.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,8 +29,8 @@
       <file leaf-file-name="base.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/base.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="1021" column="0" lean-forward="true" selection-start-line="1021" selection-start-column="0" selection-end-line="1021" selection-end-column="0" />
+            <state relative-caret-position="320">
+              <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -36,8 +39,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38570">
-              <caret line="2030" column="27" lean-forward="false" selection-start-line="2081" selection-start-column="12" selection-end-line="2088" selection-end-column="0" />
+            <state relative-caret-position="282">
+              <caret line="338" column="53" lean-forward="false" selection-start-line="338" selection-start-column="53" selection-end-line="338" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -46,8 +49,8 @@
       <file leaf-file-name="buttonScript.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="2102" column="55" lean-forward="true" selection-start-line="2102" selection-start-column="55" selection-end-line="2102" selection-end-column="55" />
+            <state relative-caret-position="456">
+              <caret line="37" column="43" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -56,22 +59,9 @@
       <file leaf-file-name="MyffOnload.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/MyffOnload.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="3195" column="21" lean-forward="true" selection-start-line="3195" selection-start-column="21" selection-end-line="3195" selection-end-column="21" />
-              <folding>
-                <marker date="1495538834216" expanded="true" signature="1778:1795" ph="..." />
-                <marker date="1495538834216" expanded="true" signature="4006:4054" ph="..." />
-                <marker date="1495538834216" expanded="true" signature="4178:4189" ph="..." />
-                <marker date="1495538834216" expanded="true" signature="4871:4919" ph="..." />
-                <marker date="1495538834216" expanded="true" signature="5044:5061" ph="..." />
-                <marker date="1495538834216" expanded="true" signature="7030:7078" ph="..." />
-                <marker date="1495538834216" expanded="true" signature="8634:8651" ph="..." />
-                <marker date="1495538834216" expanded="true" signature="10866:10914" ph="..." />
-                <marker date="1495538834216" expanded="true" signature="11040:11051" ph="..." />
-                <marker date="1495538834216" expanded="true" signature="11735:11783" ph="..." />
-                <marker date="1495538834216" expanded="true" signature="11910:11927" ph="..." />
-                <marker date="1495538834216" expanded="true" signature="13898:13946" ph="..." />
-              </folding>
+            <state relative-caret-position="60705">
+              <caret line="3195" column="21" lean-forward="false" selection-start-line="3195" selection-start-column="21" selection-end-line="3195" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -88,13 +78,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>PaiBei_A</find>
-      <find>qq</find>
-      <find />
-      <find>Btj_panda</find>
-      <find>tj_panda</find>
-      <find>choiceShuxinXiaoKuang2qq</find>
-      <find>[0]</find>
       <find>tj_yuanyangtui</find>
       <find>zhaoshineirongqq</find>
       <find>NeiRongchoiceZSdaK</find>
@@ -108,7 +91,6 @@
       <find>Hp_bu</find>
       <find>Hp_bule</find>
       <find>HP_blue</find>
-      <find>HP_blue</find>
       <find>\n    transition\:all 400ms ease\-in\-out 0ms\;</find>
       <find>H</find>
       <find>HP-</find>
@@ -118,6 +100,14 @@
       <find>HP_ti</find>
       <find>HP_tia</find>
       <find>HP_tiao</find>
+      <find>6430434403_145e123a63_b.jpg</find>
+      <find>babagr.jpg</find>
+      <find>blur</find>
+      <find>cPBTaiquan1</find>
+      <find>choiceShuxinZhongKuang</find>
+      <find>smallbl</find>
+      <find>choiceShuxinZhongKuangRback</find>
+      <find>choiceShuxinZhongKuangR</find>
     </findStrings>
     <replaceStrings>
       <replace>zzz</replace>
@@ -143,6 +133,7 @@
       <replace>[1]</replace>
       <replace>tq_shaotui</replace>
       <replace>HP_tiao</replace>
+      <replace>babagr.jpg</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -164,9 +155,9 @@
         <option value="$PROJECT_DIR$/index - 副本.html" />
         <option value="$PROJECT_DIR$/js/ShuX.js" />
         <option value="$PROJECT_DIR$/js/Hp.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/buttonScript.js" />
         <option value="$PROJECT_DIR$/js/MyffOnload.js" />
+        <option value="$PROJECT_DIR$/js/buttonScript.js" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/base.css" />
       </list>
     </option>
@@ -235,6 +226,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -263,7 +255,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -287,13 +278,7 @@
     </option>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
-    <configuration default="false" name="test.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/pealpool.github.io/test.html">
-      <method />
-    </configuration>
-    <configuration default="false" name="test - 副本.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/pealpool.github.io/test - 副本.html">
-      <method />
-    </configuration>
-    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KongFuWeb/index.html">
+    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/pealpool.github.io/index.html">
       <method />
     </configuration>
     <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote">
@@ -365,20 +350,12 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration default="false" name="index.html（2）" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="false" uri="http://localhost:63342/pealpool.github.io/index.html">
-      <method />
-    </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html（2）" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.test.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.test - 副本.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="1">
         <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.test.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.test - 副本.html" />
       </list>
     </recent_temporary>
   </component>
@@ -441,11 +418,13 @@
       <workItem from="1495508007100" duration="706000" />
       <workItem from="1495518383738" duration="12444000" />
       <workItem from="1495536215613" duration="3056000" />
+      <workItem from="1496058118267" duration="461000" />
+      <workItem from="1496060291647" duration="933000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194847000" />
+    <option name="totallyTimeSpent" value="196241000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -468,8 +447,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1032666" sideWeight="0.4914163" order="0" side_tool="true" content_ui="tabs" x="12" y="783" width="196" height="458" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33154505" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32982087" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33154505" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -796,14 +775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38570">
-          <caret line="2030" column="27" lean-forward="false" selection-start-line="2081" selection-start-column="12" selection-end-line="2088" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/PB_Taiquan.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -812,39 +783,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
+    <entry file="file://$PROJECT_DIR$/js/MyffOnload.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="2102" column="55" lean-forward="true" selection-start-line="2102" selection-start-column="55" selection-end-line="2102" selection-end-column="55" />
+        <state relative-caret-position="60705">
+          <caret line="3195" column="21" lean-forward="false" selection-start-line="3195" selection-start-column="21" selection-end-line="3195" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/MyffOnload.js">
+    <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="3195" column="21" lean-forward="true" selection-start-line="3195" selection-start-column="21" selection-end-line="3195" selection-end-column="21" />
-          <folding>
-            <marker date="1495538834216" expanded="true" signature="1778:1795" ph="..." />
-            <marker date="1495538834216" expanded="true" signature="4006:4054" ph="..." />
-            <marker date="1495538834216" expanded="true" signature="4178:4189" ph="..." />
-            <marker date="1495538834216" expanded="true" signature="4871:4919" ph="..." />
-            <marker date="1495538834216" expanded="true" signature="5044:5061" ph="..." />
-            <marker date="1495538834216" expanded="true" signature="7030:7078" ph="..." />
-            <marker date="1495538834216" expanded="true" signature="8634:8651" ph="..." />
-            <marker date="1495538834216" expanded="true" signature="10866:10914" ph="..." />
-            <marker date="1495538834216" expanded="true" signature="11040:11051" ph="..." />
-            <marker date="1495538834216" expanded="true" signature="11735:11783" ph="..." />
-            <marker date="1495538834216" expanded="true" signature="11910:11927" ph="..." />
-            <marker date="1495538834216" expanded="true" signature="13898:13946" ph="..." />
-          </folding>
+        <state relative-caret-position="456">
+          <caret line="37" column="43" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="338" column="53" lean-forward="false" selection-start-line="338" selection-start-column="53" selection-end-line="338" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="1021" column="0" lean-forward="true" selection-start-line="1021" selection-start-column="0" selection-end-line="1021" selection-end-column="0" />
+        <state relative-caret-position="320">
+          <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
           <folding />
         </state>
       </provider>

@@ -10,7 +10,7 @@ html, body {
     margin: 0;
     padding: 0;
     /*background: #f4f1ea;*/
-    background-image: url(../Img/image/6430434403_145e123a63_b.jpg);
+    background-image: url(../Img/image/babagr.jpg);
     cursor: default;
 }
 
@@ -34,12 +34,19 @@ html, body {
 }
 
 /*模糊效果*/
-.blur {
-    -webkit-filter: blur(25px);
+.bigblur {
+    -webkit-filter: blur(10px);
     -moz-filter: blur(10px);
     -o-filter: blur(10px);
     -ms-filter: blur(10px);
     filter: blur(10px);
+}
+.smallblur {
+    -webkit-filter: blur(30px);
+    -moz-filter: blur(30px);
+    -o-filter: blur(30px);
+    -ms-filter: blur(30px);
+    filter: blur(30px);
 }
 
 /*基础大框*/
@@ -296,6 +303,11 @@ html, body {
     border: 1px solid #e2e2e2;
     box-shadow: 3px 3px 15px 0 rgba(0, 0, 0, 0.05);
 }
+.Kuang10a {
+    border-radius: 10px;
+    border: 1px solid #e2e2e2;
+    box-shadow: 3px 3px 15px 0 rgba(0, 0, 0, 0.05);
+}
 
 /*选择属性大框 左*/
 .choiceShuxinZhongKuangL {
@@ -306,6 +318,13 @@ html, body {
 
 /*选择属性大框 右*/
 .choiceShuxinZhongKuangR {
+    position: absolute;
+    width: 515px;
+    height: 440px;
+    z-index: 1;
+	left:410px;
+}
+.choiceShuxinZhongKuangRback {
     float: left;
     width: 515px;
     height: 440px;
