@@ -21,7 +21,7 @@ function ChangechoiceBG(ZhaoShi) {
             //hrhr.setAttribute("href", "./css/cssTaiji.css");
             $(".shi_hr").css("border-bottom", "1px solid #003179");
             //$("#choiceShuxinZhongKuangR").removeClass().addClass("choiceShuxinZhongKuangR Kuang10 cPBTaiji1");
-            $("#choiceShuxinZhongKuangRback").attr("class", "choiceShuxinZhongKuangRback Kuang10 cPBTaiji1 smallblur");
+            $("#choiceShuxinZhongKuangR").attr("class", "cPBTaiji1");
             break;
         case "Taiquan":
             //Ditu.setAttribute("class", "choicePaiBei cPBTaiquan0");
@@ -35,7 +35,7 @@ function ChangechoiceBG(ZhaoShi) {
             //hrhr.setAttribute("href", "./css/cssTaiquan.css");
             $(".shi_hr").css("border-bottom", "1px solid #bb1c33");
             //$("#choiceShuxinZhongKuangR").removeClass().addClass("choiceShuxinZhongKuangR Kuang10 cPBTaiquan1");
-            $("#choiceShuxinZhongKuangRback").attr("class", "choiceShuxinZhongKuangRback Kuang10 cPBTaiquan1 smallblur");
+            $("#choiceShuxinZhongKuangR").attr("class", "cPBTaiquan1");
             break;
     }
 }

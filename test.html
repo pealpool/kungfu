@@ -1,66 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>test</title>
-    <script src="./js/jquery-3.2.1.min.js"></script>
-    <style>
-        .circle {
-            width: 200px;
-            height: 200px;
-            position: absolute;
-            border-radius: 50%;
-            background: #0cc;
-            transform: rotate(-60deg);
-            clip: rect(0, 100px, auto, 0);
-        }
+<meta charset="UTF-8">
+<title>test</title>
+<script src="./js/jquery-3.2.1.min.js"></script>
+<style>
+.content {
+	margin: 50px;
+	width: 200px;
+	height: 100px;
+/*	overflow: hidden;*/
+	border: 1px solid #5E3B3C;
+	position: absolute;
+	z-index: 10;
+	color: #fff;
+}
+.content:after {
+	width: 200px;
+	height: 100px;
+	content: "";
+	position: absolute;
+	top: 0;
+    left: 0;
+	background-color: rgba(187,57,57,0.2);
+	z-index: -1;
+}
+.content::after {
+	width: 200px;
+	height: 100px;
+	content: "";
+	position: absolute;
+	top: 0;
+    left: 0;
+	background-color: #fff;
+	background-image: url(./Img/image/choiceZhaoshishiXiaoKuang_Taiji.png);
 
-        .circleWK {
-            width: 200px;
-            height: 200px;
-            top: 0;
-            left: 0;
-            position: absolute;
-            border-radius: 50%;
-            transform: rotate(30deg);
-            clip: rect(0, 100px, auto, 0);
-        }
-
-        .pie_left, .pie_right {
-            width: 200px;
-            height: 200px;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        .pie_right, .right {
-            clip: rect(0, auto, auto, 100px);
-        }
-
-        .left0 {
-            clip: rect(0, 100px, auto, 0);
-        }
-
-        .mask {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            left: 25px;
-            top: 25px;
-            background: #FFF;
-            position: absolute;
-        }
-
-
-    </style>
+	-webkit-filter: blur(20px);
+	-moz-filter: blur(20px);
+	-ms-filter: blur(20px);
+	-o-filter: blur(20px);
+	filter: blur(10px);
+	z-index: -2;
+}
+</style>
 </head>
 <body>
-
-<div class="circleWK">
-    <div class="circle"></div>
-</div>
-<div class="mask"></div>
-
+<div class="content">234</div>
 </body>
 </html>
