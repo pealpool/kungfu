@@ -12,35 +12,8 @@
 	z-index: 10;
 	color: #000;
 }
-.content:after {
-	width: 200px;
-	height: 100px;
-	content: "<div class='bigk'><div class='backg01'><div class='backg02'>4655</div></div><div class='backg01'><div class='backg02'>4655</div></div></div>";
-	position: absolute;
-	top: 0;
-    left: 0;
-/*	background-color: rgba(187,57,57,0.2);*/
-	z-index: -1;
-}
-.content::after {
-	width: 200px;
-	height: 100px;
-	content: "";
-	position: absolute;
-	top: 0;
-    left: 0;
 
-	-webkit-filter: blur(10px);
-	-moz-filter: blur(10px);
-	-ms-filter: blur(10px);
-	-o-filter: blur(10px);
-	filter: blur(10px);
-	z-index: -2;
-}
 
-.bigk{
-	
-}
 .backg01{
 	float: left;
 	width: 150px;
@@ -48,10 +21,16 @@
 	border: 1px solid #5E3B3C;
 	margin-left: 10px;
 	background-color: #F08E00;
+	overflow: hidden;
+	-webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
 }
 .backg02{
 	float: left;
-	width: 100px;
+	width: 300px;
 	height: 100px;
 	border: 1px solid #5E3B3C;
 	margin: 20px;
