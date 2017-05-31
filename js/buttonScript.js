@@ -1881,21 +1881,17 @@ function ChoiceFirst(a, b) {
     switch (HadChoice_Who) {
         case "A":
             if (a <= AchoiceZS_bj && b <= BchoiceZS_bj) {
-                $("#ZDwenbenWK").append("<div>" + "A之前先手," + "A后摇前摇分别为" + ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name), SX_Minjie[0]).toFixed(1) + "，" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]).toFixed(1) + "。B前摇为" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1]).toFixed(1) + "</div>");
-                //alert("A--:" + AchoiceZS[a-1].ATimeH + "+" + AchoiceZS[a].ATimeQ + "?" + BchoiceZS[b].ATimeQ);
-                if (ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name), SX_Minjie[0]) + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) > ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
-                    HadChoice_Who = "B";
-                    HadChoice_Bb = b;
-                } else if (ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name), SX_Minjie[0]) + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) < ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
-                    HadChoice_Who = "A";
-                    HadChoice_Aa = a;
+                //判断平衡值
+                if (AchoiceZS[a].PinHengXH + 5 <= HpA.pinheng) {
+                    $("#ZDwenbenWK").append("<div>A之前先手,</div>");
+                    ChoiceFirstN_A(a, b);
                 } else {
-                    if (HadChoice_Who === "A") {
-                        HadChoice_Who = "B";
-                        HadChoice_Bb = b;
+                    $("#ZDwenbenWK").append("<div>A调整平衡中。</div>");
+                    //判断平衡值
+                    if (BchoiceZS[b].PinHengXH + 5 <= HpB.pinheng) {
+                        ChoiceFirstN_B(a, b);
                     } else {
-                        HadChoice_Who = "A";
-                        HadChoice_Aa = a;
+                        $("#ZDwenbenWK").append("<div>B也调整平衡中。</div>");
                     }
                 }
             } else if (a > AchoiceZS_bj && b <= BchoiceZS_bj) {
@@ -1910,21 +1906,16 @@ function ChoiceFirst(a, b) {
             break;
         case "B":
             if (a <= AchoiceZS_bj && b <= BchoiceZS_bj) {
-                $("#ZDwenbenWK").append("<div>" + "B之前先手," + "B后摇前摇分别为" + ZSglIO.ATimeH(String(BchoiceZS[b - 1].zs_name), SX_Minjie[1]).toFixed(1) + "，" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1]).toFixed(1) + "。A前摇为" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]).toFixed(1) + "</div>");
-                //alert("B--:" + AchoiceZS[a].ATimeQ + "?" + BchoiceZS[b].ATimeQ + "+" + BchoiceZS[b].ATimeQ);
-                if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) > ZSglIO.ATimeH(String(BchoiceZS[b - 1].zs_name), SX_Minjie[1]) + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
-                    HadChoice_Who = "B";
-                    HadChoice_Bb = b;
-                } else if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) < ZSglIO.ATimeH(String(BchoiceZS[b - 1].zs_name), SX_Minjie[1]) + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
-                    HadChoice_Who = "A";
-                    HadChoice_Aa = a;
+                if (BchoiceZS[b].PinHengXH + 5 <= HpB.pinheng) {
+                    $("#ZDwenbenWK").append("<div>B之前先手,</div>");
+                    ChoiceFirstN_B(a, b);
                 } else {
-                    if (HadChoice_Who === "A") {
-                        HadChoice_Who = "B";
-                        HadChoice_Bb = b;
+                    $("#ZDwenbenWK").append("<div>B调整平衡中。</div>");
+                    //判断平衡值
+                    if (AchoiceZS[a].PinHengXH + 5 <= HpA.pinheng) {
+                        ChoiceFirstN_A(a, b);
                     } else {
-                        HadChoice_Who = "A";
-                        HadChoice_Aa = a;
+                        $("#ZDwenbenWK").append("<div>A也调整平衡中。</div>");
                     }
                 }
             } else if (a > AchoiceZS_bj && b <= BchoiceZS_bj) {
@@ -1968,6 +1959,44 @@ function ChoiceFirst(a, b) {
     }
 }
 
+//重复模块
+function ChoiceFirstN_A(a, b) {
+    $("#ZDwenbenWK").append("<div>" + "A后摇前摇分别为" + ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name), SX_Minjie[0]).toFixed(1) + "，" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]).toFixed(1) + "。B前摇为" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1]).toFixed(1) + "</div>");
+    if (ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name), SX_Minjie[0]) + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) > ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
+        HadChoice_Who = "B";
+        HadChoice_Bb = b;
+    } else if (ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name), SX_Minjie[0]) + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) < ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
+        HadChoice_Who = "A";
+        HadChoice_Aa = a;
+    } else {
+        if (HadChoice_Who === "A") {
+            HadChoice_Who = "B";
+            HadChoice_Bb = b;
+        } else {
+            HadChoice_Who = "A";
+            HadChoice_Aa = a;
+        }
+    }
+}
+function ChoiceFirstN_B(a, b) {
+    $("#ZDwenbenWK").append("<div>" + "B后摇前摇分别为" + ZSglIO.ATimeH(String(BchoiceZS[b - 1].zs_name), SX_Minjie[1]).toFixed(1) + "，" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1]).toFixed(1) + "。A前摇为" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]).toFixed(1) + "</div>");
+    if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) > ZSglIO.ATimeH(String(BchoiceZS[b - 1].zs_name), SX_Minjie[1]) + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
+        HadChoice_Who = "B";
+        HadChoice_Bb = b;
+    } else if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) < ZSglIO.ATimeH(String(BchoiceZS[b - 1].zs_name), SX_Minjie[1]) + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
+        HadChoice_Who = "A";
+        HadChoice_Aa = a;
+    } else {
+        if (HadChoice_Who === "A") {
+            HadChoice_Who = "B";
+            HadChoice_Bb = b;
+        } else {
+            HadChoice_Who = "A";
+            HadChoice_Aa = a;
+        }
+    }
+}
+
 
 //战斗总框架
 //todo fighting
@@ -1981,20 +2010,25 @@ function fighting() {
                 AchoiceZS[HadChoice_Aa].zs_name = "";
                 AchoiceZS[HadChoice_Aa].ATimeH = 99;
             }
-        } else {
+            Shuanghaijisuan();
+        } else if (HadChoice_Who === "B") {
             if (fig_b <= BchoiceZS_bj) {
                 fig_b++;
             } else {
                 BchoiceZS[HadChoice_Bb].zs_name = "";
                 BchoiceZS[HadChoice_Bb].ATimeH = 99;
             }
+            Shuanghaijisuan();
+        } else {
+            $("#ZDwenbenWK").append("<div>双方对峙中。</div>");
         }
-        Shuanghaijisuan();
         if ((fig_a > AchoiceZS_bj) && (fig_b > BchoiceZS_bj)) {
             fig_xix = 1;
         }
+        $("#ZDwenbenWK").append("<hr/>");
     } else {
         $("#ZDwenbenWK").append("<div>" + "下回合" + "</div>");
+        $("#ZDwenbenWK").append("<hr/>");
         $("#ZDwenbenWK").scrollTop($("#ZDwenbenWK")[0].scrollHeight);
         clearInterval(window.fitXH);
         yuanbuttomCZ();
@@ -2008,6 +2042,7 @@ function Shuanghaijisuan() {
     var attN_Q = 0;
     if (HadChoice_Who === "A") {
         $("#ZDwenbenWK").append("<div class='SCd_A'>" + "A用" + AchoiceZS[HadChoice_Aa].zs_frome + "使出了【" + AchoiceZS[HadChoice_Aa].zs_CNname() + "】" + "</div>");
+        //判断暴击
         if (Math.floor(Math.random() * 100 + 1) < mSX_ZhiLi.baojijilv(SX_Zhili[0]) * 100) {
             attW_Q = Math.round(ZSglIO.AttW(String(AchoiceZS[HadChoice_Aa].zs_name), SX_Liliang[0], SX_Zhili[0]) * mSX_LiLiang.baojishanghai(SX_Liliang[0]));
             attN_Q = Math.round(ZSglIO.AttN(String(AchoiceZS[HadChoice_Aa].zs_name), SX_Liliang[0], SX_Zhili[0]) * mSX_LiLiang.baojishanghai(SX_Liliang[0]));
@@ -2019,6 +2054,7 @@ function Shuanghaijisuan() {
         }
     } else {
         $("#ZDwenbenWK").append("<div class='SCd_B'>" + "B用" + BchoiceZS[HadChoice_Bb].zs_frome + "使出了【" + BchoiceZS[HadChoice_Bb].zs_CNname() + "】" + "</div>");
+        //判断暴击
         if (Math.floor(Math.random() * 100 + 1) < mSX_ZhiLi.baojijilv(SX_Zhili[1]) * 100) {
             attW_Q = Math.round(ZSglIO.AttW(String(BchoiceZS[HadChoice_Bb].zs_name), SX_Liliang[1], SX_Zhili[1]) * mSX_LiLiang.baojishanghai(SX_Liliang[1]));
             attN_Q = Math.round(ZSglIO.AttN(String(BchoiceZS[HadChoice_Bb].zs_name), SX_Liliang[1], SX_Zhili[1]) * mSX_LiLiang.baojishanghai(SX_Liliang[1]));
