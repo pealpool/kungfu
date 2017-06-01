@@ -708,6 +708,9 @@ function ChuShiHua() {
     window.AyxZStime = 7.5; //已选招式剩余时间
     window.mymyname = $("#My_name").text();
     window.ButtomPinBi = 0; //按钮暂时屏蔽，0可按，1不可按
+    //倒计时
+    window.DJS = 15;
+    window.DJStime = DJS;
     switch (PaiBei_A) {
         case "Taiji":
             $("#TuKuangTitle_paibie").html("太极");
@@ -1894,7 +1897,7 @@ function BzsHouxuanBuwei(zsname, a) {
 
 
 //选谁先发招，发啥招。a为A第几招数组序号,b为B第几招数组序号
-//todo 选先手实时计算，平衡消耗未计算
+//todo 选先手实时计算
 function ChoiceFirst(a, b) {
     switch (HadChoice_Who) {
         case "A":
@@ -1932,7 +1935,8 @@ function ChoiceFirst(a, b) {
                     $("#ZDwenbenWK").append("<div>B调整平衡中。</div>");
                     HadChoice_Who = "";
                 }
-            } else {
+            } else if (a <= AchoiceZS_bj && b > BchoiceZS_bj) {
+                //todo bug
                 $("#ZDwenbenWK").append("<div>" + "A之前先手,B招式已用完" + "</div>");
                 if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng) {
                     HadChoice_Who = "A";
@@ -1977,7 +1981,7 @@ function ChoiceFirst(a, b) {
                     $("#ZDwenbenWK").append("<div>B调整平衡中。</div>");
                     HadChoice_Who = "";
                 }
-            } else {
+            } else if (a <= AchoiceZS_bj && b > BchoiceZS_bj) {
                 $("#ZDwenbenWK").append("<div>" + "B之前先手,B招式已用完" + "</div>");
                 if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng) {
                     HadChoice_Who = "A";
@@ -2033,7 +2037,7 @@ function ChoiceFirst(a, b) {
                 } else {
                     $("#ZDwenbenWK").append("<div>B调整平衡中。</div>");
                 }
-            } else {
+            } else if (a <= AchoiceZS_bj && b > BchoiceZS_bj) {
                 $("#ZDwenbenWK").append("<div>" + "之前无先手,B不出招" + "</div>");
                 if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng) {
                     HadChoice_Who = "A";
@@ -2097,38 +2101,45 @@ function ChoiceFirstN_B(a, b) {
 //战斗总框架
 //todo fighting
 function fighting() {
-    if (fig_xix < 1) {
-        ChoiceFirst(fig_a, fig_b);
-        if (HadChoice_Who === "A") {
-            if (fig_a <= AchoiceZS_bj) {
-                fig_a++;
+    if (DJStime >0){
+        if (fig_xix < 1) {
+            ChoiceFirst(fig_a, fig_b);
+            if (HadChoice_Who === "A") {
+                if (fig_a <= AchoiceZS_bj) {
+                    fig_a++;
+                } else {
+                    AchoiceZS[HadChoice_Aa].zs_name = "";
+                    AchoiceZS[HadChoice_Aa].ATimeH = 99;
+                }
+                Shuanghaijisuan();
+            } else if (HadChoice_Who === "B") {
+                if (fig_b <= BchoiceZS_bj) {
+                    fig_b++;
+                } else {
+                    BchoiceZS[HadChoice_Bb].zs_name = "";
+                    BchoiceZS[HadChoice_Bb].ATimeH = 99;
+                }
+                Shuanghaijisuan();
             } else {
-                AchoiceZS[HadChoice_Aa].zs_name = "";
-                AchoiceZS[HadChoice_Aa].ATimeH = 99;
+                $("#ZDwenbenWK").append("<div>双方对峙中。</div>");
             }
-            Shuanghaijisuan();
-        } else if (HadChoice_Who === "B") {
-            if (fig_b <= BchoiceZS_bj) {
-                fig_b++;
-            } else {
-                BchoiceZS[HadChoice_Bb].zs_name = "";
-                BchoiceZS[HadChoice_Bb].ATimeH = 99;
+            if ((fig_a > AchoiceZS_bj) && (fig_b > BchoiceZS_bj)) {
+                fig_xix = 1;
             }
-            Shuanghaijisuan();
+            $("#ZDwenbenWK").append("<div><hr/></div>");
         } else {
-            $("#ZDwenbenWK").append("<div>双方对峙中。</div>");
+            $("#ZDwenbenWK").append("<div>" + "回合结束" + "</div>");
+            $("#ZDwenbenWK").append("<div><hr/></div>");
+            clearInterval(window.fitXH);
+            yuanbuttomCZ();
         }
-        if ((fig_a > AchoiceZS_bj) && (fig_b > BchoiceZS_bj)) {
-            fig_xix = 1;
-        }
-        $("#ZDwenbenWK").append("<hr/>");
-    } else {
-        $("#ZDwenbenWK").append("<div>" + "下回合" + "</div>");
-        $("#ZDwenbenWK").append("<hr/>");
+    }else {
+        $("#ZDwenbenWK").append("<div>时间到，回合结束</div><div><hr/></div>");
         clearInterval(window.fitXH);
         yuanbuttomCZ();
     }
     yuanhuanPHsx();
+    $("#ds_time").html((DJStime).toFixed(1));
     $("#ZDwenbenWK").scrollTop($("#ZDwenbenWK")[0].scrollHeight);
     // alert(HpA.pinheng + ","+HpB.pinheng);
 }
@@ -2153,6 +2164,7 @@ function Shuanghaijisuan() {
             PinHengAtt_Q = Math.round(ZSglIO.PinHengAtt(String(AchoiceZS[HadChoice_Aa].zs_name), SX_Liliang[0], SX_Zhili[0]));
             $("#ZDwenbenWK").append("<div class='SCd_A'>" + "(AttW:" + attW_Q + ",AttN:" + attN_Q + ",PinHengAtt:" + PinHengAtt_Q + ")" + "，击向B的" + AchoiceZS[HadChoice_Aa].zs_torl + AchoiceZS[HadChoice_Aa].zs_to + "</div>");
         }
+        DJStime = DJStime - (ZSglIO.ATimeQ(String(AchoiceZS[HadChoice_Aa].zs_name), SX_Minjie[0])).toFixed(1) - (ZSglIO.ATime(String(AchoiceZS[HadChoice_Aa].zs_name), SX_Minjie[0])).toFixed(1);
     } else if (HadChoice_Who === "B") {
         $("#ZDwenbenWK").append("<div class='SCd_B'>" + "B用" + BchoiceZS[HadChoice_Bb].zs_frome + "使出了【" + BchoiceZS[HadChoice_Bb].zs_CNname() + "】" + "</div>");
         //判断暴击
@@ -2167,6 +2179,7 @@ function Shuanghaijisuan() {
             PinHengAtt_Q = Math.round(ZSglIO.PinHengAtt(String(BchoiceZS[HadChoice_Bb].zs_name), SX_Liliang[1], SX_Zhili[1]));
             $("#ZDwenbenWK").append("<div class='SCd_B'>" + "(AttW:" + attW_Q + ",AttN:" + attN_Q + ",PinHengAtt:" + PinHengAtt_Q + ")" + "，击向A的" + BchoiceZS[HadChoice_Bb].zs_torl + BchoiceZS[HadChoice_Bb].zs_to + "</div>");
         }
+        DJStime = DJStime - (ZSglIO.ATimeQ(String(BchoiceZS[HadChoice_Bb].zs_name), SX_Minjie[1])).toFixed(1) - (ZSglIO.ATime(String(BchoiceZS[HadChoice_Bb].zs_name), SX_Minjie[1])).toFixed(1);
     } else {
         $("#ZDwenbenWK").append("<div >双方无交手</div>");
     }
@@ -2224,6 +2237,8 @@ function yuanhuanBZ() {
 
 //选择圆框重置
 function yuanbuttomCZ() {
+    DJStime = DJS;
+    $("#StartButtomYuanKuang").html("选择招式");
     buttomLockoff();
     $("#chicoZhaoShiTianjiaK").empty();
     i_AyixuanZS = 1; //已选择招式 计数

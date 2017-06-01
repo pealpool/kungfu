@@ -1031,6 +1031,7 @@ $(document).ready(function () {
         });
         AchoiceZS_bj = i - 1;
         buttomLock();
+        $("#StartButtomYuanKuang").html("<span id='ds_time'>" + (DJStime).toFixed(1) + "</span>");
         $("#NeiRongchoiceZSdaK").hide("drop", {
             direction: 'up'
         }, 200);
@@ -2838,11 +2839,16 @@ $(document).ready(function () {
 
     //todo 换人
     $("#huanrenButtom").click(function () {
-        if (ButtomPinBi===0){
+        if (ButtomPinBi === 0) {
             Bshuxingchushihua();
             Shuxingshuaxin_B();
             $("#chicoZhaoShiTianjiaK").empty();
-            $("#ZDwenbenWK").empty();
+            $("#ZDwenbenWK").children("div").fadeTo("normal", 0.1, function () { //fade
+                $(this).slideUp("normal", function () { //slide up
+                    $(this).remove(); //then remove from the DOM;
+                });
+            });
+            // $("#ZDwenbenWK").empty();
             ChuShiHua();
         }
     });
@@ -2969,14 +2975,14 @@ $(document).ready(function () {
 
     //todo 认输按钮
     $("#rengshuButtom").click(function () {
-        // $("#ZDwenbenWK").children("div").fadeTo("normal", 0.1, function () { //fade
-        //     $(this).slideUp("normal", function () { //slide up
-        //         $(this).remove(); //then remove from the DOM;
-        //     });
-        // });
-        if (ButtomPinBi===0){
+        if (ButtomPinBi === 0) {
             yuanbuttomCZ();
-            $("#ZDwenbenWK").empty();
+            $("#ZDwenbenWK").children("div").fadeTo("normal", 0.1, function () { //fade
+                $(this).slideUp("normal", function () { //slide up
+                    $(this).remove(); //then remove from the DOM;
+                });
+            });
+            // $("#ZDwenbenWK").empty();
             ChuShiHua();
         }
     });
@@ -3045,7 +3051,7 @@ $(document).ready(function () {
 
     //显示A招式按钮
     $("#ckZhaoShiButtom_A").click(function () {
-        if (ButtomPinBi===0){
+        if (ButtomPinBi === 0) {
             $("#xianshiZS_NK_A").css("display", "block");
             $("#xianshiZS_NK_B").css("display", "none");
             $("#xianshiZS_KD").show("drop", {
@@ -3058,7 +3064,7 @@ $(document).ready(function () {
     });
     //显示B招式按钮
     $("#ckZhaoShiButtom_B").click(function () {
-        if (ButtomPinBi===0){
+        if (ButtomPinBi === 0) {
             $("#xianshiZS_NK_A").css("display", "none");
             $("#xianshiZS_NK_B").css("display", "block");
             $("#xianshiZS_KD").show("drop", {
