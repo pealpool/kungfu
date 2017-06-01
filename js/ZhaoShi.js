@@ -42,7 +42,7 @@ var ZhaoShi = {
             }
         };
 
-        //外伤显示
+        //外伤显示，算暴击
         zzz.AttW_screen = function (zs_name, liling, zhili) {
             var abc = 0;
             switch (String(zs_name)) {
@@ -97,7 +97,7 @@ var ZhaoShi = {
             return (abc * mSX_LiLiang.gongjiJC(liling) + mSX_LiLiang.baojishanghai(liling) * mSX_ZhiLi.baojijilv(zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(zhili) - 0.05);
         };
 
-        //内伤显示
+        //内伤显示，算暴击
         zzz.AttN_screen = function (zs_name, liling, zhili) {
             var abc = 0;
             switch (String(zs_name)) {
@@ -153,7 +153,7 @@ var ZhaoShi = {
         };
 
 
-        //外伤
+        //外伤,不算暴击
         zzz.AttW = function (zs_name, liling, zhili) {
             var abc = 0;
             switch (String(zs_name)) {
@@ -213,7 +213,7 @@ var ZhaoShi = {
             }
         };
 
-        //内伤
+        //内伤，不算暴击
         zzz.AttN = function (zs_name, liling, zhili) {
             var abc = 0;
             switch (String(zs_name)) {
@@ -492,6 +492,126 @@ var ZhaoShi = {
             }
             return (abc + mSX_ZhiLi.minzhongxz(zhili));
         };
+
+
+        //削衡，算暴击
+        zzz.PinHengAtt_screen = function (zs_name, liling, zhili) {
+            var abc = 0;
+            switch (String(zs_name)) {
+                case "tj_panda":
+                    abc = 5;
+                    break;
+                case "tj_tuishou":
+                    abc = 80;
+                    break;
+                case "tj_qingna":
+                    abc = 10;
+                    break;
+                case "tj_shuangfong":
+                    abc = 10;
+                    break;
+                case "tj_zhoudicui":
+                    abc = 15;
+                    break;
+                case "tj_paocui":
+                    abc = 60;
+                    break;
+                case "tj_yuanyangtui":
+                    abc = 25;
+                    break;
+                case "tj_banshuai":
+                    abc = 200;
+                    break;
+                case "tq_zhiquan":
+                    abc = 10;
+                    break;
+                case "tq_lrgouquan":
+                    abc = 20;
+                    break;
+                case "tq_sgouquan":
+                    abc = 25;
+                    break;
+                case "tq_zhouji":
+                    abc = 18;
+                    break;
+                case "tq_xizhuang":
+                    abc = 28;
+                    break;
+                case "tq_dengtui":
+                    abc = 35;
+                    break;
+                case "tq_shaotui":
+                    abc = 30;
+                    break;
+                default:
+                    break;
+            }
+            return (abc * mSX_LiLiang.gongjiJC(liling) + mSX_LiLiang.baojishanghai(liling) * mSX_ZhiLi.baojijilv(zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(zhili) - 0.05);
+        };
+
+        //todo 削衡，不算暴击
+        zzz.PinHengAtt = function (zs_name, liling, zhili) {
+            var abc = 0;
+            switch (String(zs_name)) {
+                case "tj_panda":
+                    abc = 5;
+                    break;
+                case "tj_tuishou":
+                    abc = 80;
+                    break;
+                case "tj_qingna":
+                    abc = 10;
+                    break;
+                case "tj_shuangfong":
+                    abc = 10;
+                    break;
+                case "tj_zhoudicui":
+                    abc = 15;
+                    break;
+                case "tj_paocui":
+                    abc = 60;
+                    break;
+                case "tj_yuanyangtui":
+                    abc = 25;
+                    break;
+                case "tj_banshuai":
+                    abc = 200;
+                    break;
+                case "tq_zhiquan":
+                    abc = 10;
+                    break;
+                case "tq_lrgouquan":
+                    abc = 20;
+                    break;
+                case "tq_sgouquan":
+                    abc = 25;
+                    break;
+                case "tq_zhouji":
+                    abc = 18;
+                    break;
+                case "tq_xizhuang":
+                    abc = 28;
+                    break;
+                case "tq_dengtui":
+                    abc = 35;
+                    break;
+                case "tq_shaotui":
+                    abc = 30;
+                    break;
+                default:
+                    break;
+            }
+            if(Math.floor(Math.random()*11) < mSX_ZhiLi.gongjifudongjilv(zhili)*10){
+                return (abc * mSX_LiLiang.gongjiJC(liling) * (1+ Math.floor(Math.random()*11)*0.01));
+            }else{
+                return (abc * mSX_LiLiang.gongjiJC(liling) * (1- Math.floor(Math.random()*11)*0.01));
+            }
+        };
+
+
+
+
+
 
 
         return zzz;
