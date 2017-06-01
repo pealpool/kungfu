@@ -209,6 +209,12 @@ html, body {
     color: #fff;
 }
 
+.grayButtomX {
+    background: #BEBEBE;
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    color: #fff;
+}
 .grayButtom {
     background: #a0a0a0;
     box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);
@@ -933,6 +939,16 @@ html, body {
     background: #003179;
 }
 
+.BiaoTi_Logo_cxbpX {
+    float: right;
+    width: 108px;
+    text-align: center;
+    color: #BEBEBE;
+    margin-top: -52px;
+    margin-right: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
 .BiaoTi_Logo_cxbp {
     float: right;
     width: 108px;
@@ -1202,7 +1218,6 @@ html, body {
     font-size: 16px;
     line-height: 34px;
     text-align: center;
-    color: #fff;
     width: 80px;
     height: 34px;
     border-radius: 3px;
@@ -1430,6 +1445,13 @@ html, body {
     margin-top: 18px;
 }
 
+.redButtomX {
+    box-shadow: 2px 3px 5px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    background-color: #BEBEBE;
+    text-align: center;
+    color: #fff;
+}
 .redButtom {
     box-shadow: 2px 3px 5px 0 rgba(0, 0, 0, 0.3);
     transition: background 600ms cubic-bezier(0, 0, 0.07, 1.04) 0ms;
@@ -1496,7 +1518,6 @@ html, body {
     font-size: 14px;
     line-height: 24px;
     text-align: center;
-    color: #fff;
     width: 60px;
     height: 24px;
     border-radius: 3px;

@@ -707,7 +707,7 @@ function ChuShiHua() {
     window.i_AyixuanZS = 1; //已选择招式 计数
     window.AyxZStime = 7.5; //已选招式剩余时间
     window.mymyname = $("#My_name").text();
-    window.izsxx = 0; //大圆按钮标记
+    window.ButtomPinBi = 0; //按钮暂时屏蔽，0可按，1不可按
     switch (PaiBei_A) {
         case "Taiji":
             $("#TuKuangTitle_paibie").html("太极");
@@ -1900,78 +1900,148 @@ function ChoiceFirst(a, b) {
         case "A":
             if (a <= AchoiceZS_bj && b <= BchoiceZS_bj) {
                 //判断平衡值
-                if (AchoiceZS[a].PinHengXH + 5 <= HpA.pinheng) {
+                if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng) {
                     $("#ZDwenbenWK").append("<div>A之前先手,</div>");
-                    ChoiceFirstN_A(a, b);
+                    if (ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
+                        ChoiceFirstN_A(a, b);
+                    } else {
+                        $("#ZDwenbenWK").append("<div>B调整平衡中。</div>");
+                        HadChoice_Who = "A";
+                        HadChoice_Aa = a;
+                        HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
+                    }
                 } else {
                     $("#ZDwenbenWK").append("<div>A调整平衡中。</div>");
                     //判断平衡值
-                    if (BchoiceZS[b].PinHengXH + 5 <= HpB.pinheng) {
-                        ChoiceFirstN_B(a, b);
+                    if (ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
+                        HadChoice_Who = "B";
+                        HadChoice_Bb = b;
+                        HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
                     } else {
                         $("#ZDwenbenWK").append("<div>B也调整平衡中。</div>");
+                        HadChoice_Who = "";
                     }
                 }
             } else if (a > AchoiceZS_bj && b <= BchoiceZS_bj) {
                 $("#ZDwenbenWK").append("<div>" + "A之前先手,A招式已用完" + "</div>");
-                HadChoice_Who = "B";
-                HadChoice_Bb = b;
+                if (ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
+                    HadChoice_Who = "B";
+                    HadChoice_Bb = b;
+                    HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
+                } else {
+                    $("#ZDwenbenWK").append("<div>B调整平衡中。</div>");
+                    HadChoice_Who = "";
+                }
             } else {
                 $("#ZDwenbenWK").append("<div>" + "A之前先手,B招式已用完" + "</div>");
-                HadChoice_Who = "A";
-                HadChoice_Aa = a;
+                if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng) {
+                    HadChoice_Who = "A";
+                    HadChoice_Aa = a;
+                    HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
+                } else {
+                    $("#ZDwenbenWK").append("<div>A调整平衡中。</div>");
+                    HadChoice_Who = "";
+                }
             }
             break;
         case "B":
             if (a <= AchoiceZS_bj && b <= BchoiceZS_bj) {
-                if (BchoiceZS[b].PinHengXH + 5 <= HpB.pinheng) {
+                if (ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
                     $("#ZDwenbenWK").append("<div>B之前先手,</div>");
-                    ChoiceFirstN_B(a, b);
+                    if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng) {
+                        ChoiceFirstN_B(a, b);
+                    } else {
+                        HadChoice_Who = "B";
+                        HadChoice_Bb = b;
+                        HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
+                    }
                 } else {
                     $("#ZDwenbenWK").append("<div>B调整平衡中。</div>");
                     //判断平衡值
-                    if (AchoiceZS[a].PinHengXH + 5 <= HpA.pinheng) {
-                        ChoiceFirstN_A(a, b);
+                    if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng) {
+                        HadChoice_Who = "A";
+                        HadChoice_Aa = a;
+                        HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
                     } else {
                         $("#ZDwenbenWK").append("<div>A也调整平衡中。</div>");
+                        HadChoice_Who = "";
                     }
                 }
             } else if (a > AchoiceZS_bj && b <= BchoiceZS_bj) {
                 $("#ZDwenbenWK").append("<div>" + "B之前先手,A招式已用完" + "</div>");
-                HadChoice_Who = "B";
-                HadChoice_Bb = b;
+                if (ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
+                    HadChoice_Who = "B";
+                    HadChoice_Bb = b;
+                    HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
+                } else {
+                    $("#ZDwenbenWK").append("<div>B调整平衡中。</div>");
+                    HadChoice_Who = "";
+                }
             } else {
                 $("#ZDwenbenWK").append("<div>" + "B之前先手,B招式已用完" + "</div>");
-                HadChoice_Who = "A";
-                HadChoice_Aa = a;
+                if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng) {
+                    HadChoice_Who = "A";
+                    HadChoice_Aa = a;
+                    HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
+                } else {
+                    $("#ZDwenbenWK").append("<div>A调整平衡中。</div>");
+                    HadChoice_Who = "";
+                }
             }
             break;
         case "":
             if (a <= AchoiceZS_bj && b <= BchoiceZS_bj) {
-                $("#ZDwenbenWK").append("<div>" + "之前无先手," + "A前摇为" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]).toFixed(1) + "。B前摇为" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1]).toFixed(1) + "</div>");
-                if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) > ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
-                    HadChoice_Who = "B";
-                    HadChoice_Bb = b;
-                } else if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) < ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
-                    HadChoice_Who = "A";
-                    HadChoice_Aa = a;
-                } else {
-                    if (HadChoice_Who === "A") {
+                $("#ZDwenbenWK").append("<div>" + "之前无先手," + "</div>");
+                if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng && ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
+                    $("#ZDwenbenWK").append("<div>" + "A前摇为" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]).toFixed(1) + "。B前摇为" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1]).toFixed(1) + "</div>");
+                    if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) > ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
                         HadChoice_Who = "B";
                         HadChoice_Bb = b;
-                    } else {
+                        HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
+                    } else if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) < ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
                         HadChoice_Who = "A";
                         HadChoice_Aa = a;
+                        HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
+                    } else {
+                        if (HadChoice_Who === "A") {
+                            HadChoice_Who = "B";
+                            HadChoice_Bb = b;
+                            HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
+                        } else {
+                            HadChoice_Who = "A";
+                            HadChoice_Aa = a;
+                            HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
+                        }
                     }
+                } else if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 > HpA.pinheng && ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
+                    HadChoice_Who = "B";
+                    HadChoice_Bb = b;
+                    HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
+                } else if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng && ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 > HpB.pinheng) {
+                    HadChoice_Who = "B";
+                    HadChoice_Bb = b;
+                    HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
+                } else {
+                    $("#ZDwenbenWK").append("<div>双方调整平衡中。</div>");
                 }
             } else if (a > AchoiceZS_bj && b <= BchoiceZS_bj) {
-                $("#ZDwenbenWK").append("<div>" + "之前无先手,A招式已用完" + "</div>");
-                HadChoice_Who = "B";
-                HadChoice_Bb = b;
+                $("#ZDwenbenWK").append("<div>" + "之前无先手,A不出招" + "</div>");
+                if (ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
+                    HadChoice_Who = "B";
+                    HadChoice_Bb = b;
+                    HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
+                } else {
+                    $("#ZDwenbenWK").append("<div>B调整平衡中。</div>");
+                }
             } else {
-                $("#ZDwenbenWK").append("<div>" + "之前无先手,B招式已用完" + "</div>");
-                HadChoice_Who = "A";
-                HadChoice_Aa = a;
+                $("#ZDwenbenWK").append("<div>" + "之前无先手,B不出招" + "</div>");
+                if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng) {
+                    HadChoice_Who = "A";
+                    HadChoice_Aa = a;
+                    HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
+                } else {
+                    $("#ZDwenbenWK").append("<div>A调整平衡中。</div>");
+                }
             }
             break;
     }
@@ -1983,16 +2053,20 @@ function ChoiceFirstN_A(a, b) {
     if (ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name), SX_Minjie[0]) + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) > ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
         HadChoice_Who = "B";
         HadChoice_Bb = b;
+        HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
     } else if (ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name), SX_Minjie[0]) + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) < ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
         HadChoice_Who = "A";
         HadChoice_Aa = a;
+        HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
     } else {
         if (HadChoice_Who === "A") {
             HadChoice_Who = "B";
             HadChoice_Bb = b;
+            HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
         } else {
             HadChoice_Who = "A";
             HadChoice_Aa = a;
+            HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
         }
     }
 }
@@ -2001,16 +2075,20 @@ function ChoiceFirstN_B(a, b) {
     if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) > ZSglIO.ATimeH(String(BchoiceZS[b - 1].zs_name), SX_Minjie[1]) + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
         HadChoice_Who = "B";
         HadChoice_Bb = b;
+        HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
     } else if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) < ZSglIO.ATimeH(String(BchoiceZS[b - 1].zs_name), SX_Minjie[1]) + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
         HadChoice_Who = "A";
         HadChoice_Aa = a;
+        HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
     } else {
         if (HadChoice_Who === "A") {
             HadChoice_Who = "B";
             HadChoice_Bb = b;
+            HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
         } else {
             HadChoice_Who = "A";
             HadChoice_Aa = a;
+            HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
         }
     }
 }
@@ -2047,10 +2125,12 @@ function fighting() {
     } else {
         $("#ZDwenbenWK").append("<div>" + "下回合" + "</div>");
         $("#ZDwenbenWK").append("<hr/>");
-        $("#ZDwenbenWK").scrollTop($("#ZDwenbenWK")[0].scrollHeight);
         clearInterval(window.fitXH);
         yuanbuttomCZ();
     }
+    yuanhuanPHsx();
+    $("#ZDwenbenWK").scrollTop($("#ZDwenbenWK")[0].scrollHeight);
+    // alert(HpA.pinheng + ","+HpB.pinheng);
 }
 
 //todo 伤害计算
@@ -2058,35 +2138,41 @@ function Shuanghaijisuan() {
     //输出的伤害
     var attW_Q = 0;
     var attN_Q = 0;
+    var PinHengAtt_Q = 0;
     if (HadChoice_Who === "A") {
         $("#ZDwenbenWK").append("<div class='SCd_A'>" + "A用" + AchoiceZS[HadChoice_Aa].zs_frome + "使出了【" + AchoiceZS[HadChoice_Aa].zs_CNname() + "】" + "</div>");
         //判断暴击
         if (Math.floor(Math.random() * 100 + 1) < mSX_ZhiLi.baojijilv(SX_Zhili[0]) * 100) {
             attW_Q = Math.round(ZSglIO.AttW(String(AchoiceZS[HadChoice_Aa].zs_name), SX_Liliang[0], SX_Zhili[0]) * mSX_LiLiang.baojishanghai(SX_Liliang[0]));
             attN_Q = Math.round(ZSglIO.AttN(String(AchoiceZS[HadChoice_Aa].zs_name), SX_Liliang[0], SX_Zhili[0]) * mSX_LiLiang.baojishanghai(SX_Liliang[0]));
-            $("#ZDwenbenWK").append("<div class='SCd_A'>造成暴击" + "(AttW:" + attW_Q + ",AttN:" + attN_Q + ")" + "，击向B的" + AchoiceZS[HadChoice_Aa].zs_torl + AchoiceZS[HadChoice_Aa].zs_to + "</div>");
+            PinHengAtt_Q = Math.round(ZSglIO.PinHengAtt_Q(String(AchoiceZS[HadChoice_Aa].zs_name), SX_Liliang[0], SX_Zhili[0]) * mSX_LiLiang.baojishanghai(SX_Liliang[0]));
+            $("#ZDwenbenWK").append("<div class='SCd_A'>造成暴击" + "(AttW:" + attW_Q + ",AttN:" + attN_Q + ",PinHengAtt:" + PinHengAtt_Q + ")" + "，击向B的" + AchoiceZS[HadChoice_Aa].zs_torl + AchoiceZS[HadChoice_Aa].zs_to + "</div>");
         } else {
             attW_Q = Math.round(ZSglIO.AttW(String(AchoiceZS[HadChoice_Aa].zs_name), SX_Liliang[0], SX_Zhili[0]));
             attN_Q = Math.round(ZSglIO.AttN(String(AchoiceZS[HadChoice_Aa].zs_name), SX_Liliang[0], SX_Zhili[0]));
-            $("#ZDwenbenWK").append("<div class='SCd_A'>" + "(AttW:" + attW_Q + ",AttN:" + attN_Q + ")" + "，击向B的" + AchoiceZS[HadChoice_Aa].zs_torl + AchoiceZS[HadChoice_Aa].zs_to + "</div>");
+            PinHengAtt_Q = Math.round(ZSglIO.PinHengAtt(String(AchoiceZS[HadChoice_Aa].zs_name), SX_Liliang[0], SX_Zhili[0]));
+            $("#ZDwenbenWK").append("<div class='SCd_A'>" + "(AttW:" + attW_Q + ",AttN:" + attN_Q + ",PinHengAtt:" + PinHengAtt_Q + ")" + "，击向B的" + AchoiceZS[HadChoice_Aa].zs_torl + AchoiceZS[HadChoice_Aa].zs_to + "</div>");
         }
-    } else {
+    } else if (HadChoice_Who === "B") {
         $("#ZDwenbenWK").append("<div class='SCd_B'>" + "B用" + BchoiceZS[HadChoice_Bb].zs_frome + "使出了【" + BchoiceZS[HadChoice_Bb].zs_CNname() + "】" + "</div>");
         //判断暴击
         if (Math.floor(Math.random() * 100 + 1) < mSX_ZhiLi.baojijilv(SX_Zhili[1]) * 100) {
             attW_Q = Math.round(ZSglIO.AttW(String(BchoiceZS[HadChoice_Bb].zs_name), SX_Liliang[1], SX_Zhili[1]) * mSX_LiLiang.baojishanghai(SX_Liliang[1]));
             attN_Q = Math.round(ZSglIO.AttN(String(BchoiceZS[HadChoice_Bb].zs_name), SX_Liliang[1], SX_Zhili[1]) * mSX_LiLiang.baojishanghai(SX_Liliang[1]));
-            $("#ZDwenbenWK").append("<div class='SCd_B'>造成暴击" + "(AttW:" + attW_Q + ",AttN:" + attN_Q + ")" + "，击向A的" + BchoiceZS[HadChoice_Bb].zs_torl + BchoiceZS[HadChoice_Bb].zs_to + "</div>");
+            PinHengAtt_Q = Math.round(ZSglIO.PinHengAtt(String(BchoiceZS[HadChoice_Bb].zs_name), SX_Liliang[1], SX_Zhili[1]) * mSX_LiLiang.baojishanghai(SX_Liliang[1]));
+            $("#ZDwenbenWK").append("<div class='SCd_B'>造成暴击" + "(AttW:" + attW_Q + ",AttN:" + attN_Q + ",PinHengAtt:" + PinHengAtt_Q + ")" + "，击向A的" + BchoiceZS[HadChoice_Bb].zs_torl + BchoiceZS[HadChoice_Bb].zs_to + "</div>");
         } else {
             attW_Q = Math.round(ZSglIO.AttW(String(BchoiceZS[HadChoice_Bb].zs_name), SX_Liliang[1], SX_Zhili[1]));
             attN_Q = Math.round(ZSglIO.AttN(String(BchoiceZS[HadChoice_Bb].zs_name), SX_Liliang[1], SX_Zhili[1]));
-            $("#ZDwenbenWK").append("<div class='SCd_B'>" + "(AttW:" + attW_Q + ",AttN:" + attN_Q + ")" + "，击向A的" + BchoiceZS[HadChoice_Bb].zs_torl + BchoiceZS[HadChoice_Bb].zs_to + "</div>");
+            PinHengAtt_Q = Math.round(ZSglIO.PinHengAtt(String(BchoiceZS[HadChoice_Bb].zs_name), SX_Liliang[1], SX_Zhili[1]));
+            $("#ZDwenbenWK").append("<div class='SCd_B'>" + "(AttW:" + attW_Q + ",AttN:" + attN_Q + ",PinHengAtt:" + PinHengAtt_Q + ")" + "，击向A的" + BchoiceZS[HadChoice_Bb].zs_torl + BchoiceZS[HadChoice_Bb].zs_to + "</div>");
         }
+    } else {
+        $("#ZDwenbenWK").append("<div >双方无交手</div>");
     }
-    $("#ZDwenbenWK").scrollTop($("#ZDwenbenWK")[0].scrollHeight);
 }
 
-//圆环值刷新
+//圆环值重置
 function yuanhuanPH() {
     $("#Banyuan_ZD_l").find("span").html(HpA.pinheng);
     $("#Banyuan_ZD_r").find("span").html(HpB.pinheng);
@@ -2098,8 +2184,34 @@ function yuanhuanPH() {
         $("#Banyuan_KX_xl").css("transform", "rotate(" + Math.round(-179 + (179 - 80) / mSX_Pinheng.wendinzhi(SX_Pinheng[1]) * HpA.pinheng) + "deg)");
     }
 }
+//圆环值刷新
+function yuanhuanPHsx() {
+    HpA.pinheng = HpA.pinheng + mSX_Pinheng.wendinhuifu(SX_Pinheng[0]);
+    HpB.pinheng = HpB.pinheng + mSX_Pinheng.wendinhuifu(SX_Pinheng[1]);
+    if (HpA.pinheng > mSX_Pinheng.wendinzhi(SX_Pinheng[0])) {
+        HpA.pinheng = mSX_Pinheng.wendinzhi(SX_Pinheng[0]);
+    }
+    if (HpB.pinheng > mSX_Pinheng.wendinzhi(SX_Pinheng[1])) {
+        HpB.pinheng = mSX_Pinheng.wendinzhi(SX_Pinheng[1]);
+    }
+    if (HpA.pinheng < 0) {
+        HpA.pinheng = 0;
+    }
+    if (HpB.pinheng < 0) {
+        HpB.pinheng = 0;
+    }
+    $("#Banyuan_ZD_l").find("span").html(HpA.pinheng);
+    $("#Banyuan_ZD_r").find("span").html(HpB.pinheng);
+    if (mSX_Pinheng.wendinzhi(SX_Pinheng[0]) > mSX_Pinheng.wendinzhi(SX_Pinheng[1])) {
+        $("#Banyuan_KX_xl").css("transform", "rotate(" + Math.round(-179 + (179 - 80) / mSX_Pinheng.wendinzhi(SX_Pinheng[0]) * HpA.pinheng) + "deg)");
+        $("#Banyuan_KX_xr").css("transform", "rotate(" + Math.round(179 - (179 - 80) / mSX_Pinheng.wendinzhi(SX_Pinheng[0]) * HpB.pinheng) + "deg)");
+    } else {
+        $("#Banyuan_KX_xr").css("transform", "rotate(" + Math.round(179 - (179 - 80) / mSX_Pinheng.wendinzhi(SX_Pinheng[1]) * HpB.pinheng) + "deg)");
+        $("#Banyuan_KX_xl").css("transform", "rotate(" + Math.round(-179 + (179 - 80) / mSX_Pinheng.wendinzhi(SX_Pinheng[1]) * HpA.pinheng) + "deg)");
+    }
+}
 
-//圆环标志刷新
+//圆环标志重置
 function yuanhuanBZ() {
     if (mSX_Pinheng.wendinzhi(SX_Pinheng[0]) > mSX_Pinheng.wendinzhi(SX_Pinheng[1])) {
         $("#Banyuan_line_l").css("transform", "rotate(50deg)");
@@ -2112,9 +2224,8 @@ function yuanhuanBZ() {
 
 //选择圆框重置
 function yuanbuttomCZ() {
-    $("#StartButtomYuanKuang").removeClass("yuan_02", 300).addClass("yuan_01", 100);
+    buttomLockoff();
     $("#chicoZhaoShiTianjiaK").empty();
-    izsxx = 0;
     i_AyixuanZS = 1; //已选择招式 计数
     AyxZStime = 7.5; //已选招式剩余时间
     switch (PaiBei_A) {
@@ -2460,4 +2571,26 @@ function xianshiZSshuju() {
         $("#PinHengXH7qq_B").html(tq_shaotui.PinHengXH);
 
     }
+}
+
+//战斗时锁定按钮
+function buttomLock() {
+    ButtomPinBi = 1;
+    $("#StartButtomYuanKuang").removeClass("yuan_01").addClass("yuan_02");
+    $("#BiaoTi_Logo_cxbp").attr("class", "BiaoTi_Logo_cxbpX");
+    $("#rengshuButtom").attr("class", "xiaoButtom redButtomX");
+    $("#huanrenButtom").attr("class", "xiaoButtom redButtomX");
+    $("#ckZhaoShiButtom_A").attr("class", "ckZhaoShiButtom grayButtomX");
+    $("#ckZhaoShiButtom_B").attr("class", "ckZhaoShiButtom grayButtomX");
+}
+
+//战斗后解除锁定按钮
+function buttomLockoff() {
+    ButtomPinBi = 0;
+    $("#StartButtomYuanKuang").removeClass("yuan_02").addClass("yuan_01");
+    $("#BiaoTi_Logo_cxbp").attr("class", "BiaoTi_Logo_cxbp");
+    $("#rengshuButtom").attr("class", "xiaoButtom redButtom");
+    $("#huanrenButtom").attr("class", "xiaoButtom redButtom");
+    $("#ckZhaoShiButtom_A").attr("class", "ckZhaoShiButtom grayButtom");
+    $("#ckZhaoShiButtom_B").attr("class", "ckZhaoShiButtom grayButtom");
 }

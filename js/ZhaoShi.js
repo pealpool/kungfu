@@ -206,10 +206,10 @@ var ZhaoShi = {
                     break;
             }
             //[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
-            if(Math.floor(Math.random()*11) < mSX_ZhiLi.gongjifudongjilv(zhili)*10){
-                return (abc * mSX_LiLiang.gongjiJC(liling) * (1+ Math.floor(Math.random()*11)*0.01));
-            }else{
-                return (abc * mSX_LiLiang.gongjiJC(liling) * (1- Math.floor(Math.random()*11)*0.01));
+            if (Math.floor(Math.random() * 11) < mSX_ZhiLi.gongjifudongjilv(zhili) * 10) {
+                return (abc * mSX_LiLiang.gongjiJC(liling) * (1 + Math.floor(Math.random() * 11) * 0.01));
+            } else {
+                return (abc * mSX_LiLiang.gongjiJC(liling) * (1 - Math.floor(Math.random() * 11) * 0.01));
             }
         };
 
@@ -265,10 +265,10 @@ var ZhaoShi = {
                 default:
                     break;
             }
-            if(Math.floor(Math.random()*11) < mSX_ZhiLi.gongjifudongjilv(zhili)*10){
-                return (abc * mSX_LiLiang.gongjiJC(liling) * (1+ Math.floor(Math.random()*11)*0.01));
-            }else{
-                return (abc * mSX_LiLiang.gongjiJC(liling) * (1- Math.floor(Math.random()*11)*0.01));
+            if (Math.floor(Math.random() * 11) < mSX_ZhiLi.gongjifudongjilv(zhili) * 10) {
+                return (abc * mSX_LiLiang.gongjiJC(liling) * (1 + Math.floor(Math.random() * 11) * 0.01));
+            } else {
+                return (abc * mSX_LiLiang.gongjiJC(liling) * (1 - Math.floor(Math.random() * 11) * 0.01));
             }
         };
 
@@ -549,7 +549,7 @@ var ZhaoShi = {
             return (abc * mSX_LiLiang.gongjiJC(liling) + mSX_LiLiang.baojishanghai(liling) * mSX_ZhiLi.baojijilv(zhili)) * (1 + 0.1 * mSX_ZhiLi.gongjifudongjilv(zhili) - 0.05);
         };
 
-        //todo 削衡，不算暴击
+        //削衡，不算暴击
         zzz.PinHengAtt = function (zs_name, liling, zhili) {
             var abc = 0;
             switch (String(zs_name)) {
@@ -601,17 +601,65 @@ var ZhaoShi = {
                 default:
                     break;
             }
-            if(Math.floor(Math.random()*11) < mSX_ZhiLi.gongjifudongjilv(zhili)*10){
-                return (abc * mSX_LiLiang.gongjiJC(liling) * (1+ Math.floor(Math.random()*11)*0.01));
-            }else{
-                return (abc * mSX_LiLiang.gongjiJC(liling) * (1- Math.floor(Math.random()*11)*0.01));
+            if (Math.floor(Math.random() * 11) < mSX_ZhiLi.gongjifudongjilv(zhili) * 10) {
+                return (abc * mSX_LiLiang.gongjiJC(liling) * (1 + Math.floor(Math.random() * 11) * 0.01));
+            } else {
+                return (abc * mSX_LiLiang.gongjiJC(liling) * (1 - Math.floor(Math.random() * 11) * 0.01));
             }
         };
 
-
-
-
-
+        //平衡消耗
+        zzz.PinHengXH = function (zs_name) {
+            switch (String(zs_name)) {
+                case "tj_panda":
+                    return 3;
+                    break;
+                case "tj_tuishou":
+                    return 10;
+                    break;
+                case "tj_qingna":
+                    return 5;
+                    break;
+                case "tj_shuangfong":
+                    return 5;
+                    break;
+                case "tj_zhoudicui":
+                    return 5;
+                    break;
+                case "tj_paocui":
+                    return 15;
+                    break;
+                case "tj_yuanyangtui":
+                    return 15;
+                    break;
+                case "tj_banshuai":
+                    return 15;
+                    break;
+                case "tq_zhiquan":
+                    return 3;
+                    break;
+                case "tq_lrgouquan":
+                    return 8;
+                    break;
+                case "tq_sgouquan":
+                    return 5;
+                    break;
+                case "tq_zhouji":
+                    return 8;
+                    break;
+                case "tq_xizhuang":
+                    return 10;
+                    break;
+                case "tq_dengtui":
+                    return 15;
+                    break;
+                case "tq_shaotui":
+                    return 18;
+                    break;
+                default:
+                    break;
+            }
+        };
 
 
         return zzz;
