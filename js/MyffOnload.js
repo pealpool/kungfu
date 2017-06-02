@@ -401,7 +401,6 @@ $(document).ready(function () {
                     close: {
                         text: '是',
                         btnClass: 'btn-red',
-                        //todo
                         action: function () {
                             $("#choiceBigKuang").show("fade", 300);
                             $("#aaamask").show("fade", 300);
@@ -1017,7 +1016,7 @@ $(document).ready(function () {
                     AchoiceZS[i].zs_frome = "xi";
                 }
             }
-            AchoiceZS[i].zs_to = $(this).find("select").val();
+            AchoiceZS[i].zs_to = CNtoEN_BW($(this).find("select").val());
             if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
                 if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
                     AchoiceZS[i].zs_torl = "l";

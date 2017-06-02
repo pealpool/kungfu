@@ -1469,13 +1469,13 @@ function BzsHouxuanBuwei(zsname, a) {
             }
             sjs = Math.floor(Math.random() * 4);
             if (sjs <= 0) {
-                BchoiceZS[a].zs_to = "头部";
+                BchoiceZS[a].zs_to = "tou";
             } else if (sjs <= 1) {
-                BchoiceZS[a].zs_to = "胸部";
+                BchoiceZS[a].zs_to = "xiong";
             } else if (sjs <= 2) {
-                BchoiceZS[a].zs_to = "腹部";
+                BchoiceZS[a].zs_to = "fu";
             } else if (sjs <= 3) {
-                BchoiceZS[a].zs_to = "肩关节";
+                BchoiceZS[a].zs_to = "jian";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1488,9 +1488,9 @@ function BzsHouxuanBuwei(zsname, a) {
             BchoiceZS[a].zs_frome = "shou";
             sjs = Math.floor(Math.random() * 2);
             if (sjs <= 0) {
-                BchoiceZS[a].zs_to = "胸部";
+                BchoiceZS[a].zs_to = "xiong";
             } else if (sjs <= 1) {
-                BchoiceZS[a].zs_to = "腹部";
+                BchoiceZS[a].zs_to = "fu";
             }
             break;
         case "tj_qingna":
@@ -1502,7 +1502,7 @@ function BzsHouxuanBuwei(zsname, a) {
             }
             sjs = Math.floor(Math.random() * 3);
             if (sjs <= 0) {
-                BchoiceZS[a].zs_to = "肩关节";
+                BchoiceZS[a].zs_to = "jian";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1510,7 +1510,7 @@ function BzsHouxuanBuwei(zsname, a) {
                     BchoiceZS[a].zs_torl = "r";
                 }
             } else if (sjs <= 1) {
-                BchoiceZS[a].zs_to = "手肘";
+                BchoiceZS[a].zs_to = "zhou";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1518,7 +1518,7 @@ function BzsHouxuanBuwei(zsname, a) {
                     BchoiceZS[a].zs_torl = "r";
                 }
             } else if (sjs <= 2) {
-                BchoiceZS[a].zs_to = "手腕";
+                BchoiceZS[a].zs_to = "shouwan";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1529,7 +1529,7 @@ function BzsHouxuanBuwei(zsname, a) {
             break;
         case "tj_shuangfong":
             BchoiceZS[a].zs_frome = "shou";
-            BchoiceZS[a].zs_to = "头部";
+            BchoiceZS[a].zs_to = "tou";
             break;
         case "tj_zhoudicui":
             sjs = Math.floor(Math.random() * 2);
@@ -1540,11 +1540,11 @@ function BzsHouxuanBuwei(zsname, a) {
             }
             sjs = Math.floor(Math.random() * 4);
             if (sjs <= 0) {
-                BchoiceZS[a].zs_to = "胸部";
+                BchoiceZS[a].zs_to = "xiong";
             } else if (sjs <= 1) {
-                BchoiceZS[a].zs_to = "腹部";
+                BchoiceZS[a].zs_to = "fu";
             } else if (sjs <= 2) {
-                BchoiceZS[a].zs_to = "腰部";
+                BchoiceZS[a].zs_to = "yao";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1552,7 +1552,7 @@ function BzsHouxuanBuwei(zsname, a) {
                     BchoiceZS[a].zs_torl = "r";
                 }
             } else if (sjs <= 3) {
-                BchoiceZS[a].zs_to = "大腿";
+                BchoiceZS[a].zs_to = "datui";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1565,11 +1565,11 @@ function BzsHouxuanBuwei(zsname, a) {
             BchoiceZS[a].zs_frome = "shou";
             sjs = Math.floor(Math.random() * 3);
             if (sjs <= 0) {
-                BchoiceZS[a].zs_to = "胸部";
+                BchoiceZS[a].zs_to = "xiong";
             } else if (sjs <= 1) {
-                BchoiceZS[a].zs_to = "腹部";
+                BchoiceZS[a].zs_to = "fu";
             } else if (sjs <= 2) {
-                BchoiceZS[a].zs_to = "肩关节";
+                BchoiceZS[a].zs_to = "jian";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1587,11 +1587,11 @@ function BzsHouxuanBuwei(zsname, a) {
             }
             sjs = Math.floor(Math.random() * 3);
             if (sjs <= 0) {
-                BchoiceZS[a].zs_to = "头部";
+                BchoiceZS[a].zs_to = "tou";
             } else if (sjs <= 1) {
-                BchoiceZS[a].zs_to = "胸部";
+                BchoiceZS[a].zs_to = "xiong";
             } else if (sjs <= 2) {
-                BchoiceZS[a].zs_to = "腹部";
+                BchoiceZS[a].zs_to = "fu";
             }
             break;
         case "tj_banshuai":
@@ -1603,7 +1603,7 @@ function BzsHouxuanBuwei(zsname, a) {
             }
             sjs = Math.floor(Math.random() * 4);
             if (sjs <= 0) {
-                BchoiceZS[a].zs_to = "手肘";
+                BchoiceZS[a].zs_to = "zhou";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1611,7 +1611,7 @@ function BzsHouxuanBuwei(zsname, a) {
                     BchoiceZS[a].zs_torl = "r";
                 }
             } else if (sjs <= 1) {
-                BchoiceZS[a].zs_to = "手腕";
+                BchoiceZS[a].zs_to = "shouwan";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1619,7 +1619,7 @@ function BzsHouxuanBuwei(zsname, a) {
                     BchoiceZS[a].zs_torl = "r";
                 }
             } else if (sjs <= 2) {
-                BchoiceZS[a].zs_to = "膝关节";
+                BchoiceZS[a].zs_to = "xi";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1627,7 +1627,7 @@ function BzsHouxuanBuwei(zsname, a) {
                     BchoiceZS[a].zs_torl = "r";
                 }
             } else if (sjs <= 3) {
-                BchoiceZS[a].zs_to = "踝关节";
+                BchoiceZS[a].zs_to = "huai";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1645,13 +1645,13 @@ function BzsHouxuanBuwei(zsname, a) {
             }
             sjs = Math.floor(Math.random() * 4);
             if (sjs <= 0) {
-                BchoiceZS[a].zs_to = "头部";
+                BchoiceZS[a].zs_to = "tou";
             } else if (sjs <= 1) {
-                BchoiceZS[a].zs_to = "胸部";
+                BchoiceZS[a].zs_to = "xiong";
             } else if (sjs <= 2) {
-                BchoiceZS[a].zs_to = "腹部";
+                BchoiceZS[a].zs_to = "fu";
             } else if (sjs <= 3) {
-                BchoiceZS[a].zs_to = "肩关节";
+                BchoiceZS[a].zs_to = "jian";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1669,9 +1669,9 @@ function BzsHouxuanBuwei(zsname, a) {
             }
             sjs = Math.floor(Math.random() * 4);
             if (sjs <= 0) {
-                BchoiceZS[a].zs_to = "头部";
+                BchoiceZS[a].zs_to = "tou";
             } else if (sjs <= 1) {
-                BchoiceZS[a].zs_to = "腰部";
+                BchoiceZS[a].zs_to = "yao";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1679,7 +1679,7 @@ function BzsHouxuanBuwei(zsname, a) {
                     BchoiceZS[a].zs_torl = "r";
                 }
             } else if (sjs <= 2) {
-                BchoiceZS[a].zs_to = "肩关节";
+                BchoiceZS[a].zs_to = "jian";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1687,7 +1687,7 @@ function BzsHouxuanBuwei(zsname, a) {
                     BchoiceZS[a].zs_torl = "r";
                 }
             } else if (sjs <= 3) {
-                BchoiceZS[a].zs_to = "上臂";
+                BchoiceZS[a].zs_to = "shangbi";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1705,13 +1705,13 @@ function BzsHouxuanBuwei(zsname, a) {
             }
             sjs = Math.floor(Math.random() * 4);
             if (sjs <= 0) {
-                BchoiceZS[a].zs_to = "头部";
+                BchoiceZS[a].zs_to = "tou";
             } else if (sjs <= 1) {
-                BchoiceZS[a].zs_to = "胸部";
+                BchoiceZS[a].zs_to = "xiong";
             } else if (sjs <= 2) {
-                BchoiceZS[a].zs_to = "腹部";
+                BchoiceZS[a].zs_to = "fu";
             } else if (sjs <= 3) {
-                BchoiceZS[a].zs_to = "肩关节";
+                BchoiceZS[a].zs_to = "jian";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1729,11 +1729,11 @@ function BzsHouxuanBuwei(zsname, a) {
             }
             sjs = Math.floor(Math.random() * 4);
             if (sjs <= 0) {
-                BchoiceZS[a].zs_to = "头部";
+                BchoiceZS[a].zs_to = "tou";
             } else if (sjs <= 1) {
-                BchoiceZS[a].zs_to = "胸部";
+                BchoiceZS[a].zs_to = "xiong";
             } else if (sjs <= 2) {
-                BchoiceZS[a].zs_to = "肩关节";
+                BchoiceZS[a].zs_to = "jian";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1741,7 +1741,7 @@ function BzsHouxuanBuwei(zsname, a) {
                     BchoiceZS[a].zs_torl = "r";
                 }
             } else if (sjs <= 3) {
-                BchoiceZS[a].zs_to = "上臂";
+                BchoiceZS[a].zs_to = "shangbi";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1759,11 +1759,11 @@ function BzsHouxuanBuwei(zsname, a) {
             }
             sjs = Math.floor(Math.random() * 3);
             if (sjs <= 0) {
-                BchoiceZS[a].zs_to = "头部";
+                BchoiceZS[a].zs_to = "tou";
             } else if (sjs <= 1) {
-                BchoiceZS[a].zs_to = "胸部";
+                BchoiceZS[a].zs_to = "xiong";
             } else if (sjs <= 2) {
-                BchoiceZS[a].zs_to = "腹部";
+                BchoiceZS[a].zs_to = "fu";
             }
             break;
         case "tq_dengtui":
@@ -1775,13 +1775,13 @@ function BzsHouxuanBuwei(zsname, a) {
             }
             sjs = Math.floor(Math.random() * 6);
             if (sjs <= 0) {
-                BchoiceZS[a].zs_to = "头部";
+                BchoiceZS[a].zs_to = "tou";
             } else if (sjs <= 1) {
-                BchoiceZS[a].zs_to = "胸部";
+                BchoiceZS[a].zs_to = "xiong";
             } else if (sjs <= 2) {
-                BchoiceZS[a].zs_to = "腹部";
+                BchoiceZS[a].zs_to = "fu";
             } else if (sjs <= 3) {
-                BchoiceZS[a].zs_to = "大腿";
+                BchoiceZS[a].zs_to = "datui";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1789,7 +1789,7 @@ function BzsHouxuanBuwei(zsname, a) {
                     BchoiceZS[a].zs_torl = "r";
                 }
             } else if (sjs <= 4) {
-                BchoiceZS[a].zs_to = "小腿";
+                BchoiceZS[a].zs_to = "xiaotui";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1797,7 +1797,7 @@ function BzsHouxuanBuwei(zsname, a) {
                     BchoiceZS[a].zs_torl = "r";
                 }
             } else if (sjs <= 5) {
-                BchoiceZS[a].zs_to = "膝关节";
+                BchoiceZS[a].zs_to = "xi";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1815,11 +1815,11 @@ function BzsHouxuanBuwei(zsname, a) {
             }
             sjs = Math.floor(Math.random() * 10);
             if (sjs <= 0) {
-                BchoiceZS[a].zs_to = "头部";
+                BchoiceZS[a].zs_to = "tou";
             } else if (sjs <= 1) {
-                BchoiceZS[a].zs_to = "腰部";
+                BchoiceZS[a].zs_to = "yao";
             } else if (sjs <= 2) {
-                BchoiceZS[a].zs_to = "肩关节";
+                BchoiceZS[a].zs_to = "jian";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1827,7 +1827,7 @@ function BzsHouxuanBuwei(zsname, a) {
                     BchoiceZS[a].zs_torl = "r";
                 }
             } else if (sjs <= 3) {
-                BchoiceZS[a].zs_to = "上臂";
+                BchoiceZS[a].zs_to = "shangbi";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1835,7 +1835,7 @@ function BzsHouxuanBuwei(zsname, a) {
                     BchoiceZS[a].zs_torl = "r";
                 }
             } else if (sjs <= 4) {
-                BchoiceZS[a].zs_to = "前臂";
+                BchoiceZS[a].zs_to = "qianbi";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1843,7 +1843,7 @@ function BzsHouxuanBuwei(zsname, a) {
                     BchoiceZS[a].zs_torl = "r";
                 }
             } else if (sjs <= 5) {
-                BchoiceZS[a].zs_to = "手肘";
+                BchoiceZS[a].zs_to = "zhou";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1851,7 +1851,7 @@ function BzsHouxuanBuwei(zsname, a) {
                     BchoiceZS[a].zs_torl = "r";
                 }
             } else if (sjs <= 6) {
-                BchoiceZS[a].zs_to = "手腕";
+                BchoiceZS[a].zs_to = "shouwan";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1859,7 +1859,7 @@ function BzsHouxuanBuwei(zsname, a) {
                     BchoiceZS[a].zs_torl = "r";
                 }
             } else if (sjs <= 7) {
-                BchoiceZS[a].zs_to = "大腿";
+                BchoiceZS[a].zs_to = "datui";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1867,7 +1867,7 @@ function BzsHouxuanBuwei(zsname, a) {
                     BchoiceZS[a].zs_torl = "r";
                 }
             } else if (sjs <= 8) {
-                BchoiceZS[a].zs_to = "小腿";
+                BchoiceZS[a].zs_to = "xiaotui";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1875,7 +1875,7 @@ function BzsHouxuanBuwei(zsname, a) {
                     BchoiceZS[a].zs_torl = "r";
                 }
             } else if (sjs <= 9) {
-                BchoiceZS[a].zs_to = "膝关节";
+                BchoiceZS[a].zs_to = "xi";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1883,7 +1883,7 @@ function BzsHouxuanBuwei(zsname, a) {
                     BchoiceZS[a].zs_torl = "r";
                 }
             } else if (sjs <= 10) {
-                BchoiceZS[a].zs_to = "踝关节";
+                BchoiceZS[a].zs_to = "huai";
                 sjs = Math.floor(Math.random() * 2);
                 if (sjs) {
                     BchoiceZS[a].zs_torl = "l";
@@ -1936,7 +1936,6 @@ function ChoiceFirst(a, b) {
                     HadChoice_Who = "";
                 }
             } else if (a <= AchoiceZS_bj && b > BchoiceZS_bj) {
-                //todo bug
                 $("#ZDwenbenWK").append("<div>" + "A之前先手,B招式已用完" + "</div>");
                 if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng) {
                     HadChoice_Who = "A";
@@ -2101,7 +2100,7 @@ function ChoiceFirstN_B(a, b) {
 //战斗总框架
 //todo fighting
 function fighting() {
-    if (DJStime >0){
+    if (DJStime > 0) {
         if (fig_xix < 1) {
             ChoiceFirst(fig_a, fig_b);
             if (HadChoice_Who === "A") {
@@ -2111,7 +2110,7 @@ function fighting() {
                     AchoiceZS[HadChoice_Aa].zs_name = "";
                     AchoiceZS[HadChoice_Aa].ATimeH = 99;
                 }
-                Shuanghaijisuan();
+                fighting_n();
             } else if (HadChoice_Who === "B") {
                 if (fig_b <= BchoiceZS_bj) {
                     fig_b++;
@@ -2119,7 +2118,7 @@ function fighting() {
                     BchoiceZS[HadChoice_Bb].zs_name = "";
                     BchoiceZS[HadChoice_Bb].ATimeH = 99;
                 }
-                Shuanghaijisuan();
+                fighting_n();
             } else {
                 $("#ZDwenbenWK").append("<div>双方对峙中。</div>");
             }
@@ -2133,7 +2132,7 @@ function fighting() {
             clearInterval(window.fitXH);
             yuanbuttomCZ();
         }
-    }else {
+    } else {
         $("#ZDwenbenWK").append("<div>时间到，回合结束</div><div><hr/></div>");
         clearInterval(window.fitXH);
         yuanbuttomCZ();
@@ -2143,9 +2142,20 @@ function fighting() {
     $("#ZDwenbenWK").scrollTop($("#ZDwenbenWK")[0].scrollHeight);
     // alert(HpA.pinheng + ","+HpB.pinheng);
 }
+function fighting_n() {
+    shuanghaijisuan();
+    if (shanbijisuan()) {
+        //闪避失败
+        if (fangyujisuan()) {
+            //防御失败
+
+        }
+    }
+}
+
 
 //todo 伤害计算
-function Shuanghaijisuan() {
+function shuanghaijisuan() {
     //输出的伤害
     var attW_Q = 0;
     var attN_Q = 0;
@@ -2164,7 +2174,7 @@ function Shuanghaijisuan() {
             PinHengAtt_Q = Math.round(ZSglIO.PinHengAtt(String(AchoiceZS[HadChoice_Aa].zs_name), SX_Liliang[0], SX_Zhili[0]));
             $("#ZDwenbenWK").append("<div class='SCd_A'>" + "(AttW:" + attW_Q + ",AttN:" + attN_Q + ",PinHengAtt:" + PinHengAtt_Q + ")" + "，击向B的" + AchoiceZS[HadChoice_Aa].zs_torl + AchoiceZS[HadChoice_Aa].zs_to + "</div>");
         }
-        DJStime = DJStime - (ZSglIO.ATimeQ(String(AchoiceZS[HadChoice_Aa].zs_name), SX_Minjie[0])).toFixed(1) - (ZSglIO.ATime(String(AchoiceZS[HadChoice_Aa].zs_name), SX_Minjie[0])).toFixed(1);
+        DJStime = DJStime - (ZSglIO.ATimeQ(AchoiceZS[HadChoice_Aa].zs_name, SX_Minjie[0])).toFixed(1) - (ZSglIO.ATime(AchoiceZS[HadChoice_Aa].zs_name, SX_Minjie[0])).toFixed(1);
     } else if (HadChoice_Who === "B") {
         $("#ZDwenbenWK").append("<div class='SCd_B'>" + "B用" + BchoiceZS[HadChoice_Bb].zs_frome + "使出了【" + BchoiceZS[HadChoice_Bb].zs_CNname() + "】" + "</div>");
         //判断暴击
@@ -2179,10 +2189,57 @@ function Shuanghaijisuan() {
             PinHengAtt_Q = Math.round(ZSglIO.PinHengAtt(String(BchoiceZS[HadChoice_Bb].zs_name), SX_Liliang[1], SX_Zhili[1]));
             $("#ZDwenbenWK").append("<div class='SCd_B'>" + "(AttW:" + attW_Q + ",AttN:" + attN_Q + ",PinHengAtt:" + PinHengAtt_Q + ")" + "，击向A的" + BchoiceZS[HadChoice_Bb].zs_torl + BchoiceZS[HadChoice_Bb].zs_to + "</div>");
         }
-        DJStime = DJStime - (ZSglIO.ATimeQ(String(BchoiceZS[HadChoice_Bb].zs_name), SX_Minjie[1])).toFixed(1) - (ZSglIO.ATime(String(BchoiceZS[HadChoice_Bb].zs_name), SX_Minjie[1])).toFixed(1);
+        DJStime = DJStime - (ZSglIO.ATimeQ(BchoiceZS[HadChoice_Bb].zs_name, SX_Minjie[1])).toFixed(1) - (ZSglIO.ATime(BchoiceZS[HadChoice_Bb].zs_name, SX_Minjie[1])).toFixed(1);
     } else {
-        $("#ZDwenbenWK").append("<div >双方无交手</div>");
+        alert("X98fg4fg");
     }
+}
+
+//闪避计算
+function shanbijisuan() {
+    var a = 1;//0为闪避
+    if (HadChoice_Who === "A") {
+        if (HpB.pinheng >= 5) {
+            //[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
+            if (Math.floor(Math.random() * 101) <= Math.round(mSX_Minjie.SanBi(AchoiceZS[HadChoice_Aa].zs_to, SX_Minjie[1]) * 100)) {
+                $("#ZDwenbenWK").append("<div class='SCd_B'>B闪避了</div>");
+                a = 0;
+            }
+        } else {
+            $("#ZDwenbenWK").append("<div class='SCd_B'>B脚下踉跄，不能闪避</div>");
+        }
+    } else if (HadChoice_Who === "B") {
+        if (HpA.pinheng >= 5) {
+            //[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
+            if (Math.floor(Math.random() * 101) <= Math.round(mSX_Minjie.SanBi(BchoiceZS[HadChoice_Bb].zs_to, SX_Minjie[0]) * 100)) {
+                $("#ZDwenbenWK").append("<div class='SCd_A'>A闪避了</div>");
+                a = 0;
+            }
+        } else {
+            $("#ZDwenbenWK").append("<div class='SCd_B'>A脚下踉跄，不能闪避</div>");
+        }
+    }
+    return a;
+}
+
+//todo 防御计算
+//双手防御头，平分伤害
+function fangyujisuan() {
+    var a = 1;//0为防御
+    if (HadChoice_Who === "A") {
+        //[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
+        if (Math.floor(Math.random() * 101) <= Math.round(mSX_Tizhi.FangYuJiLv(AchoiceZS[HadChoice_Aa].zs_to, SX_Tizhi[1]) * 100)) {
+            $("#ZDwenbenWK").append("<div class='SCd_B'>B防御了</div>");
+            a = 0;
+        }
+    } else if (HadChoice_Who === "B") {
+        //[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
+        if (Math.floor(Math.random() * 101) <= Math.round(mSX_Tizhi.FangYuJiLv(BchoiceZS[HadChoice_Bb].zs_to, SX_Tizhi[0]) * 100)) {
+            $("#ZDwenbenWK").append("<div class='SCd_A'>A防御了</div>");
+            a = 0;
+        }
+    }
+    return a;
 }
 
 //圆环值重置
@@ -2608,4 +2665,38 @@ function buttomLockoff() {
     $("#huanrenButtom").attr("class", "xiaoButtom redButtom");
     $("#ckZhaoShiButtom_A").attr("class", "ckZhaoShiButtom grayButtom");
     $("#ckZhaoShiButtom_B").attr("class", "ckZhaoShiButtom grayButtom");
+}
+
+//部位，英汉转换
+function CNtoEN_BW(a) {
+    switch (String(a)) {
+        case "头部":
+            return "tou";
+        case "胸部":
+            return "xiong";
+        case "腹部":
+            return "fu";
+        case "腰部":
+            return "yao";
+        case "肩关节":
+            return "jian";
+        case "上臂":
+            return "shangbi";
+        case "手肘":
+            return "zhou";
+        case "前臂":
+            return "qianbi";
+        case "手腕":
+            return "shouwan";
+        case "大腿":
+            return "datui";
+        case "膝关节":
+            return "xi";
+        case "小腿":
+            return "xiaotui";
+        case "踝关节":
+            return "huai";
+        default:
+            alert("X52455223f");
+    }
 }
