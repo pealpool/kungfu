@@ -409,6 +409,7 @@ $(document).ready(function () {
                             $("#chicoZhaoShiTianjiaK").empty();
                             $("#ZDwenbenWK").empty();
                             //zschushihua();
+                            huihe_i = 1;
                             ChuShiHua();
                             $("#StartButtomYuanKuang").removeClass("yuan_02").addClass("yuan_01");
                             $("#xianshiZS_KD").hide();
@@ -1030,7 +1031,8 @@ $(document).ready(function () {
         });
         AchoiceZS_bj = i - 1;
         buttomLock();
-        $("#StartButtomYuanKuang").html("<span id='ds_time'>" + (DJStime).toFixed(1) + "</span>");
+        $("#StartButtomYuanKuang").html("<div class='ds_time_TD'><span>第</span> <span class='ds_time_TX' id='huiheclass'>" + huihe_i + "</span> <span>回</span></div><div class='ds_time'><span id='ds_time'>" + (DJStime).toFixed(1) + "</span> <span class='ds_time_s'>s</span></div>");
+        huihe_i++;
         $("#NeiRongchoiceZSdaK").hide("drop", {
             direction: 'up'
         }, 200);
@@ -2848,6 +2850,7 @@ $(document).ready(function () {
                 });
             });
             // $("#ZDwenbenWK").empty();
+            huihe_i = 1;
             ChuShiHua();
         }
     });
@@ -2982,6 +2985,7 @@ $(document).ready(function () {
                 });
             });
             // $("#ZDwenbenWK").empty();
+            huihe_i = 1;
             ChuShiHua();
         }
     });

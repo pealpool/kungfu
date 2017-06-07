@@ -711,6 +711,9 @@ function ChuShiHua() {
     //倒计时
     window.DJS = 15;
     window.DJStime = DJS;
+    //第几回合
+    window.huihe_i = 1;
+    $("#huiheclass").html(huihe_i);
     switch (PaiBei_A) {
         case "Taiji":
             $("#TuKuangTitle_paibie").html("太极");
@@ -2294,10 +2297,10 @@ function yuanhuanBZ() {
     }
 }
 
-//选择圆框重置
+//todo 选择圆框重置
 function yuanbuttomCZ() {
     DJStime = DJS;
-    $("#StartButtomYuanKuang").html("选择招式");
+    $("#StartButtomYuanKuang").html("<div class='huiheclass'><div class='huiheclass01'>第</div><div class='huiheclass02' id='huiheclass'>" + huihe_i + "</div><div class='huiheclass01'>回</div></div><div id='StartButtom_Nxzzs'>选择招式</div>");
     buttomLockoff();
     $("#chicoZhaoShiTianjiaK").empty();
     i_AyixuanZS = 1; //已选择招式 计数
