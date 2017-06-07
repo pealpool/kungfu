@@ -757,6 +757,198 @@ function ChuShiHua() {
     yuanhuanPH();
 }
 
+//HP刷新
+function HPshuaxin() {
+    $("#Hp_A_tou").html(HpA.tou);
+    $("#Hp_A_xiong").html(HpA.xiong);
+    $("#Hp_A_fu").html(HpA.fu);
+    $("#Hp_A_yaoL").html(HpA.yaoL);
+    $("#Hp_A_yaoR").html(HpA.yaoR);
+    $("#Hp_A_jianL").html(HpA.jianL);
+    $("#Hp_A_jianR").html(HpA.jianR);
+    $("#Hp_A_shangbiL").html(HpA.shangbiL);
+    $("#Hp_A_shangbiR").html(HpA.shangbiR);
+    $("#Hp_A_qianbiL").html(HpA.qianbiL);
+    $("#Hp_A_qianbiR").html(HpA.qianbiR);
+    $("#Hp_A_zhouL").html(HpA.zhouL);
+    $("#Hp_A_zhouR").html(HpA.zhouR);
+    $("#Hp_A_shouwanL").html(HpA.shouwanL);
+    $("#Hp_A_shouwanR").html(HpA.shouwanR);
+    $("#Hp_A_datuiL").html(HpA.datuiL);
+    $("#Hp_A_datuiR").html(HpA.datuiR);
+    $("#Hp_A_xiaotuiL").html(HpA.xiaotuiL);
+    $("#Hp_A_xiaotuiR").html(HpA.xiaotuiR);
+    $("#Hp_A_xiL").html(HpA.xiL);
+    $("#Hp_A_xiR").html(HpA.xiR);
+    $("#Hp_A_huaiL").html(HpA.huaiL);
+    $("#Hp_A_huaiR").html(HpA.huaiR);
+
+    $("#Hp_B_tou").html(HpB.tou);
+    $("#Hp_B_xiong").html(HpB.xiong);
+    $("#Hp_B_fu").html(HpB.fu);
+    $("#Hp_B_yaoL").html(HpB.yaoL);
+    $("#Hp_B_yaoR").html(HpB.yaoR);
+    $("#Hp_B_jianL").html(HpB.jianL);
+    $("#Hp_B_jianR").html(HpB.jianR);
+    $("#Hp_B_shangbiL").html(HpB.shangbiL);
+    $("#Hp_B_shangbiR").html(HpB.shangbiR);
+    $("#Hp_B_qianbiL").html(HpB.qianbiL);
+    $("#Hp_B_qianbiR").html(HpB.qianbiR);
+    $("#Hp_B_zhouL").html(HpB.zhouL);
+    $("#Hp_B_zhouR").html(HpB.zhouR);
+    $("#Hp_B_shouwanL").html(HpB.shouwanL);
+    $("#Hp_B_shouwanR").html(HpB.shouwanR);
+    $("#Hp_B_datuiL").html(HpB.datuiL);
+    $("#Hp_B_datuiR").html(HpB.datuiR);
+    $("#Hp_B_xiaotuiL").html(HpB.xiaotuiL);
+    $("#Hp_B_xiaotuiR").html(HpB.xiaotuiR);
+    $("#Hp_B_xiL").html(HpB.xiL);
+    $("#Hp_B_xiR").html(HpB.xiR);
+    $("#Hp_B_huaiL").html(HpB.huaiL);
+    $("#Hp_B_huaiR").html(HpB.huaiR);
+
+    $("#progressbar_A_tou").progressbar({
+        value: Math.round(HpA.tou / HpA.Max_tou * 100)
+    });
+    $("#progressbar_A_xiong").progressbar({
+        value: Math.round(HpA.xiong / HpA.Max_xiong * 100)
+    });
+    $("#progressbar_A_fu").progressbar({
+        value: Math.round(HpA.fu / HpA.Max_fu * 100)
+    });
+    $("#progressbar_A_yaoL").progressbar({
+        value: Math.round(HpA.yaoL / HpA.Max_yaoL * 100)
+    });
+    $("#progressbar_A_yaoR").progressbar({
+        value: Math.round(HpA.yaoR / HpA.Max_yaoR * 100)
+    });
+    $("#progressbar_A_jianL").progressbar({
+        value: Math.round(HpA.jianL / HpA.Max_jianL * 100)
+    });
+    $("#progressbar_A_jianR").progressbar({
+        value: Math.round(HpA.jianR / HpA.Max_jianR * 100)
+    });
+    $("#progressbar_A_shangbiL").progressbar({
+        value: Math.round(HpA.shangbiL / HpA.Max_shangbiL * 100)
+    });
+    $("#progressbar_A_shangbiR").progressbar({
+        value: Math.round(HpA.shangbiR / HpA.Max_shangbiR * 100)
+    });
+    $("#progressbar_A_qianbiL").progressbar({
+        value: Math.round(HpA.qianbiL / HpA.Max_qianbiL * 100)
+    });
+    $("#progressbar_A_qianbiR").progressbar({
+        value: Math.round(HpA.qianbiR / HpA.Max_qianbiR * 100)
+    });
+    $("#progressbar_A_zhouL").progressbar({
+        value: Math.round(HpA.zhouL / HpA.Max_zhouL * 100)
+    });
+    $("#progressbar_A_zhouR").progressbar({
+        value: Math.round(HpA.zhouR / HpA.Max_zhouR * 100)
+    });
+    $("#progressbar_A_shouwanL").progressbar({
+        value: Math.round(HpA.shouwanL / HpA.Max_shouwanL * 100)
+    });
+    $("#progressbar_A_shouwanR").progressbar({
+        value: Math.round(HpA.shouwanR / HpA.Max_shouwanR * 100)
+    });
+    $("#progressbar_A_datuiL").progressbar({
+        value: Math.round(HpA.datuiL / HpA.Max_datuiL * 100)
+    });
+    $("#progressbar_A_datuiR").progressbar({
+        value: Math.round(HpA.datuiR / HpA.Max_datuiR * 100)
+    });
+    $("#progressbar_A_xiaotuiL").progressbar({
+        value: Math.round(HpA.xiaotuiL / HpA.Max_xiaotuiL * 100)
+    });
+    $("#progressbar_A_xiaotuiR").progressbar({
+        value: Math.round(HpA.xiaotuiR / HpA.Max_xiaotuiR * 100)
+    });
+    $("#progressbar_A_xiL").progressbar({
+        value: Math.round(HpA.xiL / HpA.Max_xiL * 100)
+    });
+    $("#progressbar_A_xiR").progressbar({
+        value: Math.round(HpA.xiR / HpA.Max_xiR * 100)
+    });
+    $("#progressbar_A_huaiL").progressbar({
+        value: Math.round(HpA.huaiL / HpA.Max_huaiL * 100)
+    });
+    $("#progressbar_A_huaiR").progressbar({
+        value: Math.round(HpA.huaiR / HpA.Max_huaiR * 100)
+    });
+
+
+    $("#progressbar_B_tou").progressbar({
+        value: Math.round(HpB.tou / HpB.Max_tou * 100)
+    });
+    $("#progressbar_B_xiong").progressbar({
+        value: Math.round(HpB.xiong / HpB.Max_xiong * 100)
+    });
+    $("#progressbar_B_fu").progressbar({
+        value: Math.round(HpB.fu / HpB.Max_fu * 100)
+    });
+    $("#progressbar_B_yaoL").progressbar({
+        value: Math.round(HpB.yaoL / HpB.Max_yaoL * 100)
+    });
+    $("#progressbar_B_yaoR").progressbar({
+        value: Math.round(HpB.yaoR / HpB.Max_yaoR * 100)
+    });
+    $("#progressbar_B_jianL").progressbar({
+        value: Math.round(HpB.jianL / HpB.Max_jianL * 100)
+    });
+    $("#progressbar_B_jianR").progressbar({
+        value: Math.round(HpB.jianR / HpB.Max_jianR * 100)
+    });
+    $("#progressbar_B_shangbiL").progressbar({
+        value: Math.round(HpB.shangbiL / HpB.Max_shangbiL * 100)
+    });
+    $("#progressbar_B_shangbiR").progressbar({
+        value: Math.round(HpB.shangbiR / HpB.Max_shangbiR * 100)
+    });
+    $("#progressbar_B_qianbiL").progressbar({
+        value: Math.round(HpB.qianbiL / HpB.Max_qianbiL * 100)
+    });
+    $("#progressbar_B_qianbiR").progressbar({
+        value: Math.round(HpB.qianbiR / HpB.Max_qianbiR * 100)
+    });
+    $("#progressbar_B_zhouL").progressbar({
+        value: Math.round(HpB.zhouL / HpB.Max_zhouL * 100)
+    });
+    $("#progressbar_B_zhouR").progressbar({
+        value: Math.round(HpB.zhouR / HpB.Max_zhouR * 100)
+    });
+    $("#progressbar_B_shouwanL").progressbar({
+        value: Math.round(HpB.shouwanL / HpB.Max_shouwanL * 100)
+    });
+    $("#progressbar_B_shouwanR").progressbar({
+        value: Math.round(HpB.shouwanR / HpB.Max_shouwanR * 100)
+    });
+    $("#progressbar_B_datuiL").progressbar({
+        value: Math.round(HpB.datuiL / HpB.Max_datuiL * 100)
+    });
+    $("#progressbar_B_datuiR").progressbar({
+        value: Math.round(HpB.datuiR / HpB.Max_datuiR * 100)
+    });
+    $("#progressbar_B_xiaotuiL").progressbar({
+        value: Math.round(HpB.xiaotuiL / HpB.Max_xiaotuiL * 100)
+    });
+    $("#progressbar_B_xiaotuiR").progressbar({
+        value: Math.round(HpB.xiaotuiR / HpB.Max_xiaotuiR * 100)
+    });
+    $("#progressbar_B_xiL").progressbar({
+        value: Math.round(HpB.xiL / HpB.Max_xiL * 100)
+    });
+    $("#progressbar_B_xiR").progressbar({
+        value: Math.round(HpB.xiR / HpB.Max_xiR * 100)
+    });
+    $("#progressbar_B_huaiL").progressbar({
+        value: Math.round(HpB.huaiL / HpB.Max_huaiL * 100)
+    });
+    $("#progressbar_B_huaiR").progressbar({
+        value: Math.round(HpB.huaiR / HpB.Max_huaiR * 100)
+    });
+}
+
 //HP重置
 function HPchongzhi() {
     var HpX = Hp.createNew();
@@ -1458,7 +1650,7 @@ function BshujiZS() {
     //alert(BchoiceZS[0].zs_name + "\n" + BchoiceZS[1].zs_name + "\n" + BchoiceZS[2].zs_name + "\n" + BchoiceZS[3].zs_name + "\n" + BchoiceZS[4].zs_name);
 }
 
-//B随机左右手与进攻部位
+//todo B随机左右手与进攻部位
 function BzsHouxuanBuwei(zsname, a) {
     var sjs = 0;
     switch (zsname) {
@@ -2141,6 +2333,7 @@ function fighting() {
         yuanbuttomCZ();
     }
     yuanhuanPHsx();
+    HPshuaxin();
     $("#ds_time").html((DJStime).toFixed(1));
     $("#ZDwenbenWK").scrollTop($("#ZDwenbenWK")[0].scrollHeight);
     // alert(HpA.pinheng + ","+HpB.pinheng);
@@ -2151,7 +2344,277 @@ function fighting_n() {
         //闪避失败
         if (fangyujisuan()) {
             //防御失败
-
+            if (HadChoice_Who === "A") {
+                switch (AchoiceZS[HadChoice_Aa].zs_to) {
+                    case "tou":
+                        HpB.tou = HpB.tou - attW_Q - attN_Q;
+                        break;
+                    case "xiong":
+                        HpB.xiong = HpB.xiong - attW_Q - attN_Q;
+                        break;
+                    case "fu":
+                        HpB.fu = HpB.fu - attW_Q - attN_Q;
+                        break;
+                    case "yao":
+                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
+                            case "l":
+                                HpB.yaol = HpB.yaol - attW_Q - attN_Q;
+                                break;
+                            case "r":
+                                HpB.yaor = HpB.yaor - attW_Q - attN_Q;
+                                break;
+                            default:
+                                alert("357fvd501");
+                        }
+                        break;
+                    case "jian":
+                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
+                            case "l":
+                                HpB.jianl = HpB.jianl - attW_Q - attN_Q;
+                                break;
+                            case "r":
+                                HpB.jianr = HpB.jianr - attW_Q - attN_Q;
+                                break;
+                            default:
+                                alert("357fvd502");
+                        }
+                        break;
+                    case "shangbi":
+                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
+                            case "l":
+                                HpB.shangbil = HpB.shangbil - attW_Q - attN_Q;
+                                break;
+                            case "r":
+                                HpB.shangbir = HpB.shangbir - attW_Q - attN_Q;
+                                break;
+                            default:
+                                alert("357fvd503");
+                        }
+                        break;
+                    case "zhou":
+                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
+                            case "l":
+                                HpB.zhoul = HpB.zhoul - attW_Q - attN_Q;
+                                break;
+                            case "r":
+                                HpB.zhour = HpB.zhour - attW_Q - attN_Q;
+                                break;
+                            default:
+                                alert("357fvd504");
+                        }
+                        break;
+                    case "qianbi":
+                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
+                            case "l":
+                                HpB.qianbil = HpB.qianbil - attW_Q - attN_Q;
+                                break;
+                            case "r":
+                                HpB.qianbir = HpB.qianbir - attW_Q - attN_Q;
+                                break;
+                            default:
+                                alert("357fvd505");
+                        }
+                        break;
+                    case "shouwan":
+                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
+                            case "l":
+                                HpB.shouwanl = HpB.shouwanl - attW_Q - attN_Q;
+                                break;
+                            case "r":
+                                HpB.shouwanr = HpB.shouwanr - attW_Q - attN_Q;
+                                break;
+                            default:
+                                alert("357fvd506");
+                        }
+                        break;
+                    case "datui":
+                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
+                            case "l":
+                                HpB.datuil = HpB.datuil - attW_Q - attN_Q;
+                                break;
+                            case "r":
+                                HpB.datuir = HpB.datuir - attW_Q - attN_Q;
+                                break;
+                            default:
+                                alert("357fvd507");
+                        }
+                        break;
+                    case "xi":
+                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
+                            case "l":
+                                HpB.xil = HpB.xil - attW_Q - attN_Q;
+                                break;
+                            case "r":
+                                HpB.xir = HpB.xir - attW_Q - attN_Q;
+                                break;
+                            default:
+                                alert("357fvd508");
+                        }
+                        break;
+                    case "xiaotui":
+                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
+                            case "l":
+                                HpB.xiaotuil = HpB.xiaotuil - attW_Q - attN_Q;
+                                break;
+                            case "r":
+                                HpB.xiaotuir = HpB.xiaotuir - attW_Q - attN_Q;
+                                break;
+                            default:
+                                alert("357fvd509");
+                        }
+                        break;
+                    case "huai":
+                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
+                            case "l":
+                                HpB.huail = HpB.huail - attW_Q - attN_Q;
+                                break;
+                            case "r":
+                                HpB.huair = HpB.huair - attW_Q - attN_Q;
+                                break;
+                            default:
+                                alert("357fvd510");
+                        }
+                        break;
+                    default:
+                        alert("5858xtgr6");
+                }
+                HpB.pinheng = HpB.pinheng - PinHengAtt_Q;
+            } else if (HadChoice_Who === "B") {
+                switch (BchoiceZS[HadChoice_Bb].zs_to) {
+                    case "tou":
+                        HpA.tou = HpA.tou - attW_Q - attN_Q;
+                        break;
+                    case "xiong":
+                        HpA.xiong = HpA.xiong - attW_Q - attN_Q;
+                        break;
+                    case "fu":
+                        HpA.fu = HpA.fu - attW_Q - attN_Q;
+                        break;
+                    case "yao":
+                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
+                            case "l":
+                                HpA.yaol = HpA.yaol - attW_Q - attN_Q;
+                                break;
+                            case "r":
+                                HpA.yaor = HpA.yaor - attW_Q - attN_Q;
+                                break;
+                            default:
+                                alert("357fvd601");
+                        }
+                        break;
+                    case "jian":
+                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
+                            case "l":
+                                HpA.jianl = HpA.jianl - attW_Q - attN_Q;
+                                break;
+                            case "r":
+                                HpA.jianr = HpA.jianr - attW_Q - attN_Q;
+                                break;
+                            default:
+                                alert("357fvd602");
+                        }
+                        break;
+                    case "shangbi":
+                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
+                            case "l":
+                                HpA.shangbil = HpA.shangbil - attW_Q - attN_Q;
+                                break;
+                            case "r":
+                                HpA.shangbir = HpA.shangbir - attW_Q - attN_Q;
+                                break;
+                            default:
+                                alert("357fvd603");
+                        }
+                        break;
+                    case "zhou":
+                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
+                            case "l":
+                                HpA.zhoul = HpA.zhoul - attW_Q - attN_Q;
+                                break;
+                            case "r":
+                                HpA.zhour = HpA.zhour - attW_Q - attN_Q;
+                                break;
+                            default:
+                                alert("357fvd604");
+                        }
+                        break;
+                    case "qianbi":
+                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
+                            case "l":
+                                HpA.qianbil = HpA.qianbil - attW_Q - attN_Q;
+                                break;
+                            case "r":
+                                HpA.qianbir = HpA.qianbir - attW_Q - attN_Q;
+                                break;
+                            default:
+                                alert("357fvd605");
+                        }
+                        break;
+                    case "shouwan":
+                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
+                            case "l":
+                                HpA.shouwanl = HpA.shouwanl - attW_Q - attN_Q;
+                                break;
+                            case "r":
+                                HpA.shouwanr = HpA.shouwanr - attW_Q - attN_Q;
+                                break;
+                            default:
+                                alert("357fvd606");
+                        }
+                        break;
+                    case "datui":
+                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
+                            case "l":
+                                HpA.datuil = HpA.datuil - attW_Q - attN_Q;
+                                break;
+                            case "r":
+                                HpA.datuir = HpA.datuir - attW_Q - attN_Q;
+                                break;
+                            default:
+                                alert("357fvd607");
+                        }
+                        break;
+                    case "xi":
+                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
+                            case "l":
+                                HpA.xil = HpA.xil - attW_Q - attN_Q;
+                                break;
+                            case "r":
+                                HpA.xir = HpA.xir - attW_Q - attN_Q;
+                                break;
+                            default:
+                                alert("357fvd608");
+                        }
+                        break;
+                    case "xiaotui":
+                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
+                            case "l":
+                                HpA.xiaotuil = HpA.xiaotuil - attW_Q - attN_Q;
+                                break;
+                            case "r":
+                                HpA.xiaotuir = HpA.xiaotuir - attW_Q - attN_Q;
+                                break;
+                            default:
+                                alert("357fvd609");
+                        }
+                        break;
+                    case "huai":
+                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
+                            case "l":
+                                HpA.huail = HpA.huail - attW_Q - attN_Q;
+                                break;
+                            case "r":
+                                HpA.huair = HpA.huair - attW_Q - attN_Q;
+                                break;
+                            default:
+                                alert("357fvd610");
+                        }
+                        break;
+                    default:
+                        alert("5858xtgr6");
+                }
+                HpA.pinheng = HpA.pinheng - PinHengAtt_Q;
+            }
         }
     }
 }
@@ -2160,9 +2623,9 @@ function fighting_n() {
 //todo 攻击方伤害
 function gongjishanghai() {
     //输出的伤害
-    var attW_Q = 0;
-    var attN_Q = 0;
-    var PinHengAtt_Q = 0;
+    window.attW_Q = 0;
+    window.attN_Q = 0;
+    window.PinHengAtt_Q = 0;
     if (HadChoice_Who === "A") {
         $("#ZDwenbenWK").append("<div class='SCd_A'>" + "A用" + AchoiceZS[HadChoice_Aa].zs_frome + "使出了【" + AchoiceZS[HadChoice_Aa].zs_CNname() + "】" + "</div>");
         //判断暴击
@@ -2297,7 +2760,7 @@ function yuanhuanBZ() {
     }
 }
 
-//todo 选择圆框重置
+//选择圆框重置
 function yuanbuttomCZ() {
     DJStime = DJS;
     $("#StartButtomYuanKuang").html("<div class='huiheclass'><div class='huiheclass01'>第</div><div class='huiheclass02' id='huiheclass'>" + huihe_i + "</div><div class='huiheclass01'>回</div></div><div id='StartButtom_Nxzzs'>选择招式</div>");
