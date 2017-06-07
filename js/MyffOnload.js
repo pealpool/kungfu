@@ -2836,7 +2836,7 @@ $(document).ready(function () {
         }
     });
 
-    //todo 换人
+    //换人
     $("#huanrenButtom").click(function () {
         if (ButtomPinBi === 0) {
             Bshuxingchushihua();

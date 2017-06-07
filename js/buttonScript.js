@@ -2143,7 +2143,7 @@ function fighting() {
     // alert(HpA.pinheng + ","+HpB.pinheng);
 }
 function fighting_n() {
-    shuanghaijisuan();
+    gongjishanghai();
     if (shanbijisuan()) {
         //闪避失败
         if (fangyujisuan()) {
@@ -2154,8 +2154,8 @@ function fighting_n() {
 }
 
 
-//todo 伤害计算
-function shuanghaijisuan() {
+//todo 攻击方伤害
+function gongjishanghai() {
     //输出的伤害
     var attW_Q = 0;
     var attN_Q = 0;
@@ -2166,7 +2166,7 @@ function shuanghaijisuan() {
         if (Math.floor(Math.random() * 100 + 1) < mSX_ZhiLi.baojijilv(SX_Zhili[0]) * 100) {
             attW_Q = Math.round(ZSglIO.AttW(String(AchoiceZS[HadChoice_Aa].zs_name), SX_Liliang[0], SX_Zhili[0]) * mSX_LiLiang.baojishanghai(SX_Liliang[0]));
             attN_Q = Math.round(ZSglIO.AttN(String(AchoiceZS[HadChoice_Aa].zs_name), SX_Liliang[0], SX_Zhili[0]) * mSX_LiLiang.baojishanghai(SX_Liliang[0]));
-            PinHengAtt_Q = Math.round(ZSglIO.PinHengAtt_Q(String(AchoiceZS[HadChoice_Aa].zs_name), SX_Liliang[0], SX_Zhili[0]) * mSX_LiLiang.baojishanghai(SX_Liliang[0]));
+            PinHengAtt_Q = Math.round(ZSglIO.PinHengAtt(String(AchoiceZS[HadChoice_Aa].zs_name), SX_Liliang[0], SX_Zhili[0]) * mSX_LiLiang.baojishanghai(SX_Liliang[0]));
             $("#ZDwenbenWK").append("<div class='SCd_A'>造成暴击" + "(AttW:" + attW_Q + ",AttN:" + attN_Q + ",PinHengAtt:" + PinHengAtt_Q + ")" + "，击向B的" + AchoiceZS[HadChoice_Aa].zs_torl + AchoiceZS[HadChoice_Aa].zs_to + "</div>");
         } else {
             attW_Q = Math.round(ZSglIO.AttW(String(AchoiceZS[HadChoice_Aa].zs_name), SX_Liliang[0], SX_Zhili[0]));
@@ -2204,6 +2204,7 @@ function shanbijisuan() {
             if (Math.floor(Math.random() * 101) <= Math.round(mSX_Minjie.SanBi(AchoiceZS[HadChoice_Aa].zs_to, SX_Minjie[1]) * 100)) {
                 $("#ZDwenbenWK").append("<div class='SCd_B'>B闪避了</div>");
                 a = 0;
+                HpB.pinheng = HpB.pinheng - 5;
             }
         } else {
             $("#ZDwenbenWK").append("<div class='SCd_B'>B脚下踉跄，不能闪避</div>");
@@ -2214,6 +2215,7 @@ function shanbijisuan() {
             if (Math.floor(Math.random() * 101) <= Math.round(mSX_Minjie.SanBi(BchoiceZS[HadChoice_Bb].zs_to, SX_Minjie[0]) * 100)) {
                 $("#ZDwenbenWK").append("<div class='SCd_A'>A闪避了</div>");
                 a = 0;
+                HpA.pinheng = HpA.pinheng - 5;
             }
         } else {
             $("#ZDwenbenWK").append("<div class='SCd_B'>A脚下踉跄，不能闪避</div>");
