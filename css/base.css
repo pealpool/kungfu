@@ -2135,3 +2135,6 @@ html, body {
     font-size: 30px;
 }
 
+.ui-progressbar-value{
+    transition: all 400ms ease-in-out 0ms;
+}

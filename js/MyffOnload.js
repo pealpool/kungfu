@@ -704,7 +704,7 @@ $(document).ready(function () {
     $(document).on("click", "#ZSdiv_tj_panda", function () {
         if ($("#ZSdiv_tj_panda").attr("class") !== "zhaoshiLBqqs huise") {
             //if (i_AyixuanZS <= 5) {
-            $("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_panda0" + i_tj_panda + "'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>攀打</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='	zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG' id='ATimeAll1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB14 zhaoshiLBG'>-></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='zy_buttom'><div class='zy_buttomL org'>左</div><div class='zy_buttomR org'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa0" + i_AyixuanZS + "'><option>头部</option><option>胸部</option><option>腹部</option><option>肩关节</option></select></div><div class='zhaoshiLB16 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove0" + i_AyixuanZS + "'>×</div></div></div>");
+            $("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_panda0" + i_tj_panda + "'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>攀打</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_panda_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG' id='ATimeAll1qq0" + i_tj_panda + "'></div><div class='zhaoshiLB14 zhaoshiLBG'>-></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='zy_buttom'><div class='zy_buttomL org'>左</div><div class='zy_buttomR org'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa0" + i_AyixuanZS + "'><option>头部</option><option>胸部</option><option>腹部</option><option>肩关节</option></select></div><div class='zhaoshiLB16 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove0" + i_AyixuanZS + "'>×</div></div></div>");
 
             $("#AttW1qq0" + i_tj_panda).html(Math.round(tj_panda.AttW));
             $("#AttN1qq0" + i_tj_panda).html(Math.round(tj_panda.AttN));
@@ -734,7 +734,7 @@ $(document).ready(function () {
     $(document).on("click", "#ZSdiv_tj_qingna", function () {
         if ($("#ZSdiv_tj_qingna").attr("class") !== "zhaoshiLBqqs huise") {
             //if (i_AyixuanZS <= 5) {
-            $("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_qingna0" + i_tj_qingna + "'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>擒拿</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW3qq0" + i_tj_qingna + "'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN3qq0" + i_tj_qingna + "'></div><div class='zhaoshiLB12 zhaoshiLBG'></div><div class='zhaoshiLB13 zhaoshiLBG' id='ATimeAll3qq0" + i_tj_qingna + "'></div><div class='zhaoshiLB14 zhaoshiLBG'>-></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='zy_buttom'><div class='zy_buttomL org'>左</div><div class='zy_buttomR org'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa0" + i_AyixuanZS + "'><option>肩关节</option><option>上臂</option><option>手肘</option><option>手腕</option></select></div><div class='zhaoshiLB16 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove0" + i_AyixuanZS + "'>×</div></div></div>");
+            $("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_qingna0" + i_tj_qingna + "'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>擒拿</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 手</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW3qq0" + i_tj_qingna + "'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN3qq0" + i_tj_qingna + "'></div><div class='zhaoshiLB12 zhaoshiLBG'></div><div class='zhaoshiLB13 zhaoshiLBG' id='ATimeAll3qq0" + i_tj_qingna + "'></div><div class='zhaoshiLB14 zhaoshiLBG'>-></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa0" + i_AyixuanZS + "'><option>肩关节</option><option>上臂</option><option>手肘</option><option>手腕</option></select></div><div class='zhaoshiLB16 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove0" + i_AyixuanZS + "'>×</div></div></div>");
 
             $("#AttW3qq0" + i_tj_qingna).html(Math.round(tj_qingna.AttW));
             $("#AttN3qq0" + i_tj_qingna).html(Math.round(tj_qingna.AttN));
@@ -809,7 +809,7 @@ $(document).ready(function () {
     $(document).on("click", "#ZSdiv_tj_banshuai", function () {
         if ($("#ZSdiv_tj_banshuai").attr("class") !== "zhaoshiLBqqs huise") {
             //if (i_AyixuanZS <= 5) {
-            $("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_banshuai0" + i_tj_banshuai + "'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>绊摔</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 脚</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW8qq0" + i_tj_banshuai + "'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN8qq0" + i_tj_banshuai + "'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_banshuai_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG' id='ATimeAll8qq0" + i_tj_banshuai + "'></div><div class='zhaoshiLB14 zhaoshiLBG'>-></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='zy_buttom'><div class='zy_buttomL org'>左</div><div class='zy_buttomR org'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa0" + i_AyixuanZS + "'><option>手肘</option><option>手腕</option><option>膝关节</option><option>踝关节</option></select></div><div class='zhaoshiLB16 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove0" + i_AyixuanZS + "'>×</div></div></div>");
+            $("#chicoZhaoShiTianjiaK").append("<div class='zhaoshiLBqqs' id='ZSdiv_tj_banshuai0" + i_tj_banshuai + "'><div class='zhaoshiLB1 zhaoshiLBG'><div class='smallyuanKuang color_gong'>攻</div></div><div class='zhaoshiLB2 zhaoshiLBG'>绊摔</div><div class='zhaoshiLB3 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div> 脚</div><div class='zhaoshiLB4 zhaoshiLBG' id='AttW8qq0" + i_tj_banshuai + "'></div><div class='zhaoshiLB5 zhaoshiLBG' id='AttN8qq0" + i_tj_banshuai + "'></div><div class='zhaoshiLB12 zhaoshiLBG'><div class='zhaoshite' Taiji_banshuai_te=''>特</div></div><div class='zhaoshiLB13 zhaoshiLBG' id='ATimeAll8qq0" + i_tj_banshuai + "'></div><div class='zhaoshiLB14 zhaoshiLBG'>-></div><div class='zhaoshiLB15 zhaoshiLBG'><div class='zy_buttom handarrow'><div class='zy_buttomL org'>左</div><div class='zy_buttomR'>右</div></div><select class='choiceXiaLa' id='choiceXiaLa0" + i_AyixuanZS + "'><option>手肘</option><option>手腕</option><option>膝关节</option><option>踝关节</option></select></div><div class='zhaoshiLB16 zhaoshiLBG'><div class='yuanXXX' id='choiceRemove0" + i_AyixuanZS + "'>×</div></div></div>");
 
             $("#AttW8qq0" + i_tj_banshuai).html(Math.round(tj_banshuai.AttW));
             $("#AttN8qq0" + i_tj_banshuai).html(Math.round(tj_banshuai.AttN));
@@ -977,8 +977,8 @@ $(document).ready(function () {
         $("#chicoZhaoShiTianjiaK").children().each(function () {
             AchoiceZS[i].zs_name = gz00.exec(($(this).attr("id")).slice(6, -2));
             if (gz01.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-                if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-                    if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+                if ($(this).find(".zhaoshiLB3.zhaoshiLBG").find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+                    if ($(this).find(".zhaoshiLB3.zhaoshiLBG").find(".zy_buttomL").attr("class") === "zy_buttomL org") {
                         AchoiceZS[i].zs_frome = "shoul";
                     } else {
                         AchoiceZS[i].zs_frome = "shour";
@@ -987,8 +987,8 @@ $(document).ready(function () {
                     AchoiceZS[i].zs_frome = "shou"; //双手
                 }
             } else if (gz02.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-                if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-                    if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+                if ($(this).find(".zhaoshiLB3.zhaoshiLBG").find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+                    if ($(this).find(".zhaoshiLB3.zhaoshiLBG").find(".zy_buttomL").attr("class") === "zy_buttomL org") {
                         AchoiceZS[i].zs_frome = "jiaol";
                     } else {
                         AchoiceZS[i].zs_frome = "jiaor";
@@ -997,8 +997,8 @@ $(document).ready(function () {
                     AchoiceZS[i].zs_frome = "jiao";
                 }
             } else if (gz03.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-                if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-                    if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+                if ($(this).find(".zhaoshiLB3.zhaoshiLBG").find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+                    if ($(this).find(".zhaoshiLB3.zhaoshiLBG").find(".zy_buttomL").attr("class") === "zy_buttomL org") {
                         AchoiceZS[i].zs_frome = "zhoul";
                     } else {
                         AchoiceZS[i].zs_frome = "zhour";
@@ -1007,8 +1007,8 @@ $(document).ready(function () {
                     AchoiceZS[i].zs_frome = "zhou";
                 }
             } else if (gz04.test($(this).find(".zhaoshiLB3.zhaoshiLBG").html())) {
-                if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-                    if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+                if ($(this).find(".zhaoshiLB3.zhaoshiLBG").find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+                    if ($(this).find(".zhaoshiLB3.zhaoshiLBG").find(".zy_buttomL").attr("class") === "zy_buttomL org") {
                         AchoiceZS[i].zs_frome = "xil";
                     } else {
                         AchoiceZS[i].zs_frome = "xir";
@@ -1018,8 +1018,8 @@ $(document).ready(function () {
                 }
             }
             AchoiceZS[i].zs_to = CNtoEN_BW($(this).find("select").val());
-            if ($(this).find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
-                if ($(this).find(".zy_buttomL").attr("class") === "zy_buttomL org") {
+            if ($(this).find(".zhaoshiLB15.zhaoshiLBG").find(".zy_buttom").attr("class") === "zy_buttom handarrow") {
+                if ($(this).find(".zhaoshiLB15.zhaoshiLBG").find(".zy_buttomL").attr("class") === "zy_buttomL org") {
                     AchoiceZS[i].zs_torl = "l";
                 } else {
                     AchoiceZS[i].zs_torl = "r";
@@ -1037,6 +1037,7 @@ $(document).ready(function () {
             direction: 'up'
         }, 200);
         BshujiZS();
+        shuchusuoxuan();
         window.fitXH = setInterval(fighting, 500);
     });
 

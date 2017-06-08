@@ -2013,6 +2013,12 @@ function BzsHouxuanBuwei(zsname, a) {
                 BchoiceZS[a].zs_to = "tou";
             } else if (sjs <= 1) {
                 BchoiceZS[a].zs_to = "yao";
+                sjs = Math.floor(Math.random() * 2);
+                if (sjs) {
+                    BchoiceZS[a].zs_torl = "l";
+                } else {
+                    BchoiceZS[a].zs_torl = "r";
+                }
             } else if (sjs <= 2) {
                 BchoiceZS[a].zs_to = "jian";
                 sjs = Math.floor(Math.random() * 2);
@@ -2338,6 +2344,7 @@ function fighting() {
     $("#ZDwenbenWK").scrollTop($("#ZDwenbenWK")[0].scrollHeight);
     // alert(HpA.pinheng + ","+HpB.pinheng);
 }
+
 function fighting_n() {
     gongjishanghai();
     if (shanbijisuan()) {
@@ -2347,21 +2354,31 @@ function fighting_n() {
             if (HadChoice_Who === "A") {
                 switch (AchoiceZS[HadChoice_Aa].zs_to) {
                     case "tou":
-                        HpB.tou = HpB.tou - attW_Q - attN_Q;
+                        if (HpB.subHP_tou(attW_Q + attN_Q)) {
+
+                        }
                         break;
                     case "xiong":
-                        HpB.xiong = HpB.xiong - attW_Q - attN_Q;
+                        if (HpB.subHP_xiong(attW_Q + attN_Q)) {
+
+                        }
                         break;
                     case "fu":
-                        HpB.fu = HpB.fu - attW_Q - attN_Q;
+                        if (HpB.subHP_fu(attW_Q + attN_Q)) {
+
+                        }
                         break;
                     case "yao":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                HpB.yaol = HpB.yaol - attW_Q - attN_Q;
+                                if (HpB.subHP_yaoL(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             case "r":
-                                HpB.yaor = HpB.yaor - attW_Q - attN_Q;
+                                if (HpB.subHP_yaoR(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             default:
                                 alert("357fvd501");
@@ -2370,10 +2387,14 @@ function fighting_n() {
                     case "jian":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                HpB.jianl = HpB.jianl - attW_Q - attN_Q;
+                                if (HpB.subHP_jianL(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             case "r":
-                                HpB.jianr = HpB.jianr - attW_Q - attN_Q;
+                                if (HpB.subHP_jianR(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             default:
                                 alert("357fvd502");
@@ -2382,10 +2403,14 @@ function fighting_n() {
                     case "shangbi":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                HpB.shangbil = HpB.shangbil - attW_Q - attN_Q;
+                                if (HpB.subHP_shangbiL(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             case "r":
-                                HpB.shangbir = HpB.shangbir - attW_Q - attN_Q;
+                                if (HpB.subHP_shangbiR(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             default:
                                 alert("357fvd503");
@@ -2394,10 +2419,14 @@ function fighting_n() {
                     case "zhou":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                HpB.zhoul = HpB.zhoul - attW_Q - attN_Q;
+                                if (HpB.subHP_zhouL(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             case "r":
-                                HpB.zhour = HpB.zhour - attW_Q - attN_Q;
+                                if (HpB.subHP_zhouR(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             default:
                                 alert("357fvd504");
@@ -2406,10 +2435,14 @@ function fighting_n() {
                     case "qianbi":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                HpB.qianbil = HpB.qianbil - attW_Q - attN_Q;
+                                if (HpB.subHP_qianbiL(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             case "r":
-                                HpB.qianbir = HpB.qianbir - attW_Q - attN_Q;
+                                if (HpB.subHP_qianbiR(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             default:
                                 alert("357fvd505");
@@ -2418,10 +2451,14 @@ function fighting_n() {
                     case "shouwan":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                HpB.shouwanl = HpB.shouwanl - attW_Q - attN_Q;
+                                if (HpB.subHP_shouwanL(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             case "r":
-                                HpB.shouwanr = HpB.shouwanr - attW_Q - attN_Q;
+                                if (HpB.subHP_shouwanR(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             default:
                                 alert("357fvd506");
@@ -2430,10 +2467,14 @@ function fighting_n() {
                     case "datui":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                HpB.datuil = HpB.datuil - attW_Q - attN_Q;
+                                if (HpB.subHP_datuiL(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             case "r":
-                                HpB.datuir = HpB.datuir - attW_Q - attN_Q;
+                                if (HpB.subHP_datuiR(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             default:
                                 alert("357fvd507");
@@ -2442,10 +2483,14 @@ function fighting_n() {
                     case "xi":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                HpB.xil = HpB.xil - attW_Q - attN_Q;
+                                if (HpB.subHP_xiL(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             case "r":
-                                HpB.xir = HpB.xir - attW_Q - attN_Q;
+                                if (HpB.subHP_xir(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             default:
                                 alert("357fvd508");
@@ -2454,10 +2499,14 @@ function fighting_n() {
                     case "xiaotui":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                HpB.xiaotuil = HpB.xiaotuil - attW_Q - attN_Q;
+                                if (HpB.subHP_xiaotuiL(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             case "r":
-                                HpB.xiaotuir = HpB.xiaotuir - attW_Q - attN_Q;
+                                if (HpB.subHP_xiaotuiR(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             default:
                                 alert("357fvd509");
@@ -2466,10 +2515,14 @@ function fighting_n() {
                     case "huai":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                HpB.huail = HpB.huail - attW_Q - attN_Q;
+                                if (HpB.subHP_huaiL(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             case "r":
-                                HpB.huair = HpB.huair - attW_Q - attN_Q;
+                                if (HpB.subHP_huaiR(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             default:
                                 alert("357fvd510");
@@ -2482,21 +2535,31 @@ function fighting_n() {
             } else if (HadChoice_Who === "B") {
                 switch (BchoiceZS[HadChoice_Bb].zs_to) {
                     case "tou":
-                        HpA.tou = HpA.tou - attW_Q - attN_Q;
+                        if (HpA.subHP_tou(attW_Q + attN_Q)) {
+
+                        }
                         break;
                     case "xiong":
-                        HpA.xiong = HpA.xiong - attW_Q - attN_Q;
+                        if (HpA.subHP_xiong(attW_Q + attN_Q)) {
+
+                        }
                         break;
                     case "fu":
-                        HpA.fu = HpA.fu - attW_Q - attN_Q;
+                        if (HpA.subHP_fu(attW_Q + attN_Q)) {
+
+                        }
                         break;
                     case "yao":
                         switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
                             case "l":
-                                HpA.yaol = HpA.yaol - attW_Q - attN_Q;
+                                if (HpA.subHP_yaoL(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             case "r":
-                                HpA.yaor = HpA.yaor - attW_Q - attN_Q;
+                                if (HpA.subHP_yaoR(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             default:
                                 alert("357fvd601");
@@ -2505,10 +2568,14 @@ function fighting_n() {
                     case "jian":
                         switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
                             case "l":
-                                HpA.jianl = HpA.jianl - attW_Q - attN_Q;
+                                if (HpA.subHP_jianL(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             case "r":
-                                HpA.jianr = HpA.jianr - attW_Q - attN_Q;
+                                if (HpA.subHP_jianR(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             default:
                                 alert("357fvd602");
@@ -2517,10 +2584,14 @@ function fighting_n() {
                     case "shangbi":
                         switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
                             case "l":
-                                HpA.shangbil = HpA.shangbil - attW_Q - attN_Q;
+                                if (HpA.subHP_shangbiL(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             case "r":
-                                HpA.shangbir = HpA.shangbir - attW_Q - attN_Q;
+                                if (HpA.subHP_shangbiR(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             default:
                                 alert("357fvd603");
@@ -2529,10 +2600,14 @@ function fighting_n() {
                     case "zhou":
                         switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
                             case "l":
-                                HpA.zhoul = HpA.zhoul - attW_Q - attN_Q;
+                                if (HpA.subHP_zhouL(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             case "r":
-                                HpA.zhour = HpA.zhour - attW_Q - attN_Q;
+                                if (HpA.subHP_zhouR(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             default:
                                 alert("357fvd604");
@@ -2541,10 +2616,14 @@ function fighting_n() {
                     case "qianbi":
                         switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
                             case "l":
-                                HpA.qianbil = HpA.qianbil - attW_Q - attN_Q;
+                                if (HpA.subHP_qianbiL(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             case "r":
-                                HpA.qianbir = HpA.qianbir - attW_Q - attN_Q;
+                                if (HpA.subHP_qianbiR(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             default:
                                 alert("357fvd605");
@@ -2553,10 +2632,14 @@ function fighting_n() {
                     case "shouwan":
                         switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
                             case "l":
-                                HpA.shouwanl = HpA.shouwanl - attW_Q - attN_Q;
+                                if (HpA.subHP_shouwanL(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             case "r":
-                                HpA.shouwanr = HpA.shouwanr - attW_Q - attN_Q;
+                                if (HpA.subHP_shouwanR(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             default:
                                 alert("357fvd606");
@@ -2565,10 +2648,14 @@ function fighting_n() {
                     case "datui":
                         switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
                             case "l":
-                                HpA.datuil = HpA.datuil - attW_Q - attN_Q;
+                                if (HpA.subHP_datuiL(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             case "r":
-                                HpA.datuir = HpA.datuir - attW_Q - attN_Q;
+                                if (HpA.subHP_datuiR(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             default:
                                 alert("357fvd607");
@@ -2577,10 +2664,14 @@ function fighting_n() {
                     case "xi":
                         switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
                             case "l":
-                                HpA.xil = HpA.xil - attW_Q - attN_Q;
+                                if (HpA.subHP_xiL(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             case "r":
-                                HpA.xir = HpA.xir - attW_Q - attN_Q;
+                                if (HpA.subHP_xiR(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             default:
                                 alert("357fvd608");
@@ -2589,10 +2680,14 @@ function fighting_n() {
                     case "xiaotui":
                         switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
                             case "l":
-                                HpA.xiaotuil = HpA.xiaotuil - attW_Q - attN_Q;
+                                if (HpA.subHP_xiaotuiL(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             case "r":
-                                HpA.xiaotuir = HpA.xiaotuir - attW_Q - attN_Q;
+                                if (HpA.subHP_xiaotuiR(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             default:
                                 alert("357fvd609");
@@ -2601,10 +2696,14 @@ function fighting_n() {
                     case "huai":
                         switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
                             case "l":
-                                HpA.huail = HpA.huail - attW_Q - attN_Q;
+                                if (HpA.subHP_huaiL(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             case "r":
-                                HpA.huair = HpA.huair - attW_Q - attN_Q;
+                                if (HpA.subHP_huaiR(attW_Q + attN_Q)) {
+
+                                }
                                 break;
                             default:
                                 alert("357fvd610");
@@ -3167,4 +3266,14 @@ function CNtoEN_BW(a) {
         default:
             alert("X52455223f");
     }
+}
+
+//输出AB招式、攻击部位等等，测试用
+function shuchusuoxuan() {
+    for (var i = 1; i < 6; i++) {
+        $("#ZDwenbenWK").append("<div>A" + AchoiceZS[i].zs_CNname() + ",frome:" + AchoiceZS[i].zs_frome + ",to:" + AchoiceZS[i].zs_to + ",torl:" + AchoiceZS[i].zs_torl + "</div>");
+
+        $("#ZDwenbenWK").append("<div>B" + BchoiceZS[i].zs_CNname() + ",frome:" + BchoiceZS[i].zs_frome + ",to:" + BchoiceZS[i].zs_to + ",torl:" + BchoiceZS[i].zs_torl + "</div>");
+    }
+
 }
