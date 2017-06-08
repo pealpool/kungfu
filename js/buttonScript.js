@@ -713,6 +713,9 @@ function ChuShiHua() {
     window.DJStime = DJS;
     //第几回合
     window.huihe_i = 1;
+    //闪避计数
+    window.shanbiA_i = 1;
+    window.shanbiB_i = 1;
     $("#huiheclass").html(huihe_i);
     switch (PaiBei_A) {
         case "Taiji":
@@ -2349,6 +2352,11 @@ function fighting_n() {
     gongjishanghai();
     if (shanbijisuan()) {
         //闪避失败
+        if (HadChoice_Who === "A") {
+            shanbiB_i = 1;
+        } else if (HadChoice_Who === "B") {
+            shanbiA_i = 1;
+        }
         if (fangyujisuan()) {
             //防御失败
             if (HadChoice_Who === "A") {
@@ -2760,30 +2768,36 @@ function gongjishanghai() {
     }
 }
 
-//闪避计算
+//todo 闪避计算
 function shanbijisuan() {
     var a = 1;//0为闪避
     if (HadChoice_Who === "A") {
-        if (HpB.pinheng >= 5) {
+        if (HpB.pinheng >= 5 * shanbiB_i) {
+            // $("#ZDwenbenWK").append("<div>B闪避率：" + mSX_Minjie.SanBi(AchoiceZS[HadChoice_Aa].zs_to, SX_Minjie[1]) + "</div>");
+            // $("#ZDwenbenWK").append("<div>B闪避率：" + ZSglIO.Mzxz(AchoiceZS[HadChoice_Aa].zs_name, SX_Zhili[0]) + "</div>");
+            $("#ZDwenbenWK").append("<div>B闪避率：" + Math.round((mSX_Minjie.SanBi(AchoiceZS[HadChoice_Aa].zs_to, SX_Minjie[1]) - ZSglIO.Mzxz(AchoiceZS[HadChoice_Aa].zs_name, SX_Zhili[0]) + mSX_Minjie.SanBi(AchoiceZS[HadChoice_Aa].zs_to, SX_Minjie[1]) * ZSglIO.Mzxz(AchoiceZS[HadChoice_Aa].zs_name, SX_Zhili[0])) * 100) + "%。</div>");
             //[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
-            if (Math.floor(Math.random() * 101) <= Math.round(mSX_Minjie.SanBi(AchoiceZS[HadChoice_Aa].zs_to, SX_Minjie[1]) * 100)) {
+            if (Math.floor(Math.random() * 101) <= Math.round((mSX_Minjie.SanBi(AchoiceZS[HadChoice_Aa].zs_to, SX_Minjie[1]) - ZSglIO.Mzxz(AchoiceZS[HadChoice_Aa].zs_name, SX_Zhili[0]) + mSX_Minjie.SanBi(AchoiceZS[HadChoice_Aa].zs_to, SX_Minjie[1]) * ZSglIO.Mzxz(AchoiceZS[HadChoice_Aa].zs_name, SX_Zhili[0])) * 100)) {
                 $("#ZDwenbenWK").append("<div class='SCd_B'>B闪避了</div>");
                 a = 0;
-                HpB.pinheng = HpB.pinheng - 5;
+                HpB.pinheng = HpB.pinheng - 5 * shanbiB_i;
+                shanbiB_i++;
             }
         } else {
-            $("#ZDwenbenWK").append("<div class='SCd_B'>B脚下踉跄，不能闪避</div>");
+            $("#ZDwenbenWK").append("<div class='SCd_B'>B不够平衡值(" + 5 * shanbiB_i + ")，不能闪避</div>");
         }
     } else if (HadChoice_Who === "B") {
-        if (HpA.pinheng >= 5) {
+        if (HpA.pinheng >= 5 * shanbiA_i) {
+            $("#ZDwenbenWK").append("<div>A闪避率：" + Math.round((mSX_Minjie.SanBi(BchoiceZS[HadChoice_Bb].zs_to, SX_Minjie[0]) - ZSglIO.Mzxz(BchoiceZS[HadChoice_Bb].zs_name, SX_Zhili[1]) + mSX_Minjie.SanBi(BchoiceZS[HadChoice_Bb].zs_to, SX_Minjie[0]) * ZSglIO.Mzxz(BchoiceZS[HadChoice_Bb].zs_name, SX_Zhili[1])) * 100) + "%。</div>");
             //[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
-            if (Math.floor(Math.random() * 101) <= Math.round(mSX_Minjie.SanBi(BchoiceZS[HadChoice_Bb].zs_to, SX_Minjie[0]) * 100)) {
+            if (Math.floor(Math.random() * 101) <= Math.round((mSX_Minjie.SanBi(BchoiceZS[HadChoice_Bb].zs_to, SX_Minjie[0]) - ZSglIO.Mzxz(BchoiceZS[HadChoice_Bb].zs_name, SX_Zhili[1]) + mSX_Minjie.SanBi(BchoiceZS[HadChoice_Bb].zs_to, SX_Minjie[0]) * ZSglIO.Mzxz(BchoiceZS[HadChoice_Bb].zs_name, SX_Zhili[1])) * 100)) {
                 $("#ZDwenbenWK").append("<div class='SCd_A'>A闪避了</div>");
                 a = 0;
-                HpA.pinheng = HpA.pinheng - 5;
+                HpA.pinheng = HpA.pinheng - 5 * shanbiA_i;
+                shanbiA_i++;
             }
         } else {
-            $("#ZDwenbenWK").append("<div class='SCd_B'>A脚下踉跄，不能闪避</div>");
+            $("#ZDwenbenWK").append("<div class='SCd_B'>A不够平衡值(" + 5 * shanbiA_i + ")，不能闪避</div>");
         }
     }
     return a;

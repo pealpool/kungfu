@@ -1038,7 +1038,7 @@ $(document).ready(function () {
         }, 200);
         BshujiZS();
         shuchusuoxuan();
-        window.fitXH = setInterval(fighting, 500);
+        window.fitXH = setInterval(fighting, 200);
     });
 
     //选择攻击部位限制左右按钮
