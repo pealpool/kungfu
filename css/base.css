@@ -1040,7 +1040,7 @@ html, body {
     float: left;
     width: 211px;
     height: 259px;
-    background-image: url(../Img/image/body-all-b.png);
+    background-image: url(../Img/image/body-all-b00.png);
     background-repeat: no-repeat;
     background-position: 4px 0px;
     margin-top: 20px;
@@ -1175,7 +1175,7 @@ html, body {
 
 .TuKuangshuxinTanchuDK {
     float: left;
-    height: 140px;
+    height: 135px;
     width: 190px;
     background-color: #fff;
     box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.15);
@@ -1347,8 +1347,9 @@ html, body {
     color: #252525;
     width: 450px;
     height: 25px;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-left: 15px;
+    margin-bottom: 5px;
 }
 
 
