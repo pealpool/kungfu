@@ -1841,6 +1841,7 @@ html, body {
     margin: 8px;
     z-index: 2;
     position: relative;
+    font-size: 16px;
 }
 
 #ZDwenbenWK {
@@ -2138,4 +2139,16 @@ html, body {
 
 .ui-progressbar-value{
     transition: all 400ms ease-in-out 0ms;
+}
+
+.XS_huiheS{
+    float: left;
+    width: 130px;
+    height:26px;
+    margin: 20px 0px 20px 180px;
+    background: #bb1c33;
+    border-radius: 5px;
+    text-align: center;
+    color:#fff;
+    line-height: 26px;
 }
