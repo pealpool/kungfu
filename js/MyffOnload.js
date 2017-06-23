@@ -1038,7 +1038,7 @@ $(document).ready(function () {
         }, 200);
         BshujiZS();
         shuchusuoxuan();
-        $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_huiheS_line'></div><div class='XS_huiheS'>第&nbsp;" + (huihe_i-1) + "&nbsp;回<br><span>开&nbsp;&nbsp;始</span></div><div class='XS_huiheS_line'></div></div>");
+        $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_Fred XS_yuan_Fred_l'></div><div class='XS_huiheS_line'></div><div class='XS_huiheS'>第&nbsp;" + (huihe_i-1) + "&nbsp;回<br><span>开&nbsp;&nbsp;始</span></div><div class='XS_huiheS_line'></div><div class='XS_yuan_Fred XS_yuan_Fred_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
         window.fitXH = setInterval(fighting, 200);
     });
 

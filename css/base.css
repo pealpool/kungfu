@@ -2141,13 +2141,16 @@ html, body {
     transition: all 400ms ease-in-out 0ms;
 }
 .XS_huiheS_DK{
-	margin-left: 20px;
+	width: 450px;
+	margin-left: 15px;
+	position: relative;
+	float: left;
 }
 .XS_huiheS{
     float: left;
     width: 100px;
     height:48px;
-    margin: 20px;
+    margin: 20px 0px;
     background: #bb1c33;
     border-radius: 5px;
     text-align: center;
@@ -2159,7 +2162,94 @@ html, body {
 
 .XS_huiheS_line {
 	float: left;
-	width: 150px;
-	border-top: #A0A0A0 1px dashed;
+	width: 164px;
+	border-top: #bb1c33 1px dashed;
 	margin-top: 65px;
+}
+
+.XS_Sline {
+	position: absolute;
+	width: 3px;
+	height: 100%;
+	background: #c4c4c4;
+	top: 0; 
+	left: 0;
+	z-index: 5;
+}
+.XS_Sline_r {
+	left:447px;
+}
+
+.XS_time {
+	position: relative;
+	float: left;
+    width: 200px;
+    height:20px;
+	font-size: 12px;
+    color:#a0a0a0;
+	margin: 10px;
+}
+
+.XS_yuan_Kong {
+	position: relative;
+	width: 15px;
+	height: 15px;
+	margin-top: 7px;
+	background: #fff;
+	border: #c4c4c4 3px solid;
+	border-radius: 50%;
+	z-index: 10;
+}
+.XS_yuan_Kong_l {
+	float: left;
+	margin-left: -9px;
+}
+.XS_yuan_Kong_r {
+	float: right;
+	margin-right: -9px;
+}
+
+.XS_yuan_Fred {
+	position: relative;
+	width: 13px;
+	height: 13px;
+	margin-top: 55px;
+	background: #fff;
+	border: #bb1c33 3px solid;
+	border-radius: 5px;
+	z-index: 10;
+	transform:rotate(45deg);
+}
+.XS_yuan_Fred_l {
+	float: left;
+	margin-left: -8px;
+}
+.XS_yuan_Fred_r {
+	float: right;
+	margin-right: -8px;
+}
+.XS_yuan_xiao {
+	position: relative;
+	width: 7px;
+	height: 7px;
+	margin-top: 13px;
+	background: #fff;
+	border: #c4c4c4 3px solid;
+	border-radius: 50%;
+	z-index: 10;
+}
+.XS_yuan_xiao_l {
+	float: left;
+	margin-left: -5px;
+}
+.XS_yuan_xiao_r {
+	float: right;
+	margin-right: -5px;
+}
+.XS_text {
+	position: relative;
+	float: left;
+    width: 200px;
+    height:20px;
+	margin: 10px;
 }

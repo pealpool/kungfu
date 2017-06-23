@@ -2103,13 +2103,13 @@ function BzsHouxuanBuwei(zsname, a) {
 //选谁先发招，发啥招。a为A第几招数组序号,b为B第几招数组序号
 //todo 选先手实时计算
 function ChoiceFirst(a, b) {
-    $("#ZDwenbenWK").append("<div>回合:" + huihe_i + ",time:" + (DJStime).toFixed(1) + "</div>");
+    $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_Kong XS_yuan_Kong_l'></div><div class='XS_time'>回合：" + huihe_i + "，时间：" + (DJStime).toFixed(1) + "&nbsp;s</div><div class='XS_yuan_Kong XS_yuan_Kong_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
     switch (HadChoice_Who) {
         case "A":
             if (a <= AchoiceZS_bj && b <= BchoiceZS_bj) {
                 //判断平衡值
                 if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng) {
-                    $("#ZDwenbenWK").append("<div>A之前先手,</div>");
+                    IO_XS_normal("A之前先手，");
                     if (ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
                         ChoiceFirstN_A(a, b);
                     } else {
@@ -2122,7 +2122,7 @@ function ChoiceFirst(a, b) {
                         $("#ZDwenbenWK").append("<div>B平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10 + ",为" + HpB.pinheng + "</div>");
                     }
                 } else {
-                    $("#ZDwenbenWK").append("<div>A调整平衡中。</div>");
+                    $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_xiao XS_yuan_xiao_l'></div><div class='XS_text'>A调整平衡中，</div><div class='XS_yuan_xiao XS_yuan_xiao_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
                     //判断平衡值
                     if (ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
                         HadChoice_Who = "B";
@@ -2132,25 +2132,25 @@ function ChoiceFirst(a, b) {
                         $("#ZDwenbenWK").append("<div>B平衡消耗:" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + ",为" + HpB.pinheng + "</div>");
                         $("#ZDwenbenWK").append("<div>A平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10 + ",为" + HpA.pinheng + "</div>");
                     } else {
-                        $("#ZDwenbenWK").append("<div>B也调整平衡中。</div>");
+                        $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_xiao XS_yuan_xiao_l'></div><div class='XS_text'>B也调整平衡中。</div><div class='XS_yuan_xiao XS_yuan_xiao_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
                         HadChoice_Who = "";
                     }
                 }
             } else if (a > AchoiceZS_bj && b <= BchoiceZS_bj) {
-                $("#ZDwenbenWK").append("<div>" + "A之前先手,A招式已用完" + "</div>");
+                IO_XS_normal("A之前先手，A招式已用完，");
                 if (ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
                     HadChoice_Who = "B";
                     HadChoice_Bb = b;
-                    HpB.subPingheng(- ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
+                    HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
                     HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
                     $("#ZDwenbenWK").append("<div>B平衡消耗:" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + ",为" + HpB.pinheng + "</div>");
                     $("#ZDwenbenWK").append("<div>A平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10 + ",为" + HpA.pinheng + "</div>");
                 } else {
-                    $("#ZDwenbenWK").append("<div>B调整平衡中。</div>");
+                    $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_xiao XS_yuan_xiao_l'></div><div class='XS_text'>B调整平衡中。</div><div class='XS_yuan_xiao XS_yuan_xiao_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
                     HadChoice_Who = "";
                 }
             } else if (a <= AchoiceZS_bj && b > BchoiceZS_bj) {
-                $("#ZDwenbenWK").append("<div>" + "A之前先手,B招式已用完" + "</div>");
+                IO_XS_normal("A之前先手，B招式已用完，");
                 if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng) {
                     HadChoice_Who = "A";
                     HadChoice_Aa = a;
@@ -2159,7 +2159,7 @@ function ChoiceFirst(a, b) {
                     $("#ZDwenbenWK").append("<div>A平衡消耗:" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + ",为" + HpA.pinheng + "</div>");
                     $("#ZDwenbenWK").append("<div>B平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10 + ",为" + HpB.pinheng + "</div>");
                 } else {
-                    $("#ZDwenbenWK").append("<div>A调整平衡中。</div>");
+                    $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_xiao XS_yuan_xiao_l'></div><div class='XS_text'>A调整平衡中。</div><div class='XS_yuan_xiao XS_yuan_xiao_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
                     HadChoice_Who = "";
                 }
             }
@@ -2167,7 +2167,7 @@ function ChoiceFirst(a, b) {
         case "B":
             if (a <= AchoiceZS_bj && b <= BchoiceZS_bj) {
                 if (ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
-                    $("#ZDwenbenWK").append("<div>B之前先手,</div>");
+                    IO_XS_normal("B之前先手，");
                     if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng) {
                         ChoiceFirstN_B(a, b);
                     } else {
@@ -2195,7 +2195,7 @@ function ChoiceFirst(a, b) {
                     }
                 }
             } else if (a > AchoiceZS_bj && b <= BchoiceZS_bj) {
-                $("#ZDwenbenWK").append("<div>" + "B之前先手,A招式已用完" + "</div>");
+                IO_XS_normal("B之前先手，A招式已用完，");
                 if (ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
                     HadChoice_Who = "B";
                     HadChoice_Bb = b;
@@ -2208,7 +2208,7 @@ function ChoiceFirst(a, b) {
                     HadChoice_Who = "";
                 }
             } else if (a <= AchoiceZS_bj && b > BchoiceZS_bj) {
-                $("#ZDwenbenWK").append("<div>" + "B之前先手,B招式已用完" + "</div>");
+                IO_XS_normal("B之前先手，B招式已用完，");
                 if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng) {
                     HadChoice_Who = "A";
                     HadChoice_Aa = a;
@@ -2224,7 +2224,7 @@ function ChoiceFirst(a, b) {
             break;
         case "":
             if (a <= AchoiceZS_bj && b <= BchoiceZS_bj) {
-                $("#ZDwenbenWK").append("<div>" + "之前无先手," + "</div>");
+                IO_XS_normal("之前无先手，");
                 if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng && ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
                     $("#ZDwenbenWK").append("<div>" + "A前摇为" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]).toFixed(1) + "。B前摇为" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1]).toFixed(1) + "</div>");
                     if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) > ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
@@ -2273,10 +2273,10 @@ function ChoiceFirst(a, b) {
                     $("#ZDwenbenWK").append("<div>A平衡消耗:" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + ",为" + HpA.pinheng + "</div>");
                     $("#ZDwenbenWK").append("<div>B平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10 + ",为" + HpB.pinheng + "</div>");
                 } else {
-                    $("#ZDwenbenWK").append("<div>双方调整平衡中。</div>");
+                    IO_XS_normal("双方调整平衡中。");
                 }
             } else if (a > AchoiceZS_bj && b <= BchoiceZS_bj) {
-                $("#ZDwenbenWK").append("<div>" + "之前无先手,A不出招" + "</div>");
+                IO_XS_normal("之前无先手，A不出招，");
                 if (ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
                     HadChoice_Who = "B";
                     HadChoice_Bb = b;
@@ -2288,7 +2288,7 @@ function ChoiceFirst(a, b) {
                     $("#ZDwenbenWK").append("<div>B调整平衡中。</div>");
                 }
             } else if (a <= AchoiceZS_bj && b > BchoiceZS_bj) {
-                $("#ZDwenbenWK").append("<div>" + "之前无先手,B不出招" + "</div>");
+                IO_XS_normal("之前无先手，B不出招，");
                 if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng) {
                     HadChoice_Who = "A";
                     HadChoice_Aa = a;
@@ -3371,4 +3371,9 @@ function shuchusuoxuan() {
         $("#ZDwenbenWK").append("<div>B" + BchoiceZS[i].zs_CNname() + ",frome:" + BchoiceZS[i].zs_frome + ",to:" + BchoiceZS[i].zs_to + ",torl:" + BchoiceZS[i].zs_torl + "</div>");
     }
 
+}
+
+//打印通用文字
+function IO_XS_normal(a) {
+    $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_xiao XS_yuan_xiao_l'></div><div class='XS_text'>" + a + "</div><div class='XS_yuan_xiao XS_yuan_xiao_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
 }
