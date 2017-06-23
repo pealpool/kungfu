@@ -2103,6 +2103,7 @@ function BzsHouxuanBuwei(zsname, a) {
 //选谁先发招，发啥招。a为A第几招数组序号,b为B第几招数组序号
 //todo 选先手实时计算
 function ChoiceFirst(a, b) {
+    $("#ZDwenbenWK").append("<div>回合:" + huihe_i + ",time:" + (DJStime).toFixed(1) + "</div>");
     switch (HadChoice_Who) {
         case "A":
             if (a <= AchoiceZS_bj && b <= BchoiceZS_bj) {
@@ -2112,10 +2113,13 @@ function ChoiceFirst(a, b) {
                     if (ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
                         ChoiceFirstN_A(a, b);
                     } else {
-                        $("#ZDwenbenWK").append("<div>B调整平衡中。</div>");
                         HadChoice_Who = "A";
                         HadChoice_Aa = a;
-                        HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
+                        HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
+                        HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
+                        $("#ZDwenbenWK").append("<div>A平衡消耗:" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + ",为" + HpA.pinheng + "</div>");
+                        $("#ZDwenbenWK").append("<div>B调整平衡中。</div>");
+                        $("#ZDwenbenWK").append("<div>B平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10 + ",为" + HpB.pinheng + "</div>");
                     }
                 } else {
                     $("#ZDwenbenWK").append("<div>A调整平衡中。</div>");
@@ -2123,7 +2127,10 @@ function ChoiceFirst(a, b) {
                     if (ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
                         HadChoice_Who = "B";
                         HadChoice_Bb = b;
-                        HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
+                        HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
+                        HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
+                        $("#ZDwenbenWK").append("<div>B平衡消耗:" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + ",为" + HpB.pinheng + "</div>");
+                        $("#ZDwenbenWK").append("<div>A平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10 + ",为" + HpA.pinheng + "</div>");
                     } else {
                         $("#ZDwenbenWK").append("<div>B也调整平衡中。</div>");
                         HadChoice_Who = "";
@@ -2134,7 +2141,10 @@ function ChoiceFirst(a, b) {
                 if (ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
                     HadChoice_Who = "B";
                     HadChoice_Bb = b;
-                    HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
+                    HpB.subPingheng(- ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
+                    HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
+                    $("#ZDwenbenWK").append("<div>B平衡消耗:" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + ",为" + HpB.pinheng + "</div>");
+                    $("#ZDwenbenWK").append("<div>A平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10 + ",为" + HpA.pinheng + "</div>");
                 } else {
                     $("#ZDwenbenWK").append("<div>B调整平衡中。</div>");
                     HadChoice_Who = "";
@@ -2144,7 +2154,10 @@ function ChoiceFirst(a, b) {
                 if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng) {
                     HadChoice_Who = "A";
                     HadChoice_Aa = a;
-                    HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
+                    HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
+                    HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
+                    $("#ZDwenbenWK").append("<div>A平衡消耗:" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + ",为" + HpA.pinheng + "</div>");
+                    $("#ZDwenbenWK").append("<div>B平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10 + ",为" + HpB.pinheng + "</div>");
                 } else {
                     $("#ZDwenbenWK").append("<div>A调整平衡中。</div>");
                     HadChoice_Who = "";
@@ -2160,7 +2173,11 @@ function ChoiceFirst(a, b) {
                     } else {
                         HadChoice_Who = "B";
                         HadChoice_Bb = b;
-                        HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
+                        HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
+                        HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
+                        $("#ZDwenbenWK").append("<div>B平衡消耗:" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + ",为" + HpB.pinheng + "</div>");
+                        $("#ZDwenbenWK").append("<div>A调整平衡中。</div>");
+                        $("#ZDwenbenWK").append("<div>A平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10 + ",为" + HpA.pinheng + "</div>");
                     }
                 } else {
                     $("#ZDwenbenWK").append("<div>B调整平衡中。</div>");
@@ -2168,7 +2185,10 @@ function ChoiceFirst(a, b) {
                     if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng) {
                         HadChoice_Who = "A";
                         HadChoice_Aa = a;
-                        HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
+                        HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
+                        HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
+                        $("#ZDwenbenWK").append("<div>A平衡消耗:" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + ",为" + HpA.pinheng + "</div>");
+                        $("#ZDwenbenWK").append("<div>B平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10 + ",为" + HpB.pinheng + "</div>");
                     } else {
                         $("#ZDwenbenWK").append("<div>A也调整平衡中。</div>");
                         HadChoice_Who = "";
@@ -2179,7 +2199,10 @@ function ChoiceFirst(a, b) {
                 if (ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
                     HadChoice_Who = "B";
                     HadChoice_Bb = b;
-                    HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
+                    HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
+                    HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
+                    $("#ZDwenbenWK").append("<div>B平衡消耗:" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + ",为" + HpB.pinheng + "</div>");
+                    $("#ZDwenbenWK").append("<div>A平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10 + ",为" + HpA.pinheng + "</div>");
                 } else {
                     $("#ZDwenbenWK").append("<div>B调整平衡中。</div>");
                     HadChoice_Who = "";
@@ -2189,7 +2212,10 @@ function ChoiceFirst(a, b) {
                 if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng) {
                     HadChoice_Who = "A";
                     HadChoice_Aa = a;
-                    HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
+                    HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
+                    HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
+                    $("#ZDwenbenWK").append("<div>A平衡消耗:" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + ",为" + HpA.pinheng + "</div>");
+                    $("#ZDwenbenWK").append("<div>B平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10 + ",为" + HpB.pinheng + "</div>");
                 } else {
                     $("#ZDwenbenWK").append("<div>A调整平衡中。</div>");
                     HadChoice_Who = "";
@@ -2204,30 +2230,48 @@ function ChoiceFirst(a, b) {
                     if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) > ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
                         HadChoice_Who = "B";
                         HadChoice_Bb = b;
-                        HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
+                        HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
+                        HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
+                        $("#ZDwenbenWK").append("<div>B平衡消耗:" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + ",为" + HpB.pinheng + "</div>");
+                        $("#ZDwenbenWK").append("<div>A平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10 + ",为" + HpA.pinheng + "</div>");
                     } else if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) < ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
                         HadChoice_Who = "A";
                         HadChoice_Aa = a;
-                        HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
+                        HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
+                        HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
+                        $("#ZDwenbenWK").append("<div>A平衡消耗:" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + ",为" + HpA.pinheng + "</div>");
+                        $("#ZDwenbenWK").append("<div>B平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10 + ",为" + HpB.pinheng + "</div>");
                     } else {
                         if (HadChoice_Who === "A") {
                             HadChoice_Who = "B";
                             HadChoice_Bb = b;
-                            HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
+                            HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
+                            HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
+                            $("#ZDwenbenWK").append("<div>B平衡消耗:" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + ",为" + HpB.pinheng + "</div>");
+                            $("#ZDwenbenWK").append("<div>A平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10 + ",为" + HpA.pinheng + "</div>");
                         } else {
                             HadChoice_Who = "A";
                             HadChoice_Aa = a;
-                            HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
+                            HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
+                            HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
+                            $("#ZDwenbenWK").append("<div>A平衡消耗:" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + ",为" + HpA.pinheng + "</div>");
+                            $("#ZDwenbenWK").append("<div>B平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10 + ",为" + HpB.pinheng + "</div>");
                         }
                     }
                 } else if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 > HpA.pinheng && ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
                     HadChoice_Who = "B";
                     HadChoice_Bb = b;
-                    HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
+                    HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
+                    HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
+                    $("#ZDwenbenWK").append("<div>B平衡消耗:" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + ",为" + HpB.pinheng + "</div>");
+                    $("#ZDwenbenWK").append("<div>A平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10 + ",为" + HpA.pinheng + "</div>");
                 } else if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng && ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 > HpB.pinheng) {
-                    HadChoice_Who = "B";
-                    HadChoice_Bb = b;
-                    HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
+                    HadChoice_Who = "A";
+                    HadChoice_Aa = a;
+                    HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
+                    HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
+                    $("#ZDwenbenWK").append("<div>A平衡消耗:" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + ",为" + HpA.pinheng + "</div>");
+                    $("#ZDwenbenWK").append("<div>B平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10 + ",为" + HpB.pinheng + "</div>");
                 } else {
                     $("#ZDwenbenWK").append("<div>双方调整平衡中。</div>");
                 }
@@ -2236,7 +2280,10 @@ function ChoiceFirst(a, b) {
                 if (ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
                     HadChoice_Who = "B";
                     HadChoice_Bb = b;
-                    HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
+                    HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
+                    HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
+                    $("#ZDwenbenWK").append("<div>B平衡消耗:" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + ",为" + HpB.pinheng + "</div>");
+                    $("#ZDwenbenWK").append("<div>A平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10 + ",为" + HpA.pinheng + "</div>");
                 } else {
                     $("#ZDwenbenWK").append("<div>B调整平衡中。</div>");
                 }
@@ -2245,7 +2292,10 @@ function ChoiceFirst(a, b) {
                 if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng) {
                     HadChoice_Who = "A";
                     HadChoice_Aa = a;
-                    HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
+                    HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
+                    HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
+                    $("#ZDwenbenWK").append("<div>A平衡消耗:" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + ",为" + HpA.pinheng + "</div>");
+                    $("#ZDwenbenWK").append("<div>B平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10 + ",为" + HpB.pinheng + "</div>");
                 } else {
                     $("#ZDwenbenWK").append("<div>A调整平衡中。</div>");
                 }
@@ -2260,20 +2310,32 @@ function ChoiceFirstN_A(a, b) {
     if (ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name), SX_Minjie[0]) + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) > ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
         HadChoice_Who = "B";
         HadChoice_Bb = b;
-        HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
+        HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
+        HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
+        $("#ZDwenbenWK").append("<div>B平衡消耗:" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + ",为" + HpB.pinheng + "</div>");
+        $("#ZDwenbenWK").append("<div>A平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10 + ",为" + HpA.pinheng + "</div>");
     } else if (ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name), SX_Minjie[0]) + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) < ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
         HadChoice_Who = "A";
         HadChoice_Aa = a;
-        HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
+        HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
+        HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
+        $("#ZDwenbenWK").append("<div>A平衡消耗:" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + ",为" + HpA.pinheng + "</div>");
+        $("#ZDwenbenWK").append("<div>B平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10 + ",为" + HpB.pinheng + "</div>");
     } else {
         if (HadChoice_Who === "A") {
             HadChoice_Who = "B";
             HadChoice_Bb = b;
-            HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
+            HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
+            HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
+            $("#ZDwenbenWK").append("<div>B平衡消耗:" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + ",为" + HpB.pinheng + "</div>");
+            $("#ZDwenbenWK").append("<div>A平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10 + ",为" + HpA.pinheng + "</div>");
         } else {
             HadChoice_Who = "A";
             HadChoice_Aa = a;
-            HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
+            HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
+            HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
+            $("#ZDwenbenWK").append("<div>A平衡消耗:" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + ",为" + HpA.pinheng + "</div>");
+            $("#ZDwenbenWK").append("<div>B平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10 + ",为" + HpB.pinheng + "</div>");
         }
     }
 }
@@ -2282,20 +2344,32 @@ function ChoiceFirstN_B(a, b) {
     if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) > ZSglIO.ATimeH(String(BchoiceZS[b - 1].zs_name), SX_Minjie[1]) + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
         HadChoice_Who = "B";
         HadChoice_Bb = b;
-        HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
+        HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
+        HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
+        $("#ZDwenbenWK").append("<div>B平衡消耗:" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + ",为" + HpB.pinheng + "</div>");
+        $("#ZDwenbenWK").append("<div>A平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10 + ",为" + HpA.pinheng + "</div>");
     } else if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) < ZSglIO.ATimeH(String(BchoiceZS[b - 1].zs_name), SX_Minjie[1]) + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
         HadChoice_Who = "A";
         HadChoice_Aa = a;
-        HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
+        HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
+        HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
+        $("#ZDwenbenWK").append("<div>A平衡消耗:" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + ",为" + HpA.pinheng + "</div>");
+        $("#ZDwenbenWK").append("<div>B平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10 + ",为" + HpB.pinheng + "</div>");
     } else {
         if (HadChoice_Who === "A") {
             HadChoice_Who = "B";
             HadChoice_Bb = b;
-            HpB.pinheng = HpB.pinheng - ZSglIO.PinHengXH(BchoiceZS[b].zs_name);
+            HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
+            HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
+            $("#ZDwenbenWK").append("<div>B平衡消耗:" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + ",为" + HpB.pinheng + "</div>");
+            $("#ZDwenbenWK").append("<div>A平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10 + ",为" + HpA.pinheng + "</div>");
         } else {
             HadChoice_Who = "A";
             HadChoice_Aa = a;
-            HpA.pinheng = HpA.pinheng - ZSglIO.PinHengXH(AchoiceZS[a].zs_name);
+            HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
+            HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
+            $("#ZDwenbenWK").append("<div>A平衡消耗:" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + ",为" + HpA.pinheng + "</div>");
+            $("#ZDwenbenWK").append("<div>B平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10 + ",为" + HpB.pinheng + "</div>");
         }
     }
 }
@@ -2324,7 +2398,12 @@ function fighting() {
                 }
                 fighting_n();
             } else {
+                DJStime = DJStime - 0.1;
+                HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]));
+                HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]));
                 $("#ZDwenbenWK").append("<div>双方对峙中。</div>");
+                $("#ZDwenbenWK").append("<div>A平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) + ",为" + HpA.pinheng + "</div>");
+                $("#ZDwenbenWK").append("<div>B平衡回复:" + mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) + ",为" + HpB.pinheng + "</div>");
             }
             if ((fig_a > AchoiceZS_bj) && (fig_b > BchoiceZS_bj)) {
                 fig_xix = 1;
@@ -2825,8 +2904,8 @@ function fangyujisuan() {
 
 //圆环值重置
 function yuanhuanPH() {
-    $("#Banyuan_ZD_l").find("span").html(HpA.pinheng);
-    $("#Banyuan_ZD_r").find("span").html(HpB.pinheng);
+    $("#Banyuan_ZD_l").find("span").html(Math.round(HpA.pinheng));
+    $("#Banyuan_ZD_r").find("span").html(Math.round(HpB.pinheng));
     if (mSX_Pinheng.wendinzhi(SX_Pinheng[0]) > mSX_Pinheng.wendinzhi(SX_Pinheng[1])) {
         $("#Banyuan_KX_xl").css("transform", "rotate(-80deg)");
         $("#Banyuan_KX_xr").css("transform", "rotate(" + Math.round(179 - (179 - 80) / mSX_Pinheng.wendinzhi(SX_Pinheng[0]) * HpB.pinheng) + "deg)");
@@ -2837,8 +2916,8 @@ function yuanhuanPH() {
 }
 //圆环值刷新
 function yuanhuanPHsx() {
-    HpA.pinheng = HpA.pinheng + mSX_Pinheng.wendinhuifu(SX_Pinheng[0]);
-    HpB.pinheng = HpB.pinheng + mSX_Pinheng.wendinhuifu(SX_Pinheng[1]);
+    // HpA.pinheng = HpA.pinheng + mSX_Pinheng.wendinhuifu(SX_Pinheng[0]);
+    // HpB.pinheng = HpB.pinheng + mSX_Pinheng.wendinhuifu(SX_Pinheng[1]);
     if (HpA.pinheng > mSX_Pinheng.wendinzhi(SX_Pinheng[0])) {
         HpA.pinheng = mSX_Pinheng.wendinzhi(SX_Pinheng[0]);
     }
@@ -2864,12 +2943,14 @@ function yuanhuanPHsx() {
 
 //圆环标志重置
 function yuanhuanBZ() {
-    if (mSX_Pinheng.wendinzhi(SX_Pinheng[0]) > mSX_Pinheng.wendinzhi(SX_Pinheng[1])) {
+    HpA.Max_pinheng = mSX_Pinheng.wendinzhi(SX_Pinheng[0]);
+    HpB.Max_pinheng = mSX_Pinheng.wendinzhi(SX_Pinheng[1]);
+    if (HpA.Max_pinheng > HpB.Max_pinheng) {
         $("#Banyuan_line_l").css("transform", "rotate(50deg)");
-        $("#Banyuan_line_r").css("transform", "rotate(" + Math.round(50 - 100 / mSX_Pinheng.wendinzhi(SX_Pinheng[0]) * mSX_Pinheng.wendinzhi(SX_Pinheng[1])) + "deg)");
+        $("#Banyuan_line_r").css("transform", "rotate(" + Math.round(50 - 100 / HpA.Max_pinheng * HpB.Max_pinheng) + "deg)");
     } else {
         $("#Banyuan_line_r").css("transform", "rotate(-50deg)");
-        $("#Banyuan_line_l").css("transform", "rotate(" + Math.round(-50 + 100 / mSX_Pinheng.wendinzhi(SX_Pinheng[1]) * mSX_Pinheng.wendinzhi(SX_Pinheng[0])) + "deg)");
+        $("#Banyuan_line_l").css("transform", "rotate(" + Math.round(-50 + 100 / HpB.Max_pinheng * HpA.Max_pinheng) + "deg)");
     }
 }
 

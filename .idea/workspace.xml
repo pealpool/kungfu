@@ -4,7 +4,10 @@
     <list default="true" id="bb5e816f-4d1b-427d-8b73-abc6c84978cd" name="默认的" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/base.css" afterPath="$PROJECT_DIR$/css/base.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Hp.js" afterPath="$PROJECT_DIR$/js/Hp.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/MyffOnload.js" afterPath="$PROJECT_DIR$/js/MyffOnload.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/buttonScript.js" afterPath="$PROJECT_DIR$/js/buttonScript.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,12 +25,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="base.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/base.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="2147" column="29" lean-forward="false" selection-start-line="2147" selection-start-column="29" selection-end-line="2147" selection-end-column="29" />
-              <folding />
+            <state relative-caret-position="504">
+              <caret line="2149" column="17" lean-forward="false" selection-start-line="2149" selection-start-column="17" selection-end-line="2149" selection-end-column="17" />
+              <folding>
+                <marker date="1498187974452" expanded="true" signature="38111:38112" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -35,21 +40,51 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1490">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="138" column="27" lean-forward="true" selection-start-line="138" selection-start-column="27" selection-end-line="138" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="buttonScript.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ZhaoShi.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/ZhaoShi.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="buttonScript.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="2305" column="12" lean-forward="true" selection-start-line="2305" selection-start-column="12" selection-end-line="2305" selection-end-column="12" />
+            <state relative-caret-position="386">
+              <caret line="2112" column="84" lean-forward="true" selection-start-line="2112" selection-start-column="84" selection-end-line="2112" selection-end-column="84" />
               <folding>
-                <marker date="1498153106730" expanded="true" signature="126419:126673" ph="//..." />
+                <marker date="1498195878169" expanded="true" signature="137640:137894" ph="//..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShuX.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/ShuX.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="589">
+              <caret line="756" column="23" lean-forward="false" selection-start-line="756" selection-start-column="12" selection-end-line="756" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Hp.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/Hp.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="315" column="37" lean-forward="false" selection-start-line="315" selection-start-column="37" selection-end-line="315" selection-end-column="37" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -57,24 +92,25 @@
       <file leaf-file-name="MyffOnload.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/MyffOnload.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="1049" column="22" lean-forward="true" selection-start-line="1049" selection-start-column="22" selection-end-line="1049" selection-end-column="22" />
+            <state relative-caret-position="63">
+              <caret line="423" column="6" lean-forward="false" selection-start-line="423" selection-start-column="6" selection-end-line="423" selection-end-column="6" />
               <folding>
-                <marker date="1498154644321" expanded="true" signature="1778:1795" ph="..." />
-                <marker date="1498154644321" expanded="true" signature="4317:4365" ph="..." />
-                <marker date="1498154644321" expanded="true" signature="4489:4500" ph="..." />
-                <marker date="1498154644321" expanded="true" signature="5194:5242" ph="..." />
-                <marker date="1498154644321" expanded="true" signature="5367:5384" ph="..." />
-                <marker date="1498154644321" expanded="true" signature="7599:7647" ph="..." />
-                <marker date="1498154644321" expanded="true" signature="9227:9244" ph="..." />
-                <marker date="1498154644321" expanded="true" signature="11770:11818" ph="..." />
-                <marker date="1498154644321" expanded="true" signature="11944:11955" ph="..." />
-                <marker date="1498154644321" expanded="true" signature="12651:12699" ph="..." />
-                <marker date="1498154644321" expanded="true" signature="12826:12843" ph="..." />
-                <marker date="1498154644321" expanded="true" signature="15060:15108" ph="..." />
-                <marker date="1498154644321" expanded="true" signature="89368:89374" ph="..." />
-                <marker date="1498154644321" expanded="true" signature="89393:89399" ph=" " />
-                <marker date="1498154644321" expanded="true" signature="89397:89399" ph="..." />
+                <marker date="1498188266495" expanded="true" signature="1778:1795" ph="..." />
+                <marker date="1498188266495" expanded="true" signature="4317:4365" ph="..." />
+                <marker date="1498188266495" expanded="true" signature="4489:4500" ph="..." />
+                <marker date="1498188266495" expanded="true" signature="5194:5242" ph="..." />
+                <marker date="1498188266495" expanded="true" signature="5367:5384" ph="..." />
+                <marker date="1498188266495" expanded="true" signature="7599:7647" ph="..." />
+                <marker date="1498188266495" expanded="true" signature="9227:9244" ph="..." />
+                <marker date="1498188266495" expanded="true" signature="11770:11818" ph="..." />
+                <marker date="1498188266495" expanded="true" signature="11944:11955" ph="..." />
+                <marker date="1498188266495" expanded="true" signature="12651:12699" ph="..." />
+                <marker date="1498188266495" expanded="true" signature="12826:12843" ph="..." />
+                <marker date="1498188266495" expanded="true" signature="15060:15108" ph="..." />
+                <marker date="1498188266495" expanded="true" signature="89428:89434" ph=" " />
+                <marker date="1498188266495" expanded="true" signature="89453:89459" ph=" " />
+                <marker date="1498188266495" expanded="true" signature="89471:89477" ph=" " />
+                <marker date="1498188266495" expanded="true" signature="89477:89483" ph=" " />
               </folding>
             </state>
           </provider>
@@ -92,40 +128,38 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fvd5</find>
-      <find>fvd</find>
-      <find>fvd60</find>
-      <find>fvd601</find>
-      <find>yao</find>
-      <find>HpB.tou = HpB.tou - attW_Q - attN_Q;</find>
-      <find>if ()</find>
-      <find>.subHP_)</find>
-      <find>return a;</find>
-      <find>shanbi_i</find>
-      <find>shanbi_i#003179</find>
-      <find>#003179</find>
-      <find>HP_tiao</find>
-      <find>6566</find>
-      <find>6566e</find>
-      <find>6566er</find>
-      <find>6566ert</find>
-      <find>body-all-b00.png</find>
-      <find>body-all-b0.png</find>
-      <find>body-all-b.png</find>
-      <find>NeiRongchoiceZSdaK</find>
-      <find>.TuKuangshuxinTanchuDK</find>
-      <find>NeiRongchoiceZSdaK_Title1</find>
-      <find>TuKuangTitle_name</find>
-      <find>cuo_name</find>
-      <find>id=&quot;ZDwenbenWK&quot;</find>
-      <find>ps-container</find>
-      <find>huihe_i</find>
-      <find>ZDwenbenWK</find>
-      <find>NeiRongKuangzz2</find>
+      <find>t</find>
+      <find>tim</find>
+      <find>time</find>
+      <find>Dtime</find>
+      <find>D*time</find>
+      <find>DJSt</find>
+      <find>DJSti</find>
+      <find>DJStim</find>
+      <find>DJStime</find>
+      <find>wendi</find>
+      <find>wendingh</find>
+      <find>wending</find>
+      <find>wendin</find>
+      <find>we</find>
+      <find>wendinhuifu</find>
+      <find>DJStime \- 0\.1\;\n                HpA\.pinheng \= HpA\.pinheng \+ mSX_Pinheng\.wendinhuifu\(SX_Pinheng\[0\]\)\;</find>
+      <find>ping</find>
+      <find>subPingheng</find>
+      <find>HpA.pinheng</find>
+      <find>pinheng</find>
+      <find>HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));            HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]));            $(&quot;#ZDwenbenWK&quot;).append(&quot;&lt;div&gt;A平衡消耗:&quot; + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + &quot;,为&quot; + HpA.pinheng + &quot;&lt;/div&gt;&quot;);            $(&quot;#ZDwenbenWK&quot;).append(&quot;&lt;div&gt;B平衡回复:&quot; + mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) + &quot;,为&quot; + HpB.pinheng + &quot;&lt;/div&gt;&quot;);</find>
+      <find>mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0])</find>
+      <find>mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1])</find>
+      <find>mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(AchoiceZS[b].zs_name, SX_Minjie[1])</find>
+      <find>BchoiceZS[b]</find>
+      <find>BchoiceZS[a]</find>
+      <find>BchoiceZS[a].zs_name</find>
+      <find>BchoiceZS[b].zs_name</find>
+      <find>AchoiceZS[b].zs_name</find>
+      <find>Banyuan_ZD_r</find>
     </findStrings>
     <replaceStrings>
-      <replace>return &quot;&quot;</replace>
-      <replace>shuanghaijisuan()</replace>
       <replace>CNtoEN_BW</replace>
       <replace>zs_to = &quot;tou&quot;;</replace>
       <replace>zs_to = &quot;xiong&quot;;</replace>
@@ -154,6 +188,8 @@
       <replace>if (HpA.subHP_)</replace>
       <replace>.subHP_(attW_Q+attN_Q))</replace>
       <replace>//return a;</replace>
+      <replace>mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10</replace>
+      <replace>mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -178,11 +214,11 @@
         <option value="$PROJECT_DIR$/index - 副本.html" />
         <option value="$PROJECT_DIR$/js/ZhaoShi.js" />
         <option value="$PROJECT_DIR$/js/ShuX.js" />
-        <option value="$PROJECT_DIR$/js/Hp.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/buttonScript.js" />
-        <option value="$PROJECT_DIR$/js/MyffOnload.js" />
         <option value="$PROJECT_DIR$/css/base.css" />
+        <option value="$PROJECT_DIR$/js/MyffOnload.js" />
+        <option value="$PROJECT_DIR$/js/Hp.js" />
+        <option value="$PROJECT_DIR$/js/buttonScript.js" />
       </list>
     </option>
   </component>
@@ -250,6 +286,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -279,7 +316,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -464,11 +500,12 @@
       <workItem from="1497233743602" duration="1729000" />
       <workItem from="1497607295649" duration="2615000" />
       <workItem from="1498150278424" duration="5036000" />
+      <workItem from="1498185469032" duration="8961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="291881000" />
+    <option name="totallyTimeSpent" value="300842000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -809,77 +846,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="2149" column="17" lean-forward="false" selection-start-line="2149" selection-start-column="17" selection-end-line="2149" selection-end-column="17" />
+          <folding>
+            <marker date="1498187974452" expanded="true" signature="38111:38112" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1490">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="138" column="27" lean-forward="true" selection-start-line="138" selection-start-column="27" selection-end-line="138" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/MyffOnload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="423" column="6" lean-forward="false" selection-start-line="423" selection-start-column="6" selection-end-line="423" selection-end-column="6" />
+          <folding>
+            <marker date="1498188266495" expanded="true" signature="1778:1795" ph="..." />
+            <marker date="1498188266495" expanded="true" signature="4317:4365" ph="..." />
+            <marker date="1498188266495" expanded="true" signature="4489:4500" ph="..." />
+            <marker date="1498188266495" expanded="true" signature="5194:5242" ph="..." />
+            <marker date="1498188266495" expanded="true" signature="5367:5384" ph="..." />
+            <marker date="1498188266495" expanded="true" signature="7599:7647" ph="..." />
+            <marker date="1498188266495" expanded="true" signature="9227:9244" ph="..." />
+            <marker date="1498188266495" expanded="true" signature="11770:11818" ph="..." />
+            <marker date="1498188266495" expanded="true" signature="11944:11955" ph="..." />
+            <marker date="1498188266495" expanded="true" signature="12651:12699" ph="..." />
+            <marker date="1498188266495" expanded="true" signature="12826:12843" ph="..." />
+            <marker date="1498188266495" expanded="true" signature="15060:15108" ph="..." />
+            <marker date="1498188266495" expanded="true" signature="89428:89434" ph=" " />
+            <marker date="1498188266495" expanded="true" signature="89453:89459" ph=" " />
+            <marker date="1498188266495" expanded="true" signature="89471:89477" ph=" " />
+            <marker date="1498188266495" expanded="true" signature="89477:89483" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ShuX.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="756" column="23" lean-forward="false" selection-start-line="756" selection-start-column="12" selection-end-line="756" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/ZhaoShi.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="441" column="16" lean-forward="false" selection-start-line="441" selection-start-column="12" selection-end-line="441" selection-end-column="16" />
+        <state relative-caret-position="76">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Hp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="299" column="20" lean-forward="false" selection-start-line="299" selection-start-column="20" selection-end-line="299" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/ShuX.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="368" column="37" lean-forward="false" selection-start-line="368" selection-start-column="37" selection-end-line="368" selection-end-column="37" />
+        <state relative-caret-position="186">
+          <caret line="315" column="37" lean-forward="false" selection-start-line="315" selection-start-column="37" selection-end-line="315" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="2305" column="12" lean-forward="true" selection-start-line="2305" selection-start-column="12" selection-end-line="2305" selection-end-column="12" />
+        <state relative-caret-position="386">
+          <caret line="2112" column="84" lean-forward="true" selection-start-line="2112" selection-start-column="84" selection-end-line="2112" selection-end-column="84" />
           <folding>
-            <marker date="1498153106730" expanded="true" signature="126419:126673" ph="//..." />
+            <marker date="1498195878169" expanded="true" signature="137640:137894" ph="//..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/MyffOnload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="1049" column="22" lean-forward="true" selection-start-line="1049" selection-start-column="22" selection-end-line="1049" selection-end-column="22" />
-          <folding>
-            <marker date="1498154644321" expanded="true" signature="1778:1795" ph="..." />
-            <marker date="1498154644321" expanded="true" signature="4317:4365" ph="..." />
-            <marker date="1498154644321" expanded="true" signature="4489:4500" ph="..." />
-            <marker date="1498154644321" expanded="true" signature="5194:5242" ph="..." />
-            <marker date="1498154644321" expanded="true" signature="5367:5384" ph="..." />
-            <marker date="1498154644321" expanded="true" signature="7599:7647" ph="..." />
-            <marker date="1498154644321" expanded="true" signature="9227:9244" ph="..." />
-            <marker date="1498154644321" expanded="true" signature="11770:11818" ph="..." />
-            <marker date="1498154644321" expanded="true" signature="11944:11955" ph="..." />
-            <marker date="1498154644321" expanded="true" signature="12651:12699" ph="..." />
-            <marker date="1498154644321" expanded="true" signature="12826:12843" ph="..." />
-            <marker date="1498154644321" expanded="true" signature="15060:15108" ph="..." />
-            <marker date="1498154644321" expanded="true" signature="89368:89374" ph="..." />
-            <marker date="1498154644321" expanded="true" signature="89393:89399" ph=" " />
-            <marker date="1498154644321" expanded="true" signature="89397:89399" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="2147" column="29" lean-forward="false" selection-start-line="2147" selection-start-column="29" selection-end-line="2147" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>

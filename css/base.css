@@ -2140,15 +2140,26 @@ html, body {
 .ui-progressbar-value{
     transition: all 400ms ease-in-out 0ms;
 }
-
+.XS_huiheS_DK{
+	margin-left: 20px;
+}
 .XS_huiheS{
     float: left;
-    width: 130px;
-    height:26px;
-    margin: 20px 0px 20px 180px;
+    width: 100px;
+    height:48px;
+    margin: 20px;
     background: #bb1c33;
     border-radius: 5px;
     text-align: center;
     color:#fff;
-    line-height: 26px;
+    line-height: 20px;
+	padding-top: 10px;
+	box-shadow:2px 3px 10px rgba(0,0,0,0.2) inset;
+}
+
+.XS_huiheS_line {
+	float: left;
+	width: 150px;
+	border-top: #A0A0A0 1px dashed;
+	margin-top: 65px;
 }

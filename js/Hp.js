@@ -39,6 +39,7 @@ var Hp = {
         hp.Max_xiaotuiR = 800;
         hp.Max_huaiL = 280;
         hp.Max_huaiR = 280;
+        hp.Max_pinheng = 0;
         //Hp
         hp.tou = 500;
         hp.xiong = 900;
@@ -89,6 +90,7 @@ var Hp = {
             hp.xiaotuiR = hp.Max_xiaotuiR;
             hp.huaiL = hp.Max_huaiL;
             hp.huaiR = hp.Max_huaiR;
+            hp.pinheng = hp.Max_pinheng;
         };
         //判断挂了没。 0：正常； 1：头hp零失去意识； 2：胸或腹hp零或总hp低于一半，重伤。
         hp.dead = function () {
@@ -309,6 +311,15 @@ var Hp = {
                 a=1;
             }
             return a;
+        };
+        hp.subPingheng = function (sHp) {
+            hp.pinheng = hp.pinheng + sHp;
+            if (hp.pinheng < 0) {
+                hp.pinheng = 0;
+            }
+            if (hp.pinheng > hp.Max_pinheng) {
+                hp.pinheng = hp.Max_pinheng;
+            }
         };
         //反弹受伤(部位，方位(r/l/b)，反弹伤害)
         hp.fantan = function (bw, fw, ftHp) {

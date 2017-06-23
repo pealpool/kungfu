@@ -1038,8 +1038,7 @@ $(document).ready(function () {
         }, 200);
         BshujiZS();
         shuchusuoxuan();
-        $("#ZDwenbenWK").append("<div class='XS_huiheS'>第&nbsp;" + (huihe_i-1) + "&nbsp;回合开始</div>");
-        $("#ZDwenbenWK").append("<div><hr/></div>");
+        $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_huiheS_line'></div><div class='XS_huiheS'>第&nbsp;" + (huihe_i-1) + "&nbsp;回<br><span>开&nbsp;&nbsp;始</span></div><div class='XS_huiheS_line'></div></div>");
         window.fitXH = setInterval(fighting, 200);
     });
 
