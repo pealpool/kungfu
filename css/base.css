@@ -2243,8 +2243,7 @@ html, body {
 	margin-left: -5px;
 }
 .XS_yuan_xiao_r {
-	float: right;
-	margin-right: -5px;
+	margin-left: 442px;
 }
 .XS_text {
 	position: relative;
@@ -2252,4 +2251,52 @@ html, body {
     width: 200px;
     height:20px;
 	margin: 10px;
+}
+
+.XS_qiamhouyao_DK {
+	font-size: 12px;
+	margin-left: 17px;
+	margin-top: 8px;
+}
+.XS_qiamhouyao_XK0 {
+	float: left;
+	width: 40px;
+	height: 20px;
+	text-align: center;
+	border: #a0a0a0 1px solid;
+	line-height: 21px;
+}
+.XS_qiamhouyao_XK1 {
+	float: left;
+	width: 30px;
+	height: 20px;
+	text-align: center;
+	border: #a0a0a0 1px solid;
+	line-height: 21px;
+}
+.XS_qiamhouyao_XK00 {
+	float: left;
+	width: 24px;
+	height: 20px;
+	text-align: center;
+	line-height: 22px;
+	color: #a0a0a0;
+	font-size: 16px;
+}
+.XS_qiamhouyao_XK01 {
+	background: #a0a0a0;
+	color: #fff;
+	border-radius: 5px 0px 0px 5px;
+}
+.XS_qiamhouyao_XK02 {
+	color: #a0a0a0;
+}
+
+.XS_qiamhouyao_XK03 {
+	background: #a0a0a0;
+	color: #fff;
+}
+.XS_qiamhouyao_XK04 {
+	color: #a0a0a0;
+	border-radius: 0px 5px 5px 0px;
 }
