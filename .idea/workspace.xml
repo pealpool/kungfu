@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb5e816f-4d1b-427d-8b73-abc6c84978cd" name="默认的" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/buttonScript.js" afterPath="$PROJECT_DIR$/js/buttonScript.js" />
-    </list>
+    <list default="true" id="bb5e816f-4d1b-427d-8b73-abc6c84978cd" name="默认的" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -15,110 +12,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="pealpool.github.io" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="base.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/base.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40888">
-              <caret line="2152" column="17" lean-forward="false" selection-start-line="2152" selection-start-column="17" selection-end-line="2152" selection-end-column="17" />
-              <folding>
-                <marker date="1498290602948" expanded="true" signature="37722:37725" ph="{...}" />
-                <marker date="1498290602948" expanded="true" signature="39272:39275" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2622">
-              <caret line="138" column="27" lean-forward="false" selection-start-line="138" selection-start-column="27" selection-end-line="138" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ZhaoShi.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/ZhaoShi.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="buttonScript.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="2134" column="232" lean-forward="false" selection-start-line="2134" selection-start-column="232" selection-end-line="2134" selection-end-column="232" />
-              <folding>
-                <marker date="1499189687907" expanded="true" signature="96021:96027" ph=" " />
-                <marker date="1499189687907" expanded="true" signature="141367:141621" ph="//..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShuX.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/ShuX.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14345">
-              <caret line="756" column="23" lean-forward="false" selection-start-line="756" selection-start-column="12" selection-end-line="756" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Hp.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/Hp.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5966">
-              <caret line="315" column="37" lean-forward="false" selection-start-line="315" selection-start-column="37" selection-end-line="315" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyffOnload.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/MyffOnload.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19779">
-              <caret line="1041" column="31" lean-forward="false" selection-start-line="1041" selection-start-column="31" selection-end-line="1041" selection-end-column="31" />
-              <folding>
-                <marker date="1498206320640" expanded="true" signature="1778:1795" ph="..." />
-                <marker date="1498206320640" expanded="true" signature="4317:4365" ph="..." />
-                <marker date="1498206320640" expanded="true" signature="4489:4500" ph="..." />
-                <marker date="1498206320640" expanded="true" signature="5194:5242" ph="..." />
-                <marker date="1498206320640" expanded="true" signature="5367:5384" ph="..." />
-                <marker date="1498206320640" expanded="true" signature="7599:7647" ph="..." />
-                <marker date="1498206320640" expanded="true" signature="9227:9244" ph="..." />
-                <marker date="1498206320640" expanded="true" signature="11770:11818" ph="..." />
-                <marker date="1498206320640" expanded="true" signature="11944:11955" ph="..." />
-                <marker date="1498206320640" expanded="true" signature="12651:12699" ph="..." />
-                <marker date="1498206320640" expanded="true" signature="12826:12843" ph="..." />
-                <marker date="1498206320640" expanded="true" signature="15060:15108" ph="..." />
-                <marker date="1498206320640" expanded="true" signature="89503:89509" ph=" " />
-                <marker date="1498206320640" expanded="true" signature="89528:89534" ph=" " />
-                <marker date="1498206320640" expanded="true" signature="89546:89552" ph=" " />
-                <marker date="1498206320640" expanded="true" signature="89552:89558" ph=" " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DHTML.js" pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23028">
-              <caret line="1212" column="0" lean-forward="false" selection-start-line="1212" selection-start-column="0" selection-end-line="1212" selection-end-column="0" />
+            <state relative-caret-position="788">
+              <caret line="220" column="34" lean-forward="true" selection-start-line="220" selection-start-column="34" selection-end-line="220" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -232,6 +135,13 @@
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -294,42 +204,25 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pealpool.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pealpool.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pealpool.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pealpool.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="pealpool.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pealpool.github.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
@@ -346,8 +239,13 @@
     </option>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
-    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/pealpool.github.io/index.html">
-      <method />
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
     </configuration>
     <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote">
       <method />
@@ -389,15 +287,6 @@
       <option name="filePath" />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run" />
       <scripts />
@@ -418,9 +307,7 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-    </list>
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/pealpool.github.io/index.html" />
     <recent_temporary>
       <list size="1">
         <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
@@ -513,11 +400,20 @@
       <workItem from="1498285922175" duration="3630000" />
       <workItem from="1498306656339" duration="21000" />
       <workItem from="1499189325894" duration="814000" />
+      <workItem from="1500725616052" duration="258000" />
+      <workItem from="1500725894990" duration="31000" />
+      <workItem from="1500725942912" duration="4000" />
+      <workItem from="1500726013938" duration="157000" />
+      <workItem from="1500726226372" duration="72000" />
+      <workItem from="1500726309393" duration="51000" />
+      <workItem from="1500726379841" duration="25000" />
+      <workItem from="1500726421423" duration="163000" />
+      <workItem from="1500726747840" duration="106000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="310382000" />
+    <option name="totallyTimeSpent" value="311249000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -529,32 +425,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11433087" sideWeight="0.50858366" order="2" side_tool="true" content_ui="combo" x="206" y="72" width="474" height="932" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1140625" sideWeight="0.50858366" order="2" side_tool="true" content_ui="combo" x="206" y="72" width="474" height="932" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21781115" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879582" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1032666" sideWeight="0.4914163" order="0" side_tool="true" content_ui="tabs" x="12" y="783" width="196" height="458" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33154505" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32982087" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33154505" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -855,26 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40888">
           <caret line="2152" column="17" lean-forward="false" selection-start-line="2152" selection-start-column="17" selection-end-line="2152" selection-end-column="17" />
-          <folding>
-            <marker date="1498290602948" expanded="true" signature="37722:37725" ph="{...}" />
-            <marker date="1498290602948" expanded="true" signature="39272:39275" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2622">
-          <caret line="138" column="27" lean-forward="false" selection-start-line="138" selection-start-column="27" selection-end-line="138" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/ShuX.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14345">
-          <caret line="756" column="23" lean-forward="false" selection-start-line="756" selection-start-column="12" selection-end-line="756" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -882,7 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -890,7 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5966">
           <caret line="315" column="37" lean-forward="false" selection-start-line="315" selection-start-column="37" selection-end-line="315" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -898,24 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19779">
           <caret line="1041" column="31" lean-forward="false" selection-start-line="1041" selection-start-column="31" selection-end-line="1041" selection-end-column="31" />
-          <folding>
-            <marker date="1498206320640" expanded="true" signature="1778:1795" ph="..." />
-            <marker date="1498206320640" expanded="true" signature="4317:4365" ph="..." />
-            <marker date="1498206320640" expanded="true" signature="4489:4500" ph="..." />
-            <marker date="1498206320640" expanded="true" signature="5194:5242" ph="..." />
-            <marker date="1498206320640" expanded="true" signature="5367:5384" ph="..." />
-            <marker date="1498206320640" expanded="true" signature="7599:7647" ph="..." />
-            <marker date="1498206320640" expanded="true" signature="9227:9244" ph="..." />
-            <marker date="1498206320640" expanded="true" signature="11770:11818" ph="..." />
-            <marker date="1498206320640" expanded="true" signature="11944:11955" ph="..." />
-            <marker date="1498206320640" expanded="true" signature="12651:12699" ph="..." />
-            <marker date="1498206320640" expanded="true" signature="12826:12843" ph="..." />
-            <marker date="1498206320640" expanded="true" signature="15060:15108" ph="..." />
-            <marker date="1498206320640" expanded="true" signature="89503:89509" ph=" " />
-            <marker date="1498206320640" expanded="true" signature="89528:89534" ph=" " />
-            <marker date="1498206320640" expanded="true" signature="89546:89552" ph=" " />
-            <marker date="1498206320640" expanded="true" signature="89552:89558" ph=" " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -923,18 +779,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23028">
           <caret line="1212" column="0" lean-forward="false" selection-start-line="1212" selection-start-column="0" selection-end-line="1212" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ShuX.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14345">
+          <caret line="756" column="23" lean-forward="false" selection-start-line="756" selection-start-column="12" selection-end-line="756" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
+        <state relative-caret-position="19">
           <caret line="2134" column="232" lean-forward="false" selection-start-line="2134" selection-start-column="232" selection-end-line="2134" selection-end-column="232" />
-          <folding>
-            <marker date="1499189687907" expanded="true" signature="96021:96027" ph=" " />
-            <marker date="1499189687907" expanded="true" signature="141367:141621" ph="//..." />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="788">
+          <caret line="220" column="34" lean-forward="true" selection-start-line="220" selection-start-column="34" selection-end-line="220" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
