@@ -1,4 +1,4 @@
-ZhaoshujuZhaoshujuZhaoshujuZhaoshuju// JavaScript Document
+// JavaScript Document
 "use strict";
 
 //攻击招式参数类
