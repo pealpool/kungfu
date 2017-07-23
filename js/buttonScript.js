@@ -201,6 +201,7 @@ function BDgl_Liliang() {
         $("#PinHengAtt7").html(Math.round(tq_shaotui.PinHengAtt));
     }
 }
+
 function BDgl_Liliang_n() {
     if (PaiBei_A === "Taiji") {
         tj_panda.AttW = ZSglIO.AttW_screen("tj_panda", SX_Liliang[0], SX_Zhili[0]);
@@ -326,6 +327,7 @@ function BDgl_Minjie() {
         $("#ATimeH7").html(tq_shaotui.ATimeH.toFixed(1));
     }
 }
+
 function BDgl_Minjie_n() {
     if (PaiBei_A === "Taiji") {
         tj_panda.ATimeQ = ZSglIO.ATimeQ("tj_panda", SX_Minjie[0]);
@@ -423,6 +425,7 @@ function BDgl_Zhili() {
         $("#Mzxz7").html(Add_zh(Math.round(tq_shaotui.Mzxz * 100)) + "%");
     }
 }
+
 function BDgl_Zhili_n() {
     if (PaiBei_A === "Taiji") {
         tj_panda.Mzxz = ZSglIO.Mzxz("tj_panda", SX_Zhili[0]);
@@ -2103,7 +2106,7 @@ function BzsHouxuanBuwei(zsname, a) {
 //选谁先发招，发啥招。a为A第几招数组序号,b为B第几招数组序号
 //todo 选先手实时计算
 function ChoiceFirst(a, b) {
-    $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_Kong XS_yuan_Kong_l'></div><div class='XS_time'>回合：" + huihe_i + "，时间：" + (DJStime).toFixed(1) + "&nbsp;s</div><div class='XS_yuan_Kong XS_yuan_Kong_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
+    $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_Kong XS_yuan_Kong_l'></div><div class='XS_time'>回合：" + (huihe_i-1) + "，时间：" + (DJStime).toFixed(1) + "&nbsp;s</div><div class='XS_yuan_Kong XS_yuan_Kong_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
     switch (HadChoice_Who) {
         case "A":
             if (a <= AchoiceZS_bj && b <= BchoiceZS_bj) {
@@ -2226,7 +2229,8 @@ function ChoiceFirst(a, b) {
             if (a <= AchoiceZS_bj && b <= BchoiceZS_bj) {
                 IO_XS_normal("之前无先手，");
                 if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng && ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
-                    $("#ZDwenbenWK").append("<div>" + "A前摇为" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]).toFixed(1) + "。B前摇为" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1]).toFixed(1) + "</div>");
+                    // $("#ZDwenbenWK").append("<div>" + "A前摇为" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]).toFixed(1) + "。B前摇为" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1]).toFixed(1) + "</div>");
+                    $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_xiao XS_yuan_xiao_l'></div><div class='XS_qiamhouyao_DK'><div class='XS_qiamhouyao_XK0 XS_qiamhouyao_XK01'>后摇:</div><div class='XS_qiamhouyao_XK1 XS_qiamhouyao_XK02'></div><div class='XS_qiamhouyao_XK0 XS_qiamhouyao_XK03'>前摇:</div><div class='XS_qiamhouyao_XK1 XS_qiamhouyao_XK04'>" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]).toFixed(1) + "</div><div class='XS_qiamhouyao_XK00'>=</div><div class='XS_qiamhouyao_XK00'>" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]).toFixed(1) + "</div><div class='XS_qiamhouyao_XK00'>:</div><div class='XS_qiamhouyao_XK00'>" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1]).toFixed(1) + "</div><div class='XS_qiamhouyao_XK00'>=</div><div class='XS_qiamhouyao_XK0 XS_qiamhouyao_XK01'>后摇:</div><div class='XS_qiamhouyao_XK1 XS_qiamhouyao_XK02'></div><div class='XS_qiamhouyao_XK0 XS_qiamhouyao_XK03'>前摇:</div><div class='XS_qiamhouyao_XK1 XS_qiamhouyao_XK04'>" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1]).toFixed(1) + "</div></div><div class='XS_yuan_xiao XS_yuan_xiao_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
                     if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) > ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
                         HadChoice_Who = "B";
                         HadChoice_Bb = b;
@@ -2306,7 +2310,7 @@ function ChoiceFirst(a, b) {
 
 //重复模块
 function ChoiceFirstN_A(a, b) {
-    $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_xiao XS_yuan_xiao_l'></div><div class='XS_qiamhouyao_DK'><div class='XS_qiamhouyao_XK0 XS_qiamhouyao_XK01'>后摇:</div><div class='XS_qiamhouyao_XK1 XS_qiamhouyao_XK02'>" + ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name), SX_Minjie[0]).toFixed(1) + "</div><div class='XS_qiamhouyao_XK0 XS_qiamhouyao_XK03'>前摇:</div><div class='XS_qiamhouyao_XK1 XS_qiamhouyao_XK04'>" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]).toFixed(1) + "</div><div class='XS_qiamhouyao_XK00'>=</div><div class='XS_qiamhouyao_XK00'>"+(ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name), SX_Minjie[0]) + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]))+"</div><div class='XS_qiamhouyao_XK00'>:</div><div class='XS_qiamhouyao_XK00'>"+ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])+"</div><div class='XS_qiamhouyao_XK00'>=</div><div class='XS_qiamhouyao_XK0 XS_qiamhouyao_XK01'>后摇:</div><div class='XS_qiamhouyao_XK1 XS_qiamhouyao_XK02'></div><div class='XS_qiamhouyao_XK0 XS_qiamhouyao_XK03'>前摇:</div><div class='XS_qiamhouyao_XK1 XS_qiamhouyao_XK04'>" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1]).toFixed(1) + "</div></div><div class='XS_yuan_xiao XS_yuan_xiao_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
+    $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_xiao XS_yuan_xiao_l'></div><div class='XS_qiamhouyao_DK'><div class='XS_qiamhouyao_XK0 XS_qiamhouyao_XK01'>后摇:</div><div class='XS_qiamhouyao_XK1 XS_qiamhouyao_XK02'>" + ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name), SX_Minjie[0]).toFixed(1) + "</div><div class='XS_qiamhouyao_XK0 XS_qiamhouyao_XK03'>前摇:</div><div class='XS_qiamhouyao_XK1 XS_qiamhouyao_XK04'>" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]).toFixed(1) + "</div><div class='XS_qiamhouyao_XK00'>=</div><div class='XS_qiamhouyao_XK00'>" + (ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name), SX_Minjie[0]) + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0])).toFixed(1) + "</div><div class='XS_qiamhouyao_XK00'>:</div><div class='XS_qiamhouyao_XK00'>" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1]).toFixed(1) + "</div><div class='XS_qiamhouyao_XK00'>=</div><div class='XS_qiamhouyao_XK0 XS_qiamhouyao_XK01'>后摇:</div><div class='XS_qiamhouyao_XK1 XS_qiamhouyao_XK02'></div><div class='XS_qiamhouyao_XK0 XS_qiamhouyao_XK03'>前摇:</div><div class='XS_qiamhouyao_XK1 XS_qiamhouyao_XK04'>" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1]).toFixed(1) + "</div></div><div class='XS_yuan_xiao XS_yuan_xiao_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
     //$("#ZDwenbenWK").append("<div>" + "A后摇前摇分别为" + ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name), SX_Minjie[0]).toFixed(1) + "，" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]).toFixed(1) + "。B前摇为" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1]).toFixed(1) + "</div>");
     if (ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name), SX_Minjie[0]) + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) > ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
         HadChoice_Who = "B";
@@ -2340,8 +2344,9 @@ function ChoiceFirstN_A(a, b) {
         }
     }
 }
+
 function ChoiceFirstN_B(a, b) {
-    $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_xiao XS_yuan_xiao_l'></div><div class='XS_qiamhouyao_DK'><div class='XS_qiamhouyao_XK0 XS_qiamhouyao_XK01'>后摇:</div><div class='XS_qiamhouyao_XK1 XS_qiamhouyao_XK02'></div><div class='XS_qiamhouyao_XK0 XS_qiamhouyao_XK03'>前摇:</div><div class='XS_qiamhouyao_XK1 XS_qiamhouyao_XK04'>" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]).toFixed(1) + "</div><div class='XS_qiamhouyao_XK00'>=</div><div class='XS_qiamhouyao_XK00'>"+(ZSglIO.ATimeH(String(BchoiceZS[b - 1].zs_name), SX_Minjie[1]) + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1]))+"</div><div class='XS_qiamhouyao_XK00'>:</div><div class='XS_qiamhouyao_XK00'>"+ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0])+"</div><div class='XS_qiamhouyao_XK00'>=</div><div class='XS_qiamhouyao_XK0 XS_qiamhouyao_XK01'>后摇:</div><div class='XS_qiamhouyao_XK1 XS_qiamhouyao_XK02'>" + ZSglIO.ATimeH(String(BchoiceZS[b - 1].zs_name), SX_Minjie[1]).toFixed(1) + "</div><div class='XS_qiamhouyao_XK0 XS_qiamhouyao_XK03'>前摇:</div><div class='XS_qiamhouyao_XK1 XS_qiamhouyao_XK04'>" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1]).toFixed(1) + "</div></div><div class='XS_yuan_xiao XS_yuan_xiao_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
+    $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_xiao XS_yuan_xiao_l'></div><div class='XS_qiamhouyao_DK'><div class='XS_qiamhouyao_XK0 XS_qiamhouyao_XK01'>后摇:</div><div class='XS_qiamhouyao_XK1 XS_qiamhouyao_XK02'></div><div class='XS_qiamhouyao_XK0 XS_qiamhouyao_XK03'>前摇:</div><div class='XS_qiamhouyao_XK1 XS_qiamhouyao_XK04'>" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]).toFixed(1) + "</div><div class='XS_qiamhouyao_XK00'>=</div><div class='XS_qiamhouyao_XK00'>" + (ZSglIO.ATimeH(String(BchoiceZS[b - 1].zs_name), SX_Minjie[1]) + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])).toFixed(1) + "</div><div class='XS_qiamhouyao_XK00'>:</div><div class='XS_qiamhouyao_XK00'>" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]).toFixed(1) + "</div><div class='XS_qiamhouyao_XK00'>=</div><div class='XS_qiamhouyao_XK0 XS_qiamhouyao_XK01'>后摇:</div><div class='XS_qiamhouyao_XK1 XS_qiamhouyao_XK02'>" + ZSglIO.ATimeH(String(BchoiceZS[b - 1].zs_name), SX_Minjie[1]).toFixed(1) + "</div><div class='XS_qiamhouyao_XK0 XS_qiamhouyao_XK03'>前摇:</div><div class='XS_qiamhouyao_XK1 XS_qiamhouyao_XK04'>" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1]).toFixed(1) + "</div></div><div class='XS_yuan_xiao XS_yuan_xiao_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
     //$("#ZDwenbenWK").append("<div>" + "B后摇前摇分别为" + ZSglIO.ATimeH(String(BchoiceZS[b - 1].zs_name), SX_Minjie[1]).toFixed(1) + "，" + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1]).toFixed(1) + "。A前摇为" + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]).toFixed(1) + "</div>");
     if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) > ZSglIO.ATimeH(String(BchoiceZS[b - 1].zs_name), SX_Minjie[1]) + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
         HadChoice_Who = "B";
@@ -2916,6 +2921,7 @@ function yuanhuanPH() {
         $("#Banyuan_KX_xl").css("transform", "rotate(" + Math.round(-179 + (179 - 80) / mSX_Pinheng.wendinzhi(SX_Pinheng[1]) * HpA.pinheng) + "deg)");
     }
 }
+
 //圆环值刷新
 function yuanhuanPHsx() {
     // HpA.pinheng = HpA.pinheng + mSX_Pinheng.wendinhuifu(SX_Pinheng[0]);

@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/js/buttonScript.js" line="2231" />
+    <bookmark url="file://$PROJECT_DIR$/js/buttonScript.js" line="2122" />
+    <bookmark url="file://$PROJECT_DIR$/js/buttonScript.js" line="2311" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb5e816f-4d1b-427d-8b73-abc6c84978cd" name="默认的" comment="" />
+    <list default="true" id="bb5e816f-4d1b-427d-8b73-abc6c84978cd" name="默认的" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/buttonScript.js" afterPath="$PROJECT_DIR$/js/buttonScript.js" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -17,12 +26,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="788">
-              <caret line="220" column="34" lean-forward="true" selection-start-line="220" selection-start-column="34" selection-end-line="220" selection-end-column="34" />
+            <state relative-caret-position="293">
+              <caret line="1849" column="45" lean-forward="false" selection-start-line="1849" selection-start-column="45" selection-end-line="1849" selection-end-column="45" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="buttonScript.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="2232" column="577" lean-forward="true" selection-start-line="2232" selection-start-column="577" selection-end-line="2232" selection-end-column="577" />
+              <folding>
+                <marker date="1500820318873" expanded="true" signature="96028:96034" ph=" " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -39,24 +60,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>HpA.pinheng</find>
-      <find>pinheng</find>
-      <find>HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));            HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]));            $(&quot;#ZDwenbenWK&quot;).append(&quot;&lt;div&gt;A平衡消耗:&quot; + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + &quot;,为&quot; + HpA.pinheng + &quot;&lt;/div&gt;&quot;);            $(&quot;#ZDwenbenWK&quot;).append(&quot;&lt;div&gt;B平衡回复:&quot; + mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) + &quot;,为&quot; + HpB.pinheng + &quot;&lt;/div&gt;&quot;);</find>
-      <find>mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0])</find>
-      <find>mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1])</find>
-      <find>mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(AchoiceZS[b].zs_name, SX_Minjie[1])</find>
-      <find>BchoiceZS[b]</find>
-      <find>BchoiceZS[a]</find>
-      <find>BchoiceZS[a].zs_name</find>
-      <find>BchoiceZS[b].zs_name</find>
-      <find>AchoiceZS[b].zs_name</find>
-      <find>Banyuan_ZD_r</find>
       <find>$(&quot;#ZDwenbenWK&quot;).append(&quot;&lt;div&gt;A之前先手,&lt;/div&gt;&quot;);</find>
       <find>之前无先手，</find>
-      <find>之前无先手</find>
       <find>$(&quot;#ZDwenbenWK&quot;).append(&quot;</find>
       <find />
-      <find>平衡</find>
       <find>平衡</find>
       <find>平衡恢复</find>
       <find>平衡复</find>
@@ -69,6 +76,20 @@
       <find>Math.round(+ Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) +</find>
       <find>+ Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) +</find>
       <find>+ mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10 +</find>
+      <find>之前</find>
+      <find>前摇为</find>
+      <find>A前摇为</find>
+      <find>平衡消耗</find>
+      <find>&quot;A平衡消耗:&quot; + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + &quot;,为&quot; + HpA.pinheng</find>
+      <find>HadChoice_Who \= \&quot;A\&quot;\;\n                        HadChoice_Aa \= a\;\n                        HpA\.subPingheng\(\-ZSglIO\.PinHengXH\(AchoiceZS\[a\]\.zs_name\)\)\;\n                        HpB\.subPingheng\(mSX_Pinheng\.wendinhuifu\(SX_Pinheng\[1\]\) \* ZSglIO\.ATimeQ\(AchoiceZS\[a\]\.zs_name\, SX_Minjie\[0\]\) \* 10\)\;\n                        \/\/ \$\(\&quot;\#ZDwenbenWK\&quot;\)\.append\(\&quot;\&lt;div\&gt;A平衡消耗\:\&quot; \+ ZSglIO\.PinHengXH\(AchoiceZS\[a\]\.zs_name\) \+ \&quot;\,为\&quot; \+ HpA\.pinheng \+ \&quot;\&lt;\/div\&gt;\&quot;\)\;</find>
+      <find>HadChoice_Who \= \&quot;A\&quot;\;\n                        HadChoice_Aa \= a\;\n                        HpA\.subPingheng\(\-ZSglIO\.PinHengXH\(AchoiceZS\[a\]\.zs_name\)\)\;\n                        HpB\.subPingheng\(mSX_Pinheng\.wendinhuifu\(SX_Pinheng\[1\]\) \* ZSglIO\.ATimeQ\(AchoiceZS\[a\]\.zs_name\, SX_Minjie\[0\]\) \* 10\)\;\n                        \$\(\&quot;\#ZDwenbenWK\&quot;\)\.append\(\&quot;\&lt;div\&gt;A平衡消耗\:\&quot; \+ ZSglIO\.PinHengXH\(AchoiceZS\[a\]\.zs_name\) \+ \&quot;\,为\&quot; \+ HpA\.pinheng \+ \&quot;\&lt;\/div\&gt;\&quot;\)\;</find>
+      <find>A平衡消耗:&quot; + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + &quot;,为&quot; + HpA.pinheng</find>
+      <find>IO_XS_normal\(\&quot;A平衡消耗\:\&quot; \+ ZSglIO\.PinHengXH\(AchoiceZS\[a\]\.zs_name\) \+ \&quot;\,为\&quot; \+ HpA\.pinheng\)\;\n                    IO_XS_normal\(\&quot;B平衡回复\:\&quot; \+ Math\.round\(mSX_Pinheng\.wendinhuifu\(SX_Pinheng\[1\]\) \* ZSglIO\.ATimeQ\(AchoiceZS\[a\]\.zs_name\, SX_Minjie\[0\]\) \* 10\) \+ \&quot;\,为\&quot; \+ HpB\.pinheng\)\;</find>
+      <find>前摇:</find>
+      <find>回合：</find>
+      <find>后摇</find>
+      <find>之前无先手</find>
+      <find>后摇:</find>
     </findStrings>
     <replaceStrings>
       <replace>zs_to = &quot;xiong&quot;;</replace>
@@ -125,10 +146,11 @@
         <option value="$PROJECT_DIR$/index - 副本.html" />
         <option value="$PROJECT_DIR$/js/ZhaoShi.js" />
         <option value="$PROJECT_DIR$/js/ShuX.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/base.css" />
         <option value="$PROJECT_DIR$/js/Hp.js" />
         <option value="$PROJECT_DIR$/js/MyffOnload.js" />
+        <option value="$APPLICATION_CONFIG_DIR$/webstorm64.exe.vmoptions" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/buttonScript.js" />
       </list>
     </option>
@@ -204,7 +226,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -213,16 +234,22 @@
               <item name="pealpool.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="pealpool.github.io" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="pealpool.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pealpool.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
@@ -409,11 +436,16 @@
       <workItem from="1500726379841" duration="25000" />
       <workItem from="1500726421423" duration="163000" />
       <workItem from="1500726747840" duration="106000" />
+      <workItem from="1500804322046" duration="216000" />
+      <workItem from="1500804655511" duration="409000" />
+      <workItem from="1500805303792" duration="3488000" />
+      <workItem from="1500808934678" duration="90000" />
+      <workItem from="1500818374158" duration="2617000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="311249000" />
+    <option name="totallyTimeSpent" value="318069000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -428,16 +460,16 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1140625" sideWeight="0.50858366" order="2" side_tool="true" content_ui="combo" x="206" y="72" width="474" height="932" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21781115" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879582" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12750264" sideWeight="0.50858366" order="2" side_tool="true" content_ui="combo" x="206" y="72" width="474" height="932" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2174381" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32878152" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1032666" sideWeight="0.4914163" order="0" side_tool="true" content_ui="tabs" x="12" y="783" width="196" height="458" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32982087" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19052745" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -462,13 +494,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44308">
-          <caret line="2332" column="20" lean-forward="true" selection-start-line="2332" selection-start-column="20" selection-end-line="2332" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18525">
@@ -789,18 +814,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/webstorm64.exe.vmoptions">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="2134" column="232" lean-forward="false" selection-start-line="2134" selection-start-column="232" selection-end-line="2134" selection-end-column="232" />
+        <state relative-caret-position="57">
+          <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="788">
-          <caret line="220" column="34" lean-forward="true" selection-start-line="220" selection-start-column="34" selection-end-line="220" selection-end-column="34" />
+        <state relative-caret-position="293">
+          <caret line="1849" column="45" lean-forward="false" selection-start-line="1849" selection-start-column="45" selection-end-line="1849" selection-end-column="45" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="2232" column="577" lean-forward="true" selection-start-line="2232" selection-start-column="577" selection-end-line="2232" selection-end-column="577" />
+          <folding>
+            <marker date="1500820318873" expanded="true" signature="96028:96034" ph=" " />
+          </folding>
         </state>
       </provider>
     </entry>
