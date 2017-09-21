@@ -40,6 +40,7 @@ var Hp = {
         hp.Max_huaiL = 280;
         hp.Max_huaiR = 280;
         hp.Max_pinheng = 0;
+        hp.Max_all = hp.Max_tou +hp.Max_xiong + hp.Max_fu+hp.Max_yaoL + hp.Max_yaoR+hp.Max_jianL + hp.Max_jianR+ hp.Max_shangbiL+hp.Max_shangbiR +hp.Max_zhouL +hp.Max_zhouR + hp.Max_qianbiL+hp.Max_qianbiR +hp.Max_shouwanL + hp.Max_shouwanR+ hp.Max_datuiL+ hp.Max_datuiR+hp.Max_xiL +hp.Max_xiR +hp.Max_xiaotuiL +hp.Max_xiaotuiR +hp.Max_huaiL +hp.Max_huaiR;
         //Hp
         hp.tou = 500;
         hp.xiong = 900;
@@ -65,6 +66,7 @@ var Hp = {
         hp.huaiL = 280;
         hp.huaiR = 280;
         hp.pinheng = 0;
+        hp.all = hp.tou +hp.xiong + hp.fu+hp.yaoL + hp.yaoR+hp.jianL + hp.jianR+ hp.shangbiL+hp.shangbiR +hp.zhouL +hp.zhouR + hp.qianbiL+hp.qianbiR +hp.shouwanL + hp.shouwanR+ hp.datuiL+ hp.datuiR+hp.xiL +hp.xiR +hp.xiaotuiL +hp.xiaotuiR +hp.huaiL +hp.huaiR;
         //hp重置
         hp.resetHP = function () {
             hp.tou = hp.Max_tou;
@@ -91,6 +93,7 @@ var Hp = {
             hp.huaiL = hp.Max_huaiL;
             hp.huaiR = hp.Max_huaiR;
             hp.pinheng = hp.Max_pinheng;
+            hp.all = hp.Max_all;
         };
         //判断挂了没。 0：正常； 1：头hp零失去意识； 2：胸或腹hp零或总hp低于一半，重伤。
         hp.dead = function () {
