@@ -765,6 +765,8 @@ function ChuShiHua() {
 
 //HP刷新
 function HPshuaxin() {
+    HpA.getall();
+    HpB.getall();
     $("#Hp_A_tou").html(HpA.tou);
     $("#Hp_A_xiong").html(HpA.xiong);
     $("#Hp_A_fu").html(HpA.fu);
@@ -788,6 +790,7 @@ function HPshuaxin() {
     $("#Hp_A_xiR").html(HpA.xiR);
     $("#Hp_A_huaiL").html(HpA.huaiL);
     $("#Hp_A_huaiR").html(HpA.huaiR);
+    $("#Hp_A_all").html(Math.round(HpA.all/HpA.Max_all * 100) + "%");
 
     $("#Hp_B_tou").html(HpB.tou);
     $("#Hp_B_xiong").html(HpB.xiong);
@@ -812,9 +815,10 @@ function HPshuaxin() {
     $("#Hp_B_xiR").html(HpB.xiR);
     $("#Hp_B_huaiL").html(HpB.huaiL);
     $("#Hp_B_huaiR").html(HpB.huaiR);
+    $("#Hp_B_all").html(Math.round(HpB.all/HpB.Max_all * 100) + "%");
 
     $("#progressbar_A_all").progressbar({
-        value: Math.round((HpA.tou+HpA.xiong+HpA.fu+HpA.yaoL+HpA.yaoR+HpA.jianL+HpA.jianR+HpA.shangbiL+HpA.shangbiR+HpA.qianbiL+HpA.qianbiR+HpA.zhouL+HpA.zhouR+HpA.shouwanL+HpA.shouwanR+HpA.datuiL+HpA.datuiR+HpA.xiaotuiL+HpA.xiaotuiR+HpA.xiL+HpA.xiR+HpA.huaiL+HpA.huaiR) / HpA.Max_all * 100)
+        value: Math.round(HpA.all / HpA.Max_all * 100)
     });
     $("#progressbar_A_tou").progressbar({
         value: Math.round(HpA.tou / HpA.Max_tou * 100)
@@ -887,7 +891,7 @@ function HPshuaxin() {
     });
 
     $("#progressbar_B_all").progressbar({
-        value: Math.round((HpB.tou+HpB.xiong+HpB.fu+HpB.yaoL+HpB.yaoR+HpB.jianL+HpB.jianR+HpB.shangbiL+HpB.shangbiR+HpB.qianbiL+HpB.qianbiR+HpB.zhouL+HpB.zhouR+HpB.shouwanL+HpB.shouwanR+HpB.datuiL+HpB.datuiR+HpB.xiaotuiL+HpB.xiaotuiR+HpB.xiL+HpB.xiR+HpB.huaiL+HpB.huaiR) / HpB.Max_all * 100)
+        value: Math.round(HpB.all / HpB.Max_all * 100)
     });
     $("#progressbar_B_tou").progressbar({
         value: Math.round(HpB.tou / HpB.Max_tou * 100)
@@ -988,7 +992,7 @@ function HPchongzhi() {
     $("#Hp_A_xiR").html(HpA.xiR);
     $("#Hp_A_huaiL").html(HpA.huaiL);
     $("#Hp_A_huaiR").html(HpA.huaiR);
-    $("#Hp_A_all").html(HpA.all);
+    $("#Hp_A_all").html("100%");
 
     $("#Hp_B_tou").html(HpB.tou);
     $("#Hp_B_xiong").html(HpB.xiong);
@@ -1013,7 +1017,7 @@ function HPchongzhi() {
     $("#Hp_B_xiR").html(HpB.xiR);
     $("#Hp_B_huaiL").html(HpB.huaiL);
     $("#Hp_B_huaiR").html(HpB.huaiR);
-    $("#Hp_B_all").html(HpB.all);
+    $("#Hp_B_all").html("100%");
 
     var m = 97 / Math.max(HpX.tou, HpX.xiong, HpX.fu, HpX.yaoL, HpX.jianL, HpX.shangbiL, HpX.qianbiL, HpX.zhouL, HpX.shouwanL, HpX.datuiL, HpX.xiaotuiL, HpX.xiL, HpX.huaiL);
 
