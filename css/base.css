@@ -2300,35 +2300,13 @@ html, body {
 	color: #a0a0a0;
 	border-radius: 0px 5px 5px 0px;
 }
-.XS_wendidu_XMPz {
-	float:left;
-	color: #a0a0a0;
-	margin-top: 9px;
-}
 
-.XS_wendidu_XMP0 {
-	width: 90px;
-	height: 5px;
-	background-color: #a0a0a0;
-	border-radius: 3px;
-	margin-top: 1px;
-	margin-right: -1px;
-}
 
-.XS_wendidu_XMP2 {
-	position: absolute;
-	float: left;
-	width: 145px;
-	height: 5px;
-	border-radius: 3px;
-	border: #ccc 1px solid;
-}
 
-.XS_wendidu_DMP {
-	float: left;
-	width: 145px;
-	margin: 16px 10px 0px 10px;
-}
+
+
+
+
 
 .myleft {
 	float: left;
@@ -2338,25 +2316,11 @@ html, body {
 	float: right;
 }
 
-.XS_wendidu_kongge {
-	float: left;
-	width: 60px;
-	height: 5px;
-}
 
-.XS_wendidu_DK {
-	font-size: 12px;
-}
 
-.XS_wendidu_XMP1 {
-	width: 100px;
-	height: 5px;
-	background-color: rgba(109,145,197,0.50);
-	border-radius: 3px;
-	margin-top: 1px;
-	margin-right: -1px;
-	position: absolute;
-}
+
+
+
 
 .myrightR {
 	right: 20px;
