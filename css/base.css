@@ -1992,6 +1992,12 @@ html, body {
 .SCd_B{
     text-align: right;
 }
+.SCd_kuan{
+    float:left;
+    width:208px;
+    height: 20px;
+}
+
 .Banyuan_ZD {
 	font-size: 12px;
 	line-height: 12px;
@@ -2246,11 +2252,17 @@ html, body {
 	margin-left: 442px;
 }
 .XS_text {
-	position: relative;
 	float: left;
     width: 200px;
     height:20px;
 	margin: 10px;
+}
+.XS_textS {
+    float: left;
+    width: 420px;
+    height:20px;
+    margin: 10px 10px 0px 10px;
+    font-size: 13px;
 }
 
 .XS_qiamhouyao_DK {
@@ -2300,7 +2312,6 @@ html, body {
 	color: #a0a0a0;
 	border-radius: 0px 5px 5px 0px;
 }
-
 
 
 
