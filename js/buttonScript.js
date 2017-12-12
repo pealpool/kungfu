@@ -1681,7 +1681,7 @@ function BshujiZS() {
 //todo B随机左右手与进攻部位
 function BzsHouxuanBuwei(zsname, a) {
     var sjs = 0;
-	BchoiceZS[a].zs_torl = "";
+    BchoiceZS[a].zs_torl = "";
     switch (zsname) {
         case "tj_panda":
             //[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
@@ -2409,7 +2409,7 @@ function fighting() {
             if ((fig_a > AchoiceZS_bj) && (fig_b > BchoiceZS_bj)) {
                 fig_xix = 1;
             }
-            $("#ZDwenbenWK").append("<div><hr/></div>");
+            IO_XS_normal("<div class='hrgege'><hr/></div>");
         } else {
             IO_XS_normal("回合结束");
             $("#ZDwenbenWK").append("<div><hr/></div>");
@@ -2428,7 +2428,10 @@ function fighting() {
     // alert(HpA.pinheng + ","+HpB.pinheng);
 }
 
+//todo hp结算
 function fighting_n() {
+    var deadA = 0;//死亡标记1为dead
+    var deadB = 0;
     gongjishanghai();
     if (shanbijisuan()) {
         //闪避失败
@@ -2442,29 +2445,39 @@ function fighting_n() {
             if (HadChoice_Who === "A") {
                 switch (AchoiceZS[HadChoice_Aa].zs_to) {
                     case "tou":
-                        if (HpB.subHP_tou(attW_Q + attN_Q)) {
+                        deadB = HpB.subHP_tou(attW_Q + attN_Q);
+                        IO_XS_smallB(IO_XS_hpB("头部hp", attW_Q + attN_Q, HpB.tou));
+                        if (deadB) {
 
                         }
                         break;
                     case "xiong":
-                        if (HpB.subHP_xiong(attW_Q + attN_Q)) {
+                        deadB = HpB.subHP_xiong(attW_Q + attN_Q);
+                        IO_XS_smallB(IO_XS_hpB("胸部hp", attW_Q + attN_Q, HpB.xiong));
+                        if (deadB) {
 
                         }
                         break;
                     case "fu":
-                        if (HpB.subHP_fu(attW_Q + attN_Q)) {
+                        deadB = HpB.subHP_fu(attW_Q + attN_Q);
+                        IO_XS_smallB(IO_XS_hpB("腹部hp", attW_Q + attN_Q, HpB.fu));
+                        if (deadB) {
 
                         }
                         break;
                     case "yao":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                if (HpB.subHP_yaoL(attW_Q + attN_Q)) {
+                                deadB = HpB.subHP_yaoL(attW_Q + attN_Q);
+                                IO_XS_smallB(IO_XS_hpB("左腰hp", attW_Q + attN_Q, HpB.yaoL));
+                                if (deadB) {
 
                                 }
                                 break;
                             case "r":
-                                if (HpB.subHP_yaoR(attW_Q + attN_Q)) {
+                                deadB = HpB.subHP_yaoR(attW_Q + attN_Q);
+                                IO_XS_smallB(IO_XS_hpB("右腰hp", attW_Q + attN_Q, HpB.yaoR));
+                                if (deadB) {
 
                                 }
                                 break;
@@ -2475,12 +2488,16 @@ function fighting_n() {
                     case "jian":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                if (HpB.subHP_jianL(attW_Q + attN_Q)) {
+                                deadB = HpB.subHP_jianL(attW_Q + attN_Q);
+                                IO_XS_smallB(IO_XS_hpB("左肩hp", attW_Q + attN_Q, HpB.jianL));
+                                if (deadB) {
 
                                 }
                                 break;
                             case "r":
-                                if (HpB.subHP_jianR(attW_Q + attN_Q)) {
+                                deadB = HpB.subHP_jianR(attW_Q + attN_Q);
+                                IO_XS_smallB(IO_XS_hpB("右肩hp", attW_Q + attN_Q, HpB.jianR));
+                                if (deadB) {
 
                                 }
                                 break;
@@ -2491,12 +2508,16 @@ function fighting_n() {
                     case "shangbi":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                if (HpB.subHP_shangbiL(attW_Q + attN_Q)) {
+                                deadB = HpB.subHP_shangbiL(attW_Q + attN_Q);
+                                IO_XS_smallB(IO_XS_hpB("左上臂hp", attW_Q + attN_Q, HpB.shangbiL));
+                                if (deadB) {
 
                                 }
                                 break;
                             case "r":
-                                if (HpB.subHP_shangbiR(attW_Q + attN_Q)) {
+                                deadB = HpB.subHP_shangbiR(attW_Q + attN_Q);
+                                IO_XS_smallB(IO_XS_hpB("右上臂hp", attW_Q + attN_Q, HpB.shangbiR));
+                                if (deadB) {
 
                                 }
                                 break;
@@ -2507,12 +2528,16 @@ function fighting_n() {
                     case "zhou":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                if (HpB.subHP_zhouL(attW_Q + attN_Q)) {
+                                deadB = HpB.subHP_zhouL(attW_Q + attN_Q);
+                                IO_XS_smallB(IO_XS_hpB("左肘hp", attW_Q + attN_Q, HpB.zhouL));
+                                if (deadB) {
 
                                 }
                                 break;
                             case "r":
-                                if (HpB.subHP_zhouR(attW_Q + attN_Q)) {
+                                deadB = HpB.subHP_zhouR(attW_Q + attN_Q);
+                                IO_XS_smallB(IO_XS_hpB("右肘hp", attW_Q + attN_Q, HpB.zhouR));
+                                if (deadB) {
 
                                 }
                                 break;
@@ -2523,12 +2548,16 @@ function fighting_n() {
                     case "qianbi":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                if (HpB.subHP_qianbiL(attW_Q + attN_Q)) {
+                                deadB = HpB.subHP_qianbiL(attW_Q + attN_Q);
+                                IO_XS_smallB(IO_XS_hpB("左前臂hp", attW_Q + attN_Q, HpB.qianbiL));
+                                if (deadB) {
 
                                 }
                                 break;
                             case "r":
-                                if (HpB.subHP_qianbiR(attW_Q + attN_Q)) {
+                                deadB = HpB.subHP_qianbiR(attW_Q + attN_Q);
+                                IO_XS_smallB(IO_XS_hpB("右前臂hp", attW_Q + attN_Q, HpB.qianbiR));
+                                if (deadB) {
 
                                 }
                                 break;
@@ -2539,12 +2568,16 @@ function fighting_n() {
                     case "shouwan":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                if (HpB.subHP_shouwanL(attW_Q + attN_Q)) {
+                                deadB = HpB.subHP_shouwanL(attW_Q + attN_Q);
+                                IO_XS_smallB(IO_XS_hpB("左手腕hp", attW_Q + attN_Q, HpB.shouwanL));
+                                if (deadB) {
 
                                 }
                                 break;
                             case "r":
-                                if (HpB.subHP_shouwanR(attW_Q + attN_Q)) {
+                                deadB = HpB.subHP_shouwanR(attW_Q + attN_Q);
+                                IO_XS_smallB(IO_XS_hpB("右手腕hp", attW_Q + attN_Q, HpB.shouwanR));
+                                if (deadB) {
 
                                 }
                                 break;
@@ -2555,12 +2588,16 @@ function fighting_n() {
                     case "datui":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                if (HpB.subHP_datuiL(attW_Q + attN_Q)) {
+                                deadB = HpB.subHP_datuiL(attW_Q + attN_Q);
+                                IO_XS_smallB(IO_XS_hpB("左大腿hp", attW_Q + attN_Q, HpB.datuiL));
+                                if (deadB) {
 
                                 }
                                 break;
                             case "r":
-                                if (HpB.subHP_datuiR(attW_Q + attN_Q)) {
+                                deadB = HpB.subHP_datuiR(attW_Q + attN_Q);
+                                IO_XS_smallB(IO_XS_hpB("右大腿hp", attW_Q + attN_Q, HpB.datuiR));
+                                if (deadB) {
 
                                 }
                                 break;
@@ -2571,12 +2608,16 @@ function fighting_n() {
                     case "xi":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                if (HpB.subHP_xiL(attW_Q + attN_Q)) {
+                                deadB = HpB.subHP_xiL(attW_Q + attN_Q);
+                                IO_XS_smallB(IO_XS_hpB("左膝hp", attW_Q + attN_Q, HpB.xiL));
+                                if (deadB) {
 
                                 }
                                 break;
                             case "r":
-                                if (HpB.subHP_xir(attW_Q + attN_Q)) {
+                                deadB = HpB.subHP_xir(attW_Q + attN_Q);
+                                IO_XS_smallB(IO_XS_hpB("右膝hp", attW_Q + attN_Q, HpB.xir));
+                                if (deadB) {
 
                                 }
                                 break;
@@ -2587,12 +2628,16 @@ function fighting_n() {
                     case "xiaotui":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                if (HpB.subHP_xiaotuiL(attW_Q + attN_Q)) {
+                                deadB = HpB.subHP_xiaotuiL(attW_Q + attN_Q);
+                                IO_XS_smallB(IO_XS_hpB("左小腿hp", attW_Q + attN_Q, HpB.xiaotuiL));
+                                if (deadB) {
 
                                 }
                                 break;
                             case "r":
-                                if (HpB.subHP_xiaotuiR(attW_Q + attN_Q)) {
+                                deadB = HpB.subHP_xiaotuiR(attW_Q + attN_Q);
+                                IO_XS_smallB(IO_XS_hpB("右小腿hp", attW_Q + attN_Q, HpB.xiaotuiR));
+                                if (deadB) {
 
                                 }
                                 break;
@@ -2603,12 +2648,16 @@ function fighting_n() {
                     case "huai":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                if (HpB.subHP_huaiL(attW_Q + attN_Q)) {
+                                deadB = HpB.subHP_huaiL(attW_Q + attN_Q);
+                                IO_XS_smallB(IO_XS_hpB("左脚踝hp", attW_Q + attN_Q, HpB.huaiL));
+                                if (deadB) {
 
                                 }
                                 break;
                             case "r":
-                                if (HpB.subHP_huaiR(attW_Q + attN_Q)) {
+                                deadB = HpB.subHP_huaiR(attW_Q + attN_Q);
+                                IO_XS_smallB(IO_XS_hpB("右脚踝hp", attW_Q + attN_Q, HpB.huaiR));
+                                if (deadB) {
 
                                 }
                                 break;
@@ -2623,178 +2672,224 @@ function fighting_n() {
             } else if (HadChoice_Who === "B") {
                 switch (BchoiceZS[HadChoice_Bb].zs_to) {
                     case "tou":
-                        if (HpA.subHP_tou(attW_Q + attN_Q)) {
+                        deadA = HpA.subHP_tou(attW_Q + attN_Q);
+                        IO_XS_smallA(IO_XS_hpA("头部hp", attW_Q + attN_Q, HpA.tou));
+                        if (deadA) {
 
                         }
                         break;
                     case "xiong":
-                        if (HpA.subHP_xiong(attW_Q + attN_Q)) {
+                        deadA = HpA.subHP_xiong(attW_Q + attN_Q);
+                        IO_XS_smallA(IO_XS_hpA("胸部hp", attW_Q + attN_Q, HpA.xiong));
+                        if (deadA) {
 
                         }
                         break;
                     case "fu":
-                        if (HpA.subHP_fu(attW_Q + attN_Q)) {
+                        deadA = HpA.subHP_fu(attW_Q + attN_Q);
+                        IO_XS_smallA(IO_XS_hpA("腹部hp", attW_Q + attN_Q, HpA.fu));
+                        if (deadA) {
 
                         }
                         break;
                     case "yao":
-                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
+                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                if (HpA.subHP_yaoL(attW_Q + attN_Q)) {
+                                deadA = HpA.subHP_yaoL(attW_Q + attN_Q);
+                                IO_XS_smallA(IO_XS_hpA("左腰hp", attW_Q + attN_Q, HpA.yaoL));
+                                if (deadA) {
 
                                 }
                                 break;
                             case "r":
-                                if (HpA.subHP_yaoR(attW_Q + attN_Q)) {
+                                deadA = HpA.subHP_yaoR(attW_Q + attN_Q);
+                                IO_XS_smallA(IO_XS_hpA("右腰hp", attW_Q + attN_Q, HpA.yaoR));
+                                if (deadA) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd601");
+                                alert("357fvd501");
                         }
                         break;
                     case "jian":
-                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
+                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                if (HpA.subHP_jianL(attW_Q + attN_Q)) {
+                                deadA = HpA.subHP_jianL(attW_Q + attN_Q);
+                                IO_XS_smallA(IO_XS_hpA("左肩hp", attW_Q + attN_Q, HpA.jianL));
+                                if (deadA) {
 
                                 }
                                 break;
                             case "r":
-                                if (HpA.subHP_jianR(attW_Q + attN_Q)) {
+                                deadA = HpA.subHP_jianR(attW_Q + attN_Q);
+                                IO_XS_smallA(IO_XS_hpA("右肩hp", attW_Q + attN_Q, HpA.jianR));
+                                if (deadA) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd602");
+                                alert("357fvd502");
                         }
                         break;
                     case "shangbi":
-                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
+                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                if (HpA.subHP_shangbiL(attW_Q + attN_Q)) {
+                                deadA = HpA.subHP_shangbiL(attW_Q + attN_Q);
+                                IO_XS_smallA(IO_XS_hpA("左上臂hp", attW_Q + attN_Q, HpA.shangbiL));
+                                if (deadA) {
 
                                 }
                                 break;
                             case "r":
-                                if (HpA.subHP_shangbiR(attW_Q + attN_Q)) {
+                                deadA = HpA.subHP_shangbiR(attW_Q + attN_Q);
+                                IO_XS_smallA(IO_XS_hpA("右上臂hp", attW_Q + attN_Q, HpA.shangbiR));
+                                if (deadA) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd603");
+                                alert("357fvd503");
                         }
                         break;
                     case "zhou":
-                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
+                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                if (HpA.subHP_zhouL(attW_Q + attN_Q)) {
+                                deadA = HpA.subHP_zhouL(attW_Q + attN_Q);
+                                IO_XS_smallA(IO_XS_hpA("左肘hp", attW_Q + attN_Q, HpA.zhouL));
+                                if (deadA) {
 
                                 }
                                 break;
                             case "r":
-                                if (HpA.subHP_zhouR(attW_Q + attN_Q)) {
+                                deadA = HpA.subHP_zhouR(attW_Q + attN_Q);
+                                IO_XS_smallA(IO_XS_hpA("右肘hp", attW_Q + attN_Q, HpA.zhouR));
+                                if (deadA) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd604");
+                                alert("357fvd504");
                         }
                         break;
                     case "qianbi":
-                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
+                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                if (HpA.subHP_qianbiL(attW_Q + attN_Q)) {
+                                deadA = HpA.subHP_qianbiL(attW_Q + attN_Q);
+                                IO_XS_smallA(IO_XS_hpA("左前臂hp", attW_Q + attN_Q, HpA.qianbiL));
+                                if (deadA) {
 
                                 }
                                 break;
                             case "r":
-                                if (HpA.subHP_qianbiR(attW_Q + attN_Q)) {
+                                deadA = HpA.subHP_qianbiR(attW_Q + attN_Q);
+                                IO_XS_smallA(IO_XS_hpA("右前臂hp", attW_Q + attN_Q, HpA.qianbiR));
+                                if (deadA) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd605");
+                                alert("357fvd505");
                         }
                         break;
                     case "shouwan":
-                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
+                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                if (HpA.subHP_shouwanL(attW_Q + attN_Q)) {
+                                deadA = HpA.subHP_shouwanL(attW_Q + attN_Q);
+                                IO_XS_smallA(IO_XS_hpA("左手腕hp", attW_Q + attN_Q, HpA.shouwanL));
+                                if (deadA) {
 
                                 }
                                 break;
                             case "r":
-                                if (HpA.subHP_shouwanR(attW_Q + attN_Q)) {
+                                deadA = HpA.subHP_shouwanR(attW_Q + attN_Q);
+                                IO_XS_smallA(IO_XS_hpA("右手腕hp", attW_Q + attN_Q, HpA.shouwanR));
+                                if (deadA) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd606");
+                                alert("357fvd506");
                         }
                         break;
                     case "datui":
-                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
+                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                if (HpA.subHP_datuiL(attW_Q + attN_Q)) {
+                                deadA = HpA.subHP_datuiL(attW_Q + attN_Q);
+                                IO_XS_smallA(IO_XS_hpA("左大腿hp", attW_Q + attN_Q, HpA.datuiL));
+                                if (deadA) {
 
                                 }
                                 break;
                             case "r":
-                                if (HpA.subHP_datuiR(attW_Q + attN_Q)) {
+                                deadA = HpA.subHP_datuiR(attW_Q + attN_Q);
+                                IO_XS_smallA(IO_XS_hpA("右大腿hp", attW_Q + attN_Q, HpA.datuiR));
+                                if (deadA) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd607");
+                                alert("357fvd507");
                         }
                         break;
                     case "xi":
-                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
+                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                if (HpA.subHP_xiL(attW_Q + attN_Q)) {
+                                deadA = HpA.subHP_xiL(attW_Q + attN_Q);
+                                IO_XS_smallA(IO_XS_hpA("左膝hp", attW_Q + attN_Q, HpA.xiL));
+                                if (deadA) {
 
                                 }
                                 break;
                             case "r":
-                                if (HpA.subHP_xiR(attW_Q + attN_Q)) {
+                                deadA = HpA.subHP_xir(attW_Q + attN_Q);
+                                IO_XS_smallA(IO_XS_hpA("右膝hp", attW_Q + attN_Q, HpA.xir));
+                                if (deadA) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd608");
+                                alert("357fvd508");
                         }
                         break;
                     case "xiaotui":
-                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
+                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                if (HpA.subHP_xiaotuiL(attW_Q + attN_Q)) {
+                                deadA = HpA.subHP_xiaotuiL(attW_Q + attN_Q);
+                                IO_XS_smallA(IO_XS_hpA("左小腿hp", attW_Q + attN_Q, HpA.xiaotuiL));
+                                if (deadA) {
 
                                 }
                                 break;
                             case "r":
-                                if (HpA.subHP_xiaotuiR(attW_Q + attN_Q)) {
+                                deadA = HpA.subHP_xiaotuiR(attW_Q + attN_Q);
+                                IO_XS_smallA(IO_XS_hpA("右小腿hp", attW_Q + attN_Q, HpA.xiaotuiR));
+                                if (deadA) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd609");
+                                alert("357fvd509");
                         }
                         break;
                     case "huai":
-                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
+                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                if (HpA.subHP_huaiL(attW_Q + attN_Q)) {
+                                deadA = HpA.subHP_huaiL(attW_Q + attN_Q);
+                                IO_XS_smallA(IO_XS_hpA("左脚踝hp", attW_Q + attN_Q, HpA.huaiL));
+                                if (deadA) {
 
                                 }
                                 break;
                             case "r":
-                                if (HpA.subHP_huaiR(attW_Q + attN_Q)) {
+                                deadA = HpA.subHP_huaiR(attW_Q + attN_Q);
+                                IO_XS_smallA(IO_XS_hpA("右脚踝hp", attW_Q + attN_Q, HpA.huaiR));
+                                if (deadA) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd610");
+                                alert("357fvd510");
                         }
                         break;
                     default:
@@ -2866,7 +2961,7 @@ function shanbijisuan() {
                 IO_XS_normalB(mynameOutB + "闪避率：" + Math.round((mSX_Minjie.SanBi(AchoiceZS[HadChoice_Aa].zs_to, SX_Minjie[1]) - ZSglIO.Mzxz(AchoiceZS[HadChoice_Aa].zs_name, SX_Zhili[0]) + mSX_Minjie.SanBi(AchoiceZS[HadChoice_Aa].zs_to, SX_Minjie[1]) * ZSglIO.Mzxz(AchoiceZS[HadChoice_Aa].zs_name, SX_Zhili[0])) * 100) + "%，闪避开了攻击。");
                 a = 0;
                 HpB.pinheng = HpB.pinheng - 5 * shanbiB_i;
-                IO_XS_small("",mynameOutB + "平衡: <span class='redfont'> -" + 5 * shanbiB_i + "</span> = " + Math.round(HpB.pinheng));
+                IO_XS_small("", mynameOutB + "平衡: <span class='redfont'> -" + 5 * shanbiB_i + "</span> = " + Math.round(HpB.pinheng));
                 shanbiB_i++;
             } else {
                 IO_XS_normalB(mynameOutB + "闪避率：" + Math.round((mSX_Minjie.SanBi(AchoiceZS[HadChoice_Aa].zs_to, SX_Minjie[1]) - ZSglIO.Mzxz(AchoiceZS[HadChoice_Aa].zs_name, SX_Zhili[0]) + mSX_Minjie.SanBi(AchoiceZS[HadChoice_Aa].zs_to, SX_Minjie[1]) * ZSglIO.Mzxz(AchoiceZS[HadChoice_Aa].zs_name, SX_Zhili[0])) * 100) + "%，躲闪不及。");
@@ -2884,7 +2979,7 @@ function shanbijisuan() {
                 IO_XS_normalA(mynameOutA + "闪避率：" + Math.round((mSX_Minjie.SanBi(BchoiceZS[HadChoice_Bb].zs_to, SX_Minjie[0]) - ZSglIO.Mzxz(BchoiceZS[HadChoice_Bb].zs_name, SX_Zhili[1]) + mSX_Minjie.SanBi(BchoiceZS[HadChoice_Bb].zs_to, SX_Minjie[0]) * ZSglIO.Mzxz(BchoiceZS[HadChoice_Bb].zs_name, SX_Zhili[1])) * 100) + "%，闪开了攻击。")
                 a = 0;
                 HpA.pinheng = HpA.pinheng - 5 * shanbiA_i;
-                IO_XS_small(mynameOutA + "平衡: <span class='redfont'> -" + 5 * shanbiA_i + "</span> = " + Math.round(HpA.pinheng),"");
+                IO_XS_small(mynameOutA + "平衡: <span class='redfont'> -" + 5 * shanbiA_i + "</span> = " + Math.round(HpA.pinheng), "");
                 shanbiA_i++;
             } else {
                 IO_XS_normalA(mynameOutA + "闪避率：" + Math.round((mSX_Minjie.SanBi(BchoiceZS[HadChoice_Bb].zs_to, SX_Minjie[0]) - ZSglIO.Mzxz(BchoiceZS[HadChoice_Bb].zs_name, SX_Zhili[1]) + mSX_Minjie.SanBi(BchoiceZS[HadChoice_Bb].zs_to, SX_Minjie[0]) * ZSglIO.Mzxz(BchoiceZS[HadChoice_Bb].zs_name, SX_Zhili[1])) * 100) + "%，躲闪不及。")
@@ -2901,23 +2996,40 @@ function shanbijisuan() {
 //双手防御头，平分伤害
 function fangyujisuan() {
     var a = 1;//0为防御
+    var damax = 0;//防御部位最大hp
     if (HadChoice_Who === "A") {
         //[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
-        if (Math.floor(Math.random() * 101) <= Math.round(mSX_Tizhi.FangYuJiLv(AchoiceZS[HadChoice_Aa].zs_to, SX_Tizhi[1]) * 100)) {
-            //$("#ZDwenbenWK").append("<div class='SCd_B'>B防御了</div>");
-            IO_XS_normalBn(mynameOutB + "防御几率：" + Math.round(mSX_Tizhi.FangYuJiLv(AchoiceZS[HadChoice_Aa].zs_to, SX_Tizhi[1]) * 100) + "%，防御了。");
-            a = 0;
+        if (Math.floor(Math.random() * 101) > Math.round(mSX_Tizhi.FangYuJiLv(AchoiceZS[HadChoice_Aa].zs_to, SX_Tizhi[1]) * 100)) {
+            IO_XS_normalBn(mynameOutB + "防御率：" + Math.round(mSX_Tizhi.FangYuJiLv(AchoiceZS[HadChoice_Aa].zs_to, SX_Tizhi[1]) * 100) + "%，防御不及。");
         } else {
-            IO_XS_normalBn(mynameOutB + "防御几率：" + Math.round(mSX_Tizhi.FangYuJiLv(AchoiceZS[HadChoice_Aa].zs_to, SX_Tizhi[1]) * 100) + "%，防御不及。");
+            switch (AchoiceZS[HadChoice_Aa].zs_to) {
+                case "tou":
+                    if (HpB.qianbiL == 0 && HpB.qianbiR == 0) {
+                        IO_XS_normalBn(mynameOutB + "防御部位伤重，不能防御。");
+                    } else {
+                        damax = Math.max(HpB.qianbiL, HpB.qianbiR);
+                        if (HpB.qianbiR == damax) {
+                            if (HpB.subHP_qianbiR((attW_Q + attN_Q) * 0.25)) {
+
+                            } else {
+                                HpB.subHP_tou((attW_Q + attN_Q) * 0.25);
+                            }
+                        }
+                    }
+                    break;
+                case "":
+                    break;
+            }
+            IO_XS_normalBn(mynameOutB + "防御率：" + Math.round(mSX_Tizhi.FangYuJiLv(AchoiceZS[HadChoice_Aa].zs_to, SX_Tizhi[1]) * 100) + "%，防御了。");
+            a = 0;
         }
     } else if (HadChoice_Who === "B") {
         //[min,max]的随机整数Math.floor(Math.random()*(max-min+1)+min)
-        if (Math.floor(Math.random() * 101) <= Math.round(mSX_Tizhi.FangYuJiLv(BchoiceZS[HadChoice_Bb].zs_to, SX_Tizhi[0]) * 100)) {
-            //$("#ZDwenbenWK").append("<div class='SCd_A'>A防御了</div>");
-            IO_XS_normalAn(mynameOutA + "防御几率：" + Math.round(mSX_Tizhi.FangYuJiLv(BchoiceZS[HadChoice_Bb].zs_to, SX_Tizhi[0]) * 100) + "%，防御了。");
-            a = 0;
+        if (Math.floor(Math.random() * 101) > Math.round(mSX_Tizhi.FangYuJiLv(BchoiceZS[HadChoice_Bb].zs_to, SX_Tizhi[0]) * 100)) {
+            IO_XS_normalAn(mynameOutA + "防御率：" + Math.round(mSX_Tizhi.FangYuJiLv(BchoiceZS[HadChoice_Bb].zs_to, SX_Tizhi[0]) * 100) + "%，防御不及。");
         } else {
-            IO_XS_normalAn(mynameOutA + "防御几率：" + Math.round(mSX_Tizhi.FangYuJiLv(BchoiceZS[HadChoice_Bb].zs_to, SX_Tizhi[0]) * 100) + "%，防御不及。");
+            IO_XS_normalAn(mynameOutA + "防御率：" + Math.round(mSX_Tizhi.FangYuJiLv(BchoiceZS[HadChoice_Bb].zs_to, SX_Tizhi[0]) * 100) + "%，防御了。");
+            a = 0;
         }
     }
     return a;
@@ -3420,6 +3532,14 @@ function IO_XS_small(a, b) {
     $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_xiao XS_yuan_xiao_l'></div><div class='XS_textS'><div class='SCd_A SCd_kuan'>" + a + "</div><div class='SCd_B SCd_kuan'>" + b + "</div></div><div class='XS_yuan_xiao XS_yuan_xiao_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
 }
 
+function IO_XS_smallA(a) {
+    $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_xiaoX XS_yuan_xiao_l'></div><div class='XS_textSn'><div class='SCd_kuanD'>" + a + "</div></div><div class='XS_Sline XS_Sline_r'></div></div>");
+}
+
+function IO_XS_smallB(a) {
+    $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_textSn'><div class='SCd_kuanB'>" + a + "</div></div><div class='XS_yuan_xiaoX XS_yuan_xiao_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
+}
+
 function IO_XS_shanghaiA(a, b, c) {
     $("#ZDwenbenWK").append("<div class='XS_shanghaiS_DK'><div class='XS_Sline'></div><div class='XS_shanghai_DK'><div class='XS_shanghai_XK0 XS_shanghai_XK01'>外伤:</div><div class='XS_shanghai_XK0 XS_shanghai_XK02'>" + a + "</div><div class='XS_shanghai_XK0 XS_shanghai_XK01'>内伤:</div><div class='XS_shanghai_XK0 XS_shanghai_XK02'>" + b + "</div><div class='XS_shanghai_XK0 XS_shanghai_XK01'>削衡:</div><div class='XS_shanghai_XK0 XS_shanghai_XK02'>" + c + "</div></div><div class='XS_Sline XS_Sline_r'></div></div>");
 }
@@ -3445,62 +3565,70 @@ function renshushuaxin() {
 function Output_body(a) {
     switch (a) {
         case "shoul":
-            return "<span class='blueSpan'> 左手 </span>";
+            return "<span class='bluebord'> 左手 </span>";
         case "shour":
-            return "<span class='blueSpan'> 右手 </span>";
+            return "<span class='bluebord'> 右手 </span>";
         case "jiaol":
-            return "<span class='blueSpan'> 左脚 </span>";
+            return "<span class='bluebord'> 左脚 </span>";
         case "jiaor":
-            return "<span class='blueSpan'> 右脚 </span>";
+            return "<span class='bluebord'> 右脚 </span>";
         case "shou":
-            return "<span class='blueSpan'> 双手 </span>";
+            return "<span class='bluebord'> 双手 </span>";
         case "jiao":
-            return "<span class='blueSpan'> 双脚 </span>";
+            return "<span class='bluebord'> 双脚 </span>";
         case "tou":
-            return "<span class='blueSpan'> 头部 </span>";
+            return "<span class='bluebord'> 头部 </span>";
         case "xiong":
-            return "<span class='blueSpan'> 胸部 </span>";
+            return "<span class='bluebord'> 胸部 </span>";
         case "fu":
-            return "<span class='blueSpan'> 腹部 </span>";
+            return "<span class='bluebord'> 腹部 </span>";
         case "yaol":
-            return "<span class='blueSpan'> 左腰 </span>";
+            return "<span class='bluebord'> 左腰 </span>";
         case "yaor":
-            return "<span class='blueSpan'> 右腰 </span>";
+            return "<span class='bluebord'> 右腰 </span>";
         case "jianl":
-            return "<span class='blueSpan'> 左肩 </span>";
+            return "<span class='bluebord'> 左肩 </span>";
         case "jianr":
-            return "<span class='blueSpan'> 右肩 </span>";
+            return "<span class='bluebord'> 右肩 </span>";
         case "shangbil":
-            return "<span class='blueSpan'> 左上臂 </span>";
+            return "<span class='bluebord'> 左上臂 </span>";
         case "shangbir":
-            return "<span class='blueSpan'> 右上臂 </span>";
+            return "<span class='bluebord'> 右上臂 </span>";
         case "zhoul":
-            return "<span class='blueSpan'> 左肘 </span>";
+            return "<span class='bluebord'> 左肘 </span>";
         case "zhour":
-            return "<span class='blueSpan'> 右肘 </span>";
+            return "<span class='bluebord'> 右肘 </span>";
         case "qianbil":
-            return "<span class='blueSpan'> 左前臂 </span>";
+            return "<span class='bluebord'> 左前臂 </span>";
         case "qianbir":
-            return "<span class='blueSpan'> 右前臂 </span>";
+            return "<span class='bluebord'> 右前臂 </span>";
         case "shouwanl":
-            return "<span class='blueSpan'> 左手腕 </span>";
+            return "<span class='bluebord'> 左手腕 </span>";
         case "shouwanr":
-            return "<span class='blueSpan'> 右手腕 </span>";
+            return "<span class='bluebord'> 右手腕 </span>";
         case "datuil":
-            return "<span class='blueSpan'> 左大腿 </span>";
+            return "<span class='bluebord'> 左大腿 </span>";
         case "datuir":
-            return "<span class='blueSpan'> 右大腿 </span>";
+            return "<span class='bluebord'> 右大腿 </span>";
         case "xil":
-            return "<span class='blueSpan'> 左膝 </span>";
+            return "<span class='bluebord'> 左膝 </span>";
         case "xir":
-            return "<span class='blueSpan'> 右膝 </span>";
+            return "<span class='bluebord'> 右膝 </span>";
         case "xiaotuil":
-            return "<span class='blueSpan'> 左小腿 </span>";
+            return "<span class='bluebord'> 左小腿 </span>";
         case "xiaotuir":
-            return "<span class='blueSpan'> 右小腿 </span>";
+            return "<span class='bluebord'> 右小腿 </span>";
         case "huail":
-            return "<span class='blueSpan'> 左脚踝 </span>";
+            return "<span class='bluebord'> 左脚踝 </span>";
         case "huair":
-            return "<span class='blueSpan'> 右脚踝 </span>";
+            return "<span class='bluebord'> 右脚踝 </span>";
     }
+}
+
+function IO_XS_hpA(a, b, c) {
+    return "<div class='XkuangHP'><span class='bluebord'>" + a + "</span><span class='redfont'> - " + b + "</span> = " + c + "</div>";
+}
+
+function IO_XS_hpB(a, b, c) {
+    return "<div class='XkuangHP myfloatrigh'><span class='bluebord'>" + a + "</span><span class='redfont'> - " + b + "</span> = " + c + "</div>";
 }
