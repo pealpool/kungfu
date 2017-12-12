@@ -25,8 +25,8 @@ var ZhaoShi = {
                     return "绊摔";
                 case "tq_zhiquan":
                     return "直拳";
-                case "tq_lrgouquan":
-                    return "左右勾拳";
+                case "tq_hgouquan":
+                    return "横勾拳";
                 case "tq_sgouquan":
                     return "上勾拳";
                 case "tq_zhouji":
@@ -73,7 +73,7 @@ var ZhaoShi = {
                 case "tq_zhiquan":
                     abc = 100;
                     break;
-                case "tq_lrgouquan":
+                case "tq_hgouquan":
                     abc = 200;
                     break;
                 case "tq_sgouquan":
@@ -128,7 +128,7 @@ var ZhaoShi = {
                 case "tq_zhiquan":
                     abc = 0;
                     break;
-                case "tq_lrgouquan":
+                case "tq_hgouquan":
                     abc = 0;
                     break;
                 case "tq_sgouquan":
@@ -184,7 +184,7 @@ var ZhaoShi = {
                 case "tq_zhiquan":
                     abc = 100;
                     break;
-                case "tq_lrgouquan":
+                case "tq_hgouquan":
                     abc = 200;
                     break;
                 case "tq_sgouquan":
@@ -244,7 +244,7 @@ var ZhaoShi = {
                 case "tq_zhiquan":
                     abc = 0;
                     break;
-                case "tq_lrgouquan":
+                case "tq_hgouquan":
                     abc = 0;
                     break;
                 case "tq_sgouquan":
@@ -303,7 +303,7 @@ var ZhaoShi = {
                 case "tq_zhiquan":
                     abc = 0.2;
                     break;
-                case "tq_lrgouquan":
+                case "tq_hgouquan":
                     abc = 0.3;
                     break;
                 case "tq_sgouquan":
@@ -359,7 +359,7 @@ var ZhaoShi = {
                 case "tq_zhiquan":
                     abc = 1;
                     break;
-                case "tq_lrgouquan":
+                case "tq_hgouquan":
                     abc = 1;
                     break;
                 case "tq_sgouquan":
@@ -414,7 +414,7 @@ var ZhaoShi = {
                 case "tq_zhiquan":
                     abc = 0.2;
                     break;
-                case "tq_lrgouquan":
+                case "tq_hgouquan":
                     abc = 0.3;
                     break;
                 case "tq_sgouquan":
@@ -469,7 +469,7 @@ var ZhaoShi = {
                 case "tq_zhiquan":
                     abc = 0;
                     break;
-                case "tq_lrgouquan":
+                case "tq_hgouquan":
                     abc = 0;
                     break;
                 case "tq_sgouquan":
@@ -525,7 +525,7 @@ var ZhaoShi = {
                 case "tq_zhiquan":
                     abc = 10;
                     break;
-                case "tq_lrgouquan":
+                case "tq_hgouquan":
                     abc = 20;
                     break;
                 case "tq_sgouquan":
@@ -580,7 +580,7 @@ var ZhaoShi = {
                 case "tq_zhiquan":
                     abc = 10;
                     break;
-                case "tq_lrgouquan":
+                case "tq_hgouquan":
                     abc = 20;
                     break;
                 case "tq_sgouquan":
@@ -638,7 +638,7 @@ var ZhaoShi = {
                 case "tq_zhiquan":
                     return 3;
                     break;
-                case "tq_lrgouquan":
+                case "tq_hgouquan":
                     return 8;
                     break;
                 case "tq_sgouquan":

@@ -570,9 +570,17 @@ html, body {
     float: left;
 }
 
-.redfont {
+.redbord {
     color: #bb1c33;
     font-weight: bold;
+}
+
+.redfont{
+    color: #bb1c33;
+}
+
+.greenfont{
+    color:#119c00;
 }
 
 /*对JQ ui提示栏的修改*/
@@ -1997,6 +2005,10 @@ html, body {
     width:208px;
     height: 20px;
 }
+.SCd_ge{
+    margin-left:8px;
+    margin-right: -8px;
+}
 
 .Banyuan_ZD {
 	font-size: 12px;
@@ -2244,6 +2256,16 @@ html, body {
 	border-radius: 50%;
 	z-index: 10;
 }
+.XS_yuan_xiaoS {
+    position: relative;
+    width: 7px;
+    height: 7px;
+    margin-top: 13px;
+    background: #c4c4c4;
+    border: #c4c4c4 3px solid;
+    border-radius: 50%;
+    z-index: 10;
+}
 .XS_yuan_xiao_l {
 	float: left;
 	margin-left: -5px;
@@ -2253,9 +2275,9 @@ html, body {
 }
 .XS_text {
 	float: left;
-    width: 200px;
+    width: 422px;
     height:20px;
-	margin: 10px;
+    margin: 10px 10px 0px 10px;
 }
 .XS_textS {
     float: left;
@@ -2263,6 +2285,12 @@ html, body {
     height:20px;
     margin: 10px 10px 0px 10px;
     font-size: 13px;
+}
+.XS_textn {
+    float: left;
+    width: 422px;
+    height:20px;
+    margin: 4px 10px 0px 10px;
 }
 
 .XS_qiamhouyao_DK {
@@ -2278,6 +2306,7 @@ html, body {
 	border: #a0a0a0 1px solid;
 	line-height: 21px;
 }
+
 .XS_qiamhouyao_XK1 {
 	float: left;
 	width: 30px;
@@ -2312,27 +2341,51 @@ html, body {
 	color: #a0a0a0;
 	border-radius: 0px 5px 5px 0px;
 }
+.shanghaiRight {
+	float: right;
+    margin-right: 18px;
+}
 
-
-
-
-
-
-
-.myleft {
+.XS_shanghaiS_DK{
+	width: 450px;
+	margin-left: 15px;
+	position: relative;
 	float: left;
 }
-
-.myright {
-	float: right;
+.XS_shanghai_DK {
+	font-size: 12px;
+	margin-left: 17px;
+}
+.XS_shanghai_XK0 {
+	float: left;
+	width: 40px;
+	height: 16px;
+	text-align: center;
+	border-style: solid;
+	border-width: 1px;
+	border-image: -webkit-linear-gradient( rgb(255,255,255),rgb(255,255,255), rgb(187,28,51)) 1 1;
+	line-height: 17px;
 }
 
+.XS_shanghai_XK1 {
+	float: left;
+	width: 30px;
+	height: 20px;
+	text-align: center;
+	border: #a0a0a0 1px solid;
+	line-height: 21px;
+}
+.XS_shanghai_XK01 {
+	background: -webkit-linear-gradient(rgb(255,255,255),rgb(255,255,255), rgb(255,255,255),rgb(255,255,255),rgb(255,255,255),rgb(255,108,129));
+	color: #a0a0a0;
+}
+.XS_shanghai_XK02 {
+	margin-left: -1px;
+	margin-right: -1px;
+	color: #a0a0a0;
+}
 
-
-
-
-
-
-.myrightR {
-	right: 20px;
+.blueSpan{
+    color: #4c74ad;
+    font-weight: bold;
 }

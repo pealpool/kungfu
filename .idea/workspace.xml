@@ -6,7 +6,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb5e816f-4d1b-427d-8b73-abc6c84978cd" name="默认的" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/css/base.css" afterPath="$PROJECT_DIR$/css/base.css" />
+      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change beforePath="$PROJECT_DIR$/js/MyffOnload.js" afterPath="$PROJECT_DIR$/js/MyffOnload.js" />
+      <change beforePath="$PROJECT_DIR$/js/PB_Taiquan.js" afterPath="$PROJECT_DIR$/js/PB_Taiquan.js" />
+      <change beforePath="$PROJECT_DIR$/js/ZhaoShi.js" afterPath="$PROJECT_DIR$/js/ZhaoShi.js" />
       <change beforePath="$PROJECT_DIR$/js/buttonScript.js" afterPath="$PROJECT_DIR$/js/buttonScript.js" />
+      <change beforePath="$PROJECT_DIR$/js/other_Lei.js" afterPath="$PROJECT_DIR$/js/other_Lei.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,16 +33,26 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="559" column="46" lean-forward="false" selection-start-line="559" selection-start-column="46" selection-end-line="559" selection-end-column="46" />
+            <state relative-caret-position="216">
+              <caret line="138" column="27" lean-forward="false" selection-start-line="138" selection-start-column="27" selection-end-line="138" selection-end-column="27" />
               <folding>
-                <element signature="e#88023#88029#0" expanded="true" />
-                <element signature="e#92473#92477#1" expanded="true" />
-                <element signature="e#120816#120822#0" expanded="true" />
-                <element signature="e#120824#120830#0" expanded="true" />
-                <element signature="e#120843#120849#0" expanded="true" />
-                <element signature="e#120849#120855#0" expanded="true" />
+                <element signature="e#88348#88354#0" expanded="true" />
+                <element signature="e#92798#92802#1" expanded="true" />
+                <element signature="e#121118#121124#0" expanded="true" />
+                <element signature="e#121126#121132#0" expanded="true" />
+                <element signature="e#121145#121151#0" expanded="true" />
+                <element signature="e#121151#121157#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZhaoShi.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/ZhaoShi.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="223" column="29" lean-forward="true" selection-start-line="223" selection-start-column="29" selection-end-line="223" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -43,8 +60,8 @@
       <file leaf-file-name="Hp.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Hp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1824">
-              <caret line="97" column="21" lean-forward="false" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
+            <state relative-caret-position="226">
+              <caret line="112" column="8" lean-forward="false" selection-start-line="112" selection-start-column="8" selection-end-line="112" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -53,10 +70,47 @@
       <file leaf-file-name="buttonScript.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="2456" column="25" lean-forward="true" selection-start-line="2456" selection-start-column="25" selection-end-line="2456" selection-end-column="25" />
+            <state relative-caret-position="378">
+              <caret line="2191" column="44" lean-forward="true" selection-start-line="2191" selection-start-column="44" selection-end-line="2191" selection-end-column="44" />
               <folding>
-                <marker date="1513015022538" expanded="true" signature="96715:96721" ph=" " />
+                <marker date="1513072710656" expanded="true" signature="96732:96738" ph=" " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PB_Taiquan.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/PB_Taiquan.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-969">
+              <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyffOnload.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/MyffOnload.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="568">
+              <caret line="1038" column="12" lean-forward="false" selection-start-line="1038" selection-start-column="12" selection-end-line="1038" selection-end-column="12" />
+              <folding>
+                <marker date="1513067778910" expanded="true" signature="1778:1795" ph="..." />
+                <marker date="1513067778910" expanded="true" signature="4317:4365" ph="..." />
+                <marker date="1513067778910" expanded="true" signature="4489:4500" ph="..." />
+                <marker date="1513067778910" expanded="true" signature="5194:5242" ph="..." />
+                <marker date="1513067778910" expanded="true" signature="5367:5384" ph="..." />
+                <marker date="1513067778910" expanded="true" signature="7599:7647" ph="..." />
+                <marker date="1513067778910" expanded="true" signature="9227:9244" ph="..." />
+                <marker date="1513067778910" expanded="true" signature="11770:11818" ph="..." />
+                <marker date="1513067778910" expanded="true" signature="11944:11955" ph="..." />
+                <marker date="1513067778910" expanded="true" signature="12651:12699" ph="..." />
+                <marker date="1513067778910" expanded="true" signature="12826:12843" ph="..." />
+                <marker date="1513067778910" expanded="true" signature="15060:15108" ph="..." />
+                <marker date="1513067778910" expanded="true" signature="89472:89478" ph=" " />
+                <marker date="1513067778910" expanded="true" signature="89497:89503" ph=" " />
+                <marker date="1513067778910" expanded="true" signature="89515:89521" ph=" " />
+                <marker date="1513067778910" expanded="true" signature="89521:89527" ph=" " />
               </folding>
             </state>
           </provider>
@@ -65,8 +119,8 @@
       <file leaf-file-name="base.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/base.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="2268" column="20" lean-forward="true" selection-start-line="2268" selection-start-column="20" selection-end-line="2268" selection-end-column="20" />
+            <state relative-caret-position="535">
+              <caret line="2387" column="9" lean-forward="false" selection-start-line="2387" selection-start-column="1" selection-end-line="2387" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -84,68 +138,68 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Max_</find>
-      <find>progressbar_B_xiaotuiR</find>
-      <find>progressbar_B_tou</find>
-      <find>A</find>
-      <find>progressbar_A_qianbiL</find>
-      <find>Hphh_tou</find>
-      <find>progressbar_A_all</find>
-      <find>progressbar_A_tou</find>
-      <find>HpA.all</find>
-      <find>HP刷新</find>
-      <find>mymyname</find>
-      <find>HpA.tou+HpA.xiong+HpA.fu+HpA.yaoL+HpA.yaoR+HpA.jianL+HpA.jianR+HpA.shangbiL+HpA.shangbiR+HpA.qianbiL+HpA.qianbiR+HpA.zhouL+HpA.zhouR+HpA.shouwanL+HpA.shouwanR+HpA.datuiL+HpA.datuiR+HpA.xiaotuiL+HpA.xiaotuiR+HpA.xiL+HpA.xiR+HpA.huaiL+HpA.huaiR;</find>
-      <find>HpA</find>
-      <find>XS_wendidu_XMP0b</find>
-      <find>XS_wendidu_XMPz</find>
-      <find>平衡回复</find>
-      <find>SCd</find>
-      <find>A之前先手</find>
+      <find>B之前先手</find>
+      <find>TuKuangTitle_name</find>
+      <find>rengshuButtom</find>
+      <find>&quot;&lt;strong&gt;&quot; + mymynameA + &quot;&lt;/strong&gt; 之前先手，</find>
+      <find>&quot;&lt;strong&gt;&quot; + mymynameB + &quot;&lt;/strong&gt; 之前先手</find>
+      <find>(&quot;B</find>
+      <find>&quot; 之前先手</find>
+      <find>(&quot;A</find>
+      <find>&quot;B平衡</find>
+      <find>&quot;用</find>
+      <find>+&quot;&quot; +</find>
+      <find>switch</find>
       <find>XS_text</find>
-      <find>XS_textS</find>
-      <find>A平衡回复:&quot; + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10)</find>
-      <find>&quot;,为&quot;</find>
-      <find>平衡消耗:&quot; +</find>
-      <find>平衡回复:&quot; +</find>
-      <find>IO_XS_small(&quot;A平衡: -&quot; + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + &quot; = &quot; + HpA.pinheng,&quot;B平衡: +&quot; + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + &quot; = &quot; + HpB.pinheng);</find>
-      <find>\/\/\$\(\&quot;\#ZDwenbenWK\&quot;\)\.append\(\&quot;\&lt;div\&gt;B平衡\: \-\&quot; \+ ZSglIO\.PinHengXH\(BchoiceZS\[b\]\.zs_name\) \+ \&quot; \= \&quot; \+ HpB\.pinheng \+ \&quot;\&lt;\/div\&gt;\&quot;\)\;\n                            \/\/\$\(\&quot;\#ZDwenbenWK\&quot;\)\.append\(\&quot;\&lt;div\&gt;A平衡\: \+\&quot; \+ Math\.round\(mSX_Pinheng\.wendinhuifu\(SX_Pinheng\[0\]\) \* ZSglIO\.ATimeQ\(BchoiceZS\[b\]\.zs_name\, SX_Minjie\[1\]\) \* 10\) \+ \&quot; \= \&quot; \+ HpA\.pinheng \+ \&quot;\&lt;\/div\&gt;\&quot;\)\;</find>
-      <find>//$(&quot;#ZDwenbenWK&quot;).append(&quot;&lt;div&gt;B平衡: -&quot; + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + &quot; = &quot; + HpB.pinheng + &quot;&lt;/div&gt;&quot;);</find>
-      <find>$(&quot;#ZDwenbenWK&quot;).append(&quot;&lt;div&gt;B平衡: -&quot; + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + &quot; = &quot; + HpB.pinheng + &quot;&lt;/div&gt;&quot;);</find>
-      <find>+ &quot; = &quot; + HpB.pinheng);</find>
-      <find>IO_XS_small(&quot;A平衡: +&quot; + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + &quot; = &quot; + HpA.pinheng,&quot;B平衡: -&quot; + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + &quot; = &quot; + HpB.pinheng);</find>
+      <find>+ AchoiceZS[HadChoice_Aa].zs_frome +</find>
+      <find>R</find>
+      <find>B的&quot;</find>
+      <find>A的&quot;</find>
+      <find>redfont</find>
+      <find>lrgouquan</find>
+      <find>L</find>
+      <find>鸳鸯腿</find>
+      <find>平衡:</find>
+      <find>&quot;:&lt;span class=</find>
+      <find>shanbiB_i</find>
+      <find>tj_qingna</find>
+      <find>之前无先手，</find>
+      <find>&quot; + HpA.pinheng</find>
+      <find>round(</find>
+      <find>= &quot; + HpA.pinheng</find>
+      <find>= &quot; + HpB.pinheng</find>
     </findStrings>
     <replaceStrings>
-      <replace>zs_to = &quot;jian&quot;;</replace>
-      <replace>zs_to = &quot;zhou&quot;;</replace>
-      <replace>zs_to = &quot;shouwan&quot;;</replace>
-      <replace>zs_to = &quot;yao&quot;;</replace>
-      <replace>zs_to = &quot;datui&quot;;</replace>
-      <replace>zs_to = &quot;xi&quot;;</replace>
-      <replace>zs_to = &quot;huai&quot;;</replace>
-      <replace>zs_to = &quot;shangbi&quot;;</replace>
-      <replace>zs_to = &quot;xiaotui&quot;;</replace>
-      <replace>zs_to = &quot;qianbi&quot;;</replace>
-      <replace>gongjishanghai()</replace>
-      <replace>huiheclass01</replace>
-      <replace>HpA</replace>
-      <replace>Math.round(HpA./HpA.Max_*100)</replace>
-      <replace>BchoiceZS[HadChoice_Bb].zs_torl</replace>
-      <replace>(String(AchoiceZS[HadChoice_Aa].zs_torl))</replace>
-      <replace>(String(BchoiceZS[HadChoice_Bb].zs_torl))</replace>
-      <replace>if (HpB.subHP_)</replace>
-      <replace>if (HpA.subHP_)</replace>
-      <replace>.subHP_(attW_Q+attN_Q))</replace>
-      <replace>//return a;</replace>
-      <replace>mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10</replace>
-      <replace>mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10</replace>
-      <replace>+ Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) +</replace>
-      <replace>+ Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) +</replace>
-      <replace>B</replace>
-      <replace>hp</replace>
-      <replace>&quot; = &quot;</replace>
-      <replace>平衡: -&quot; +</replace>
       <replace>平衡: +&quot; +</replace>
+      <replace>redbord</replace>
+      <replace>&quot;A平衡: &lt;span class='redfont'&gt; -&quot;</replace>
+      <replace>+ &quot;&lt;/span&gt; = &quot; +</replace>
+      <replace>&quot;B平衡: -&quot; +</replace>
+      <replace>&quot;B平衡:&lt;span class='redfont'&gt; -&quot; +</replace>
+      <replace>&quot;A平衡:&lt;span class='greenfont'&gt; +&quot; +</replace>
+      <replace>&quot;B平衡:&lt;span class='greenfont'&gt; +&quot; +</replace>
+      <replace>+ &quot;使出了【&lt;span class='redbord'&gt;&quot; +</replace>
+      <replace>横勾拳</replace>
+      <replace>&quot;A用&quot; +</replace>
+      <replace>mymynameA</replace>
+      <replace>&quot;&lt;strong&gt;&quot;+mymynameA+ &quot;&lt;/strong&gt; 之前先手</replace>
+      <replace>&lt;strong&gt;&quot;+mymynameB+ &quot;&lt;/strong&gt; 之前先手</replace>
+      <replace>mynameOutA + &quot; 之前先手，</replace>
+      <replace>mynameOutB + &quot; 之前先手</replace>
+      <replace>(mynameOutB+&quot;</replace>
+      <replace>&quot;之前先手</replace>
+      <replace>(mynameOutA+&quot;</replace>
+      <replace>mynameOutB+&quot;</replace>
+      <replace>&quot;</replace>
+      <replace>+</replace>
+      <replace>r</replace>
+      <replace>&quot;+mynameOutB+&quot;的&quot;</replace>
+      <replace>&quot;+mynameOutA+&quot;的&quot;</replace>
+      <replace>hgouquan</replace>
+      <replace>l</replace>
+      <replace>&quot;平衡:&lt;span class=</replace>
+      <replace>= &quot; + Math.round(HpA.pinheng)</replace>
+      <replace>= &quot; + Math.round(HpB.pinheng)</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -154,6 +208,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/js/buttonScript.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/js/MyffOnload.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/js/Hp.js" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -168,13 +223,13 @@
         <option value="$PROJECT_DIR$/test - 副本.html" />
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/index - 副本.html" />
-        <option value="$PROJECT_DIR$/js/ZhaoShi.js" />
         <option value="$PROJECT_DIR$/js/ShuX.js" />
-        <option value="$PROJECT_DIR$/js/MyffOnload.js" />
         <option value="$APPLICATION_CONFIG_DIR$/webstorm64.exe.vmoptions" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/Hp.js" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/base.css" />
+        <option value="$PROJECT_DIR$/js/MyffOnload.js" />
+        <option value="$PROJECT_DIR$/js/ZhaoShi.js" />
         <option value="$PROJECT_DIR$/js/buttonScript.js" />
       </list>
     </option>
@@ -250,8 +305,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -486,11 +541,12 @@
       <workItem from="1513003366609" duration="47000" />
       <workItem from="1513003545352" duration="1504000" />
       <workItem from="1513006138258" duration="8888000" />
+      <workItem from="1513039526771" duration="21490000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="340806000" />
+    <option name="totallyTimeSpent" value="362296000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -545,12 +601,12 @@
         <state relative-caret-position="18525">
           <caret line="975" column="26" lean-forward="false" selection-start-line="975" selection-start-column="26" selection-end-line="975" selection-end-column="26" />
           <folding>
-            <element signature="e#88023#88029#0" expanded="true" />
-            <element signature="e#92473#92477#1" expanded="true" />
-            <element signature="e#120816#120822#0" expanded="true" />
-            <element signature="e#120824#120830#0" expanded="true" />
-            <element signature="e#120843#120849#0" expanded="true" />
-            <element signature="e#120849#120855#0" expanded="true" />
+            <element signature="e#88348#88354#0" expanded="true" />
+            <element signature="e#92798#92802#1" expanded="true" />
+            <element signature="e#121118#121124#0" expanded="true" />
+            <element signature="e#121126#121132#0" expanded="true" />
+            <element signature="e#121145#121151#0" expanded="true" />
+            <element signature="e#121151#121157#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -574,12 +630,12 @@
         <state relative-caret-position="18525">
           <caret line="975" column="26" lean-forward="false" selection-start-line="975" selection-start-column="26" selection-end-line="975" selection-end-column="26" />
           <folding>
-            <element signature="e#88023#88029#0" expanded="true" />
-            <element signature="e#92473#92477#1" expanded="true" />
-            <element signature="e#120816#120822#0" expanded="true" />
-            <element signature="e#120824#120830#0" expanded="true" />
-            <element signature="e#120843#120849#0" expanded="true" />
-            <element signature="e#120849#120855#0" expanded="true" />
+            <element signature="e#88348#88354#0" expanded="true" />
+            <element signature="e#92798#92802#1" expanded="true" />
+            <element signature="e#121118#121124#0" expanded="true" />
+            <element signature="e#121126#121132#0" expanded="true" />
+            <element signature="e#121145#121151#0" expanded="true" />
+            <element signature="e#121151#121157#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -603,12 +659,12 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#88023#88029#0" expanded="true" />
-            <element signature="e#92473#92477#1" expanded="true" />
-            <element signature="e#120816#120822#0" expanded="true" />
-            <element signature="e#120824#120830#0" expanded="true" />
-            <element signature="e#120843#120849#0" expanded="true" />
-            <element signature="e#120849#120855#0" expanded="true" />
+            <element signature="e#88348#88354#0" expanded="true" />
+            <element signature="e#92798#92802#1" expanded="true" />
+            <element signature="e#121118#121124#0" expanded="true" />
+            <element signature="e#121126#121132#0" expanded="true" />
+            <element signature="e#121145#121151#0" expanded="true" />
+            <element signature="e#121151#121157#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -632,12 +688,12 @@
         <state relative-caret-position="18525">
           <caret line="975" column="26" lean-forward="true" selection-start-line="975" selection-start-column="26" selection-end-line="975" selection-end-column="26" />
           <folding>
-            <element signature="e#88023#88029#0" expanded="true" />
-            <element signature="e#92473#92477#1" expanded="true" />
-            <element signature="e#120816#120822#0" expanded="true" />
-            <element signature="e#120824#120830#0" expanded="true" />
-            <element signature="e#120843#120849#0" expanded="true" />
-            <element signature="e#120849#120855#0" expanded="true" />
+            <element signature="e#88348#88354#0" expanded="true" />
+            <element signature="e#92798#92802#1" expanded="true" />
+            <element signature="e#121118#121124#0" expanded="true" />
+            <element signature="e#121126#121132#0" expanded="true" />
+            <element signature="e#121145#121151#0" expanded="true" />
+            <element signature="e#121151#121157#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -661,12 +717,12 @@
         <state relative-caret-position="513">
           <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <element signature="e#88023#88029#0" expanded="true" />
-            <element signature="e#92473#92477#1" expanded="true" />
-            <element signature="e#120816#120822#0" expanded="true" />
-            <element signature="e#120824#120830#0" expanded="true" />
-            <element signature="e#120843#120849#0" expanded="true" />
-            <element signature="e#120849#120855#0" expanded="true" />
+            <element signature="e#88348#88354#0" expanded="true" />
+            <element signature="e#92798#92802#1" expanded="true" />
+            <element signature="e#121118#121124#0" expanded="true" />
+            <element signature="e#121126#121132#0" expanded="true" />
+            <element signature="e#121145#121151#0" expanded="true" />
+            <element signature="e#121151#121157#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -704,12 +760,12 @@
         <state relative-caret-position="228">
           <caret line="12" column="45" lean-forward="true" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
           <folding>
-            <element signature="e#88023#88029#0" expanded="true" />
-            <element signature="e#92473#92477#1" expanded="true" />
-            <element signature="e#120816#120822#0" expanded="true" />
-            <element signature="e#120824#120830#0" expanded="true" />
-            <element signature="e#120843#120849#0" expanded="true" />
-            <element signature="e#120849#120855#0" expanded="true" />
+            <element signature="e#88348#88354#0" expanded="true" />
+            <element signature="e#92798#92802#1" expanded="true" />
+            <element signature="e#121118#121124#0" expanded="true" />
+            <element signature="e#121126#121132#0" expanded="true" />
+            <element signature="e#121145#121151#0" expanded="true" />
+            <element signature="e#121151#121157#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -733,12 +789,12 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#88023#88029#0" expanded="true" />
-            <element signature="e#92473#92477#1" expanded="true" />
-            <element signature="e#120816#120822#0" expanded="true" />
-            <element signature="e#120824#120830#0" expanded="true" />
-            <element signature="e#120843#120849#0" expanded="true" />
-            <element signature="e#120849#120855#0" expanded="true" />
+            <element signature="e#88348#88354#0" expanded="true" />
+            <element signature="e#92798#92802#1" expanded="true" />
+            <element signature="e#121118#121124#0" expanded="true" />
+            <element signature="e#121126#121132#0" expanded="true" />
+            <element signature="e#121145#121151#0" expanded="true" />
+            <element signature="e#121151#121157#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -762,12 +818,12 @@
         <state relative-caret-position="13680">
           <caret line="720" column="47" lean-forward="false" selection-start-line="720" selection-start-column="47" selection-end-line="720" selection-end-column="47" />
           <folding>
-            <element signature="e#88023#88029#0" expanded="true" />
-            <element signature="e#92473#92477#1" expanded="true" />
-            <element signature="e#120816#120822#0" expanded="true" />
-            <element signature="e#120824#120830#0" expanded="true" />
-            <element signature="e#120843#120849#0" expanded="true" />
-            <element signature="e#120849#120855#0" expanded="true" />
+            <element signature="e#88348#88354#0" expanded="true" />
+            <element signature="e#92798#92802#1" expanded="true" />
+            <element signature="e#121118#121124#0" expanded="true" />
+            <element signature="e#121126#121132#0" expanded="true" />
+            <element signature="e#121145#121151#0" expanded="true" />
+            <element signature="e#121151#121157#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -839,13 +895,6 @@
     <entry file="file://$PROJECT_DIR$/test.html" />
     <entry file="file://$PROJECT_DIR$/index - 副本.html" />
     <entry file="file://$USER_HOME$/Desktop/71871393078930658/index.html" />
-    <entry file="file://$PROJECT_DIR$/js/PB_Taiquan.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="297" column="14" lean-forward="false" selection-start-line="297" selection-start-column="14" selection-end-line="297" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/PB_Taiji.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -853,24 +902,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/other_Lei.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-646">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/PB_All.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="665">
           <caret line="35" column="34" lean-forward="true" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/ZhaoShi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -889,44 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/MyffOnload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="1041" column="39" lean-forward="true" selection-start-line="1041" selection-start-column="39" selection-end-line="1041" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Hp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1824">
-          <caret line="97" column="21" lean-forward="false" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="559" column="46" lean-forward="false" selection-start-line="559" selection-start-column="46" selection-end-line="559" selection-end-column="46" />
-          <folding>
-            <element signature="e#88023#88029#0" expanded="true" />
-            <element signature="e#92473#92477#1" expanded="true" />
-            <element signature="e#120816#120822#0" expanded="true" />
-            <element signature="e#120824#120830#0" expanded="true" />
-            <element signature="e#120843#120849#0" expanded="true" />
-            <element signature="e#120849#120855#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="2268" column="20" lean-forward="true" selection-start-line="2268" selection-start-column="20" selection-end-line="2268" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/jquery-ui-1.12.1/external/jquery/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -935,12 +932,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="2387" column="9" lean-forward="false" selection-start-line="2387" selection-start-column="1" selection-end-line="2387" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/other_Lei.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Hp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="112" column="8" lean-forward="false" selection-start-line="112" selection-start-column="8" selection-end-line="112" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/PB_Taiquan.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-969">
+          <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="138" column="27" lean-forward="false" selection-start-line="138" selection-start-column="27" selection-end-line="138" selection-end-column="27" />
+          <folding>
+            <element signature="e#88348#88354#0" expanded="true" />
+            <element signature="e#92798#92802#1" expanded="true" />
+            <element signature="e#121118#121124#0" expanded="true" />
+            <element signature="e#121126#121132#0" expanded="true" />
+            <element signature="e#121145#121151#0" expanded="true" />
+            <element signature="e#121151#121157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ZhaoShi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="223" column="29" lean-forward="true" selection-start-line="223" selection-start-column="29" selection-end-line="223" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/MyffOnload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="1038" column="12" lean-forward="false" selection-start-line="1038" selection-start-column="12" selection-end-line="1038" selection-end-column="12" />
+          <folding>
+            <marker date="1513067778910" expanded="true" signature="1778:1795" ph="..." />
+            <marker date="1513067778910" expanded="true" signature="4317:4365" ph="..." />
+            <marker date="1513067778910" expanded="true" signature="4489:4500" ph="..." />
+            <marker date="1513067778910" expanded="true" signature="5194:5242" ph="..." />
+            <marker date="1513067778910" expanded="true" signature="5367:5384" ph="..." />
+            <marker date="1513067778910" expanded="true" signature="7599:7647" ph="..." />
+            <marker date="1513067778910" expanded="true" signature="9227:9244" ph="..." />
+            <marker date="1513067778910" expanded="true" signature="11770:11818" ph="..." />
+            <marker date="1513067778910" expanded="true" signature="11944:11955" ph="..." />
+            <marker date="1513067778910" expanded="true" signature="12651:12699" ph="..." />
+            <marker date="1513067778910" expanded="true" signature="12826:12843" ph="..." />
+            <marker date="1513067778910" expanded="true" signature="15060:15108" ph="..." />
+            <marker date="1513067778910" expanded="true" signature="89472:89478" ph=" " />
+            <marker date="1513067778910" expanded="true" signature="89497:89503" ph=" " />
+            <marker date="1513067778910" expanded="true" signature="89515:89521" ph=" " />
+            <marker date="1513067778910" expanded="true" signature="89521:89527" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="2456" column="25" lean-forward="true" selection-start-line="2456" selection-start-column="25" selection-end-line="2456" selection-end-column="25" />
+        <state relative-caret-position="378">
+          <caret line="2191" column="44" lean-forward="true" selection-start-line="2191" selection-start-column="44" selection-end-line="2191" selection-end-column="44" />
           <folding>
-            <marker date="1513015022538" expanded="true" signature="96715:96721" ph=" " />
+            <marker date="1513072710656" expanded="true" signature="96732:96738" ph=" " />
           </folding>
         </state>
       </provider>

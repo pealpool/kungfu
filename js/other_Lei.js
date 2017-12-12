@@ -48,8 +48,8 @@ var choiceZS = {
                     return "绊摔";
                 case "tq_zhiquan":
                     return "直拳";
-                case "tq_lrgouquan":
-                    return "左右勾拳";
+                case "tq_hgouquan":
+                    return "横勾拳";
                 case "tq_sgouquan":
                     return "上勾拳";
                 case "tq_zhouji":

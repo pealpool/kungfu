@@ -52,54 +52,54 @@ var TQ_zhiquan = {
 	}
 };
 
-//【泰拳】左右勾拳
-var TQ_lrgouquan = {
+//【泰拳】横勾拳
+var TQ_hgouquan = {
 	createNew: function(){
-		var tq_lrgouquan = {};
-		tq_lrgouquan.fAttBw = "手";
+		var tq_hgouquan = {};
+		tq_hgouquan.fAttBw = "手";
 		//发出攻击部位
-		tq_lrgouquan.AttBw_tou = 1;
-		tq_lrgouquan.AttBw_xiong = 0;
-		tq_lrgouquan.AttBw_fu = 0;
-		tq_lrgouquan.AttBw_yaoL = 1;
-		tq_lrgouquan.AttBw_yaoR = 1;
-		tq_lrgouquan.AttBw_jianL = 1;
-		tq_lrgouquan.AttBw_jianR = 1;
-		tq_lrgouquan.AttBw_shangbiL = 1;
-		tq_lrgouquan.AttBw_shangbiR = 1;
-		tq_lrgouquan.AttBw_qianbiL = 0;
-		tq_lrgouquan.AttBw_qianbiR = 0;
-		tq_lrgouquan.AttBw_zhouL = 0;
-		tq_lrgouquan.AttBw_zhouR = 0;
-		tq_lrgouquan.AttBw_shouwanL = 0;
-		tq_lrgouquan.AttBw_shouwanR = 0;
-		tq_lrgouquan.AttBw_datuiL = 0;
-		tq_lrgouquan.AttBw_datuiR = 0;
-		tq_lrgouquan.AttBw_xiaotuiL = 0;
-		tq_lrgouquan.AttBw_xiaotuiR = 0;
-		tq_lrgouquan.AttBw_xiL = 0;
-		tq_lrgouquan.AttBw_xiR = 0;
-		tq_lrgouquan.AttBw_huaiL = 0;
-		tq_lrgouquan.AttBw_huaiR = 0;
+		tq_hgouquan.AttBw_tou = 1;
+		tq_hgouquan.AttBw_xiong = 0;
+		tq_hgouquan.AttBw_fu = 0;
+		tq_hgouquan.AttBw_yaoL = 1;
+		tq_hgouquan.AttBw_yaoR = 1;
+		tq_hgouquan.AttBw_jianL = 1;
+		tq_hgouquan.AttBw_jianR = 1;
+		tq_hgouquan.AttBw_shangbiL = 1;
+		tq_hgouquan.AttBw_shangbiR = 1;
+		tq_hgouquan.AttBw_qianbiL = 0;
+		tq_hgouquan.AttBw_qianbiR = 0;
+		tq_hgouquan.AttBw_zhouL = 0;
+		tq_hgouquan.AttBw_zhouR = 0;
+		tq_hgouquan.AttBw_shouwanL = 0;
+		tq_hgouquan.AttBw_shouwanR = 0;
+		tq_hgouquan.AttBw_datuiL = 0;
+		tq_hgouquan.AttBw_datuiR = 0;
+		tq_hgouquan.AttBw_xiaotuiL = 0;
+		tq_hgouquan.AttBw_xiaotuiR = 0;
+		tq_hgouquan.AttBw_xiL = 0;
+		tq_hgouquan.AttBw_xiR = 0;
+		tq_hgouquan.AttBw_huaiL = 0;
+		tq_hgouquan.AttBw_huaiR = 0;
 		//外伤伤害
-		tq_lrgouquan.AttW = 200;
+		tq_hgouquan.AttW = 200;
 		//内伤伤害
-		tq_lrgouquan.AttN = 0;
+		tq_hgouquan.AttN = 0;
 		//命中修正
-		tq_lrgouquan.Mzxz = 0;
+		tq_hgouquan.Mzxz = 0;
 		//攻击前摇
-		tq_lrgouquan.ATimeQ = 0.3;
+		tq_hgouquan.ATimeQ = 0.3;
 		//攻击时间，默认1s
-		tq_lrgouquan.ATime = 1;
+		tq_hgouquan.ATime = 1;
 		//攻击后摇
-		tq_lrgouquan.ATimeH = 0.3;
+		tq_hgouquan.ATimeH = 0.3;
 		//平衡削减
-		tq_lrgouquan.PinHengAtt = 20;
+		tq_hgouquan.PinHengAtt = 20;
 		//消耗稳定度
-		tq_lrgouquan.PinHengXH = 8;
+		tq_hgouquan.PinHengXH = 8;
 		//备注
-		tq_lrgouquan.Beizhu = "";
-		return tq_lrgouquan;
+		tq_hgouquan.Beizhu = "";
+		return tq_hgouquan;
 	}
 };
 
