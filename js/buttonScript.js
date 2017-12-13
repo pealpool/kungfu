@@ -703,6 +703,13 @@ function ChuShiHua() {
     $("#TuchuKuang_A_wendinzhi").html(mSX_Pinheng.wendinzhi(SX_Pinheng[0]));
     $("#TuchuKuang_A_wendinhuifu").html(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]));
 
+
+    //侧边滚动条初始化
+    //new PerfectScrollbar('#ZDwenbenWK');
+    const container = document.querySelector('#ZDwenbenWK');
+    const ps = new PerfectScrollbar(container);
+    container.scrollTop = 0;
+
     HPchongzhi();
     //属性关联弹出标记
     window.sxTanChu_A = 0;
@@ -2140,7 +2147,7 @@ function ChoiceFirst(a, b) {
                         HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
                         HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
                         IO_XS_normal(mynameOutB + "调整平衡中。");
-                        IO_XS_small(mynameOutA + "平衡: <span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
+                        IO_XS_small(mynameOutA + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
                     }
                 } else {
                     IO_XS_normal(mynameOutA + "调整平衡中，");
@@ -2150,7 +2157,7 @@ function ChoiceFirst(a, b) {
                         HadChoice_Bb = b;
                         HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
                         HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
-                        IO_XS_small(mynameOutA + "平衡:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
+                        IO_XS_small(mynameOutA + "稳定:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
                     } else {
                         IO_XS_normal(mynameOutB + "也调整平衡中。");
                         HadChoice_Who = "";
@@ -2163,7 +2170,7 @@ function ChoiceFirst(a, b) {
                     HadChoice_Bb = b;
                     HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
                     HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
-                    IO_XS_small(mynameOutA + "平衡:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
+                    IO_XS_small(mynameOutA + "稳定:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
                 } else {
                     IO_XS_normal(mynameOutB + "调整平衡中。");
                     HadChoice_Who = "";
@@ -2175,7 +2182,7 @@ function ChoiceFirst(a, b) {
                     HadChoice_Aa = a;
                     HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
                     HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
-                    IO_XS_small(mynameOutA + "平衡: <span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
+                    IO_XS_small(mynameOutA + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
                 } else {
                     IO_XS_normal(mynameOutA + "调整平衡中。");
                     HadChoice_Who = "";
@@ -2194,7 +2201,7 @@ function ChoiceFirst(a, b) {
                         HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
                         HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
                         IO_XS_normal(mynameOutA + "调整平衡中。");
-                        IO_XS_small(mynameOutA + "平衡:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
+                        IO_XS_small(mynameOutA + "稳定:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
                     }
                 } else {
                     IO_XS_normal(mynameOutB + "调整平衡中。");
@@ -2204,7 +2211,7 @@ function ChoiceFirst(a, b) {
                         HadChoice_Aa = a;
                         HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
                         HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
-                        IO_XS_small(mynameOutA + "平衡: <span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
+                        IO_XS_small(mynameOutA + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
                     } else {
                         IO_XS_normal(mynameOutA + "也调整平衡中。");
                         HadChoice_Who = "";
@@ -2217,7 +2224,7 @@ function ChoiceFirst(a, b) {
                     HadChoice_Bb = b;
                     HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
                     HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
-                    IO_XS_small(mynameOutA + "平衡:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
+                    IO_XS_small(mynameOutA + "稳定:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
                 } else {
                     IO_XS_normal(mynameOutB + "调整平衡中。");
                     HadChoice_Who = "";
@@ -2229,7 +2236,7 @@ function ChoiceFirst(a, b) {
                     HadChoice_Aa = a;
                     HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
                     HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
-                    IO_XS_small(mynameOutA + "平衡: <span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
+                    IO_XS_small(mynameOutA + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
                 } else {
                     IO_XS_normal(mynameOutA + "调整平衡中。");
                     HadChoice_Who = "";
@@ -2247,26 +2254,26 @@ function ChoiceFirst(a, b) {
                         HadChoice_Bb = b;
                         HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
                         HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
-                        IO_XS_small(mynameOutA + "平衡:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
+                        IO_XS_small(mynameOutA + "稳定:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
                     } else if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) < ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
                         HadChoice_Who = "A";
                         HadChoice_Aa = a;
                         HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
                         HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
-                        IO_XS_small(mynameOutA + "平衡: <span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
+                        IO_XS_small(mynameOutA + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
                     } else {
                         if (HadChoice_Who === "A") {
                             HadChoice_Who = "B";
                             HadChoice_Bb = b;
                             HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
                             HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
-                            IO_XS_small(mynameOutA + "平衡:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
+                            IO_XS_small(mynameOutA + "稳定:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
                         } else {
                             HadChoice_Who = "A";
                             HadChoice_Aa = a;
                             HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
                             HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
-                            IO_XS_small(mynameOutA + "平衡: <span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
+                            IO_XS_small(mynameOutA + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
                         }
                     }
                 } else if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 > HpA.pinheng && ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 <= HpB.pinheng) {
@@ -2274,13 +2281,13 @@ function ChoiceFirst(a, b) {
                     HadChoice_Bb = b;
                     HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
                     HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
-                    IO_XS_small(mynameOutA + "平衡:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
+                    IO_XS_small(mynameOutA + "稳定:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
                 } else if (ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + 5 <= HpA.pinheng && ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + 5 > HpB.pinheng) {
                     HadChoice_Who = "A";
                     HadChoice_Aa = a;
                     HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
                     HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
-                    IO_XS_small(mynameOutA + "平衡: <span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
+                    IO_XS_small(mynameOutA + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
                 } else {
                     IO_XS_normal("双方调整平衡中。");
                 }
@@ -2291,7 +2298,7 @@ function ChoiceFirst(a, b) {
                     HadChoice_Bb = b;
                     HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
                     HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
-                    IO_XS_small(mynameOutA + "平衡:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
+                    IO_XS_small(mynameOutA + "稳定:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
                 } else {
                     IO_XS_normal(mynameOutB + "调整平衡中。");
                 }
@@ -2302,7 +2309,7 @@ function ChoiceFirst(a, b) {
                     HadChoice_Aa = a;
                     HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
                     HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
-                    IO_XS_small(mynameOutA + "平衡: <span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
+                    IO_XS_small(mynameOutA + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
                 } else {
                     IO_XS_normal(mynameOutA + "调整平衡中。");
                 }
@@ -2320,26 +2327,26 @@ function ChoiceFirstN_A(a, b) {
         HadChoice_Bb = b;
         HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
         HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
-        IO_XS_small(mynameOutA + "平衡:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
+        IO_XS_small(mynameOutA + "稳定:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
     } else if (ZSglIO.ATimeH(String(AchoiceZS[a - 1].zs_name), SX_Minjie[0]) + ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) < ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
         HadChoice_Who = "A";
         HadChoice_Aa = a;
         HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
         HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
-        IO_XS_small(mynameOutA + "平衡: <span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
+        IO_XS_small(mynameOutA + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
     } else {
         if (HadChoice_Who === "A") {
             HadChoice_Who = "B";
             HadChoice_Bb = b;
             HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
             HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
-            IO_XS_small(mynameOutA + "平衡:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
+            IO_XS_small(mynameOutA + "稳定:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
         } else {
             HadChoice_Who = "A";
             HadChoice_Aa = a;
             HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
             HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
-            IO_XS_small(mynameOutA + "平衡: <span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
+            IO_XS_small(mynameOutA + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
         }
     }
 }
@@ -2352,26 +2359,26 @@ function ChoiceFirstN_B(a, b) {
         HadChoice_Bb = b;
         HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
         HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
-        IO_XS_small(mynameOutA + "平衡:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
+        IO_XS_small(mynameOutA + "稳定:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
     } else if (ZSglIO.ATimeQ(String(AchoiceZS[a].zs_name), SX_Minjie[0]) < ZSglIO.ATimeH(String(BchoiceZS[b - 1].zs_name), SX_Minjie[1]) + ZSglIO.ATimeQ(String(BchoiceZS[b].zs_name), SX_Minjie[1])) {
         HadChoice_Who = "A";
         HadChoice_Aa = a;
         HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
         HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
-        IO_XS_small(mynameOutA + "平衡: <span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
+        IO_XS_small(mynameOutA + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
     } else {
         if (HadChoice_Who === "A") {
             HadChoice_Who = "B";
             HadChoice_Bb = b;
             HpB.subPingheng(-ZSglIO.PinHengXH(BchoiceZS[b].zs_name));
             HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10);
-            IO_XS_small(mynameOutA + "平衡:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
+            IO_XS_small(mynameOutA + "稳定:<span class='greenfont'> +" + Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) * ZSglIO.ATimeQ(BchoiceZS[b].zs_name, SX_Minjie[1]) * 10) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(BchoiceZS[b].zs_name) + "</span> = " + Math.round(HpB.pinheng));
         } else {
             HadChoice_Who = "A";
             HadChoice_Aa = a;
             HpA.subPingheng(-ZSglIO.PinHengXH(AchoiceZS[a].zs_name));
             HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10);
-            IO_XS_small(mynameOutA + "平衡: <span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
+            IO_XS_small(mynameOutA + "稳定:<span class='redfont'> -" + ZSglIO.PinHengXH(AchoiceZS[a].zs_name) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='greenfont'> +" + +Math.round(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) * ZSglIO.ATimeQ(AchoiceZS[a].zs_name, SX_Minjie[0]) * 10) + "</span> = " + Math.round(HpB.pinheng));
         }
     }
 }
@@ -2404,7 +2411,7 @@ function fighting() {
                 HpA.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[0]));
                 HpB.subPingheng(mSX_Pinheng.wendinhuifu(SX_Pinheng[1]));
                 IO_XS_normal("双方对峙中。");
-                IO_XS_small(mynameOutA + "平衡:<span class='greenfont'> +" + mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "平衡:<span class='greenfont'> +" + +mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) + "</span> = " + Math.round(HpB.pinheng));
+                IO_XS_small(mynameOutA + "稳定:<span class='greenfont'> +" + mSX_Pinheng.wendinhuifu(SX_Pinheng[0]) + "</span> = " + Math.round(HpA.pinheng), mynameOutB + "稳定:<span class='greenfont'> +" + +mSX_Pinheng.wendinhuifu(SX_Pinheng[1]) + "</span> = " + Math.round(HpB.pinheng));
             }
             if ((fig_a > AchoiceZS_bj) && (fig_b > BchoiceZS_bj)) {
                 fig_xix = 1;
@@ -2430,8 +2437,8 @@ function fighting() {
 
 //todo hp结算
 function fighting_n() {
-    var deadA = 0;//死亡标记1为dead
-    var deadB = 0;
+    var HPemptyA = 0;//空血标记1为空
+    var HPemptyB = 0;
     gongjishanghai();
     if (shanbijisuan()) {
         //闪避失败
@@ -2445,119 +2452,119 @@ function fighting_n() {
             if (HadChoice_Who === "A") {
                 switch (AchoiceZS[HadChoice_Aa].zs_to) {
                     case "tou":
-                        deadB = HpB.subHP_tou(attW_Q + attN_Q);
-                        IO_XS_smallB(IO_XS_hpB("头部hp", attW_Q + attN_Q, HpB.tou));
-                        if (deadB) {
+                        HPemptyB = HpB.subHP_tou(attW_Q + attN_Q);
+                        if (HPemptyB) {
 
                         }
+                        IO_XS_smallB(IO_XS_hpB("头部hp", attW_Q + attN_Q, HpB.tou));
                         break;
                     case "xiong":
-                        deadB = HpB.subHP_xiong(attW_Q + attN_Q);
+                        HPemptyB = HpB.subHP_xiong(attW_Q + attN_Q);
                         IO_XS_smallB(IO_XS_hpB("胸部hp", attW_Q + attN_Q, HpB.xiong));
-                        if (deadB) {
+                        if (HPemptyB) {
 
                         }
                         break;
                     case "fu":
-                        deadB = HpB.subHP_fu(attW_Q + attN_Q);
+                        HPemptyB = HpB.subHP_fu(attW_Q + attN_Q);
                         IO_XS_smallB(IO_XS_hpB("腹部hp", attW_Q + attN_Q, HpB.fu));
-                        if (deadB) {
+                        if (HPemptyB) {
 
                         }
                         break;
                     case "yao":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                deadB = HpB.subHP_yaoL(attW_Q + attN_Q);
+                                HPemptyB = HpB.subHP_yaoL(attW_Q + attN_Q);
                                 IO_XS_smallB(IO_XS_hpB("左腰hp", attW_Q + attN_Q, HpB.yaoL));
-                                if (deadB) {
+                                if (HPemptyB) {
 
                                 }
                                 break;
                             case "r":
-                                deadB = HpB.subHP_yaoR(attW_Q + attN_Q);
+                                HPemptyB = HpB.subHP_yaoR(attW_Q + attN_Q);
                                 IO_XS_smallB(IO_XS_hpB("右腰hp", attW_Q + attN_Q, HpB.yaoR));
-                                if (deadB) {
+                                if (HPemptyB) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd501");
+                                alert("357fvd501，"+AchoiceZS[HadChoice_Aa].zs_torl);
                         }
                         break;
                     case "jian":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                deadB = HpB.subHP_jianL(attW_Q + attN_Q);
+                                HPemptyB = HpB.subHP_jianL(attW_Q + attN_Q);
                                 IO_XS_smallB(IO_XS_hpB("左肩hp", attW_Q + attN_Q, HpB.jianL));
-                                if (deadB) {
+                                if (HPemptyB) {
 
                                 }
                                 break;
                             case "r":
-                                deadB = HpB.subHP_jianR(attW_Q + attN_Q);
+                                HPemptyB = HpB.subHP_jianR(attW_Q + attN_Q);
                                 IO_XS_smallB(IO_XS_hpB("右肩hp", attW_Q + attN_Q, HpB.jianR));
-                                if (deadB) {
+                                if (HPemptyB) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd502");
+                                alert("357fvd502，"+AchoiceZS[HadChoice_Aa].zs_torl);
                         }
                         break;
                     case "shangbi":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                deadB = HpB.subHP_shangbiL(attW_Q + attN_Q);
+                                HPemptyB = HpB.subHP_shangbiL(attW_Q + attN_Q);
                                 IO_XS_smallB(IO_XS_hpB("左上臂hp", attW_Q + attN_Q, HpB.shangbiL));
-                                if (deadB) {
+                                if (HPemptyB) {
 
                                 }
                                 break;
                             case "r":
-                                deadB = HpB.subHP_shangbiR(attW_Q + attN_Q);
+                                HPemptyB = HpB.subHP_shangbiR(attW_Q + attN_Q);
                                 IO_XS_smallB(IO_XS_hpB("右上臂hp", attW_Q + attN_Q, HpB.shangbiR));
-                                if (deadB) {
+                                if (HPemptyB) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd503");
+                                alert("357fvd503，"+AchoiceZS[HadChoice_Aa].zs_torl);
                         }
                         break;
                     case "zhou":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                deadB = HpB.subHP_zhouL(attW_Q + attN_Q);
+                                HPemptyB = HpB.subHP_zhouL(attW_Q + attN_Q);
                                 IO_XS_smallB(IO_XS_hpB("左肘hp", attW_Q + attN_Q, HpB.zhouL));
-                                if (deadB) {
+                                if (HPemptyB) {
 
                                 }
                                 break;
                             case "r":
-                                deadB = HpB.subHP_zhouR(attW_Q + attN_Q);
+                                HPemptyB = HpB.subHP_zhouR(attW_Q + attN_Q);
                                 IO_XS_smallB(IO_XS_hpB("右肘hp", attW_Q + attN_Q, HpB.zhouR));
-                                if (deadB) {
+                                if (HPemptyB) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd504");
+                                alert("357fvd504，"+AchoiceZS[HadChoice_Aa].zs_torl);
                         }
                         break;
                     case "qianbi":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                deadB = HpB.subHP_qianbiL(attW_Q + attN_Q);
+                                HPemptyB = HpB.subHP_qianbiL(attW_Q + attN_Q);
                                 IO_XS_smallB(IO_XS_hpB("左前臂hp", attW_Q + attN_Q, HpB.qianbiL));
-                                if (deadB) {
+                                if (HPemptyB) {
 
                                 }
                                 break;
                             case "r":
-                                deadB = HpB.subHP_qianbiR(attW_Q + attN_Q);
+                                HPemptyB = HpB.subHP_qianbiR(attW_Q + attN_Q);
                                 IO_XS_smallB(IO_XS_hpB("右前臂hp", attW_Q + attN_Q, HpB.qianbiR));
-                                if (deadB) {
+                                if (HPemptyB) {
 
                                 }
                                 break;
@@ -2568,332 +2575,332 @@ function fighting_n() {
                     case "shouwan":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                deadB = HpB.subHP_shouwanL(attW_Q + attN_Q);
+                                HPemptyB = HpB.subHP_shouwanL(attW_Q + attN_Q);
                                 IO_XS_smallB(IO_XS_hpB("左手腕hp", attW_Q + attN_Q, HpB.shouwanL));
-                                if (deadB) {
+                                if (HPemptyB) {
 
                                 }
                                 break;
                             case "r":
-                                deadB = HpB.subHP_shouwanR(attW_Q + attN_Q);
+                                HPemptyB = HpB.subHP_shouwanR(attW_Q + attN_Q);
                                 IO_XS_smallB(IO_XS_hpB("右手腕hp", attW_Q + attN_Q, HpB.shouwanR));
-                                if (deadB) {
+                                if (HPemptyB) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd506");
+                                alert("357fvd506，"+AchoiceZS[HadChoice_Aa].zs_torl);
                         }
                         break;
                     case "datui":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                deadB = HpB.subHP_datuiL(attW_Q + attN_Q);
+                                HPemptyB = HpB.subHP_datuiL(attW_Q + attN_Q);
                                 IO_XS_smallB(IO_XS_hpB("左大腿hp", attW_Q + attN_Q, HpB.datuiL));
-                                if (deadB) {
+                                if (HPemptyB) {
 
                                 }
                                 break;
                             case "r":
-                                deadB = HpB.subHP_datuiR(attW_Q + attN_Q);
+                                HPemptyB = HpB.subHP_datuiR(attW_Q + attN_Q);
                                 IO_XS_smallB(IO_XS_hpB("右大腿hp", attW_Q + attN_Q, HpB.datuiR));
-                                if (deadB) {
+                                if (HPemptyB) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd507");
+                                alert("357fvd507，"+AchoiceZS[HadChoice_Aa].zs_torl);
                         }
                         break;
                     case "xi":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                deadB = HpB.subHP_xiL(attW_Q + attN_Q);
+                                HPemptyB = HpB.subHP_xiL(attW_Q + attN_Q);
                                 IO_XS_smallB(IO_XS_hpB("左膝hp", attW_Q + attN_Q, HpB.xiL));
-                                if (deadB) {
+                                if (HPemptyB) {
 
                                 }
                                 break;
                             case "r":
-                                deadB = HpB.subHP_xir(attW_Q + attN_Q);
+                                HPemptyB = HpB.subHP_xir(attW_Q + attN_Q);
                                 IO_XS_smallB(IO_XS_hpB("右膝hp", attW_Q + attN_Q, HpB.xir));
-                                if (deadB) {
+                                if (HPemptyB) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd508");
+                                alert("357fvd508，"+AchoiceZS[HadChoice_Aa].zs_torl);
                         }
                         break;
                     case "xiaotui":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                deadB = HpB.subHP_xiaotuiL(attW_Q + attN_Q);
+                                HPemptyB = HpB.subHP_xiaotuiL(attW_Q + attN_Q);
                                 IO_XS_smallB(IO_XS_hpB("左小腿hp", attW_Q + attN_Q, HpB.xiaotuiL));
-                                if (deadB) {
+                                if (HPemptyB) {
 
                                 }
                                 break;
                             case "r":
-                                deadB = HpB.subHP_xiaotuiR(attW_Q + attN_Q);
+                                HPemptyB = HpB.subHP_xiaotuiR(attW_Q + attN_Q);
                                 IO_XS_smallB(IO_XS_hpB("右小腿hp", attW_Q + attN_Q, HpB.xiaotuiR));
-                                if (deadB) {
+                                if (HPemptyB) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd509");
+                                alert("357fvd509，"+AchoiceZS[HadChoice_Aa].zs_torl);
                         }
                         break;
                     case "huai":
                         switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
                             case "l":
-                                deadB = HpB.subHP_huaiL(attW_Q + attN_Q);
+                                HPemptyB = HpB.subHP_huaiL(attW_Q + attN_Q);
                                 IO_XS_smallB(IO_XS_hpB("左脚踝hp", attW_Q + attN_Q, HpB.huaiL));
-                                if (deadB) {
+                                if (HPemptyB) {
 
                                 }
                                 break;
                             case "r":
-                                deadB = HpB.subHP_huaiR(attW_Q + attN_Q);
+                                HPemptyB = HpB.subHP_huaiR(attW_Q + attN_Q);
                                 IO_XS_smallB(IO_XS_hpB("右脚踝hp", attW_Q + attN_Q, HpB.huaiR));
-                                if (deadB) {
+                                if (HPemptyB) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd510");
+                                alert("357fvd510，"+AchoiceZS[HadChoice_Aa].zs_torl);
                         }
                         break;
                     default:
-                        alert("5858xtgr6");
+                        alert("5858xtgr6，"+AchoiceZS[HadChoice_Aa].zs_to);
                 }
                 HpB.pinheng = HpB.pinheng - PinHengAtt_Q;
             } else if (HadChoice_Who === "B") {
                 switch (BchoiceZS[HadChoice_Bb].zs_to) {
                     case "tou":
-                        deadA = HpA.subHP_tou(attW_Q + attN_Q);
+                        HPemptyA = HpA.subHP_tou(attW_Q + attN_Q);
                         IO_XS_smallA(IO_XS_hpA("头部hp", attW_Q + attN_Q, HpA.tou));
-                        if (deadA) {
+                        if (HPemptyA) {
 
                         }
                         break;
                     case "xiong":
-                        deadA = HpA.subHP_xiong(attW_Q + attN_Q);
+                        HPemptyA = HpA.subHP_xiong(attW_Q + attN_Q);
                         IO_XS_smallA(IO_XS_hpA("胸部hp", attW_Q + attN_Q, HpA.xiong));
-                        if (deadA) {
+                        if (HPemptyA) {
 
                         }
                         break;
                     case "fu":
-                        deadA = HpA.subHP_fu(attW_Q + attN_Q);
+                        HPemptyA = HpA.subHP_fu(attW_Q + attN_Q);
                         IO_XS_smallA(IO_XS_hpA("腹部hp", attW_Q + attN_Q, HpA.fu));
-                        if (deadA) {
+                        if (HPemptyA) {
 
                         }
                         break;
                     case "yao":
-                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
+                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
                             case "l":
-                                deadA = HpA.subHP_yaoL(attW_Q + attN_Q);
+                                HPemptyA = HpA.subHP_yaoL(attW_Q + attN_Q);
                                 IO_XS_smallA(IO_XS_hpA("左腰hp", attW_Q + attN_Q, HpA.yaoL));
-                                if (deadA) {
+                                if (HPemptyA) {
 
                                 }
                                 break;
                             case "r":
-                                deadA = HpA.subHP_yaoR(attW_Q + attN_Q);
+                                HPemptyA = HpA.subHP_yaoR(attW_Q + attN_Q);
                                 IO_XS_smallA(IO_XS_hpA("右腰hp", attW_Q + attN_Q, HpA.yaoR));
-                                if (deadA) {
+                                if (HPemptyA) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd501");
+                                alert("357fvd501b，"+BchoiceZS[HadChoice_Bb].zs_torl);
                         }
                         break;
                     case "jian":
-                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
+                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
                             case "l":
-                                deadA = HpA.subHP_jianL(attW_Q + attN_Q);
+                                HPemptyA = HpA.subHP_jianL(attW_Q + attN_Q);
                                 IO_XS_smallA(IO_XS_hpA("左肩hp", attW_Q + attN_Q, HpA.jianL));
-                                if (deadA) {
+                                if (HPemptyA) {
 
                                 }
                                 break;
                             case "r":
-                                deadA = HpA.subHP_jianR(attW_Q + attN_Q);
+                                HPemptyA = HpA.subHP_jianR(attW_Q + attN_Q);
                                 IO_XS_smallA(IO_XS_hpA("右肩hp", attW_Q + attN_Q, HpA.jianR));
-                                if (deadA) {
+                                if (HPemptyA) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd502");
+                                alert("357fvd502b，"+BchoiceZS[HadChoice_Bb].zs_torl);
                         }
                         break;
                     case "shangbi":
-                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
+                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
                             case "l":
-                                deadA = HpA.subHP_shangbiL(attW_Q + attN_Q);
+                                HPemptyA = HpA.subHP_shangbiL(attW_Q + attN_Q);
                                 IO_XS_smallA(IO_XS_hpA("左上臂hp", attW_Q + attN_Q, HpA.shangbiL));
-                                if (deadA) {
+                                if (HPemptyA) {
 
                                 }
                                 break;
                             case "r":
-                                deadA = HpA.subHP_shangbiR(attW_Q + attN_Q);
+                                HPemptyA = HpA.subHP_shangbiR(attW_Q + attN_Q);
                                 IO_XS_smallA(IO_XS_hpA("右上臂hp", attW_Q + attN_Q, HpA.shangbiR));
-                                if (deadA) {
+                                if (HPemptyA) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd503");
+                                alert("357fvd503b，"+BchoiceZS[HadChoice_Bb].zs_torl);
                         }
                         break;
                     case "zhou":
-                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
+                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
                             case "l":
-                                deadA = HpA.subHP_zhouL(attW_Q + attN_Q);
+                                HPemptyA = HpA.subHP_zhouL(attW_Q + attN_Q);
                                 IO_XS_smallA(IO_XS_hpA("左肘hp", attW_Q + attN_Q, HpA.zhouL));
-                                if (deadA) {
+                                if (HPemptyA) {
 
                                 }
                                 break;
                             case "r":
-                                deadA = HpA.subHP_zhouR(attW_Q + attN_Q);
+                                HPemptyA = HpA.subHP_zhouR(attW_Q + attN_Q);
                                 IO_XS_smallA(IO_XS_hpA("右肘hp", attW_Q + attN_Q, HpA.zhouR));
-                                if (deadA) {
+                                if (HPemptyA) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd504");
+                                alert("357fvd504b，"+BchoiceZS[HadChoice_Bb].zs_torl);
                         }
                         break;
                     case "qianbi":
-                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
+                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
                             case "l":
-                                deadA = HpA.subHP_qianbiL(attW_Q + attN_Q);
+                                HPemptyA = HpA.subHP_qianbiL(attW_Q + attN_Q);
                                 IO_XS_smallA(IO_XS_hpA("左前臂hp", attW_Q + attN_Q, HpA.qianbiL));
-                                if (deadA) {
+                                if (HPemptyA) {
 
                                 }
                                 break;
                             case "r":
-                                deadA = HpA.subHP_qianbiR(attW_Q + attN_Q);
+                                HPemptyA = HpA.subHP_qianbiR(attW_Q + attN_Q);
                                 IO_XS_smallA(IO_XS_hpA("右前臂hp", attW_Q + attN_Q, HpA.qianbiR));
-                                if (deadA) {
+                                if (HPemptyA) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd505");
+                                alert("357fvd505，"+BchoiceZS[HadChoice_Bb].zs_torl);
                         }
                         break;
                     case "shouwan":
-                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
+                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
                             case "l":
-                                deadA = HpA.subHP_shouwanL(attW_Q + attN_Q);
+                                HPemptyA = HpA.subHP_shouwanL(attW_Q + attN_Q);
                                 IO_XS_smallA(IO_XS_hpA("左手腕hp", attW_Q + attN_Q, HpA.shouwanL));
-                                if (deadA) {
+                                if (HPemptyA) {
 
                                 }
                                 break;
                             case "r":
-                                deadA = HpA.subHP_shouwanR(attW_Q + attN_Q);
+                                HPemptyA = HpA.subHP_shouwanR(attW_Q + attN_Q);
                                 IO_XS_smallA(IO_XS_hpA("右手腕hp", attW_Q + attN_Q, HpA.shouwanR));
-                                if (deadA) {
+                                if (HPemptyA) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd506");
+                                alert("357fvd506b，"+BchoiceZS[HadChoice_Bb].zs_torl);
                         }
                         break;
                     case "datui":
-                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
+                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
                             case "l":
-                                deadA = HpA.subHP_datuiL(attW_Q + attN_Q);
+                                HPemptyA = HpA.subHP_datuiL(attW_Q + attN_Q);
                                 IO_XS_smallA(IO_XS_hpA("左大腿hp", attW_Q + attN_Q, HpA.datuiL));
-                                if (deadA) {
+                                if (HPemptyA) {
 
                                 }
                                 break;
                             case "r":
-                                deadA = HpA.subHP_datuiR(attW_Q + attN_Q);
+                                HPemptyA = HpA.subHP_datuiR(attW_Q + attN_Q);
                                 IO_XS_smallA(IO_XS_hpA("右大腿hp", attW_Q + attN_Q, HpA.datuiR));
-                                if (deadA) {
+                                if (HPemptyA) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd507");
+                                alert("357fvd507b，"+BchoiceZS[HadChoice_Bb].zs_torl);
                         }
                         break;
                     case "xi":
-                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
+                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
                             case "l":
-                                deadA = HpA.subHP_xiL(attW_Q + attN_Q);
+                                HPemptyA = HpA.subHP_xiL(attW_Q + attN_Q);
                                 IO_XS_smallA(IO_XS_hpA("左膝hp", attW_Q + attN_Q, HpA.xiL));
-                                if (deadA) {
+                                if (HPemptyA) {
 
                                 }
                                 break;
                             case "r":
-                                deadA = HpA.subHP_xir(attW_Q + attN_Q);
+                                HPemptyA = HpA.subHP_xir(attW_Q + attN_Q);
                                 IO_XS_smallA(IO_XS_hpA("右膝hp", attW_Q + attN_Q, HpA.xir));
-                                if (deadA) {
+                                if (HPemptyA) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd508");
+                                alert("357fvd508b，"+BchoiceZS[HadChoice_Bb].zs_torl);
                         }
                         break;
                     case "xiaotui":
-                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
+                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
                             case "l":
-                                deadA = HpA.subHP_xiaotuiL(attW_Q + attN_Q);
+                                HPemptyA = HpA.subHP_xiaotuiL(attW_Q + attN_Q);
                                 IO_XS_smallA(IO_XS_hpA("左小腿hp", attW_Q + attN_Q, HpA.xiaotuiL));
-                                if (deadA) {
+                                if (HPemptyA) {
 
                                 }
                                 break;
                             case "r":
-                                deadA = HpA.subHP_xiaotuiR(attW_Q + attN_Q);
+                                HPemptyA = HpA.subHP_xiaotuiR(attW_Q + attN_Q);
                                 IO_XS_smallA(IO_XS_hpA("右小腿hp", attW_Q + attN_Q, HpA.xiaotuiR));
-                                if (deadA) {
+                                if (HPemptyA) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd509");
+                                alert("357fvd509b，"+BchoiceZS[HadChoice_Bb].zs_torl);
                         }
                         break;
                     case "huai":
-                        switch (String(AchoiceZS[HadChoice_Aa].zs_torl)) {
+                        switch (String(BchoiceZS[HadChoice_Bb].zs_torl)) {
                             case "l":
-                                deadA = HpA.subHP_huaiL(attW_Q + attN_Q);
+                                HPemptyA = HpA.subHP_huaiL(attW_Q + attN_Q);
                                 IO_XS_smallA(IO_XS_hpA("左脚踝hp", attW_Q + attN_Q, HpA.huaiL));
-                                if (deadA) {
+                                if (HPemptyA) {
 
                                 }
                                 break;
                             case "r":
-                                deadA = HpA.subHP_huaiR(attW_Q + attN_Q);
+                                HPemptyA = HpA.subHP_huaiR(attW_Q + attN_Q);
                                 IO_XS_smallA(IO_XS_hpA("右脚踝hp", attW_Q + attN_Q, HpA.huaiR));
-                                if (deadA) {
+                                if (HPemptyA) {
 
                                 }
                                 break;
                             default:
-                                alert("357fvd510");
+                                alert("357fvd510b，"+BchoiceZS[HadChoice_Bb].zs_torl);
                         }
                         break;
                     default:
-                        alert("5858xtgr6");
+                        alert("5858xtgr6b，"+BchoiceZS[HadChoice_Bb].zs_to);
                 }
                 HpA.pinheng = HpA.pinheng - PinHengAtt_Q;
             }
@@ -2961,7 +2968,7 @@ function shanbijisuan() {
                 IO_XS_normalB(mynameOutB + "闪避率：" + Math.round((mSX_Minjie.SanBi(AchoiceZS[HadChoice_Aa].zs_to, SX_Minjie[1]) - ZSglIO.Mzxz(AchoiceZS[HadChoice_Aa].zs_name, SX_Zhili[0]) + mSX_Minjie.SanBi(AchoiceZS[HadChoice_Aa].zs_to, SX_Minjie[1]) * ZSglIO.Mzxz(AchoiceZS[HadChoice_Aa].zs_name, SX_Zhili[0])) * 100) + "%，闪避开了攻击。");
                 a = 0;
                 HpB.pinheng = HpB.pinheng - 5 * shanbiB_i;
-                IO_XS_smallB(mynameOutB + "平衡: <span class='redfont'> -" + 5 * shanbiB_i + "</span> = " + Math.round(HpB.pinheng));
+                IO_XS_smallB(mynameOutB + "稳定:<span class='redfont'> -" + 5 * shanbiB_i + "</span> = " + Math.round(HpB.pinheng));
                 shanbiB_i++;
             } else {
                 IO_XS_normalB(mynameOutB + "闪避率：" + Math.round((mSX_Minjie.SanBi(AchoiceZS[HadChoice_Aa].zs_to, SX_Minjie[1]) - ZSglIO.Mzxz(AchoiceZS[HadChoice_Aa].zs_name, SX_Zhili[0]) + mSX_Minjie.SanBi(AchoiceZS[HadChoice_Aa].zs_to, SX_Minjie[1]) * ZSglIO.Mzxz(AchoiceZS[HadChoice_Aa].zs_name, SX_Zhili[0])) * 100) + "%，躲闪不及。");
@@ -2979,7 +2986,7 @@ function shanbijisuan() {
                 IO_XS_normalA(mynameOutA + "闪避率：" + Math.round((mSX_Minjie.SanBi(BchoiceZS[HadChoice_Bb].zs_to, SX_Minjie[0]) - ZSglIO.Mzxz(BchoiceZS[HadChoice_Bb].zs_name, SX_Zhili[1]) + mSX_Minjie.SanBi(BchoiceZS[HadChoice_Bb].zs_to, SX_Minjie[0]) * ZSglIO.Mzxz(BchoiceZS[HadChoice_Bb].zs_name, SX_Zhili[1])) * 100) + "%，闪开了攻击。")
                 a = 0;
                 HpA.pinheng = HpA.pinheng - 5 * shanbiA_i;
-                IO_XS_smallA(mynameOutA + "平衡: <span class='redfont'> -" + 5 * shanbiA_i + "</span> = " + Math.round(HpA.pinheng));
+                IO_XS_smallA(mynameOutA + "稳定:<span class='redfont'> -" + 5 * shanbiA_i + "</span> = " + Math.round(HpA.pinheng));
                 shanbiA_i++;
             } else {
                 IO_XS_normalA(mynameOutA + "闪避率：" + Math.round((mSX_Minjie.SanBi(BchoiceZS[HadChoice_Bb].zs_to, SX_Minjie[0]) - ZSglIO.Mzxz(BchoiceZS[HadChoice_Bb].zs_name, SX_Zhili[1]) + mSX_Minjie.SanBi(BchoiceZS[HadChoice_Bb].zs_to, SX_Minjie[0]) * ZSglIO.Mzxz(BchoiceZS[HadChoice_Bb].zs_name, SX_Zhili[1])) * 100) + "%，躲闪不及。")
@@ -3634,3 +3641,4 @@ function IO_XS_hpA(a, b, c) {
 function IO_XS_hpB(a, b, c) {
     return "<div class='XkuangHP myfloatrigh'><span class='bluebord'>" + a + "</span><span class='redfont'> - " + b + "</span> = " + c + "</div>";
 }
+
