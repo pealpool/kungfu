@@ -2961,7 +2961,7 @@ function shanbijisuan() {
                 IO_XS_normalB(mynameOutB + "闪避率：" + Math.round((mSX_Minjie.SanBi(AchoiceZS[HadChoice_Aa].zs_to, SX_Minjie[1]) - ZSglIO.Mzxz(AchoiceZS[HadChoice_Aa].zs_name, SX_Zhili[0]) + mSX_Minjie.SanBi(AchoiceZS[HadChoice_Aa].zs_to, SX_Minjie[1]) * ZSglIO.Mzxz(AchoiceZS[HadChoice_Aa].zs_name, SX_Zhili[0])) * 100) + "%，闪避开了攻击。");
                 a = 0;
                 HpB.pinheng = HpB.pinheng - 5 * shanbiB_i;
-                IO_XS_small("", mynameOutB + "平衡: <span class='redfont'> -" + 5 * shanbiB_i + "</span> = " + Math.round(HpB.pinheng));
+                IO_XS_smallB(mynameOutB + "平衡: <span class='redfont'> -" + 5 * shanbiB_i + "</span> = " + Math.round(HpB.pinheng));
                 shanbiB_i++;
             } else {
                 IO_XS_normalB(mynameOutB + "闪避率：" + Math.round((mSX_Minjie.SanBi(AchoiceZS[HadChoice_Aa].zs_to, SX_Minjie[1]) - ZSglIO.Mzxz(AchoiceZS[HadChoice_Aa].zs_name, SX_Zhili[0]) + mSX_Minjie.SanBi(AchoiceZS[HadChoice_Aa].zs_to, SX_Minjie[1]) * ZSglIO.Mzxz(AchoiceZS[HadChoice_Aa].zs_name, SX_Zhili[0])) * 100) + "%，躲闪不及。");
@@ -2979,7 +2979,7 @@ function shanbijisuan() {
                 IO_XS_normalA(mynameOutA + "闪避率：" + Math.round((mSX_Minjie.SanBi(BchoiceZS[HadChoice_Bb].zs_to, SX_Minjie[0]) - ZSglIO.Mzxz(BchoiceZS[HadChoice_Bb].zs_name, SX_Zhili[1]) + mSX_Minjie.SanBi(BchoiceZS[HadChoice_Bb].zs_to, SX_Minjie[0]) * ZSglIO.Mzxz(BchoiceZS[HadChoice_Bb].zs_name, SX_Zhili[1])) * 100) + "%，闪开了攻击。")
                 a = 0;
                 HpA.pinheng = HpA.pinheng - 5 * shanbiA_i;
-                IO_XS_small(mynameOutA + "平衡: <span class='redfont'> -" + 5 * shanbiA_i + "</span> = " + Math.round(HpA.pinheng), "");
+                IO_XS_smallA(mynameOutA + "平衡: <span class='redfont'> -" + 5 * shanbiA_i + "</span> = " + Math.round(HpA.pinheng));
                 shanbiA_i++;
             } else {
                 IO_XS_normalA(mynameOutA + "闪避率：" + Math.round((mSX_Minjie.SanBi(BchoiceZS[HadChoice_Bb].zs_to, SX_Minjie[0]) - ZSglIO.Mzxz(BchoiceZS[HadChoice_Bb].zs_name, SX_Zhili[1]) + mSX_Minjie.SanBi(BchoiceZS[HadChoice_Bb].zs_to, SX_Minjie[0]) * ZSglIO.Mzxz(BchoiceZS[HadChoice_Bb].zs_name, SX_Zhili[1])) * 100) + "%，躲闪不及。")
@@ -3520,24 +3520,26 @@ function IO_XS_normalB(a) {
     $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_xiao XS_yuan_xiao_l'></div><div class='XS_text SCd_B'>" + a + "</div><div class='XS_yuan_xiaoS XS_yuan_xiao_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
 }
 
+//n无圈圈
 function IO_XS_normalAn(a) {
     $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_textn SCd_A'><div class='SCd_ge'>" + a + "</div></div><div class='XS_Sline XS_Sline_r'></div></div>");
 }
-
 function IO_XS_normalBn(a) {
     $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_textn SCd_B'><div class='SCd_ge'>" + a + "</div></div><div class='XS_Sline XS_Sline_r'></div></div>");
 }
 
+//AB平衡消耗与恢复，两圈圈
 function IO_XS_small(a, b) {
     $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_xiao XS_yuan_xiao_l'></div><div class='XS_textS'><div class='SCd_A SCd_kuan'>" + a + "</div><div class='SCd_B SCd_kuan'>" + b + "</div></div><div class='XS_yuan_xiao XS_yuan_xiao_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
 }
 
+//单圈圈
 function IO_XS_smallA(a) {
     $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_xiaoX XS_yuan_xiao_l'></div><div class='XS_textSn'><div class='SCd_kuanD'>" + a + "</div></div><div class='XS_Sline XS_Sline_r'></div></div>");
 }
 
 function IO_XS_smallB(a) {
-    $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_textSn'><div class='SCd_kuanB'>" + a + "</div></div><div class='XS_yuan_xiaoX XS_yuan_xiao_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
+    $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_textSn'><div class='SCd_B SCd_kuanD'>" + a + "</div></div><div class='XS_yuan_xiaoX XS_yuan_xiao_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
 }
 
 function IO_XS_shanghaiA(a, b, c) {
