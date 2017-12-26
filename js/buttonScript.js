@@ -709,7 +709,8 @@ function ChuShiHua() {
     const container = document.querySelector('#ZDwenbenWK');
     const ps = new PerfectScrollbar(container);
     container.scrollTop = 0;
-    window.ATspeed=200;//自动速度
+    window.ATspeed = 200;//自动速度
+    window.ATmark = 1;//自动标记
     HPchongzhi();
     //属性关联弹出标记
     window.sxTanChu_A = 0;
@@ -2387,7 +2388,9 @@ function ChoiceFirstN_B(a, b) {
 //战斗总框架
 //todo fighting
 function fighting() {
+    //DJStime倒计时
     if (DJStime > 0) {
+        //fighting函数循环标记，1为跳出循环
         if (fig_xix < 1) {
             ChoiceFirst(fig_a, fig_b);
             if (HadChoice_Who === "A") {
@@ -2432,7 +2435,6 @@ function fighting() {
     HPshuaxin();
     $("#ds_time").html((DJStime).toFixed(1));
     $("#ZDwenbenWK").scrollTop($("#ZDwenbenWK")[0].scrollHeight);
-    // alert(HpA.pinheng + ","+HpB.pinheng);
 }
 
 //todo hp结算
@@ -2489,7 +2491,7 @@ function fighting_n() {
                                 }
                                 break;
                             default:
-                                alert("357fvd501，"+AchoiceZS[HadChoice_Aa].zs_torl);
+                                alert("357fvd501，" + AchoiceZS[HadChoice_Aa].zs_torl);
                         }
                         break;
                     case "jian":
@@ -2509,7 +2511,7 @@ function fighting_n() {
                                 }
                                 break;
                             default:
-                                alert("357fvd502，"+AchoiceZS[HadChoice_Aa].zs_torl);
+                                alert("357fvd502，" + AchoiceZS[HadChoice_Aa].zs_torl);
                         }
                         break;
                     case "shangbi":
@@ -2529,7 +2531,7 @@ function fighting_n() {
                                 }
                                 break;
                             default:
-                                alert("357fvd503，"+AchoiceZS[HadChoice_Aa].zs_torl);
+                                alert("357fvd503，" + AchoiceZS[HadChoice_Aa].zs_torl);
                         }
                         break;
                     case "zhou":
@@ -2549,7 +2551,7 @@ function fighting_n() {
                                 }
                                 break;
                             default:
-                                alert("357fvd504，"+AchoiceZS[HadChoice_Aa].zs_torl);
+                                alert("357fvd504，" + AchoiceZS[HadChoice_Aa].zs_torl);
                         }
                         break;
                     case "qianbi":
@@ -2589,7 +2591,7 @@ function fighting_n() {
                                 }
                                 break;
                             default:
-                                alert("357fvd506，"+AchoiceZS[HadChoice_Aa].zs_torl);
+                                alert("357fvd506，" + AchoiceZS[HadChoice_Aa].zs_torl);
                         }
                         break;
                     case "datui":
@@ -2609,7 +2611,7 @@ function fighting_n() {
                                 }
                                 break;
                             default:
-                                alert("357fvd507，"+AchoiceZS[HadChoice_Aa].zs_torl);
+                                alert("357fvd507，" + AchoiceZS[HadChoice_Aa].zs_torl);
                         }
                         break;
                     case "xi":
@@ -2629,7 +2631,7 @@ function fighting_n() {
                                 }
                                 break;
                             default:
-                                alert("357fvd508，"+AchoiceZS[HadChoice_Aa].zs_torl);
+                                alert("357fvd508，" + AchoiceZS[HadChoice_Aa].zs_torl);
                         }
                         break;
                     case "xiaotui":
@@ -2649,7 +2651,7 @@ function fighting_n() {
                                 }
                                 break;
                             default:
-                                alert("357fvd509，"+AchoiceZS[HadChoice_Aa].zs_torl);
+                                alert("357fvd509，" + AchoiceZS[HadChoice_Aa].zs_torl);
                         }
                         break;
                     case "huai":
@@ -2669,11 +2671,11 @@ function fighting_n() {
                                 }
                                 break;
                             default:
-                                alert("357fvd510，"+AchoiceZS[HadChoice_Aa].zs_torl);
+                                alert("357fvd510，" + AchoiceZS[HadChoice_Aa].zs_torl);
                         }
                         break;
                     default:
-                        alert("5858xtgr6，"+AchoiceZS[HadChoice_Aa].zs_to);
+                        alert("5858xtgr6，" + AchoiceZS[HadChoice_Aa].zs_to);
                 }
                 HpB.pinheng = HpB.pinheng - PinHengAtt_Q;
             } else if (HadChoice_Who === "B") {
@@ -2716,7 +2718,7 @@ function fighting_n() {
                                 }
                                 break;
                             default:
-                                alert("357fvd501b，"+BchoiceZS[HadChoice_Bb].zs_torl);
+                                alert("357fvd501b，" + BchoiceZS[HadChoice_Bb].zs_torl);
                         }
                         break;
                     case "jian":
@@ -2736,7 +2738,7 @@ function fighting_n() {
                                 }
                                 break;
                             default:
-                                alert("357fvd502b，"+BchoiceZS[HadChoice_Bb].zs_torl);
+                                alert("357fvd502b，" + BchoiceZS[HadChoice_Bb].zs_torl);
                         }
                         break;
                     case "shangbi":
@@ -2756,7 +2758,7 @@ function fighting_n() {
                                 }
                                 break;
                             default:
-                                alert("357fvd503b，"+BchoiceZS[HadChoice_Bb].zs_torl);
+                                alert("357fvd503b，" + BchoiceZS[HadChoice_Bb].zs_torl);
                         }
                         break;
                     case "zhou":
@@ -2776,7 +2778,7 @@ function fighting_n() {
                                 }
                                 break;
                             default:
-                                alert("357fvd504b，"+BchoiceZS[HadChoice_Bb].zs_torl);
+                                alert("357fvd504b，" + BchoiceZS[HadChoice_Bb].zs_torl);
                         }
                         break;
                     case "qianbi":
@@ -2796,7 +2798,7 @@ function fighting_n() {
                                 }
                                 break;
                             default:
-                                alert("357fvd505，"+BchoiceZS[HadChoice_Bb].zs_torl);
+                                alert("357fvd505，" + BchoiceZS[HadChoice_Bb].zs_torl);
                         }
                         break;
                     case "shouwan":
@@ -2816,7 +2818,7 @@ function fighting_n() {
                                 }
                                 break;
                             default:
-                                alert("357fvd506b，"+BchoiceZS[HadChoice_Bb].zs_torl);
+                                alert("357fvd506b，" + BchoiceZS[HadChoice_Bb].zs_torl);
                         }
                         break;
                     case "datui":
@@ -2836,7 +2838,7 @@ function fighting_n() {
                                 }
                                 break;
                             default:
-                                alert("357fvd507b，"+BchoiceZS[HadChoice_Bb].zs_torl);
+                                alert("357fvd507b，" + BchoiceZS[HadChoice_Bb].zs_torl);
                         }
                         break;
                     case "xi":
@@ -2856,7 +2858,7 @@ function fighting_n() {
                                 }
                                 break;
                             default:
-                                alert("357fvd508b，"+BchoiceZS[HadChoice_Bb].zs_torl);
+                                alert("357fvd508b，" + BchoiceZS[HadChoice_Bb].zs_torl);
                         }
                         break;
                     case "xiaotui":
@@ -2876,7 +2878,7 @@ function fighting_n() {
                                 }
                                 break;
                             default:
-                                alert("357fvd509b，"+BchoiceZS[HadChoice_Bb].zs_torl);
+                                alert("357fvd509b，" + BchoiceZS[HadChoice_Bb].zs_torl);
                         }
                         break;
                     case "huai":
@@ -2896,11 +2898,11 @@ function fighting_n() {
                                 }
                                 break;
                             default:
-                                alert("357fvd510b，"+BchoiceZS[HadChoice_Bb].zs_torl);
+                                alert("357fvd510b，" + BchoiceZS[HadChoice_Bb].zs_torl);
                         }
                         break;
                     default:
-                        alert("5858xtgr6b，"+BchoiceZS[HadChoice_Bb].zs_to);
+                        alert("5858xtgr6b，" + BchoiceZS[HadChoice_Bb].zs_to);
                 }
                 HpA.pinheng = HpA.pinheng - PinHengAtt_Q;
             }
@@ -3531,6 +3533,7 @@ function IO_XS_normalB(a) {
 function IO_XS_normalAn(a) {
     $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_textn SCd_A'><div class='SCd_ge'>" + a + "</div></div><div class='XS_Sline XS_Sline_r'></div></div>");
 }
+
 function IO_XS_normalBn(a) {
     $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_textn SCd_B'><div class='SCd_ge'>" + a + "</div></div><div class='XS_Sline XS_Sline_r'></div></div>");
 }
