@@ -709,7 +709,7 @@ function ChuShiHua() {
     const container = document.querySelector('#ZDwenbenWK');
     const ps = new PerfectScrollbar(container);
     container.scrollTop = 0;
-
+    window.ATspeed=200;//自动速度
     HPchongzhi();
     //属性关联弹出标记
     window.sxTanChu_A = 0;

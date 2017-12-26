@@ -1038,8 +1038,8 @@ $(document).ready(function () {
         }, 200);
         BshujiZS();
         shuchusuoxuan();
-        $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_Fred XS_yuan_Fred_l'></div><div class='XS_huiheS_line'></div><div class='XS_huiheS'>第&nbsp;" + (huihe_i-1) + "&nbsp;回<br><span>开&nbsp;&nbsp;始</span></div><div class='XS_huiheS_line'></div><div class='XS_yuan_Fred XS_yuan_Fred_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
-        window.fitXH = setInterval(fighting, 200);
+        $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_Fred XS_yuan_Fred_l'></div><div class='XS_huiheS_line'></div><div class='XS_huiheS'>第&nbsp;" + (huihe_i - 1) + "&nbsp;回<br><span>开&nbsp;&nbsp;始</span></div><div class='XS_huiheS_line'></div><div class='XS_yuan_Fred XS_yuan_Fred_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
+        window.fitXH = setInterval(fighting, ATspeed);
     });
 
     //选择攻击部位限制左右按钮
@@ -3083,36 +3083,54 @@ $(document).ready(function () {
         }, 200);
     });
     //显示A招式
-    $("#KanZS_KX_A").hover(
-        function () {
-            $("#KanZS_KX_A").addClass("KanZS_KX_Black");
-            $("#KanZS_KX_B").removeClass("KanZS_KX_Black");
-            if ($("#xianshiZS_NK_A").css("display") === "none") {
-                $("#xianshiZS_NK_B").hide("slide", {
-                    direction: 'right'
-                }, 150);
-                $("#xianshiZS_NK_A").show("slide", {
-                    direction: 'left'
-                }, 150);
-            }
+    $("#KanZS_KX_A").hover(function () {
+        $("#KanZS_KX_A").addClass("KanZS_KX_Black");
+        $("#KanZS_KX_B").removeClass("KanZS_KX_Black");
+        if ($("#xianshiZS_NK_A").css("display") === "none") {
+            $("#xianshiZS_NK_B").hide("slide", {
+                direction: 'right'
+            }, 150);
+            $("#xianshiZS_NK_A").show("slide", {
+                direction: 'left'
+            }, 150);
         }
-    );
+    });
     //显示B招式
-    $("#KanZS_KX_B").hover(
-        function () {
-            $("#KanZS_KX_B").addClass("KanZS_KX_Black");
-            $("#KanZS_KX_A").removeClass("KanZS_KX_Black");
-            if ($("#xianshiZS_NK_B").css("display") === "none") {
-                $("#xianshiZS_NK_A").hide("slide", {
-                    direction: 'left'
-                }, 150);
-                $("#xianshiZS_NK_B").show("slide", {
-                    direction: 'right'
-                }, 150);
-            }
+    $("#KanZS_KX_B").hover(function () {
+        $("#KanZS_KX_B").addClass("KanZS_KX_Black");
+        $("#KanZS_KX_A").removeClass("KanZS_KX_Black");
+        if ($("#xianshiZS_NK_B").css("display") === "none") {
+            $("#xianshiZS_NK_A").hide("slide", {
+                direction: 'left'
+            }, 150);
+            $("#xianshiZS_NK_B").show("slide", {
+                direction: 'right'
+            }, 150);
         }
-    );
+    });
 
+    //快速慢速
+    $("#autoSpeed").click(function () {
+        if ($("#autoSpeedF").attr("class") === "auto_buttomX bOl AutoBlack") {
+            $("#autoSpeedF").removeClass("AutoBlack");
+            $("#autoSpeedS").addClass("AutoBlack");
+            ATspeed = 4000;
+        } else {
+            $("#autoSpeedS").removeClass("AutoBlack");
+            $("#autoSpeedF").addClass("AutoBlack");
+            ATspeed = 200;
+        }
+    })
 
+    //自动手动
+    $("#autoBm").click(function () {
+        if ($("#autoBm1").attr("class") === "auto_buttomX bOl AutoBlack") {
+            $("#autoBm1").removeClass("AutoBlack");
+            $("#autoBm0").addClass("AutoBlack");
+        } else {
+            $("#autoBm0").removeClass("AutoBlack");
+            $("#autoBm1").addClass("AutoBlack");
+        }
+    })
 
 });
