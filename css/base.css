@@ -789,21 +789,13 @@ html, body {
     margin-top: 3px;
 }
 
-.zy_buttomL {
+.zy_buttomX {
     float: left;
     width: 18px;
     height: 18px;
-    border-radius: 4px 0px 0px 4px;
     background-color: #a0a0a0;
 }
 
-.zy_buttomR {
-    float: left;
-    width: 18px;
-    height: 18px;
-    border-radius: 0px 4px 4px 0px;
-    background-color: #a0a0a0;
-}
 
 .org {
     background-color: #252525;
@@ -1235,7 +1227,7 @@ html, body {
 .StartButtomDaKuang {
     position: relative;
     float: left;
-    width: 280px;
+    width: 270px;
     top: 3px;
 	left: 3px;
 }
@@ -1298,7 +1290,7 @@ html, body {
 
 .ckZhaoShiButtomL {
     float: left;
-    width: 80px;
+    width: 84px;
     height: 117px;
     margin: 8px;
 }
@@ -1558,7 +1550,7 @@ html, body {
     float: right;
     width: 60px;
     height: 33px;
-    margin-top: 50px;
+    margin-top: 8px;
 }
 
 .shuru_name {
