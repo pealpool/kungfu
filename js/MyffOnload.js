@@ -1127,7 +1127,7 @@ $(document).ready(function () {
 
     //点击改名
     $(document).on("click", "#My_name", function () {
-        $("#TuKuangTitle_name").html("<input class='shuru_name' id='shuru_name' maxlength='6'><div class='xfangButtomw'><div class='xfangButtom redButtom' id='dui_name'>√</div></div><div class='xfangButtomw'><div class='xfangButtom grayButtom' id='cuo_name'>×</div></div>");
+        $("#TuKuangTitle_name").html("<input class='shuru_name' id='shuru_name' maxlength='6'><div class='xfangButtomw'><div class='xfangButtom backButtom' id='dui_name'>√</div></div><div class='xfangButtomw'><div class='xfangButtom grayButtom' id='cuo_name'>×</div></div>");
         $("#shuru_name").focus();
     });
     $(document).on("click", "#dui_name", function () {

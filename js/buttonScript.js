@@ -3453,8 +3453,8 @@ function buttomLock() {
     ButtomPinBi = 1;
     $("#StartButtomYuanKuang").removeClass("yuan_01").addClass("yuan_02");
     $("#BiaoTi_Logo_cxbp").attr("class", "BiaoTi_Logo_cxbpX");
-    $("#rengshuButtom").attr("class", "xiaoButtom redButtomX");
-    $("#huanrenButtom").attr("class", "xiaoButtom redButtomX");
+    $("#rengshuButtom").attr("class", "xiaoButtom backButtomX");
+    $("#huanrenButtom").attr("class", "xiaoButtom backButtomX");
     $("#ckZhaoShiButtom_A").attr("class", "ckZhaoShiButtom grayButtomX");
     $("#ckZhaoShiButtom_B").attr("class", "ckZhaoShiButtom grayButtomX");
 }
@@ -3464,8 +3464,8 @@ function buttomLockoff() {
     ButtomPinBi = 0;
     $("#StartButtomYuanKuang").removeClass("yuan_02").addClass("yuan_01");
     $("#BiaoTi_Logo_cxbp").attr("class", "BiaoTi_Logo_cxbp");
-    $("#rengshuButtom").attr("class", "xiaoButtom redButtom");
-    $("#huanrenButtom").attr("class", "xiaoButtom redButtom");
+    $("#rengshuButtom").attr("class", "xiaoButtom backButtom");
+    $("#huanrenButtom").attr("class", "xiaoButtom backButtom");
     $("#ckZhaoShiButtom_A").attr("class", "ckZhaoShiButtom grayButtom");
     $("#ckZhaoShiButtom_B").attr("class", "ckZhaoShiButtom grayButtom");
 }

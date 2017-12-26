@@ -1469,14 +1469,14 @@ html, body {
     margin-top: 18px;
 }
 
-.redButtomX {
+.backButtomX {
     box-shadow: 2px 3px 5px 0 rgba(0, 0, 0, 0.3);
     border-radius: 3px;
     background-color: #BEBEBE;
     text-align: center;
     color: #fff;
 }
-.redButtom {
+.backButtom {
     box-shadow: 2px 3px 5px 0 rgba(0, 0, 0, 0.3);
     transition: background 600ms cubic-bezier(0, 0, 0.07, 1.04) 0ms;
     border-radius: 3px;
@@ -1486,11 +1486,11 @@ html, body {
     cursor: pointer;
 }
 
-.redButtom:hover {
+.backButtom:hover {
     background-color: #5a5a5a;
 }
 
-.redButtom:active {
+.backButtom:active {
     margin-top: 1px;
     margin-left: 1px;
     box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
@@ -1551,7 +1551,7 @@ html, body {
     float: left;
     width: 80px;
     height: 33px;
-    margin-top: 50px;
+    margin-top: 8px;
 }
 
 .xiaoButtomWr {
@@ -2426,4 +2426,39 @@ html, body {
 }
 .myfloatrigh{
     float:right;
+}
+.auto_buttomD {
+    float: left;
+    width: 80px;
+    height: 24px;
+	margin-top: 5px;
+	font-size: 14px;
+	border-radius: 4px;
+	padding: 2px;
+	background-color: #ddd;
+	box-shadow:1px 1px 10px rgba(0,0,0,0.5) inset;
+	cursor: pointer;
+}
+
+.auto_buttomX {
+    float: left;
+    width: 40px;
+    height: 24px;
+	line-height: 24px;
+	text-align: center;
+	color: #a0a0a0;
+	transition: all 400ms ease-in-out 0ms;
+}
+
+.bOl{
+    border-radius: 2px 0px 0px 2px;
+}
+.bOr{
+    border-radius: 0px 2px 2px 0px;
+}
+
+.AutoBlack {
+    background-color: #252525;
+	color: #fff!important;
+	box-shadow:2px 1px 5px rgba(0,0,0,0.5);
 }
