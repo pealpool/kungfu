@@ -24,7 +24,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19200">
+            <state relative-caret-position="0">
               <caret line="960" column="64" lean-forward="false" selection-start-line="960" selection-start-column="64" selection-end-line="960" selection-end-column="64" />
               <folding />
             </state>
@@ -66,8 +66,8 @@
       <file leaf-file-name="MyffOnload.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/MyffOnload.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="3148" column="23" lean-forward="true" selection-start-line="3148" selection-start-column="23" selection-end-line="3148" selection-end-column="23" />
+            <state relative-caret-position="401">
+              <caret line="3145" column="16" lean-forward="true" selection-start-line="3145" selection-start-column="16" selection-end-line="3145" selection-end-column="16" />
               <folding>
                 <marker date="1514474282794" expanded="true" signature="1778:1795" ph="..." />
                 <marker date="1514474282794" expanded="true" signature="4317:4365" ph="..." />
@@ -98,7 +98,7 @@
             <state relative-caret-position="39840">
               <caret line="2029" column="6" lean-forward="false" selection-start-line="2029" selection-start-column="6" selection-end-line="2029" selection-end-column="6" />
               <folding>
-                <marker date="1514472080398" expanded="true" signature="23813:23887" ph="{...}" />
+                <marker date="1514476513453" expanded="true" signature="23888:23962" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -116,7 +116,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>AchoiceZS[HadChoice_Aa].zs_to</find>
       <find>b，&quot;+BchoiceZS[HadChoice_Bb].zs_to</find>
       <find>String(AchoiceZS[HadChoice_Aa].zs_torl)</find>
       <find>，&quot;+BchoiceZS[HadChoice_Bb].zs_to);</find>
@@ -146,6 +145,7 @@
       <find>$(&quot;#StartButtomYuanKuang&quot;).html(</find>
       <find>fig_xix</find>
       <find>lock</find>
+      <find>backButtomX</find>
     </findStrings>
     <replaceStrings>
       <replace>(mynameOutB+&quot;</replace>
@@ -226,7 +226,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -527,12 +527,12 @@
       <workItem from="1513147793103" duration="7558000" />
       <workItem from="1514268549064" duration="821000" />
       <workItem from="1514269381793" duration="8906000" />
-      <workItem from="1514467411744" duration="6342000" />
+      <workItem from="1514467411744" duration="8991000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="401249000" />
+    <option name="totallyTimeSpent" value="403898000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -544,7 +544,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10432034" sideWeight="0.50858366" order="2" side_tool="true" content_ui="combo" x="206" y="72" width="474" height="932" />
@@ -582,14 +582,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18525">
-          <caret line="975" column="26" lean-forward="false" selection-start-line="975" selection-start-column="26" selection-end-line="975" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="43453">
@@ -846,7 +838,7 @@
         <state relative-caret-position="39840">
           <caret line="2029" column="6" lean-forward="false" selection-start-line="2029" selection-start-column="6" selection-end-line="2029" selection-end-column="6" />
           <folding>
-            <marker date="1514472080398" expanded="true" signature="23813:23887" ph="{...}" />
+            <marker date="1514476513453" expanded="true" signature="23888:23962" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -877,7 +869,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19200">
+        <state relative-caret-position="0">
           <caret line="960" column="64" lean-forward="false" selection-start-line="960" selection-start-column="64" selection-end-line="960" selection-end-column="64" />
           <folding />
         </state>
@@ -908,10 +900,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/pace.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/MyffOnload.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="3148" column="23" lean-forward="true" selection-start-line="3148" selection-start-column="23" selection-end-line="3148" selection-end-column="23" />
+        <state relative-caret-position="401">
+          <caret line="3145" column="16" lean-forward="true" selection-start-line="3145" selection-start-column="16" selection-end-line="3145" selection-end-column="16" />
           <folding>
             <marker date="1514474282794" expanded="true" signature="1778:1795" ph="..." />
             <marker date="1514474282794" expanded="true" signature="4317:4365" ph="..." />
