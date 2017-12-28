@@ -2388,9 +2388,12 @@ function ChoiceFirstN_B(a, b) {
 //战斗总框架
 //todo fighting
 function fighting() {
+    if(ATmark === 0){
+        clearInterval(window.fitXH);
+    }
     //DJStime倒计时
     if (DJStime > 0) {
-        //fighting函数循环标记，1为跳出循环
+        //fig_xix为fighting函数循环标记，1为跳出循环
         if (fig_xix < 1) {
             ChoiceFirst(fig_a, fig_b);
             if (HadChoice_Who === "A") {
@@ -3453,7 +3456,6 @@ function xianshiZSshuju() {
 //战斗时锁定按钮
 function buttomLock() {
     ButtomPinBi = 1;
-    $("#StartButtomYuanKuang").removeClass("yuan_01").addClass("yuan_02");
     $("#BiaoTi_Logo_cxbp").attr("class", "BiaoTi_Logo_cxbpX");
     $("#rengshuButtom").attr("class", "xiaoButtom backButtomX");
     $("#huanrenButtom").attr("class", "xiaoButtom backButtomX");
@@ -3464,7 +3466,7 @@ function buttomLock() {
 //战斗后解除锁定按钮
 function buttomLockoff() {
     ButtomPinBi = 0;
-    $("#StartButtomYuanKuang").removeClass("yuan_02").addClass("yuan_01");
+    $("#StartButtomYuanKuang").removeClass("yuan_03").removeClass("yuan_02").addClass("yuan_01");
     $("#BiaoTi_Logo_cxbp").attr("class", "BiaoTi_Logo_cxbp");
     $("#rengshuButtom").attr("class", "xiaoButtom backButtom");
     $("#huanrenButtom").attr("class", "xiaoButtom backButtom");

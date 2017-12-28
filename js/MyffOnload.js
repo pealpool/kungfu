@@ -596,6 +596,10 @@ $(document).ready(function () {
             if (i_AyixuanZS > 5) {
                 bianWuXiaoZS();
             }
+        }else{
+            if(ATmark===0){
+                fighting();
+            }
         }
     });
 
@@ -1031,7 +1035,6 @@ $(document).ready(function () {
         });
         AchoiceZS_bj = i - 1;
         buttomLock();
-        $("#StartButtomYuanKuang").html("<div class='ds_time_TD'><span>第</span> <span class='ds_time_TX' id='huiheclass'>" + huihe_i + "</span> <span>回</span></div><div class='ds_time'><span id='ds_time'>" + (DJStime).toFixed(1) + "</span> <span class='ds_time_s'>s</span></div>");
         huihe_i++;
         $("#NeiRongchoiceZSdaK").hide("drop", {
             direction: 'up'
@@ -1040,8 +1043,12 @@ $(document).ready(function () {
         shuchusuoxuan();
         $("#ZDwenbenWK").append("<div class='XS_huiheS_DK'><div class='XS_Sline'></div><div class='XS_yuan_Fred XS_yuan_Fred_l'></div><div class='XS_huiheS_line'></div><div class='XS_huiheS'>第&nbsp;" + (huihe_i - 1) + "&nbsp;回<br><span>开&nbsp;&nbsp;始</span></div><div class='XS_huiheS_line'></div><div class='XS_yuan_Fred XS_yuan_Fred_r'></div><div class='XS_Sline XS_Sline_r'></div></div>");
         if (ATmark === 1) {
+            $("#StartButtomYuanKuang").removeClass("yuan_01").addClass("yuan_02");
+            $("#StartButtomYuanKuang").html("<div class='ds_time_TD'><span>第</span> <span class='ds_time_TX' id='huiheclass'>" + huihe_i + "</span> <span>回</span></div><div class='ds_time'><span id='ds_time'>" + (DJStime).toFixed(1) + "</span> <span class='ds_time_s'>s</span></div>");
             window.fitXH = setInterval(fighting, ATspeed);
         } else {
+            $("#StartButtomYuanKuang").removeClass("yuan_01").addClass("yuan_03");
+            $("#StartButtomYuanKuang").html("<div class='ds_time_TD'><span>第</span> <span class='ds_time_TX' id='huiheclass'>1</span> <span>回</span></div><div class='ds_time'><span id='ds_time'>13.7</span> <span class='ds_time_s'>s</span></div><div class='ds_time_go'>继&nbsp;续</div>");
             fighting();
         }
     });
@@ -3132,10 +3139,19 @@ $(document).ready(function () {
             $("#autoBm1").removeClass("AutoBlack");
             $("#autoBm0").addClass("AutoBlack");
             ATmark = 0;
+            if (ButtomPinBi === 1 && fig_xix < 1) {
+                $("#StartButtomYuanKuang").removeClass("yuan_02").addClass("yuan_03");
+                $("#StartButtomYuanKuang").html("<div class='ds_time_TD'><span>第</span> <span class='ds_time_TX' id='huiheclass'>1</span> <span>回</span></div><div class='ds_time'><span id='ds_time'>13.7</span> <span class='ds_time_s'>s</span></div><div class='ds_time_go'>继&nbsp;续</div>");
+            }
         } else {
             $("#autoBm0").removeClass("AutoBlack");
             $("#autoBm1").addClass("AutoBlack");
             ATmark = 1;
+            if (ButtomPinBi === 1 && fig_xix < 1) {
+                $("#StartButtomYuanKuang").removeClass("yuan_03").addClass("yuan_02");
+                $("#StartButtomYuanKuang").html("<div class='ds_time_TD'><span>第</span> <span class='ds_time_TX' id='huiheclass'>" + huihe_i + "</span> <span>回</span></div><div class='ds_time'><span id='ds_time'>" + (DJStime).toFixed(1) + "</span> <span class='ds_time_s'>s</span></div>");
+                window.fitXH = setInterval(fighting, ATspeed);
+            }
         }
     })
 

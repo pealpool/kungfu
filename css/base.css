@@ -1267,10 +1267,10 @@ html, body {
 }
 
 .yuan_02 {
-    -webkit-animation: BianSe_red 1s infinite linear;
+    -webkit-animation: BianSe_gray 1s infinite linear;
 }
 
-@-webkit-keyframes BianSe_red {
+@-webkit-keyframes BianSe_gray {
     0% {
         background: #898989;
     }
@@ -1279,6 +1279,43 @@ html, body {
     }
     100% {
         background: #898989;
+    }
+}
+
+.yuan_03 {
+	background: #4c4c4c;
+	cursor: pointer;
+    -webkit-animation: BianSe_graytoblack0 1s infinite linear;
+}
+
+@-webkit-keyframes BianSe_graytoblack0 {
+    0% {
+        background: #252525;
+		box-shadow: 0px 0px 1px 0 rgb(226, 234, 247);
+    }
+    50% {
+        background: #4c4c4c;
+		box-shadow: 0px 0px 25px 0 rgb(0, 49, 121);
+    }
+    100% {
+        background: #252525;
+		box-shadow: 0px 0px 1px 0 rgb(226, 234, 247);
+    }
+}
+.yuan_03:hover {
+	background: #898989;
+    -webkit-animation: BianSe_graytoblack1 1s infinite linear;
+}
+
+@-webkit-keyframes BianSe_graytoblack1 {
+    0% {
+		box-shadow: 0px 0px 1px 0 rgb(226, 234, 247);
+    }
+    50% {
+		box-shadow: 0px 0px 25px 0 rgb(0, 49, 121);
+    }
+    100% {
+		box-shadow: 0px 0px 1px 0 rgb(226, 234, 247);
     }
 }
 
@@ -2454,4 +2491,13 @@ html, body {
     background-color: #252525;
 	color: #fff!important;
 	box-shadow:2px 1px 5px rgba(0,0,0,0.5);
+}
+
+.ds_time_go {
+	float: left;
+	width: 100px;
+	margin-top: 2px;
+	font-size: 15px;
+	text-align: center;
+	font-weight: normal;
 }
