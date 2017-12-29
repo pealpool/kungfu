@@ -3141,7 +3141,7 @@ $(document).ready(function () {
             ATmark = 0;
             if (ButtomPinBi === 1 && fig_xix < 1) {
                 $("#StartButtomYuanKuang").removeClass("yuan_02").addClass("yuan_03");
-                $("#StartButtomYuanKuang").html("<div class='ds_time_TD'><span>第</span> <span class='ds_time_TX' id='huiheclass'>1</span> <span>回</span></div><div class='ds_time'><span id='ds_time'>13.7</span> <span class='ds_time_s'>s</span></div><div class='ds_time_go'>继&nbsp;续</div>");
+                $("#StartButtomYuanKuang").html("<div class='ds_time_TD'><span>第</span> <span class='ds_time_TX' id='huiheclass'>" + huihe_i + "</span> <span>回</span></div><div class='ds_time'><span id='ds_time'>" + (DJStime).toFixed(1) + "</span> <span class='ds_time_s'>s</span></div><div class='ds_time_go'>继&nbsp;续</div>");
             }
         } else {
             $("#autoBm0").removeClass("AutoBlack");
