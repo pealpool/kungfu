@@ -5,7 +5,12 @@
     <bookmark url="file://$PROJECT_DIR$/js/buttonScript.js" line="2322" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb5e816f-4d1b-427d-8b73-abc6c84978cd" name="默认的" comment="" />
+    <list default="true" id="bb5e816f-4d1b-427d-8b73-abc6c84978cd" name="默认的" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/.vs/KongFuWeb/v15/.suo" afterPath="$PROJECT_DIR$/.vs/KongFuWeb/v15/.suo" />
+      <change beforePath="$PROJECT_DIR$/KongFuWeb.sln" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/js/buttonScript.js" afterPath="$PROJECT_DIR$/js/buttonScript.js" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -24,8 +29,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19200">
-              <caret line="960" column="64" lean-forward="false" selection-start-line="960" selection-start-column="64" selection-end-line="960" selection-end-column="64" />
+            <state relative-caret-position="494">
+              <caret line="989" column="20" lean-forward="true" selection-start-line="989" selection-start-column="20" selection-end-line="989" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -34,7 +39,7 @@
       <file leaf-file-name="ZhaoShi.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/ZhaoShi.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4460">
+            <state relative-caret-position="4237">
               <caret line="223" column="29" lean-forward="false" selection-start-line="223" selection-start-column="29" selection-end-line="223" selection-end-column="29" />
               <folding />
             </state>
@@ -44,50 +49,31 @@
       <file leaf-file-name="Hp.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Hp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2680">
-              <caret line="135" column="22" lean-forward="false" selection-start-line="135" selection-start-column="22" selection-end-line="135" selection-end-column="22" />
+            <state relative-caret-position="575">
+              <caret line="121" column="8" lean-forward="false" selection-start-line="121" selection-start-column="8" selection-end-line="121" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="buttonScript.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="buttonScript.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69900">
-              <caret line="3455" column="9" lean-forward="false" selection-start-line="3455" selection-start-column="9" selection-end-line="3455" selection-end-column="9" />
+            <state relative-caret-position="309">
+              <caret line="805" column="45" lean-forward="true" selection-start-line="805" selection-start-column="45" selection-end-line="805" selection-end-column="45" />
               <folding>
-                <marker date="1514473414363" expanded="true" signature="97113:97119" ph=" " />
+                <marker date="1515502084658" expanded="true" signature="97665:97671" ph=" " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyffOnload.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyffOnload.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/MyffOnload.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="3143" column="68" lean-forward="true" selection-start-line="3143" selection-start-column="68" selection-end-line="3143" selection-end-column="68" />
-              <folding>
-                <marker date="1514517586491" expanded="true" signature="1778:1795" ph="..." />
-                <marker date="1514517586491" expanded="true" signature="4317:4365" ph="..." />
-                <marker date="1514517586491" expanded="true" signature="4489:4500" ph="..." />
-                <marker date="1514517586491" expanded="true" signature="5194:5242" ph="..." />
-                <marker date="1514517586491" expanded="true" signature="5367:5384" ph="..." />
-                <marker date="1514517586491" expanded="true" signature="7599:7647" ph="..." />
-                <marker date="1514517586491" expanded="true" signature="9227:9244" ph="..." />
-                <marker date="1514517586491" expanded="true" signature="11770:11818" ph="..." />
-                <marker date="1514517586491" expanded="true" signature="11944:11955" ph="..." />
-                <marker date="1514517586491" expanded="true" signature="12651:12699" ph="..." />
-                <marker date="1514517586491" expanded="true" signature="12826:12843" ph="..." />
-                <marker date="1514517586491" expanded="true" signature="15060:15108" ph="..." />
-                <marker date="1514517586491" expanded="true" signature="89675:89681" ph=" " />
-                <marker date="1514517586491" expanded="true" signature="89702:89708" ph=" " />
-                <marker date="1514517586491" expanded="true" signature="89720:89726" ph=" " />
-                <marker date="1514517586491" expanded="true" signature="89726:89732" ph=" " />
-                <marker date="1514517586491" expanded="true" signature="90701:90707" ph=" " />
-                <marker date="1514517586491" expanded="true" signature="167495:167501" ph=" " />
-              </folding>
+            <state relative-caret-position="59717">
+              <caret line="3143" column="68" lean-forward="false" selection-start-line="3143" selection-start-column="68" selection-end-line="3143" selection-end-column="68" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,7 +81,7 @@
       <file leaf-file-name="base.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/base.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40580">
+            <state relative-caret-position="38551">
               <caret line="2029" column="6" lean-forward="false" selection-start-line="2029" selection-start-column="6" selection-end-line="2029" selection-end-column="6" />
               <folding />
             </state>
@@ -184,8 +170,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/js/MyffOnload.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/js/buttonScript.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/js/Hp.js" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/js/buttonScript.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -206,8 +192,8 @@
         <option value="$PROJECT_DIR$/css/base.css" />
         <option value="$PROJECT_DIR$/js/perfect-scrollbar.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/buttonScript.js" />
         <option value="$PROJECT_DIR$/js/MyffOnload.js" />
+        <option value="$PROJECT_DIR$/js/buttonScript.js" />
       </list>
     </option>
   </component>
@@ -283,7 +269,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -305,13 +291,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
@@ -527,11 +513,14 @@
       <workItem from="1514269381793" duration="8906000" />
       <workItem from="1514467411744" duration="8991000" />
       <workItem from="1514516057829" duration="1617000" />
+      <workItem from="1514957716889" duration="77000" />
+      <workItem from="1515394472956" duration="4000" />
+      <workItem from="1515500870545" duration="2127000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="405515000" />
+    <option name="totallyTimeSpent" value="407723000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -546,8 +535,8 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10432034" sideWeight="0.50858366" order="2" side_tool="true" content_ui="combo" x="206" y="72" width="474" height="932" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2131324" sideWeight="0.49578503" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.104166664" sideWeight="0.50858366" order="2" side_tool="true" content_ui="combo" x="206" y="72" width="474" height="932" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21323529" sideWeight="0.49578503" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2131324" sideWeight="0.50421494" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938644" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -826,7 +815,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/ZhaoShi.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4460">
+        <state relative-caret-position="4237">
           <caret line="223" column="29" lean-forward="false" selection-start-line="223" selection-start-column="29" selection-end-line="223" selection-end-column="29" />
           <folding />
         </state>
@@ -834,7 +823,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40580">
+        <state relative-caret-position="38551">
           <caret line="2029" column="6" lean-forward="false" selection-start-line="2029" selection-start-column="6" selection-end-line="2029" selection-end-column="6" />
           <folding />
         </state>
@@ -855,22 +844,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Hp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2680">
-          <caret line="135" column="22" lean-forward="false" selection-start-line="135" selection-start-column="22" selection-end-line="135" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19200">
-          <caret line="960" column="64" lean-forward="false" selection-start-line="960" selection-start-column="64" selection-end-line="960" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
@@ -885,16 +858,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69900">
-          <caret line="3455" column="9" lean-forward="false" selection-start-line="3455" selection-start-column="9" selection-end-line="3455" selection-end-column="9" />
-          <folding>
-            <marker date="1514473414363" expanded="true" signature="97113:97119" ph=" " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/pace.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -904,27 +867,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/MyffOnload.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="3143" column="68" lean-forward="true" selection-start-line="3143" selection-start-column="68" selection-end-line="3143" selection-end-column="68" />
+        <state relative-caret-position="59717">
+          <caret line="3143" column="68" lean-forward="false" selection-start-line="3143" selection-start-column="68" selection-end-line="3143" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="989" column="20" lean-forward="true" selection-start-line="989" selection-start-column="20" selection-end-line="989" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Hp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="121" column="8" lean-forward="false" selection-start-line="121" selection-start-column="8" selection-end-line="121" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/buttonScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="805" column="45" lean-forward="true" selection-start-line="805" selection-start-column="45" selection-end-line="805" selection-end-column="45" />
           <folding>
-            <marker date="1514517586491" expanded="true" signature="1778:1795" ph="..." />
-            <marker date="1514517586491" expanded="true" signature="4317:4365" ph="..." />
-            <marker date="1514517586491" expanded="true" signature="4489:4500" ph="..." />
-            <marker date="1514517586491" expanded="true" signature="5194:5242" ph="..." />
-            <marker date="1514517586491" expanded="true" signature="5367:5384" ph="..." />
-            <marker date="1514517586491" expanded="true" signature="7599:7647" ph="..." />
-            <marker date="1514517586491" expanded="true" signature="9227:9244" ph="..." />
-            <marker date="1514517586491" expanded="true" signature="11770:11818" ph="..." />
-            <marker date="1514517586491" expanded="true" signature="11944:11955" ph="..." />
-            <marker date="1514517586491" expanded="true" signature="12651:12699" ph="..." />
-            <marker date="1514517586491" expanded="true" signature="12826:12843" ph="..." />
-            <marker date="1514517586491" expanded="true" signature="15060:15108" ph="..." />
-            <marker date="1514517586491" expanded="true" signature="89675:89681" ph=" " />
-            <marker date="1514517586491" expanded="true" signature="89702:89708" ph=" " />
-            <marker date="1514517586491" expanded="true" signature="89720:89726" ph=" " />
-            <marker date="1514517586491" expanded="true" signature="89726:89732" ph=" " />
-            <marker date="1514517586491" expanded="true" signature="90701:90707" ph=" " />
-            <marker date="1514517586491" expanded="true" signature="167495:167501" ph=" " />
+            <marker date="1515502084658" expanded="true" signature="97665:97671" ph=" " />
           </folding>
         </state>
       </provider>

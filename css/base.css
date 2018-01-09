@@ -2505,3 +2505,11 @@ html, body {
 	text-align: center;
 	font-weight: normal;
 }
+
+.DEVnob {
+	font-size: 12px;
+	color:#a5a5a5;
+	float: right;
+	margin-top: 10px;
+	margin-right: 5px;
+}
