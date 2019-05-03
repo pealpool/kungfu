@@ -5,9 +5,7 @@
     <bookmark url="file://$PROJECT_DIR$/js/buttonScript.js" line="2322" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb5e816f-4d1b-427d-8b73-abc6c84978cd" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/dayu/dayu.css" beforeDir="false" afterPath="$PROJECT_DIR$/dayu/dayu.css" afterDir="false" />
-    </list>
+    <list default="true" id="bb5e816f-4d1b-427d-8b73-abc6c84978cd" name="默认的" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -40,8 +38,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/dayu/dayu.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+                <state relative-caret-position="204">
+                  <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -168,7 +166,7 @@
     <other-services-enabled>false</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="4" />
     <option name="width" value="1936" />
     <option name="height" value="1066" />
@@ -399,12 +397,12 @@
       <workItem from="1542204881318" duration="408000" />
       <workItem from="1542205529315" duration="938000" />
       <workItem from="1556446560055" duration="21552000" />
-      <workItem from="1556468618465" duration="117000" />
+      <workItem from="1556468618465" duration="407000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="434106000" />
+    <option name="totallyTimeSpent" value="434396000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -648,8 +646,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dayu/dayu.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        <state relative-caret-position="204">
+          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
         </state>
       </provider>
     </entry>
