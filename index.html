@@ -2,54 +2,29 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>DAYULINK 何 2019.4.28</title>
-    <script src="./js/jquery-3.2.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="dayu/dayu.css">
+    <title>HHF集</title>
+    <script src="./js/vue.js"></script>
+<!--    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+    <script src="./js/myindexVue.js"></script>
 </head>
 <body>
-	<div class="bkground00">
-        <div class="bkground_l">
-            <div class="logobig0">
-                <div class="logobig1"></div>
-                <div class="logobig2"></div>
-                <div class="logobig3"></div>
-            </div>
-            <div class="kuang0">
-                <div class="kuang1"></div>
-                <div class="kuang2"></div>
-                <div class="kuang3"></div>
-                <div class="kuang4" onclick="alert('make by 何宏丰 13516626464')"></div>
-            </div>
-            <div class="fontbig"></div>
-        </div>
-        <div class="wrapper">
-            <div>
-                <div>
-                    <p class="fontcn fcn1"></p>
-                    <p class="fontus fus1"></p>
-                    <p class="lan la1"></p>
-                    <div class="content pic1"></div>
-                </div>
-                <div>
-                    <p class="fontcn fcn2"></p>
-                    <p class="fontus fus2"></p>
-                    <p class="lan la2"></p>
-                    <div class="content pic2"></div>
-                </div>
-                <div>
-                    <p class="fontcn fcn3"></p>
-                    <p class="fontus fus3"></p>
-                    <p class="lan la3"></p>
-                    <div class="content pic3"></div>
-                </div>
-                <div>
-                    <p class="fontcn fcn4"></p>
-                    <p class="fontus fus4"></p>
-                    <p class="lan la4"></p>
-                    <div class="content pic4"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+<p><a href="dayu.html">dayu</a></p>
+<p><a href="kongfu.html">Kongfu</a></p>
+<p><a href="wx.html">wx</a></p>
+<div id="app-7">
+    <ol>
+        <!--
+          现在我们为每个 todo-item 提供 todo 对象
+          todo 对象是变量，即其内容可以是动态的。
+          我们也需要为每个组件提供一个“key”，稍后再
+          作详细解释。
+        -->
+        <todo-item
+                v-for="item in groceryList"
+                v-bind:todo="item"
+                v-bind:key="item.id"
+        ></todo-item>
+    </ol>
+</div>
 </body>
 </html>
