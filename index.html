@@ -3,28 +3,29 @@
 <head>
     <meta charset="utf-8">
     <title>HHF集</title>
-    <script src="./js/vue.js"></script>
-<!--    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
-    <script src="./js/myindexVue.js"></script>
+<!--    <link type="text/css" href="css/css-pc.css" rel="stylesheet"/>-->
+    <script type="text/javascript">
+        var setStyle = function(cssArr){
+            var len = cssArr.length;
+            for(let i=0;i<len;i++){
+                document.write('<link href="'+cssArr[i]+'" type="text/css" rel=stylesheet>');
+            }
+        };
+        var is_mobi = navigator.userAgent.toLowerCase().match(/(ipod|ipad|iphone|android|coolpad|mmp|smartphone|midp|wap|xoom|symbian|j2me|blackberry|wince)/i) != null;
+        if (is_mobi) {
+            setStyle(['css/css-mobile.css']);
+        }else{
+            setStyle(['css/css-pc.css']);
+        }
+    </script>
 </head>
 <body>
-<p><a href="dayu.html">dayu</a></p>
-<p><a href="kongfu.html">Kongfu</a></p>
-<p><a href="wx.html">wx</a></p>
-<div id="app-7">
-    <ol>
-        <!--
-          现在我们为每个 todo-item 提供 todo 对象
-          todo 对象是变量，即其内容可以是动态的。
-          我们也需要为每个组件提供一个“key”，稍后再
-          作详细解释。
-        -->
-        <todo-item
-                v-for="item in groceryList"
-                v-bind:todo="item"
-                v-bind:key="item.id"
-        ></todo-item>
-    </ol>
+<div class="bigdvk">
+    <div><a href="dayu.html">dayu</a></div>
+    <div><a href="kongfu.html">Kongfu</a></div>
+    <div><a href="wx.html">wx</a></div>
 </div>
+
+
 </body>
 </html>
