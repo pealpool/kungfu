@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb5e816f-4d1b-427d-8b73-abc6c84978cd" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/css/css-mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/css-pc.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/css-pc.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/css-pc.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/myindexVue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/vue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kongfu.html" beforeDir="false" afterPath="$PROJECT_DIR$/kongfu.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,72 +22,6 @@
         <option value="HTML File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>，&quot;+BchoiceZS[HadChoice_Bb].zs_to);</find>
-      <find>HadChoice_Aa</find>
-      <find>，&quot;+AchoiceZS[HadChoice_Aa].zs_to);</find>
-      <find>deadA</find>
-      <find>HPemptyA</find>
-      <find>deadB</find>
-      <find>&quot;平衡: &lt;</find>
-      <find>&quot;稳定: &lt;</find>
-      <find>redButtom</find>
-      <find>zy_buttomL</find>
-      <find>zy_buttomR</find>
-      <find>zOl</find>
-      <find>zOr</find>
-      <find>autoSpeed</find>
-      <find>zy_buttom handarrow</find>
-      <find>zy_buttom</find>
-      <find>handarrow</find>
-      <find>快速</find>
-      <find>DJStime</find>
-      <find>BianSe_red</find>
-      <find>glowblue</find>
-      <find>yuan_02</find>
-      <find>#StartButtomYuanKuang</find>
-      <find>yuan_01</find>
-      <find>$(&quot;#StartButtomYuanKuang&quot;).html(</find>
-      <find>fig_xix</find>
-      <find>lock</find>
-      <find>backButtomX</find>
-      <find>box-shadow</find>
-      <find>.p2</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>&quot;之前先手</replace>
-      <replace>(mynameOutA+&quot;</replace>
-      <replace>mynameOutB+&quot;</replace>
-      <replace>&quot;</replace>
-      <replace>+</replace>
-      <replace>r</replace>
-      <replace>&quot;+mynameOutB+&quot;的&quot;</replace>
-      <replace>&quot;+mynameOutA+&quot;的&quot;</replace>
-      <replace>hgouquan</replace>
-      <replace>l</replace>
-      <replace>&quot;平衡:&lt;span class=</replace>
-      <replace>= &quot; + Math.round(HpA.pinheng)</replace>
-      <replace>= &quot; + Math.round(HpB.pinheng)</replace>
-      <replace>防御率：</replace>
-      <replace>bluebord</replace>
-      <replace>SCd_kuanD</replace>
-      <replace>A</replace>
-      <replace>String(BchoiceZS[HadChoice_Bb].zs_torl)</replace>
-      <replace>，&quot;+BchoiceZS[HadChoice_Bb].zs_torl);</replace>
-      <replace>，&quot;+AchoiceZS[HadChoice_Aa].zs_torl);</replace>
-      <replace>HPemptyA</replace>
-      <replace>HPemptyB</replace>
-      <replace>&quot;稳定:&lt;</replace>
-      <replace>backButtom</replace>
-      <replace>zy_buttomX zOl</replace>
-      <replace>zy_buttomX zOr</replace>
-      <replace>bOl</replace>
-      <replace>bOr</replace>
-      <replace>BianSe_gray</replace>
-      <replace>.lan</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -154,7 +84,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -321,6 +251,7 @@
       <workItem from="1556468618465" duration="407000" />
       <workItem from="1564627315869" duration="3070000" />
       <workItem from="1571139302032" duration="7295000" />
+      <workItem from="1571188254551" duration="4946000" />
     </task>
     <servers />
   </component>

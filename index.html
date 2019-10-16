@@ -3,29 +3,30 @@
 <head>
     <meta charset="utf-8">
     <title>HHF集</title>
-<!--    <link type="text/css" href="css/css-pc.css" rel="stylesheet"/>-->
+    <!--    <link type="text/css" href="css/css-pc.css" rel="stylesheet"/>-->
     <script type="text/javascript">
-        var setStyle = function(cssArr){
+        var setStyle = function (cssArr) {
             var len = cssArr.length;
-            for(let i=0;i<len;i++){
-                document.write('<link href="'+cssArr[i]+'" type="text/css" rel=stylesheet>');
+            for (let i = 0; i < len; i++) {
+                document.write('<link href="' + cssArr[i] + '" type="text/css" rel=stylesheet>');
             }
         };
         var is_mobi = navigator.userAgent.toLowerCase().match(/(ipod|ipad|iphone|android|coolpad|mmp|smartphone|midp|wap|xoom|symbian|j2me|blackberry|wince)/i) != null;
         if (is_mobi) {
             setStyle(['css/css-mobile.css']);
-        }else{
+        } else {
             setStyle(['css/css-pc.css']);
         }
     </script>
 </head>
 <body>
-<div class="bigdvk">
-    <div><a href="dayu.html">dayu</a></div>
-    <div><a href="kongfu.html">Kongfu</a></div>
-    <div><a href="wx.html">wx</a></div>
+<div class="bigdvk-out">
+    <div class="bigdvk-in">
+        <div class="dv"><a href="dayu.html">dayu</a></div>
+        <div class="dv"><a href="kongfu.html">Kongfu</a></div>
+        <div class="dv"><a href="wx.html">wx</a></div>
+    </div>
 </div>
-
 
 </body>
 </html>
