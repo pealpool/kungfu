@@ -16,15 +16,39 @@
             setStyle(['css/css-mobile.css']);
         } else {
             setStyle(['css/css-pc.css']);
+            // setStyle(['css/css-mobile.css']);
         }
     </script>
+    <style>
+        .bigdvk-out{
+            /*background: #adadad;*/
+            position: fixed;
+            left: 50%;
+            top: 50%;
+        }
+        .bigdvk-in{
+            display: flex;
+        }
+        .dv{
+            min-height: 100px;
+            background: #a7a7a7;
+            text-align: center;
+            font-size: 30px;
+            line-height: 100px;
+            box-shadow:inset 1px 1px 12px 0px rgba(0,0,0,0.2);
+        }
+        .bigdvk-in a{
+            text-decoration-line: none;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
 <div class="bigdvk-out">
     <div class="bigdvk-in">
-        <div class="dv"><a href="dayu.html">dayu</a></div>
-        <div class="dv"><a href="kongfu.html">Kongfu</a></div>
-        <div class="dv"><a href="wx.html">wx</a></div>
+        <a href="dayu.html"><div class="dv">DAYU</div></a>
+        <a href="kongfu.html"><div class="dv">Kongfu</div></a>
+        <a href="wx.html"><div class="dv">WX</div></a>
     </div>
 </div>
 

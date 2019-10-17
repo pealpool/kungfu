@@ -1,0 +1,17 @@
+.bigdvk-out{
+    width: 300px;
+    transform:translate(-50%,-80%);
+}
+.bigdvk-in{
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.dv{
+    min-width: 300px;
+    transition: all cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.3s;
+    margin-top: 20px;
+}
+.dv:hover{
+    background: #b7b7b7;
+    box-shadow:inset 4px 5px 12px 0px rgba(0,0,0,0.2);
+}

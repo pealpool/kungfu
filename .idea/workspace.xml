@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bb5e816f-4d1b-427d-8b73-abc6c84978cd" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/css-mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/css-mobile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/css-pc.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/css-pc.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -252,6 +253,7 @@
       <workItem from="1564627315869" duration="3070000" />
       <workItem from="1571139302032" duration="7295000" />
       <workItem from="1571188254551" duration="4946000" />
+      <workItem from="1571225346403" duration="6076000" />
     </task>
     <servers />
   </component>

@@ -1,21 +1,15 @@
 .bigdvk-out{
     width: 600px;
-    background: #adadad;
-    margin: auto;
-    position: relative;
-    top: 30%;
-    transform: translateY(-50%);
+    transform:translate(-50%,-150%);
 }
 .bigdvk-in{
-    position: absolute;
-    top: 50%;
-    display: flex;
+    justify-content: space-evenly;
 }
 .dv{
-    min-width: 100px;
-    min-height: 30px;
-    background: #ccc;
+    min-width: 160px;
+    transition: all cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.3s;
 }
 .dv:hover{
-    background: #ddd;
+    background: #b7b7b7;
+    box-shadow:inset 4px 5px 12px 0px rgba(0,0,0,0.2);
 }
