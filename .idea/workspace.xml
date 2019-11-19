@@ -2,127 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb5e816f-4d1b-427d-8b73-abc6c84978cd" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Greeter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/KongFuWeb/v15/.suo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/StartPage - 副本.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/StartPage.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/UI.xmind" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/body.ai" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/dw.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/eg/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/eg/96817349.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/eg/WallPaper Engine壁纸下载大全_WallPaper Engine动态壁纸_游迅网.url" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/eg/Web Operations - Nodejitsu Inc-.url" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/eg/body-graphic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/eg/can-stock-photo_csp4234227.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/eg/rrr.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/eg/snipaste20170518_111911.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/eg/snipaste20170518_111927.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/eg/snipaste20170518_112527.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/eg/stock-vector-medical-human-organs-icon-set-with-human-body-and-world-map-info-graphic-204985114.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/image/babagr.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/image/body-all-a - 副本 (2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/image/body-all-a - 副本.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/image/body-all-a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/image/body-all-b - 副本.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/image/body-all-b - 副本.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/image/body-all-b.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/image/body-all-b00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/image/body-all-b01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/image/body-all-b02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/image/body-all-b03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/image/body-all-b04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/image/cPBTaiji.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/image/cPBTaiquan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/image/choiceZhaoshishiXiaoKuang_QIdai.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/image/choiceZhaoshishiXiaoKuang_Taiji.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/image/choiceZhaoshishiXiaoKuang_Taiquan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/image/rightarrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Img/配色.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/_notes/base.css.mno" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/css-mobile.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/css-pc.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/jquery-confirm.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/jquery-ui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/loading.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/perfect-scrollbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/test.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/dayu.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/backg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/fcn1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/fcn2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/fcn3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/fcn4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/fontbig.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/fus1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/fus2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/fus3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/fus4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/kuang1 - 副本.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/kuang1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/kuang11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/kuang2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/kuang3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/kuang4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/lan.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/logobig1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/logobig2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/logobig3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/nei1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/nei2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/nei3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayu/img/nei4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/Hp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/MyffOnload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/PB_All.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/PB_Taiji.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/PB_Taiquan.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/ShuX.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/ZhaoShi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/buttonScript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jqcool.net-perfect-scrollbar-0.4.10.rar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-3.2.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-confirm-v3.0.3.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-confirm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-ui-1.12.1/AUTHORS.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-ui-1.12.1/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-ui-1.12.1/external/jquery/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-ui-1.12.1/images/ui-icons_444444_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-ui-1.12.1/images/ui-icons_555555_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-ui-1.12.1/images/ui-icons_777620_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-ui-1.12.1/images/ui-icons_777777_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-ui-1.12.1/images/ui-icons_cc0000_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-ui-1.12.1/images/ui-icons_ffffff_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-ui-1.12.1/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-ui-1.12.1/jquery-ui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-ui-1.12.1/jquery-ui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-ui-1.12.1/jquery-ui.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-ui-1.12.1/jquery-ui.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-ui-1.12.1/jquery-ui.structure.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-ui-1.12.1/jquery-ui.structure.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-ui-1.12.1/jquery-ui.theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-ui-1.12.1/jquery-ui.theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-ui-1.12.1/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-ui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery.mousewheel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/other_Lei.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/pace-0.5.6.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/pace.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/perfect-scrollbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kongfu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/hswith.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/lightSwith.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/mu.url" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/soundswitch.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/soundswitchlight.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plan/Central Topic.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/plan/Central Topic.xmind" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plan/版面设计.xd" beforeDir="false" afterPath="$PROJECT_DIR$/plan/版面设计.xd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test - 副本.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wx.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -136,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -190,14 +74,22 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\GitHub\pealpool.github.io\app" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -368,6 +260,8 @@
       <workItem from="1571225346403" duration="6076000" />
       <workItem from="1574047063096" duration="418000" />
       <workItem from="1574070706819" duration="438000" />
+      <workItem from="1574128512701" duration="29000" />
+      <workItem from="1574128599928" duration="5272000" />
     </task>
     <servers />
   </component>
