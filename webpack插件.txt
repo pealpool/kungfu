@@ -1,0 +1,5 @@
+MiniCssExtractPlugin	将所有css合并
+sass-loader	
+babel-loader	将ES6的js转成ES5，让低版本浏览器也能运行
+HtmlWebpackPlugin	将打包的css、js更新入html里，https://www.bilibili.com/video/av75380104?p=9
+DevServer	代码更新后，自动编译，浏览器马上能变
