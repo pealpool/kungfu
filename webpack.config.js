@@ -1,14 +1,16 @@
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const htmlPlguin = new HtmlWebpackPlugin({
+    template:'./src/index.html',
+    filename:'index.html'
+})
 
-const path = require("path");
 module.exports = {
-    entry: {
-        index: "./index.js" ,
-        other: "./other.js" //
-        //入口文件，若不配置webpack4将自动查找src目录下的index.js文件
-    },
+    mode: 'development', // development 或 production
+    entry: path.join(__dirname,'./src/index.js'),
     output: {
-        filename: "[name].bundle.js",//输出文件名，[name]表示入口文件js名
-        path: path.join(__dirname, "dist")//输出文件路径
+        path: path.join(__dirname,'./dist'),
+        filename: 'bundle.js'
     },
-    mode: "development"
+    plugins: [htmlPlguin]
 };

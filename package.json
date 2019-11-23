@@ -1,0 +1,30 @@
+{
+  "name": "pealpool.github.io",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "dependencies": {
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pealpool/pealpool.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pealpool/pealpool.github.io/issues"
+  },
+  "homepage": "https://github.com/pealpool/pealpool.github.io#readme",
+  "description": ""
+}
