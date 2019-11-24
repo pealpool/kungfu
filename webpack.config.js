@@ -6,7 +6,7 @@ const htmlPlugin = new HtmlWebpackPlugin({
 })
 
 module.exports = {
-    mode: 'development', // development 或 production
+    mode: 'production', // development 或 production
     entry: path.join(__dirname,'./src/index.js'),
     output: {
         path: path.join(__dirname,'./dist'),
@@ -17,7 +17,7 @@ module.exports = {
         rules:[
             // { test: /\.css$/, use: ['style-loader','css-loader','postcss-loader'] },
             // { test: /\.scss$/, use: ['style-loader','css-loader','sass-loader'] }
-            {test: /\.css|scss$/,
+            {test: /\.scss$/,
                 use: [
                     'style-loader',
                     {loader: 'css-loader',options: {importLoaders: 2}},  //2代表css-loader后还需要几个loader
