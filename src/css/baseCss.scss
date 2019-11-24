@@ -1,7 +1,83 @@
-$nav-color: #F90;
-#asd {
-  $width: 50px;
-  width: $width;
-  height: $width;
-  background-color: $nav-color;
+$backgroundBase-color: #F2EFE9;//body色
+$grayKuang-color: #ECECEC;//灰框底色
+$grayKuang-borderLine-color:#E1E1E1;//灰框边框色
+$darkBase-color: #1A1E26;//深蓝色
+$lightGray-color: #8C8C8C;
+
+$baseKuang-height: 640px;//登录框高度
+$baseKuang-width: 490px;
+$baseKuangLeft-width: 9px;//登录框左边黑线宽
+$myTransition:all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+@mixin base-kuang($kborderLine-color) {
+  border: 1px solid $kborderLine-color;
+}
+
+body{
+  background-color: $backgroundBase-color;
+  display: flex;
+  justify-content:center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family:Microsoft YaHei;
+}
+.smallBaseKuang{
+  width: $baseKuang-width;
+  height: $baseKuang-height;
+  margin-top: 150px;
+  box-shadow: 1px 3px 6px 0 rgba(0,0,0,.05);
+  transition: $myTransition;
+  &:hover{
+    box-shadow: none;
+  }
+}
+.grayKuang{
+  background-color: $grayKuang-color;
+  @include base-kuang($grayKuang-borderLine-color);
+}
+.leftLine{
+  float: left;
+  background-color: $darkBase-color;
+  height: $baseKuang-height + 2px;
+  width: $baseKuangLeft-width;
+  //box-sizing: border-box;
+  margin-top: -1px;
+}
+.rightContent{
+  float: left;
+  height: $baseKuang-height;
+  width: $baseKuang-width - $baseKuangLeft-width;
+}
+.logoBox{
+  float: left;
+  box-shadow: 0px 3px 6px 0 rgba(0,0,0,.2);
+  background-color: $baseKuang-height;
+  border: 5px solid $darkBase-color;
+  border-radius: 3px;
+  $thisWidth: 98px;
+  width: $thisWidth;
+  height: $thisWidth;
+  margin-top: 111px;
+  margin-left: 185px;
+}
+.logoFont{
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 4px;
+  letter-spacing: 4px;
+  text-align: center;
+  margin-top: -16px;
+  margin-left: 6px;
+}
+#myVerID{
+  float: left;
+  color: $lightGray-color;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+  width: $baseKuang-width - $baseKuangLeft-width;
+  height: 71px;
+  //background-color: #1A1E26;
 }
