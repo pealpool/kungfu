@@ -17,7 +17,7 @@ module.exports = {
         rules:[
             // { test: /\.css$/, use: ['style-loader','css-loader','postcss-loader'] },
             // { test: /\.scss$/, use: ['style-loader','css-loader','sass-loader'] }
-            {test: /\.scss$/,
+            {test: /\.css|.scss$/,
                 use: [
                     'style-loader',
                     {loader: 'css-loader',options: {importLoaders: 2}},  //2代表css-loader后还需要几个loader
@@ -33,5 +33,5 @@ module.exports = {
                 test: /\.js$/, use: 'babel-loader', exclude: /node_modules/
             }
         ]
-    }
+    },
 };

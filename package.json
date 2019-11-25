@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "dependencies": {
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "webpack-jquery-ui": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",

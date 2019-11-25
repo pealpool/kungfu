@@ -59,25 +59,33 @@ body{
 }
 .rightContent{
   float: left;
+  position: relative;
   height: $baseKuang-height;
   width: $baseKuang-width - $baseKuangLeft-width;
 }
 .logoBox{
   float: left;
+  position: absolute;
   background-color: $grayKuang-color;
   border: 5px solid $darkBase-color;
   border-radius: 3px;
   $thisWidth: 98px;
   width: $thisWidth;
   height: $thisWidth;
-  margin-top: 111px;
-  margin-left: 185px;
-  animation: logoBloou 5s cubic-bezier(0.6, -0.28, 0.74, 0.05) infinite;
 }
 @keyframes logoBloou {
   from{ box-shadow: 0px 0px 0px 0 rgba(0,0,0,.0); }
   10%{ box-shadow: 0px 0px 6px 0 rgba(0,0,0,.5); }
   to{ box-shadow: 0px 0px 506px 0 rgba(0,0,0,.0); }
+}
+.logoPosition01{
+  top: 111px;
+  left: 185px;
+  animation: logoBloou 5s cubic-bezier(0.6, -0.28, 0.74, 0.05) infinite;
+}
+.logoPosition02{
+  top: -55px;
+  left: 37px;
 }
 .logoFont{
   font-size: 40px;
@@ -92,11 +100,10 @@ body{
   float: left;
   color: $lightGray-color;
   font-size: 12px;
-  line-height: 30px;
   text-align: center;
   width: $baseKuang-width - $baseKuangLeft-width;
   height: 71px;
-  //background-color: #1A1E26;
+  margin-top: 230px;
 }
 .loginBigBox{
   float: left;
@@ -148,8 +155,7 @@ body{
 }
 .loginNext{
   float: left;
-  margin-top: 140px;
-  margin-left: 360px;
+  position: absolute;
   width: 100px;
   font-weight: bold;
   cursor: pointer;
@@ -164,4 +170,12 @@ body{
   &:hover{
     @include hoverBright(2);
   }
+}
+.next_01{
+  top: 570px;
+  left: 360px;
+}
+.next_02{
+  top: 19px;
+  left: 360px;
 }
