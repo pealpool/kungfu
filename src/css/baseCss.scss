@@ -13,6 +13,9 @@ $myTransition:all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 @mixin base-kuang($kborderLine-color) {
   border: 1px solid $kborderLine-color;
 }
+@mixin hoverBright($i){
+  filter: brightness($i);
+}
 
 body{
   background-color: $backgroundBase-color;
@@ -119,7 +122,7 @@ body{
     color: #9CA9C2;
     text-decoration: none;
     &:hover{
-      color: #babfc7;
+      @include hoverBright(1.1);
     }
   }
 }
@@ -139,13 +142,26 @@ body{
     float: left;
     margin-right: 14px;
     &:hover{
-      color: $blackFontHover-color;
+      @include hoverBright(2);
     }
   }
 }
-.imgNext{
-  $tihsWidth:34px;
-  width: $tihsWidth;
-  height: $tihsWidth;
-  background: url("../images/goButton.png");
+.loginNext{
+  float: left;
+  margin-top: 140px;
+  margin-left: 360px;
+  width: 100px;
+  font-weight: bold;
+  cursor: pointer;
+  img{
+    float: left;
+  }
+  span{
+    float: left;
+    margin-top: 16px;
+    margin-left: 8px;
+  }
+  &:hover{
+    @include hoverBright(2);
+  }
 }
