@@ -7,6 +7,9 @@ $blackFontHover-color: #5f5f5f;
 
 $baseKuang-height: 640px;//登录框高度
 $baseKuang-width: 490px;
+$fileBoxSize: 122px;
+
+
 $baseKuangLeft-width: 9px;//登录框左边黑线宽
 $myTransition:all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 
@@ -86,6 +89,7 @@ body{
 .logoPosition02{
   top: -55px;
   left: 37px;
+  box-shadow: 0px 3px 6px 0 rgba(0,0,0,.2);
 }
 .logoFont{
   font-size: 40px;
@@ -157,6 +161,7 @@ body{
   float: left;
   position: absolute;
   width: 100px;
+  left: 353px;
   font-weight: bold;
   cursor: pointer;
   img{
@@ -173,9 +178,37 @@ body{
 }
 .next_01{
   top: 570px;
-  left: 360px;
 }
 .next_02{
   top: 19px;
-  left: 360px;
 }
+#loginInTopMu{
+  float: left;
+  margin-top: 35px;
+  margin-left: 175px;
+  width: 300px;
+  span{
+    margin-right: 5px;
+  }
+}
+#loadFileBigBox{
+  float: left;
+  margin-top: 16px;
+  margin-left: 37px;
+  width: 398px;
+  height: 536px;
+  //background: #9CA9C2;
+}
+#loadFileBackground{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.littleFileBoxBGround{
+  @include base-kuang($grayKuang-borderLine-color);
+  width: $fileBoxSize;
+  height: $fileBoxSize;
+  margin-bottom: 16px;
+}
+//todo http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool
+//https://www.jianshu.com/p/4b14a7a1c6cc
