@@ -8,7 +8,10 @@ $blackFontHover-color: #5f5f5f;
 $baseKuang-height: 640px;//登录框高度
 $baseKuang-width: 490px;
 $fileBoxSize: 122px;
-
+@mixin fileBigBoxSize{
+  width: 414px;
+  height: 536px;
+}
 
 $baseKuangLeft-width: 9px;//登录框左边黑线宽
 $myTransition:all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -192,23 +195,40 @@ body{
   }
 }
 #loadFileBigBox{
+  position: relative;
   float: left;
   margin-top: 16px;
   margin-left: 37px;
-  width: 398px;
-  height: 536px;
+  @include fileBigBoxSize;
   //background: #9CA9C2;
 }
-#loadFileBackground{
+.loFiGd{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  align-content: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  @include fileBigBoxSize;
 }
-.littleFileBoxBGround{
-  @include base-kuang($grayKuang-borderLine-color);
+.loFiGd_B{
+  z-index: 1;
+}
+.loFiGd_F{
+  z-index: 2;
+}
+.liFiBoxBGd{
+  @include base-kuang(#D9D9D9);
+}
+.liFiFGd{
+  background-color: #ffffff;
+  &:hover{
+    box-shadow: 0px 3px 6px 0 rgba(0,0,0,.1);
+  }
+}
+.liFiBox_size{
   width: $fileBoxSize;
   height: $fileBoxSize;
+  box-sizing: border-box;
   margin-bottom: 16px;
+  margin-right: 16px;
 }
-//todo http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool
-//https://www.jianshu.com/p/4b14a7a1c6cc
