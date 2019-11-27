@@ -223,6 +223,7 @@ body{
   @include base-kuang(#D9D9D9);
 }
 .liFiBox_S{
+  display: none;
   background-color: #ffffff;
   cursor: pointer;
   &:hover{
@@ -235,6 +236,7 @@ body{
   line-height: $fileBoxSize - 2px;
   text-align: center;
   cursor: pointer;
+  display: none;
 }
 .liFiBox_A{
   @include liFiBox_AR;
