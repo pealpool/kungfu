@@ -34,6 +34,7 @@ body{
   font-family:Microsoft YaHei;
   font-size: 14px;
   color:$darkBase-color;
+  user-select: none;
 }
 .smallBaseKuang{
   width: $baseKuang-width;
@@ -186,6 +187,7 @@ body{
   top: 19px;
 }
 #loginInTopMu{
+  display: none;
   float: left;
   margin-top: 35px;
   margin-left: 175px;
@@ -195,6 +197,7 @@ body{
   }
 }
 #loadFileBigBox{
+  display: none;
   position: relative;
   float: left;
   margin-top: 16px;
@@ -216,14 +219,33 @@ body{
 .loFiGd_F{
   z-index: 2;
 }
-.liFiBoxBGd{
+.liFiBox_B{
   @include base-kuang(#D9D9D9);
 }
-.liFiFGd{
+.liFiBox_S{
   background-color: #ffffff;
+  cursor: pointer;
   &:hover{
     box-shadow: 0px 3px 6px 0 rgba(0,0,0,.1);
   }
+}
+
+@mixin liFiBox_AR {
+  font-size: 70px;
+  line-height: $fileBoxSize - 2px;
+  text-align: center;
+  cursor: pointer;
+}
+.liFiBox_A{
+  @include liFiBox_AR;
+  color: #ACACAC;
+  &:hover{
+    text-shadow: 1px 3px 3px rgba(0,0,0,.1);
+  }
+}
+.liFiBox_R{
+  @include liFiBox_AR;
+  color: #DEDEDE;
 }
 .liFiBox_size{
   width: $fileBoxSize;
