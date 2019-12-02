@@ -16,7 +16,7 @@ function showMyLoadFile() {
     $('#loginInTopMu').show('fade', 200);
     $('#loadFileBigBox').show('fade', 200);
     loadFile_count(4);
-    $('.removeFiBox').show('fade', 200);
+    $('.liFiBox_R').show('fade', 200);
 }
 
 function loadFile_count(n) {
