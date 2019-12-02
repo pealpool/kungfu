@@ -22,7 +22,7 @@ function showMyLoadFile() {
 function loadFile_count(n) {
     for (let i = 0; i < 11; i++) {
         if (i <= n) {
-            $('.loFiGd_F').append('<li class="liFiBox_size liFiBox_S"></li>');
+            $('.loFiGd_F').append('<li class="liFiBox_size liFiBox_S"><div class="liFiBox_left"><img src="../src/images/mpLogo_JinGangZong.svg"><span>大<br/>理<br/>段<br/>氏</span></div><div class="liFiBox_name">段誉</div></li>');
         } else {
             $('.loFiGd_F').append('<li class="liFiBox_size liFiBox_A">+</li>');
         }
