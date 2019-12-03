@@ -21,7 +21,7 @@ function showMyLoadFile() {
 function loadFile_count(n) {
     for (let i = 0; i < 11; i++) {
         if (i <= n) {
-            $('.loFiGd_F').append('<li class="liFiBox_size liFiBox_S" style="display: block"><div class="liFiBox_Sss"><div class="liFiBox_left"><img src="../src/images/mpLogo_JinGangZong.svg"><span>大<br/>理<br/>段<br/>氏</span></div><div class="liFiBox_name">段誉</div></div></li>');
+            $('.loFiGd_F').append('<li class="liFiBox_size liFiBox_S"><div class=liFiBox_Sss><div class=liFiBox_left><img src=../src/images/mpLogo_JinGangZong.svg><span>大<br>理<br>段<br>氏</span></div><div class=liFiBox_name>段誉</div></div>');
         } else {
             $('.loFiGd_F').append('<li class="liFiBox_size liFiBox_A">+</li>');
         }
@@ -70,18 +70,26 @@ $(document).on('mouseenter', '.liFiBox_S', function() {//绑定鼠标进入事�
 });
 $(document).on('mouseleave', '.liFiBox_S', function() {//绑定鼠标划出事件
     $(this).find('.liFiBox_left').eq(0).removeClass('liFiBox_left_hover');
-    $('#liFiBox_R').css('z-index',4);
+    $('#liFiBox_R').css('z-index',10);
 });
-$('#liFiBox_R').click(function () {
+$(document).on('click', '.liFiBox_S', function() {
+    $(this).addClass('liFiBox_S_select');
+});
+$(document).on('click','#liFiBox_R',function () {
     if ($(this).hasClass('liFiBox_R')){
         $('.liFiBox_Sss').removeClass('myBlur');
         $('.liFiBox_S').removeClass('shake shake-slow');
+        $('.liFiBox_Sxx').remove();
         $('.liFiBox_AL').addClass('liFiBox_A').removeClass('liFiBox_AL');
         $(this).removeClass('liFiBox_R');
     }else {
         $('.liFiBox_Sss').addClass('myBlur');
-        $('.liFiBox_S').addClass('shake shake-slow');
+        $('.liFiBox_S').addClass('shake shake-slow').append('<div class=liFiBox_Sxx>×</div>');
         $('.liFiBox_A').addClass('liFiBox_AL').removeClass('liFiBox_A');
         $(this).addClass('liFiBox_R');
     }
+});
+$(document).on('click','.liFiBox_Sxx',function () {
+    $(this).parent().html('+').attr('class','liFiBox_size liFiBox_AL');
+    $('#liFiBox_R').css('z-index',10);
 });

@@ -224,7 +224,7 @@ body{
   z-index: 1;
 }
 .loFiGd_F{
-  z-index: 3;
+  z-index: 5;
 }
 .liFiBox_B{
   @include base-kuang(#D9D9D9);
@@ -237,7 +237,12 @@ body{
     box-shadow: 0px 3px 6px 0 rgba(0,0,0,.1);
   }
 }
-
+.liFiBox_S.liFiBox_S_select{
+  box-shadow: 0px 0px 0px 5px $blackFontHover-color;
+  &:hover{
+    box-shadow: 0px 0px 0px 5px $blackFontHover-color;
+  }
+}
 @mixin liFiBox_AR {
   font-size: 70px;
   line-height: $fileBoxSize - 2px;
@@ -268,7 +273,7 @@ body{
   position: absolute;
   top: 428px;
   left: 276px;
-  z-index: 4;
+  z-index: 10;
   &:hover{
     color: $myRed-color;
   }
@@ -287,7 +292,7 @@ body{
   margin-right: 16px;
   list-style-type: none;
   float: left;
-  overflow:hidden;
+  //overflow:hidden;
 }
 
 .liFiBox_left{
@@ -321,4 +326,21 @@ body{
 }
 .myBlur{
   filter: blur(20px) brightness(110%);
+}
+.liFiBox_Sss{
+  z-index: 6;
+}
+.liFiBox_Sxx{
+  @include liFiBox_AR;
+  width: $fileBoxSize;
+  height: $fileBoxSize;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 7;
+  color: #ACACAC;
+  text-shadow: 0px 0px 6px rgba(255,255,255,1);
+  &:hover{
+    @include hoverBright(1.2);
+    background-color: rgba(255,255,255,.3);
+  }
 }
