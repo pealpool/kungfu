@@ -1,7 +1,7 @@
 'use strict'
 import $ from 'jquery'
 import './css/baseCss.scss'
-// import 'webpack-jquery-ui/draggable';
+// import './css/csshake.css'
 import 'webpack-jquery-ui';
 
 
@@ -12,24 +12,20 @@ function myHideRemove(e) {
 }
 
 function showMyLoadFile() {
-    // $('.rightContent').append('<div id=loginInTopMu><span>></span><span>选择角色</span></div><div id=loadFileBigBox><ul class="loFiGd loFiGd_B"><li class="liFiBox_size liFiBox_B"><li class="liFiBox_size liFiBox_B"><li class="liFiBox_size liFiBox_B"><li class="liFiBox_size liFiBox_B"><li class="liFiBox_size liFiBox_B"><li class="liFiBox_size liFiBox_B"><li class="liFiBox_size liFiBox_B"><li class="liFiBox_size liFiBox_B"><li class="liFiBox_size liFiBox_B"><li class="liFiBox_size liFiBox_B"><li class="liFiBox_size liFiBox_B"><li class="liFiBox_size liFiBox_B"></ul><ul class="loFiGd loFiGd_F" id=sortable></ul></div>');
     $('#loginInTopMu').show('fade', 200);
     $('#loadFileBigBox').show('fade', 200);
     loadFile_count(4);
-    $('.liFiBox_R').show('fade', 200);
+    $('#liFiBox_R').show('fade', 200);
 }
 
 function loadFile_count(n) {
     for (let i = 0; i < 11; i++) {
         if (i <= n) {
-            $('.loFiGd_F').append('<li class="liFiBox_size liFiBox_S"><div class="liFiBox_left"><img src="../src/images/mpLogo_JinGangZong.svg"><span>大<br/>理<br/>段<br/>氏</span></div><div class="liFiBox_name">段誉</div></li>');
+            $('.loFiGd_F').append('<li class="liFiBox_size liFiBox_S" style="display: block"><div class="liFiBox_Sss"><div class="liFiBox_left"><img src="../src/images/mpLogo_JinGangZong.svg"><span>大<br/>理<br/>段<br/>氏</span></div><div class="liFiBox_name">段誉</div></div></li>');
         } else {
             $('.loFiGd_F').append('<li class="liFiBox_size liFiBox_A">+</li>');
         }
-        // $('.loFiGd_F').find('div').eq(i).show('fade', 500);
     }
-    // $('.loFiGd_F').append('<div class="liFiBox_size liFiBox_R">×</div>');
-    // $('.liFiBox_R').show('fade', 200);
     let j = 0;
 
     function showLiFiBox() {
@@ -57,21 +53,35 @@ $('body').on('click', '.liFiBox_A', function () {
     $(this).html('').removeClass('liFiBox_A').addClass('liFiBox_S');
 });
 
-
 //手动排序移动
-
 $('.loFiGd_F').sortable({
     placeholder: "liFiBox_size",
     cursor: "move",
     // containment: "ul",
-    distance: 30,
+    distance: 10, //多少像素激活移动
     cancel: ".liFiBox_A",
     revert: true,
-    connectWith: ".removeFiBox",
-    // dropOnEmpty: true,
 });
 $('.loFiGd_F').disableSelection();
 
-//todo 如何触发删除
-$('.removeFiBox').sortable();
-$('.removeFiBox').disableSelection();
+$(document).on('mouseenter', '.liFiBox_S', function() {//绑定鼠标进入事件
+    $(this).find('.liFiBox_left').eq(0).addClass('liFiBox_left_hover');
+    $('#liFiBox_R').css('z-index',2);
+});
+$(document).on('mouseleave', '.liFiBox_S', function() {//绑定鼠标划出事件
+    $(this).find('.liFiBox_left').eq(0).removeClass('liFiBox_left_hover');
+    $('#liFiBox_R').css('z-index',4);
+});
+$('#liFiBox_R').click(function () {
+    if ($(this).hasClass('liFiBox_R')){
+        $('.liFiBox_Sss').removeClass('myBlur');
+        $('.liFiBox_S').removeClass('shake shake-slow');
+        $('.liFiBox_AL').addClass('liFiBox_A').removeClass('liFiBox_AL');
+        $(this).removeClass('liFiBox_R');
+    }else {
+        $('.liFiBox_Sss').addClass('myBlur');
+        $('.liFiBox_S').addClass('shake shake-slow');
+        $('.liFiBox_A').addClass('liFiBox_AL').removeClass('liFiBox_A');
+        $(this).addClass('liFiBox_R');
+    }
+});

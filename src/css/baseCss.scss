@@ -1,3 +1,6 @@
+@import url(csshake.css);
+
+
 $backgroundBase-color: #F2EFE9;//body色
 $grayKuang-color: #ECECEC;//灰框底色
 $grayKuang-borderLine-color:#E1E1E1;//灰框边框色
@@ -221,7 +224,7 @@ body{
   z-index: 1;
 }
 .loFiGd_F{
-  z-index: 2;
+  z-index: 3;
 }
 .liFiBox_B{
   @include base-kuang(#D9D9D9);
@@ -249,7 +252,12 @@ body{
     @include hoverBright(1.2);
   }
 }
-.liFiBox_R{
+.liFiBox_AL{
+  @include liFiBox_AR;
+  cursor: default;
+  color: #DEDEDE;
+}
+#liFiBox_R{
   @include liFiBox_AR;
   width: $fileBoxSize;
   height: $fileBoxSize;
@@ -260,9 +268,15 @@ body{
   position: absolute;
   top: 428px;
   left: 276px;
-  z-index: 3;
+  z-index: 4;
   &:hover{
     color: $myRed-color;
+  }
+}
+.liFiBox_R{
+  color: $myRed-color!important;
+  &:hover{
+    @include hoverBright(1.2);
   }
 }
 .liFiBox_size{
@@ -273,6 +287,7 @@ body{
   margin-right: 16px;
   list-style-type: none;
   float: left;
+  overflow:hidden;
 }
 
 .liFiBox_left{
@@ -292,6 +307,9 @@ body{
     margin-bottom: 1px;
   }
 }
+.liFiBox_left_hover{
+  box-shadow: 3px 0px 3px 0 rgba(0,0,0,.1);
+}
 .liFiBox_name{
   float: left;
   box-sizing: border-box;
@@ -300,4 +318,7 @@ body{
   height: 40px;
   line-height: 40px;
   padding-left: 9px;
+}
+.myBlur{
+  filter: blur(20px) brightness(110%);
 }
