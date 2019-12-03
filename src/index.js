@@ -46,7 +46,7 @@ $(".next_01").click(function () {
     myHideRemove('#myVerID');
     myHideRemove('.loginBigBox');
     myHideRemove('.loginCheckBox');
-    $('.next_01').switchClass('next_01', 'next_02', 1000, 'easeInOutCubic');
+    $('.next_01').switchClass('next_01', 'next_02 next_off', 1000, 'easeInOutCubic');
     $('.logoPosition01').switchClass('logoPosition01', 'logoPosition02', 1000, 'easeInOutCubic', showMyLoadFile);
 });
 $('body').on('click', '.liFiBox_A', function () {
@@ -73,7 +73,14 @@ $(document).on('mouseleave', '.liFiBox_S', function() {//绑定鼠标划出事�
     $('#liFiBox_R').css('z-index',10);
 });
 $(document).on('click', '.liFiBox_S', function() {
-    $(this).addClass('liFiBox_S_select');
+    $('#liFiBox_S_select').attr('id','');
+    $(this).attr('id','liFiBox_S_select');
+    if($('#liFiBox_S_select').length > 0){
+        $('.next_off').removeClass('next_off');
+
+        console.log('ad');
+        console.log($('#liFiBox_S_select'));
+    }
 });
 $(document).on('click','#liFiBox_R',function () {
     if ($(this).hasClass('liFiBox_R')){
@@ -90,6 +97,10 @@ $(document).on('click','#liFiBox_R',function () {
     }
 });
 $(document).on('click','.liFiBox_Sxx',function () {
-    $(this).parent().html('+').attr('class','liFiBox_size liFiBox_AL');
+    $(this).parent().html('+').attr('class','liFiBox_size liFiBox_AL').attr('id','');
     $('#liFiBox_R').css('z-index',10);
+    if($('#liFiBox_S_select').length <= 0){
+        $('.loginNext').addClass('next_off');
+    }
+    return false;
 });

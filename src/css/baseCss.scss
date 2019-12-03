@@ -1,68 +1,79 @@
 @import url(csshake.css);
 
 
-$backgroundBase-color: #F2EFE9;//body色
-$grayKuang-color: #ECECEC;//灰框底色
-$grayKuang-borderLine-color:#E1E1E1;//灰框边框色
-$darkBase-color: #1A1E26;//深蓝色
+$backgroundBase-color: #F2EFE9; //body色
+$grayKuang-color: #ECECEC; //灰框底色
+$grayKuang-borderLine-color: #E1E1E1; //灰框边框色
+$darkBase-color: #1A1E26; //深蓝色
+$myGray-color: #ACACAC; //+号灰颜色
 $lightGray-color: #8C8C8C;
 $blackFontHover-color: #5f5f5f;
 $myRed-color: #A60A27;
 $myYellow-color: #D5AD77;
 
-$baseKuang-height: 640px;//登录框高度
+$baseKuang-height: 640px; //登录框高度
 $baseKuang-width: 490px;
 $fileBoxSize: 122px;
-@mixin fileBigBoxSize{
+@mixin fileBigBoxSize {
   width: 414px;
   height: 536px;
 }
+
 $liFiBox_left_width: 33px;
 
-$baseKuangLeft-width: 9px;//登录框左边黑线宽
-$myTransition:all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+$baseKuangLeft-width: 9px; //登录框左边黑线宽
+$myTransition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 
 @mixin base-kuang($kborderLine-color) {
   border: 1px solid $kborderLine-color;
 }
-@mixin hoverBright($i){
+
+@mixin hoverBright($i) {
   filter: brightness($i);
 }
 
-body{
+body {
   background-color: $backgroundBase-color;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family:Microsoft YaHei;
+  font-family: Microsoft YaHei;
   font-size: 14px;
-  color:$darkBase-color;
+  color: $darkBase-color;
   user-select: none;
 }
-.smallBaseKuang{
+
+.smallBaseKuang {
   width: $baseKuang-width;
   height: $baseKuang-height;
   margin-top: 120px;
-  box-shadow: 1px 3px 6px 0 rgba(0,0,0,.05);
+  box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, .05);
   //transition: $myTransition;
-  &:hover{
+  &:hover {
     box-shadow: none;
-    animation: smallBaseKuangBloou 1s  1;
+    animation: smallBaseKuangBloou 1s 1;
   }
 }
+
 @keyframes smallBaseKuangBloou {
-  from{ box-shadow: 1px 3px 6px 0 rgba(0,0,0,.05); }
+  from {
+    box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, .05);
+  }
   //50%{ box-shadow: 1px 3px 100px 0 rgba(0,0,0,.0); }
-  to{ box-shadow: 1px 3px 100px 0 rgba(0,0,0,.0); }
+  to {
+    box-shadow: 1px 3px 100px 0 rgba(0, 0, 0, .0);
+  }
 }
-.grayKuang{
+
+.grayKuang {
   background-color: $grayKuang-color;
   @include base-kuang($grayKuang-borderLine-color);
 }
-.leftLine{
+
+.leftLine {
   float: left;
   background-color: $darkBase-color;
   height: $baseKuang-height + 2px;
@@ -70,13 +81,15 @@ body{
   //box-sizing: border-box;
   margin-top: -1px;
 }
-.rightContent{
+
+.rightContent {
   float: left;
   position: relative;
   height: $baseKuang-height;
   width: $baseKuang-width - $baseKuangLeft-width;
 }
-.logoBox{
+
+.logoBox {
   float: left;
   position: absolute;
   background-color: $grayKuang-color;
@@ -86,22 +99,32 @@ body{
   width: $thisWidth;
   height: $thisWidth;
 }
+
 @keyframes logoBloou {
-  from{ box-shadow: 0px 0px 0px 0 rgba(0,0,0,.0); }
-  10%{ box-shadow: 0px 0px 6px 0 rgba(0,0,0,.5); }
-  to{ box-shadow: 0px 0px 506px 0 rgba(0,0,0,.0); }
+  from {
+    box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, .0);
+  }
+  10% {
+    box-shadow: 0px 0px 6px 0 rgba(0, 0, 0, .5);
+  }
+  to {
+    box-shadow: 0px 0px 506px 0 rgba(0, 0, 0, .0);
+  }
 }
-.logoPosition01{
+
+.logoPosition01 {
   top: 111px;
   left: 185px;
   animation: logoBloou 5s cubic-bezier(0.6, -0.28, 0.74, 0.05) infinite;
 }
-.logoPosition02{
+
+.logoPosition02 {
   top: -55px;
   left: 37px;
-  box-shadow: 0px 3px 6px 0 rgba(0,0,0,.2);
+  box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, .2);
 }
-.logoFont{
+
+.logoFont {
   font-size: 40px;
   font-weight: bold;
   line-height: 4px;
@@ -110,7 +133,8 @@ body{
   margin-top: -16px;
   margin-left: 6px;
 }
-#myVerID{
+
+#myVerID {
   float: left;
   color: $lightGray-color;
   font-size: 12px;
@@ -119,90 +143,115 @@ body{
   height: 71px;
   margin-top: 230px;
 }
-.loginBigBox{
+
+.loginBigBox {
   float: left;
   margin-bottom: 15px;
   width: $baseKuang-width - $baseKuangLeft-width;
   height: 30px;
-  span{
+
+  span {
     margin-left: 101px;
     margin-right: 6px;
   }
-  input{
+
+  input {
     width: 140px;
     height: 24px;
     padding-left: 10px;
     padding-right: 10px;
     @include base-kuang(#8C8C8C);
-    &:hover{
+
+    &:hover {
       border-color: #babfc7;
     }
   }
-  a{
+
+  a {
     margin-left: 10px;
     color: #9CA9C2;
     text-decoration: none;
-    &:hover{
+
+    &:hover {
       @include hoverBright(1.1);
     }
   }
 }
-.loginCheckBox{
+
+.loginCheckBox {
   float: left;
   margin-top: 10px;
   height: 50px;
   width: $baseKuang-width - $baseKuangLeft-width;
-  input{
+
+  input {
     float: left;
     margin-top: 3px;
+
     &:nth-child(1) {
       margin-left: 152px;
     }
   }
-  label{
+
+  label {
     float: left;
     margin-right: 14px;
-    &:hover{
+
+    &:hover {
       @include hoverBright(2);
     }
   }
 }
-.loginNext{
+
+.loginNext {
   float: left;
   position: absolute;
   width: 100px;
   left: 353px;
   font-weight: bold;
   cursor: pointer;
-  img{
+
+  img {
     float: left;
   }
-  span{
+
+  span {
     float: left;
     margin-top: 16px;
     margin-left: 8px;
   }
-  &:hover{
+
+  &:hover {
     @include hoverBright(2);
   }
+
+  &.next_off {
+    filter: contrast(0%);
+    cursor: default;
+  }
 }
-.next_01{
+
+.next_01 {
   top: 570px;
 }
-.next_02{
+
+.next_02 {
   top: 19px;
 }
-#loginInTopMu{
+
+#loginInTopMu {
   display: none;
   float: left;
   margin-top: 35px;
   margin-left: 175px;
   width: 300px;
-  span{
+
+  span {
     margin-right: 5px;
   }
 }
-#loadFileBigBox{
+
+#loadFileBigBox {
   display: none;
   position: relative;
   float: left;
@@ -211,7 +260,8 @@ body{
   @include fileBigBoxSize;
   //background: #9CA9C2;
 }
-.loFiGd{
+
+.loFiGd {
   //display: flex;
   //flex-wrap: wrap;
   //align-content: flex-start;
@@ -220,49 +270,61 @@ body{
   @include fileBigBoxSize;
   padding-left: 0px;
 }
-.loFiGd_B{
+
+.loFiGd_B {
   z-index: 1;
 }
-.loFiGd_F{
+
+.loFiGd_F {
   z-index: 5;
 }
-.liFiBox_B{
+
+.liFiBox_B {
   @include base-kuang(#D9D9D9);
 }
-.liFiBox_S{
+
+.liFiBox_S {
   display: none;
   background-color: #ffffff;
   cursor: pointer;
-  &:hover{
-    box-shadow: 0px 3px 6px 0 rgba(0,0,0,.1);
+
+  &:hover {
+    box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, .1);
   }
-}
-.liFiBox_S.liFiBox_S_select{
-  box-shadow: 0px 0px 0px 5px $blackFontHover-color;
-  &:hover{
+
+  &#liFiBox_S_select {
     box-shadow: 0px 0px 0px 5px $blackFontHover-color;
+
+    &:hover {
+      box-shadow: 0px 0px 0px 5px $blackFontHover-color;
+    }
   }
 }
+
 @mixin liFiBox_AR {
   font-size: 70px;
   line-height: $fileBoxSize - 2px;
   text-align: center;
   cursor: pointer;
 }
-.liFiBox_A{
+
+.liFiBox_A {
   @include liFiBox_AR;
-  color: #ACACAC;
+  color: $myGray-color;
   display: none;
-  &:hover{
+
+  &:hover {
     @include hoverBright(1.2);
   }
 }
-.liFiBox_AL{
+
+.liFiBox_AL {
   @include liFiBox_AR;
   cursor: default;
   color: #DEDEDE;
 }
-#liFiBox_R{
+
+#liFiBox_R {
   @include liFiBox_AR;
   width: $fileBoxSize;
   height: $fileBoxSize;
@@ -274,17 +336,21 @@ body{
   top: 428px;
   left: 276px;
   z-index: 10;
-  &:hover{
+
+  &:hover {
     color: $myRed-color;
   }
 }
-.liFiBox_R{
-  color: $myRed-color!important;
-  &:hover{
+
+.liFiBox_R {
+  color: $myRed-color !important;
+
+  &:hover {
     @include hoverBright(1.2);
   }
 }
-.liFiBox_size{
+
+.liFiBox_size {
   width: $fileBoxSize;
   height: $fileBoxSize;
   box-sizing: border-box;
@@ -292,10 +358,10 @@ body{
   margin-right: 16px;
   list-style-type: none;
   float: left;
-  //overflow:hidden;
+  overflow: hidden;
 }
 
-.liFiBox_left{
+.liFiBox_left {
   box-sizing: border-box;
   width: $liFiBox_left_width;
   height: $fileBoxSize;
@@ -305,17 +371,20 @@ body{
   text-align: center;
   padding-top: 9px;
   padding-left: 1px;
-  img{
+
+  img {
     $liFiBox_left_img_size: 22px;
     width: $liFiBox_left_img_size;
     height: $liFiBox_left_img_size;
     margin-bottom: 1px;
   }
 }
-.liFiBox_left_hover{
-  box-shadow: 3px 0px 3px 0 rgba(0,0,0,.1);
+
+.liFiBox_left_hover {
+  box-shadow: 3px 0px 3px 0 rgba(0, 0, 0, .1);
 }
-.liFiBox_name{
+
+.liFiBox_name {
   float: left;
   box-sizing: border-box;
   //background-color: #5f5f5f;
@@ -324,23 +393,27 @@ body{
   line-height: 40px;
   padding-left: 9px;
 }
-.myBlur{
-  filter: blur(20px) brightness(110%);
+
+.myBlur {
+  filter: blur(5px) brightness(120%);
 }
-.liFiBox_Sss{
+
+.liFiBox_Sss {
   z-index: 6;
 }
-.liFiBox_Sxx{
+
+.liFiBox_Sxx {
   @include liFiBox_AR;
   width: $fileBoxSize;
   height: $fileBoxSize;
   box-sizing: border-box;
   position: absolute;
   z-index: 7;
-  color: #ACACAC;
-  text-shadow: 0px 0px 6px rgba(255,255,255,1);
-  &:hover{
+  color: $myGray-color;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.3) 26%, rgba(255, 255, 255, 0.5) 100%);
+
+  &:hover {
     @include hoverBright(1.2);
-    background-color: rgba(255,255,255,.3);
+    background-color: rgba(255, 255, 255, .5);
   }
 }
