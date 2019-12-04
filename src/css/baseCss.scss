@@ -2,8 +2,8 @@
 
 
 $backgroundBase-color: #F2EFE9; //body色
-$grayKuang-color: #ECECEC; //灰框底色
-$grayKuang-borderLine-color: #E1E1E1; //灰框边框色
+$grayBox-color: #ECECEC; //灰框底色
+$grayBorder-color: #E1E1E1; //灰框边框色
 $darkBase-color: #1A1E26; //深蓝色
 $myGray-color: #ACACAC; //+号灰颜色
 $lightGray-color: #8C8C8C;
@@ -11,8 +11,9 @@ $blackFontHover-color: #5f5f5f;
 $myRed-color: #A60A27;
 $myYellow-color: #D5AD77;
 
-$baseKuang-height: 640px; //登录框高度
-$baseKuang-width: 490px;
+$smallBaseBox-height: 640px; //登录框高度
+$smallBaseBox-width: 490px;
+$bigBaseBox-width: 1140px;
 $fileBoxSize: 122px;
 @mixin fileBigBoxSize {
   width: 414px;
@@ -21,11 +22,11 @@ $fileBoxSize: 122px;
 
 $liFiBox_left_width: 33px;
 
-$baseKuangLeft-width: 9px; //登录框左边黑线宽
+$baseBoxLeft-width: 9px; //登录框左边黑线宽
 $myTransition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 
-@mixin base-kuang($kborderLine-color) {
-  border: 1px solid $kborderLine-color;
+@mixin base-box($kBorder-color) {
+  border: 1px solid $kBorder-color;
 }
 
 @mixin hoverBright($i) {
@@ -40,44 +41,43 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: Microsoft YaHei;
+  font-family: Microsoft YaHei, serif;
   font-size: 14px;
   color: $darkBase-color;
   user-select: none;
 }
 
-.smallBaseKuang {
-  width: $baseKuang-width;
-  height: $baseKuang-height;
+.smallBaseBox {
+  width: $smallBaseBox-width;
+  height: $smallBaseBox-height;
   margin-top: 120px;
   box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, .05);
-  //transition: $myTransition;
+
   &:hover {
     box-shadow: none;
-    animation: smallBaseKuangBloou 1s 1;
+    animation: smallBaseBoxBoom 1s 1;
   }
 }
 
-@keyframes smallBaseKuangBloou {
+@keyframes smallBaseBoxBoom {
   from {
     box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, .05);
   }
-  //50%{ box-shadow: 1px 3px 100px 0 rgba(0,0,0,.0); }
   to {
     box-shadow: 1px 3px 100px 0 rgba(0, 0, 0, .0);
   }
 }
 
-.grayKuang {
-  background-color: $grayKuang-color;
-  @include base-kuang($grayKuang-borderLine-color);
+.grayBorder {
+  background-color: $grayBox-color;
+  @include base-box($grayBorder-color);
 }
 
 .leftLine {
   float: left;
   background-color: $darkBase-color;
-  height: $baseKuang-height + 2px;
-  width: $baseKuangLeft-width;
+  height: $smallBaseBox-height + 2px;
+  width: $baseBoxLeft-width;
   //box-sizing: border-box;
   margin-top: -1px;
 }
@@ -85,14 +85,14 @@ body {
 .rightContent {
   float: left;
   position: relative;
-  height: $baseKuang-height;
-  width: $baseKuang-width - $baseKuangLeft-width;
+  height: $smallBaseBox-height;
+  width: $smallBaseBox-width - $baseBoxLeft-width;
 }
 
-.logoBox {
+#logoBox {
   float: left;
   position: absolute;
-  background-color: $grayKuang-color;
+  background-color: $grayBox-color;
   border: 5px solid $darkBase-color;
   border-radius: 3px;
   $thisWidth: 98px;
@@ -100,28 +100,28 @@ body {
   height: $thisWidth;
 }
 
-@keyframes logoBloou {
+@keyframes logoBoom {
   from {
-    box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, .0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, .0);
   }
   10% {
-    box-shadow: 0px 0px 6px 0 rgba(0, 0, 0, .5);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
   }
   to {
-    box-shadow: 0px 0px 506px 0 rgba(0, 0, 0, .0);
+    box-shadow: 0 0 506px 0 rgba(0, 0, 0, .0);
   }
 }
 
 .logoPosition01 {
   top: 111px;
   left: 185px;
-  animation: logoBloou 5s cubic-bezier(0.6, -0.28, 0.74, 0.05) infinite;
+  animation: logoBoom 5s cubic-bezier(0.6, -0.28, 0.74, 0.05) infinite;
 }
 
 .logoPosition02 {
   top: -55px;
   left: 37px;
-  box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, .2);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .2);
 }
 
 .logoFont {
@@ -139,7 +139,7 @@ body {
   color: $lightGray-color;
   font-size: 12px;
   text-align: center;
-  width: $baseKuang-width - $baseKuangLeft-width;
+  width: $smallBaseBox-width - $baseBoxLeft-width;
   height: 71px;
   margin-top: 230px;
 }
@@ -147,7 +147,7 @@ body {
 .loginBigBox {
   float: left;
   margin-bottom: 15px;
-  width: $baseKuang-width - $baseKuangLeft-width;
+  width: $smallBaseBox-width - $baseBoxLeft-width;
   height: 30px;
 
   span {
@@ -160,7 +160,7 @@ body {
     height: 24px;
     padding-left: 10px;
     padding-right: 10px;
-    @include base-kuang(#8C8C8C);
+    @include base-box(#8C8C8C);
 
     &:hover {
       border-color: #babfc7;
@@ -182,7 +182,7 @@ body {
   float: left;
   margin-top: 10px;
   height: 50px;
-  width: $baseKuang-width - $baseKuangLeft-width;
+  width: $smallBaseBox-width - $baseBoxLeft-width;
 
   input {
     float: left;
@@ -238,6 +238,9 @@ body {
 .next_02 {
   top: 19px;
 }
+.next_03 {
+  @extend .next_02;
+}
 
 #loginInTopMu {
   display: none;
@@ -248,6 +251,11 @@ body {
 
   span {
     margin-right: 5px;
+    float: left;
+  }
+
+  span:nth-child(3), span:nth-child(4) {
+    display: none;
   }
 }
 
@@ -262,13 +270,9 @@ body {
 }
 
 .loFiGd {
-  //display: flex;
-  //flex-wrap: wrap;
-  //align-content: flex-start;
-  //justify-content: flex-start;
   position: absolute;
   @include fileBigBoxSize;
-  padding-left: 0px;
+  padding-left: 0;
 }
 
 .loFiGd_B {
@@ -279,8 +283,12 @@ body {
   z-index: 5;
 }
 
+.loFiGd_C {
+  z-index: 5;
+}
+
 .liFiBox_B {
-  @include base-kuang(#D9D9D9);
+  @include base-box(#D9D9D9);
 }
 
 .liFiBox_S {
@@ -289,14 +297,27 @@ body {
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .1);
   }
 
   &#liFiBox_S_select {
-    box-shadow: 0px 0px 0px 5px $blackFontHover-color;
+    box-shadow: 0 0 0 5px $blackFontHover-color;
 
     &:hover {
-      box-shadow: 0px 0px 0px 5px $blackFontHover-color;
+      box-shadow: 0 0 0 5px $blackFontHover-color;
+    }
+  }
+}
+
+.schoolBox {
+  @extend .liFiBox_S;
+  display: block;
+
+  &#schoolBox_select {
+    box-shadow: 0 0 0 5px $blackFontHover-color;
+
+    &:hover {
+      box-shadow: 0 0 0 5px $blackFontHover-color;
     }
   }
 }
@@ -372,16 +393,19 @@ body {
   padding-top: 9px;
   padding-left: 1px;
 
-  img {
-    $liFiBox_left_img_size: 22px;
-    width: $liFiBox_left_img_size;
-    height: $liFiBox_left_img_size;
+  > img {
+    $size: 22px;
+    width: $size;
+    height: $size;
     margin-bottom: 1px;
   }
 }
 
 .liFiBox_left_hover {
-  box-shadow: 3px 0px 3px 0 rgba(0, 0, 0, .1);
+  box-shadow: 3px 0 3px 0 rgba(0, 0, 0, .1);
+}
+.schoolBox_top_hover {
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .1);
 }
 
 .liFiBox_name {
@@ -416,4 +440,37 @@ body {
     @include hoverBright(1.2);
     background-color: rgba(255, 255, 255, .5);
   }
+}
+
+.bigBaseBox {
+  width: $bigBaseBox-width;
+  height: $smallBaseBox-height;
+  margin-top: 120px;
+  box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, .05);
+}
+
+.schoolBox_top{
+  width: $fileBoxSize;
+  height: 44px;
+  background-color: $myYellow-color;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 45px;
+  > img{
+    $size: 24px;
+    width: $size;
+    float: left;
+    display: block;
+    margin: 8px 6px;
+  }
+}
+.schoolBox_bottom{
+  line-height: 16px;
+  margin-left: 15px;
+  width: 100px;
+  height: 71px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.schoolBox_val{
 }

@@ -6,7 +6,7 @@ import 'webpack-jquery-ui';
 
 
 function myHideRemove(e) {
-    $(e).hide('fade', 300, 'easeInOutCubic', function () {
+    $(e).hide('fade', 300, function () {
         $(e).remove();
     });
 }
@@ -21,7 +21,7 @@ function showMyLoadFile() {
 function loadFile_count(n) {
     for (let i = 0; i < 11; i++) {
         if (i <= n) {
-            $('.loFiGd_F').append('<li class="liFiBox_size liFiBox_S"><div class=liFiBox_Sss><div class=liFiBox_left><img src=../src/images/mpLogo_JinGangZong.svg><span>大<br>理<br>段<br>氏</span></div><div class=liFiBox_name>段誉</div></div>');
+            $('.loFiGd_F').append('<li class="liFiBox_size liFiBox_S"><div class=liFiBox_Sss><div class=liFiBox_left><img src=../src/images/mpLogo_JinGangZong.svg  alt=""/><span>大<br>理<br>段<br>氏</span></div><div class=liFiBox_name>段誉</div></div>');
         } else {
             $('.loFiGd_F').append('<li class="liFiBox_size liFiBox_A">+</li>');
         }
@@ -46,8 +46,8 @@ $(".next_01").click(function () {
     myHideRemove('#myVerID');
     myHideRemove('.loginBigBox');
     myHideRemove('.loginCheckBox');
-    $('.next_01').switchClass('next_01', 'next_02 next_off', 1000, 'easeInOutCubic');
-    $('.logoPosition01').switchClass('logoPosition01', 'logoPosition02', 1000, 'easeInOutCubic', showMyLoadFile);
+    $('.next_01').switchClass('next_01', 'next_02 next_off', 500, 'easeInOutCubic');
+    $('.logoPosition01').switchClass('logoPosition01', 'logoPosition02', 500, 'easeInOutCubic', showMyLoadFile);
 });
 $('body').on('click', '.liFiBox_A', function () {
     $(this).html('').removeClass('liFiBox_A').addClass('liFiBox_S');
@@ -61,8 +61,7 @@ $('.loFiGd_F').sortable({
     distance: 10, //多少像素激活移动
     cancel: ".liFiBox_A",
     revert: true,
-});
-$('.loFiGd_F').disableSelection();
+}).disableSelection();
 
 $(document).on('mouseenter', '.liFiBox_S', function() {//绑定鼠标进入事件
     $(this).find('.liFiBox_left').eq(0).addClass('liFiBox_left_hover');
@@ -77,9 +76,13 @@ $(document).on('click', '.liFiBox_S', function() {
     $(this).attr('id','liFiBox_S_select');
     if($('#liFiBox_S_select').length > 0){
         $('.next_off').removeClass('next_off');
-
-        console.log('ad');
-        console.log($('#liFiBox_S_select'));
+    }
+});
+$(document).on('click', '.schoolBox', function() {
+    $('#schoolBox_select').attr('id','');
+    $(this).attr('id','schoolBox_select');
+    if($('#schoolBox_select').length > 0){
+        $('.next_off').removeClass('next_off');
     }
 });
 $(document).on('click','#liFiBox_R',function () {
@@ -103,4 +106,25 @@ $(document).on('click','.liFiBox_Sxx',function () {
         $('.loginNext').addClass('next_off');
     }
     return false;
+});
+$(document).on('click','.next_02',function () {
+    if (!$(this).hasClass('next_off')){
+        $(this).addClass('next_off next_03').removeClass('next_02');
+        $('.loFiGd_F, #liFiBox_R').hide('fade', 300, function () {
+            $(this).remove();
+        });
+        $('#loginInTopMu span').show('fade', 200);
+        $('#selectSpan').text('选择派别');
+        $('#logoBox').hide('blind', {direction:'left'}, 200, function () {
+            $('.smallBaseBox').switchClass('smallBaseBox', 'bigBaseBox', 500, 'easeInOutCubic',function () {
+                $('#logoBox').show('blind', {direction:'left'}, 200);
+            });
+        });
+    }
+});
+$(document).on('mouseenter', '.schoolBox', function() {//绑定鼠标进入事件
+    $(this).find('.schoolBox_top').eq(0).addClass('schoolBox_top_hover');
+});
+$(document).on('mouseleave', '.schoolBox', function() {//绑定鼠标划出事件
+    $(this).find('.schoolBox_top').eq(0).removeClass('schoolBox_top_hover');
 });

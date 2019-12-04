@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>逐鼎武林</title>
-<!--    下面这是webpack自动打包js，虚拟的bundle.js文件,到时发不要改-->
-<!--    <script src="/bundle.js"></script>-->
+    <!--    下面这是webpack自动打包js，虚拟的bundle.js文件,到时发不要改-->
+    <!--    <script src="/bundle.js"></script>-->
 </head>
 <body>
-<div class="smallBaseKuang grayKuang">
+<div class="smallBaseBox grayBorder">
     <div class="leftLine"></div>
     <div class="rightContent">
-        <div class="logoBox logoPosition01">
+        <div id="logoBox" class="logoPosition01">
             <div class="logoFont">
                 <p>逐鼎</p>
                 <p>武林</p>
             </div>
         </div>
         <div id="myVerID">Ver. DEV 0.19.11.24</div>
-        <div class="loginBigBox">
+
+        <label class="loginBigBox">
             <span>账号：</span>
             <input type="text" name="account" placeholder="Developer">
             <a href="#">注册账号</a>
-        </div>
-        <div class="loginBigBox">
+        </label>
+        <label class="loginBigBox">
             <span>密码：</span>
             <input type="password" name="account" placeholder="**********">
             <a href="#">忘记密码</a>
-        </div>
+        </label>
         <div class="loginCheckBox">
             <input type="checkbox" id="rememberPassword" name="rememberPassword">
             <label for="rememberPassword">记住密码</label>
@@ -34,14 +35,14 @@
             <label for="autoLogin">自动登录</label>
         </div>
         <div class="loginNext next_01">
-            <img src="../src/images/goButton.png" height="34" width="34"/>
+            <img src="../src/images/goButton.png" height="34" width="34" alt=""/>
             <span>下一页</span>
         </div>
         <div id="loginInTopMu">
             <span>></span>
-            <span>选择角色</span>
-            <!--            <span>-</span>-->
-            <!--            <span>设置属性</span>-->
+            <span id="selectSpan">选择角色</span>
+            <span>-</span>
+            <span style="color: #ACACAC">设置属性</span>
         </div>
         <div id="loadFileBigBox">
             <ul class="loFiGd loFiGd_B">

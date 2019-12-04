@@ -2,29 +2,29 @@
 <html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
-    <title>222</title>
+    <title>loadFile</title>
     <!--    下面这是webpack自动打包js，虚拟的bundle.js文件,到时发布要改dist/-->
     <script src="/bundle.js"></script>
 </head>
 <body>
-<div class="smallBaseKuang grayKuang">
+<div class="smallBaseBox grayBorder">
     <div class="leftLine"></div>
     <div class="rightContent">
-        <div class="logoBox logoPosition02">
+        <div id="logoBox" class="logoPosition02">
             <div class="logoFont">
                 <p>逐鼎</p>
                 <p>武林</p>
             </div>
         </div>
         <div class="loginNext next_02 next_off">
-            <img src="../src/images/goButton.png" height="34" width="34"/>
+            <img src="../src/images/goButton.png" height="34" width="34" alt=""/>
             <span>下一页</span>
         </div>
         <div id="loginInTopMu" style="display: block">
             <span>></span>
             <span>选择角色</span>
-            <!--            <span>-</span>-->
-            <!--            <span>设置属性</span>-->
+            <span>-</span>
+            <span style="color: #ACACAC">设置属性</span>
         </div>
         <div id="loadFileBigBox" style="display: block">
             <ul class="loFiGd loFiGd_B" style="display: block">
@@ -41,11 +41,11 @@
                 <li class="liFiBox_size liFiBox_B"></li>
                 <li class="liFiBox_size liFiBox_B"></li>
             </ul>
-            <ul class="loFiGd loFiGd_F" id="sortable">
+            <ul class="loFiGd loFiGd_F">
                 <li class="liFiBox_size liFiBox_S" style="display: block">
                     <div class="liFiBox_Sss">
                         <div class="liFiBox_left">
-                            <img src="../src/images/mpLogo_JinGangZong.svg">
+                            <img src="../src/images/mpLogo_JinGangZong.svg" alt="">
                             <span>大<br/>理<br/>段<br/>氏</span>
                         </div>
                         <div class="liFiBox_name">段誉</div>
