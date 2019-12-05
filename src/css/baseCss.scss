@@ -522,6 +522,7 @@ body {
   height: 602px;
   margin-top: 19px;
   margin-left: -52px;
+  display: none;
 }
 .rightContent_topL{
   float: left;
@@ -534,6 +535,11 @@ body {
   width: 213px;
   height: 171px;
   //background: #5fdd5f;
+}
+#myBigChart{
+  float: left;
+  width: 213px;
+  height: 171px;
 }
 .rightContent_topB{
   float: left;

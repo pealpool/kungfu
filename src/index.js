@@ -4,6 +4,8 @@ import './css/baseCss.scss'
 // import './css/csshake.css'
 import 'webpack-jquery-ui';
 
+var echarts = require('echarts');
+
 
 function myHideRemove(e) {
     $(e).hide('fade', 300, function () {
@@ -137,6 +139,7 @@ $(document).on('click', '.next_02', function () {
                 let myVarTime = window.setInterval(function () {
                     showLiFiBox()
                 }, 30);
+                $('.rightContent').show('fade', 200);
             });
         });
     }
@@ -152,3 +155,60 @@ $(document).on('click', '.next_03', function () {
         $(this).addClass('next_off next_04').removeClass('next_03');
     }
 });
+
+
+var myChart = echarts.init(document.getElementById('myBigChart'));
+
+// 指定图表的配置项和数据
+var option = {
+    renderer: 'svg',
+    // title: {
+    //     text: '基础雷达图'
+    // },
+    // tooltip: {
+    //     show: false,
+    // },
+    // legend: {
+    //     data: ['预算分配（Allocated Budget）', '实际开销（Actual Spending）']
+    // },
+    radar: {
+        // shape: 'circle',
+        name: {
+            textStyle: {
+                color: '#1A1E26',
+                // fontSize: '12px',
+                // backgroundColor: '#999',
+                // borderRadius: 3,
+                // padding: [3, 5]
+            }
+        },
+        nameGap: 5,
+        indicator: [
+            {name: '伤害', max: 5},
+            {name: '闪避', max: 5},
+            {name: '防御', max: 5},
+            {name: '耐力', max: 5},
+            {name: '妨碍', max: 5}
+        ],
+    },
+    series: [{
+        // name: '预算 vs 开销（Budget vs spending）',
+        type: 'radar',
+        areaStyle: {
+            normal: {
+                color: 'rgba(156, 169, 194, 0.5)'
+            }
+        },
+        data: [
+            {
+                value: [5, 3, 3, 3, 1]
+            }
+        ],
+    }],
+    color: [
+        '#707070',
+    ],
+};
+
+// 使用刚指定的配置项和数据显示图表。
+myChart.setOption(option);
