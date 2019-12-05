@@ -35,8 +35,8 @@ $myTransition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 
 body {
   background-color: $backgroundBase-color;
-  display: flex;
-  justify-content: center;
+  //display: flex;
+  //justify-content: center;
   width: 100%;
   height: 100%;
   padding: 0;
@@ -50,7 +50,7 @@ body {
 .smallBaseBox {
   width: $smallBaseBox-width;
   height: $smallBaseBox-height;
-  margin-top: 120px;
+  margin: 120px auto 0 auto;
   box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, .05);
 
   &:hover {
@@ -82,11 +82,15 @@ body {
   margin-top: -1px;
 }
 
-.rightContent {
+.leftContent {
   float: left;
   position: relative;
   height: $smallBaseBox-height;
   width: $smallBaseBox-width - $baseBoxLeft-width;
+  box-sizing: border-box;
+}
+.leftContent_padding{
+  padding-left: 20px;
 }
 
 #logoBox {
@@ -123,6 +127,10 @@ body {
   left: 37px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .2);
 }
+.logoPosition03{
+  @extend .logoPosition02;
+  left: 17px;
+}
 
 .logoFont {
   font-size: 40px;
@@ -139,7 +147,7 @@ body {
   color: $lightGray-color;
   font-size: 12px;
   text-align: center;
-  width: $smallBaseBox-width - $baseBoxLeft-width;
+  width: $smallBaseBox-width - $baseBoxLeft-width - 40px;
   height: 71px;
   margin-top: 230px;
 }
@@ -147,11 +155,11 @@ body {
 .loginBigBox {
   float: left;
   margin-bottom: 15px;
-  width: $smallBaseBox-width - $baseBoxLeft-width;
+  width: $smallBaseBox-width - $baseBoxLeft-width - 20px;
   height: 30px;
 
   span {
-    margin-left: 101px;
+    margin-left: 81px;
     margin-right: 6px;
   }
 
@@ -182,14 +190,14 @@ body {
   float: left;
   margin-top: 10px;
   height: 50px;
-  width: $smallBaseBox-width - $baseBoxLeft-width;
+  width: $smallBaseBox-width - $baseBoxLeft-width - 20px;
 
   input {
     float: left;
     margin-top: 3px;
 
     &:nth-child(1) {
-      margin-left: 152px;
+      margin-left: 132px;
     }
   }
 
@@ -207,7 +215,6 @@ body {
   float: left;
   position: absolute;
   width: 100px;
-  left: 353px;
   font-weight: bold;
   cursor: pointer;
 
@@ -233,20 +240,26 @@ body {
 
 .next_01 {
   top: 570px;
+  left: 353px;
 }
 
 .next_02 {
   top: 19px;
+  left: 353px;
 }
 .next_03 {
   @extend .next_02;
+  left: 323px;
+}
+.next_04 {
+  @extend .next_03;
 }
 
 #loginInTopMu {
   display: none;
   float: left;
   margin-top: 35px;
-  margin-left: 175px;
+  margin-left: 155px;
   width: 300px;
 
   span {
@@ -263,8 +276,7 @@ body {
   display: none;
   position: relative;
   float: left;
-  margin-top: 16px;
-  margin-left: 37px;
+  margin-left: 17px;
   @include fileBigBoxSize;
   //background: #9CA9C2;
 }
@@ -285,6 +297,7 @@ body {
 
 .loFiGd_C {
   z-index: 5;
+  display: none;
 }
 
 .liFiBox_B {
@@ -311,7 +324,6 @@ body {
 
 .schoolBox {
   @extend .liFiBox_S;
-  display: block;
 
   &#schoolBox_select {
     box-shadow: 0 0 0 5px $blackFontHover-color;
@@ -444,7 +456,7 @@ body {
 .bigBaseBox {
   width: $bigBaseBox-width;
   height: $smallBaseBox-height;
-  margin-top: 120px;
+  margin: 120px auto 0 auto;
   box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, .05);
 }
 
@@ -470,8 +482,6 @@ body {
   height: 71px;
   display: flex;
   flex-direction: column-reverse;
-}
-.schoolBox_val{
 }
 .logo_DL{
   background: url("../images/scLogo_DL.svg") no-repeat;
@@ -505,4 +515,87 @@ body {
 }
 .logo_YZ{
   background: url("../images/scLogo_YZ.svg") no-repeat;
+}
+.rightContent{
+  float: left;
+  width: 682px;
+  height: 602px;
+  margin-top: 19px;
+  margin-left: -52px;
+}
+.rightContent_topL{
+  float: left;
+  width: 461px;
+  height: 171px;
+  //background: #5f5f5f;
+}
+.rightContent_topR{
+  float: left;
+  width: 213px;
+  height: 171px;
+  //background: #5fdd5f;
+}
+.rightContent_topB{
+  float: left;
+  width: 674px;
+  height: 399px;
+  //background: #d22921;
+  margin-top: 15px;
+}
+.bigSLogo{
+  $size: 90px;
+  height: $size;
+  width: $size;
+  background-color: $myYellow-color;
+  float: left;
+}
+.bigSLogo_size{
+  $size: 70px;
+  height: $size;
+  width: $size;
+  margin: 10px;
+}
+
+$schoolNameBox_height: 56px;
+.schoolNameBox{
+  width: 371px;
+  height: $schoolNameBox_height;
+  background-color: #D6D6D6;
+  float: left;
+}
+#schoolName{
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: 31px;
+  height: $schoolNameBox_height;
+  line-height: $schoolNameBox_height;
+  float: left;
+}
+#schoolLevel{
+  margin-left: 80px;
+  height: $schoolNameBox_height;
+  line-height: $schoolNameBox_height + 8px;
+  float: left;
+}
+#schoolRank{
+  margin-left: 31px;
+  width: 168px;
+  height: 35px;
+  line-height: 35px;
+  float: left;
+}
+#schoolPerson{
+  width: 171px;
+  height: 35px;
+  line-height: 35px;
+  float: left;
+}
+#schoolStar{
+  width: 90px;
+  height: 72px;
+  line-height: 16px;
+  float: left;
+}
+#schoolInf{
+  float: left;
 }

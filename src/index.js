@@ -26,6 +26,7 @@ function loadFile_count(n) {
             $('.loFiGd_F').append('<li class="liFiBox_size liFiBox_A">+</li>');
         }
     }
+
     let j = 0;
 
     function showLiFiBox() {
@@ -63,68 +64,91 @@ $('.loFiGd_F').sortable({
     revert: true,
 }).disableSelection();
 
-$(document).on('mouseenter', '.liFiBox_S', function() {//绑定鼠标进入事件
+$(document).on('mouseenter', '.liFiBox_S', function () {//绑定鼠标进入事件
     $(this).find('.liFiBox_left').eq(0).addClass('liFiBox_left_hover');
-    $('#liFiBox_R').css('z-index',2);
+    $('#liFiBox_R').css('z-index', 2);
 });
-$(document).on('mouseleave', '.liFiBox_S', function() {//绑定鼠标划出事件
+$(document).on('mouseleave', '.liFiBox_S', function () {//绑定鼠标划出事件
     $(this).find('.liFiBox_left').eq(0).removeClass('liFiBox_left_hover');
-    $('#liFiBox_R').css('z-index',10);
+    $('#liFiBox_R').css('z-index', 10);
 });
-$(document).on('click', '.liFiBox_S', function() {
-    $('#liFiBox_S_select').attr('id','');
-    $(this).attr('id','liFiBox_S_select');
-    if($('#liFiBox_S_select').length > 0){
+$(document).on('click', '.liFiBox_S', function () {
+    $('#liFiBox_S_select').attr('id', '');
+    $(this).attr('id', 'liFiBox_S_select');
+    if ($('#liFiBox_S_select').length > 0) {
         $('.next_off').removeClass('next_off');
     }
 });
-$(document).on('click', '.schoolBox', function() {
-    $('#schoolBox_select').attr('id','');
-    $(this).attr('id','schoolBox_select');
-    if($('#schoolBox_select').length > 0){
+$(document).on('click', '.schoolBox', function () {
+    $('#schoolBox_select').attr('id', '');
+    $(this).attr('id', 'schoolBox_select');
+    if ($('#schoolBox_select').length > 0) {
         $('.next_off').removeClass('next_off');
     }
 });
-$(document).on('click','#liFiBox_R',function () {
-    if ($(this).hasClass('liFiBox_R')){
+$(document).on('click', '#liFiBox_R', function () {
+    if ($(this).hasClass('liFiBox_R')) {
         $('.liFiBox_Sss').removeClass('myBlur');
         $('.liFiBox_S').removeClass('shake shake-slow');
         $('.liFiBox_Sxx').remove();
         $('.liFiBox_AL').addClass('liFiBox_A').removeClass('liFiBox_AL');
         $(this).removeClass('liFiBox_R');
-    }else {
+    } else {
         $('.liFiBox_Sss').addClass('myBlur');
         $('.liFiBox_S').addClass('shake shake-slow').append('<div class=liFiBox_Sxx>×</div>');
         $('.liFiBox_A').addClass('liFiBox_AL').removeClass('liFiBox_A');
         $(this).addClass('liFiBox_R');
     }
 });
-$(document).on('click','.liFiBox_Sxx',function () {
-    $(this).parent().html('+').attr('class','liFiBox_size liFiBox_AL').attr('id','');
-    $('#liFiBox_R').css('z-index',10);
-    if($('#liFiBox_S_select').length <= 0){
+$(document).on('click', '.liFiBox_Sxx', function () {
+    $(this).parent().html('+').attr('class', 'liFiBox_size liFiBox_AL').attr('id', '');
+    $('#liFiBox_R').css('z-index', 10);
+    if ($('#liFiBox_S_select').length <= 0) {
         $('.loginNext').addClass('next_off');
     }
     return false;
 });
-$(document).on('click','.next_02',function () {
-    if (!$(this).hasClass('next_off')){
-        $(this).addClass('next_off next_03').removeClass('next_02');
+$(document).on('click', '.next_02', function () {
+    if (!$(this).hasClass('next_off')) {
+        $(this).addClass('next_off');
+        $(this).switchClass('next_02', 'next_03', 800, 'easeInOutCubic');
         $('.loFiGd_F, #liFiBox_R').hide('fade', 300, function () {
             $(this).remove();
         });
         $('#loginInTopMu span').show('fade', 200);
         $('#selectSpan').text('选择派别');
-        $('#logoBox').hide('blind', {direction:'left'}, 200, function () {
-            $('.smallBaseBox').switchClass('smallBaseBox', 'bigBaseBox', 500, 'easeInOutCubic',function () {
-                $('#logoBox').show('blind', {direction:'left'}, 200);
+        $('.loFiGd_C').show();
+        let j = 0;
+
+        function showLiFiBox() {
+            if (j < 11) {
+                $('.loFiGd_C').find('li').eq(j).show('fade', 200);
+                j++;
+            } else if (j >= 12) {
+                window.clearImmediate(myVarTime);
+            }
+        }
+
+        $('#logoBox').hide('blind', {direction: 'left'}, 200, function () {
+            $('.leftContent').switchClass('leftContent_padding', '', 200, 'easeInOutCubic');
+            $('.smallBaseBox').switchClass('smallBaseBox', 'bigBaseBox', 500, 'easeInOutCubic', function () {
+                $('#logoBox').removeClass('logoPosition02').addClass('logoPosition03');
+                $('#logoBox').show('blind', {direction: 'left'}, 200);
+                let myVarTime = window.setInterval(function () {
+                    showLiFiBox()
+                }, 30);
             });
         });
     }
 });
-$(document).on('mouseenter', '.schoolBox', function() {//绑定鼠标进入事件
+$(document).on('mouseenter', '.schoolBox', function () {//绑定鼠标进入事件
     $(this).find('.schoolBox_top').eq(0).addClass('schoolBox_top_hover');
 });
-$(document).on('mouseleave', '.schoolBox', function() {//绑定鼠标划出事件
+$(document).on('mouseleave', '.schoolBox', function () {//绑定鼠标划出事件
     $(this).find('.schoolBox_top').eq(0).removeClass('schoolBox_top_hover');
+});
+$(document).on('click', '.next_03', function () {
+    if (!$(this).hasClass('next_off')) {
+        $(this).addClass('next_off next_04').removeClass('next_03');
+    }
 });
