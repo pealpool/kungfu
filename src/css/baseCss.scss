@@ -392,15 +392,14 @@ body {
   text-align: center;
   padding-top: 9px;
   padding-left: 1px;
-
-  > img {
-    $size: 22px;
-    width: $size;
-    height: $size;
-    margin-bottom: 1px;
-  }
 }
-
+.liFiBox_logo{
+  $size: 22px;
+  width: $size;
+  height: $size;
+  margin-bottom: 1px;
+  margin-left: 7px;
+}
 .liFiBox_left_hover {
   box-shadow: 3px 0 3px 0 rgba(0, 0, 0, .1);
 }
@@ -456,13 +455,13 @@ body {
   font-size: 18px;
   font-weight: bold;
   line-height: 45px;
-  > img{
-    $size: 24px;
-    width: $size;
-    float: left;
-    display: block;
-    margin: 8px 6px;
-  }
+}
+.schoolBox_logo{
+  $size: 24px;
+  width: $size;
+  height: $size;
+  float: left;
+  margin: 11px 6px;
 }
 .schoolBox_bottom{
   line-height: 16px;
@@ -473,4 +472,37 @@ body {
   flex-direction: column-reverse;
 }
 .schoolBox_val{
+}
+.logo_DL{
+  background: url("../images/scLogo_DL.svg") no-repeat;
+}
+.logo_EM{
+  background: url("../images/scLogo_EM.svg") no-repeat;
+}
+.logo_JG{
+  background: url("../images/scLogo_JG.svg") no-repeat;
+}
+.logo_MR{
+  background: url("../images/scLogo_MR.svg") no-repeat;
+}
+.logo_SL{
+  background: url("../images/scLogo_SL.svg") no-repeat;
+}
+.logo_SX{
+  background: url("../images/scLogo_SX.svg") no-repeat;
+}
+.logo_TM{
+  background: url("../images/scLogo_TM.svg") no-repeat;
+}
+.logo_WJ{
+  background: url("../images/scLogo_WJ.svg") no-repeat;
+}
+.logo_WP{
+  background: url("../images/scLogo_WP.svg") no-repeat;
+}
+.logo_XH{
+  background: url("../images/scLogo_XH.svg") no-repeat;
+}
+.logo_YZ{
+  background: url("../images/scLogo_YZ.svg") no-repeat;
 }
