@@ -558,44 +558,51 @@ body {
 
 $schoolNameBox_height: 56px;
 .schoolNameBox{
+  float: left;
   width: 371px;
   height: $schoolNameBox_height;
   background-color: #D6D6D6;
-  float: left;
 }
 #schoolName{
+  float: left;
   font-size: 22px;
   font-weight: bold;
   margin-left: 31px;
   height: $schoolNameBox_height;
   line-height: $schoolNameBox_height;
-  float: left;
 }
 #schoolLevel{
+  float: left;
   margin-left: 80px;
   height: $schoolNameBox_height;
   line-height: $schoolNameBox_height + 8px;
-  float: left;
 }
 #schoolRank{
+  float: left;
   margin-left: 31px;
   width: 168px;
   height: 35px;
   line-height: 35px;
-  float: left;
 }
 #schoolPerson{
+  float: left;
   width: 171px;
   height: 35px;
   line-height: 35px;
-  float: left;
 }
 #schoolStar{
+  float: left;
   width: 90px;
   height: 72px;
   line-height: 16px;
-  float: left;
+  box-sizing: border-box;
+  padding-top: 8px;
+  padding-left: 8px;
 }
 #schoolInf{
   float: left;
+  width: 371px;
+  height: 81px;
+  box-sizing: border-box;
+  padding: 10px 20px;
 }
