@@ -21,6 +21,7 @@ $fileBoxSize: 122px;
   width: 414px;
   height: 536px;
 }
+
 $showTab_width: 674px;
 $liFiBox_left_width: 33px;
 
@@ -704,13 +705,38 @@ $schoolNameBox_height: 56px;
 
 .showTabsSize {
   height: 377px;
-  padding: 5px!important;
+  padding: 5px !important;
 }
-.tableTile{
+
+.tableBox {
+  height: 306px;
+}
+
+.tableTile {
   color: #ffffff;
   text-align: center;
+  margin-bottom: 3px;
+  float: left;
 
-  >div {
+  .table_Name {
+    line-height: 63px;
+  }
+
+  .table_ot {
+    box-sizing: border-box;
+    line-height: 16px;
+    padding-top: 5px;
+  }
+
+  .tableT_Tx,
+  .tableT_Lz {
+    cursor: pointer;
+    &:hover{
+      @include hoverBright(1.2);
+    }
+  }
+
+  > div {
     height: 43px;
   }
 
@@ -720,31 +746,133 @@ $schoolNameBox_height: 56px;
     background-color: $tableTitle-color;
   }
 }
-$table_NumberN_width: 47px;
+
+$table_NumberN_width: 44px;
+$table_NumberN_height: 23px;
 $table_ot_width: 28px;
-.tableT_TB{
-  margin-right: 0!important;
-  background-color: transparent!important;
+.tableT_TB {
+  margin-right: 0 !important;
+  background-color: transparent !important;
   width: 10px + $table_NumberN_width * 11 + 1px;
 }
-.table_NumberN{
+
+.table_NumberN {
   width: $table_NumberN_width;
-  height: 23px;
+  height: $table_NumberN_height;
+  line-height: $table_NumberN_height;
+
+  &:nth-child(3),
+  &:nth-child(4) {
+    width: $table_NumberN_width + 9px;
+  }
+
+  &:nth-child(8),
+  &:nth-child(9),
+  &:nth-child(11) {
+    width: $table_NumberN_width - 6px;
+  }
 }
-.table_ot{
+
+.table_ot {
   width: $table_ot_width;
 }
-.table_Name{
-  width: $showTab_width - 10px - 14px - $table_NumberN_width * 11 - $table_ot_width * 3;
+
+.table_Name {
+  width: $showTab_width - 10px - 13px - $table_NumberN_width * 11 - $table_ot_width * 2;
 }
-.tableT_NumberT{
-  margin-bottom: 1px!important;
+
+.tableT_NumberT {
+  margin-bottom: 1px !important;
   width: 10px + $table_NumberN_width * 11;
 }
-.tableT_NumberB{
-  background-color: transparent!important;
-  margin-right: 0!important;
+
+.tableT_NumberB {
+  background-color: transparent !important;
+  margin-right: 0 !important;
 }
-.tableT_Ms{
-  margin-right: 0!important;
+
+.tableT_Tx {
+  > span {
+    padding: 0 2px;
+    background-color: $myYellow-color;
+    color: #ffffff;
+  }
+}
+
+.tableT_Lz {
+  margin-right: 0 !important;
+}
+
+.tableContent {
+  float: left;
+  height: $table_NumberN_height + 2px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding-top: 1px;
+  padding-left: 1px;
+  margin-top: 1px;
+
+  &.tableContent_hover {
+    @include hoverBright(1.1);
+  }
+
+  div {
+    float: left;
+    height: $table_NumberN_height;
+    line-height: $table_NumberN_height;
+    background-color: $grayBox-color;
+    margin-right: 1px;
+    text-align: center;
+  }
+
+  .table_Name {
+    width: $showTab_width - 10px - 13px - $table_NumberN_width * 11 - $table_ot_width * 2 - 1px;
+  }
+}
+
+.table_TB {
+  background-color: #ffffff !important;
+  margin-right: 0 !important;
+}
+
+$tableBox_Button_height: 56px;
+$tableBox_Button_width: 664px;
+.tableBox_Line {
+  float: left;
+  width: $tableBox_Button_width;
+  height: 1px;
+  background-color: $tableTitle-color;
+  margin: 7px 0;
+}
+
+.tableBox_Button {
+  height: $tableBox_Button_height;
+  width: $tableBox_Button_width;
+  background-color: $grayBox-color;
+  float: left;
+
+  div {
+    float: left;
+  }
+}
+
+.tableBox_Button_L {
+  height: $tableBox_Button_height;
+  background-color: $tableTitle-color;
+  width: 9px;
+}
+
+.tableBox_Button_R {
+  width: 136px;
+  margin-left: 16px;
+}
+
+.tableBox_Button_Rt {
+  font-size: 18px;
+  margin-top: 6px;
+}
+
+.tableBox_Button_C {
+  margin-top: 10px;
+  width: 500px;
 }

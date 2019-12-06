@@ -145,12 +145,12 @@ $(document).on('click', '.next_02', function () {
         });
     }
 });
-$(document).on('mouseenter', '.schoolBox', function () {//绑定鼠标进入事件
+$(".schoolBox").hover(function(){
     $(this).find('.schoolBox_top').eq(0).addClass('schoolBox_top_hover');
-});
-$(document).on('mouseleave', '.schoolBox', function () {//绑定鼠标划出事件
+},function(){
     $(this).find('.schoolBox_top').eq(0).removeClass('schoolBox_top_hover');
 });
+
 $(document).on('click', '.next_03', function () {
     if (!$(this).hasClass('next_off')) {
         $(this).addClass('next_off next_04').removeClass('next_03');
@@ -214,3 +214,10 @@ var option = {
 myChart.setOption(option);
 
 $( "#showTabs" ).tabs();
+
+
+$(".tableContent").hover(function(){
+    $(this).addClass('tableContent_hover');
+},function(){
+    $(this).removeClass('tableContent_hover');
+});
