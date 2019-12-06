@@ -10,6 +10,8 @@ $lightGray-color: #8C8C8C;
 $blackFontHover-color: #5f5f5f;
 $myRed-color: #A60A27;
 $myYellow-color: #D5AD77;
+$aTab-color: #A6A197;
+$tableTitle-color: #464951;
 
 $smallBaseBox-height: 640px; //登录框高度
 $smallBaseBox-width: 490px;
@@ -19,7 +21,7 @@ $fileBoxSize: 122px;
   width: 414px;
   height: 536px;
 }
-
+$showTab_width: 674px;
 $liFiBox_left_width: 33px;
 
 $baseBoxLeft-width: 9px; //登录框左边黑线宽
@@ -89,7 +91,8 @@ body {
   width: $smallBaseBox-width - $baseBoxLeft-width;
   box-sizing: border-box;
 }
-.leftContent_padding{
+
+.leftContent_padding {
   padding-left: 20px;
 }
 
@@ -127,7 +130,8 @@ body {
   left: 37px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .2);
 }
-.logoPosition03{
+
+.logoPosition03 {
   @extend .logoPosition02;
   left: 17px;
 }
@@ -250,10 +254,12 @@ body {
   top: 19px;
   left: 353px;
 }
+
 .next_03 {
   @extend .next_02;
   left: 323px;
 }
+
 .next_04 {
   @extend .next_03;
 }
@@ -408,16 +414,19 @@ body {
   padding-top: 9px;
   padding-left: 1px;
 }
-.liFiBox_logo{
+
+.liFiBox_logo {
   $size: 22px;
   width: $size;
   height: $size;
   margin-bottom: 1px;
   margin-left: 7px;
 }
+
 .liFiBox_left_hover {
   box-shadow: 3px 0 3px 0 rgba(0, 0, 0, .1);
 }
+
 .schoolBox_top_hover {
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .1);
 }
@@ -463,7 +472,7 @@ body {
   box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, .05);
 }
 
-.schoolBox_top{
+.schoolBox_top {
   width: $fileBoxSize;
   height: 44px;
   background-color: $myYellow-color;
@@ -471,14 +480,16 @@ body {
   font-weight: bold;
   line-height: 45px;
 }
-.schoolBox_logo{
+
+.schoolBox_logo {
   $size: 24px;
   width: $size;
   height: $size;
   float: left;
   margin: 11px 6px;
 }
-.schoolBox_bottom{
+
+.schoolBox_bottom {
   line-height: 16px;
   margin-left: 15px;
   width: 100px;
@@ -486,40 +497,52 @@ body {
   display: flex;
   flex-direction: column-reverse;
 }
-.logo_DL{
+
+.logo_DL {
   background: url("../images/scLogo_DL.svg") no-repeat;
 }
-.logo_EM{
+
+.logo_EM {
   background: url("../images/scLogo_EM.svg") no-repeat;
 }
-.logo_JG{
+
+.logo_JG {
   background: url("../images/scLogo_JG.svg") no-repeat;
 }
-.logo_MR{
+
+.logo_MR {
   background: url("../images/scLogo_MR.svg") no-repeat;
 }
-.logo_SL{
+
+.logo_SL {
   background: url("../images/scLogo_SL.svg") no-repeat;
 }
-.logo_SX{
+
+.logo_SX {
   background: url("../images/scLogo_SX.svg") no-repeat;
 }
-.logo_TM{
+
+.logo_TM {
   background: url("../images/scLogo_TM.svg") no-repeat;
 }
-.logo_WJ{
+
+.logo_WJ {
   background: url("../images/scLogo_WJ.svg") no-repeat;
 }
-.logo_WP{
+
+.logo_WP {
   background: url("../images/scLogo_WP.svg") no-repeat;
 }
-.logo_XH{
+
+.logo_XH {
   background: url("../images/scLogo_XH.svg") no-repeat;
 }
-.logo_YZ{
+
+.logo_YZ {
   background: url("../images/scLogo_YZ.svg") no-repeat;
 }
-.rightContent{
+
+.rightContent {
   float: left;
   width: 682px;
   height: 602px;
@@ -527,39 +550,45 @@ body {
   margin-left: -52px;
   display: none;
 }
-.rightContent_topL{
+
+.rightContent_topL {
   float: left;
   width: 461px;
   height: 171px;
   //background: #5f5f5f;
 }
-.rightContent_topR{
+
+.rightContent_topR {
   float: left;
   width: 213px;
   height: 171px;
   //background: #5fdd5f;
 }
-#myBigChart{
+
+#myBigChart {
   float: left;
   width: 200px;
   height: 171px;
   margin-left: 12px;
 }
-.rightContent_topB{
+
+.rightContent_topB {
   float: left;
-  width: 674px;
+  width: $showTab_width;
   height: 399px;
   //background: #d22921;
   margin-top: 15px;
 }
-.bigSLogo{
+
+.bigSLogo {
   $size: 90px;
   height: $size;
   width: $size;
   background-color: $myYellow-color;
   float: left;
 }
-.bigSLogo_size{
+
+.bigSLogo_size {
   $size: 70px;
   height: $size;
   width: $size;
@@ -567,13 +596,14 @@ body {
 }
 
 $schoolNameBox_height: 56px;
-.schoolNameBox{
+.schoolNameBox {
   float: left;
   width: 371px;
   height: $schoolNameBox_height;
   background-color: #D6D6D6;
 }
-#schoolName{
+
+#schoolName {
   float: left;
   font-size: 22px;
   font-weight: bold;
@@ -581,26 +611,30 @@ $schoolNameBox_height: 56px;
   height: $schoolNameBox_height;
   line-height: $schoolNameBox_height;
 }
-#schoolLevel{
+
+#schoolLevel {
   float: left;
   margin-left: 80px;
   height: $schoolNameBox_height;
   line-height: $schoolNameBox_height + 8px;
 }
-#schoolRank{
+
+#schoolRank {
   float: left;
   margin-left: 31px;
   width: 168px;
   height: 35px;
   line-height: 35px;
 }
-#schoolPerson{
+
+#schoolPerson {
   float: left;
   width: 171px;
   height: 35px;
   line-height: 35px;
 }
-#schoolStar{
+
+#schoolStar {
   float: left;
   width: 90px;
   height: 72px;
@@ -609,23 +643,108 @@ $schoolNameBox_height: 56px;
   padding-top: 8px;
   padding-left: 8px;
 }
-#schoolInf{
+
+#schoolInf {
   float: left;
   width: 371px;
   height: 81px;
   box-sizing: border-box;
   padding: 10px 20px;
 }
-#showTabs{
-  > ul{
+
+#showTabs {
+  width: $showTab_width;
+  padding: 0;
+  background-color: $lightGray-color;
+
+  ul {
     height: 23px;
-    width: 300px;
-    background-color: #9CA9C2;
+    width: $showTab_width;
+    background-color: $grayBox-color;
+    padding: 0;
+
+    li {
+      height: 22px;
+      width: 38px;
+      background-color: $aTab-color;
+      line-height: 23px;
+      text-align: center;
+      padding: 0;
+
+      &.ui-state-hover {
+        @include hoverBright(1.2);
+      }
+
+      &.ui-state-active {
+        height: 22px;
+        width: 77px;
+        background-color: $lightGray-color;
+
+        &.ui-state-hover {
+          @include hoverBright(1);
+        }
+
+        a {
+          cursor: default;
+        }
+      }
+    }
   }
-  a{
+
+  a {
     color: #ffffff;
-    &:active{
+    padding: 0;
+    width: 100%;
+
+    &:active {
       color: #ffffff;
     }
   }
+}
+
+.showTabsSize {
+  height: 377px;
+  padding: 5px!important;
+}
+.tableTile{
+  color: #ffffff;
+  text-align: center;
+
+  >div {
+    height: 43px;
+  }
+
+  div {
+    float: left;
+    margin: 0 1px 0 0;
+    background-color: $tableTitle-color;
+  }
+}
+$table_NumberN_width: 47px;
+$table_ot_width: 28px;
+.tableT_TB{
+  margin-right: 0!important;
+  background-color: transparent!important;
+  width: 10px + $table_NumberN_width * 11 + 1px;
+}
+.table_NumberN{
+  width: $table_NumberN_width;
+  height: 23px;
+}
+.table_ot{
+  width: $table_ot_width;
+}
+.table_Name{
+  width: $showTab_width - 10px - 14px - $table_NumberN_width * 11 - $table_ot_width * 3;
+}
+.tableT_NumberT{
+  margin-bottom: 1px!important;
+  width: 10px + $table_NumberN_width * 11;
+}
+.tableT_NumberB{
+  background-color: transparent!important;
+  margin-right: 0!important;
+}
+.tableT_Ms{
+  margin-right: 0!important;
 }
