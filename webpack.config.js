@@ -1,9 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const htmlPlugin = new HtmlWebpackPlugin({
-    template: './src/index.html',
-    filename: 'index.html'
-})
+
 
 module.exports = {
     mode: 'production', // development 或 production
@@ -12,7 +9,16 @@ module.exports = {
         path: path.join(__dirname, './dist'),
         filename: 'bundle.js'
     },
-    plugins: [htmlPlugin],
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+            filename: 'index.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/selectSchool.html',
+            filename: 'selectSchool.html'
+        }),
+    ],
     module: {
         rules: [
             // { test: /\.css$/, use: ['style-loader','css-loader','postcss-loader'] },

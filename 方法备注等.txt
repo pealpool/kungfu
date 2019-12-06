@@ -1,3 +1,18 @@
+github代理
+C:\Users\admin\.gitconfig
+
+[http "https://github.com"]
+	proxy = socks5://127.0.0.1:10808
+[https "https://github.com"]
+	proxy = socks5://127.0.0.1:10808
+
+
+
+
+
+
+
+
 webpack插件：
 MiniCssExtractPlugin	将所有css合并
 sass-loader	

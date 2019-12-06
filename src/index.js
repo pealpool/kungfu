@@ -1,8 +1,9 @@
 'use strict'
 import $ from 'jquery'
-import './css/baseCss.scss'
-// import './css/csshake.css'
+import './css/baseCss.scss';
 import 'webpack-jquery-ui';
+//一般不需要jq ui 的默认样式，就不用其css
+// require('webpack-jquery-ui/css');
 
 var echarts = require('echarts');
 
@@ -209,6 +210,7 @@ var option = {
         '#707070',
     ],
 };
-
 // 使用刚指定的配置项和数据显示图表。
 myChart.setOption(option);
+
+$( "#showTabs" ).tabs();

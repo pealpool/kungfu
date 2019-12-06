@@ -218,8 +218,11 @@ body {
   font-weight: bold;
   cursor: pointer;
 
-  img {
+  > div {
     float: left;
+    height: 34px;
+    width: 34px;
+    background: url("../images/goButton.png") no-repeat;
   }
 
   span {
@@ -538,8 +541,9 @@ body {
 }
 #myBigChart{
   float: left;
-  width: 213px;
+  width: 200px;
   height: 171px;
+  margin-left: 12px;
 }
 .rightContent_topB{
   float: left;
@@ -611,4 +615,17 @@ $schoolNameBox_height: 56px;
   height: 81px;
   box-sizing: border-box;
   padding: 10px 20px;
+}
+#showTabs{
+  > ul{
+    height: 23px;
+    width: 300px;
+    background-color: #9CA9C2;
+  }
+  a{
+    color: #ffffff;
+    &:active{
+      color: #ffffff;
+    }
+  }
 }
