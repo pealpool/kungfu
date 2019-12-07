@@ -189,8 +189,8 @@ var option = {
             {name: '伤害', max: 5},
             {name: '闪避', max: 5},
             {name: '防御', max: 5},
-            {name: '耐力', max: 5},
-            {name: '妨碍', max: 5}
+            {name: '妨碍', max: 5},
+            {name: '消耗', max: 5}
         ],
     },
     series: [{
