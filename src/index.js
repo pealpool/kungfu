@@ -145,9 +145,9 @@ $(document).on('click', '.next_02', function () {
         });
     }
 });
-$(".schoolBox").hover(function(){
+$(".schoolBox").hover(function () {
     $(this).find('.schoolBox_top').eq(0).addClass('schoolBox_top_hover');
-},function(){
+}, function () {
     $(this).find('.schoolBox_top').eq(0).removeClass('schoolBox_top_hover');
 });
 
@@ -213,11 +213,62 @@ var option = {
 // 使用刚指定的配置项和数据显示图表。
 myChart.setOption(option);
 
-$( "#showTabs" ).tabs();
+$("#showTabs").tabs();
 
 
-$(".tableContent").hover(function(){
+$(".tableContent").hover(function () {
     $(this).addClass('tableContent_hover');
-},function(){
+}, function () {
     $(this).removeClass('tableContent_hover');
+});
+
+$(document).on('click', '.tableT_Tx', function () {
+    $('.tableT_TBo').addClass('tableTitle-color');
+    $('.tableT_NumberT, .tableT_NumberB').hide('fade', 100, function () {
+        $('.tableT_TBo').switchClass('tableT_TBo', 'table_ot tableT_TB', 200, function () {
+            $('.tableT_NumberS').show();
+        });
+        $('.tableT_Lzo').html('<span>连<br/>招</span>').switchClass('tableT_Lzo', 'table_ot tableT_Lz', 200);
+        $('.tableT_Tx').switchClass('table_ot tableT_Tx', 'tableT_Txo', 200).html('命中后特效');
+    });
+
+    $('.table_TBo').addClass('grayBox-color');
+    $('.table_NumberN').hide('fade', 100, function () {
+        $('.table_TBo').switchClass('table_TBo', 'table_ot table_TB', 200);
+        $('.table_Lzo').html('-').switchClass('table_Lzo', 'table_ot table_Lz', 200);
+        $('.table_Tx').switchClass('table_ot table_Tx', 'table_Txo', 200).html('对方所有破绽率+6%，10s');
+    });
+});
+$(document).on('click', '.tableT_Lz', function () {
+    $('.tableT_TBo').addClass('tableTitle-color');
+    $('.tableT_NumberT, .tableT_NumberB').hide('fade', 100, function () {
+        $('.tableT_TBo').switchClass('tableT_TBo', 'table_ot tableT_TB', 200, function () {
+            $('.tableT_NumberS').show();
+        });
+        $('.tableT_Txo').html('<span>特<br/>效</span>').switchClass('tableT_Txo', 'table_ot tableT_Tx', 200);
+        $('.tableT_Lz').html('连招').switchClass('table_ot tableT_Lz', 'tableT_Lzo', 200);
+    });
+
+    $('.table_TBo').addClass('grayBox-color');
+    $('.table_NumberN').hide('fade', 100, function () {
+        $('.table_TBo').switchClass('table_TBo', 'table_ot table_TB', 200);
+        $('.table_Txo').html('<span>特</span>').switchClass('table_Txo', 'table_ot table_Tx', 200);
+        $('.table_Lz').switchClass('table_ot table_Lz', 'table_Lzo', 200).html('直接命中时，本次耐力伤害变为30');
+    });
+});
+$(document).on('click', '.tableT_TB', function () {
+    $('.tableT_NumberS').hide();
+    $('.tableT_Txo').html('<span>特<br/>效</span>').switchClass('tableT_Txo', 'table_ot tableT_Tx', 200);
+    $('.tableT_Lzo').html('<span>连<br/>招</span>').switchClass('tableT_Lzo', 'table_ot tableT_Lz', 200);
+    $('.tableT_TB').switchClass('table_ot tableT_TB', 'tableT_TBo', 200, function () {
+        $('.tableT_NumberT, .tableT_NumberB, .table_NumberN').show();
+        $('.tableT_TBo').removeClass('tableTitle-color');
+    });
+
+    $('.table_Lzo').html('-').switchClass('table_Lzo', 'table_ot table_Lz', 200);
+    $('.table_Txo').html('<span>特</span>').switchClass('table_Txo', 'table_ot table_Tx', 200);
+    $('.table_TB').switchClass('table_ot table_TB', 'table_ot table_TBo', 200, function () {
+        $('.table_NumberN').show();
+        $('.table_TBo').removeClass('grayBox-color');
+    });
 });
