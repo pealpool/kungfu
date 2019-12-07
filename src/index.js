@@ -1,5 +1,6 @@
 'use strict'
-import $ from 'jquery'
+import $ from 'jquery';
+import {data_S} from './schoolData.js';
 import './css/baseCss.scss';
 import 'webpack-jquery-ui';
 //一般不需要jq ui 的默认样式，就不用其css
@@ -233,11 +234,10 @@ $(document).on('click', '.tableT_Tx', function () {
     });
 
     $('.table_TBo').addClass('grayBox-color');
-    $('.table_NumberN').hide('fade', 100, function () {
-        $('.table_TBo').switchClass('table_TBo', 'table_ot table_TB', 200);
-        $('.table_Lzo').html('-').switchClass('table_Lzo', 'table_ot table_Lz', 200);
-        $('.table_Tx').switchClass('table_ot table_Tx', 'table_Txo', 200).html('对方所有破绽率+6%，10s');
-    });
+    $('.table_NumberN').hide('fade', 100);
+    $('.table_TBo').switchClass('table_TBo', 'table_ot table_TB', 200);
+    $('.table_Lzo').html('-').switchClass('table_Lzo', 'table_ot table_Lz', 200);
+    $('.table_Tx').switchClass('table_ot table_Tx', 'table_Txo', 201).html('对方所有破绽率+6%，10s');
 });
 $(document).on('click', '.tableT_Lz', function () {
     $('.tableT_TBo').addClass('tableTitle-color');
@@ -250,11 +250,10 @@ $(document).on('click', '.tableT_Lz', function () {
     });
 
     $('.table_TBo').addClass('grayBox-color');
-    $('.table_NumberN').hide('fade', 100, function () {
-        $('.table_TBo').switchClass('table_TBo', 'table_ot table_TB', 200);
-        $('.table_Txo').html('<span>特</span>').switchClass('table_Txo', 'table_ot table_Tx', 200);
-        $('.table_Lz').switchClass('table_ot table_Lz', 'table_Lzo', 200).html('直接命中时，本次耐力伤害变为30');
-    });
+    $('.table_NumberN').hide('fade', 100);
+    $('.table_TBo').switchClass('table_TBo', 'table_ot table_TB', 200);
+    $('.table_Txo').html('<span>特</span>').switchClass('table_Txo', 'table_ot table_Tx', 200);
+    $('.table_Lz').switchClass('table_ot table_Lz', 'table_Lzo', 201).html('直接命中时，本次耐力伤害变为30');
 });
 $(document).on('click', '.tableT_TB', function () {
     $('.tableT_NumberS').hide();
@@ -267,8 +266,8 @@ $(document).on('click', '.tableT_TB', function () {
 
     $('.table_Lzo').html('-').switchClass('table_Lzo', 'table_ot table_Lz', 200);
     $('.table_Txo').html('<span>特</span>').switchClass('table_Txo', 'table_ot table_Tx', 200);
-    $('.table_TB').switchClass('table_ot table_TB', 'table_ot table_TBo', 200, function () {
-        $('.table_NumberN').show();
-        $('.table_TBo').removeClass('grayBox-color');
-    });
+    $('.table_TB').switchClass('table_ot table_TB', 'table_ot table_TBo', 201);
+    $('.table_TB').removeClass('grayBox-color');
 });
+
+console.log(data_S.SL.star.length);

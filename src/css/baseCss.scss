@@ -854,6 +854,7 @@ $table_ot_width: 28px;
 .table_TBo {
   background-color: #ffffff !important;
   margin-right: 0 !important;
+  width: 10px + $table_NumberN_width * 11 + 1px;
 }
 
 $tableBox_Button_height: 56px;
