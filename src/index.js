@@ -186,11 +186,11 @@ var option = {
         },
         nameGap: 5,
         indicator: [
-            {name: '伤害', max: 5},
-            {name: '闪避', max: 5},
-            {name: '防御', max: 5},
-            {name: '妨碍', max: 5},
-            {name: '消耗', max: 5}
+            {name: '速攻', max: 43},
+            {name: '闪避', max: 33},
+            {name: '防御', max: 30},
+            {name: '妨碍', max: 30},
+            {name: '消耗', max: 44}
         ],
     },
     series: [{
@@ -203,7 +203,7 @@ var option = {
         },
         data: [
             {
-                value: [5, 3, 3, 3, 1]
+                value: [30, 10, 20, 5, 15]
             }
         ],
     }],
@@ -270,4 +270,4 @@ $(document).on('click', '.tableT_TB', function () {
     $('.table_TB').removeClass('grayBox-color');
 });
 
-console.log(data_S.SL.star.length);
+console.log(data_S.SL.zAtt.龙抓手.attTo_body[2]);
