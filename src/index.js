@@ -270,4 +270,4 @@ $(document).on('click', '.tableT_TB', function () {
     $('.table_TB').removeClass('grayBox-color');
 });
 
-console.log(data_S.SL.zAtt.龙抓手.attTo_body[2]);
+console.log(data_S.SL.zDef.达摩十八手.block);
