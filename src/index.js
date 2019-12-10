@@ -1,6 +1,6 @@
 'use strict'
 import $ from 'jquery';
-import {data_S} from './schoolData.js';
+import {data_S} from './myData.js';
 import './css/baseCss.scss';
 import 'webpack-jquery-ui';
 //一般不需要jq ui 的默认样式，就不用其css
@@ -270,4 +270,4 @@ $(document).on('click', '.tableT_TB', function () {
     $('.table_TB').removeClass('grayBox-color');
 });
 
-console.log(data_S.SL.zDef.达摩十八手.block);
+console.log(data_S.SL.level[2]);

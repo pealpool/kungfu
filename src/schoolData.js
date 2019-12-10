@@ -3,7 +3,7 @@
 //todo https://blog.csdn.net/weixin_44997252/article/details/89683152
 
 export const data_S = {
-    'SixData': [43,33,30,30,44],
+    'SixDataSum': [43,33,30,30,44],
     'SL': {
         'name': '少林派',
         'level': ['小僧', '武僧', '堂主','方丈'],
@@ -17,7 +17,7 @@ export const data_S = {
         'sixData': [15,5,11,2,0],
         'zAtt': {
             '龙抓手': {
-                'attFr_body': 'hand',
+                'attFr_body': ['hand',],
                 'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 140,
                 'hurt_i': 0,
