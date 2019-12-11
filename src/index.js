@@ -87,6 +87,7 @@ $(document).on('click', '.liFiBox_S', function () {
     }
 });
 //todo
+let tData;
 $(document).on('click', '.schoolBox', function () {
     $('#schoolBox_select').attr('id', '');
     $(this).attr('id', 'schoolBox_select');
@@ -96,22 +97,40 @@ $(document).on('click', '.schoolBox', function () {
     let mySchool = $(this).find('.schoolBox_logo').attr('class').toString().substr(-2, 2);
     let mySchoolClass = 'bigSLogo_size logo_' + mySchool;
     $('.bigSLogo_size').attr('class', mySchoolClass);
-    $('#schoolName').text(selectSchool(mySchool).name);
+
+    // tData = selectSchool(mySchool);
+    tData = data_S[''+mySchool+''];
+    $('#schoolName').text(tData.name);
     let myContent = '';
-    for (let i = 0; i < selectSchool(mySchool).level.length; i++) {
-        myContent = myContent + selectSchool(mySchool).level[i] + ' - ';
+    for (let i = 0; i < tData.level.length; i++) {
+        myContent = myContent + tData.level[i] + ' - ';
     }
     myContent = myContent.substring(0, myContent.length - 3);
     $('#schoolLevel').text(myContent);
-    $('#schoolRank').text('派别排名：' + selectSchool(mySchool).rank);
-    $('#schoolPerson').text('人数：' + selectSchool(mySchool).person);
+    $('#schoolRank').text('派别排名：' + tData.rank);
+    $('#schoolPerson').text('人数：' + tData.person);
     myContent = '';
-    for (let i = 0; i < selectSchool(mySchool).star.length; i++) {
-        myContent = myContent + '<div>' + selectSchool(mySchool).star[i] + '</div>';
+    for (let i = 0; i < tData.star.length; i++) {
+        myContent = myContent + '<div>' + tData.star[i] + '</div>';
     }
     $('#schoolStar').html(myContent);
-    $('#schoolInf').text(selectSchool(mySchool).inf);
-    setMyChat(selectSchool(mySchool).sixData, data_S.sixDataSum);
+    $('#schoolInf').text(tData.inf);
+    setMyChat(tData.sixData, data_S.sixDataSum);
+
+
+    $('.tableContentBox').html('');
+    myContent = '';
+    // let key = Object.keys(tData.zAtt);
+    // console.log(key[0]);
+    for (let key in tData.zAtt) {
+        myContent = '<div class="tableContent"><div class="table_Name">' + key + '</div><div class="table_TBo"><div class="table_NumberN">' + toZero(tData.zAtt[key].hurt_o) + '</div><div class="table_NumberN">' + toZero(tData.zAtt[key].hurt_i) + '</div><div class="table_NumberN">' + toPercent(tData.zAtt[key].hit) + '</div><div class="table_NumberN">' + toPercent(tData.zAtt[key].block) + '</div><div class="table_NumberN">' + tData.zAtt[key].time_q + 's</div><div class="table_NumberN">' + tData.zAtt[key].time_z + 's</div><div class="table_NumberN">' + tData.zAtt[key].time_h + 's</div><div class="table_NumberN">' + toZero(tData.zAtt[key].hurt_n) + '</div><div class="table_NumberN">' + toZero(tData.zAtt[key].const) + '</div><div class="table_NumberN">' + toPerS(tData.zAtt[key].hurt_l) + '</div><div class="table_NumberN">' + toZero(tData.zAtt[key].hurt_d) + '</div></div><div class="table_ot table_Tx">';
+        if (tData.zAtt[key].TX_inf != '') {
+            myContent = myContent + '<span>特</span>';
+        }
+        myContent = myContent + '</div><div class="table_ot table_Lz">-</div></div></div>';
+        $('#showTabs_A').find('.tableContentBox').append(myContent);
+    }
+
 
 });
 $(document).on('click', '#liFiBox_R', function () {
@@ -183,9 +202,9 @@ $(document).on('click', '.next_03', function () {
 });
 
 function setMyChat(six = new Array(5), sixsum = new Array(5)) {
-    var myChart = echarts.init(document.getElementById('myBigChart'));
+    myChart = echarts.init(document.getElementById('myBigChart'));
     // 指定图表的配置项和数据
-    var option = {
+    option = {
         renderer: 'svg',
         // title: {
         //     text: '基础雷达图'
@@ -237,9 +256,6 @@ function setMyChat(six = new Array(5), sixsum = new Array(5)) {
     };
 // 使用刚指定的配置项和数据显示图表。
     myChart.setOption(option);
-    console.log(six[0] + "," + six[1] + "," + six[2] + "," + six[3] + "," + six[4]);
-    console.log(sixsum[0] + "," + sixsum[1] + "," + sixsum[2] + "," + sixsum[3] + "," + sixsum[4]);
-
 
 }
 
@@ -300,12 +316,19 @@ var option = {
 myChart.setOption(option);
 
 
-
 $("#showTabs").tabs();
 
-$(".tableContent").hover(function () {
+
+//todo tableContent hover
+$(document).on('mouseenter', '.tableContent', function () {
     $(this).addClass('tableContent_hover');
-}, function () {
+    let zName = $(this).children('.table_Name').text();
+    let z = getValue(tData, $(this).children('.table_Name').text());
+    // console.log(tData.zAtt['' + zName + ''].remark);
+    $('.tableBox_Button_Rt').text(zName);
+    $('.tableBox_Button_C').text(tData.zAtt['' + zName + ''].remark);
+});
+$(document).on('mouseleave', '.tableContent', function () {
     $(this).removeClass('tableContent_hover');
 });
 
@@ -359,43 +382,43 @@ $(document).on('click', '.tableT_TB', function () {
 //---------------------------------------------------------------------------------
 
 function loadSchoolBoxStar() {
-
     $('.schoolBox_logo').each(function () {
         let mySchool = $(this).attr('class').toString().substr(-2, 2);
         let myContent = '';
-        for (let i = 0; i < selectSchool(mySchool).star.length; i++) {
-            myContent = myContent + '<div>' + selectSchool(mySchool).star[i] + '</div>';
+        for (let i = 0; i < data_S[''+mySchool+''].star.length; i++) {
+            myContent = myContent + '<div>' + data_S[''+mySchool+''].star[i] + '</div>';
         }
         $(this).parent().parent().children('.schoolBox_bottom').html(myContent);
     });
-
 }
 
-function selectSchool(s) {
-    switch (s) {
-        case 'WP':
-            return data_S.WP;
-        case 'SL':
-            return data_S.SL;
-        case 'YZ':
-            return data_S.YZ;
-        case 'WJ':
-            return data_S.WJ;
-        case 'DL':
-            return data_S.DL;
-        case 'EM':
-            return data_S.EM;
-        case 'JG':
-            return data_S.JG;
-        case 'TM':
-            return data_S.TM;
-        case 'XH':
-            return data_S.XH;
-        case 'SX':
-            return data_S.SX;
-        case 'MR':
-            return data_S.MR;
-        default:
-            console.log(s + '非法，selectSchool()');
+function toPercent(c) {
+    if (c > 0) {
+        return '+' + c * 100 + '%';
+    } else if (c < 0) {
+        return c * 100 + '%';
+    } else {
+        return '-';
+    }
+}
+
+function toZero(c) {
+    if (c == 0) {
+        return '-';
+    }
+    return c;
+}
+
+function toPerS(c) {
+    if (c == 0) {
+        return '-';
+    } else {
+        return c + "/s";
+    }
+}
+
+function getValue(json, name) {
+    for (name in json) {
+        return json[name];
     }
 }

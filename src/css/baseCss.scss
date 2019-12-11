@@ -573,7 +573,7 @@ body {
   margin-left: 12px;
 }
 
-.rightContent_topB {
+.rightContent_Bottom {
   float: left;
   width: $showTab_width;
   height: 399px;
@@ -823,6 +823,9 @@ $table_ot_width: 28px;
 .table_Lz{
   margin-right: 0 !important;
 }
+.tableContentBox{
+  float: left;
+}
 
 .tableContent {
   float: left;
@@ -891,6 +894,7 @@ $tableBox_Button_width: 664px;
 }
 
 .tableBox_Button_Rt {
+  width: 136px;
   font-size: 18px;
   margin-top: 6px;
 }

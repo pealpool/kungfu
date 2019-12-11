@@ -68,8 +68,6 @@
                         <span>少林派</span>
                     </div>
                     <div class="schoolBox_bottom">
-                        <div>防御　★</div>
-                        <div>外伤　★★★</div>
                     </div>
                 </li>
                 <li class="liFiBox_size schoolBox">
@@ -78,8 +76,6 @@
                         <span>武当派</span>
                     </div>
                     <div class="schoolBox_bottom">
-                        <div>防反　★</div>
-                        <div>内伤　★★★</div>
                     </div>
                 </li>
                 <li class="liFiBox_size schoolBox">
@@ -88,9 +84,6 @@
                         <span>峨眉派</span>
                     </div>
                     <div class="schoolBox_bottom">
-                        <div>闪反　★</div>
-                        <div>内伤　★★</div>
-                        <div>外伤　★★</div>
                     </div>
                 </li>
                 <li class="liFiBox_size schoolBox">
@@ -99,8 +92,6 @@
                         <span>鹰爪门</span>
                     </div>
                     <div class="schoolBox_bottom">
-                        <div>流血　★</div>
-                        <div>外伤　★★</div>
                     </div>
                 </li>
                 <li class="liFiBox_size schoolBox">
@@ -109,8 +100,6 @@
                         <span>五毒教</span>
                     </div>
                     <div class="schoolBox_bottom">
-                        <div>毒伤　★★★</div>
-                        <div>内伤　★</div>
                     </div>
                 </li>
                 <li class="liFiBox_size schoolBox">
@@ -119,8 +108,6 @@
                         <span>大理段氏</span>
                     </div>
                     <div class="schoolBox_bottom">
-                        <div>破绽　★★★</div>
-                        <div>削耐　★</div>
                     </div>
                 </li>
                 <li class="liFiBox_size schoolBox">
@@ -129,10 +116,6 @@
                         <span>金刚宗</span>
                     </div>
                     <div class="schoolBox_bottom">
-                        <div>防御　★</div>
-                        <div>削耐　★★★</div>
-                        <div>内伤　★</div>
-                        <div>外伤　★</div>
                     </div>
                 </li>
                 <li class="liFiBox_size schoolBox">
@@ -141,10 +124,6 @@
                         <span>唐门</span>
                     </div>
                     <div class="schoolBox_bottom">
-                        <div>闪避　★★</div>
-                        <div>毒伤　★</div>
-                        <div>流血　★</div>
-                        <div>破绽　★</div>
                     </div>
                 </li>
                 <li class="liFiBox_size schoolBox">
@@ -153,8 +132,6 @@
                         <span>血犼教</span>
                     </div>
                     <div class="schoolBox_bottom">
-                        <div>毒伤　★★</div>
-                        <div>流血　★★★</div>
                     </div>
                 </li>
                 <li class="liFiBox_size schoolBox">
@@ -163,9 +140,6 @@
                         <span>狮相门</span>
                     </div>
                     <div class="schoolBox_bottom">
-                        <div>防反　★★</div>
-                        <div>防御　★★★</div>
-                        <div>外伤　★</div>
                     </div>
                 </li>
                 <li class="liFiBox_size schoolBox">
@@ -174,10 +148,6 @@
                         <span>慕容氏</span>
                     </div>
                     <div class="schoolBox_bottom">
-                        <div>闪反　★★</div>
-                        <div>闪避　★</div>
-                        <div>破绽　★</div>
-                        <div>削耐　★</div>
                     </div>
                 </li>
             </ul>
@@ -186,7 +156,7 @@
     <div class="rightContent">
         <div class="rightContent_topL">
             <div class="bigSLogo">
-                <div class="bigSLogo_size logo_DL"></div>
+                <div class="bigSLogo_size"></div>
             </div>
             <div class="schoolNameBox">
                 <div id="schoolName">大理段氏</div>
@@ -205,44 +175,56 @@
         <div class="rightContent_topR">
             <div id="myBigChart"></div>
         </div>
-        <div class="rightContent_topB">
+        <div class="rightContent_Bottom">
             <div id="showTabs">
                 <ul>
-                    <li><a href="#showTabs-A">攻击</a></li>
-                    <li><a href="#showTabs-D">格闪</a></li>
-                    <li><a href="#showTabs-B">被动</a></li>
+                    <li><a href="#showTabs_A">攻击</a></li>
+                    <li><a href="#showTabs_D">格闪</a></li>
+                    <li><a href="#showTabs_B">被动</a></li>
                 </ul>
-                <div id="showTabs-A">
-                    <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec
-                        sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et
-                        lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis
-                        ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis
-                        aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci
-                        tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+                <div id="showTabs_A" class="showTabsSize">
+                    <div class="tableBox">
+                        <div class="tableTile">
+                            <div class="table_Name">攻击招式</div>
+                            <div class="tableT_TBo">
+                                <div class="tableT_NumberT">-</div>
+                                <div class="tableT_NumberB">
+                                    <div class="table_NumberN">外伤</div>
+                                    <div class="table_NumberN">内伤</div>
+                                    <div class="table_NumberN">命中</div>
+                                    <div class="table_NumberN">破挡</div>
+                                    <div class="table_NumberN">前摇</div>
+                                    <div class="table_NumberN">动作</div>
+                                    <div class="table_NumberN">后摇</div>
+                                    <div class="table_NumberN">耗耐</div>
+                                    <div class="table_NumberN">削耐</div>
+                                    <div class="table_NumberN">流血</div>
+                                    <div class="table_NumberN">毒伤</div>
+                                </div>
+                                <span class="tableT_NumberS">招<br/>式</span>
+                            </div>
+                            <div class="table_ot tableT_Tx">
+                                <span>特<br/>效</span>
+                            </div>
+                            <div class="table_ot tableT_Lz">
+                                <span>连<br/>招</span>
+                            </div>
+                        </div>
+                        <div class="tableContentBox">
+                        </div>
+                    </div>
+                    <div class="tableBox_Line"></div>
+                    <div class="tableBox_Button">
+                        <div class="tableBox_Button_L"></div>
+                        <div class="tableBox_Button_R">
+                            <div class="tableBox_Button_Rt">六十八罗汉拳</div>
+                            <div class="tableBox_Button_Rb">攻击招式</div>
+                        </div>
+                        <div class="tableBox_Button_C">　　乃是「武当七绝」之一，堪称轻功中的轻功，其注重身法的轻灵，不以步法多变来迷惑对手，要旨是身形轻巧，高低进退自如。</div>
+                    </div>
                 </div>
-                <div id="showTabs-D">
-                    <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus
-                        id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus
-                        eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse
-                        sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing.
-                        Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla.
-                        Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium
-                        posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et
-                        purus.</p>
-                </div>
-                <div id="showTabs-B">
-                    <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel
-                        vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante.
-                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                        Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula
-                        tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
-                    <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus.
-                        Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit.
-                        Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id
-                        euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut
-                        sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula
-                        velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus.
-                        Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+                <div id="showTabs_D" class="showTabsSize"></div>
+                <div id="showTabs_B" class="showTabsSize">
                 </div>
             </div>
         </div>

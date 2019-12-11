@@ -41,8 +41,8 @@
                 <li class="liFiBox_size liFiBox_B"></li>
                 <li class="liFiBox_size liFiBox_B"></li>
             </ul>
-            <ul class="loFiGd loFiGd_C">
-                <li class="liFiBox_size schoolBox">
+            <ul class="loFiGd loFiGd_C" style="display: block">
+                <li class="liFiBox_size schoolBox" style="display: block">
                     <div class="schoolBox_top">
                         <div class="schoolBox_logo logo_SL"></div>
                         <span>少林派</span>
@@ -52,7 +52,7 @@
                         <div class="schoolBox_val">外伤　★★★</div>
                     </div>
                 </li>
-                <li class="liFiBox_size schoolBox">
+                <li class="liFiBox_size schoolBox" style="display: block">
                     <div class="schoolBox_top">
                         <div class="schoolBox_logo logo_WP"></div>
                         <span>武当派</span>
@@ -62,7 +62,7 @@
                         <div class="schoolBox_val">内伤　★★★</div>
                     </div>
                 </li>
-                <li class="liFiBox_size schoolBox">
+                <li class="liFiBox_size schoolBox" style="display: block">
                     <div class="schoolBox_top">
                         <div class="schoolBox_logo logo_EM"></div>
                         <span>峨眉派</span>
@@ -73,7 +73,7 @@
                         <div class="schoolBox_val">外伤　★★</div>
                     </div>
                 </li>
-                <li class="liFiBox_size schoolBox">
+                <li class="liFiBox_size schoolBox" style="display: block">
                     <div class="schoolBox_top">
                         <div class="schoolBox_logo logo_YZ"></div>
                         <span>鹰爪门</span>
@@ -83,7 +83,7 @@
                         <div class="schoolBox_val">外伤　★★</div>
                     </div>
                 </li>
-                <li class="liFiBox_size schoolBox">
+                <li class="liFiBox_size schoolBox" style="display: block">
                     <div class="schoolBox_top">
                         <div class="schoolBox_logo logo_WJ"></div>
                         <span>五毒教</span>
@@ -93,7 +93,7 @@
                         <div class="schoolBox_val">内伤　★</div>
                     </div>
                 </li>
-                <li class="liFiBox_size schoolBox">
+                <li class="liFiBox_size schoolBox" style="display: block">
                     <div class="schoolBox_top">
                         <div class="schoolBox_logo logo_DL"></div>
                         <span>大理段氏</span>
@@ -103,7 +103,7 @@
                         <div class="schoolBox_val">削耐　★</div>
                     </div>
                 </li>
-                <li class="liFiBox_size schoolBox">
+                <li class="liFiBox_size schoolBox" style="display: block">
                     <div class="schoolBox_top">
                         <div class="schoolBox_logo logo_JG"></div>
                         <span>金刚宗</span>
@@ -115,7 +115,7 @@
                         <div class="schoolBox_val">外伤　★</div>
                     </div>
                 </li>
-                <li class="liFiBox_size schoolBox">
+                <li class="liFiBox_size schoolBox" style="display: block">
                     <div class="schoolBox_top">
                         <div class="schoolBox_logo logo_TM"></div>
                         <span>唐门</span>
@@ -127,7 +127,7 @@
                         <div class="schoolBox_val">破绽　★</div>
                     </div>
                 </li>
-                <li class="liFiBox_size schoolBox">
+                <li class="liFiBox_size schoolBox" style="display: block">
                     <div class="schoolBox_top">
                         <div class="schoolBox_logo logo_XH"></div>
                         <span>血犼教</span>
@@ -137,7 +137,7 @@
                         <div class="schoolBox_val">流血　★★★</div>
                     </div>
                 </li>
-                <li class="liFiBox_size schoolBox">
+                <li class="liFiBox_size schoolBox" style="display: block">
                     <div class="schoolBox_top">
                         <div class="schoolBox_logo logo_SX"></div>
                         <span>狮相门</span>
@@ -148,7 +148,7 @@
                         <div class="schoolBox_val">外伤　★</div>
                     </div>
                 </li>
-                <li class="liFiBox_size schoolBox">
+                <li class="liFiBox_size schoolBox" style="display: block">
                     <div class="schoolBox_top">
                         <div class="schoolBox_logo logo_MR"></div>
                         <span>慕容氏</span>
@@ -166,7 +166,7 @@
     <div class="rightContent" style="display: block">
         <div class="rightContent_topL">
             <div class="bigSLogo">
-                <div class="bigSLogo_size logo_DL"></div>
+                <div class="bigSLogo_size"></div>
             </div>
             <div class="schoolNameBox">
                 <div id="schoolName">大理段氏</div>
@@ -185,18 +185,18 @@
         <div class="rightContent_topR">
             <div id="myBigChart"></div>
         </div>
-        <div class="rightContent_topB">
+        <div class="rightContent_Bottom">
             <div id="showTabs">
                 <ul>
-                    <li><a href="#showTabs-A">攻击</a></li>
-                    <li><a href="#showTabs-D">格闪</a></li>
-                    <li><a href="#showTabs-B">被动</a></li>
+                    <li><a href="#showTabs_A">攻击</a></li>
+                    <li><a href="#showTabs_D">格闪</a></li>
+                    <li><a href="#showTabs_B">被动</a></li>
                 </ul>
-                <div id="showTabs-A" class="showTabsSize">
+                <div id="showTabs_A" class="showTabsSize">
                     <div class="tableBox">
                         <div class="tableTile">
                             <div class="table_Name">攻击招式</div>
-                            <div class="tableT_TB">
+                            <div class="tableT_TBo">
                                 <div class="tableT_NumberT">-</div>
                                 <div class="tableT_NumberB">
                                     <div class="table_NumberN">外伤</div>
@@ -211,189 +211,197 @@
                                     <div class="table_NumberN">流血</div>
                                     <div class="table_NumberN">毒伤</div>
                                 </div>
+                                <span class="tableT_NumberS">招<br/>式</span>
                             </div>
-                            <div class="table_ot tableT_Tx">特<br/>效</div>
-                            <div class="table_ot tableT_Lz">连<br/>招</div>
+                            <div class="table_ot tableT_Tx">
+                                <span>特<br/>效</span>
+                            </div>
+                            <div class="table_ot tableT_Lz">
+                                <span>连<br/>招</span>
+                            </div>
                         </div>
-                        <div class="tableContent">
-                            <div class="table_Name">六十八罗汉拳</div>
-                            <div class="table_TB">
-                                <div class="table_NumberN">211</div>
-                                <div class="table_NumberN">113</div>
-                                <div class="table_NumberN">+100%</div>
-                                <div class="table_NumberN">+100%</div>
-                                <div class="table_NumberN">0.3s</div>
-                                <div class="table_NumberN">1.2s</div>
-                                <div class="table_NumberN">0.4s</div>
-                                <div class="table_NumberN">10</div>
-                                <div class="table_NumberN">80</div>
-                                <div class="table_NumberN">20/s</div>
-                                <div class="table_NumberN">50</div>
+
+                        <div class="tableContentBox">
+                            <div class="tableContent">
+                                <div class="table_Name">六十八罗汉拳</div>
+                                <div class="table_TBo">
+                                    <div class="table_NumberN">211</div>
+                                    <div class="table_NumberN">113</div>
+                                    <div class="table_NumberN">+100%</div>
+                                    <div class="table_NumberN">+100%</div>
+                                    <div class="table_NumberN">0.3s</div>
+                                    <div class="table_NumberN">1.2s</div>
+                                    <div class="table_NumberN">0.4s</div>
+                                    <div class="table_NumberN">10</div>
+                                    <div class="table_NumberN">80</div>
+                                    <div class="table_NumberN">20/s</div>
+                                    <div class="table_NumberN">50</div>
+                                </div>
+                                <div class="table_ot table_Tx"><span>特</span></div>
+                                <div class="table_ot table_Lz">-</div>
                             </div>
-                            <div class="table_ot tableT_Tx"><span>特</span></div>
-                            <div class="table_ot tableT_Lz">-</div>
-                        </div>
-                        <div class="tableContent">
-                            <div class="table_Name">六十八罗汉拳</div>
-                            <div class="table_TB">
-                                <div class="table_NumberN">211</div>
-                                <div class="table_NumberN">113</div>
-                                <div class="table_NumberN">+100%</div>
-                                <div class="table_NumberN">+100%</div>
-                                <div class="table_NumberN">0.3s</div>
-                                <div class="table_NumberN">1.2s</div>
-                                <div class="table_NumberN">0.4s</div>
-                                <div class="table_NumberN">10</div>
-                                <div class="table_NumberN">80</div>
-                                <div class="table_NumberN">20/s</div>
-                                <div class="table_NumberN">50</div>
+                            <div class="tableContent">
+                                <div class="table_Name">六十八罗汉拳</div>
+                                <div class="table_TBo">
+                                    <div class="table_NumberN">211</div>
+                                    <div class="table_NumberN">113</div>
+                                    <div class="table_NumberN">+100%</div>
+                                    <div class="table_NumberN">+100%</div>
+                                    <div class="table_NumberN">0.3s</div>
+                                    <div class="table_NumberN">1.2s</div>
+                                    <div class="table_NumberN">0.4s</div>
+                                    <div class="table_NumberN">10</div>
+                                    <div class="table_NumberN">80</div>
+                                    <div class="table_NumberN">20/s</div>
+                                    <div class="table_NumberN">50</div>
+                                </div>
+                                <div class="table_ot table_Tx"><span>特</span></div>
+                                <div class="table_ot table_Lz">-</div>
                             </div>
-                            <div class="table_ot tableT_Tx"><span>特</span></div>
-                            <div class="table_ot tableT_Lz">-</div>
-                        </div>
-                        <div class="tableContent">
-                            <div class="table_Name">六十八罗汉拳</div>
-                            <div class="table_TB">
-                                <div class="table_NumberN">211</div>
-                                <div class="table_NumberN">113</div>
-                                <div class="table_NumberN">+100%</div>
-                                <div class="table_NumberN">+100%</div>
-                                <div class="table_NumberN">0.3s</div>
-                                <div class="table_NumberN">1.2s</div>
-                                <div class="table_NumberN">0.4s</div>
-                                <div class="table_NumberN">10</div>
-                                <div class="table_NumberN">80</div>
-                                <div class="table_NumberN">20/s</div>
-                                <div class="table_NumberN">50</div>
+                            <div class="tableContent">
+                                <div class="table_Name">六十八罗汉拳</div>
+                                <div class="table_TBo">
+                                    <div class="table_NumberN">211</div>
+                                    <div class="table_NumberN">113</div>
+                                    <div class="table_NumberN">+100%</div>
+                                    <div class="table_NumberN">+100%</div>
+                                    <div class="table_NumberN">0.3s</div>
+                                    <div class="table_NumberN">1.2s</div>
+                                    <div class="table_NumberN">0.4s</div>
+                                    <div class="table_NumberN">10</div>
+                                    <div class="table_NumberN">80</div>
+                                    <div class="table_NumberN">20/s</div>
+                                    <div class="table_NumberN">50</div>
+                                </div>
+                                <div class="table_ot table_Tx"><span>特</span></div>
+                                <div class="table_ot table_Lz">-</div>
                             </div>
-                            <div class="table_ot tableT_Tx"><span>特</span></div>
-                            <div class="table_ot tableT_Lz">-</div>
-                        </div>
-                        <div class="tableContent">
-                            <div class="table_Name">六十八罗汉拳</div>
-                            <div class="table_TB">
-                                <div class="table_NumberN">211</div>
-                                <div class="table_NumberN">113</div>
-                                <div class="table_NumberN">+100%</div>
-                                <div class="table_NumberN">+100%</div>
-                                <div class="table_NumberN">0.3s</div>
-                                <div class="table_NumberN">1.2s</div>
-                                <div class="table_NumberN">0.4s</div>
-                                <div class="table_NumberN">10</div>
-                                <div class="table_NumberN">80</div>
-                                <div class="table_NumberN">20/s</div>
-                                <div class="table_NumberN">50</div>
+                            <div class="tableContent">
+                                <div class="table_Name">六十八罗汉拳</div>
+                                <div class="table_TBo">
+                                    <div class="table_NumberN">211</div>
+                                    <div class="table_NumberN">113</div>
+                                    <div class="table_NumberN">+100%</div>
+                                    <div class="table_NumberN">+100%</div>
+                                    <div class="table_NumberN">0.3s</div>
+                                    <div class="table_NumberN">1.2s</div>
+                                    <div class="table_NumberN">0.4s</div>
+                                    <div class="table_NumberN">10</div>
+                                    <div class="table_NumberN">80</div>
+                                    <div class="table_NumberN">20/s</div>
+                                    <div class="table_NumberN">50</div>
+                                </div>
+                                <div class="table_ot table_Tx"><span>特</span></div>
+                                <div class="table_ot table_Lz">-</div>
                             </div>
-                            <div class="table_ot tableT_Tx"><span>特</span></div>
-                            <div class="table_ot tableT_Lz">-</div>
-                        </div>
-                        <div class="tableContent">
-                            <div class="table_Name">六十八罗汉拳</div>
-                            <div class="table_TB">
-                                <div class="table_NumberN">211</div>
-                                <div class="table_NumberN">113</div>
-                                <div class="table_NumberN">+100%</div>
-                                <div class="table_NumberN">+100%</div>
-                                <div class="table_NumberN">0.3s</div>
-                                <div class="table_NumberN">1.2s</div>
-                                <div class="table_NumberN">0.4s</div>
-                                <div class="table_NumberN">10</div>
-                                <div class="table_NumberN">80</div>
-                                <div class="table_NumberN">20/s</div>
-                                <div class="table_NumberN">50</div>
+                            <div class="tableContent">
+                                <div class="table_Name">六十八罗汉拳</div>
+                                <div class="table_TBo">
+                                    <div class="table_NumberN">211</div>
+                                    <div class="table_NumberN">113</div>
+                                    <div class="table_NumberN">+100%</div>
+                                    <div class="table_NumberN">+100%</div>
+                                    <div class="table_NumberN">0.3s</div>
+                                    <div class="table_NumberN">1.2s</div>
+                                    <div class="table_NumberN">0.4s</div>
+                                    <div class="table_NumberN">10</div>
+                                    <div class="table_NumberN">80</div>
+                                    <div class="table_NumberN">20/s</div>
+                                    <div class="table_NumberN">50</div>
+                                </div>
+                                <div class="table_ot table_Tx"><span>特</span></div>
+                                <div class="table_ot table_Lz">-</div>
                             </div>
-                            <div class="table_ot tableT_Tx"><span>特</span></div>
-                            <div class="table_ot tableT_Lz">-</div>
-                        </div>
-                        <div class="tableContent">
-                            <div class="table_Name">六十八罗汉拳</div>
-                            <div class="table_TB">
-                                <div class="table_NumberN">211</div>
-                                <div class="table_NumberN">113</div>
-                                <div class="table_NumberN">+100%</div>
-                                <div class="table_NumberN">+100%</div>
-                                <div class="table_NumberN">0.3s</div>
-                                <div class="table_NumberN">1.2s</div>
-                                <div class="table_NumberN">0.4s</div>
-                                <div class="table_NumberN">10</div>
-                                <div class="table_NumberN">80</div>
-                                <div class="table_NumberN">20/s</div>
-                                <div class="table_NumberN">50</div>
+                            <div class="tableContent">
+                                <div class="table_Name">六十八罗汉拳</div>
+                                <div class="table_TBo">
+                                    <div class="table_NumberN">211</div>
+                                    <div class="table_NumberN">113</div>
+                                    <div class="table_NumberN">+100%</div>
+                                    <div class="table_NumberN">+100%</div>
+                                    <div class="table_NumberN">0.3s</div>
+                                    <div class="table_NumberN">1.2s</div>
+                                    <div class="table_NumberN">0.4s</div>
+                                    <div class="table_NumberN">10</div>
+                                    <div class="table_NumberN">80</div>
+                                    <div class="table_NumberN">20/s</div>
+                                    <div class="table_NumberN">50</div>
+                                </div>
+                                <div class="table_ot table_Tx"><span>特</span></div>
+                                <div class="table_ot table_Lz">-</div>
                             </div>
-                            <div class="table_ot tableT_Tx"><span>特</span></div>
-                            <div class="table_ot tableT_Lz">-</div>
-                        </div>
-                        <div class="tableContent">
-                            <div class="table_Name">六十八罗汉拳</div>
-                            <div class="table_TB">
-                                <div class="table_NumberN">211</div>
-                                <div class="table_NumberN">113</div>
-                                <div class="table_NumberN">+100%</div>
-                                <div class="table_NumberN">+100%</div>
-                                <div class="table_NumberN">0.3s</div>
-                                <div class="table_NumberN">1.2s</div>
-                                <div class="table_NumberN">0.4s</div>
-                                <div class="table_NumberN">10</div>
-                                <div class="table_NumberN">80</div>
-                                <div class="table_NumberN">20/s</div>
-                                <div class="table_NumberN">50</div>
+                            <div class="tableContent">
+                                <div class="table_Name">六十八罗汉拳</div>
+                                <div class="table_TBo">
+                                    <div class="table_NumberN">211</div>
+                                    <div class="table_NumberN">113</div>
+                                    <div class="table_NumberN">+100%</div>
+                                    <div class="table_NumberN">+100%</div>
+                                    <div class="table_NumberN">0.3s</div>
+                                    <div class="table_NumberN">1.2s</div>
+                                    <div class="table_NumberN">0.4s</div>
+                                    <div class="table_NumberN">10</div>
+                                    <div class="table_NumberN">80</div>
+                                    <div class="table_NumberN">20/s</div>
+                                    <div class="table_NumberN">50</div>
+                                </div>
+                                <div class="table_ot table_Tx"><span>特</span></div>
+                                <div class="table_ot table_Lz">-</div>
                             </div>
-                            <div class="table_ot tableT_Tx"><span>特</span></div>
-                            <div class="table_ot tableT_Lz">-</div>
-                        </div>
-                        <div class="tableContent">
-                            <div class="table_Name">六十八罗汉拳</div>
-                            <div class="table_TB">
-                                <div class="table_NumberN">211</div>
-                                <div class="table_NumberN">113</div>
-                                <div class="table_NumberN">+100%</div>
-                                <div class="table_NumberN">+100%</div>
-                                <div class="table_NumberN">0.3s</div>
-                                <div class="table_NumberN">1.2s</div>
-                                <div class="table_NumberN">0.4s</div>
-                                <div class="table_NumberN">10</div>
-                                <div class="table_NumberN">80</div>
-                                <div class="table_NumberN">20/s</div>
-                                <div class="table_NumberN">50</div>
+                            <div class="tableContent">
+                                <div class="table_Name">六十八罗汉拳</div>
+                                <div class="table_TBo">
+                                    <div class="table_NumberN">211</div>
+                                    <div class="table_NumberN">113</div>
+                                    <div class="table_NumberN">+100%</div>
+                                    <div class="table_NumberN">+100%</div>
+                                    <div class="table_NumberN">0.3s</div>
+                                    <div class="table_NumberN">1.2s</div>
+                                    <div class="table_NumberN">0.4s</div>
+                                    <div class="table_NumberN">10</div>
+                                    <div class="table_NumberN">80</div>
+                                    <div class="table_NumberN">20/s</div>
+                                    <div class="table_NumberN">50</div>
+                                </div>
+                                <div class="table_ot table_Tx"><span>特</span></div>
+                                <div class="table_ot table_Lz">-</div>
                             </div>
-                            <div class="table_ot tableT_Tx"><span>特</span></div>
-                            <div class="table_ot tableT_Lz">-</div>
-                        </div>
-                        <div class="tableContent">
-                            <div class="table_Name">六十八罗汉拳</div>
-                            <div class="table_TB">
-                                <div class="table_NumberN">211</div>
-                                <div class="table_NumberN">113</div>
-                                <div class="table_NumberN">+100%</div>
-                                <div class="table_NumberN">+100%</div>
-                                <div class="table_NumberN">0.3s</div>
-                                <div class="table_NumberN">1.2s</div>
-                                <div class="table_NumberN">0.4s</div>
-                                <div class="table_NumberN">10</div>
-                                <div class="table_NumberN">80</div>
-                                <div class="table_NumberN">20/s</div>
-                                <div class="table_NumberN">50</div>
+                            <div class="tableContent">
+                                <div class="table_Name">六十八罗汉拳</div>
+                                <div class="table_TBo">
+                                    <div class="table_NumberN">211</div>
+                                    <div class="table_NumberN">113</div>
+                                    <div class="table_NumberN">+100%</div>
+                                    <div class="table_NumberN">+100%</div>
+                                    <div class="table_NumberN">0.3s</div>
+                                    <div class="table_NumberN">1.2s</div>
+                                    <div class="table_NumberN">0.4s</div>
+                                    <div class="table_NumberN">10</div>
+                                    <div class="table_NumberN">80</div>
+                                    <div class="table_NumberN">20/s</div>
+                                    <div class="table_NumberN">50</div>
+                                </div>
+                                <div class="table_ot table_Tx"><span>特</span></div>
+                                <div class="table_ot table_Lz">-</div>
                             </div>
-                            <div class="table_ot tableT_Tx"><span>特</span></div>
-                            <div class="table_ot tableT_Lz">-</div>
-                        </div>
-                        <div class="tableContent">
-                            <div class="table_Name">六十八罗汉拳</div>
-                            <div class="table_TB">
-                                <div class="table_NumberN">211</div>
-                                <div class="table_NumberN">113</div>
-                                <div class="table_NumberN">+100%</div>
-                                <div class="table_NumberN">+100%</div>
-                                <div class="table_NumberN">0.3s</div>
-                                <div class="table_NumberN">1.2s</div>
-                                <div class="table_NumberN">0.4s</div>
-                                <div class="table_NumberN">10</div>
-                                <div class="table_NumberN">80</div>
-                                <div class="table_NumberN">20/s</div>
-                                <div class="table_NumberN">50</div>
+                            <div class="tableContent">
+                                <div class="table_Name">六十八罗汉拳</div>
+                                <div class="table_TBo">
+                                    <div class="table_NumberN">211</div>
+                                    <div class="table_NumberN">113</div>
+                                    <div class="table_NumberN">+100%</div>
+                                    <div class="table_NumberN">+100%</div>
+                                    <div class="table_NumberN">0.3s</div>
+                                    <div class="table_NumberN">1.2s</div>
+                                    <div class="table_NumberN">0.4s</div>
+                                    <div class="table_NumberN">10</div>
+                                    <div class="table_NumberN">80</div>
+                                    <div class="table_NumberN">20/s</div>
+                                    <div class="table_NumberN">50</div>
+                                </div>
+                                <div class="table_ot table_Tx"><span>特</span></div>
+                                <div class="table_ot table_Lz">-</div>
                             </div>
-                            <div class="table_ot tableT_Tx"><span>特</span></div>
-                            <div class="table_ot tableT_Lz">-</div>
                         </div>
                     </div>
                     <div class="tableBox_Line"></div>
@@ -406,8 +414,8 @@
                         <div class="tableBox_Button_C">　　乃是「武当七绝」之一，堪称轻功中的轻功，其注重身法的轻灵，不以步法多变来迷惑对手，要旨是身形轻巧，高低进退自如。</div>
                     </div>
                 </div>
-                <div id="showTabs-D" class="showTabsSize"></div>
-                <div id="showTabs-B" class="showTabsSize">
+                <div id="showTabs_D" class="showTabsSize"></div>
+                <div id="showTabs_B" class="showTabsSize">
                 </div>
             </div>
         </div>
