@@ -610,12 +610,13 @@ $schoolNameBox_height: 56px;
   font-weight: bold;
   margin-left: 31px;
   height: $schoolNameBox_height;
+  width: 100px;
   line-height: $schoolNameBox_height;
 }
 
 #schoolLevel {
   float: left;
-  margin-left: 80px;
+  margin-left: 60px;
   height: $schoolNameBox_height;
   line-height: $schoolNameBox_height + 8px;
 }

@@ -9,6 +9,9 @@ import 'webpack-jquery-ui';
 var echarts = require('echarts');
 
 
+loadSchoolBoxStar();
+
+
 function myHideRemove(e) {
     $(e).hide('fade', 300, function () {
         $(e).remove();
@@ -83,12 +86,33 @@ $(document).on('click', '.liFiBox_S', function () {
         $('.next_off').removeClass('next_off');
     }
 });
+//todo
 $(document).on('click', '.schoolBox', function () {
     $('#schoolBox_select').attr('id', '');
     $(this).attr('id', 'schoolBox_select');
     if ($('#schoolBox_select').length > 0) {
         $('.next_off').removeClass('next_off');
     }
+    let mySchool = $(this).find('.schoolBox_logo').attr('class').toString().substr(-2, 2);
+    let mySchoolClass = 'bigSLogo_size logo_' + mySchool;
+    $('.bigSLogo_size').attr('class', mySchoolClass);
+    $('#schoolName').text(selectSchool(mySchool).name);
+    let myContent = '';
+    for (let i = 0; i < selectSchool(mySchool).level.length; i++) {
+        myContent = myContent + selectSchool(mySchool).level[i] + ' - ';
+    }
+    myContent = myContent.substring(0, myContent.length - 3);
+    $('#schoolLevel').text(myContent);
+    $('#schoolRank').text('派别排名：' + selectSchool(mySchool).rank);
+    $('#schoolPerson').text('人数：' + selectSchool(mySchool).person);
+    myContent = '';
+    for (let i = 0; i < selectSchool(mySchool).star.length; i++) {
+        myContent = myContent + '<div>' + selectSchool(mySchool).star[i] + '</div>';
+    }
+    $('#schoolStar').html(myContent);
+    $('#schoolInf').text(selectSchool(mySchool).inf);
+    setMyChat(selectSchool(mySchool).sixData, data_S.sixDataSum);
+
 });
 $(document).on('click', '#liFiBox_R', function () {
     if ($(this).hasClass('liFiBox_R')) {
@@ -158,9 +182,69 @@ $(document).on('click', '.next_03', function () {
     }
 });
 
+function setMyChat(six = new Array(5), sixsum = new Array(5)) {
+    var myChart = echarts.init(document.getElementById('myBigChart'));
+    // 指定图表的配置项和数据
+    var option = {
+        renderer: 'svg',
+        // title: {
+        //     text: '基础雷达图'
+        // },
+        // tooltip: {
+        //     show: false,
+        // },
+        // legend: {
+        //     data: ['预算分配（Allocated Budget）', '实际开销（Actual Spending）']
+        // },
+        radar: {
+            // shape: 'circle',
+            name: {
+                textStyle: {
+                    color: '#1A1E26',
+                    // fontSize: '12px',
+                    // backgroundColor: '#999',
+                    // borderRadius: 3,
+                    // padding: [3, 5]
+                }
+            },
+            nameGap: 5,
+            indicator: [
+                {name: '速攻', max: sixsum[0]},
+                {name: '闪避', max: sixsum[1]},
+                {name: '防御', max: sixsum[2]},
+                {name: '妨碍', max: sixsum[3]},
+                {name: '消耗', max: sixsum[4]}
+            ],
+        },
+        series: [{
+            // name: '预算 vs 开销（Budget vs spending）',
+            type: 'radar',
+            areaStyle: {
+                normal: {
+                    color: 'rgba(156, 169, 194, 0.5)'
+                }
+            },
+            data: [
+                {
+                    // value: [30, 10, 20, 5, 15]
+                    value: [six[0], six[1], six[2], six[3], six[4]]
+                }
+            ],
+        }],
+        color: [
+            '#707070',
+        ],
+    };
+// 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+    console.log(six[0] + "," + six[1] + "," + six[2] + "," + six[3] + "," + six[4]);
+    console.log(sixsum[0] + "," + sixsum[1] + "," + sixsum[2] + "," + sixsum[3] + "," + sixsum[4]);
+
+
+}
+
 
 var myChart = echarts.init(document.getElementById('myBigChart'));
-
 // 指定图表的配置项和数据
 var option = {
     renderer: 'svg',
@@ -186,11 +270,11 @@ var option = {
         },
         nameGap: 5,
         indicator: [
-            {name: '速攻', max: 43},
-            {name: '闪避', max: 33},
-            {name: '防御', max: 30},
-            {name: '妨碍', max: 30},
-            {name: '消耗', max: 44}
+            {name: '速攻', max: 50},
+            {name: '闪避', max: 50},
+            {name: '防御', max: 50},
+            {name: '妨碍', max: 50},
+            {name: '消耗', max: 50}
         ],
     },
     series: [{
@@ -203,7 +287,8 @@ var option = {
         },
         data: [
             {
-                value: [30, 10, 20, 5, 15]
+                value: [0, 0, 0, 0, 0]
+                // vvalue: [six[0], six[1], six[2], six[3], six[4]]
             }
         ],
     }],
@@ -214,8 +299,9 @@ var option = {
 // 使用刚指定的配置项和数据显示图表。
 myChart.setOption(option);
 
-$("#showTabs").tabs();
 
+
+$("#showTabs").tabs();
 
 $(".tableContent").hover(function () {
     $(this).addClass('tableContent_hover');
@@ -270,4 +356,46 @@ $(document).on('click', '.tableT_TB', function () {
     $('.table_TB').removeClass('grayBox-color');
 });
 
-console.log(data_S.WJ.zAtt.三阴蜈蚣爪.hurt_d);
+//---------------------------------------------------------------------------------
+
+function loadSchoolBoxStar() {
+
+    $('.schoolBox_logo').each(function () {
+        let mySchool = $(this).attr('class').toString().substr(-2, 2);
+        let myContent = '';
+        for (let i = 0; i < selectSchool(mySchool).star.length; i++) {
+            myContent = myContent + '<div>' + selectSchool(mySchool).star[i] + '</div>';
+        }
+        $(this).parent().parent().children('.schoolBox_bottom').html(myContent);
+    });
+
+}
+
+function selectSchool(s) {
+    switch (s) {
+        case 'WP':
+            return data_S.WP;
+        case 'SL':
+            return data_S.SL;
+        case 'YZ':
+            return data_S.YZ;
+        case 'WJ':
+            return data_S.WJ;
+        case 'DL':
+            return data_S.DL;
+        case 'EM':
+            return data_S.EM;
+        case 'JG':
+            return data_S.JG;
+        case 'TM':
+            return data_S.TM;
+        case 'XH':
+            return data_S.XH;
+        case 'SX':
+            return data_S.SX;
+        case 'MR':
+            return data_S.MR;
+        default:
+            console.log(s + '非法，selectSchool()');
+    }
+}
