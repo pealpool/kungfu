@@ -270,4 +270,4 @@ $(document).on('click', '.tableT_TB', function () {
     $('.table_TB').removeClass('grayBox-color');
 });
 
-console.log(data_S.SL.level[2]);
+console.log(data_S.WJ.zAtt.三阴蜈蚣爪.hurt_d);
