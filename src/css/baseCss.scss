@@ -759,6 +759,23 @@ $schoolNameBox_height: 56px;
   }
 }
 
+.tableTile_D {
+  float: left;
+  width: 664px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 3px;
+  height: 24px;
+  line-height: 24px;
+
+  div {
+    height: 24px;
+    float: left;
+    margin: 0 1px 0 0;
+    background-color: $tableTitle-color;
+  }
+}
+
 $table_NumberN_width: 44px;
 $table_NumberN_height: 23px;
 $table_ot_width: 28px;
@@ -793,11 +810,24 @@ $table_ot_width: 28px;
   }
 }
 
+.table_Number_Db {
+  height: $table_NumberN_height;
+  line-height: $table_NumberN_height;
+  width: $table_NumberN_width + 9px;
+}
+.table_Number_Ds {
+  height: $table_NumberN_height;
+  line-height: $table_NumberN_height;
+  width: $table_NumberN_width - 6px;
+}
+
+
 .table_ot {
   width: $table_ot_width;
 }
 
-.table_Name {
+.table_Name,
+.table_Name_D {
   width: $showTab_width - 10px - 13px - $table_NumberN_width * 11 - $table_ot_width * 2;
 }
 
@@ -819,7 +849,7 @@ $table_ot_width: 28px;
 }
 
 .content_Tx,
-.content_Lz{
+.content_Lz {
   display: none;
 }
 
@@ -830,7 +860,10 @@ $table_ot_width: 28px;
   margin-right: 0 !important;
 }
 
-.tableContentBox {
+.tableContentBox_A,
+.tableContentBox_D1,
+.tableContentBox_D2,
+.tableContentBox_B{
   float: left;
 }
 
@@ -857,7 +890,8 @@ $table_ot_width: 28px;
     text-align: center;
   }
 
-  .table_Name {
+  .table_Name,
+  .table_Name_D {
     width: $showTab_width - 10px - 13px - $table_NumberN_width * 11 - $table_ot_width * 2 - 1px;
   }
 }
@@ -902,6 +936,7 @@ $tableBox_Button_width: 664px;
 
 .tableBox_Button_Rt {
   width: 136px;
+  height: 24px;
   font-size: 18px;
   margin-top: 6px;
 }
@@ -921,4 +956,26 @@ $tableBox_Button_width: 664px;
 
 .tableT_NumberS {
   display: none;
+}
+
+.tableTile_D_margin {
+  margin-top: 10px;
+}
+
+$table_Lz_D_width: 179px;
+.table_Lz_D {
+  width: $table_Lz_D_width;
+  margin-right: 0 !important;
+}
+
+.table_Tx_D {
+  width: $showTab_width - 10px - ($showTab_width - 10px - 13px - $table_NumberN_width * 11 - $table_ot_width * 2) - ($table_NumberN_width + 9px) - $table_Lz_D_width - 3px;
+}
+
+.table_Tx_S {
+  width: $showTab_width - 10px - ($showTab_width - 10px - 13px - $table_NumberN_width * 11 - $table_ot_width * 2) - ($table_NumberN_width * 2 + 9px - 6px) - $table_Lz_D_width - 4px;
+}
+.table_Tx_B{
+  margin-right: 0!important;
+  width: $showTab_width - 10px - ($showTab_width - 10px - 13px - $table_NumberN_width * 11 - $table_ot_width * 2) - 1px;
 }

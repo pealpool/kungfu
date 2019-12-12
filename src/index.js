@@ -118,8 +118,7 @@ $(document).on('click', '.schoolBox', function () {
     $('#schoolInf').text(tData.inf);
     setMyChat(tData.sixData, data_S.sixDataSum);
 
-
-    $('.tableContentBox').html('');
+    $('.tableContentBox_A').html('');
     if ($('#showTabs_A').find('.tableT_TBo').length > 0) {
         showTableContentBox_Att_TBo();
     } else if ($('#showTabs_A').find('.tableT_Txo').length > 0) {
@@ -128,8 +127,49 @@ $(document).on('click', '.schoolBox', function () {
         showTableContentBox_Att_Lzo();
     }
 
+    $('.tableContentBox_D1').html('');
+    $('.tableContentBox_D2').html('');
+    showTableContentBox_Def();
+    showTableContentBox_Dod();
+    $('.tableContentBox_B').html('');
+    showTableContentBox_Pas();
 
 });
+
+function showTableContentBox_Def() {
+    let myContent = '';
+    for (let key in tData.zDef) {
+        myContent = '<div class="tableContent"><div class="table_Name_D">' + key +
+            '</div><div class="table_Number_Db">' + toPercent(tData.zDef[key].block) +
+            '</div><div class="table_Tx_D">' + tData.zDef[key].TX_inf +
+            '</div><div class="table_Lz_D">' + tData.zDef[key].LZ_inf +
+            '</div></div>';
+        $('#showTabs_D').find('.tableContentBox_D1').append(myContent);
+    }
+}
+
+function showTableContentBox_Dod() {
+    let myContent = '';
+    for (let key in tData.zDod) {
+        myContent = '<div class="tableContent"><div class="table_Name_D">' + key +
+            '</div><div class="table_Number_Db">' + toPercent(tData.zDod[key].dod) +
+            '</div><div class="table_Number_Ds">' + toZero(tData.zDod[key].const) +
+            '</div><div class="table_Tx_S">' + tData.zDod[key].TX_inf +
+            '</div><div class="table_Lz_D">' + tData.zDod[key].LZ_inf +
+            '</div></div>';
+        $('#showTabs_D').find('.tableContentBox_D2').append(myContent);
+    }
+}
+
+function showTableContentBox_Pas() {
+    let myContent = '';
+    for (let key in tData.zPas) {
+        myContent = '<div class="tableContent"><div class="table_Name_D">' + key +
+            '</div><div class="table_Tx_B">' + tData.zPas[key].TX_inf +
+            '</div></div>';
+        $('#showTabs_B').find('.tableContentBox_B').append(myContent);
+    }
+}
 
 function showTableContentBox_Att_TBo() {
     let myContent = '';
@@ -158,7 +198,7 @@ function showTableContentBox_Att_TBo() {
             tData.zAtt[key].LZ_inf + '</span></div>';
 
         myContent = myContent + '</div></div>';
-        $('#showTabs_A').find('.tableContentBox').append(myContent);
+        $('#showTabs_A').find('.tableContentBox_A').append(myContent);
     }
 }
 
@@ -189,7 +229,7 @@ function showTableContentBox_Att_Txo() {
             tData.zAtt[key].LZ_inf + '</span></div>';
 
         myContent = myContent + '</div></div>';
-        $('#showTabs_A').find('.tableContentBox').append(myContent);
+        $('#showTabs_A').find('.tableContentBox_A').append(myContent);
     }
 }
 
@@ -220,7 +260,7 @@ function showTableContentBox_Att_Lzo() {
             tData.zAtt[key].LZ_inf + '</span></div>';
 
         myContent = myContent + '</div></div>';
-        $('#showTabs_A').find('.tableContentBox').append(myContent);
+        $('#showTabs_A').find('.tableContentBox_A').append(myContent);
     }
 }
 
@@ -409,14 +449,32 @@ var option = {
 myChart.setOption(option);
 $("#showTabs").tabs();
 
-
+//todo hover
 $(document).on('mouseenter', '.tableContent', function () {
     $(this).addClass('tableContent_hover');
-    let zName = $(this).children('.table_Name').text();
-    let z = getValue(tData, $(this).children('.table_Name').text());
-    // console.log(tData.zAtt['' + zName + ''].remark);
-    $('.tableBox_Button_Rt').text(zName);
-    $('.tableBox_Button_C').text(tData.zAtt['' + zName + ''].remark);
+    let zName = $(this).find('div').eq(0).text();
+    switch ($('.ui-state-active').children('a').attr('href').toString().substr(-1, 1)) {
+        case 'A':
+            $('#showTabs_A .tableBox_Button_Rt').text(zName);
+            $('#showTabs_A .tableBox_Button_Rb').text('攻击招式');
+            $('#showTabs_A .tableBox_Button_C').text(tData.zAtt['' + zName + ''].remark);
+            break;
+        case 'D':
+            $('#showTabs_D .tableBox_Button_Rt').text(zName);
+            if($(this).parent().attr('class').toString().substr(-1, 1) == 1){
+                $('#showTabs_D .tableBox_Button_Rb').text('格挡招式');
+                $('#showTabs_D .tableBox_Button_C').text(tData.zDef['' + zName + ''].remark);
+            }else{
+                $('#showTabs_D .tableBox_Button_Rb').text('闪避招式');
+                $('#showTabs_D .tableBox_Button_C').text(tData.zDod['' + zName + ''].remark);
+            }
+            break;
+        case 'B':
+            $('#showTabs_B .tableBox_Button_Rt').text(zName);
+            $('#showTabs_B .tableBox_Button_Rb').text('被动功法');
+            $('#showTabs_B .tableBox_Button_C').text(tData.zPas['' + zName + ''].remark);
+            break;
+    }
 });
 $(document).on('mouseleave', '.tableContent', function () {
     $(this).removeClass('tableContent_hover');
