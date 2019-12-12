@@ -1,6 +1,6 @@
 'use strict'
 
-//todo https://blog.csdn.net/weixin_44997252/article/details/89683152
+//https://blog.csdn.net/weixin_44997252/article/details/89683152
 
 export const data_S = {
     'SixDataSum': [43,33,30,30,44],

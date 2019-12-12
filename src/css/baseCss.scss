@@ -723,7 +723,7 @@ $schoolNameBox_height: 56px;
 
   .table_Name,
   .tableT_Txo,
-  .tableT_Lzo{
+  .tableT_Lzo {
     line-height: 63px;
   }
 
@@ -734,10 +734,10 @@ $schoolNameBox_height: 56px;
 
   .tableT_Tx,
   .tableT_Lz,
-  .tableT_TB{
+  .tableT_TB {
     cursor: pointer;
 
-    span{
+    span {
       float: left;
       margin-top: 5px;
       margin-left: 7px;
@@ -768,12 +768,14 @@ $table_ot_width: 28px;
   width: 10px + $table_NumberN_width * 11 + 1px;
   height: $table_NumberN_width - 1px;
 }
+
 .tableT_Txo,
 .table_Txo,
 .tableT_Lzo,
-.table_Lzo{
+.table_Lzo {
   width: 10px + $table_NumberN_width * 11;
 }
+
 .table_NumberN {
   width: $table_NumberN_width;
   height: $table_NumberN_height;
@@ -810,20 +812,25 @@ $table_ot_width: 28px;
   overflow: hidden;
 }
 
-.table_Tx {
-  > span {
-    padding: 0 2px;
-    background-color: $myYellow-color;
-    color: #ffffff;
-  }
+.content_TxSup {
+  padding: 0 2px;
+  background-color: $myYellow-color;
+  color: #ffffff;
 }
+
+.content_Tx,
+.content_Lz{
+  display: none;
+}
+
 .tableT_Lzo,
 .tableT_Lz,
 .table_Lzo,
-.table_Lz{
+.table_Lz {
   margin-right: 0 !important;
 }
-.tableContentBox{
+
+.tableContentBox {
   float: left;
 }
 
@@ -903,12 +910,15 @@ $tableBox_Button_width: 664px;
   margin-top: 10px;
   width: 500px;
 }
-.tableTitle-color{
-  background-color: $tableTitle-color!important;
+
+.tableTitle-color {
+  background-color: $tableTitle-color !important;
 }
-.grayBox-color{
-  background-color: $grayBox-color!important;
+
+.grayBox-color {
+  background-color: $grayBox-color !important;
 }
-.tableT_NumberS{
+
+.tableT_NumberS {
   display: none;
 }

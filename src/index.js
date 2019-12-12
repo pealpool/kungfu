@@ -86,7 +86,8 @@ $(document).on('click', '.liFiBox_S', function () {
         $('.next_off').removeClass('next_off');
     }
 });
-//todo
+
+//todo click
 let tData;
 $(document).on('click', '.schoolBox', function () {
     $('#schoolBox_select').attr('id', '');
@@ -98,8 +99,8 @@ $(document).on('click', '.schoolBox', function () {
     let mySchoolClass = 'bigSLogo_size logo_' + mySchool;
     $('.bigSLogo_size').attr('class', mySchoolClass);
 
-    // tData = selectSchool(mySchool);
-    tData = data_S[''+mySchool+''];
+
+    tData = data_S['' + mySchool + ''];
     $('#schoolName').text(tData.name);
     let myContent = '';
     for (let i = 0; i < tData.level.length; i++) {
@@ -119,20 +120,110 @@ $(document).on('click', '.schoolBox', function () {
 
 
     $('.tableContentBox').html('');
-    myContent = '';
-    // let key = Object.keys(tData.zAtt);
-    // console.log(key[0]);
-    for (let key in tData.zAtt) {
-        myContent = '<div class="tableContent"><div class="table_Name">' + key + '</div><div class="table_TBo"><div class="table_NumberN">' + toZero(tData.zAtt[key].hurt_o) + '</div><div class="table_NumberN">' + toZero(tData.zAtt[key].hurt_i) + '</div><div class="table_NumberN">' + toPercent(tData.zAtt[key].hit) + '</div><div class="table_NumberN">' + toPercent(tData.zAtt[key].block) + '</div><div class="table_NumberN">' + tData.zAtt[key].time_q + 's</div><div class="table_NumberN">' + tData.zAtt[key].time_z + 's</div><div class="table_NumberN">' + tData.zAtt[key].time_h + 's</div><div class="table_NumberN">' + toZero(tData.zAtt[key].hurt_n) + '</div><div class="table_NumberN">' + toZero(tData.zAtt[key].const) + '</div><div class="table_NumberN">' + toPerS(tData.zAtt[key].hurt_l) + '</div><div class="table_NumberN">' + toZero(tData.zAtt[key].hurt_d) + '</div></div><div class="table_ot table_Tx">';
-        if (tData.zAtt[key].TX_inf != '') {
-            myContent = myContent + '<span>特</span>';
-        }
-        myContent = myContent + '</div><div class="table_ot table_Lz">-</div></div></div>';
-        $('#showTabs_A').find('.tableContentBox').append(myContent);
+    if ($('#showTabs_A').find('.tableT_TBo').length > 0) {
+        showTableContentBox_Att_TBo();
+    } else if ($('#showTabs_A').find('.tableT_Txo').length > 0) {
+        showTableContentBox_Att_Txo();
+    } else if ($('#showTabs_A').find('.tableT_Lzo').length > 0) {
+        showTableContentBox_Att_Lzo();
     }
 
 
 });
+
+function showTableContentBox_Att_TBo() {
+    let myContent = '';
+    for (let key in tData.zAtt) {
+        myContent = '<div class="tableContent"><div class="table_Name">' + key +
+            '</div><div class="table_TBo"><div class="table_NumberN">' +
+            toZero(tData.zAtt[key].hurt_o) + '</div><div class="table_NumberN">' +
+            toZero(tData.zAtt[key].hurt_i) + '</div><div class="table_NumberN">' +
+            toPercent(tData.zAtt[key].hit) + '</div><div class="table_NumberN">' +
+            toPercent(tData.zAtt[key].block) + '</div><div class="table_NumberN">' +
+            tData.zAtt[key].time_q + 's</div><div class="table_NumberN">' +
+            tData.zAtt[key].time_z + 's</div><div class="table_NumberN">' +
+            tData.zAtt[key].time_h + 's</div><div class="table_NumberN">' +
+            toZero(tData.zAtt[key].hurt_n) + '</div><div class="table_NumberN">' +
+            toZero(tData.zAtt[key].const) + '</div><div class="table_NumberN">' +
+            toPerS(tData.zAtt[key].hurt_l) + '</div><div class="table_NumberN">' +
+            toZero(tData.zAtt[key].hurt_d) + '</div></div><div class="table_ot table_Tx">';
+        if (tData.zAtt[key].TX_inf != '') {
+            myContent = myContent +
+                '<span class="content_TxSup">特</span><span class="content_Tx">' +
+                tData.zAtt[key].TX_inf + '</span>';
+        }
+        myContent = myContent + '</div>';
+
+        myContent = myContent + '<div class="table_ot table_Lz"><span class="content_LzLine">-</span><span class="content_Lz">' +
+            tData.zAtt[key].LZ_inf + '</span></div>';
+
+        myContent = myContent + '</div></div>';
+        $('#showTabs_A').find('.tableContentBox').append(myContent);
+    }
+}
+
+function showTableContentBox_Att_Txo() {
+    let myContent = '';
+    for (let key in tData.zAtt) {
+        myContent = '<div class="tableContent"><div class="table_Name">' + key +
+            '</div><div class="grayBox-color table_ot table_TB" style=""><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].hurt_o) + '</div><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].hurt_i) + '</div><div class="table_NumberN" style="display: none;">' +
+            toPercent(tData.zAtt[key].hit) + '</div><div class="table_NumberN" style="display: none;">' +
+            toPercent(tData.zAtt[key].block) + '</div><div class="table_NumberN" style="display: none;">' +
+            tData.zAtt[key].time_q + 's</div><div class="table_NumberN" style="display: none;">' +
+            tData.zAtt[key].time_z + 's</div><div class="table_NumberN" style="display: none;">' +
+            tData.zAtt[key].time_h + 's</div><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].hurt_n) + '</div><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].const) + '</div><div class="table_NumberN" style="display: none;">' +
+            toPerS(tData.zAtt[key].hurt_l) + '</div><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].hurt_d) + '</div></div><div class="table_Txo">';
+        if (tData.zAtt[key].TX_inf != '') {
+            myContent = myContent +
+                '<span class="content_TxSup" style="display: none;">特</span><span class="content_Tx" style="display: inline;">' +
+                tData.zAtt[key].TX_inf + '</span>';
+        }
+        myContent = myContent + '</div>';
+
+        myContent = myContent + '<div class="table_ot table_Lz"><span class="content_LzLine">-</span><span class="content_Lz">' +
+            tData.zAtt[key].LZ_inf + '</span></div>';
+
+        myContent = myContent + '</div></div>';
+        $('#showTabs_A').find('.tableContentBox').append(myContent);
+    }
+}
+
+function showTableContentBox_Att_Lzo() {
+    let myContent = '';
+    for (let key in tData.zAtt) {
+        myContent = '<div class="tableContent"><div class="table_Name">' + key +
+            '</div><div class="grayBox-color table_ot table_TB" style=""><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].hurt_o) + '</div><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].hurt_i) + '</div><div class="table_NumberN" style="display: none;">' +
+            toPercent(tData.zAtt[key].hit) + '</div><div class="table_NumberN" style="display: none;">' +
+            toPercent(tData.zAtt[key].block) + '</div><div class="table_NumberN" style="display: none;">' +
+            tData.zAtt[key].time_q + 's</div><div class="table_NumberN" style="display: none;">' +
+            tData.zAtt[key].time_z + 's</div><div class="table_NumberN" style="display: none;">' +
+            tData.zAtt[key].time_h + 's</div><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].hurt_n) + '</div><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].const) + '</div><div class="table_NumberN" style="display: none;">' +
+            toPerS(tData.zAtt[key].hurt_l) + '</div><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].hurt_d) + '</div></div><div class="table_ot table_Tx">';
+        if (tData.zAtt[key].TX_inf != '') {
+            myContent = myContent +
+                '<span class="content_TxSup">特</span><span class="content_Tx">' +
+                tData.zAtt[key].TX_inf + '</span>';
+        }
+        myContent = myContent + '</div>';
+
+        myContent = myContent + '<div class="table_Lzo" style=""><span class="content_LzLine" style="display: none;">-</span><span class="content_Lz" style="display: inline;">' +
+            tData.zAtt[key].LZ_inf + '</span></div>';
+
+        myContent = myContent + '</div></div>';
+        $('#showTabs_A').find('.tableContentBox').append(myContent);
+    }
+}
+
 $(document).on('click', '#liFiBox_R', function () {
     if ($(this).hasClass('liFiBox_R')) {
         $('.liFiBox_Sss').removeClass('myBlur');
@@ -185,10 +276,12 @@ $(document).on('click', '.next_02', function () {
                     showLiFiBox()
                 }, 30);
                 $('.rightContent').show('fade', 200);
+                $('.schoolBox').eq(0).trigger("click");
             });
         });
     }
 });
+
 $(".schoolBox").hover(function () {
     $(this).find('.schoolBox_top').eq(0).addClass('schoolBox_top_hover');
 }, function () {
@@ -314,12 +407,9 @@ var option = {
 };
 // 使用刚指定的配置项和数据显示图表。
 myChart.setOption(option);
-
-
 $("#showTabs").tabs();
 
 
-//todo tableContent hover
 $(document).on('mouseenter', '.tableContent', function () {
     $(this).addClass('tableContent_hover');
     let zName = $(this).children('.table_Name').text();
@@ -345,8 +435,12 @@ $(document).on('click', '.tableT_Tx', function () {
     $('.table_TBo').addClass('grayBox-color');
     $('.table_NumberN').hide('fade', 100);
     $('.table_TBo').switchClass('table_TBo', 'table_ot table_TB', 200);
-    $('.table_Lzo').html('-').switchClass('table_Lzo', 'table_ot table_Lz', 200);
-    $('.table_Tx').switchClass('table_ot table_Tx', 'table_Txo', 201).html('对方所有破绽率+6%，10s');
+    $('.table_Lzo').switchClass('table_Lzo', 'table_ot table_Lz', 200);
+    $('.content_Lz').hide();
+    $('.content_LzLine').show();
+    $('.table_Tx').switchClass('table_ot table_Tx', 'table_Txo', 201);
+    $('.content_TxSup').hide();
+    $('.content_Tx').show();
 });
 $(document).on('click', '.tableT_Lz', function () {
     $('.tableT_TBo').addClass('tableTitle-color');
@@ -361,8 +455,12 @@ $(document).on('click', '.tableT_Lz', function () {
     $('.table_TBo').addClass('grayBox-color');
     $('.table_NumberN').hide('fade', 100);
     $('.table_TBo').switchClass('table_TBo', 'table_ot table_TB', 200);
-    $('.table_Txo').html('<span>特</span>').switchClass('table_Txo', 'table_ot table_Tx', 200);
-    $('.table_Lz').switchClass('table_ot table_Lz', 'table_Lzo', 201).html('直接命中时，本次耐力伤害变为30');
+    $('.table_Txo').switchClass('table_Txo', 'table_ot table_Tx', 200);
+    $('.content_Tx').hide();
+    $('.content_TxSup').show();
+    $('.table_Lz').switchClass('table_ot table_Lz', 'table_Lzo', 201);
+    $('.content_LzLine').hide();
+    $('.content_Lz').show();
 });
 $(document).on('click', '.tableT_TB', function () {
     $('.tableT_NumberS').hide();
@@ -373,8 +471,12 @@ $(document).on('click', '.tableT_TB', function () {
         $('.tableT_TBo').removeClass('tableTitle-color');
     });
 
-    $('.table_Lzo').html('-').switchClass('table_Lzo', 'table_ot table_Lz', 200);
-    $('.table_Txo').html('<span>特</span>').switchClass('table_Txo', 'table_ot table_Tx', 200);
+    $('.table_Lzo').switchClass('table_Lzo', 'table_ot table_Lz', 200);
+    $('.content_Lz').hide();
+    $('.content_LzLine').show();
+    $('.table_Txo').switchClass('table_Txo', 'table_ot table_Tx', 200);
+    $('.content_Tx').hide();
+    $('.content_TxSup').show();
     $('.table_TB').switchClass('table_ot table_TB', 'table_ot table_TBo', 201);
     $('.table_TB').removeClass('grayBox-color');
 });
@@ -385,8 +487,8 @@ function loadSchoolBoxStar() {
     $('.schoolBox_logo').each(function () {
         let mySchool = $(this).attr('class').toString().substr(-2, 2);
         let myContent = '';
-        for (let i = 0; i < data_S[''+mySchool+''].star.length; i++) {
-            myContent = myContent + '<div>' + data_S[''+mySchool+''].star[i] + '</div>';
+        for (let i = 0; i < data_S['' + mySchool + ''].star.length; i++) {
+            myContent = myContent + '<div>' + data_S['' + mySchool + ''].star[i] + '</div>';
         }
         $(this).parent().parent().children('.schoolBox_bottom').html(myContent);
     });
