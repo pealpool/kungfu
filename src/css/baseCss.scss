@@ -1063,31 +1063,37 @@ $setBox_left_width: 161px;
   width: 151px;
   height: 245px;
 }
+
 .photoBox {
   @include photoBoxSize;
   @include base-box($myYellow-color);
 }
-.photoLeft{
+
+.photoLeft {
   @include photoBoxSize;
 
 }
-.s_Male{
+
+.s_Male {
   float: left;
   background: url("/src/images/s_male.svg") no-repeat;
   height: 21px;
   width: 21px;
   margin-left: 55px;
 }
-.s_Female{
+
+.s_Female {
   float: left;
   background: url("/src/images/s_female.svg") no-repeat;
   height: 21px;
   width: 21px;
   margin-left: 2px;
 }
-.setBox_right{
+
+$setBox_right_width: 222px;
+.setBox_right {
   float: left;
-  width: 222px;
+  width: $setBox_right_width;
   height: 546px;
   background-color: $lightGray-color;
   margin-left: 15px;
@@ -1098,17 +1104,118 @@ $setBox_left_width: 161px;
     float: left;
   }
 }
-.setSixBox{
+
+.setSixBox {
   height: 151px - 10px;
-  width: 178px;
+  width: $setBox_right_width - 34px -10px;
   background-color: $myWhite-color;
   box-sizing: border-box;
+  padding: 9px 7px;
 }
-.myFont_red{
+
+.myFont_red {
   color: $myRed-color;
 }
-.setSixBoxList{
-  span{
+
+.setSixBoxList {
+  width: 178px - 7px * 2;
+  height: 21px;
+  line-height: 16px;
+  box-sizing: border-box;
+  padding-left: 23px;
+
+  &:hover{
+    background-color: $grayBorder-color;
+  }
+
+  span {
+    font-family: 'Arial', serif;
     font-weight: bold;
+    margin-left: 10px;
+  }
+
+  .myFont_red {
+    font-size: 18px;
   }
 }
+
+.bt_sub,
+.bt_add {
+  color: $tableTitle-color;
+  font-size: 24px;
+  cursor: pointer;
+
+  &:hover{
+    color: $myYellow-color;
+  }
+}
+
+span#sixDataSet_all {
+  margin-left: 4px;
+}
+
+.setBox_rB {
+  width: $setBox_right_width -10px;
+  margin-top: 5px;
+}
+
+.setBoxCon {
+  margin-bottom: 1px;
+
+  div {
+    height: 22px;
+    line-height: 23px;
+    background-color: $grayBox-color;
+    text-align: center;
+  }
+}
+
+$setBoxCon_l_width: 69px;
+div.setBoxCon_l,
+div.setBoxCon_lh {
+  width: $setBoxCon_l_width;
+  color: #ffffff;
+  background-color: $tableTitle-color;
+}
+
+div.setBoxCon_lh,
+div.setBoxCon_rh {
+  height: 22px * 2 + 1px;
+}
+
+.setBoxCon_r,
+.setBoxCon_rh {
+  width: $setBox_right_width - $setBoxCon_l_width - 10px;
+}
+
+.setBoxCon_rh {
+  background-color: transparent !important;
+
+  .setBoxCon_rh3 {
+    width: ($setBox_right_width - $setBoxCon_l_width - 10px - 2px)/3;
+
+    &:nth-child(3),
+    &:nth-child(6) {
+      margin-right: 0 !important;
+    }
+  }
+
+  .setBoxCon_rh4 {
+    width: ($setBox_right_width - $setBoxCon_l_width - 10px - 3px)/4;
+
+    &:nth-child(4),
+    &:nth-child(8) {
+      margin-right: 0 !important;
+    }
+  }
+}
+
+.setBoxCon_rh3,
+.setBoxCon_rh4 {
+  height: 22px - 1px;
+  margin-right: 1px;
+  margin-bottom: 1px;
+
+
+}
+
