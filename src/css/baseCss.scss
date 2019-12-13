@@ -12,6 +12,7 @@ $myRed-color: #A60A27;
 $myYellow-color: #D5AD77;
 $aTab-color: #A6A197;
 $tableTitle-color: #464951;
+$myWhite-color: #ffffff;
 
 $smallBaseBox-height: 640px; //登录框高度
 $smallBaseBox-width: 490px;
@@ -48,6 +49,11 @@ body {
   font-size: 14px;
   color: $darkBase-color;
   user-select: none;
+}
+
+ul {
+  margin-block-end: 0;
+  margin-block-start: 0;
 }
 
 .smallBaseBox {
@@ -287,6 +293,7 @@ body {
   position: relative;
   float: left;
   margin-left: 17px;
+  margin-top: 16px;
   @include fileBigBoxSize;
   //background: #9CA9C2;
 }
@@ -295,6 +302,7 @@ body {
   position: absolute;
   @include fileBigBoxSize;
   padding-left: 0;
+  margin-top: 9px;
 }
 
 .loFiGd_B {
@@ -815,6 +823,7 @@ $table_ot_width: 28px;
   line-height: $table_NumberN_height;
   width: $table_NumberN_width + 9px;
 }
+
 .table_Number_Ds {
   height: $table_NumberN_height;
   line-height: $table_NumberN_height;
@@ -863,7 +872,7 @@ $table_ot_width: 28px;
 .tableContentBox_A,
 .tableContentBox_D1,
 .tableContentBox_D2,
-.tableContentBox_B{
+.tableContentBox_B {
   float: left;
 }
 
@@ -975,7 +984,72 @@ $table_Lz_D_width: 179px;
 .table_Tx_S {
   width: $showTab_width - 10px - ($showTab_width - 10px - 13px - $table_NumberN_width * 11 - $table_ot_width * 2) - ($table_NumberN_width * 2 + 9px - 6px) - $table_Lz_D_width - 4px;
 }
-.table_Tx_B{
-  margin-right: 0!important;
+
+.table_Tx_B {
+  margin-right: 0 !important;
   width: $showTab_width - 10px - ($showTab_width - 10px - 13px - $table_NumberN_width * 11 - $table_ot_width * 2) - 1px;
+}
+
+$setBox_left_width: 161px;
+.setBox_left {
+  float: left;
+  width: $setBox_left_width;
+
+  > div {
+    box-sizing: border-box;
+    float: left;
+    width: $setBox_left_width;
+    background-color: $myWhite-color;
+    margin-bottom: 1px;
+    padding: 5px;
+  }
+}
+
+.setBox_lT {
+  height: 151px;
+
+  > div {
+    float: left;
+  }
+}
+
+.setBox_lM {
+  height: 261px;
+}
+
+.setBox_lB {
+  height: 132px;
+}
+
+.setBoxTitle {
+  background-color: $myYellow-color;
+  color: #ffffff;
+  height: 151px - 10px;
+  width: 34px;
+  font-size: 20px;
+  line-height: 28px;
+  box-sizing: border-box;
+  padding-top: 14px;
+  padding-left: 7px;
+}
+.setBox_allList{
+  margin-top: 7px;
+}
+.setBoxList {
+  margin-left: 10px;
+  width: 104px;
+  height: 22px;
+}
+.myTextRight{
+  text-align: right;
+}
+.allBodyData{
+  margin-top: 3px;
+}
+.bodyDataList {
+  float: left;
+  font-size: 12px;
+  width: $setBox_left_width - 10px - 5px;
+  height: 17px;
+  margin-left: 5px;
 }

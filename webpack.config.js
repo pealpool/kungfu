@@ -15,8 +15,8 @@ module.exports = {
             filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
-            template: './src/selectSchool.html',
-            filename: 'selectSchool.html'
+            template: './src/setSixData.html',
+            filename: 'setSixData.html'
         }),
     ],
     module: {

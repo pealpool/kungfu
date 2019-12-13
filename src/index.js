@@ -183,7 +183,7 @@ function showTableContentBox_Att_TBo() {
             tData.zAtt[key].time_q + 's</div><div class="table_NumberN">' +
             tData.zAtt[key].time_z + 's</div><div class="table_NumberN">' +
             tData.zAtt[key].time_h + 's</div><div class="table_NumberN">' +
-            toZero(tData.zAtt[key].hurt_n) + '</div><div class="table_NumberN">' +
+            toZero(tData.zAtt[key].hurt_a) + '</div><div class="table_NumberN">' +
             toZero(tData.zAtt[key].const) + '</div><div class="table_NumberN">' +
             toPerS(tData.zAtt[key].hurt_l) + '</div><div class="table_NumberN">' +
             toZero(tData.zAtt[key].hurt_d) + '</div></div><div class="table_ot table_Tx">';
@@ -214,7 +214,7 @@ function showTableContentBox_Att_Txo() {
             tData.zAtt[key].time_q + 's</div><div class="table_NumberN" style="display: none;">' +
             tData.zAtt[key].time_z + 's</div><div class="table_NumberN" style="display: none;">' +
             tData.zAtt[key].time_h + 's</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_n) + '</div><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].hurt_a) + '</div><div class="table_NumberN" style="display: none;">' +
             toZero(tData.zAtt[key].const) + '</div><div class="table_NumberN" style="display: none;">' +
             toPerS(tData.zAtt[key].hurt_l) + '</div><div class="table_NumberN" style="display: none;">' +
             toZero(tData.zAtt[key].hurt_d) + '</div></div><div class="table_Txo">';
@@ -245,7 +245,7 @@ function showTableContentBox_Att_Lzo() {
             tData.zAtt[key].time_q + 's</div><div class="table_NumberN" style="display: none;">' +
             tData.zAtt[key].time_z + 's</div><div class="table_NumberN" style="display: none;">' +
             tData.zAtt[key].time_h + 's</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_n) + '</div><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].hurt_a) + '</div><div class="table_NumberN" style="display: none;">' +
             toZero(tData.zAtt[key].const) + '</div><div class="table_NumberN" style="display: none;">' +
             toPerS(tData.zAtt[key].hurt_l) + '</div><div class="table_NumberN" style="display: none;">' +
             toZero(tData.zAtt[key].hurt_d) + '</div></div><div class="table_ot table_Tx">';
