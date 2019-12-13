@@ -1032,24 +1032,83 @@ $setBox_left_width: 161px;
   padding-top: 14px;
   padding-left: 7px;
 }
-.setBox_allList{
+
+.setBox_allList {
   margin-top: 7px;
 }
+
 .setBoxList {
   margin-left: 10px;
-  width: 104px;
+  width: 100px;
   height: 22px;
 }
-.myTextRight{
+
+.myTextRight {
   text-align: right;
 }
-.allBodyData{
+
+.allBodyData {
   margin-top: 3px;
 }
+
 .bodyDataList {
   float: left;
   font-size: 12px;
   width: $setBox_left_width - 10px - 5px;
   height: 17px;
   margin-left: 5px;
+}
+
+@mixin photoBoxSize {
+  width: 151px;
+  height: 245px;
+}
+.photoBox {
+  @include photoBoxSize;
+  @include base-box($myYellow-color);
+}
+.photoLeft{
+  @include photoBoxSize;
+
+}
+.s_Male{
+  float: left;
+  background: url("/src/images/s_male.svg") no-repeat;
+  height: 21px;
+  width: 21px;
+  margin-left: 55px;
+}
+.s_Female{
+  float: left;
+  background: url("/src/images/s_female.svg") no-repeat;
+  height: 21px;
+  width: 21px;
+  margin-left: 2px;
+}
+.setBox_right{
+  float: left;
+  width: 222px;
+  height: 546px;
+  background-color: $lightGray-color;
+  margin-left: 15px;
+  box-sizing: border-box;
+  padding: 5px;
+
+  div {
+    float: left;
+  }
+}
+.setSixBox{
+  height: 151px - 10px;
+  width: 178px;
+  background-color: $myWhite-color;
+  box-sizing: border-box;
+}
+.myFont_red{
+  color: $myRed-color;
+}
+.setSixBoxList{
+  span{
+    font-weight: bold;
+  }
 }
