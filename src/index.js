@@ -582,3 +582,29 @@ function getValue(json, name) {
         return json[name];
     }
 }
+
+$(".setSixBoxList:nth-child(2)").hover(function () {
+    $('.setBoxCon:nth-child(1),.setBoxCon:nth-child(2)').addClass('myFocusDark');
+}, function () {
+    $('.setBoxCon:nth-child(1),.setBoxCon:nth-child(2)').removeClass('myFocusDark');
+});
+$(".setSixBoxList:nth-child(3)").hover(function () {
+    $('.setBoxCon:nth-child(3),.setBoxCon:nth-child(4)').addClass('myFocusDark');
+}, function () {
+    $('.setBoxCon:nth-child(3),.setBoxCon:nth-child(4)').removeClass('myFocusDark');
+});
+$(".setSixBoxList:nth-child(4)").hover(function () {
+    $('.setBoxCon:nth-child(5),.setBoxCon:nth-child(6),.setBoxCon:nth-child(7),.setBoxCon:nth-child(8),.setBoxCon:nth-child(9)').addClass('myFocusDark');
+}, function () {
+    $('.setBoxCon:nth-child(5),.setBoxCon:nth-child(6),.setBoxCon:nth-child(7),.setBoxCon:nth-child(8),.setBoxCon:nth-child(9)').removeClass('myFocusDark');
+});
+$(".setSixBoxList:nth-child(5)").hover(function () {
+    $('.setBoxCon:nth-child(10),.setBoxCon:nth-child(11)').addClass('myFocusDark');
+}, function () {
+    $('.setBoxCon:nth-child(10),.setBoxCon:nth-child(11)').removeClass('myFocusDark');
+});
+$(".setSixBoxList:nth-child(6)").hover(function () {
+    $('.setBoxCon:nth-child(12),.setBoxCon:nth-child(13),.setBoxCon:nth-child(14)').addClass('myFocusDark');
+}, function () {
+    $('.setBoxCon:nth-child(12),.setBoxCon:nth-child(13),.setBoxCon:nth-child(14)').removeClass('myFocusDark');
+});

@@ -1120,18 +1120,28 @@ $setBox_right_width: 222px;
 .setSixBoxList {
   width: 178px - 7px * 2;
   height: 21px;
-  line-height: 16px;
+  line-height: 22px;
   box-sizing: border-box;
   padding-left: 23px;
 
-  &:hover{
-    background-color: $grayBorder-color;
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(4),
+  &:nth-child(5),
+  &:nth-child(6) {
+    &:hover {
+      background-color: $grayBorder-color;
+    }
   }
 
-  span {
-    font-family: 'Arial', serif;
-    font-weight: bold;
-    margin-left: 10px;
+  div {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      margin-left: 15px;
+      font-family: 'Arial', serif;
+      font-weight: bold;
+    }
   }
 
   .myFont_red {
@@ -1145,13 +1155,13 @@ $setBox_right_width: 222px;
   font-size: 24px;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     color: $myYellow-color;
   }
 }
 
-span#sixDataSet_all {
-  margin-left: 4px;
+div#sixDataSet_all {
+  margin-left: 10px;
 }
 
 .setBox_rB {
@@ -1161,6 +1171,10 @@ span#sixDataSet_all {
 
 .setBoxCon {
   margin-bottom: 1px;
+
+  &:hover {
+    @include hoverBright(0.85);
+  }
 
   div {
     height: 22px;
@@ -1215,7 +1229,8 @@ div.setBoxCon_rh {
   height: 22px - 1px;
   margin-right: 1px;
   margin-bottom: 1px;
-
-
 }
 
+.myFocusDark {
+  @include hoverBright(0.85);
+}
