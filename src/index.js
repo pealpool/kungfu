@@ -1,6 +1,7 @@
 'use strict'
 import $ from 'jquery';
-import {data_S} from './myData.js';
+import {data_S} from './myData_S.js';
+import {Person} from './myData_P.js';
 import './css/baseCss.scss';
 import 'webpack-jquery-ui';
 //一般不需要jq ui 的默认样式，就不用其css
@@ -608,3 +609,7 @@ $(".setSixBoxList:nth-child(6)").hover(function () {
 }, function () {
     $('.setBoxCon:nth-child(12),.setBoxCon:nth-child(13),.setBoxCon:nth-child(14)').removeClass('myFocusDark');
 });
+
+let boxPerson =new Person([2,2,2,2,2,2]);
+boxPerson.init();
+console.log(boxPerson.attAdd);
