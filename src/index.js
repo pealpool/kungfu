@@ -329,13 +329,19 @@ $(".schoolBox").hover(function () {
     $(this).find('.schoolBox_top').eq(0).removeClass('schoolBox_top_hover');
 });
 
+
+//todo next03
 $(document).on('click', '.next_03', function () {
     if (!$(this).hasClass('next_off')) {
         $(this).addClass('next_off next_04').removeClass('next_03');
+        $('.loFiGd_B,.loFiGd_C').hide('fade', 200,function () {
+            $('.setBox_left,.setBox_right').show('fade', 200);
+        });
+
     }
 });
 
-function setMyChat(six = new Array(5), sixsum = new Array(5)) {
+function setMyChat(six = new Array(5), sixSum = new Array(5)) {
     myChart = echarts.init(document.getElementById('myBigChart'));
     // 指定图表的配置项和数据
     option = {
@@ -362,11 +368,11 @@ function setMyChat(six = new Array(5), sixsum = new Array(5)) {
             },
             nameGap: 5,
             indicator: [
-                {name: '速攻', max: sixsum[0]},
-                {name: '闪避', max: sixsum[1]},
-                {name: '防御', max: sixsum[2]},
-                {name: '妨碍', max: sixsum[3]},
-                {name: '消耗', max: sixsum[4]}
+                {name: '速攻', max: sixSum[0]},
+                {name: '闪避', max: sixSum[1]},
+                {name: '防御', max: sixSum[2]},
+                {name: '妨碍', max: sixSum[3]},
+                {name: '消耗', max: sixSum[4]}
             ],
         },
         series: [{
@@ -462,10 +468,10 @@ $(document).on('mouseenter', '.tableContent', function () {
             break;
         case 'D':
             $('#showTabs_D .tableBox_Button_Rt').text(zName);
-            if($(this).parent().attr('class').toString().substr(-1, 1) == 1){
+            if ($(this).parent().attr('class').toString().substr(-1, 1) == 1) {
                 $('#showTabs_D .tableBox_Button_Rb').text('格挡招式');
                 $('#showTabs_D .tableBox_Button_C').text(tData.zDef['' + zName + ''].remark);
-            }else{
+            } else {
                 $('#showTabs_D .tableBox_Button_Rb').text('闪避招式');
                 $('#showTabs_D .tableBox_Button_C').text(tData.zDod['' + zName + ''].remark);
             }
@@ -610,6 +616,17 @@ $(".setSixBoxList:nth-child(6)").hover(function () {
     $('.setBoxCon:nth-child(12),.setBoxCon:nth-child(13),.setBoxCon:nth-child(14)').removeClass('myFocusDark');
 });
 
-let boxPerson =new Person([2,2,2,2,2,2]);
-boxPerson.init();
-console.log(boxPerson.attAdd);
+// let boxPerson =new Person([2,2,2,2,2,2]);
+// boxPerson.init();
+// console.log(boxPerson.attAdd);
+
+$(document).on('mouseenter', '.content_Tx', function () {
+    let maxWidth = 66;
+    if ($(this).text().length > maxWidth) {
+        $(this).after('<div class="content_Tx_tip">'+$(this).text()+'</div>');
+    }
+});
+$(document).on('mouseleave', '.content_Tx', function () {
+
+    $('.content_Tx_tip').remove();
+});

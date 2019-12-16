@@ -862,6 +862,15 @@ $table_ot_width: 28px;
   display: none;
 }
 
+.content_Tx_tip {
+  position: relative;
+  background-color: pink !important;
+  height: auto !important;
+  top: -24px !important;
+  width: 10px + $table_NumberN_width * 11;
+  text-align: left;
+}
+
 .tableT_Lzo,
 .tableT_Lz,
 .table_Lzo,
@@ -897,6 +906,13 @@ $table_ot_width: 28px;
     background-color: $grayBox-color;
     margin-right: 1px;
     text-align: center;
+
+    span {
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
   .table_Name,
@@ -994,6 +1010,7 @@ $setBox_left_width: 161px;
 .setBox_left {
   float: left;
   width: $setBox_left_width;
+  display: none;
 
   > div {
     box-sizing: border-box;
@@ -1099,6 +1116,7 @@ $setBox_right_width: 222px;
   margin-left: 15px;
   box-sizing: border-box;
   padding: 5px;
+  display: none;
 
   div {
     float: left;
