@@ -190,13 +190,13 @@ function showTableContentBox_Att_TBo() {
             toZero(tData.zAtt[key].hurt_d) + '</div></div><div class="table_ot table_Tx">';
         if (tData.zAtt[key].TX_inf != '') {
             myContent = myContent +
-                '<span class="content_TxSup">特</span><span class="content_Tx">' +
-                tData.zAtt[key].TX_inf + '</span>';
+                '<div class="content_TxSup">特</div><div class="content_Tx">' +
+                tData.zAtt[key].TX_inf + '</div>';
         }
         myContent = myContent + '</div>';
 
-        myContent = myContent + '<div class="table_ot table_Lz"><span class="content_LzLine">-</span><span class="content_Lz">' +
-            tData.zAtt[key].LZ_inf + '</span></div>';
+        myContent = myContent + '<div class="table_ot table_Lz"><div class="content_LzLine">-</div><div class="content_Lz">' +
+            tData.zAtt[key].LZ_inf + '</div></div>';
 
         myContent = myContent + '</div></div>';
         $('#showTabs_A').find('.tableContentBox_A').append(myContent);
@@ -221,13 +221,13 @@ function showTableContentBox_Att_Txo() {
             toZero(tData.zAtt[key].hurt_d) + '</div></div><div class="table_Txo">';
         if (tData.zAtt[key].TX_inf != '') {
             myContent = myContent +
-                '<span class="content_TxSup" style="display: none;">特</span><span class="content_Tx" style="display: inline;">' +
-                tData.zAtt[key].TX_inf + '</span>';
+                '<div class="content_TxSup" style="display: none;">特</div><div class="content_Tx" style="display: inline;">' +
+                tData.zAtt[key].TX_inf + '</div>';
         }
         myContent = myContent + '</div>';
 
-        myContent = myContent + '<div class="table_ot table_Lz"><span class="content_LzLine">-</span><span class="content_Lz">' +
-            tData.zAtt[key].LZ_inf + '</span></div>';
+        myContent = myContent + '<div class="table_ot table_Lz"><div class="content_LzLine">-</div><div class="content_Lz">' +
+            tData.zAtt[key].LZ_inf + '</div></div>';
 
         myContent = myContent + '</div></div>';
         $('#showTabs_A').find('.tableContentBox_A').append(myContent);
@@ -252,13 +252,13 @@ function showTableContentBox_Att_Lzo() {
             toZero(tData.zAtt[key].hurt_d) + '</div></div><div class="table_ot table_Tx">';
         if (tData.zAtt[key].TX_inf != '') {
             myContent = myContent +
-                '<span class="content_TxSup">特</span><span class="content_Tx">' +
-                tData.zAtt[key].TX_inf + '</span>';
+                '<div class="content_TxSup">特</div><div class="content_Tx">' +
+                tData.zAtt[key].TX_inf + '</div>';
         }
         myContent = myContent + '</div>';
 
-        myContent = myContent + '<div class="table_Lzo" style=""><span class="content_LzLine" style="display: none;">-</span><span class="content_Lz" style="display: inline;">' +
-            tData.zAtt[key].LZ_inf + '</span></div>';
+        myContent = myContent + '<div class="table_Lzo" style=""><div class="content_LzLine" style="display: none;">-</div><div class="content_Lz" style="display: inline;">' +
+            tData.zAtt[key].LZ_inf + '</div></div>';
 
         myContent = myContent + '</div></div>';
         $('#showTabs_A').find('.tableContentBox_A').append(myContent);
@@ -620,13 +620,32 @@ $(".setSixBoxList:nth-child(6)").hover(function () {
 // boxPerson.init();
 // console.log(boxPerson.attAdd);
 
-$(document).on('mouseenter', '.content_Tx', function () {
+function getByteLength(str){
+    return str.replace(/[^\u0000-\u00ff]/g,'aa').length;
+}
+
+$(document).on('mouseenter', '.table_Txo', function () {
     let maxWidth = 66;
-    if ($(this).text().length > maxWidth) {
-        $(this).after('<div class="content_Tx_tip">'+$(this).text()+'</div>');
+    if (getByteLength($(this).text()) > maxWidth) {
+        $(this).append('<div class="content_Tx_tip">'+$(this).children('.content_Tx').text()+'</div>');
     }
 });
-$(document).on('mouseleave', '.content_Tx', function () {
-
+$(document).on('mouseleave ', '.table_Txo', function () {
     $('.content_Tx_tip').remove();
+});
+
+$(document).on('mouseenter', '.table_Tx_D', function () {
+    let maxWidth = 42;
+    if (getByteLength($(this).text()) > maxWidth) {
+        $(this).addClass('heightTip');
+    }
+});
+$(document).on('mouseenter', '.table_Tx_S', function () {
+    let maxWidth = 36;
+    if (getByteLength($(this).text()) > maxWidth) {
+        $(this).addClass('heightTip');
+    }
+});
+$(document).on('mouseleave ', '.table_Tx_D,.table_Tx_S', function () {
+    $(this).removeClass('heightTip');
 });

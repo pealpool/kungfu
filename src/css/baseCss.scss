@@ -797,7 +797,7 @@ $table_ot_width: 28px;
 .tableT_Txo,
 .table_Txo,
 .tableT_Lzo,
-.table_Lzo {
+.table_Lzo, {
   width: 10px + $table_NumberN_width * 11;
 }
 
@@ -831,7 +831,8 @@ $table_ot_width: 28px;
 }
 
 
-.table_ot {
+.table_ot,
+.content_LzLine {
   width: $table_ot_width;
 }
 
@@ -852,23 +853,32 @@ $table_ot_width: 28px;
 }
 
 .content_TxSup {
-  padding: 0 2px;
-  background-color: $myYellow-color;
+  width: 20px;
+  margin-left: 4px;
+  background-color: $myYellow-color !important;
   color: #ffffff;
 }
 
+//todo
 .content_Tx,
 .content_Lz {
+  box-sizing: border-box;
+  width: 10px + $table_NumberN_width * 11 - 1px;
+  padding: 0 15px;
   display: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .content_Tx_tip {
   position: relative;
-  background-color: pink !important;
   height: auto !important;
   top: -24px !important;
   width: 10px + $table_NumberN_width * 11;
-  text-align: left;
+  text-align: left !important;
+  box-sizing: border-box;
+  padding: 0 15px;
 }
 
 .tableT_Lzo,
@@ -907,12 +917,6 @@ $table_ot_width: 28px;
     margin-right: 1px;
     text-align: center;
 
-    span {
-
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
   }
 
   .table_Name,
@@ -999,6 +1003,23 @@ $table_Lz_D_width: 179px;
 
 .table_Tx_S {
   width: $showTab_width - 10px - ($showTab_width - 10px - 13px - $table_NumberN_width * 11 - $table_ot_width * 2) - ($table_NumberN_width * 2 + 9px - 6px) - $table_Lz_D_width - 4px;
+}
+
+.table_Tx_D,
+.table_Tx_S {
+  box-sizing: border-box;
+  padding: 0 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.heightTip {
+  height: auto !important;
+  overflow: visible !important;
+  white-space: normal !important;
+  position: relative;
+  text-align: left !important;
 }
 
 .table_Tx_B {
