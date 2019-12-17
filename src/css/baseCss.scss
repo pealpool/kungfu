@@ -857,9 +857,9 @@ $table_ot_width: 28px;
   margin-left: 4px;
   background-color: $myYellow-color !important;
   color: #ffffff;
+  border-radius: 3px;
 }
 
-//todo
 .content_Tx,
 .content_Lz {
   box-sizing: border-box;
@@ -869,16 +869,6 @@ $table_ot_width: 28px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.content_Tx_tip {
-  position: relative;
-  height: auto !important;
-  top: -24px !important;
-  width: 10px + $table_NumberN_width * 11;
-  text-align: left !important;
-  box-sizing: border-box;
-  padding: 0 15px;
 }
 
 .tableT_Lzo,
@@ -1197,6 +1187,16 @@ $setBox_right_width: 222px;
   &:hover {
     color: $myYellow-color;
   }
+
+  &.bt_off {
+    opacity: 0.4;
+    cursor: default;
+
+    &:hover {
+      color: $tableTitle-color;
+    }
+  }
+
 }
 
 div#sixDataSet_all {

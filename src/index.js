@@ -7,7 +7,7 @@ import 'webpack-jquery-ui';
 //一般不需要jq ui 的默认样式，就不用其css
 // require('webpack-jquery-ui/css');
 
-var echarts = require('echarts');
+let eChart = require('echarts');
 
 
 loadSchoolBoxStar();
@@ -141,7 +141,7 @@ function showTableContentBox_Def() {
     let myContent = '';
     for (let key in tData.zDef) {
         myContent = '<div class="tableContent"><div class="table_Name_D">' + key +
-            '</div><div class="table_Number_Db">' + toPercent(tData.zDef[key].block) +
+            '</div><div class="table_Number_Db">' + toPercentAdd(tData.zDef[key].block) +
             '</div><div class="table_Tx_D">' + tData.zDef[key].TX_inf +
             '</div><div class="table_Lz_D">' + tData.zDef[key].LZ_inf +
             '</div></div>';
@@ -153,7 +153,7 @@ function showTableContentBox_Dod() {
     let myContent = '';
     for (let key in tData.zDod) {
         myContent = '<div class="tableContent"><div class="table_Name_D">' + key +
-            '</div><div class="table_Number_Db">' + toPercent(tData.zDod[key].dod) +
+            '</div><div class="table_Number_Db">' + toPercentAdd(tData.zDod[key].dod) +
             '</div><div class="table_Number_Ds">' + toZero(tData.zDod[key].const) +
             '</div><div class="table_Tx_S">' + tData.zDod[key].TX_inf +
             '</div><div class="table_Lz_D">' + tData.zDod[key].LZ_inf +
@@ -179,8 +179,8 @@ function showTableContentBox_Att_TBo() {
             '</div><div class="table_TBo"><div class="table_NumberN">' +
             toZero(tData.zAtt[key].hurt_o) + '</div><div class="table_NumberN">' +
             toZero(tData.zAtt[key].hurt_i) + '</div><div class="table_NumberN">' +
-            toPercent(tData.zAtt[key].hit) + '</div><div class="table_NumberN">' +
-            toPercent(tData.zAtt[key].block) + '</div><div class="table_NumberN">' +
+            toPercentAdd(tData.zAtt[key].hit) + '</div><div class="table_NumberN">' +
+            toPercentAdd(tData.zAtt[key].block) + '</div><div class="table_NumberN">' +
             tData.zAtt[key].time_q + 's</div><div class="table_NumberN">' +
             tData.zAtt[key].time_z + 's</div><div class="table_NumberN">' +
             tData.zAtt[key].time_h + 's</div><div class="table_NumberN">' +
@@ -210,8 +210,8 @@ function showTableContentBox_Att_Txo() {
             '</div><div class="grayBox-color table_ot table_TB" style=""><div class="table_NumberN" style="display: none;">' +
             toZero(tData.zAtt[key].hurt_o) + '</div><div class="table_NumberN" style="display: none;">' +
             toZero(tData.zAtt[key].hurt_i) + '</div><div class="table_NumberN" style="display: none;">' +
-            toPercent(tData.zAtt[key].hit) + '</div><div class="table_NumberN" style="display: none;">' +
-            toPercent(tData.zAtt[key].block) + '</div><div class="table_NumberN" style="display: none;">' +
+            toPercentAdd(tData.zAtt[key].hit) + '</div><div class="table_NumberN" style="display: none;">' +
+            toPercentAdd(tData.zAtt[key].block) + '</div><div class="table_NumberN" style="display: none;">' +
             tData.zAtt[key].time_q + 's</div><div class="table_NumberN" style="display: none;">' +
             tData.zAtt[key].time_z + 's</div><div class="table_NumberN" style="display: none;">' +
             tData.zAtt[key].time_h + 's</div><div class="table_NumberN" style="display: none;">' +
@@ -241,8 +241,8 @@ function showTableContentBox_Att_Lzo() {
             '</div><div class="grayBox-color table_ot table_TB" style=""><div class="table_NumberN" style="display: none;">' +
             toZero(tData.zAtt[key].hurt_o) + '</div><div class="table_NumberN" style="display: none;">' +
             toZero(tData.zAtt[key].hurt_i) + '</div><div class="table_NumberN" style="display: none;">' +
-            toPercent(tData.zAtt[key].hit) + '</div><div class="table_NumberN" style="display: none;">' +
-            toPercent(tData.zAtt[key].block) + '</div><div class="table_NumberN" style="display: none;">' +
+            toPercentAdd(tData.zAtt[key].hit) + '</div><div class="table_NumberN" style="display: none;">' +
+            toPercentAdd(tData.zAtt[key].block) + '</div><div class="table_NumberN" style="display: none;">' +
             tData.zAtt[key].time_q + 's</div><div class="table_NumberN" style="display: none;">' +
             tData.zAtt[key].time_z + 's</div><div class="table_NumberN" style="display: none;">' +
             tData.zAtt[key].time_h + 's</div><div class="table_NumberN" style="display: none;">' +
@@ -288,6 +288,7 @@ $(document).on('click', '.liFiBox_Sxx', function () {
     return false;
 });
 $(document).on('click', '.next_02', function () {
+    loadGameFile();
     if (!$(this).hasClass('next_off')) {
         $(this).addClass('next_off');
         $(this).switchClass('next_02', 'next_03', 800, 'easeInOutCubic');
@@ -334,15 +335,16 @@ $(".schoolBox").hover(function () {
 $(document).on('click', '.next_03', function () {
     if (!$(this).hasClass('next_off')) {
         $(this).addClass('next_off next_04').removeClass('next_03');
-        $('.loFiGd_B,.loFiGd_C').hide('fade', 200,function () {
+        $('.loFiGd_B,.loFiGd_C').hide('fade', 200, function () {
             $('.setBox_left,.setBox_right').show('fade', 200);
         });
 
     }
 });
 
+
 function setMyChat(six = new Array(5), sixSum = new Array(5)) {
-    myChart = echarts.init(document.getElementById('myBigChart'));
+    myChart = eChart.init(document.getElementById('myBigChart'));
     // 指定图表的配置项和数据
     option = {
         renderer: 'svg',
@@ -400,7 +402,7 @@ function setMyChat(six = new Array(5), sixSum = new Array(5)) {
 }
 
 
-var myChart = echarts.init(document.getElementById('myBigChart'));
+var myChart = eChart.init(document.getElementById('myBigChart'));
 // 指定图表的配置项和数据
 var option = {
     renderer: 'svg',
@@ -559,14 +561,18 @@ function loadSchoolBoxStar() {
     });
 }
 
-function toPercent(c) {
+function toPercentAdd(c) {
     if (c > 0) {
-        return '+' + c * 100 + '%';
+        return '+' + Math.round(c * 100) + '%';
     } else if (c < 0) {
-        return c * 100 + '%';
+        return Math.round(c * 100) + '%';
     } else {
         return '-';
     }
+}
+
+function toPercent(c) {
+    return Math.round(c * 100) + '%';
 }
 
 function toZero(c) {
@@ -584,6 +590,14 @@ function toPerS(c) {
     }
 }
 
+function toSpeed(c) {
+    if (c > 0) {
+        return '+' + c + 's';
+    } else {
+        return c + 's';
+    }
+}
+
 function getValue(json, name) {
     for (name in json) {
         return json[name];
@@ -591,19 +605,19 @@ function getValue(json, name) {
 }
 
 $(".setSixBoxList:nth-child(2)").hover(function () {
-    $('.setBoxCon:nth-child(1),.setBoxCon:nth-child(2)').addClass('myFocusDark');
+    $('.setBoxCon:nth-child(1),.setBoxCon:nth-child(2),.tableT_NumberB .table_NumberN:nth-child(1),.tableT_NumberB .table_NumberN:nth-child(2),.table_TBo .table_NumberN:nth-child(1),.table_TBo .table_NumberN:nth-child(2)').addClass('myFocusDark');
 }, function () {
-    $('.setBoxCon:nth-child(1),.setBoxCon:nth-child(2)').removeClass('myFocusDark');
+    $('.setBoxCon:nth-child(1),.setBoxCon:nth-child(2),.tableT_NumberB .table_NumberN:nth-child(1),.tableT_NumberB .table_NumberN:nth-child(2),.table_TBo .table_NumberN:nth-child(1),.table_TBo .table_NumberN:nth-child(2)').removeClass('myFocusDark');
 });
 $(".setSixBoxList:nth-child(3)").hover(function () {
-    $('.setBoxCon:nth-child(3),.setBoxCon:nth-child(4)').addClass('myFocusDark');
+    $('.setBoxCon:nth-child(3),.setBoxCon:nth-child(4),.tableT_NumberB .table_NumberN:nth-child(5),.tableT_NumberB .table_NumberN:nth-child(6),.tableT_NumberB .table_NumberN:nth-child(7),.table_TBo .table_NumberN:nth-child(5),.table_TBo .table_NumberN:nth-child(6),.table_TBo .table_NumberN:nth-child(7)').addClass('myFocusDark');
 }, function () {
-    $('.setBoxCon:nth-child(3),.setBoxCon:nth-child(4)').removeClass('myFocusDark');
+    $('.setBoxCon:nth-child(3),.setBoxCon:nth-child(4),.tableT_NumberB .table_NumberN:nth-child(5),.tableT_NumberB .table_NumberN:nth-child(6),.tableT_NumberB .table_NumberN:nth-child(7),.table_TBo .table_NumberN:nth-child(5),.table_TBo .table_NumberN:nth-child(6),.table_TBo .table_NumberN:nth-child(7)').removeClass('myFocusDark');
 });
 $(".setSixBoxList:nth-child(4)").hover(function () {
-    $('.setBoxCon:nth-child(5),.setBoxCon:nth-child(6),.setBoxCon:nth-child(7),.setBoxCon:nth-child(8),.setBoxCon:nth-child(9)').addClass('myFocusDark');
+    $('.setBoxCon:nth-child(5),.setBoxCon:nth-child(6),.setBoxCon:nth-child(7),.setBoxCon:nth-child(8),.setBoxCon:nth-child(9),.tableT_NumberB .table_NumberN:nth-child(3),.tableT_NumberB .table_NumberN:nth-child(10),.tableT_NumberB .table_NumberN:nth-child(11),.table_TBo .table_NumberN:nth-child(3),.table_TBo .table_NumberN:nth-child(10),.table_TBo .table_NumberN:nth-child(11)').addClass('myFocusDark');
 }, function () {
-    $('.setBoxCon:nth-child(5),.setBoxCon:nth-child(6),.setBoxCon:nth-child(7),.setBoxCon:nth-child(8),.setBoxCon:nth-child(9)').removeClass('myFocusDark');
+    $('.setBoxCon:nth-child(5),.setBoxCon:nth-child(6),.setBoxCon:nth-child(7),.setBoxCon:nth-child(8),.setBoxCon:nth-child(9),.tableT_NumberB .table_NumberN:nth-child(3),.tableT_NumberB .table_NumberN:nth-child(10),.tableT_NumberB .table_NumberN:nth-child(11),.table_TBo .table_NumberN:nth-child(3),.table_TBo .table_NumberN:nth-child(10),.table_TBo .table_NumberN:nth-child(11)').removeClass('myFocusDark');
 });
 $(".setSixBoxList:nth-child(5)").hover(function () {
     $('.setBoxCon:nth-child(10),.setBoxCon:nth-child(11)').addClass('myFocusDark');
@@ -611,28 +625,26 @@ $(".setSixBoxList:nth-child(5)").hover(function () {
     $('.setBoxCon:nth-child(10),.setBoxCon:nth-child(11)').removeClass('myFocusDark');
 });
 $(".setSixBoxList:nth-child(6)").hover(function () {
-    $('.setBoxCon:nth-child(12),.setBoxCon:nth-child(13),.setBoxCon:nth-child(14)').addClass('myFocusDark');
+    $('.setBoxCon:nth-child(12),.setBoxCon:nth-child(13),.setBoxCon:nth-child(14),.tableT_NumberB .table_NumberN:nth-child(9),.table_TBo .table_NumberN:nth-child(9)').addClass('myFocusDark');
 }, function () {
-    $('.setBoxCon:nth-child(12),.setBoxCon:nth-child(13),.setBoxCon:nth-child(14)').removeClass('myFocusDark');
+    $('.setBoxCon:nth-child(12),.setBoxCon:nth-child(13),.setBoxCon:nth-child(14),.tableT_NumberB .table_NumberN:nth-child(9),.table_TBo .table_NumberN:nth-child(9)').removeClass('myFocusDark');
 });
 
-// let boxPerson =new Person([2,2,2,2,2,2]);
-// boxPerson.init();
-// console.log(boxPerson.attAdd);
 
-function getByteLength(str){
-    return str.replace(/[^\u0000-\u00ff]/g,'aa').length;
+function getByteLength(str) {
+    return str.replace(/[^\u0000-\u00ff]/g, 'aa').length;
 }
 
-$(document).on('mouseenter', '.table_Txo', function () {
-    let maxWidth = 66;
+$(document).on('mouseenter', '.content_Tx', function () {
+    let maxWidth = 64;
     if (getByteLength($(this).text()) > maxWidth) {
-        $(this).append('<div class="content_Tx_tip">'+$(this).children('.content_Tx').text()+'</div>');
+        $(this).addClass('heightTip');
     }
 });
-$(document).on('mouseleave ', '.table_Txo', function () {
-    $('.content_Tx_tip').remove();
+$(document).on('mouseleave ', '.content_Tx', function () {
+    $(this).removeClass('heightTip');
 });
+
 
 $(document).on('mouseenter', '.table_Tx_D', function () {
     let maxWidth = 42;
@@ -649,3 +661,228 @@ $(document).on('mouseenter', '.table_Tx_S', function () {
 $(document).on('mouseleave ', '.table_Tx_D,.table_Tx_S', function () {
     $(this).removeClass('heightTip');
 });
+
+
+// let boxPerson =new Person([2,2,2,2,2,2]);
+// boxPerson.init();
+// console.log(boxPerson.attAdd);
+
+
+let personA = new Person();
+
+function loadGameFile() {
+    let a = [2, 2, 2, 2, 2];
+
+    $('#sixDataSet_all').text(13 - a[0] - a[1] - a[2] - a[3] - a[4]);
+    $('#set_SX_LL').text(a[0]);
+    $('#set_SX_MJ').text(a[1]);
+    $('#set_SX_ZL').text(a[2]);
+    $('#set_SX_TP').text(a[3]);
+    $('#set_SX_ZQ').text(a[4]);
+
+    onOrOff(a);
+
+
+    personA.sixData[0] = a[0];
+    personA.sixData[1] = a[1];
+    personA.sixData[2] = a[2];
+    personA.sixData[3] = a[3];
+    personA.sixData[4] = a[4];
+    personA.init();
+    setSX_LL();
+    setSX_MJ();
+    setSX_ZL();
+    setSX_TP();
+    setSX_ZQ();
+
+
+}
+
+$(document).on('click', '.bt_sub', function () {
+    let t = $(this).next();
+    let e = t.attr('id');
+    switch (e) {
+        case 'set_SX_LL':
+            if (personA.sixData[0] >= 1) {
+                personA.calc_LL(-1);
+                t.text(personA.sixData[0]);
+                $('#sixDataSet_all').text(Number($('#sixDataSet_all').text()) + 1);
+                onOrOff(personA.sixData);
+                setSX_LL();
+            }
+            break;
+        case 'set_SX_MJ':
+            if (personA.sixData[1] >= 1) {
+                personA.calc_MJ(-1);
+                t.text(personA.sixData[1]);
+                $('#sixDataSet_all').text(Number($('#sixDataSet_all').text()) + 1);
+                onOrOff(personA.sixData);
+                setSX_MJ();
+            }
+            break;
+        case 'set_SX_ZL':
+            if (personA.sixData[2] >= 1) {
+                personA.calc_ZL(-1);
+                t.text(personA.sixData[2]);
+                $('#sixDataSet_all').text(Number($('#sixDataSet_all').text() )+ 1);
+                onOrOff(personA.sixData);
+                setSX_ZL();
+            }
+            break;
+        case 'set_SX_TP':
+            if (personA.sixData[3] >= 1) {
+                personA.calc_TP(-1);
+                t.text(personA.sixData[3]);
+                $('#sixDataSet_all').text(Number($('#sixDataSet_all').text()) + 1);
+                onOrOff(personA.sixData);
+                setSX_TP();
+            }
+            break;
+        case 'set_SX_ZQ':
+            if (personA.sixData[4] >= 1) {
+                personA.calc_ZQ(-1);
+                t.text(personA.sixData[4]);
+                $('#sixDataSet_all').text(Number($('#sixDataSet_all').text()) + 1);
+                onOrOff(personA.sixData);
+                setSX_ZQ();
+            }
+            break;
+    }
+});
+
+$(document).on('click', '.bt_add', function () {
+    let t = $(this).prev();
+    let e = t.attr('id');
+    switch (e) {
+        case 'set_SX_LL':
+            if (personA.sixData[0] <= 4) {
+                personA.calc_LL(1);
+                t.text(personA.sixData[0]);
+                $('#sixDataSet_all').text($('#sixDataSet_all').text() - 1);
+                onOrOff(personA.sixData);
+                setSX_LL();
+            }
+            break;
+        case 'set_SX_MJ':
+            if (personA.sixData[1] <= 4) {
+                personA.calc_MJ(1);
+                t.text(personA.sixData[1]);
+                $('#sixDataSet_all').text($('#sixDataSet_all').text() - 1);
+                onOrOff(personA.sixData);
+                setSX_MJ();
+            }
+            break;
+        case 'set_SX_ZL':
+            if (personA.sixData[2] <= 4) {
+                personA.calc_ZL(1);
+                t.text(personA.sixData[2]);
+                $('#sixDataSet_all').text($('#sixDataSet_all').text() - 1);
+                onOrOff(personA.sixData);
+                setSX_ZL();
+            }
+            break;
+        case 'set_SX_TP':
+            if (personA.sixData[3] <= 4) {
+                personA.calc_TP(1);
+                t.text(personA.sixData[3]);
+                $('#sixDataSet_all').text($('#sixDataSet_all').text() - 1);
+                onOrOff(personA.sixData);
+                setSX_TP();
+            }
+            break;
+        case 'set_SX_ZQ':
+            if (personA.sixData[4] <= 2) {
+                personA.calc_ZQ(1);
+                t.text(personA.sixData[4]);
+                $('#sixDataSet_all').text($('#sixDataSet_all').text() - 1);
+                onOrOff(personA.sixData);
+                setSX_ZQ();
+            }
+            break;
+    }
+});
+
+function onOrOff(a) {
+    if ((13 - a[0] - a[1] - a[2] - a[3] - a[4]) <= 0) {
+        $('#set_SX_LL,#set_SX_MJ,#set_SX_ZL,#set_SX_TP,#set_SX_ZQ').next().addClass('bt_off');
+    } else {
+        if (a[0] >= 5) {
+            $('#set_SX_LL').next().addClass('bt_off');
+        } else if (a[0] <= 0) {
+            $('#set_SX_LL').prev().addClass('bt_off');
+        } else {
+            $('#set_SX_LL').next().removeClass('bt_off');
+            $('#set_SX_LL').prev().removeClass('bt_off');
+        }
+        if (a[1] >= 5) {
+            $('#set_SX_MJ').next().addClass('bt_off');
+        } else if (a[1] <= 0) {
+            $('#set_SX_MJ').prev().addClass('bt_off');
+        } else {
+            $('#set_SX_MJ').next().removeClass('bt_off');
+            $('#set_SX_MJ').prev().removeClass('bt_off');
+        }
+        if (a[2] >= 5) {
+            $('#set_SX_ZL').next().addClass('bt_off');
+        } else if (a[2] <= 0) {
+            $('#set_SX_ZL').prev().addClass('bt_off');
+        } else {
+            $('#set_SX_ZL').next().removeClass('bt_off');
+            $('#set_SX_ZL').prev().removeClass('bt_off');
+        }
+        if (a[3] >= 5) {
+            $('#set_SX_TP').next().addClass('bt_off');
+        } else if (a[3] <= 0) {
+            $('#set_SX_TP').prev().addClass('bt_off');
+        } else {
+            $('#set_SX_TP').next().removeClass('bt_off');
+            $('#set_SX_TP').prev().removeClass('bt_off');
+        }
+        if (a[4] >= 3) {
+            $('#set_SX_ZQ').next().addClass('bt_off');
+        } else if (a[4] <= 0) {
+            $('#set_SX_ZQ').prev().addClass('bt_off');
+        } else {
+            $('#set_SX_ZQ').next().removeClass('bt_off');
+            $('#set_SX_ZQ').prev().removeClass('bt_off');
+        }
+
+    }
+}
+
+function setSX_LL() {
+    $('#attAdd').text(toPercentAdd(personA.attAdd));
+    $('#flawDam').text(toPercent(personA.flawDam));
+}
+
+function setSX_MJ() {
+    $('#timeAdd_q').text(toSpeed(personA.timeAdd_q));
+    $('#timeAdd_z').text(toSpeed(personA.timeAdd_z));
+    $('#timeAdd_h').text(toSpeed(personA.timeAdd_h));
+    $('#dod_head').text(toPercent(personA.dod_head));
+    $('#dod_body').text(toPercent(personA.dod_body));
+    $('#dod_hand').text(toPercent(personA.dod_hand));
+    $('#dod_leg').text(toPercent(personA.dod_leg));
+}
+
+function setSX_ZL() {
+    $('#flawFind').text(toPercentAdd(personA.flawFind));
+    $('#bleedAdd').text(toPercentAdd(personA.bleedAdd));
+    $('#poisonAdd').text(toPercentAdd(personA.poisonAdd));
+    $('#hitRateAdd').text(toPercentAdd(personA.hitRateAdd));
+    $('#getInf').text(personA.getInf);
+}
+
+function setSX_TP() {
+    $('#def_o').text(toPercent(personA.def_o));
+    $('#block_head').text(toPercent(personA.block_head));
+    $('#block_body').text(toPercent(personA.block_body));
+    $('#block_hand').text(toPercent(personA.block_hand));
+    $('#block_leg').text(toPercent(personA.block_leg));
+}
+
+function setSX_ZQ() {
+    $('#zqHurtAdd').text(toPercentAdd(personA.zqHurtAdd));
+    $('#zqVal').text(personA.zqVal);
+    $('#zqPerSec').text(personA.zqPerSec + '/1s');
+}

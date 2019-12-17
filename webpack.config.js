@@ -14,14 +14,14 @@ module.exports = {
             template: './src/index.html',
             filename: 'index.html'
         }),
-        new HtmlWebpackPlugin({
-            template: './src/setSixData.html',
-            filename: 'setSixData.html'
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/selectSchool.html',
-            filename: 'selectSchool.html'
-        }),
+        // new HtmlWebpackPlugin({
+        //     template: './src/setSixData.html',
+        //     filename: 'setSixData.html'
+        // }),
+        // new HtmlWebpackPlugin({
+        //     template: './src/selectSchool.html',
+        //     filename: 'selectSchool.html'
+        // }),
     ],
     module: {
         rules: [
