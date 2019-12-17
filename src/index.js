@@ -172,6 +172,7 @@ function showTableContentBox_Pas() {
     }
 }
 
+//todo  key
 function showTableContentBox_Att_TBo() {
     let myContent = '';
     for (let key in tData.zAtt) {
@@ -208,17 +209,28 @@ function showTableContentBox_Att_Txo() {
     for (let key in tData.zAtt) {
         myContent = '<div class="tableContent"><div class="table_Name">' + key +
             '</div><div class="grayBox-color table_ot table_TB" style=""><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_o) + '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_i) + '</div><div class="table_NumberN" style="display: none;">' +
-            toPercentAdd(tData.zAtt[key].hit) + '</div><div class="table_NumberN" style="display: none;">' +
-            toPercentAdd(tData.zAtt[key].block) + '</div><div class="table_NumberN" style="display: none;">' +
-            tData.zAtt[key].time_q + 's</div><div class="table_NumberN" style="display: none;">' +
-            tData.zAtt[key].time_z + 's</div><div class="table_NumberN" style="display: none;">' +
-            tData.zAtt[key].time_h + 's</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_a) + '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].const) + '</div><div class="table_NumberN" style="display: none;">' +
-            toPerS(tData.zAtt[key].hurt_l) + '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_d) + '</div></div><div class="table_Txo">';
+            toZero(tData.zAtt[key].hurt_o) +
+            '</div><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].hurt_i) +
+            '</div><div class="table_NumberN" style="display: none;">' +
+            toPercentAdd(tData.zAtt[key].hit) +
+            '</div><div class="table_NumberN" style="display: none;">' +
+            toPercentAdd(tData.zAtt[key].block) +
+            '</div><div class="table_NumberN" style="display: none;">' +
+            tData.zAtt[key].time_q +
+            's</div><div class="table_NumberN" style="display: none;">' +
+            tData.zAtt[key].time_z +
+            's</div><div class="table_NumberN" style="display: none;">' +
+            tData.zAtt[key].time_h +
+            's</div><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].hurt_a) +
+            '</div><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].const) +
+            '</div><div class="table_NumberN" style="display: none;">' +
+            toPerS(tData.zAtt[key].hurt_l) +
+            '</div><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].hurt_d) +
+            '</div></div><div class="table_Txo">';
         if (tData.zAtt[key].TX_inf != '') {
             myContent = myContent +
                 '<div class="content_TxSup" style="display: none;">特</div><div class="content_Tx" style="display: inline;">' +
@@ -239,17 +251,28 @@ function showTableContentBox_Att_Lzo() {
     for (let key in tData.zAtt) {
         myContent = '<div class="tableContent"><div class="table_Name">' + key +
             '</div><div class="grayBox-color table_ot table_TB" style=""><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_o) + '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_i) + '</div><div class="table_NumberN" style="display: none;">' +
-            toPercentAdd(tData.zAtt[key].hit) + '</div><div class="table_NumberN" style="display: none;">' +
-            toPercentAdd(tData.zAtt[key].block) + '</div><div class="table_NumberN" style="display: none;">' +
-            tData.zAtt[key].time_q + 's</div><div class="table_NumberN" style="display: none;">' +
-            tData.zAtt[key].time_z + 's</div><div class="table_NumberN" style="display: none;">' +
-            tData.zAtt[key].time_h + 's</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_a) + '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].const) + '</div><div class="table_NumberN" style="display: none;">' +
-            toPerS(tData.zAtt[key].hurt_l) + '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_d) + '</div></div><div class="table_ot table_Tx">';
+            toZero(tData.zAtt[key].hurt_o) +
+            '</div><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].hurt_i) +
+            '</div><div class="table_NumberN" style="display: none;">' +
+            toPercentAdd(tData.zAtt[key].hit) +
+            '</div><div class="table_NumberN" style="display: none;">' +
+            toPercentAdd(tData.zAtt[key].block) +
+            '</div><div class="table_NumberN" style="display: none;">' +
+            tData.zAtt[key].time_q +
+            's</div><div class="table_NumberN" style="display: none;">' +
+            tData.zAtt[key].time_z +
+            's</div><div class="table_NumberN" style="display: none;">' +
+            tData.zAtt[key].time_h +
+            's</div><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].hurt_a) +
+            '</div><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].const) +
+            '</div><div class="table_NumberN" style="display: none;">' +
+            toPerS(tData.zAtt[key].hurt_l) +
+            '</div><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].hurt_d) +
+            '</div></div><div class="table_ot table_Tx">';
         if (tData.zAtt[key].TX_inf != '') {
             myContent = myContent +
                 '<div class="content_TxSup">特</div><div class="content_Tx">' +
@@ -672,7 +695,8 @@ let personA = new Person();
 
 function loadGameFile() {
     let a = [2, 2, 2, 2, 2];
-
+    let mySchool = 'SL';
+    tData = data_S['' + mySchool + ''];
     $('#sixDataSet_all').text(13 - a[0] - a[1] - a[2] - a[3] - a[4]);
     $('#set_SX_LL').text(a[0]);
     $('#set_SX_MJ').text(a[1]);
@@ -698,6 +722,7 @@ function loadGameFile() {
 
 }
 
+
 $(document).on('click', '.bt_sub', function () {
     let t = $(this).next();
     let e = t.attr('id');
@@ -707,7 +732,6 @@ $(document).on('click', '.bt_sub', function () {
                 personA.calc_LL(-1);
                 t.text(personA.sixData[0]);
                 $('#sixDataSet_all').text(Number($('#sixDataSet_all').text()) + 1);
-                onOrOff(personA.sixData);
                 setSX_LL();
             }
             break;
@@ -716,7 +740,6 @@ $(document).on('click', '.bt_sub', function () {
                 personA.calc_MJ(-1);
                 t.text(personA.sixData[1]);
                 $('#sixDataSet_all').text(Number($('#sixDataSet_all').text()) + 1);
-                onOrOff(personA.sixData);
                 setSX_MJ();
             }
             break;
@@ -724,8 +747,7 @@ $(document).on('click', '.bt_sub', function () {
             if (personA.sixData[2] >= 1) {
                 personA.calc_ZL(-1);
                 t.text(personA.sixData[2]);
-                $('#sixDataSet_all').text(Number($('#sixDataSet_all').text() )+ 1);
-                onOrOff(personA.sixData);
+                $('#sixDataSet_all').text(Number($('#sixDataSet_all').text()) + 1);
                 setSX_ZL();
             }
             break;
@@ -734,7 +756,6 @@ $(document).on('click', '.bt_sub', function () {
                 personA.calc_TP(-1);
                 t.text(personA.sixData[3]);
                 $('#sixDataSet_all').text(Number($('#sixDataSet_all').text()) + 1);
-                onOrOff(personA.sixData);
                 setSX_TP();
             }
             break;
@@ -743,62 +764,60 @@ $(document).on('click', '.bt_sub', function () {
                 personA.calc_ZQ(-1);
                 t.text(personA.sixData[4]);
                 $('#sixDataSet_all').text(Number($('#sixDataSet_all').text()) + 1);
-                onOrOff(personA.sixData);
                 setSX_ZQ();
             }
             break;
     }
+    onOrOff(personA.sixData);
 });
 
 $(document).on('click', '.bt_add', function () {
-    let t = $(this).prev();
-    let e = t.attr('id');
-    switch (e) {
-        case 'set_SX_LL':
-            if (personA.sixData[0] <= 4) {
-                personA.calc_LL(1);
-                t.text(personA.sixData[0]);
-                $('#sixDataSet_all').text($('#sixDataSet_all').text() - 1);
-                onOrOff(personA.sixData);
-                setSX_LL();
-            }
-            break;
-        case 'set_SX_MJ':
-            if (personA.sixData[1] <= 4) {
-                personA.calc_MJ(1);
-                t.text(personA.sixData[1]);
-                $('#sixDataSet_all').text($('#sixDataSet_all').text() - 1);
-                onOrOff(personA.sixData);
-                setSX_MJ();
-            }
-            break;
-        case 'set_SX_ZL':
-            if (personA.sixData[2] <= 4) {
-                personA.calc_ZL(1);
-                t.text(personA.sixData[2]);
-                $('#sixDataSet_all').text($('#sixDataSet_all').text() - 1);
-                onOrOff(personA.sixData);
-                setSX_ZL();
-            }
-            break;
-        case 'set_SX_TP':
-            if (personA.sixData[3] <= 4) {
-                personA.calc_TP(1);
-                t.text(personA.sixData[3]);
-                $('#sixDataSet_all').text($('#sixDataSet_all').text() - 1);
-                onOrOff(personA.sixData);
-                setSX_TP();
-            }
-            break;
-        case 'set_SX_ZQ':
-            if (personA.sixData[4] <= 2) {
-                personA.calc_ZQ(1);
-                t.text(personA.sixData[4]);
-                $('#sixDataSet_all').text($('#sixDataSet_all').text() - 1);
-                onOrOff(personA.sixData);
-                setSX_ZQ();
-            }
-            break;
+    if ($('#sixDataSet_all').text() > 0) {
+        let t = $(this).prev();
+        let e = t.attr('id');
+        switch (e) {
+            case 'set_SX_LL':
+                if (personA.sixData[0] <= 4) {
+                    personA.calc_LL(1);
+                    t.text(personA.sixData[0]);
+                    $('#sixDataSet_all').text($('#sixDataSet_all').text() - 1);
+                    setSX_LL();
+                }
+                break;
+            case 'set_SX_MJ':
+                if (personA.sixData[1] <= 4) {
+                    personA.calc_MJ(1);
+                    t.text(personA.sixData[1]);
+                    $('#sixDataSet_all').text($('#sixDataSet_all').text() - 1);
+                    setSX_MJ();
+                }
+                break;
+            case 'set_SX_ZL':
+                if (personA.sixData[2] <= 4) {
+                    personA.calc_ZL(1);
+                    t.text(personA.sixData[2]);
+                    $('#sixDataSet_all').text($('#sixDataSet_all').text() - 1);
+                    setSX_ZL();
+                }
+                break;
+            case 'set_SX_TP':
+                if (personA.sixData[3] <= 4) {
+                    personA.calc_TP(1);
+                    t.text(personA.sixData[3]);
+                    $('#sixDataSet_all').text($('#sixDataSet_all').text() - 1);
+                    setSX_TP();
+                }
+                break;
+            case 'set_SX_ZQ':
+                if (personA.sixData[4] <= 2) {
+                    personA.calc_ZQ(1);
+                    t.text(personA.sixData[4]);
+                    $('#sixDataSet_all').text($('#sixDataSet_all').text() - 1);
+                    setSX_ZQ();
+                }
+                break;
+        }
+        onOrOff(personA.sixData);
     }
 });
 
@@ -806,53 +825,57 @@ function onOrOff(a) {
     if ((13 - a[0] - a[1] - a[2] - a[3] - a[4]) <= 0) {
         $('#set_SX_LL,#set_SX_MJ,#set_SX_ZL,#set_SX_TP,#set_SX_ZQ').next().addClass('bt_off');
     } else {
-        if (a[0] >= 5) {
-            $('#set_SX_LL').next().addClass('bt_off');
-        } else if (a[0] <= 0) {
-            $('#set_SX_LL').prev().addClass('bt_off');
-        } else {
-            $('#set_SX_LL').next().removeClass('bt_off');
-            $('#set_SX_LL').prev().removeClass('bt_off');
-        }
-        if (a[1] >= 5) {
-            $('#set_SX_MJ').next().addClass('bt_off');
-        } else if (a[1] <= 0) {
-            $('#set_SX_MJ').prev().addClass('bt_off');
-        } else {
-            $('#set_SX_MJ').next().removeClass('bt_off');
-            $('#set_SX_MJ').prev().removeClass('bt_off');
-        }
-        if (a[2] >= 5) {
-            $('#set_SX_ZL').next().addClass('bt_off');
-        } else if (a[2] <= 0) {
-            $('#set_SX_ZL').prev().addClass('bt_off');
-        } else {
-            $('#set_SX_ZL').next().removeClass('bt_off');
-            $('#set_SX_ZL').prev().removeClass('bt_off');
-        }
-        if (a[3] >= 5) {
-            $('#set_SX_TP').next().addClass('bt_off');
-        } else if (a[3] <= 0) {
-            $('#set_SX_TP').prev().addClass('bt_off');
-        } else {
-            $('#set_SX_TP').next().removeClass('bt_off');
-            $('#set_SX_TP').prev().removeClass('bt_off');
-        }
-        if (a[4] >= 3) {
-            $('#set_SX_ZQ').next().addClass('bt_off');
-        } else if (a[4] <= 0) {
-            $('#set_SX_ZQ').prev().addClass('bt_off');
-        } else {
-            $('#set_SX_ZQ').next().removeClass('bt_off');
-            $('#set_SX_ZQ').prev().removeClass('bt_off');
-        }
-
+        $('#set_SX_LL,#set_SX_MJ,#set_SX_ZL,#set_SX_TP,#set_SX_ZQ').next().removeClass('bt_off');
+    }
+    if (a[0] >= 5) {
+        $('#set_SX_LL').next().addClass('bt_off');
+    } else if (a[0] <= 0) {
+        $('#set_SX_LL').prev().addClass('bt_off');
+    } else {
+        $('#set_SX_LL').prev().removeClass('bt_off');
+    }
+    if (a[1] >= 5) {
+        $('#set_SX_MJ').next().addClass('bt_off');
+    } else if (a[1] <= 0) {
+        $('#set_SX_MJ').prev().addClass('bt_off');
+    } else {
+        $('#set_SX_MJ').prev().removeClass('bt_off');
+    }
+    if (a[2] >= 5) {
+        $('#set_SX_ZL').next().addClass('bt_off');
+    } else if (a[2] <= 0) {
+        $('#set_SX_ZL').prev().addClass('bt_off');
+    } else {
+        $('#set_SX_ZL').prev().removeClass('bt_off');
+    }
+    if (a[3] >= 5) {
+        $('#set_SX_TP').next().addClass('bt_off');
+    } else if (a[3] <= 0) {
+        $('#set_SX_TP').prev().addClass('bt_off');
+    } else {
+        $('#set_SX_TP').prev().removeClass('bt_off');
+    }
+    if (a[4] >= 3) {
+        $('#set_SX_ZQ').next().addClass('bt_off');
+    } else if (a[4] <= 0) {
+        $('#set_SX_ZQ').prev().addClass('bt_off');
+    } else {
+        $('#set_SX_ZQ').prev().removeClass('bt_off');
     }
 }
 
+//todo 招式计算
 function setSX_LL() {
     $('#attAdd').text(toPercentAdd(personA.attAdd));
     $('#flawDam').text(toPercent(personA.flawDam));
+    let i = 0;
+    for (let key in tData.zAtt) {
+        console.log(Math.round(tData.zAtt[key].hurt_o * (1 + personA.attAdd)));
+        $('.table_TBo:eq(i)').find('.table_NumberN').eq(0).text(Math.round(tData.zAtt[key].hurt_o * (1 + personA.attAdd)));
+        $('.table_TBo:eq(i)').find('.table_NumberN').eq(1).text(Math.round(tData.zAtt[key].hurt_i * (1 + personA.attAdd)));
+        i++;
+    }
+
 }
 
 function setSX_MJ() {
