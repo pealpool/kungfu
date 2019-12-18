@@ -117,7 +117,7 @@ $(document).on('click', '.schoolBox', function () {
     }
     $('#schoolStar').html(myContent);
     $('#schoolInf').text(tData.inf);
-    setMyChat(tData.sixData, data_S.sixDataSum);
+    setMyChat(changeSixDtoChart(tData.sixData, mySaveFile), data_S.sixDataSum);
 
     $('.tableContentBox_A').html('');
     if ($('#showTabs_A').find('.tableT_TBo').length > 0) {
@@ -185,10 +185,10 @@ function showTableContentBox_Att_TBo() {
             tData.zAtt[key].time_q + 's</div><div class="table_NumberN">' +
             tData.zAtt[key].time_z + 's</div><div class="table_NumberN">' +
             tData.zAtt[key].time_h + 's</div><div class="table_NumberN">' +
-            toZero(tData.zAtt[key].hurt_a) + '</div><div class="table_NumberN">' +
             toZero(tData.zAtt[key].const) + '</div><div class="table_NumberN">' +
-            toPerS(tData.zAtt[key].hurt_l) + '</div><div class="table_NumberN">' +
-            toZero(tData.zAtt[key].hurt_d) + '</div></div><div class="table_ot table_Tx">';
+            toZero(tData.zAtt[key].hurt_q) + '</div><div class="table_NumberN">' +
+            toPerS(tData.zAtt[key].hurt_b) + '</div><div class="table_NumberN">' +
+            toZero(tData.zAtt[key].hurt_p) + '</div></div><div class="table_ot table_Tx">';
         if (tData.zAtt[key].TX_inf != '') {
             myContent = myContent +
                 '<div class="content_TxSup">特</div><div class="content_Tx">' +
@@ -223,13 +223,13 @@ function showTableContentBox_Att_Txo() {
             's</div><div class="table_NumberN" style="display: none;">' +
             tData.zAtt[key].time_h +
             's</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_a) +
-            '</div><div class="table_NumberN" style="display: none;">' +
             toZero(tData.zAtt[key].const) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toPerS(tData.zAtt[key].hurt_l) +
+            toZero(tData.zAtt[key].hurt_q) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_d) +
+            toPerS(tData.zAtt[key].hurt_b) +
+            '</div><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].hurt_p) +
             '</div></div><div class="table_Txo">';
         if (tData.zAtt[key].TX_inf != '') {
             myContent = myContent +
@@ -265,13 +265,13 @@ function showTableContentBox_Att_Lzo() {
             's</div><div class="table_NumberN" style="display: none;">' +
             tData.zAtt[key].time_h +
             's</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_a) +
-            '</div><div class="table_NumberN" style="display: none;">' +
             toZero(tData.zAtt[key].const) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toPerS(tData.zAtt[key].hurt_l) +
+            toZero(tData.zAtt[key].hurt_q) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_d) +
+            toPerS(tData.zAtt[key].hurt_b) +
+            '</div><div class="table_NumberN" style="display: none;">' +
+            toZero(tData.zAtt[key].hurt_p) +
             '</div></div><div class="table_ot table_Tx">';
         if (tData.zAtt[key].TX_inf != '') {
             myContent = myContent +
@@ -311,7 +311,7 @@ $(document).on('click', '.liFiBox_Sxx', function () {
     return false;
 });
 $(document).on('click', '.next_02', function () {
-    loadGameFile();
+    loadGameFile(mySaveFile);
     if (!$(this).hasClass('next_off')) {
         $(this).addClass('next_off');
         $(this).switchClass('next_02', 'next_03', 800, 'easeInOutCubic');
@@ -365,7 +365,8 @@ $(document).on('click', '.next_03', function () {
     }
 });
 
-
+let myChart;
+let option = {};
 function setMyChat(six = new Array(5), sixSum = new Array(5)) {
     myChart = eChart.init(document.getElementById('myBigChart'));
     // 指定图表的配置项和数据
@@ -421,64 +422,9 @@ function setMyChat(six = new Array(5), sixSum = new Array(5)) {
     };
 // 使用刚指定的配置项和数据显示图表。
     myChart.setOption(option);
-
 }
 
 
-var myChart = eChart.init(document.getElementById('myBigChart'));
-// 指定图表的配置项和数据
-var option = {
-    renderer: 'svg',
-    // title: {
-    //     text: '基础雷达图'
-    // },
-    // tooltip: {
-    //     show: false,
-    // },
-    // legend: {
-    //     data: ['预算分配（Allocated Budget）', '实际开销（Actual Spending）']
-    // },
-    radar: {
-        // shape: 'circle',
-        name: {
-            textStyle: {
-                color: '#1A1E26',
-                // fontSize: '12px',
-                // backgroundColor: '#999',
-                // borderRadius: 3,
-                // padding: [3, 5]
-            }
-        },
-        nameGap: 5,
-        indicator: [
-            {name: '速攻', max: 50},
-            {name: '闪避', max: 50},
-            {name: '防御', max: 50},
-            {name: '妨碍', max: 50},
-            {name: '消耗', max: 50}
-        ],
-    },
-    series: [{
-        // name: '预算 vs 开销（Budget vs spending）',
-        type: 'radar',
-        areaStyle: {
-            normal: {
-                color: 'rgba(156, 169, 194, 0.5)'
-            }
-        },
-        data: [
-            {
-                value: [0, 0, 0, 0, 0]
-                // vvalue: [six[0], six[1], six[2], six[3], six[4]]
-            }
-        ],
-    }],
-    color: [
-        '#707070',
-    ],
-};
-// 使用刚指定的配置项和数据显示图表。
-myChart.setOption(option);
 $("#showTabs").tabs();
 
 //todo hover
@@ -685,16 +631,10 @@ $(document).on('mouseleave ', '.table_Tx_D,.table_Tx_S', function () {
     $(this).removeClass('heightTip');
 });
 
-
-// let boxPerson =new Person([2,2,2,2,2,2]);
-// boxPerson.init();
-// console.log(boxPerson.attAdd);
-
-
 let personA = new Person();
+let mySaveFile = [2, 2, 2, 2, 2];
 
-function loadGameFile() {
-    let a = [2, 2, 2, 2, 2];
+function loadGameFile(a) {
     let mySchool = 'SL';
     tData = data_S['' + mySchool + ''];
     $('#sixDataSet_all').text(13 - a[0] - a[1] - a[2] - a[3] - a[4]);
@@ -769,6 +709,7 @@ $(document).on('click', '.bt_sub', function () {
             break;
     }
     onOrOff(personA.sixData);
+    setMyChat(changeSixDtoChart(tData.sixData, personA.sixData), data_S.sixDataSum);
 });
 
 $(document).on('click', '.bt_add', function () {
@@ -818,6 +759,7 @@ $(document).on('click', '.bt_add', function () {
                 break;
         }
         onOrOff(personA.sixData);
+        setMyChat(changeSixDtoChart(tData.sixData, personA.sixData), data_S.sixDataSum);
     }
 });
 
@@ -870,12 +812,10 @@ function setSX_LL() {
     $('#flawDam').text(toPercent(personA.flawDam));
     let i = 0;
     for (let key in tData.zAtt) {
-        console.log(Math.round(tData.zAtt[key].hurt_o * (1 + personA.attAdd)));
-        $('.table_TBo:eq(i)').find('.table_NumberN').eq(0).text(Math.round(tData.zAtt[key].hurt_o * (1 + personA.attAdd)));
-        $('.table_TBo:eq(i)').find('.table_NumberN').eq(1).text(Math.round(tData.zAtt[key].hurt_i * (1 + personA.attAdd)));
+        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(0).text(toZero(Math.round(tData.zAtt[key].hurt_o * (1 + personA.attAdd))));
+        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(1).text(toZero(Math.round(tData.zAtt[key].hurt_i * (1 + personA.attAdd))));
         i++;
     }
-
 }
 
 function setSX_MJ() {
@@ -886,6 +826,14 @@ function setSX_MJ() {
     $('#dod_body').text(toPercent(personA.dod_body));
     $('#dod_hand').text(toPercent(personA.dod_hand));
     $('#dod_leg').text(toPercent(personA.dod_leg));
+    let i = 0;
+    for (let key in tData.zAtt) {
+        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(4).text((tData.zAtt[key].time_q + personA.timeAdd_q).toFixed(1) + 's');
+        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(5).text((tData.zAtt[key].time_z + personA.timeAdd_z).toFixed(1) + 's');
+        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(6).text((tData.zAtt[key].time_h + personA.timeAdd_h).toFixed(1) + 's');
+        i++;
+    }
+
 }
 
 function setSX_ZL() {
@@ -894,6 +842,13 @@ function setSX_ZL() {
     $('#poisonAdd').text(toPercentAdd(personA.poisonAdd));
     $('#hitRateAdd').text(toPercentAdd(personA.hitRateAdd));
     $('#getInf').text(personA.getInf);
+    let i = 0;
+    for (let key in tData.zAtt) {
+        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(2).text(toPercentAdd(tData.zAtt[key].hit + personA.hitRateAdd));
+        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(9).text(toPerS(Math.round(tData.zAtt[key].hurt_b * (1 + personA.bleedAdd))));
+        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(10).text(toZero(Math.round(tData.zAtt[key].hurt_p * (1 + personA.poisonAdd))));
+        i++;
+    }
 }
 
 function setSX_TP() {
@@ -908,4 +863,19 @@ function setSX_ZQ() {
     $('#zqHurtAdd').text(toPercentAdd(personA.zqHurtAdd));
     $('#zqVal').text(personA.zqVal);
     $('#zqPerSec').text(personA.zqPerSec + '/1s');
+    let i = 0;
+    for (let key in tData.zAtt) {
+        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(8).text(toZero(Math.round(tData.zAtt[key].hurt_q * (1 + personA.zqHurtAdd))));
+        i++;
+    }
+}
+
+function changeSixDtoChart(school , six) {
+    let c = new Array(4);
+    c[0] = Math.round(school[0] + six[0] * 3 + six[2] + six[4]);
+    c[1] = Math.round(school[1] + six[1] * 3 + six[4]);
+    c[2] = Math.round(school[2] + six[3] * 3);
+    c[3] = Math.round(school[3] + six[1] + six[2] + six[3]);
+    c[4] = Math.round(school[4] + six[0] * 2 + six[2] * 2 + six[4] * 3);
+    return c;
 }
