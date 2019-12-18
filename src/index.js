@@ -367,6 +367,7 @@ $(document).on('click', '.next_03', function () {
 
 let myChart;
 let option = {};
+
 function setMyChat(six = new Array(5), sixSum = new Array(5)) {
     myChart = eChart.init(document.getElementById('myBigChart'));
     // 指定图表的配置项和数据
@@ -394,7 +395,7 @@ function setMyChat(six = new Array(5), sixSum = new Array(5)) {
             },
             nameGap: 5,
             indicator: [
-                {name: '速攻', max: sixSum[0]},
+                {name: '直攻', max: sixSum[0]},
                 {name: '闪避', max: sixSum[1]},
                 {name: '防御', max: sixSum[2]},
                 {name: '妨碍', max: sixSum[3]},
@@ -870,7 +871,7 @@ function setSX_ZQ() {
     }
 }
 
-function changeSixDtoChart(school , six) {
+function changeSixDtoChart(school, six) {
     let c = new Array(4);
     c[0] = Math.round(school[0] + six[0] * 3 + six[2] + six[4]);
     c[1] = Math.round(school[1] + six[1] * 3 + six[4]);
