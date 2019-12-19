@@ -1,9 +1,9 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
-    mode: 'production', // development 或 production
+    mode: 'development', // development 或 production
     entry: path.join(__dirname, './src/index.js'),
     output: {
         path: path.join(__dirname, './dist'),
@@ -18,10 +18,10 @@ module.exports = {
         //     template: './src/setSixData.html',
         //     filename: 'setSixData.html'
         // }),
-        // new HtmlWebpackPlugin({
-        //     template: './src/selectSchool.html',
-        //     filename: 'selectSchool.html'
-        // }),
+        new HtmlWebpackPlugin({
+            template: './src/selectSchool.html',
+            filename: 'selectSchool.html'
+        }),
     ],
     module: {
         rules: [

@@ -1,9 +1,11 @@
-'use strict'
+'use strict';
 import $ from 'jquery';
 import {data_S} from './myData_S.js';
 import {Person} from './myData_P.js';
 import './css/baseCss.scss';
 import 'webpack-jquery-ui';
+import anime from 'animejs/lib/anime.es.js';
+
 //一般不需要jq ui 的默认样式，就不用其css
 // require('webpack-jquery-ui/css');
 
@@ -568,11 +570,6 @@ function toSpeed(c) {
     }
 }
 
-function getValue(json, name) {
-    for (name in json) {
-        return json[name];
-    }
-}
 
 $(".setSixBoxList:nth-child(2)").hover(function () {
     $('.setBoxCon:nth-child(1),.setBoxCon:nth-child(2),.tableT_NumberB .table_NumberN:nth-child(1),.tableT_NumberB .table_NumberN:nth-child(2),.table_TBo .table_NumberN:nth-child(1),.table_TBo .table_NumberN:nth-child(2)').addClass('myFocusDark');
@@ -880,3 +877,20 @@ function changeSixDtoChart(school, six) {
     c[4] = Math.round(school[4] + six[0] * 2 + six[2] * 2 + six[4] * 3);
     return c;
 }
+
+// let myWidth = 100;
+// $('.blue').click(function () {
+//     myWidth = myWidth + 100;
+//     let myAnimation = anime({
+//         targets: ['.blue'],
+//         width: myWidth,
+//         easing: 'linear',
+//         direction: 'normal',
+//         autoplay: false,
+//         duration: 200,
+//     });
+//     myAnimation.play();
+//     console.log(myWidth);
+// });
+
+

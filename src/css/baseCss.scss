@@ -13,6 +13,7 @@ $myYellow-color: #D5AD77;
 $aTab-color: #A6A197;
 $tableTitle-color: #464951;
 $myWhite-color: #ffffff;
+$hp-blue-color: #9CA9C2;
 
 $smallBaseBox-height: 640px; //登录框高度
 $smallBaseBox-width: 490px;
@@ -1041,12 +1042,17 @@ $setBox_left_width: 161px;
   }
 }
 
+$setBox_lM_height: 255px;
 .setBox_lM {
-  height: 261px;
+  height: $setBox_lM_height;
 }
 
 .setBox_lB {
-  height: 132px;
+  height: 137px;
+
+  div {
+    float: left;
+  }
 }
 
 .setBoxTitle {
@@ -1075,30 +1081,43 @@ $setBox_left_width: 161px;
   text-align: right;
 }
 
-.allBodyData {
-  margin-top: 3px;
-}
-
 .bodyDataList {
-  float: left;
   font-size: 12px;
   width: $setBox_left_width - 10px - 5px;
-  height: 17px;
+  height: 16px;
   margin-left: 5px;
 }
 
-@mixin photoBoxSize {
-  width: 151px;
-  height: 245px;
+.bodyDataProcess {
+  width: $setBox_left_width - 10px - 10px;
+  height: 5px;
+  margin-left: 5px;
 }
 
+.bodyDPBox {
+  box-sizing: border-box;
+  height: 4px;
+  background-color: #ffffff;
+  @include base-box($hp-blue-color);
+}
+
+.bodyDP {
+  height: 2px;
+  width: 100%;
+  background-color: $hp-blue-color;
+}
+
+$photoBoxSize_w: 151px;
 .photoBox {
-  @include photoBoxSize;
+  box-sizing: border-box;
+  width: $setBox_left_width - 10px;
+  height: $setBox_lM_height - 10px;
   @include base-box($myYellow-color);
 }
 
 .photoLeft {
-  @include photoBoxSize;
+  width: $setBox_left_width - 10px - 2px;
+  height: $setBox_lM_height - 10px - 2px;
 
 }
 
@@ -1119,10 +1138,11 @@ $setBox_left_width: 161px;
 }
 
 $setBox_right_width: 222px;
+$setBox_right_height: 546px;
 .setBox_right {
   float: left;
   width: $setBox_right_width;
-  height: 546px;
+  height: $setBox_right_height;
   background-color: $lightGray-color;
   margin-left: 15px;
   box-sizing: border-box;
