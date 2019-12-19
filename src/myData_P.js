@@ -91,9 +91,9 @@ export class Person {
     }
 
     init() {
-        this.hp.head = 500;
+        this.hp.head = 800;
         this.hp.body = 2000;
-        this.hp.hand = [8000, 8000];
+        this.hp.hand = [800, 800];
         this.hp.leg = [1000, 1000];
         this.flaw = 0;
 

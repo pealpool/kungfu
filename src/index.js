@@ -90,7 +90,6 @@ $(document).on('click', '.liFiBox_S', function () {
     }
 });
 
-//todo click
 let tData;
 $(document).on('click', '.schoolBox', function () {
     $('#schoolBox_select').attr('id', '');
@@ -174,7 +173,7 @@ function showTableContentBox_Pas() {
     }
 }
 
-//todo  key
+
 function showTableContentBox_Att_TBo() {
     let myContent = '';
     for (let key in tData.zAtt) {
@@ -641,10 +640,7 @@ function loadGameFile(a) {
     $('#set_SX_ZL').text(a[2]);
     $('#set_SX_TP').text(a[3]);
     $('#set_SX_ZQ').text(a[4]);
-
     onOrOff(a);
-
-
     personA.sixData[0] = a[0];
     personA.sixData[1] = a[1];
     personA.sixData[2] = a[2];
@@ -656,10 +652,42 @@ function loadGameFile(a) {
     setSX_ZL();
     setSX_TP();
     setSX_ZQ();
-
-
+    initHP(personA.hp.head, personA.hp.body, personA.hp.hand, personA.hp.leg, true);
 }
 
+function initHP(head, body, hand, leg, who) {
+    let w = $('.setBox_lB').css('width');
+    w = w.substring(0, w.length - 2) - 20;
+    if (who) {
+        $('#bodyDP_A_body').parent().css('width', w + 'px');
+        w = w / body;
+        $('#bodyDP_A_head').parent().css('width', Math.round(w * head) + 'px');
+        $('#bodyDP_A_handL').parent().css('width', Math.round(w * hand[0]) + 'px');
+        $('#bodyDP_A_handR').parent().css('width', Math.round(w * hand[1]) + 'px');
+        $('#bodyDP_A_legL').parent().css('width', Math.round(w * leg[0]) + 'px');
+        $('#bodyDP_A_legR').parent().css('width', Math.round(w * leg[1]) + 'px');
+        $('#dateA_head_hp').text(head);
+        $('#dataA_body_hp').text(body);
+        $('#dataA_handL_hp').text(hand[0]);
+        $('#dataA_handR_hp').text(hand[1]);
+        $('#dataA_legL_hp').text(leg[0]);
+        $('#dataA_legR_hp').text(leg[1]);
+    }else {
+        $('#bodyDP_B_body').parent().css('width', w + 'px');
+        w = w / body;
+        $('#bodyDP_B_head').parent().css('width', Math.round(w * head) + 'px');
+        $('#bodyDP_B_handL').parent().css('width', Math.round(w * hand[0]) + 'px');
+        $('#bodyDP_B_handR').parent().css('width', Math.round(w * hand[1]) + 'px');
+        $('#bodyDP_B_legL').parent().css('width', Math.round(w * leg[0]) + 'px');
+        $('#bodyDP_B_legR').parent().css('width', Math.round(w * leg[1]) + 'px');
+        $('#dateB_head_hp').text(head);
+        $('#dataB_body_hp').text(body);
+        $('#dataB_handL_hp').text(hand[0]);
+        $('#dataB_handR_hp').text(hand[1]);
+        $('#dataB_legL_hp').text(leg[0]);
+        $('#dataB_legR_hp').text(leg[1]);
+    }
+}
 
 $(document).on('click', '.bt_sub', function () {
     let t = $(this).next();
@@ -893,4 +921,28 @@ function changeSixDtoChart(school, six) {
 //     console.log(myWidth);
 // });
 
+
+
+anime({
+    targets: '.aaa',
+    points: [
+        { value: [
+                '70 24 119.574 60.369 100.145 117.631 50.855 101.631 3.426 54.369',
+                '70 34 119.574 60.369 100.145 117.631 50.855 101.631 3.426 54.369',
+                '70 24 100 60.369 100.145 117.631 50.855 101.631 3.426 54.369',]
+        },
+        // { value: '70 6 119.574 60.369 100.145 117.631 39.855 117.631 55.426 68.369' },
+        { value: '70 57 136.574 54.369 89.145 100.631 28.855 132.631 38.426 64.369' },
+        { value: '70 57 136.574 54.369 89.145 100.631 28.855 132.631 38.426 64.369' },
+        { value: '70 57 136.574 54.369 89.145 100.631 28.855 132.631 38.426 64.369' },
+        { value: '70 57 136.574 54.369 89.145 100.631 28.855 132.631 38.426 64.369' },
+        { value: '70 57 136.574 54.369 89.145 100.631 28.855 132.631 38.426 64.369' },
+        { value: '70 57 136.574 54.369 89.145 100.631 28.855 132.631 38.426 64.369' },
+        { value: '70 57 136.574 54.369 89.145 100.631 28.855 132.631 38.426 64.369' },
+        { value: '70 24 119.574 60.369 100.145 117.631 50.855 101.631 3.426 54.369' }
+    ],
+    easing: 'linear',
+    duration: 5000,
+    loop: true
+});
 
