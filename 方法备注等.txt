@@ -9,9 +9,19 @@ C:\Users\lol\.gitconfig
 
 
 
+https://blog.csdn.net/github_37847975/article/details/86477343
+先说说修改HOSTS文件
+步骤：
+1.打开C:\Windows\System32\drivers\etc
+2.找到HOSTS文件
+3.在里面最后加上
+151.101.73.194 github.global.ssl.fastly.net
+151.101.24.133 assets-cdn.github.com
+解释：前面ip为我们设置代理地址，后面域名是你要访问的域名，注意中间有个空格
+前面这些ip地址是可以在 http://tool.chinaz.com/dns/ 上去查的，找一个TTL值比较小的。
 
-
-
+https://blog.csdn.net/qq_37285386/article/details/86569141
+https://blog.csdn.net/qq_41204464/article/details/95342096
 
 
 webpack插件：
