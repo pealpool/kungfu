@@ -138,69 +138,108 @@ export class Person {
         this.photo.eye[5] = (this.photo.eye[5] + (-1.83 / 5 * this.sixData[2])).toFixed(2);
         this.photo.eye[9] = (this.photo.eye[9] + (0.34 / 5 * this.sixData[2])).toFixed(2);
 
-        this.photo.body[0] =
-            (this.photo.body[0] + (5 / 5 * this.sixData[4]) + (-0.32 / 5 * this.sixData[1])).toFixed(2);
-        this.photo.body[1] =
-            (this.photo.body[1] + (5 / 5 * this.sixData[4]) + (-13.39 / 5 * this.sixData[1])).toFixed(2);
-        this.photo.body[2] =
-            (this.photo.body[2] + (3 / 5 * this.sixData[4]) + (3.19 / 5 * this.sixData[3]) + (-0.32 / 5 * this.sixData[1])).toFixed(2);
-        this.photo.body[3] =
-            (this.photo.body[3] + (0.62 / 5 * this.sixData[3]) + (-13.39 / 5 * this.sixData[1])).toFixed(2);
-        this.photo.body[4] =
-            (this.photo.body[4] + (6.49 / 5 * this.sixData[3]) + (-0.43 / 5 * this.sixData[1])).toFixed(2);
-        this.photo.body[5] =
-            (this.photo.body[5] + (-0.79 / 5 * this.sixData[3]) + (-14.07 / 5 * this.sixData[1])).toFixed(2);
-        this.photo.body[6] =
-            (this.photo.body[6] + (5.79 / 5 * this.sixData[3])).toFixed(2);
-        this.photo.body[7] =
-            (this.photo.body[7] + (4.33 / 5 * this.sixData[3]) + (-8.73 / 5 * this.sixData[1])).toFixed(2);
-        this.photo.body[8] =
-            (this.photo.body[8] + (3.78 / 5 * this.sixData[3])).toFixed(2);
-        this.photo.body[9] =
-            (this.photo.body[9] + (4.56 / 5 * this.sixData[3])).toFixed(2);
-        this.photo.body[10] =
-            (this.photo.body[10] + (3.37 / 5 * this.sixData[3])).toFixed(2);
-        this.photo.body[11] =
-            (this.photo.body[11] + (5.69 / 5 * this.sixData[3])).toFixed(2);
-        this.photo.body[12] =
-            (this.photo.body[12] + (1 / 5 * this.sixData[4])).toFixed(2);
-        this.photo.body[13] =
-            (this.photo.body[13] + (-1 / 5 * this.sixData[4])).toFixed(2);
-        this.photo.body[18] =
-            (this.photo.body[18] + (-4 / 5 * this.sixData[4])).toFixed(2);
-        this.photo.body[20] =
-            (this.photo.body[20] + (-2.91 / 5 * this.sixData[3])).toFixed(2);
-        this.photo.body[21] =
-            (this.photo.body[21] + (7.76 / 5 * this.sixData[3])).toFixed(2);
-        this.photo.body[22] =
-            (this.photo.body[22] + (-7.35 / 5 * this.sixData[3])).toFixed(2);
-        this.photo.body[23] =
-            (this.photo.body[23] + (9.3 / 5 * this.sixData[3])).toFixed(2);
-        this.photo.body[24] =
-            (this.photo.body[24] + (-16.23 / 5 * this.sixData[3]) + (-0.51 / 5 * this.sixData[1])).toFixed(2);
-        this.photo.body[25] =
-            (this.photo.body[25] + (-0.43 / 5 * this.sixData[3]) + (-13.81 / 5 * this.sixData[1])).toFixed(2);
-        this.photo.body[26] =
-            (this.photo.body[26] + (-7.57 / 5 * this.sixData[4]) +(-8.33 / 5 * this.sixData[3]) + (-0.31 / 5 * this.sixData[1])).toFixed(2);
-        this.photo.body[27] =
-            (this.photo.body[27] + (-3.53 / 5 * this.sixData[4]) +(2.38 / 5 * this.sixData[3]) + (-13.39 / 5 * this.sixData[1])).toFixed(2);
-        this.photo.body[28] =
-            (this.photo.body[28] + (-10.29 / 5 * this.sixData[4]) + (-0.31 / 5 * this.sixData[1])).toFixed(2);
-        this.photo.body[29] =
-            (this.photo.body[29] + (-0.72 / 5 * this.sixData[4]) + (-13.63 / 5 * this.sixData[1])).toFixed(2);
-        this.photo.body[30] =
-            (this.photo.body[30] + (-1.36 / 5 * this.sixData[4]) + (-0.82 / 5 * this.sixData[1])).toFixed(2);
-        this.photo.body[31] =
-            (this.photo.body[31] + (-0.13 / 5 * this.sixData[4]) + (-14.42 / 5 * this.sixData[1])).toFixed(2);
-        this.photo.body[32] =
-            (this.photo.body[32] + (-4 / 5 * this.sixData[4]) + (-0.82 / 5 * this.sixData[1])).toFixed(2);
-        this.photo.body[33] =
-            (this.photo.body[33] + (1 / 5 * this.sixData[4]) + (-14.42 / 5 * this.sixData[1])).toFixed(2);
-        this.photo.body[34] =
-            (this.photo.body[34] + (5 / 5 * this.sixData[4]) + (-0.32 / 5 * this.sixData[1])).toFixed(2);
-        this.photo.body[35] =
-            (this.photo.body[35] + (5 / 5 * this.sixData[4]) + (-13.39 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.body[0] = (this.photo.body[0] + (5 / 5 * this.sixData[4]) + (-0.32 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.body[1] = (this.photo.body[1] + (5 / 5 * this.sixData[4]) + (-13.39 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.body[2] = (this.photo.body[2] + (3 / 5 * this.sixData[4]) + (3.19 / 5 * this.sixData[3]) + (-0.32 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.body[3] = (this.photo.body[3] + (0.62 / 5 * this.sixData[3]) + (-13.39 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.body[4] = (this.photo.body[4] + (6.49 / 5 * this.sixData[3]) + (-0.43 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.body[5] = (this.photo.body[5] + (-0.79 / 5 * this.sixData[3]) + (-14.07 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.body[6] = (this.photo.body[6] + (5.79 / 5 * this.sixData[3])).toFixed(2);
+        this.photo.body[7] = (this.photo.body[7] + (4.33 / 5 * this.sixData[3]) + (-8.73 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.body[8] = (this.photo.body[8] + (3.78 / 5 * this.sixData[3])).toFixed(2);
+        this.photo.body[9] = (this.photo.body[9] + (4.56 / 5 * this.sixData[3])).toFixed(2);
+        this.photo.body[10] = (this.photo.body[10] + (3.37 / 5 * this.sixData[3])).toFixed(2);
+        this.photo.body[11] = (this.photo.body[11] + (5.69 / 5 * this.sixData[3])).toFixed(2);
+        this.photo.body[12] = (this.photo.body[12] + (1 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.body[13] = (this.photo.body[13] + (-1 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.body[18] = (this.photo.body[18] + (-4 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.body[20] = (this.photo.body[20] + (-2.91 / 5 * this.sixData[3])).toFixed(2);
+        this.photo.body[21] = (this.photo.body[21] + (7.76 / 5 * this.sixData[3])).toFixed(2);
+        this.photo.body[22] = (this.photo.body[22] + (-7.35 / 5 * this.sixData[3])).toFixed(2);
+        this.photo.body[23] = (this.photo.body[23] + (9.3 / 5 * this.sixData[3])).toFixed(2);
+        this.photo.body[24] = (this.photo.body[24] + (-16.23 / 5 * this.sixData[3]) + (-0.51 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.body[25] = (this.photo.body[25] + (-0.43 / 5 * this.sixData[3]) + (-13.81 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.body[26] = (this.photo.body[26] + (-7.57 / 5 * this.sixData[4]) + (-8.33 / 5 * this.sixData[3]) + (-0.31 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.body[27] = (this.photo.body[27] + (-3.53 / 5 * this.sixData[4]) + (2.38 / 5 * this.sixData[3]) + (-13.39 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.body[28] = (this.photo.body[28] + (-10.29 / 5 * this.sixData[4]) + (-0.31 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.body[29] = (this.photo.body[29] + (-0.72 / 5 * this.sixData[4]) + (-13.63 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.body[30] = (this.photo.body[30] + (-1.36 / 5 * this.sixData[4]) + (-0.82 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.body[31] = (this.photo.body[31] + (-0.13 / 5 * this.sixData[4]) + (-14.42 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.body[32] = (this.photo.body[32] + (-4 / 5 * this.sixData[4]) + (-0.82 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.body[33] = (this.photo.body[33] + (1 / 5 * this.sixData[4]) + (-14.42 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.body[34] = (this.photo.body[34] + (5 / 5 * this.sixData[4]) + (-0.32 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.body[35] = (this.photo.body[35] + (5 / 5 * this.sixData[4]) + (-13.39 / 5 * this.sixData[1])).toFixed(2);
 
+        this.photo.handR[0] = (this.photo.handR[0] + (-2.91 / 5 * this.sixData[3])).toFixed(2);
+        this.photo.handR[1] = (this.photo.handR[1] + (7.76 / 5 * this.sixData[3])).toFixed(2);
+        this.photo.handR[2] = (this.photo.handR[2] + (0.24 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.handR[3] = (this.photo.handR[3] + (2.32 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.handR[4] = (this.photo.handR[4] + (3.6 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.handR[5] = (this.photo.handR[5] + (1.89 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.handR[8] = (this.photo.handR[8] + (4.67 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.handR[9] = (this.photo.handR[9] + (-8.16 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.handR[20] = (this.photo.handR[20] + (-4 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.handR[21] = (this.photo.handR[21] + (3 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.handR[24] = (this.photo.handR[24] + (-6 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.handR[25] = (this.photo.handR[25] + (-5 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.handR[26] = (this.photo.handR[26] + (-4.58 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.handR[27] = (this.photo.handR[27] + (-7.45 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.handR[28] = (this.photo.handR[28] + (-1 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.handR[29] = (this.photo.handR[29] + (-5 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.handR[30] = (this.photo.handR[30] + (-4 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.handR[32] = (this.photo.handR[32] + (-2.91 / 5 * this.sixData[3])).toFixed(2);
+        this.photo.handR[33] = (this.photo.handR[33] + (7.76 / 5 * this.sixData[3])).toFixed(2);
+
+        this.photo.handL[0] = (this.photo.handL[0] + (3.37 / 5 * this.sixData[3])).toFixed(2);
+        this.photo.handL[1] = (this.photo.handL[1] + (5.69 / 5 * this.sixData[3])).toFixed(2);
+        this.photo.handL[2] = (this.photo.handL[2] + (-3.5 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.handL[3] = (this.photo.handL[3] + (1.12 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.handL[8] = (this.photo.handL[8] + (9 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.handL[9] = (this.photo.handL[9] + (-2 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.handL[22] = (this.photo.handL[22] + (-2 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.handL[26] = (this.photo.handL[26] + (5 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.handL[27] = (this.photo.handL[27] + (-3 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.handL[28] = (this.photo.handL[28] + (1.7 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.handL[29] = (this.photo.handL[29] + (-3.65 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.handL[30] = (this.photo.handL[30] + (1 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.handL[31] = (this.photo.handL[31] + (-1 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.handL[32] = (this.photo.handL[32] + (3.37 / 5 * this.sixData[3])).toFixed(2);
+        this.photo.handL[33] = (this.photo.handL[33] + (5.69 / 5 * this.sixData[3])).toFixed(2);
+
+        this.photo.legR[0] = (this.photo.legR[0] + (-1.36 / 5 * this.sixData[4]) + (-0.82 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.legR[1] = (this.photo.legR[1] + (-0.13 / 5 * this.sixData[4]) + (-14.4 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.legR[4] = (this.photo.legR[4] + (2.06 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.legR[5] = (this.photo.legR[5] + (-0.32 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.legR[6] = (this.photo.legR[6] + (2.32 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.legR[7] = (this.photo.legR[7] + (1.08 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.legR[20] = (this.photo.legR[20] + (-6.06 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.legR[21] = (this.photo.legR[21] + (2.51 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.legR[22] = (this.photo.legR[22] + (-4.9 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.legR[23] = (this.photo.legR[23] + (-8.11 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.legR[26] = (this.photo.legR[26] + (-11 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.legR[28] = (this.photo.legR[28] + (-10.3 / 5 * this.sixData[4]) + (-0.31 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.legR[29] = (this.photo.legR[29] + (-0.72 / 5 * this.sixData[4]) + (-13.6 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.legR[30] = (this.photo.legR[30] + (-1.36 / 5 * this.sixData[4]) + (-0.82 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.legR[31] = (this.photo.legR[31] + (-0.13 / 5 * this.sixData[4]) + (-14.4 / 5 * this.sixData[1])).toFixed(2);
+
+        this.photo.legL[0] = (this.photo.legL[0] + (5 / 5 * this.sixData[4]) + (-0.32 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.legL[1] = (this.photo.legL[1] + (5 / 5 * this.sixData[4]) + (-13.4 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.legL[2] = (this.photo.legL[2] + (2 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.legL[3] = (this.photo.legL[3] + (-1 / 5 * this.sixData[4])).toFixed(2);
+        this.photo.legL[4] = (this.photo.legL[4] + (1.48 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.legL[5] = (this.photo.legL[5] + (1.4 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.legL[22] = (this.photo.legL[22] + (-2 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.legL[23] = (this.photo.legL[23] + (3 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.legL[26] = (this.photo.legL[26] + (-7 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.legL[27] = (this.photo.legL[27] + (-2 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.legL[28] = (this.photo.legL[28] + (-6 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.legL[29] = (this.photo.legL[29] + (-7 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.legL[30] = (this.photo.legL[30] + (-1 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.legL[31] = (this.photo.legL[31] + (-4 / 5 * this.sixData[0])).toFixed(2);
+        this.photo.legL[32] = (this.photo.legL[32] + (-4 / 5 * this.sixData[4]) + (-0.82 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.legL[33] = (this.photo.legL[33] + (1 / 5 * this.sixData[4]) + (-14.4 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.legL[34] = (this.photo.legL[34] + (5 / 5 * this.sixData[4]) + (-0.32 / 5 * this.sixData[1])).toFixed(2);
+        this.photo.legL[35] = (this.photo.legL[35] + (5 / 5 * this.sixData[4]) + (-13.4 / 5 * this.sixData[1])).toFixed(2);
     }
 
 }

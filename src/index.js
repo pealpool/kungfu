@@ -653,6 +653,8 @@ function loadGameFile(a) {
     setSX_TP();
     setSX_ZQ();
     initHP(personA.hp.head, personA.hp.body, personA.hp.hand, personA.hp.leg, true);
+    personA.init_photo();
+    changePhotoA();
 }
 
 function initHP(head, body, hand, leg, who) {
@@ -738,8 +740,7 @@ $(document).on('click', '.bt_sub', function () {
     onOrOff(personA.sixData);
     setMyChat(changeSixDtoChart(tData.sixData, personA.sixData), data_S.sixDataSum);
     personA.init_photo();
-    $('#pA_eye').attr('points','' + toSpace(personA.photo.eye) + '');
-    $('#pA_body').attr('points','' + toSpace(personA.photo.body) + '');
+    changePhotoA();
 });
 
 $(document).on('click', '.bt_add', function () {
@@ -791,10 +792,19 @@ $(document).on('click', '.bt_add', function () {
         onOrOff(personA.sixData);
         setMyChat(changeSixDtoChart(tData.sixData, personA.sixData), data_S.sixDataSum);
         personA.init_photo();
-        $('#pA_eye').attr('points','' + toSpace(personA.photo.eye) + '');
-        $('#pA_body').attr('points','' + toSpace(personA.photo.body) + '');
+        changePhotoA();
     }
 });
+
+function changePhotoA() {
+    $('#pA_body').attr('points','' + toSpace(personA.photo.body) + '');
+    $('#pA_head').attr('points','' + toSpace(personA.photo.head) + '');
+    $('#pA_legL').attr('points','' + toSpace(personA.photo.legL) + '');
+    $('#pA_legR').attr('points','' + toSpace(personA.photo.legR) + '');
+    $('#pA_handL').attr('points','' + toSpace(personA.photo.handL) + '');
+    $('#pA_handR').attr('points','' + toSpace(personA.photo.handR) + '');
+    $('#pA_eye').attr('points','' + toSpace(personA.photo.eye) + '');
+}
 
 function onOrOff(a) {
     if ((13 - a[0] - a[1] - a[2] - a[3] - a[4]) <= 0) {

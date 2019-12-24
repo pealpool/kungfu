@@ -18,10 +18,10 @@ module.exports = {
         //     template: './src/setSixData.html',
         //     filename: 'setSixData.html'
         // }),
-        new HtmlWebpackPlugin({
-            template: './src/selectSchool.html',
-            filename: 'selectSchool.html'
-        }),
+        // new HtmlWebpackPlugin({
+        //     template: './src/selectSchool.html',
+        //     filename: 'selectSchool.html'
+        // }),
     ],
     module: {
         rules: [
