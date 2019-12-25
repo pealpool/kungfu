@@ -131,12 +131,14 @@ export class Person {
         this.photo.legL = $.extend(true, [], data_i.legL);
         this.photo.legR = $.extend(true, [], data_i.legR);
 
-        this.photo.eye[1] = (this.photo.eye[1] + (0.34 / 5 * this.sixData[2])).toFixed(2);
-        this.photo.eye[2] = (this.photo.eye[2] + (-3.52 / 5 * this.sixData[2])).toFixed(2);
-        this.photo.eye[3] = (this.photo.eye[3] + (0.6 / 5 * this.sixData[2])).toFixed(2);
-        this.photo.eye[4] = (this.photo.eye[4] + (-4.13 / 5 * this.sixData[2])).toFixed(2);
-        this.photo.eye[5] = (this.photo.eye[5] + (-1.83 / 5 * this.sixData[2])).toFixed(2);
-        this.photo.eye[9] = (this.photo.eye[9] + (0.34 / 5 * this.sixData[2])).toFixed(2);
+        this.photo.eye[0] = (this.photo.eye[0] + (2.14 / 5 * this.sixData[2])).toFixed(2);
+        this.photo.eye[2] = (this.photo.eye[2] + (-4.22 / 5 * this.sixData[2])).toFixed(2);
+        this.photo.eye[3] = (this.photo.eye[3] + (1.93/ 5 * this.sixData[2])).toFixed(2);
+        this.photo.eye[4] = (this.photo.eye[4] + (-4.33 / 5 * this.sixData[2])).toFixed(2);
+        this.photo.eye[5] = (this.photo.eye[5] + (-3.06/ 5 * this.sixData[2])).toFixed(2);
+        this.photo.eye[6] = (this.photo.eye[6] + (2.75 / 5 * this.sixData[2])).toFixed(2);
+        this.photo.eye[7] = (this.photo.eye[7] + (-0.68 / 5 * this.sixData[2])).toFixed(2);
+        this.photo.eye[8] = (this.photo.eye[8] + (2.14 / 5 * this.sixData[2])).toFixed(2);
 
         this.photo.body[0] = (this.photo.body[0] + (5 / 5 * this.sixData[4]) + (-0.32 / 5 * this.sixData[1])).toFixed(2);
         this.photo.body[1] = (this.photo.body[1] + (5 / 5 * this.sixData[4]) + (-13.39 / 5 * this.sixData[1])).toFixed(2);
