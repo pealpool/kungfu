@@ -982,3 +982,31 @@ function toSpace(a) {
 //     duration: 2000,
 //     loop: true
 // });
+
+
+$(document).on('mouseenter', '.bodyDataList', function () {//绑定鼠标进入事件
+    let e = $(this).find('span').eq(0).text();
+    switch (e) {
+        case '头部':
+            $('#pA_head').addClass('mySvgLight');
+            break;
+        case '躯干':
+            $('#pA_body').addClass('mySvgLight');
+            break;
+        case '左手':
+            $('#pA_handL').addClass('mySvgLight');
+            break;
+        case '右手':
+            $('#pA_handR').addClass('mySvgLight');
+            break;
+        case '左脚':
+            $('#pA_legL').addClass('mySvgLight');
+            break;
+        case '右脚':
+            $('#pA_legR').addClass('mySvgLight');
+            break;
+    }
+});
+$(document).on('mouseleave', '.bodyDataList', function () {//绑定鼠标划出事件
+    $('.mySvgLight').removeClass('mySvgLight');
+});

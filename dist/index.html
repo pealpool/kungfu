@@ -170,6 +170,70 @@
                     <div class="photoBox">
                         <div class="photoLeft">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 149 243">
+                                <filter id="svgLight">
+                                    <feComponentTransfer>
+                                        <feFuncR type="linear" slope="1.5" intercept="0">
+                                            <animate
+                                                    id="svgLight_aR_1"
+                                                    begin="0s;svgLight_aR_2.end"
+                                                    attributeName="slope"
+                                                    dur=".5s"
+                                                    from="1"
+                                                    to="1.5"
+                                                    fill='freeze'
+                                            />
+                                            <animate
+                                                id="svgLight_aR_2"
+                                                begin="svgLight_aR_1.end"
+                                                attributeName="slope"
+                                                dur=".5s"
+                                                from="1.5"
+                                                to="1"
+                                                fill='freeze'
+                                        />
+                                        </feFuncR>
+                                        <feFuncG type="linear" slope="1.5" intercept="0">
+                                            <animate
+                                                    id="svgLight_aG_1"
+                                                    begin="0s;svgLight_aG_2.end"
+                                                    attributeName="slope"
+                                                    dur=".5s"
+                                                    from="1"
+                                                    to="1.5"
+                                                    fill='freeze'
+                                            />
+                                            <animate
+                                                    id="svgLight_aG_2"
+                                                    begin="svgLight_aG_1.end"
+                                                    attributeName="slope"
+                                                    dur=".5s"
+                                                    from="1.5"
+                                                    to="1"
+                                                    fill='freeze'
+                                            />
+                                        </feFuncG>
+                                        <feFuncB type="linear" slope="1.5" intercept="0">
+                                            <animate
+                                                    id="svgLight_aB_1"
+                                                    begin="0s;svgLight_aB_2.end"
+                                                    attributeName="slope"
+                                                    dur=".5s"
+                                                    from="1"
+                                                    to="1.5"
+                                                    fill='freeze'
+                                            />
+                                            <animate
+                                                    id="svgLight_aB_2"
+                                                    begin="svgLight_aB_1.end"
+                                                    attributeName="slope"
+                                                    dur=".5s"
+                                                    from="1.5"
+                                                    to="1"
+                                                    fill='freeze'
+                                            />
+                                        </feFuncB>
+                                    </feComponentTransfer>
+                                </filter>
                                 <g class="ptoP">
                                     <polygon id="pA_head"
                                              points="77.05 49.48 77.05 45.67 80.86 46.94 84.67 41.86 87.21 32.97 87.21 25.34 84.67 20.26 72.81 16.54 63.91 19.08 60.53 29.16 61.8 39.32 65.61 44.4 66.89 48.21 77.05 49.48"/>
@@ -195,55 +259,55 @@
                         <div class="bodyDataList">
                             <span>头部</span>
                             <span id="dateA_head_hp">100</span>
-                        </div>
-                        <div class="bodyDataProcess">
-                            <div class="bodyDPBox">
-                                <div class="bodyDP" id="bodyDP_A_head"></div>
+                            <div class="bodyDataProcess">
+                                <div class="bodyDPBox">
+                                    <div class="bodyDP" id="bodyDP_A_head"></div>
+                                </div>
                             </div>
                         </div>
                         <div class="bodyDataList">
                             <span>躯干</span>
                             <span id="dataA_body_hp">1000</span>
-                        </div>
-                        <div class="bodyDataProcess">
-                            <div class="bodyDPBox">
-                                <div class="bodyDP" id="bodyDP_A_body"></div>
+                            <div class="bodyDataProcess">
+                                <div class="bodyDPBox">
+                                    <div class="bodyDP" id="bodyDP_A_body"></div>
+                                </div>
                             </div>
                         </div>
                         <div class="bodyDataList">
                             <span>左手</span>
                             <span id="dataA_handL_hp">500</span>
-                        </div>
-                        <div class="bodyDataProcess">
-                            <div class="bodyDPBox">
-                                <div class="bodyDP" id="bodyDP_A_handL"></div>
+                            <div class="bodyDataProcess">
+                                <div class="bodyDPBox">
+                                    <div class="bodyDP" id="bodyDP_A_handL"></div>
+                                </div>
                             </div>
                         </div>
                         <div class="bodyDataList">
                             <span>右手</span>
                             <span id="dataA_handR_hp">500</span>
-                        </div>
-                        <div class="bodyDataProcess">
-                            <div class="bodyDPBox">
-                                <div class="bodyDP" id="bodyDP_A_handR"></div>
+                            <div class="bodyDataProcess">
+                                <div class="bodyDPBox">
+                                    <div class="bodyDP" id="bodyDP_A_handR"></div>
+                                </div>
                             </div>
                         </div>
                         <div class="bodyDataList">
                             <span>左脚</span>
                             <span id="dataA_legL_hp">800</span>
-                        </div>
-                        <div class="bodyDataProcess">
-                            <div class="bodyDPBox">
-                                <div class="bodyDP" id="bodyDP_A_legL"></div>
+                            <div class="bodyDataProcess">
+                                <div class="bodyDPBox">
+                                    <div class="bodyDP" id="bodyDP_A_legL"></div>
+                                </div>
                             </div>
                         </div>
                         <div class="bodyDataList">
                             <span>右脚</span>
                             <span id="dataA_legR_hp">800</span>
-                        </div>
-                        <div class="bodyDataProcess">
-                            <div class="bodyDPBox">
-                                <div class="bodyDP" id="bodyDP_A_legR"></div>
+                            <div class="bodyDataProcess">
+                                <div class="bodyDPBox">
+                                    <div class="bodyDP" id="bodyDP_A_legR"></div>
+                                </div>
                             </div>
                         </div>
                     </div>

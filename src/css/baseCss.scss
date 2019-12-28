@@ -1084,14 +1084,17 @@ $setBox_lM_height: 255px;
 .bodyDataList {
   font-size: 12px;
   width: $setBox_left_width - 10px - 5px;
-  height: 16px;
+  height: 21px;
   margin-left: 5px;
+
+  &:hover{
+    background-color: $grayBox-color;
+  }
 }
 
 .bodyDataProcess {
   width: $setBox_left_width - 10px - 10px;
   height: 5px;
-  margin-left: 5px;
 }
 
 .bodyDPBox {
@@ -1294,12 +1297,15 @@ div.setBoxCon_rh {
   @include hoverBright(0.85);
 }
 
+.mySvgLight {
+  filter: url(#svgLight);
+}
+
 .ptoP {
   fill: #9ca9c2;
   stroke: #9ca9c2;
 }
 
 #pA_eye{
-
   fill: #ffffff;
 }
