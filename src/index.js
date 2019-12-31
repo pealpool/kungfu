@@ -333,11 +333,11 @@ $(document).on('click', '.next_02', function () {
             }
         }
 
-        $('#logoBox').hide('blind', {direction: 'left'}, 200, function () {
+        $('.logoBox').hide('blind', {direction: 'left'}, 200, function () {
             $('.leftContent').switchClass('leftContent_padding', '', 200, 'easeInOutCubic');
             $('.smallBaseBox').switchClass('smallBaseBox', 'bigBaseBox', 500, 'easeInOutCubic', function () {
-                $('#logoBox').removeClass('logoPosition02').addClass('logoPosition03');
-                $('#logoBox').show('blind', {direction: 'left'}, 200);
+                $('.logoBox').removeClass('logoPosition02').addClass('logoPosition03');
+                $('.logoBox').show('blind', {direction: 'left'}, 200);
                 let myVarTime = window.setInterval(function () {
                     showLiFiBox()
                 }, 30);
