@@ -1075,6 +1075,26 @@ $setBox_lM_height: 255px;
   margin-left: 10px;
   width: 100px;
   height: 22px;
+
+  .s_Male {
+    margin-left: 55px;
+    margin-right: 2px;
+  }
+}
+
+
+.s_Male {
+  float: left;
+  background: url("/src/images/s_male.svg") no-repeat;
+  height: 21px;
+  width: 21px;
+}
+
+.s_Female {
+  float: left;
+  background: url("/src/images/s_female.svg") no-repeat;
+  height: 21px;
+  width: 21px;
 }
 
 .myTextRight {
@@ -1087,8 +1107,8 @@ $setBox_lM_height: 255px;
   height: 21px;
   margin-left: 5px;
 
-  &:hover{
-    background-color: $grayBox-color;
+  &:hover {
+    background-color: $grayBorder-color;
   }
 }
 
@@ -1124,21 +1144,6 @@ $photoBoxSize_w: 151px;
 
 }
 
-.s_Male {
-  float: left;
-  background: url("/src/images/s_male.svg") no-repeat;
-  height: 21px;
-  width: 21px;
-  margin-left: 55px;
-}
-
-.s_Female {
-  float: left;
-  background: url("/src/images/s_female.svg") no-repeat;
-  height: 21px;
-  width: 21px;
-  margin-left: 2px;
-}
 
 $setBox_right_width: 222px;
 $setBox_right_height: 546px;
@@ -1306,6 +1311,161 @@ div.setBoxCon_rh {
   stroke: #9ca9c2;
 }
 
-#pA_eye{
+#pA_eye {
   fill: #ffffff;
+}
+
+
+.BaseBox {
+  width: $bigBaseBox-width;
+  margin: auto;
+}
+
+$title_height: 48px;
+$title_paddingTop: 3px;
+$title_paddingLeft: 158px;
+$title_paddingRight: 30px;
+
+.title {
+  background-color: $darkBase-color;
+  height: $title_height;
+  box-sizing: border-box;
+  padding: $title_paddingTop $title_paddingRight $title_paddingTop $title_paddingLeft;
+  margin-top: 71px;
+  margin-bottom: 10px;
+}
+
+.titleTBack,
+.titleTFront {
+  height: $title_height - $title_paddingTop * 2;
+  width: $bigBaseBox-width - $title_paddingRight - $title_paddingLeft;
+  position: absolute;
+}
+
+.titleTBack {
+  .titleBL,
+  .titleBR {
+    background-color: black;
+  }
+}
+
+.titleBL,
+.titleBR {
+  height: $title_height - $title_paddingTop * 2;
+  width: 81px;
+  line-height: $title_height - $title_paddingTop * 2;
+  font-size: 16px;
+  margin-right: 3px;
+  text-align: center;
+  color: $grayBox-color;
+}
+
+.titleBL {
+  float: left;
+}
+
+.titleBR {
+  float: right;
+}
+
+.titleFL,
+.titleFR {
+  cursor: pointer;
+}
+
+.logoPosition06 {
+  margin-top: -58px;
+  margin-left: -130px;
+}
+
+.titleFocus {
+  background-color: $darkBase-color !important;
+  height: 56px;
+  margin-top: -6px;
+  box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, .1);
+}
+
+.statusBoxL {
+  float: left;
+  width: $setBox_left_width;
+}
+
+.statusBox_1,
+.statusBox_2,
+.statusBox_4 {
+  box-sizing: border-box;
+  background-color: $grayBox-color;
+  @include base-box($grayBorder-color);
+  padding: 4px;
+  margin-top: -1px;
+}
+
+.statusBox_3 {
+  width: $setBox_left_width;
+  height: 31px;
+  background-color: $grayBorder-color;
+  margin-top: -1px;
+}
+
+.showFont {
+  width: $photoBoxSize_w - 10px;
+  height: 55px;
+  margin-top: 6px;
+  margin-left: 4px;
+}
+
+#sNameA,
+#sNameB {
+  font-size: 18px;
+  font-weight: bold;
+  float: left;
+  width: 100px;
+}
+
+#sSexA,
+#sSexB {
+  float: right;
+}
+
+#sSchoolA,
+#sSchoolB {
+  float: left;
+  width: 60px;
+  height: 28px;
+  line-height: 28px;
+}
+
+#sLevelA,
+#sLevelB {
+  float: right;
+  width: 40px;
+  text-align: right;
+  height: 28px;
+  line-height: 28px;
+}
+
+.sixDataBackground {
+  div {
+    font-weight: bold;
+    font-size: 22px;
+    color: #D5D5D5;
+    background-color: $grayBox-color;
+  }
+}
+
+.sixDataFont {
+  position: absolute;
+
+  div {
+  }
+}
+
+.sdsBox{
+  float: left;
+  width: 31px;
+  height: 29px;
+  line-height: 29px;
+  margin-top: 1px;
+  margin-left: 1px;
+  text-align: center;
 }
