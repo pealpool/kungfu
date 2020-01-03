@@ -179,17 +179,17 @@ function showTableContentBox_Att_TBo() {
     for (let key in tData.zAtt) {
         myContent = '<div class="tableContent"><div class="table_Name">' + key +
             '</div><div class="table_TBo"><div class="table_NumberN">' +
-            toZero(tData.zAtt[key].hurt_o) + '</div><div class="table_NumberN">' +
-            toZero(tData.zAtt[key].hurt_i) + '</div><div class="table_NumberN">' +
-            toPercentAdd(tData.zAtt[key].hit) + '</div><div class="table_NumberN">' +
+            toZero(Math.round(tData.zAtt[key].hurt_o * (1 + personA.attAdd))) + '</div><div class="table_NumberN">' +
+            toZero(Math.round(tData.zAtt[key].hurt_i * (1 + personA.attAdd))) + '</div><div class="table_NumberN">' +
+            toPercentAdd(tData.zAtt[key].hit + personA.hitRateAdd) + '</div><div class="table_NumberN">' +
             toPercentAdd(tData.zAtt[key].block) + '</div><div class="table_NumberN">' +
-            tData.zAtt[key].time_q + 's</div><div class="table_NumberN">' +
-            tData.zAtt[key].time_z + 's</div><div class="table_NumberN">' +
-            tData.zAtt[key].time_h + 's</div><div class="table_NumberN">' +
+            (tData.zAtt[key].time_q + personA.timeAdd_q).toFixed(1) + 's</div><div class="table_NumberN">' +
+            (tData.zAtt[key].time_z + personA.timeAdd_z).toFixed(1) + 's</div><div class="table_NumberN">' +
+            (tData.zAtt[key].time_h + personA.timeAdd_h).toFixed(1) + 's</div><div class="table_NumberN">' +
             toZero(tData.zAtt[key].const) + '</div><div class="table_NumberN">' +
-            toZero(tData.zAtt[key].hurt_q) + '</div><div class="table_NumberN">' +
-            toPerS(tData.zAtt[key].hurt_b) + '</div><div class="table_NumberN">' +
-            toZero(tData.zAtt[key].hurt_p) + '</div></div><div class="table_ot table_Tx">';
+            toZero(Math.round(tData.zAtt[key].hurt_q * (1 + personA.zqHurtAdd))) + '</div><div class="table_NumberN">' +
+            toPerS(Math.round(tData.zAtt[key].hurt_b * (1 + personA.bleedAdd))) + '</div><div class="table_NumberN">' +
+            toZero(Math.round(tData.zAtt[key].hurt_p * (1 + personA.poisonAdd))) + '</div></div><div class="table_ot table_Tx">';
         if (tData.zAtt[key].TX_inf != '') {
             myContent = myContent +
                 '<div class="content_TxSup">特</div><div class="content_Tx">' +
@@ -210,27 +210,27 @@ function showTableContentBox_Att_Txo() {
     for (let key in tData.zAtt) {
         myContent = '<div class="tableContent"><div class="table_Name">' + key +
             '</div><div class="grayBox-color table_ot table_TB" style=""><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_o) +
+            toZero(Math.round(tData.zAtt[key].hurt_o * (1 + personA.attAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_i) +
+            toZero(Math.round(tData.zAtt[key].hurt_i * (1 + personA.attAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toPercentAdd(tData.zAtt[key].hit) +
+            toPercentAdd(tData.zAtt[key].hit + personA.hitRateAdd) +
             '</div><div class="table_NumberN" style="display: none;">' +
             toPercentAdd(tData.zAtt[key].block) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            tData.zAtt[key].time_q +
+            (tData.zAtt[key].time_q + personA.timeAdd_q).toFixed(1) +
             's</div><div class="table_NumberN" style="display: none;">' +
-            tData.zAtt[key].time_z +
+            (tData.zAtt[key].time_z + personA.timeAdd_z).toFixed(1) +
             's</div><div class="table_NumberN" style="display: none;">' +
-            tData.zAtt[key].time_h +
+            (tData.zAtt[key].time_h + personA.timeAdd_h).toFixed(1) +
             's</div><div class="table_NumberN" style="display: none;">' +
             toZero(tData.zAtt[key].const) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_q) +
+            toZero(Math.round(tData.zAtt[key].hurt_q * (1 + personA.zqHurtAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toPerS(tData.zAtt[key].hurt_b) +
+            toPerS(Math.round(tData.zAtt[key].hurt_b * (1 + personA.bleedAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_p) +
+            toZero(Math.round(tData.zAtt[key].hurt_p * (1 + personA.poisonAdd))) +
             '</div></div><div class="table_Txo">';
         if (tData.zAtt[key].TX_inf != '') {
             myContent = myContent +
@@ -252,27 +252,27 @@ function showTableContentBox_Att_Lzo() {
     for (let key in tData.zAtt) {
         myContent = '<div class="tableContent"><div class="table_Name">' + key +
             '</div><div class="grayBox-color table_ot table_TB" style=""><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_o) +
+            toZero(Math.round(tData.zAtt[key].hurt_o * (1 + personA.attAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_i) +
+            toZero(Math.round(tData.zAtt[key].hurt_i * (1 + personA.attAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toPercentAdd(tData.zAtt[key].hit) +
+            toPercentAdd(tData.zAtt[key].hit + personA.hitRateAdd) +
             '</div><div class="table_NumberN" style="display: none;">' +
             toPercentAdd(tData.zAtt[key].block) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            tData.zAtt[key].time_q +
+            (tData.zAtt[key].time_q + personA.timeAdd_q).toFixed(1) +
             's</div><div class="table_NumberN" style="display: none;">' +
-            tData.zAtt[key].time_z +
+            (tData.zAtt[key].time_z + personA.timeAdd_z).toFixed(1) +
             's</div><div class="table_NumberN" style="display: none;">' +
-            tData.zAtt[key].time_h +
+            (tData.zAtt[key].time_h + personA.timeAdd_h).toFixed(1) +
             's</div><div class="table_NumberN" style="display: none;">' +
             toZero(tData.zAtt[key].const) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_q) +
+            toZero(Math.round(tData.zAtt[key].hurt_q * (1 + personA.zqHurtAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toPerS(tData.zAtt[key].hurt_b) +
+            toPerS(Math.round(tData.zAtt[key].hurt_b * (1 + personA.bleedAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].hurt_p) +
+            toZero(Math.round(tData.zAtt[key].hurt_p * (1 + personA.poisonAdd))) +
             '</div></div><div class="table_ot table_Tx">';
         if (tData.zAtt[key].TX_inf != '') {
             myContent = myContent +
@@ -357,7 +357,7 @@ $(".schoolBox").hover(function () {
 
 $(document).on('click', '.next_03', function () {
     if (!$(this).hasClass('next_off')) {
-        $(this).addClass('next_off next_04').removeClass('next_03');
+        $(this).addClass('next_04').removeClass('next_03');
         $('.loFiGd_B,.loFiGd_C').hide('fade', 200, function () {
             $('.setBox_left,.setBox_right').show('fade', 200);
         });
@@ -369,7 +369,7 @@ $(document).on('click', '.next_03', function () {
 $(document).on('click', '.canClick', function () {
     $('#loginInTopMu').find('span').eq(1).removeClass('garyFont canClick');
     $('#loginInTopMu').find('span').eq(3).addClass('garyFont');
-    $('.next_04').removeClass('next_off').removeClass('next_04').addClass('next_03');
+    $('.next_04').removeClass('next_04').addClass('next_03');
     $('.setBox_left').hide('fade', 200);
     $('.setBox_right').hide('fade', 200);
     $('.loFiGd_B,.loFiGd_C').show('fade', 200);
@@ -1018,4 +1018,25 @@ $(document).on('mouseenter', '.bodyDataList', function () {//绑定鼠标进入�
 });
 $(document).on('mouseleave', '.bodyDataList', function () {//绑定鼠标划出事件
     $('.mySvgLight').removeClass('mySvgLight');
+});
+
+$(document).on('click', '.next_04', function () {
+    if ($('#sixDataSet_all_A').text() != 0){
+        $( "#dialog-confirm" ).dialog({
+            resizable: false,
+            height: "auto",
+            width: 400,
+            modal: true,
+            buttons: {
+                "Delete all items": function() {
+                    $( this ).dialog( "close" );
+                },
+                Cancel: function() {
+                    $( this ).dialog( "close" );
+                }
+            }
+        });
+    }else {
+
+    }
 });
