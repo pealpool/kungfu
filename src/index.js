@@ -118,7 +118,7 @@ $(document).on('click', '.schoolBox', function () {
     }
     $('#schoolStar').html(myContent);
     $('#schoolInf').text(tData.inf);
-    setMyChat(changeSixDtoChart(tData.sixData, mySaveFile), data_S.sixDataSum);
+    setMyChat(changeSixDtoChart(tData.sixData, personA.sixData), data_S.sixDataSum);
 
     $('.tableContentBox_A').html('');
     if ($('#showTabs_A').find('.tableT_TBo').length > 0) {
@@ -355,15 +355,24 @@ $(".schoolBox").hover(function () {
 });
 
 
-//todo next03
 $(document).on('click', '.next_03', function () {
     if (!$(this).hasClass('next_off')) {
         $(this).addClass('next_off next_04').removeClass('next_03');
         $('.loFiGd_B,.loFiGd_C').hide('fade', 200, function () {
             $('.setBox_left,.setBox_right').show('fade', 200);
         });
-
+        $('#loginInTopMu').find('span').eq(1).addClass('garyFont canClick');
+        $('#loginInTopMu').find('span').eq(3).removeClass('garyFont');
     }
+});
+
+$(document).on('click', '.canClick', function () {
+    $('#loginInTopMu').find('span').eq(1).removeClass('garyFont canClick');
+    $('#loginInTopMu').find('span').eq(3).addClass('garyFont');
+    $('.next_04').removeClass('next_off').removeClass('next_04').addClass('next_03');
+    $('.setBox_left').hide('fade', 200);
+    $('.setBox_right').hide('fade', 200);
+    $('.loFiGd_B,.loFiGd_C').show('fade', 200);
 });
 
 let myChart;
@@ -634,12 +643,12 @@ let mySaveFile = [2, 2, 2, 2, 2];
 function loadGameFile(a) {
     let mySchool = 'SL';
     tData = data_S['' + mySchool + ''];
-    $('#sixDataSet_all').text(13 - a[0] - a[1] - a[2] - a[3] - a[4]);
-    $('#set_SX_LL').text(a[0]);
-    $('#set_SX_MJ').text(a[1]);
-    $('#set_SX_ZL').text(a[2]);
-    $('#set_SX_TP').text(a[3]);
-    $('#set_SX_ZQ').text(a[4]);
+    $('#sixDataSet_all_A').text(13 - a[0] - a[1] - a[2] - a[3] - a[4]);
+    $('#set_SX_LL_A').text(a[0]);
+    $('#set_SX_MJ_A').text(a[1]);
+    $('#set_SX_ZL_A').text(a[2]);
+    $('#set_SX_TP_A').text(a[3]);
+    $('#set_SX_ZQ_A').text(a[4]);
     onOrOff(a);
     personA.sixData[0] = a[0];
     personA.sixData[1] = a[1];
@@ -696,43 +705,43 @@ $(document).on('click', '.bt_sub', function () {
     let t = $(this).next();
     let e = t.attr('id');
     switch (e) {
-        case 'set_SX_LL':
+        case 'set_SX_LL_A':
             if (personA.sixData[0] >= 1) {
                 personA.calc_LL(-1);
                 t.text(personA.sixData[0]);
-                $('#sixDataSet_all').text(Number($('#sixDataSet_all').text()) + 1);
+                $('#sixDataSet_all_A').text(Number($('#sixDataSet_all_A').text()) + 1);
                 setSX_LL();
             }
             break;
-        case 'set_SX_MJ':
+        case 'set_SX_MJ_A':
             if (personA.sixData[1] >= 1) {
                 personA.calc_MJ(-1);
                 t.text(personA.sixData[1]);
-                $('#sixDataSet_all').text(Number($('#sixDataSet_all').text()) + 1);
+                $('#sixDataSet_all_A').text(Number($('#sixDataSet_all_A').text()) + 1);
                 setSX_MJ();
             }
             break;
-        case 'set_SX_ZL':
+        case 'set_SX_ZL_A':
             if (personA.sixData[2] >= 1) {
                 personA.calc_ZL(-1);
                 t.text(personA.sixData[2]);
-                $('#sixDataSet_all').text(Number($('#sixDataSet_all').text()) + 1);
+                $('#sixDataSet_all_A').text(Number($('#sixDataSet_all_A').text()) + 1);
                 setSX_ZL();
             }
             break;
-        case 'set_SX_TP':
+        case 'set_SX_TP_A':
             if (personA.sixData[3] >= 1) {
                 personA.calc_TP(-1);
                 t.text(personA.sixData[3]);
-                $('#sixDataSet_all').text(Number($('#sixDataSet_all').text()) + 1);
+                $('#sixDataSet_all_A').text(Number($('#sixDataSet_all_A').text()) + 1);
                 setSX_TP();
             }
             break;
-        case 'set_SX_ZQ':
+        case 'set_SX_ZQ_A':
             if (personA.sixData[4] >= 1) {
                 personA.calc_ZQ(-1);
                 t.text(personA.sixData[4]);
-                $('#sixDataSet_all').text(Number($('#sixDataSet_all').text()) + 1);
+                $('#sixDataSet_all_A').text(Number($('#sixDataSet_all_A').text()) + 1);
                 setSX_ZQ();
             }
             break;
@@ -744,47 +753,47 @@ $(document).on('click', '.bt_sub', function () {
 });
 
 $(document).on('click', '.bt_add', function () {
-    if ($('#sixDataSet_all').text() > 0) {
+    if ($('#sixDataSet_all_A').text() > 0) {
         let t = $(this).prev();
         let e = t.attr('id');
         switch (e) {
-            case 'set_SX_LL':
+            case 'set_SX_LL_A':
                 if (personA.sixData[0] <= 4) {
                     personA.calc_LL(1);
                     t.text(personA.sixData[0]);
-                    $('#sixDataSet_all').text($('#sixDataSet_all').text() - 1);
+                    $('#sixDataSet_all_A').text($('#sixDataSet_all_A').text() - 1);
                     setSX_LL();
                 }
                 break;
-            case 'set_SX_MJ':
+            case 'set_SX_MJ_A':
                 if (personA.sixData[1] <= 4) {
                     personA.calc_MJ(1);
                     t.text(personA.sixData[1]);
-                    $('#sixDataSet_all').text($('#sixDataSet_all').text() - 1);
+                    $('#sixDataSet_all_A').text($('#sixDataSet_all_A').text() - 1);
                     setSX_MJ();
                 }
                 break;
-            case 'set_SX_ZL':
+            case 'set_SX_ZL_A':
                 if (personA.sixData[2] <= 4) {
                     personA.calc_ZL(1);
                     t.text(personA.sixData[2]);
-                    $('#sixDataSet_all').text($('#sixDataSet_all').text() - 1);
+                    $('#sixDataSet_all_A').text($('#sixDataSet_all_A').text() - 1);
                     setSX_ZL();
                 }
                 break;
-            case 'set_SX_TP':
+            case 'set_SX_TP_A':
                 if (personA.sixData[3] <= 4) {
                     personA.calc_TP(1);
                     t.text(personA.sixData[3]);
-                    $('#sixDataSet_all').text($('#sixDataSet_all').text() - 1);
+                    $('#sixDataSet_all_A').text($('#sixDataSet_all_A').text() - 1);
                     setSX_TP();
                 }
                 break;
-            case 'set_SX_ZQ':
+            case 'set_SX_ZQ_A':
                 if (personA.sixData[4] <= 2) {
                     personA.calc_ZQ(1);
                     t.text(personA.sixData[4]);
-                    $('#sixDataSet_all').text($('#sixDataSet_all').text() - 1);
+                    $('#sixDataSet_all_A').text($('#sixDataSet_all_A').text() - 1);
                     setSX_ZQ();
                 }
                 break;
@@ -808,44 +817,44 @@ function changePhotoA() {
 
 function onOrOff(a) {
     if ((13 - a[0] - a[1] - a[2] - a[3] - a[4]) <= 0) {
-        $('#set_SX_LL,#set_SX_MJ,#set_SX_ZL,#set_SX_TP,#set_SX_ZQ').next().addClass('bt_off');
+        $('#set_SX_LL_A,#set_SX_MJ_A,#set_SX_ZL_A,#set_SX_TP_A,#set_SX_ZQ_A').next().addClass('bt_off');
     } else {
-        $('#set_SX_LL,#set_SX_MJ,#set_SX_ZL,#set_SX_TP,#set_SX_ZQ').next().removeClass('bt_off');
+        $('#set_SX_LL_A,#set_SX_MJ_A,#set_SX_ZL_A,#set_SX_TP_A,#set_SX_ZQ_A').next().removeClass('bt_off');
     }
     if (a[0] >= 5) {
-        $('#set_SX_LL').next().addClass('bt_off');
+        $('#set_SX_LL_A').next().addClass('bt_off');
     } else if (a[0] <= 0) {
-        $('#set_SX_LL').prev().addClass('bt_off');
+        $('#set_SX_LL_A').prev().addClass('bt_off');
     } else {
-        $('#set_SX_LL').prev().removeClass('bt_off');
+        $('#set_SX_LL_A').prev().removeClass('bt_off');
     }
     if (a[1] >= 5) {
-        $('#set_SX_MJ').next().addClass('bt_off');
+        $('#set_SX_MJ_A').next().addClass('bt_off');
     } else if (a[1] <= 0) {
-        $('#set_SX_MJ').prev().addClass('bt_off');
+        $('#set_SX_MJ_A').prev().addClass('bt_off');
     } else {
-        $('#set_SX_MJ').prev().removeClass('bt_off');
+        $('#set_SX_MJ_A').prev().removeClass('bt_off');
     }
     if (a[2] >= 5) {
-        $('#set_SX_ZL').next().addClass('bt_off');
+        $('#set_SX_ZL_A').next().addClass('bt_off');
     } else if (a[2] <= 0) {
-        $('#set_SX_ZL').prev().addClass('bt_off');
+        $('#set_SX_ZL_A').prev().addClass('bt_off');
     } else {
-        $('#set_SX_ZL').prev().removeClass('bt_off');
+        $('#set_SX_ZL_A').prev().removeClass('bt_off');
     }
     if (a[3] >= 5) {
-        $('#set_SX_TP').next().addClass('bt_off');
+        $('#set_SX_TP_A').next().addClass('bt_off');
     } else if (a[3] <= 0) {
-        $('#set_SX_TP').prev().addClass('bt_off');
+        $('#set_SX_TP_A').prev().addClass('bt_off');
     } else {
-        $('#set_SX_TP').prev().removeClass('bt_off');
+        $('#set_SX_TP_A').prev().removeClass('bt_off');
     }
     if (a[4] >= 3) {
-        $('#set_SX_ZQ').next().addClass('bt_off');
+        $('#set_SX_ZQ_A').next().addClass('bt_off');
     } else if (a[4] <= 0) {
-        $('#set_SX_ZQ').prev().addClass('bt_off');
+        $('#set_SX_ZQ_A').prev().addClass('bt_off');
     } else {
-        $('#set_SX_ZQ').prev().removeClass('bt_off');
+        $('#set_SX_ZQ_A').prev().removeClass('bt_off');
     }
 }
 

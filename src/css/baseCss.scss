@@ -1056,6 +1056,7 @@ $setBox_lM_height: 255px;
 }
 
 .setBoxTitle {
+  float: left;
   background-color: $myYellow-color;
   color: #ffffff;
   height: 151px - 10px;
@@ -1141,7 +1142,6 @@ $photoBoxSize_w: 151px;
 .photoLeft {
   width: $setBox_left_width - 10px - 2px;
   height: $setBox_lM_height - 10px - 2px;
-
 }
 
 
@@ -1163,11 +1163,16 @@ $setBox_right_height: 546px;
 }
 
 .setSixBox {
+  float: left;
   height: 151px - 10px;
   width: $setBox_right_width - 34px -10px;
   background-color: $myWhite-color;
   box-sizing: border-box;
   padding: 9px 7px;
+
+  div {
+    float: left;
+  }
 }
 
 .myFont_red {
@@ -1227,7 +1232,8 @@ $setBox_right_height: 546px;
 
 }
 
-div#sixDataSet_all {
+div#sixDataSet_all_A,
+div#sixDataSet_all_B {
   margin-left: 10px;
 }
 
@@ -1328,11 +1334,16 @@ $title_paddingRight: 30px;
 
 .title {
   background-color: $darkBase-color;
+  width: $bigBaseBox-width;
   height: $title_height;
   box-sizing: border-box;
   padding: $title_paddingTop $title_paddingRight $title_paddingTop $title_paddingLeft;
   margin-top: 71px;
   margin-bottom: 10px;
+}
+
+.contentBigBox {
+  width: $bigBaseBox-width;
 }
 
 .titleTBack,
@@ -1390,12 +1401,16 @@ $title_paddingRight: 30px;
   width: $setBox_left_width;
 }
 
+.statusBoxR {
+  float: right;
+  width: $setBox_left_width;
+}
+
+
 .statusBox_1,
 .statusBox_2,
 .statusBox_4 {
   box-sizing: border-box;
-  background-color: $grayBox-color;
-  @include base-box($grayBorder-color);
   padding: 4px;
   margin-top: -1px;
 }
@@ -1455,12 +1470,9 @@ $title_paddingRight: 30px;
 
 .sixDataFont {
   position: absolute;
-
-  div {
-  }
 }
 
-.sdsBox{
+.sdsBox {
   float: left;
   width: 31px;
   height: 29px;
@@ -1468,4 +1480,94 @@ $title_paddingRight: 30px;
   margin-top: 1px;
   margin-left: 1px;
   text-align: center;
+}
+
+$contentBoxMargin: 9px;
+$contentBoxPadding: 10px;
+.contentBox {
+  float: left;
+  margin-left: $contentBoxMargin;
+  margin-right: $contentBoxMargin;
+  width: $bigBaseBox-width - ($setBox_left_width * 2) - ($contentBoxMargin * 2);
+}
+
+.contentTop,
+.contentMid {
+  box-sizing: border-box;
+  padding: $contentBoxPadding;
+  width: $bigBaseBox-width - ($setBox_left_width * 2) - ($contentBoxMargin * 2);
+}
+
+.contentTop {
+  height: 65px;
+}
+
+.contentMid {
+  margin-top: -1px;
+  min-height: 580px;
+}
+
+.moDiv,
+.moNext {
+  margin-top: 15px;
+}
+
+.moDiv {
+  float: left;
+}
+
+.moNext {
+  float: right;
+  cursor: pointer;
+}
+
+.moSetBigBox {
+  box-sizing: border-box;
+  background-color: $lightGray-color;
+  padding: 5px;
+  height: 151px;
+  width: $bigBaseBox-width - ($setBox_left_width * 2) - ($contentBoxMargin * 2) - ($contentBoxPadding * 2);
+}
+
+.moSelectSchool {
+  float: left;
+  height: 151px - 10px;
+  width: $bigBaseBox-width - ($setBox_left_width * 2) - ($contentBoxMargin * 2) - ($contentBoxPadding * 2) - (34px * 2) - ($setBox_right_width - 34px -10px) - (5px * 3);
+  background-color: $myWhite-color;
+  box-sizing: border-box;
+  margin-right: 5px;
+  padding-left: 10px;
+}
+
+.moSSBox {
+  float: left;
+  background-color: $backgroundBase-color;
+  @include base-box($aTab-color);
+  width: 116px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  margin-right: 9px;
+  margin-top: 5px;
+  cursor: pointer;
+
+  &:hover {
+    @include hoverBright(0.85);
+  }
+}
+
+.mirror {
+  transform: scaleX(-1);
+}
+
+.garyFont {
+  color: $myGray-color;
+}
+
+.canClick {
+  cursor: pointer;
+
+  &:hover {
+    color: $darkBase-color;
+  }
 }
