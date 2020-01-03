@@ -1317,7 +1317,8 @@ div.setBoxCon_rh {
   stroke: #9ca9c2;
 }
 
-#pA_eye {
+#pA_eye,
+#pB_eye{
   fill: #ffffff;
 }
 
@@ -1504,7 +1505,7 @@ $contentBoxPadding: 10px;
 
 .contentMid {
   margin-top: -1px;
-  min-height: 580px;
+  min-height: 587px;
 }
 
 .moDiv,
@@ -1536,26 +1537,40 @@ $contentBoxPadding: 10px;
   background-color: $myWhite-color;
   box-sizing: border-box;
   margin-right: 5px;
-  padding-left: 10px;
+  padding-top: 1px;
+  padding-left: 15px;
 }
 
 .moSSBox {
   float: left;
   background-color: $backgroundBase-color;
-  @include base-box($aTab-color);
   width: 116px;
   height: 38px;
-  line-height: 38px;
-  text-align: center;
   margin-right: 9px;
-  margin-top: 5px;
+  margin-top: 6px;
   cursor: pointer;
+  box-sizing: border-box;
+  padding-top: 8px;
+  padding-left: 15px;
 
   &:hover {
     @include hoverBright(0.85);
   }
+
+  div{
+    float: left;
+    height: 24px;
+    line-height: 24px;
+  }
 }
 
+.moSSBox.moSSelect{
+  background-color:$aTab-color;
+}
+
+.moSLogo{
+  width: 30px;
+}
 .mirror {
   transform: scaleX(-1);
 }
@@ -1631,4 +1646,44 @@ $contentBoxPadding: 10px;
   top: 0;
   left: 50%;
   margin-left: -($bigBaseBox-width + 2px) / 2;
+}
+
+#myLittleChartA,
+#myLittleChartB{
+  width: 150px;
+  height: 140px;
+  margin-top: 10px;
+}
+
+.sDataText0,
+.sDataText1,
+.sDataText2,
+.sDataText3,
+.sDataText4{
+  float: left;
+  font-size: 12px;
+  position: relative;
+  height: 12px;
+  width: 30px;
+}
+
+.sDataText0{
+  top: -140px;
+  left: 64px;
+}
+.sDataText1{
+  top: -105px;
+  left: -28px;
+}
+.sDataText2{
+  top: -30px;
+  left: -43px;
+}
+.sDataText3{
+  top: -30px;
+  left: 19px;
+}
+.sDataText4{
+  top: -105px;
+  left: 5px;
 }

@@ -90,7 +90,8 @@ $(document).on('click', '.liFiBox_S', function () {
     }
 });
 
-let tData;
+let tDataA;
+let tDataB = data_S.SL;
 $(document).on('click', '.schoolBox', function () {
     $('#schoolBox_select').attr('id', '');
     $(this).attr('id', 'schoolBox_select');
@@ -102,23 +103,23 @@ $(document).on('click', '.schoolBox', function () {
     $('.bigSLogo_size').attr('class', mySchoolClass);
 
 
-    tData = data_S['' + mySchool + ''];
-    $('#schoolName').text(tData.name);
+    tDataA = data_S['' + mySchool + ''];
+    $('#schoolName').text(tDataA.name);
     let myContent = '';
-    for (let i = 0; i < tData.level.length; i++) {
-        myContent = myContent + tData.level[i] + ' - ';
+    for (let i = 0; i < tDataA.level.length; i++) {
+        myContent = myContent + tDataA.level[i] + ' - ';
     }
     myContent = myContent.substring(0, myContent.length - 3);
     $('#schoolLevel').text(myContent);
-    $('#schoolRank').text('派别排名：' + tData.rank);
-    $('#schoolPerson').text('人数：' + tData.person);
+    $('#schoolRank').text('派别排名：' + tDataA.rank);
+    $('#schoolPerson').text('人数：' + tDataA.person);
     myContent = '';
-    for (let i = 0; i < tData.star.length; i++) {
-        myContent = myContent + '<div>' + tData.star[i] + '</div>';
+    for (let i = 0; i < tDataA.star.length; i++) {
+        myContent = myContent + '<div>' + tDataA.star[i] + '</div>';
     }
     $('#schoolStar').html(myContent);
-    $('#schoolInf').text(tData.inf);
-    setMyChat(changeSixDtoChart(tData.sixData, personA.sixData), data_S.sixDataSum);
+    $('#schoolInf').text(tDataA.inf);
+    setMyChat(changeSixDtoChart(tDataA.sixData, personA.sixData), data_S.sixDataSum, 'myBigChart', 1);
 
     $('.tableContentBox_A').html('');
     if ($('#showTabs_A').find('.tableT_TBo').length > 0) {
@@ -140,11 +141,11 @@ $(document).on('click', '.schoolBox', function () {
 
 function showTableContentBox_Def() {
     let myContent = '';
-    for (let key in tData.zDef) {
+    for (let key in tDataA.zDef) {
         myContent = '<div class="tableContent"><div class="table_Name_D">' + key +
-            '</div><div class="table_Number_Db">' + toPercentAdd(tData.zDef[key].block) +
-            '</div><div class="table_Tx_D">' + tData.zDef[key].TX_inf +
-            '</div><div class="table_Lz_D">' + tData.zDef[key].LZ_inf +
+            '</div><div class="table_Number_Db">' + toPercentAdd(tDataA.zDef[key].block) +
+            '</div><div class="table_Tx_D">' + tDataA.zDef[key].TX_inf +
+            '</div><div class="table_Lz_D">' + tDataA.zDef[key].LZ_inf +
             '</div></div>';
         $('#showTabs_D').find('.tableContentBox_D1').append(myContent);
     }
@@ -152,12 +153,12 @@ function showTableContentBox_Def() {
 
 function showTableContentBox_Dod() {
     let myContent = '';
-    for (let key in tData.zDod) {
+    for (let key in tDataA.zDod) {
         myContent = '<div class="tableContent"><div class="table_Name_D">' + key +
-            '</div><div class="table_Number_Db">' + toPercentAdd(tData.zDod[key].dod) +
-            '</div><div class="table_Number_Ds">' + toZero(tData.zDod[key].const) +
-            '</div><div class="table_Tx_S">' + tData.zDod[key].TX_inf +
-            '</div><div class="table_Lz_D">' + tData.zDod[key].LZ_inf +
+            '</div><div class="table_Number_Db">' + toPercentAdd(tDataA.zDod[key].dod) +
+            '</div><div class="table_Number_Ds">' + toZero(tDataA.zDod[key].const) +
+            '</div><div class="table_Tx_S">' + tDataA.zDod[key].TX_inf +
+            '</div><div class="table_Lz_D">' + tDataA.zDod[key].LZ_inf +
             '</div></div>';
         $('#showTabs_D').find('.tableContentBox_D2').append(myContent);
     }
@@ -165,9 +166,9 @@ function showTableContentBox_Dod() {
 
 function showTableContentBox_Pas() {
     let myContent = '';
-    for (let key in tData.zPas) {
+    for (let key in tDataA.zPas) {
         myContent = '<div class="tableContent"><div class="table_Name_D">' + key +
-            '</div><div class="table_Tx_B">' + tData.zPas[key].TX_inf +
+            '</div><div class="table_Tx_B">' + tDataA.zPas[key].TX_inf +
             '</div></div>';
         $('#showTabs_B').find('.tableContentBox_B').append(myContent);
     }
@@ -176,29 +177,29 @@ function showTableContentBox_Pas() {
 
 function showTableContentBox_Att_TBo() {
     let myContent = '';
-    for (let key in tData.zAtt) {
+    for (let key in tDataA.zAtt) {
         myContent = '<div class="tableContent"><div class="table_Name">' + key +
             '</div><div class="table_TBo"><div class="table_NumberN">' +
-            toZero(Math.round(tData.zAtt[key].hurt_o * (1 + personA.attAdd))) + '</div><div class="table_NumberN">' +
-            toZero(Math.round(tData.zAtt[key].hurt_i * (1 + personA.attAdd))) + '</div><div class="table_NumberN">' +
-            toPercentAdd(tData.zAtt[key].hit + personA.hitRateAdd) + '</div><div class="table_NumberN">' +
-            toPercentAdd(tData.zAtt[key].block) + '</div><div class="table_NumberN">' +
-            (tData.zAtt[key].time_q + personA.timeAdd_q).toFixed(1) + 's</div><div class="table_NumberN">' +
-            (tData.zAtt[key].time_z + personA.timeAdd_z).toFixed(1) + 's</div><div class="table_NumberN">' +
-            (tData.zAtt[key].time_h + personA.timeAdd_h).toFixed(1) + 's</div><div class="table_NumberN">' +
-            toZero(tData.zAtt[key].const) + '</div><div class="table_NumberN">' +
-            toZero(Math.round(tData.zAtt[key].hurt_q * (1 + personA.zqHurtAdd))) + '</div><div class="table_NumberN">' +
-            toPerS(Math.round(tData.zAtt[key].hurt_b * (1 + personA.bleedAdd))) + '</div><div class="table_NumberN">' +
-            toZero(Math.round(tData.zAtt[key].hurt_p * (1 + personA.poisonAdd))) + '</div></div><div class="table_ot table_Tx">';
-        if (tData.zAtt[key].TX_inf != '') {
+            toZero(Math.round(tDataA.zAtt[key].hurt_o * (1 + personA.attAdd))) + '</div><div class="table_NumberN">' +
+            toZero(Math.round(tDataA.zAtt[key].hurt_i * (1 + personA.attAdd))) + '</div><div class="table_NumberN">' +
+            toPercentAdd(tDataA.zAtt[key].hit + personA.hitRateAdd) + '</div><div class="table_NumberN">' +
+            toPercentAdd(tDataA.zAtt[key].block) + '</div><div class="table_NumberN">' +
+            (tDataA.zAtt[key].time_q + personA.timeAdd_q).toFixed(1) + 's</div><div class="table_NumberN">' +
+            (tDataA.zAtt[key].time_z + personA.timeAdd_z).toFixed(1) + 's</div><div class="table_NumberN">' +
+            (tDataA.zAtt[key].time_h + personA.timeAdd_h).toFixed(1) + 's</div><div class="table_NumberN">' +
+            toZero(tDataA.zAtt[key].const) + '</div><div class="table_NumberN">' +
+            toZero(Math.round(tDataA.zAtt[key].hurt_q * (1 + personA.zqHurtAdd))) + '</div><div class="table_NumberN">' +
+            toPerS(Math.round(tDataA.zAtt[key].hurt_b * (1 + personA.bleedAdd))) + '</div><div class="table_NumberN">' +
+            toZero(Math.round(tDataA.zAtt[key].hurt_p * (1 + personA.poisonAdd))) + '</div></div><div class="table_ot table_Tx">';
+        if (tDataA.zAtt[key].TX_inf != '') {
             myContent = myContent +
                 '<div class="content_TxSup">特</div><div class="content_Tx">' +
-                tData.zAtt[key].TX_inf + '</div>';
+                tDataA.zAtt[key].TX_inf + '</div>';
         }
         myContent = myContent + '</div>';
 
         myContent = myContent + '<div class="table_ot table_Lz"><div class="content_LzLine">-</div><div class="content_Lz">' +
-            tData.zAtt[key].LZ_inf + '</div></div>';
+            tDataA.zAtt[key].LZ_inf + '</div></div>';
 
         myContent = myContent + '</div></div>';
         $('#showTabs_A').find('.tableContentBox_A').append(myContent);
@@ -207,40 +208,40 @@ function showTableContentBox_Att_TBo() {
 
 function showTableContentBox_Att_Txo() {
     let myContent = '';
-    for (let key in tData.zAtt) {
+    for (let key in tDataA.zAtt) {
         myContent = '<div class="tableContent"><div class="table_Name">' + key +
             '</div><div class="grayBox-color table_ot table_TB" style=""><div class="table_NumberN" style="display: none;">' +
-            toZero(Math.round(tData.zAtt[key].hurt_o * (1 + personA.attAdd))) +
+            toZero(Math.round(tDataA.zAtt[key].hurt_o * (1 + personA.attAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(Math.round(tData.zAtt[key].hurt_i * (1 + personA.attAdd))) +
+            toZero(Math.round(tDataA.zAtt[key].hurt_i * (1 + personA.attAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toPercentAdd(tData.zAtt[key].hit + personA.hitRateAdd) +
+            toPercentAdd(tDataA.zAtt[key].hit + personA.hitRateAdd) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toPercentAdd(tData.zAtt[key].block) +
+            toPercentAdd(tDataA.zAtt[key].block) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            (tData.zAtt[key].time_q + personA.timeAdd_q).toFixed(1) +
+            (tDataA.zAtt[key].time_q + personA.timeAdd_q).toFixed(1) +
             's</div><div class="table_NumberN" style="display: none;">' +
-            (tData.zAtt[key].time_z + personA.timeAdd_z).toFixed(1) +
+            (tDataA.zAtt[key].time_z + personA.timeAdd_z).toFixed(1) +
             's</div><div class="table_NumberN" style="display: none;">' +
-            (tData.zAtt[key].time_h + personA.timeAdd_h).toFixed(1) +
+            (tDataA.zAtt[key].time_h + personA.timeAdd_h).toFixed(1) +
             's</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].const) +
+            toZero(tDataA.zAtt[key].const) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(Math.round(tData.zAtt[key].hurt_q * (1 + personA.zqHurtAdd))) +
+            toZero(Math.round(tDataA.zAtt[key].hurt_q * (1 + personA.zqHurtAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toPerS(Math.round(tData.zAtt[key].hurt_b * (1 + personA.bleedAdd))) +
+            toPerS(Math.round(tDataA.zAtt[key].hurt_b * (1 + personA.bleedAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(Math.round(tData.zAtt[key].hurt_p * (1 + personA.poisonAdd))) +
+            toZero(Math.round(tDataA.zAtt[key].hurt_p * (1 + personA.poisonAdd))) +
             '</div></div><div class="table_Txo">';
-        if (tData.zAtt[key].TX_inf != '') {
+        if (tDataA.zAtt[key].TX_inf != '') {
             myContent = myContent +
                 '<div class="content_TxSup" style="display: none;">特</div><div class="content_Tx" style="display: inline;">' +
-                tData.zAtt[key].TX_inf + '</div>';
+                tDataA.zAtt[key].TX_inf + '</div>';
         }
         myContent = myContent + '</div>';
 
         myContent = myContent + '<div class="table_ot table_Lz"><div class="content_LzLine">-</div><div class="content_Lz">' +
-            tData.zAtt[key].LZ_inf + '</div></div>';
+            tDataA.zAtt[key].LZ_inf + '</div></div>';
 
         myContent = myContent + '</div></div>';
         $('#showTabs_A').find('.tableContentBox_A').append(myContent);
@@ -249,40 +250,40 @@ function showTableContentBox_Att_Txo() {
 
 function showTableContentBox_Att_Lzo() {
     let myContent = '';
-    for (let key in tData.zAtt) {
+    for (let key in tDataA.zAtt) {
         myContent = '<div class="tableContent"><div class="table_Name">' + key +
             '</div><div class="grayBox-color table_ot table_TB" style=""><div class="table_NumberN" style="display: none;">' +
-            toZero(Math.round(tData.zAtt[key].hurt_o * (1 + personA.attAdd))) +
+            toZero(Math.round(tDataA.zAtt[key].hurt_o * (1 + personA.attAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(Math.round(tData.zAtt[key].hurt_i * (1 + personA.attAdd))) +
+            toZero(Math.round(tDataA.zAtt[key].hurt_i * (1 + personA.attAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toPercentAdd(tData.zAtt[key].hit + personA.hitRateAdd) +
+            toPercentAdd(tDataA.zAtt[key].hit + personA.hitRateAdd) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toPercentAdd(tData.zAtt[key].block) +
+            toPercentAdd(tDataA.zAtt[key].block) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            (tData.zAtt[key].time_q + personA.timeAdd_q).toFixed(1) +
+            (tDataA.zAtt[key].time_q + personA.timeAdd_q).toFixed(1) +
             's</div><div class="table_NumberN" style="display: none;">' +
-            (tData.zAtt[key].time_z + personA.timeAdd_z).toFixed(1) +
+            (tDataA.zAtt[key].time_z + personA.timeAdd_z).toFixed(1) +
             's</div><div class="table_NumberN" style="display: none;">' +
-            (tData.zAtt[key].time_h + personA.timeAdd_h).toFixed(1) +
+            (tDataA.zAtt[key].time_h + personA.timeAdd_h).toFixed(1) +
             's</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].const) +
+            toZero(tDataA.zAtt[key].const) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(Math.round(tData.zAtt[key].hurt_q * (1 + personA.zqHurtAdd))) +
+            toZero(Math.round(tDataA.zAtt[key].hurt_q * (1 + personA.zqHurtAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toPerS(Math.round(tData.zAtt[key].hurt_b * (1 + personA.bleedAdd))) +
+            toPerS(Math.round(tDataA.zAtt[key].hurt_b * (1 + personA.bleedAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(Math.round(tData.zAtt[key].hurt_p * (1 + personA.poisonAdd))) +
+            toZero(Math.round(tDataA.zAtt[key].hurt_p * (1 + personA.poisonAdd))) +
             '</div></div><div class="table_ot table_Tx">';
-        if (tData.zAtt[key].TX_inf != '') {
+        if (tDataA.zAtt[key].TX_inf != '') {
             myContent = myContent +
                 '<div class="content_TxSup">特</div><div class="content_Tx">' +
-                tData.zAtt[key].TX_inf + '</div>';
+                tDataA.zAtt[key].TX_inf + '</div>';
         }
         myContent = myContent + '</div>';
 
         myContent = myContent + '<div class="table_Lzo" style=""><div class="content_LzLine" style="display: none;">-</div><div class="content_Lz" style="display: inline;">' +
-            tData.zAtt[key].LZ_inf + '</div></div>';
+            tDataA.zAtt[key].LZ_inf + '</div></div>';
 
         myContent = myContent + '</div></div>';
         $('#showTabs_A').find('.tableContentBox_A').append(myContent);
@@ -323,8 +324,6 @@ $(document).on('click', '.next_02', function () {
         $('#selectSpan').text('选择派别');
         $('.loFiGd_C').show();
 
-
-
         $('.logoPosition02').hide('blind', {direction: 'left'}, 200, function () {
             let s = $('.logoPosition02');
             $('.leftContent').switchClass('leftContent_padding', '', 200, 'easeInOutCubic');
@@ -332,6 +331,7 @@ $(document).on('click', '.next_02', function () {
                 s.removeClass('logoPosition02').addClass('logoPosition03');
                 s.show('blind', {direction: 'left'}, 200);
                 let j = 0;
+
                 function showLiFiBox() {
                     if (j < 11) {
                         $('.loFiGd_C').find('li').eq(j).show('fade', 200);
@@ -340,6 +340,7 @@ $(document).on('click', '.next_02', function () {
                         window.clearInterval(myVarTime);
                     }
                 }
+
                 let myVarTime = window.setInterval(function () {
                     showLiFiBox()
                 }, 30);
@@ -380,8 +381,16 @@ $(document).on('click', '.canClick', function () {
 let myChart;
 let option = {};
 
-function setMyChat(six = new Array(5), sixSum = new Array(5)) {
-    myChart = eChart.init(document.getElementById('myBigChart'));
+function setMyChat(six = new Array(5), sixSum = new Array(5), getID, onOff) {
+    let ti = ['', '', '', '', ''];
+    if (onOff == 1) {
+        ti[0] = '直攻';
+        ti[1] = '闪避';
+        ti[2] = '防御';
+        ti[3] = '妨碍';
+        ti[4] = '消耗';
+    }
+    myChart = eChart.init(document.getElementById(getID));
     // 指定图表的配置项和数据
     option = {
         renderer: 'svg',
@@ -407,11 +416,11 @@ function setMyChat(six = new Array(5), sixSum = new Array(5)) {
             },
             nameGap: 5,
             indicator: [
-                {name: '直攻', max: sixSum[0]},
-                {name: '闪避', max: sixSum[1]},
-                {name: '防御', max: sixSum[2]},
-                {name: '妨碍', max: sixSum[3]},
-                {name: '消耗', max: sixSum[4]}
+                {name: ti[0], max: sixSum[0]},
+                {name: ti[1], max: sixSum[1]},
+                {name: ti[2], max: sixSum[2]},
+                {name: ti[3], max: sixSum[3]},
+                {name: ti[4], max: sixSum[4]}
             ],
         },
         series: [{
@@ -448,22 +457,22 @@ $(document).on('mouseenter', '.tableContent', function () {
         case 'A':
             $('#showTabs_A .tableBox_Button_Rt').text(zName);
             $('#showTabs_A .tableBox_Button_Rb').text('攻击招式');
-            $('#showTabs_A .tableBox_Button_C').text(tData.zAtt['' + zName + ''].remark);
+            $('#showTabs_A .tableBox_Button_C').text(tDataA.zAtt['' + zName + ''].remark);
             break;
         case 'D':
             $('#showTabs_D .tableBox_Button_Rt').text(zName);
             if ($(this).parent().attr('class').toString().substr(-1, 1) == 1) {
                 $('#showTabs_D .tableBox_Button_Rb').text('格挡招式');
-                $('#showTabs_D .tableBox_Button_C').text(tData.zDef['' + zName + ''].remark);
+                $('#showTabs_D .tableBox_Button_C').text(tDataA.zDef['' + zName + ''].remark);
             } else {
                 $('#showTabs_D .tableBox_Button_Rb').text('闪避招式');
-                $('#showTabs_D .tableBox_Button_C').text(tData.zDod['' + zName + ''].remark);
+                $('#showTabs_D .tableBox_Button_C').text(tDataA.zDod['' + zName + ''].remark);
             }
             break;
         case 'B':
             $('#showTabs_B .tableBox_Button_Rt').text(zName);
             $('#showTabs_B .tableBox_Button_Rb').text('被动功法');
-            $('#showTabs_B .tableBox_Button_C').text(tData.zPas['' + zName + ''].remark);
+            $('#showTabs_B .tableBox_Button_C').text(tDataA.zPas['' + zName + ''].remark);
             break;
     }
 });
@@ -640,11 +649,12 @@ $(document).on('mouseleave ', '.table_Tx_D,.table_Tx_S', function () {
 });
 
 let personA = new Person();
+let personB = new Person();
 let mySaveFile = [2, 2, 2, 2, 2];
 
 function loadGameFile(a) {
     let mySchool = 'SL';
-    tData = data_S['' + mySchool + ''];
+    tDataA = data_S['' + mySchool + ''];
     $('#sixDataSet_all_A').text(13 - a[0] - a[1] - a[2] - a[3] - a[4]);
     $('#set_SX_LL_A').text(a[0]);
     $('#set_SX_MJ_A').text(a[1]);
@@ -663,29 +673,15 @@ function loadGameFile(a) {
     setSX_ZL();
     setSX_TP();
     setSX_ZQ();
-    initHP(personA.hp.head, personA.hp.body, personA.hp.hand, personA.hp.leg, true);
+    initHP(personA.hp.head, personA.hp.body, personA.hp.hand, personA.hp.leg, 0);
     personA.init_photo();
-    changePhotoA();
+    changePhoto(0);
 }
 
 function initHP(head, body, hand, leg, who) {
     let w = $('.setBox_lB').css('width');
     w = w.substring(0, w.length - 2) - 20;
     if (who) {
-        $('#bodyDP_A_body').parent().css('width', w + 'px');
-        w = w / body;
-        $('#bodyDP_A_head').parent().css('width', Math.round(w * head) + 'px');
-        $('#bodyDP_A_handL').parent().css('width', Math.round(w * hand[0]) + 'px');
-        $('#bodyDP_A_handR').parent().css('width', Math.round(w * hand[1]) + 'px');
-        $('#bodyDP_A_legL').parent().css('width', Math.round(w * leg[0]) + 'px');
-        $('#bodyDP_A_legR').parent().css('width', Math.round(w * leg[1]) + 'px');
-        $('#dateA_head_hp').text(head);
-        $('#dataA_body_hp').text(body);
-        $('#dataA_handL_hp').text(hand[0]);
-        $('#dataA_handR_hp').text(hand[1]);
-        $('#dataA_legL_hp').text(leg[0]);
-        $('#dataA_legR_hp').text(leg[1]);
-    } else {
         $('#bodyDP_B_body').parent().css('width', w + 'px');
         w = w / body;
         $('#bodyDP_B_head').parent().css('width', Math.round(w * head) + 'px');
@@ -699,6 +695,20 @@ function initHP(head, body, hand, leg, who) {
         $('#dataB_handR_hp').text(hand[1]);
         $('#dataB_legL_hp').text(leg[0]);
         $('#dataB_legR_hp').text(leg[1]);
+    } else {
+        $('#bodyDP_A_body').parent().css('width', w + 'px');
+        w = w / body;
+        $('#bodyDP_A_head').parent().css('width', Math.round(w * head) + 'px');
+        $('#bodyDP_A_handL').parent().css('width', Math.round(w * hand[0]) + 'px');
+        $('#bodyDP_A_handR').parent().css('width', Math.round(w * hand[1]) + 'px');
+        $('#bodyDP_A_legL').parent().css('width', Math.round(w * leg[0]) + 'px');
+        $('#bodyDP_A_legR').parent().css('width', Math.round(w * leg[1]) + 'px');
+        $('#dateA_head_hp').text(head);
+        $('#dataA_body_hp').text(body);
+        $('#dataA_handL_hp').text(hand[0]);
+        $('#dataA_handR_hp').text(hand[1]);
+        $('#dataA_legL_hp').text(leg[0]);
+        $('#dataA_legR_hp').text(leg[1]);
     }
 }
 
@@ -749,9 +759,9 @@ $(document).on('click', '.bt_sub', function () {
             break;
     }
     onOrOff(personA.sixData);
-    setMyChat(changeSixDtoChart(tData.sixData, personA.sixData), data_S.sixDataSum);
+    setMyChat(changeSixDtoChart(tDataA.sixData, personA.sixData), data_S.sixDataSum, 'myBigChart', 1);
     personA.init_photo();
-    changePhotoA();
+    changePhoto(0);
 });
 
 $(document).on('click', '.bt_add', function () {
@@ -801,20 +811,30 @@ $(document).on('click', '.bt_add', function () {
                 break;
         }
         onOrOff(personA.sixData);
-        setMyChat(changeSixDtoChart(tData.sixData, personA.sixData), data_S.sixDataSum);
+        setMyChat(changeSixDtoChart(tDataA.sixData, personA.sixData), data_S.sixDataSum, 'myBigChart', 1);
         personA.init_photo();
-        changePhotoA();
+        changePhoto(0);
     }
 });
 
-function changePhotoA() {
-    $('#pA_body').attr('points', '' + toSpace(personA.photo.body) + '');
-    $('#pA_head').attr('points', '' + toSpace(personA.photo.head) + '');
-    $('#pA_legL').attr('points', '' + toSpace(personA.photo.legL) + '');
-    $('#pA_legR').attr('points', '' + toSpace(personA.photo.legR) + '');
-    $('#pA_handL').attr('points', '' + toSpace(personA.photo.handL) + '');
-    $('#pA_handR').attr('points', '' + toSpace(personA.photo.handR) + '');
-    $('#pA_eye').attr('points', '' + toSpace(personA.photo.eye) + '');
+function changePhoto(who) {
+    if(who){
+        $('#pB_body').attr('points', '' + toSpace(personB.photo.body) + '');
+        $('#pB_head').attr('points', '' + toSpace(personB.photo.head) + '');
+        $('#pB_legL').attr('points', '' + toSpace(personB.photo.legL) + '');
+        $('#pB_legR').attr('points', '' + toSpace(personB.photo.legR) + '');
+        $('#pB_handL').attr('points', '' + toSpace(personB.photo.handL) + '');
+        $('#pB_handR').attr('points', '' + toSpace(personB.photo.handR) + '');
+        $('#pB_eye').attr('points', '' + toSpace(personB.photo.eye) + '');
+    }else {
+        $('#pA_body').attr('points', '' + toSpace(personA.photo.body) + '');
+        $('#pA_head').attr('points', '' + toSpace(personA.photo.head) + '');
+        $('#pA_legL').attr('points', '' + toSpace(personA.photo.legL) + '');
+        $('#pA_legR').attr('points', '' + toSpace(personA.photo.legR) + '');
+        $('#pA_handL').attr('points', '' + toSpace(personA.photo.handL) + '');
+        $('#pA_handR').attr('points', '' + toSpace(personA.photo.handR) + '');
+        $('#pA_eye').attr('points', '' + toSpace(personA.photo.eye) + '');
+    }
 }
 
 function onOrOff(a) {
@@ -865,9 +885,9 @@ function setSX_LL() {
     $('#attAdd').text(toPercentAdd(personA.attAdd));
     $('#flawDam').text(toPercent(personA.flawDam));
     let i = 0;
-    for (let key in tData.zAtt) {
-        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(0).text(toZero(Math.round(tData.zAtt[key].hurt_o * (1 + personA.attAdd))));
-        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(1).text(toZero(Math.round(tData.zAtt[key].hurt_i * (1 + personA.attAdd))));
+    for (let key in tDataA.zAtt) {
+        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(0).text(toZero(Math.round(tDataA.zAtt[key].hurt_o * (1 + personA.attAdd))));
+        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(1).text(toZero(Math.round(tDataA.zAtt[key].hurt_i * (1 + personA.attAdd))));
         i++;
     }
 }
@@ -881,10 +901,10 @@ function setSX_MJ() {
     $('#dod_hand').text(toPercent(personA.dod_hand));
     $('#dod_leg').text(toPercent(personA.dod_leg));
     let i = 0;
-    for (let key in tData.zAtt) {
-        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(4).text((tData.zAtt[key].time_q + personA.timeAdd_q).toFixed(1) + 's');
-        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(5).text((tData.zAtt[key].time_z + personA.timeAdd_z).toFixed(1) + 's');
-        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(6).text((tData.zAtt[key].time_h + personA.timeAdd_h).toFixed(1) + 's');
+    for (let key in tDataA.zAtt) {
+        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(4).text((tDataA.zAtt[key].time_q + personA.timeAdd_q).toFixed(1) + 's');
+        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(5).text((tDataA.zAtt[key].time_z + personA.timeAdd_z).toFixed(1) + 's');
+        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(6).text((tDataA.zAtt[key].time_h + personA.timeAdd_h).toFixed(1) + 's');
         i++;
     }
 
@@ -897,10 +917,10 @@ function setSX_ZL() {
     $('#hitRateAdd').text(toPercentAdd(personA.hitRateAdd));
     $('#getInf').text(personA.getInf);
     let i = 0;
-    for (let key in tData.zAtt) {
-        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(2).text(toPercentAdd(tData.zAtt[key].hit + personA.hitRateAdd));
-        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(9).text(toPerS(Math.round(tData.zAtt[key].hurt_b * (1 + personA.bleedAdd))));
-        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(10).text(toZero(Math.round(tData.zAtt[key].hurt_p * (1 + personA.poisonAdd))));
+    for (let key in tDataA.zAtt) {
+        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(2).text(toPercentAdd(tDataA.zAtt[key].hit + personA.hitRateAdd));
+        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(9).text(toPerS(Math.round(tDataA.zAtt[key].hurt_b * (1 + personA.bleedAdd))));
+        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(10).text(toZero(Math.round(tDataA.zAtt[key].hurt_p * (1 + personA.poisonAdd))));
         i++;
     }
 }
@@ -918,8 +938,8 @@ function setSX_ZQ() {
     $('#zqVal').text(personA.zqVal);
     $('#zqPerSec').text(personA.zqPerSec + '/1s');
     let i = 0;
-    for (let key in tData.zAtt) {
-        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(8).text(toZero(Math.round(tData.zAtt[key].hurt_q * (1 + personA.zqHurtAdd))));
+    for (let key in tDataA.zAtt) {
+        $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(8).text(toZero(Math.round(tDataA.zAtt[key].hurt_q * (1 + personA.zqHurtAdd))));
         i++;
     }
 }
@@ -999,22 +1019,46 @@ $(document).on('mouseenter', '.bodyDataList', function () {//绑定鼠标进入�
     let e = $(this).find('span').eq(0).text();
     switch (e) {
         case '头部':
-            $('#pA_head').addClass('mySvgLight');
+            if ($(this).find('span').eq(1).attr('id').substring(4, 5) == 'B') {
+                $('#pB_head').addClass('mySvgLight');
+            } else {
+                $('#pA_head').addClass('mySvgLight');
+            }
             break;
         case '躯干':
-            $('#pA_body').addClass('mySvgLight');
+            if ($(this).find('span').eq(1).attr('id').substring(4, 5) == 'B') {
+                $('#pB_body').addClass('mySvgLight');
+            } else {
+                $('#pA_body').addClass('mySvgLight');
+            }
             break;
         case '左手':
-            $('#pA_handL').addClass('mySvgLight');
+            if ($(this).find('span').eq(1).attr('id').substring(4, 5) == 'B') {
+                $('#pB_handL').addClass('mySvgLight');
+            } else {
+                $('#pA_handL').addClass('mySvgLight');
+            }
             break;
         case '右手':
-            $('#pA_handR').addClass('mySvgLight');
+            if ($(this).find('span').eq(1).attr('id').substring(4, 5) == 'B') {
+                $('#pB_handR').addClass('mySvgLight');
+            } else {
+                $('#pA_handR').addClass('mySvgLight');
+            }
             break;
         case '左脚':
-            $('#pA_legL').addClass('mySvgLight');
+            if ($(this).find('span').eq(1).attr('id').substring(4, 5) == 'B') {
+                $('#pB_legL').addClass('mySvgLight');
+            } else {
+                $('#pA_legL').addClass('mySvgLight');
+            }
             break;
         case '右脚':
-            $('#pA_legR').addClass('mySvgLight');
+            if ($(this).find('span').eq(1).attr('id').substring(4, 5) == 'B') {
+                $('#pB_legR').addClass('mySvgLight');
+            } else {
+                $('#pA_legR').addClass('mySvgLight');
+            }
             break;
     }
 });
@@ -1046,15 +1090,47 @@ $(document).on('click', '.next_04', function () {
 });
 
 function next_04_GoOn() {
+    personB.sixData[0] = 2;
+    personB.sixData[1] = 2;
+    personB.sixData[2] = 2;
+    personB.sixData[3] = 2;
+    personB.sixData[4] = 2;
+    personB.init();
+    initHP(personB.hp.head, personB.hp.body, personB.hp.hand, personB.hp.leg, 1);
+    personB.init_photo();
+    changePhoto(1);
+
+
+    let html_P = $('.setBox_lM').html();
+    let html_D = $('.setBox_lB').html();
+    let sltL = $('.statusBoxL');
+    let sltR = $('.statusBoxR').find('.sixDataFont').eq(0);
+    sltL.find('.statusBox_1').append(html_P);
+    sltL.find('.statusBox_2').html(html_D);
+    sltL = sltL.find('.sixDataFont').eq(0);
+
+    let ij = 0;
+    sltL.find('.sdsBox').each(function () {
+        $(this).text(personA.sixData[ij]);
+        ij++;
+    });
+    ij = 0;
+    sltR.find('.sdsBox').each(function () {
+        $(this).text(personB.sixData[ij]);
+        ij++;
+    });
+
     $('.rightContent').hide('fade', 200);
     $('.leftContent').hide('fade', 200, function () {
+        $('.setBox_lM').html('');
+        $('.setBox_lB').html('');
         $('.bigBaseBox').switchClass('bigBaseBox', 'bigBaseBox_changeHeight', 200, 'easeInOutCubic');
         $('.leftLine').switchClass('leftLine', 'leftLine_changeHeight', 200, 'easeInOutCubic', function () {
             $('.leftLine_changeHeight').switchClass('leftLine_changeHeight', 'leftLine_changeWidth', 400, 'easeInOutCubic', function () {
                 $('.BaseBox').show('fade', 0, function () {
                     $('.title').show('fade', 200, function () {
                         $('.logoPosition06').show('blind', {direction: 'left'}, 200);
-                        $('.bigBaseBox_changeHeight').hide('fade', 200,function () {
+                        $('.bigBaseBox_changeHeight').hide('fade', 200, function () {
                             $('.BaseBox').removeClass('BaseBox_position');
                         });
                         let j = 0;
@@ -1065,6 +1141,7 @@ function next_04_GoOn() {
                         let myVarTime = window.setInterval(function () {
                             showLiFiBox()
                         }, 100);
+
                         function showLiFiBox() {
                             if (j < sum) {
                                 x.find('div').eq(j).show('fade', 200);
@@ -1072,16 +1149,19 @@ function next_04_GoOn() {
                                 j++;
                             } else {
                                 window.clearInterval(myVarTime);
-                                $('.contentBigBox').show('fade', 200);
+                                $('.contentBigBox').show('fade', 200, function () {
+                                    setMyChat(changeSixDtoChart(tDataA.sixData, personA.sixData), data_S.sixDataSum, 'myLittleChartA', 0);
+                                    setMyChat(changeSixDtoChart(tDataB.sixData, personB.sixData), data_S.sixDataSum, 'myLittleChartB', 0);
+                                });
                             }
                         }
-
-
-
                     });
                 });
-
             });
         });
     });
 }
+
+$(document).on('click', '.moSSBox', function () {
+
+});
