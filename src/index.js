@@ -43,8 +43,8 @@ function loadFile_count(n) {
         if (j < 11) {
             $('.loFiGd_F').find('li').eq(j).show('fade', 200);
             j++;
-        } else if (j >= 12) {
-            window.clearImmediate(myVarTime);
+        } else {
+            window.clearInterval(myVarTime);
         }
     }
 
@@ -322,22 +322,24 @@ $(document).on('click', '.next_02', function () {
         $('#loginInTopMu span').show('fade', 200);
         $('#selectSpan').text('选择派别');
         $('.loFiGd_C').show();
-        let j = 0;
 
-        function showLiFiBox() {
-            if (j < 11) {
-                $('.loFiGd_C').find('li').eq(j).show('fade', 200);
-                j++;
-            } else if (j >= 12) {
-                window.clearImmediate(myVarTime);
-            }
-        }
 
-        $('.logoBox').hide('blind', {direction: 'left'}, 200, function () {
+
+        $('.logoPosition02').hide('blind', {direction: 'left'}, 200, function () {
+            let s = $('.logoPosition02');
             $('.leftContent').switchClass('leftContent_padding', '', 200, 'easeInOutCubic');
             $('.smallBaseBox').switchClass('smallBaseBox', 'bigBaseBox', 500, 'easeInOutCubic', function () {
-                $('.logoBox').removeClass('logoPosition02').addClass('logoPosition03');
-                $('.logoBox').show('blind', {direction: 'left'}, 200);
+                s.removeClass('logoPosition02').addClass('logoPosition03');
+                s.show('blind', {direction: 'left'}, 200);
+                let j = 0;
+                function showLiFiBox() {
+                    if (j < 11) {
+                        $('.loFiGd_C').find('li').eq(j).show('fade', 200);
+                        j++;
+                    } else {
+                        window.clearInterval(myVarTime);
+                    }
+                }
                 let myVarTime = window.setInterval(function () {
                     showLiFiBox()
                 }, 30);
@@ -806,13 +808,13 @@ $(document).on('click', '.bt_add', function () {
 });
 
 function changePhotoA() {
-    $('#pA_body').attr('points','' + toSpace(personA.photo.body) + '');
-    $('#pA_head').attr('points','' + toSpace(personA.photo.head) + '');
-    $('#pA_legL').attr('points','' + toSpace(personA.photo.legL) + '');
-    $('#pA_legR').attr('points','' + toSpace(personA.photo.legR) + '');
-    $('#pA_handL').attr('points','' + toSpace(personA.photo.handL) + '');
-    $('#pA_handR').attr('points','' + toSpace(personA.photo.handR) + '');
-    $('#pA_eye').attr('points','' + toSpace(personA.photo.eye) + '');
+    $('#pA_body').attr('points', '' + toSpace(personA.photo.body) + '');
+    $('#pA_head').attr('points', '' + toSpace(personA.photo.head) + '');
+    $('#pA_legL').attr('points', '' + toSpace(personA.photo.legL) + '');
+    $('#pA_legR').attr('points', '' + toSpace(personA.photo.legR) + '');
+    $('#pA_handL').attr('points', '' + toSpace(personA.photo.handL) + '');
+    $('#pA_handR').attr('points', '' + toSpace(personA.photo.handR) + '');
+    $('#pA_eye').attr('points', '' + toSpace(personA.photo.eye) + '');
 }
 
 function onOrOff(a) {
@@ -1021,22 +1023,65 @@ $(document).on('mouseleave', '.bodyDataList', function () {//绑定鼠标划出�
 });
 
 $(document).on('click', '.next_04', function () {
-    if ($('#sixDataSet_all_A').text() != 0){
-        $( "#dialog-confirm" ).dialog({
+    if ($('#sixDataSet_all_A').text() != 0) {
+        $('#dialogConfirm').html('<p>属性点还有剩余，是否完成设置？</p>');
+        $('#dialogConfirm').dialog({
             resizable: false,
             height: "auto",
             width: 400,
             modal: true,
             buttons: {
-                "Delete all items": function() {
-                    $( this ).dialog( "close" );
+                "完成设置": function () {
+                    $(this).dialog("close");
+                    next_04_GoOn();
                 },
-                Cancel: function() {
-                    $( this ).dialog( "close" );
+                "取消": function () {
+                    $(this).dialog("close");
                 }
             }
         });
-    }else {
-
+    } else {
+        next_04_GoOn();
     }
 });
+
+function next_04_GoOn() {
+    $('.rightContent').hide('fade', 200);
+    $('.leftContent').hide('fade', 200, function () {
+        $('.bigBaseBox').switchClass('bigBaseBox', 'bigBaseBox_changeHeight', 200, 'easeInOutCubic');
+        $('.leftLine').switchClass('leftLine', 'leftLine_changeHeight', 200, 'easeInOutCubic', function () {
+            $('.leftLine_changeHeight').switchClass('leftLine_changeHeight', 'leftLine_changeWidth', 400, 'easeInOutCubic', function () {
+                $('.BaseBox').show('fade', 0, function () {
+                    $('.title').show('fade', 200, function () {
+                        $('.logoPosition06').show('blind', {direction: 'left'}, 200);
+                        $('.bigBaseBox_changeHeight').hide('fade', 200,function () {
+                            $('.BaseBox').removeClass('BaseBox_position');
+                        });
+                        let j = 0;
+                        let x = $('.titleTBack');
+                        let y = $('.titleTFront');
+                        let sum = x.children().length;
+
+                        let myVarTime = window.setInterval(function () {
+                            showLiFiBox()
+                        }, 100);
+                        function showLiFiBox() {
+                            if (j < sum) {
+                                x.find('div').eq(j).show('fade', 200);
+                                y.find('div').eq(j).show('fade', 200);
+                                j++;
+                            } else {
+                                window.clearInterval(myVarTime);
+                                $('.contentBigBox').show('fade', 200);
+                            }
+                        }
+
+
+
+                    });
+                });
+
+            });
+        });
+    });
+}

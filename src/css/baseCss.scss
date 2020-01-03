@@ -1323,7 +1323,7 @@ div.setBoxCon_rh {
 
 
 .BaseBox {
-  width: $bigBaseBox-width;
+  width: $bigBaseBox-width + 2px;
   margin: auto;
 }
 
@@ -1334,7 +1334,7 @@ $title_paddingRight: 30px;
 
 .title {
   background-color: $darkBase-color;
-  width: $bigBaseBox-width;
+  width: $bigBaseBox-width + 2px;
   height: $title_height;
   box-sizing: border-box;
   padding: $title_paddingTop $title_paddingRight $title_paddingTop $title_paddingLeft;
@@ -1343,13 +1343,13 @@ $title_paddingRight: 30px;
 }
 
 .contentBigBox {
-  width: $bigBaseBox-width;
+  width: $bigBaseBox-width + 2px;
 }
 
 .titleTBack,
 .titleTFront {
   height: $title_height - $title_paddingTop * 2;
-  width: $bigBaseBox-width - $title_paddingRight - $title_paddingLeft;
+  width: ($bigBaseBox-width  + 2px) - $title_paddingRight - $title_paddingLeft;
   position: absolute;
 }
 
@@ -1488,14 +1488,14 @@ $contentBoxPadding: 10px;
   float: left;
   margin-left: $contentBoxMargin;
   margin-right: $contentBoxMargin;
-  width: $bigBaseBox-width - ($setBox_left_width * 2) - ($contentBoxMargin * 2);
+  width: ($bigBaseBox-width  + 2px) - ($setBox_left_width * 2) - ($contentBoxMargin * 2);
 }
 
 .contentTop,
 .contentMid {
   box-sizing: border-box;
   padding: $contentBoxPadding;
-  width: $bigBaseBox-width - ($setBox_left_width * 2) - ($contentBoxMargin * 2);
+  width: ($bigBaseBox-width  + 2px) - ($setBox_left_width * 2) - ($contentBoxMargin * 2);
 }
 
 .contentTop {
@@ -1526,13 +1526,13 @@ $contentBoxPadding: 10px;
   background-color: $lightGray-color;
   padding: 5px;
   height: 151px;
-  width: $bigBaseBox-width - ($setBox_left_width * 2) - ($contentBoxMargin * 2) - ($contentBoxPadding * 2);
+  width: ($bigBaseBox-width + 2px) - ($setBox_left_width * 2) - ($contentBoxMargin * 2) - ($contentBoxPadding * 2);
 }
 
 .moSelectSchool {
   float: left;
   height: 151px - 10px;
-  width: $bigBaseBox-width - ($setBox_left_width * 2) - ($contentBoxMargin * 2) - ($contentBoxPadding * 2) - (34px * 2) - ($setBox_right_width - 34px -10px) - (5px * 3);
+  width: ($bigBaseBox-width + 2px) - ($setBox_left_width * 2) - ($contentBoxMargin * 2) - ($contentBoxPadding * 2) - (34px * 2) - ($setBox_right_width - 34px -10px) - (5px * 3);
   background-color: $myWhite-color;
   box-sizing: border-box;
   margin-right: 5px;
@@ -1570,4 +1570,65 @@ $contentBoxPadding: 10px;
   &:hover {
     color: $darkBase-color;
   }
+}
+
+.ui-widget-overlay.ui-front {
+  background: $backgroundBase-color;
+  opacity: .5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ui-dialog {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .1);
+}
+
+.ui-dialog-titlebar {
+  background-color: $myYellow-color;
+}
+
+.ui-dialog-titlebar-close {
+  background: url("../images/Close.svg") no-repeat;
+  background-size: 20px 20px;
+  border: 0;
+
+  &:hover {
+    @include hoverBright(0.9);
+  }
+}
+
+.ui-button {
+  border: 0;
+
+  &:hover {
+    @include hoverBright(0.9);
+  }
+}
+
+.bigBaseBox_changeHeight {
+  @extend .bigBaseBox;
+  height: $title_height !important;
+  margin-top: 71px !important;
+}
+
+.leftLine_changeHeight {
+  @extend .leftLine;
+  height: $title_height !important;
+}
+
+.leftLine_changeWidth {
+  background-color: $darkBase-color;
+  height: 100%;
+  width: 100%;
+}
+
+.BaseBox.BaseBox_position {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -($bigBaseBox-width + 2px) / 2;
 }
