@@ -1318,7 +1318,7 @@ div.setBoxCon_rh {
 }
 
 #pA_eye,
-#pB_eye{
+#pB_eye {
   fill: #ffffff;
 }
 
@@ -1495,12 +1495,13 @@ $contentBoxPadding: 10px;
 .contentTop,
 .contentMid {
   box-sizing: border-box;
-  padding: $contentBoxPadding;
+  padding: 0 $contentBoxPadding;
   width: ($bigBaseBox-width  + 2px) - ($setBox_left_width * 2) - ($contentBoxMargin * 2);
 }
 
+$contentTopHeight: 65px;
 .contentTop {
-  height: 65px;
+  height: $contentTopHeight;
 }
 
 .contentMid {
@@ -1510,7 +1511,7 @@ $contentBoxPadding: 10px;
 
 .moDiv,
 .moNext {
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 .moDiv {
@@ -1523,6 +1524,7 @@ $contentBoxPadding: 10px;
 }
 
 .moSetBigBox {
+  margin-top: $contentBoxPadding;
   box-sizing: border-box;
   background-color: $lightGray-color;
   padding: 5px;
@@ -1557,20 +1559,21 @@ $contentBoxPadding: 10px;
     @include hoverBright(0.85);
   }
 
-  div{
+  div {
     float: left;
     height: 24px;
     line-height: 24px;
   }
 }
 
-.moSSBox.moSSelect{
-  background-color:$aTab-color;
+.moSSBox.moSSelect {
+  background-color: $aTab-color;
 }
 
-.moSLogo{
+.moSLogo {
   width: 30px;
 }
+
 .mirror {
   transform: scaleX(-1);
 }
@@ -1649,7 +1652,7 @@ $contentBoxPadding: 10px;
 }
 
 #myLittleChartA,
-#myLittleChartB{
+#myLittleChartB {
   width: 150px;
   height: 140px;
   margin-top: 10px;
@@ -1659,7 +1662,7 @@ $contentBoxPadding: 10px;
 .sDataText1,
 .sDataText2,
 .sDataText3,
-.sDataText4{
+.sDataText4 {
   float: left;
   font-size: 12px;
   position: relative;
@@ -1667,23 +1670,162 @@ $contentBoxPadding: 10px;
   width: 30px;
 }
 
-.sDataText0{
+.sDataText0 {
   top: -140px;
   left: 64px;
 }
-.sDataText1{
+
+.sDataText1 {
   top: -105px;
   left: -28px;
 }
-.sDataText2{
+
+.sDataText2 {
   top: -30px;
   left: -43px;
 }
-.sDataText3{
+
+.sDataText3 {
   top: -30px;
   left: 19px;
 }
-.sDataText4{
+
+.sDataText4 {
   top: -105px;
   left: 5px;
+}
+
+.fightTimeBigBox {
+  width: ($bigBaseBox-width  + 2px) - ($setBox_left_width * 2) - ($contentBoxMargin * 2) - ($contentBoxPadding * 2);
+  height: $contentTopHeight;
+  position: relative;
+}
+
+$electKfSize: 42px;
+.selectKf_A,
+.selectKf_B {
+  width: $electKfSize;
+  height: $electKfSize;
+  background-color: $tableTitle-color;
+  color: #ffffff;
+  box-sizing: border-box;
+  padding: 7px;
+  line-height: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  position: absolute;
+  top: 0;
+
+  &:hover {
+    @include hoverBright(1.2);
+  }
+}
+
+.selectKf_A {
+  left: 0;
+}
+
+.selectKf_B {
+  right: 0;
+}
+
+.fightTimeSmallBox {
+  width: ($bigBaseBox-width  + 2px) - ($setBox_left_width * 2) - ($contentBoxMargin * 2) - (($electKfSize + $contentBoxPadding * 2) * 2);
+  height: $contentTopHeight - 1px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+$fightTimeMBoxWidth: 130px;
+$fightTimeMBoxMargin: 10px;
+.fightTimeMBox {
+  float: left;
+  width: $fightTimeMBoxWidth;
+  height: $contentTopHeight - 1px;
+  margin-left: $fightTimeMBoxMargin;
+  margin-right: $fightTimeMBoxMargin;
+}
+
+.fightTimeMBoxT {
+  width: 100%;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+
+  >div {
+    &:nth-child(1),
+    &:nth-child(3) {
+      width: 30px;
+    }
+
+    &:nth-child(1) {
+      text-align: right;
+    }
+  }
+}
+
+#roundText {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+#fightTimeMBoxB{
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  height: 30px;
+  width: 100px;
+  margin-top: -4px;
+  margin-left: 23px;
+}
+
+.zqBigBox_A,
+.zqBigBox_B {
+  width: (($bigBaseBox-width  + 2px) - ($setBox_left_width * 2) - ($contentBoxMargin * 2) - (($electKfSize + $contentBoxPadding * 2) * 2) - $fightTimeMBoxWidth - $fightTimeMBoxMargin * 2)/2;
+  height: 21px;
+  margin-top: 25px;
+}
+
+.zqBigBox_A {
+  float: left;
+
+  div {
+    float: left;
+  }
+}
+
+.zqBigBox_B {
+  float: right;
+
+  div {
+    float: right;
+  }
+}
+
+$zqHpBigBoxHeight: 5px;
+.zqHpBigBox {
+  width: (($bigBaseBox-width  + 2px) - ($setBox_left_width * 2) - ($contentBoxMargin * 2) - (($electKfSize + $contentBoxPadding * 2) * 2) - $fightTimeMBoxWidth - $fightTimeMBoxMargin * 2)/2;
+  height: $zqHpBigBoxHeight;
+}
+
+.zqProcess {
+  width: 100%;
+  height: 100%;
+  background-color: #C7C7C7;
+}
+
+.zqBoxP {
+  box-sizing: border-box;
+  @include base-box($hp-blue-color);
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+
+.zqDP {
+  width: 100%;
+  height: 100%;
+  background-color: $hp-blue-color;
 }

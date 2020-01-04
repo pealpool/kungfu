@@ -203,11 +203,51 @@
         </div>
         <div class="contentBox">
             <div class="contentTop grayBorder">
-                <div class="moDiv">* 开发模式 - 模拟战</div>
-                <div class="moNext">继续 ></div>
+                <div class="moDiv" style="display: none">* 开发模式 - 模拟战</div>
+                <div class="moNext" style="display: none">继续 ></div>
+                <div class="fightTimeBigBox">
+                    <div class="selectKf_A">己方武功</div>
+                    <div class="fightTimeSmallBox">
+                        <div class="zqBigBox_A">
+                            <div class="zqText">
+                                <span>真气 </span>
+                                <span id="zqSpan_A" class="zqSpan">180</span>
+                            </div>
+                            <div class="zqHpBigBox">
+                                <div class="zqProcess">
+                                    <div class="zqBoxP">
+                                        <div id="zqDP_A" class="zqDP"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fightTimeMBox">
+                            <div class="fightTimeMBoxT">
+                                <div>第</div>
+                                <div id="roundText">1</div>
+                                <div>回合</div>
+                            </div>
+                            <div id="fightTimeMBoxB">00'00"</div>
+                        </div>
+                        <div class="zqBigBox_B">
+                            <div class="zqText">
+                                <span id="zqSpan_B" class="zqSpan">80</span>
+                                <span> 真气</span>
+                            </div>
+                            <div class="zqHpBigBox">
+                                <div class="zqProcess">
+                                    <div class="zqBoxP">
+                                        <div id="zqDP_B" class="zqDP"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="selectKf_B">对方武功</div>
+                </div>
             </div>
             <div class="contentMid grayBorder">
-                <div class="moSetBigBox">
+                <div class="moSetBigBox" style="display: none">
                     <div class="setBoxTitle">对方门派</div>
                     <div class="moSelectSchool">
                         <div class="moSSBox moSSelect">
@@ -256,7 +296,7 @@
                         </div>
                     </div>
                     <div class="setBox_rT">
-                        <div class="setBoxTitle">属性设置</div>
+                        <div class="setBoxTitle">对方属性</div>
                         <div class="setSixBox">
                             <div class="setSixBoxList">
                                 <div>剩余点数：</div>
@@ -295,6 +335,23 @@
                         </div>
                     </div>
                 </div>
+                <div class="fightSelectButtonBox">
+                    <div class="fightButtonBoxT">
+                        <div id="GiveIn">认输</div>
+                        <div class="speedSetBox">
+                            <div class="speedSetText">
+                                <div>手动</div>
+                                <div>慢速</div>
+                                <div>快速</div>
+                            </div>
+                            <div class="speedSetOn"></div>
+                        </div>
+                    </div>
+                    <div class="fightButtonBoxB">
+                        <div class="fightPause">暂停</div>
+                    </div>
+                </div>
+                <div class="fightStart">开始比试</div>
             </div>
         </div>
         <div class="statusBoxR">
@@ -474,8 +531,6 @@
 
 
 </div>
-
-
 
 
 </body>
