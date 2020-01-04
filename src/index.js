@@ -661,7 +661,7 @@ function loadGameFile(a) {
     $('#set_SX_ZL_A').text(a[2]);
     $('#set_SX_TP_A').text(a[3]);
     $('#set_SX_ZQ_A').text(a[4]);
-    onOrOff(a);
+    onOrOff(a, 0);
     personA.sixData[0] = a[0];
     personA.sixData[1] = a[1];
     personA.sixData[2] = a[2];
@@ -716,109 +716,230 @@ function initHP(head, body, hand, leg, who) {
 $(document).on('click', '.bt_sub', function () {
     let t = $(this).next();
     let e = t.attr('id');
-    switch (e) {
-        case 'set_SX_LL_A':
-            if (personA.sixData[0] >= 1) {
-                personA.calc_LL(-1);
-                t.text(personA.sixData[0]);
-                $('#sixDataSet_all_A').text(Number($('#sixDataSet_all_A').text()) + 1);
-                setSX_LL();
-            }
-            break;
-        case 'set_SX_MJ_A':
-            if (personA.sixData[1] >= 1) {
-                personA.calc_MJ(-1);
-                t.text(personA.sixData[1]);
-                $('#sixDataSet_all_A').text(Number($('#sixDataSet_all_A').text()) + 1);
-                setSX_MJ();
-            }
-            break;
-        case 'set_SX_ZL_A':
-            if (personA.sixData[2] >= 1) {
-                personA.calc_ZL(-1);
-                t.text(personA.sixData[2]);
-                $('#sixDataSet_all_A').text(Number($('#sixDataSet_all_A').text()) + 1);
-                setSX_ZL();
-            }
-            break;
-        case 'set_SX_TP_A':
-            if (personA.sixData[3] >= 1) {
-                personA.calc_TP(-1);
-                t.text(personA.sixData[3]);
-                $('#sixDataSet_all_A').text(Number($('#sixDataSet_all_A').text()) + 1);
-                setSX_TP();
-            }
-            break;
-        case 'set_SX_ZQ_A':
-            if (personA.sixData[4] >= 1) {
-                personA.calc_ZQ(-1);
-                t.text(personA.sixData[4]);
-                $('#sixDataSet_all_A').text(Number($('#sixDataSet_all_A').text()) + 1);
-                setSX_ZQ();
-            }
-            break;
-    }
-    onOrOff(personA.sixData);
-    setMyChat(changeSixDtoChart(tDataA.sixData, personA.sixData), data_S.sixDataSum, 'myBigChart', 1);
-    personA.init_photo();
-    changePhoto(0);
-});
 
-$(document).on('click', '.bt_add', function () {
-    if ($('#sixDataSet_all_A').text() > 0) {
-        let t = $(this).prev();
-        let e = t.attr('id');
+    if ($(this).parent().parent().parent().parent().attr('class') == 'setBox_right') {
+        let A = $('#sixDataSet_all_A');
         switch (e) {
             case 'set_SX_LL_A':
-                if (personA.sixData[0] <= 4) {
-                    personA.calc_LL(1);
+                if (personA.sixData[0] >= 1) {
+                    personA.calc_LL(-1);
                     t.text(personA.sixData[0]);
-                    $('#sixDataSet_all_A').text($('#sixDataSet_all_A').text() - 1);
+                    A.text(Number(A.text()) + 1);
                     setSX_LL();
                 }
                 break;
             case 'set_SX_MJ_A':
-                if (personA.sixData[1] <= 4) {
-                    personA.calc_MJ(1);
+                if (personA.sixData[1] >= 1) {
+                    personA.calc_MJ(-1);
                     t.text(personA.sixData[1]);
-                    $('#sixDataSet_all_A').text($('#sixDataSet_all_A').text() - 1);
+                    A.text(Number(A.text()) + 1);
                     setSX_MJ();
                 }
                 break;
             case 'set_SX_ZL_A':
-                if (personA.sixData[2] <= 4) {
-                    personA.calc_ZL(1);
+                if (personA.sixData[2] >= 1) {
+                    personA.calc_ZL(-1);
                     t.text(personA.sixData[2]);
-                    $('#sixDataSet_all_A').text($('#sixDataSet_all_A').text() - 1);
+                    A.text(Number(A.text()) + 1);
                     setSX_ZL();
                 }
                 break;
             case 'set_SX_TP_A':
-                if (personA.sixData[3] <= 4) {
-                    personA.calc_TP(1);
+                if (personA.sixData[3] >= 1) {
+                    personA.calc_TP(-1);
                     t.text(personA.sixData[3]);
-                    $('#sixDataSet_all_A').text($('#sixDataSet_all_A').text() - 1);
+                    A.text(Number(A.text()) + 1);
                     setSX_TP();
                 }
                 break;
             case 'set_SX_ZQ_A':
-                if (personA.sixData[4] <= 2) {
-                    personA.calc_ZQ(1);
+                if (personA.sixData[4] >= 1) {
+                    personA.calc_ZQ(-1);
                     t.text(personA.sixData[4]);
-                    $('#sixDataSet_all_A').text($('#sixDataSet_all_A').text() - 1);
+                    A.text(Number(A.text()) + 1);
                     setSX_ZQ();
                 }
                 break;
         }
-        onOrOff(personA.sixData);
+        onOrOff(personA.sixData, 0);
         setMyChat(changeSixDtoChart(tDataA.sixData, personA.sixData), data_S.sixDataSum, 'myBigChart', 1);
         personA.init_photo();
         changePhoto(0);
+    } else {
+        let B = $('#sixDataSet_all_B');
+        let s = $('.statusBoxR').find('.sixDataFont').eq(0).find('.sdsBox');
+        switch (e) {
+            case 'set_SX_LL_B':
+                if (personB.sixData[0] >= 1) {
+                    personB.calc_LL(-1);
+                    t.text(personB.sixData[0]);
+                    B.text(Number(B.text()) + 1);
+                    setSX_LL();
+                    s.eq(0).text(t.text());
+                }
+                break;
+            case 'set_SX_MJ_B':
+                if (personB.sixData[1] >= 1) {
+                    personB.calc_MJ(-1);
+                    t.text(personB.sixData[1]);
+                    B.text(Number(B.text()) + 1);
+                    setSX_MJ();
+                    s.eq(1).text(t.text());
+                }
+                break;
+            case 'set_SX_ZL_B':
+                if (personB.sixData[2] >= 1) {
+                    personB.calc_ZL(-1);
+                    t.text(personB.sixData[2]);
+                    B.text(Number(B.text()) + 1);
+                    setSX_ZL();
+                    s.eq(2).text(t.text());
+                }
+                break;
+            case 'set_SX_TP_B':
+                if (personB.sixData[3] >= 1) {
+                    personB.calc_TP(-1);
+                    t.text(personB.sixData[3]);
+                    B.text(Number(B.text()) + 1);
+                    setSX_TP();
+                    s.eq(3).text(t.text());
+                }
+                break;
+            case 'set_SX_ZQ_B':
+                if (personB.sixData[4] >= 1) {
+                    personB.calc_ZQ(-1);
+                    t.text(personB.sixData[4]);
+                    B.text(Number(B.text()) + 1);
+                    setSX_ZQ();
+                    s.eq(4).text(t.text());
+                }
+                break;
+        }
+        onOrOff(personB.sixData, 1);
+        setMyChat(changeSixDtoChart(tDataB.sixData, personB.sixData), data_S.sixDataSum, 'myLittleChartB', 0);
+        personB.init_photo();
+        changePhoto(1);
     }
+
+});
+
+$(document).on('click', '.bt_add', function () {
+    if ($(this).parent().parent().parent().parent().attr('class') == 'setBox_right') {
+        let A = $('#sixDataSet_all_A');
+        if (A.text() > 0) {
+            let t = $(this).prev();
+            let e = t.attr('id');
+            switch (e) {
+                case 'set_SX_LL_A':
+                    if (personA.sixData[0] <= 4) {
+                        personA.calc_LL(1);
+                        t.text(personA.sixData[0]);
+                        A.text(A.text() - 1);
+                        setSX_LL();
+                    }
+                    break;
+                case 'set_SX_MJ_A':
+                    if (personA.sixData[1] <= 4) {
+                        personA.calc_MJ(1);
+                        t.text(personA.sixData[1]);
+                        A.text(A.text() - 1);
+                        setSX_MJ();
+                    }
+                    break;
+                case 'set_SX_ZL_A':
+                    if (personA.sixData[2] <= 4) {
+                        personA.calc_ZL(1);
+                        t.text(personA.sixData[2]);
+                        A.text(A.text() - 1);
+                        setSX_ZL();
+                    }
+                    break;
+                case 'set_SX_TP_A':
+                    if (personA.sixData[3] <= 4) {
+                        personA.calc_TP(1);
+                        t.text(personA.sixData[3]);
+                        A.text(A.text() - 1);
+                        setSX_TP();
+                    }
+                    break;
+                case 'set_SX_ZQ_A':
+                    if (personA.sixData[4] <= 2) {
+                        personA.calc_ZQ(1);
+                        t.text(personA.sixData[4]);
+                        A.text(A.text() - 1);
+                        setSX_ZQ();
+                    }
+                    break;
+            }
+            onOrOff(personA.sixData, 0);
+            setMyChat(changeSixDtoChart(tDataA.sixData, personA.sixData), data_S.sixDataSum, 'myBigChart', 1);
+            personA.init_photo();
+            changePhoto(0);
+        }
+    } else {
+        let s = $('.statusBoxR').find('.sixDataFont').eq(0).find('.sdsBox');
+        let B = $('#sixDataSet_all_B');
+        if (B.text() > 0) {
+            let t = $(this).prev();
+            let e = t.attr('id');
+            switch (e) {
+                case 'set_SX_LL_B':
+                    if (personB.sixData[0] <= 4) {
+                        personB.calc_LL(1);
+                        t.text(personB.sixData[0]);
+                        B.text(B.text() - 1);
+                        setSX_LL();
+                        s.eq(0).text(t.text());
+                    }
+                    break;
+                case 'set_SX_MJ_B':
+                    if (personB.sixData[1] <= 4) {
+                        personB.calc_MJ(1);
+                        t.text(personB.sixData[1]);
+                        B.text(B.text() - 1);
+                        setSX_MJ();
+                        s.eq(1).text(t.text());
+                    }
+                    break;
+                case 'set_SX_ZL_B':
+                    if (personB.sixData[2] <= 4) {
+                        personB.calc_ZL(1);
+                        t.text(personB.sixData[2]);
+                        B.text(B.text() - 1);
+                        setSX_ZL();
+                        s.eq(2).text(t.text());
+                    }
+                    break;
+                case 'set_SX_TP_B':
+                    if (personB.sixData[3] <= 4) {
+                        personB.calc_TP(1);
+                        t.text(personB.sixData[3]);
+                        B.text(B.text() - 1);
+                        setSX_TP();
+                        s.eq(3).text(t.text());
+                    }
+                    break;
+                case 'set_SX_ZQ_B':
+                    if (personB.sixData[4] <= 2) {
+                        personB.calc_ZQ(1);
+                        t.text(personB.sixData[4]);
+                        B.text(B.text() - 1);
+                        setSX_ZQ();
+                        s.eq(4).text(t.text());
+                    }
+                    break;
+            }
+            onOrOff(personB.sixData, 1);
+            setMyChat(changeSixDtoChart(tDataB.sixData, personB.sixData), data_S.sixDataSum, 'myLittleChartB', 0);
+            personB.init_photo();
+            changePhoto(1);
+        }
+    }
+
 });
 
 function changePhoto(who) {
-    if(who){
+    if (who) {
         $('#pB_body').attr('points', '' + toSpace(personB.photo.body) + '');
         $('#pB_head').attr('points', '' + toSpace(personB.photo.head) + '');
         $('#pB_legL').attr('points', '' + toSpace(personB.photo.legL) + '');
@@ -826,7 +947,7 @@ function changePhoto(who) {
         $('#pB_handL').attr('points', '' + toSpace(personB.photo.handL) + '');
         $('#pB_handR').attr('points', '' + toSpace(personB.photo.handR) + '');
         $('#pB_eye').attr('points', '' + toSpace(personB.photo.eye) + '');
-    }else {
+    } else {
         $('#pA_body').attr('points', '' + toSpace(personA.photo.body) + '');
         $('#pA_head').attr('points', '' + toSpace(personA.photo.head) + '');
         $('#pA_legL').attr('points', '' + toSpace(personA.photo.legL) + '');
@@ -837,46 +958,90 @@ function changePhoto(who) {
     }
 }
 
-function onOrOff(a) {
-    if ((13 - a[0] - a[1] - a[2] - a[3] - a[4]) <= 0) {
-        $('#set_SX_LL_A,#set_SX_MJ_A,#set_SX_ZL_A,#set_SX_TP_A,#set_SX_ZQ_A').next().addClass('bt_off');
+function onOrOff(a, who) {
+    let sum = 13 - a[0] - a[1] - a[2] - a[3] - a[4];
+    if (who) {
+        if (sum <= 0) {
+            $('#set_SX_LL_B,#set_SX_MJ_B,#set_SX_ZL_B,#set_SX_TP_B,#set_SX_ZQ_B').next().addClass('bt_off');
+        } else {
+            $('#set_SX_LL_B,#set_SX_MJ_B,#set_SX_ZL_B,#set_SX_TP_B,#set_SX_ZQ_B').next().removeClass('bt_off');
+        }
+        if (a[0] >= 5) {
+            $('#set_SX_LL_B').next().addClass('bt_off');
+        } else if (a[0] <= 0) {
+            $('#set_SX_LL_B').prev().addClass('bt_off');
+        } else {
+            $('#set_SX_LL_B').prev().removeClass('bt_off');
+        }
+        if (a[1] >= 5) {
+            $('#set_SX_MJ_B').next().addClass('bt_off');
+        } else if (a[1] <= 0) {
+            $('#set_SX_MJ_B').prev().addClass('bt_off');
+        } else {
+            $('#set_SX_MJ_B').prev().removeClass('bt_off');
+        }
+        if (a[2] >= 5) {
+            $('#set_SX_ZL_B').next().addClass('bt_off');
+        } else if (a[2] <= 0) {
+            $('#set_SX_ZL_B').prev().addClass('bt_off');
+        } else {
+            $('#set_SX_ZL_B').prev().removeClass('bt_off');
+        }
+        if (a[3] >= 5) {
+            $('#set_SX_TP_B').next().addClass('bt_off');
+        } else if (a[3] <= 0) {
+            $('#set_SX_TP_B').prev().addClass('bt_off');
+        } else {
+            $('#set_SX_TP_B').prev().removeClass('bt_off');
+        }
+        if (a[4] >= 3) {
+            $('#set_SX_ZQ_B').next().addClass('bt_off');
+        } else if (a[4] <= 0) {
+            $('#set_SX_ZQ_B').prev().addClass('bt_off');
+        } else {
+            $('#set_SX_ZQ_B').prev().removeClass('bt_off');
+        }
     } else {
-        $('#set_SX_LL_A,#set_SX_MJ_A,#set_SX_ZL_A,#set_SX_TP_A,#set_SX_ZQ_A').next().removeClass('bt_off');
-    }
-    if (a[0] >= 5) {
-        $('#set_SX_LL_A').next().addClass('bt_off');
-    } else if (a[0] <= 0) {
-        $('#set_SX_LL_A').prev().addClass('bt_off');
-    } else {
-        $('#set_SX_LL_A').prev().removeClass('bt_off');
-    }
-    if (a[1] >= 5) {
-        $('#set_SX_MJ_A').next().addClass('bt_off');
-    } else if (a[1] <= 0) {
-        $('#set_SX_MJ_A').prev().addClass('bt_off');
-    } else {
-        $('#set_SX_MJ_A').prev().removeClass('bt_off');
-    }
-    if (a[2] >= 5) {
-        $('#set_SX_ZL_A').next().addClass('bt_off');
-    } else if (a[2] <= 0) {
-        $('#set_SX_ZL_A').prev().addClass('bt_off');
-    } else {
-        $('#set_SX_ZL_A').prev().removeClass('bt_off');
-    }
-    if (a[3] >= 5) {
-        $('#set_SX_TP_A').next().addClass('bt_off');
-    } else if (a[3] <= 0) {
-        $('#set_SX_TP_A').prev().addClass('bt_off');
-    } else {
-        $('#set_SX_TP_A').prev().removeClass('bt_off');
-    }
-    if (a[4] >= 3) {
-        $('#set_SX_ZQ_A').next().addClass('bt_off');
-    } else if (a[4] <= 0) {
-        $('#set_SX_ZQ_A').prev().addClass('bt_off');
-    } else {
-        $('#set_SX_ZQ_A').prev().removeClass('bt_off');
+        if (sum <= 0) {
+            $('#set_SX_LL_A,#set_SX_MJ_A,#set_SX_ZL_A,#set_SX_TP_A,#set_SX_ZQ_A').next().addClass('bt_off');
+        } else {
+            $('#set_SX_LL_A,#set_SX_MJ_A,#set_SX_ZL_A,#set_SX_TP_A,#set_SX_ZQ_A').next().removeClass('bt_off');
+        }
+        if (a[0] >= 5) {
+            $('#set_SX_LL_A').next().addClass('bt_off');
+        } else if (a[0] <= 0) {
+            $('#set_SX_LL_A').prev().addClass('bt_off');
+        } else {
+            $('#set_SX_LL_A').prev().removeClass('bt_off');
+        }
+        if (a[1] >= 5) {
+            $('#set_SX_MJ_A').next().addClass('bt_off');
+        } else if (a[1] <= 0) {
+            $('#set_SX_MJ_A').prev().addClass('bt_off');
+        } else {
+            $('#set_SX_MJ_A').prev().removeClass('bt_off');
+        }
+        if (a[2] >= 5) {
+            $('#set_SX_ZL_A').next().addClass('bt_off');
+        } else if (a[2] <= 0) {
+            $('#set_SX_ZL_A').prev().addClass('bt_off');
+        } else {
+            $('#set_SX_ZL_A').prev().removeClass('bt_off');
+        }
+        if (a[3] >= 5) {
+            $('#set_SX_TP_A').next().addClass('bt_off');
+        } else if (a[3] <= 0) {
+            $('#set_SX_TP_A').prev().addClass('bt_off');
+        } else {
+            $('#set_SX_TP_A').prev().removeClass('bt_off');
+        }
+        if (a[4] >= 3) {
+            $('#set_SX_ZQ_A').next().addClass('bt_off');
+        } else if (a[4] <= 0) {
+            $('#set_SX_ZQ_A').prev().addClass('bt_off');
+        } else {
+            $('#set_SX_ZQ_A').prev().removeClass('bt_off');
+        }
     }
 }
 
@@ -1100,7 +1265,6 @@ function next_04_GoOn() {
     personB.init_photo();
     changePhoto(1);
 
-
     let html_P = $('.setBox_lM').html();
     let html_D = $('.setBox_lB').html();
     let sltL = $('.statusBoxL');
@@ -1163,5 +1327,11 @@ function next_04_GoOn() {
 }
 
 $(document).on('click', '.moSSBox', function () {
-
+    $('.moSSelect').removeClass('moSSelect');
+    $(this).addClass('moSSelect');
+    let mySchool = $(this).find('.moSLogo').attr('class').toString().substr(-2, 2);
+    tDataB = data_S['' + mySchool + ''];
+    $('#sSchoolB').text(tDataB.name);
+    $('#sLevelB').text(tDataB.level[0]);
+    setMyChat(changeSixDtoChart(tDataB.sixData, personB.sixData), data_S.sixDataSum, 'myLittleChartB', 0);
 });
