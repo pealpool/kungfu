@@ -1182,44 +1182,45 @@ function toSpace(a) {
 
 $(document).on('mouseenter', '.bodyDataList', function () {//绑定鼠标进入事件
     let e = $(this).find('span').eq(0).text();
+    let y = $(this).find('span').eq(1).attr('id').substring(4, 5) == 'B';
     switch (e) {
         case '头部':
-            if ($(this).find('span').eq(1).attr('id').substring(4, 5) == 'B') {
+            if (y) {
                 $('#pB_head').addClass('mySvgLight');
             } else {
                 $('#pA_head').addClass('mySvgLight');
             }
             break;
         case '躯干':
-            if ($(this).find('span').eq(1).attr('id').substring(4, 5) == 'B') {
+            if (y) {
                 $('#pB_body').addClass('mySvgLight');
             } else {
                 $('#pA_body').addClass('mySvgLight');
             }
             break;
         case '左手':
-            if ($(this).find('span').eq(1).attr('id').substring(4, 5) == 'B') {
+            if (y) {
                 $('#pB_handL').addClass('mySvgLight');
             } else {
                 $('#pA_handL').addClass('mySvgLight');
             }
             break;
         case '右手':
-            if ($(this).find('span').eq(1).attr('id').substring(4, 5) == 'B') {
+            if (y) {
                 $('#pB_handR').addClass('mySvgLight');
             } else {
                 $('#pA_handR').addClass('mySvgLight');
             }
             break;
         case '左脚':
-            if ($(this).find('span').eq(1).attr('id').substring(4, 5) == 'B') {
+            if (y) {
                 $('#pB_legL').addClass('mySvgLight');
             } else {
                 $('#pA_legL').addClass('mySvgLight');
             }
             break;
         case '右脚':
-            if ($(this).find('span').eq(1).attr('id').substring(4, 5) == 'B') {
+            if (y) {
                 $('#pB_legR').addClass('mySvgLight');
             } else {
                 $('#pA_legR').addClass('mySvgLight');
