@@ -1291,8 +1291,8 @@ function next_04_GoOn() {
         $('.bigBaseBox').switchClass('bigBaseBox', 'bigBaseBox_changeHeight', 200, 'easeInOutCubic');
         $('.leftLine').switchClass('leftLine', 'leftLine_changeHeight', 200, 'easeInOutCubic', function () {
             $('.leftLine_changeHeight').switchClass('leftLine_changeHeight', 'leftLine_changeWidth', 400, 'easeInOutCubic', function () {
-                $('.BaseBox').show('fade', 0, function () {
-                    $('.title').show('fade', 200, function () {
+                $('.BaseBox').show('fade', 1, function () {
+                    $('.title').show('fade', 1, function () {
                         $('.logoPosition06').show('blind', {direction: 'left'}, 200);
                         $('.bigBaseBox_changeHeight').hide('fade', 200, function () {
                             $('.BaseBox').removeClass('BaseBox_position');
@@ -1334,4 +1334,17 @@ $(document).on('click', '.moSSBox', function () {
     $('#sSchoolB').text(tDataB.name);
     $('#sLevelB').text(tDataB.level[0]);
     setMyChat(changeSixDtoChart(tDataB.sixData, personB.sixData), data_S.sixDataSum, 'myLittleChartB', 0);
+});
+
+$(document).on('click', '.moNext', function () {
+    $('.moDiv,.moNext,.moSetBigBox').hide('fade', 200,function () {
+        $('.fightSelectButtonBox').show(function () {
+            $('.fightTimeBigBox').show('slide', {direction: 'up'}, 200,function () {
+                $('#GiveIn').show('slide', {direction: 'left'}, 200);
+                $('.speedSetBox,.fightButtonBoxB').show('slide', {direction: 'right'}, 200,function () {
+                    $('.fightStart').show('drop', {direction: 'up'}, 200);
+                });
+            });
+        });
+    });
 });
