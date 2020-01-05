@@ -595,8 +595,6 @@ ul {
 .rightContent_Bottom {
   float: left;
   width: $showTab_width;
-  height: 399px;
-  //background: #d22921;
   margin-top: 15px;
 }
 
@@ -1504,6 +1502,10 @@ $contentBoxPadding: 10px;
 
 .contentTop,
 .contentMid {
+  position: relative;
+  z-index: 0;
+  left: 0;
+  top: 0;
   box-sizing: border-box;
   padding: 0 $contentBoxPadding;
   width: ($bigBaseBox-width  + 2px) - ($setBox_left_width * 2) - ($contentBoxMargin * 2);
@@ -1868,7 +1870,7 @@ $GiveInHeight: 24px;
 
 .speedSetText {
   position: relative;
-  z-index: 5;
+  z-index: 2;
   width: auto;
   height: $GiveInHeight - 4px;
   line-height: $GiveInHeight - 4px;
@@ -1890,7 +1892,7 @@ $GiveInHeight: 24px;
 
 .speedSetOn {
   position: relative;
-  z-index: 4;
+  z-index: 1;
   top: -20px;
   left: 0;
   background-color: #ffffff;
@@ -1910,10 +1912,43 @@ $GiveInHeight: 24px;
   font-size: 36px;
   font-weight: bold;
   width: 160px;
-  margin-left: 323px;
   cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  top: 100px;
+  left: 333px;
 
   &:hover {
     @include hoverBright(2);
   }
+}
+
+$kfSelectBoxHeight: 680px;
+.kfSelectBox {
+  position: absolute;
+  top: 0;
+  left: $contentBoxPadding;
+  z-index: 10;
+  background-color: $grayBox-color;
+  width: ($bigBaseBox-width  + 2px) - ($setBox_left_width * 2) - ($contentBoxMargin * 2) - ($contentBoxPadding * 2);
+  height: $kfSelectBoxHeight;
+  box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, .05);
+
+  div {
+    float: left;
+  }
+}
+
+$kfBoxLineSize: 7px;
+.kfBoxLine {
+  background-color: $tableTitle-color;
+  width: $kfBoxLineSize;
+  height: $kfSelectBoxHeight;
+}
+
+.kfBox {
+  width: ($bigBaseBox-width  + 2px) - ($setBox_left_width * 2) - ($contentBoxMargin * 2) - ($contentBoxPadding * 2) - ($kfBoxLineSize * 2);
+  height: $kfSelectBoxHeight;
+  box-sizing: border-box;
+  padding: 0 47px;
 }
