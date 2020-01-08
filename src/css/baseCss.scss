@@ -722,7 +722,7 @@ $schoolNameBox_height: 56px;
 }
 
 .showTabsSize {
-  height: 377px;
+  height: auto;
   padding: 5px 0 5px 5px !important;
 }
 
@@ -845,8 +845,7 @@ $table_ot_width: 28px;
   width: $table_ot_width;
 }
 
-.table_Name,
-.table_Name_D {
+.table_Name{
   width: $showTab_width - 10px - 13px - $table_NumberN_width * 11 - $table_ot_width * 2;
 }
 
@@ -918,8 +917,7 @@ $table_ot_width: 28px;
 
   }
 
-  .table_Name,
-  .table_Name_D {
+  .table_Name {
     width: $showTab_width - 10px - 13px - $table_NumberN_width * 11 - $table_ot_width * 2 - 1px;
   }
 }
@@ -933,7 +931,6 @@ $table_ot_width: 28px;
 $tableBox_Button_height: 56px;
 $tableBox_Button_width: 664px;
 .tableBox_Line {
-  float: left;
   width: $tableBox_Button_width;
   height: 1px;
   background-color: $tableTitle-color;
@@ -944,7 +941,6 @@ $tableBox_Button_width: 664px;
   height: $tableBox_Button_height;
   width: $tableBox_Button_width;
   background-color: $grayBox-color;
-  float: left;
 
   div {
     float: left;

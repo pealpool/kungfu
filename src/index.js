@@ -142,7 +142,7 @@ $(document).on('click', '.schoolBox', function () {
 function showTableContentBox_Def() {
     let myContent = '';
     for (let key in tDataA.zDef) {
-        myContent = '<div class="tableContent"><div class="table_Name_D">' + key +
+        myContent = '<div class="tableContent"><div class="table_Name">' + key +
             '</div><div class="table_Number_Db">' + toPercentAdd(tDataA.zDef[key].block) +
             '</div><div class="table_Tx_D">' + tDataA.zDef[key].TX_inf +
             '</div><div class="table_Lz_D">' + tDataA.zDef[key].LZ_inf +
@@ -154,7 +154,7 @@ function showTableContentBox_Def() {
 function showTableContentBox_Dod() {
     let myContent = '';
     for (let key in tDataA.zDod) {
-        myContent = '<div class="tableContent"><div class="table_Name_D">' + key +
+        myContent = '<div class="tableContent"><div class="table_Name">' + key +
             '</div><div class="table_Number_Db">' + toPercentAdd(tDataA.zDod[key].dod) +
             '</div><div class="table_Number_Ds">' + toZero(tDataA.zDod[key].const) +
             '</div><div class="table_Tx_S">' + tDataA.zDod[key].TX_inf +
@@ -167,7 +167,7 @@ function showTableContentBox_Dod() {
 function showTableContentBox_Pas() {
     let myContent = '';
     for (let key in tDataA.zPas) {
-        myContent = '<div class="tableContent"><div class="table_Name_D">' + key +
+        myContent = '<div class="tableContent"><div class="table_Name">' + key +
             '</div><div class="table_Tx_B">' + tDataA.zPas[key].TX_inf +
             '</div></div>';
         $('#showTabs_B').find('.tableContentBox_B').append(myContent);
