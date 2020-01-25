@@ -1948,3 +1948,35 @@ $kfBoxLineSize: 7px;
   box-sizing: border-box;
   padding: 0 47px;
 }
+
+$selectDotted_padding:5px;
+.selectDotted{
+  box-sizing: border-box;
+  width: $tableBox_Button_width;
+  border:1px dashed #ffffff;
+  margin-top: 10px;
+  padding: $selectDotted_padding;
+}
+
+.selectTableTile_A{
+  height: $table_NumberN_height + 2px;
+
+  >div{
+    color: #ffffff;
+    background-color: $tableTitle-color;
+    line-height: $table_NumberN_height + 2px;
+    text-align: center;
+    margin-left: 1px;
+  }
+}
+
+$table_attSubT_width:60px;
+.table_attSubT,
+.table_attNumY{
+  width: $table_attSubT_width;
+}
+
+.table_attCostT,
+.table_attFlawY{
+  width: $table_NumberN_width;
+}
