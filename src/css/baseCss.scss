@@ -14,6 +14,7 @@ $aTab-color: #A6A197;
 $tableTitle-color: #464951;
 $myWhite-color: #ffffff;
 $hp-blue-color: #9CA9C2;
+$light-color: #D5D5D5;
 
 $smallBaseBox-height: 640px; //登录框高度
 $smallBaseBox-width: 490px;
@@ -845,7 +846,7 @@ $table_ot_width: 28px;
   width: $table_ot_width;
 }
 
-.table_Name{
+.table_Name {
   width: $showTab_width - 10px - 13px - $table_NumberN_width * 11 - $table_ot_width * 2;
 }
 
@@ -1468,7 +1469,7 @@ $title_paddingRight: 30px;
   div {
     font-weight: bold;
     font-size: 22px;
-    color: #D5D5D5;
+    color: $light-color;
     background-color: $grayBox-color;
   }
 }
@@ -1618,7 +1619,7 @@ $contentTopHeight: 65px;
 }
 
 .ui-dialog-titlebar-close {
-  background: url("../images/Close.svg") no-repeat;
+  background: url("../images/Close_W.svg") no-repeat;
   background-size: 20px 20px;
   border: 0;
 
@@ -1949,34 +1950,120 @@ $kfBoxLineSize: 7px;
   padding: 0 47px;
 }
 
-$selectDotted_padding:5px;
-.selectDotted{
+$selectDotted_padding: 5px;
+.selectDotted {
   box-sizing: border-box;
   width: $tableBox_Button_width;
-  border:1px dashed #ffffff;
+  border: 1px dashed #ffffff;
   margin-top: 10px;
   padding: $selectDotted_padding;
 }
 
-.selectTableTile_A{
-  height: $table_NumberN_height + 2px;
+.selectTableTile_A {
 
-  >div{
+  > div {
     color: #ffffff;
     background-color: $tableTitle-color;
+    height: $table_NumberN_height + 2px;
     line-height: $table_NumberN_height + 2px;
     text-align: center;
-    margin-left: 1px;
+    margin-right: 1px;
   }
 }
 
-$table_attSubT_width:60px;
+
 .table_attSubT,
-.table_attNumY{
-  width: $table_attSubT_width;
+.table_attFlawY {
+  width: $table_NumberN_width + 9px;
 }
 
 .table_attCostT,
-.table_attFlawY{
+.table_attNumY {
   width: $table_NumberN_width;
+}
+
+$selectInDiv_width: 32px;
+.table_attFromT,
+.table_attToT {
+  box-sizing: border-box;
+  padding-left: 1px;
+
+  > div {
+    font-size: 12px;
+    width: $selectInDiv_width;
+    height: $table_NumberN_height - 4px;
+    line-height: $table_NumberN_height - 4px;
+    background-color: $light-color;
+    @include base-box($aTab-color);
+    margin-right: 1px;
+    margin-top: 1px;
+
+    &:hover {
+      @include hoverBright(0.8);
+    }
+  }
+}
+
+.table_attFromT {
+  width: ($selectInDiv_width + 3px) * 2 + 3px;
+}
+
+.table_attToT {
+  width: ($selectInDiv_width + 3px) * 6 + 3px;
+}
+
+.selectTC {
+  height: $table_NumberN_height + 2px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding-top: 1px;
+  padding-left: 1px;
+  margin-top: 1px;
+
+  > div {
+    float: left;
+    height: $table_NumberN_height;
+    line-height: $table_NumberN_height;
+    background-color: $grayBox-color;
+    margin-right: 1px;
+    text-align: center;
+  }
+
+  > .table_Name {
+    width: $showTab_width - 10px - 13px - $table_NumberN_width * 11 - $table_ot_width * 2 - 1px;
+  }
+}
+
+.tableSelect {
+  background-color: $tableTitle-color !important;
+  color: #ffffff;
+}
+$table_closeIco_Size: 16px;
+.table_ComboT {
+  background: none !important;
+  color: $tableTitle-color!important;
+  width: $tableBox_Button_width - $selectDotted_padding * 2 - ($table_NumberN_width + 9px)*2 - ($table_NumberN_width * 2) - (($selectInDiv_width + 3px) * 2 + 3px) - (($selectInDiv_width + 3px) * 6 + 3px) - ($showTab_width - 10px - 13px - $table_NumberN_width * 11 - $table_ot_width * 2 - 1px) - ($table_closeIco_Size + 4px) - 12px;
+}
+
+
+.table_closeT{
+  width: $table_closeIco_Size + 4px;
+}
+
+.table_closeIcoA,
+.table_closeIcoB{
+  height: $table_closeIco_Size;
+  width: $table_closeIco_Size;
+  margin-left: 2px;
+  margin-top: 4px;
+}
+
+.table_closeIcoA {
+  background: url("../images/Close_W.svg") no-repeat;
+  background-size: $table_closeIco_Size;
+}
+
+.table_closeIcoB {
+  background: url("../images/Close_B.svg") no-repeat;
+  background-size: $table_closeIco_Size;
 }
