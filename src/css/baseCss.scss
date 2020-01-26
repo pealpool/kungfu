@@ -27,7 +27,7 @@ $fileBoxSize: 122px;
 
 $showTab_width: 674px;
 $liFiBox_left_width: 33px;
-
+$table_closeIco_Size: 16px;
 $baseBoxLeft-width: 9px; //登录框左边黑线宽
 $myTransition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 
@@ -1960,6 +1960,7 @@ $selectDotted_padding: 5px;
 }
 
 .selectTableTile_A {
+  margin-bottom: 3px;
 
   > div {
     color: #ffffff;
@@ -1968,6 +1969,10 @@ $selectDotted_padding: 5px;
     line-height: $table_NumberN_height + 2px;
     text-align: center;
     margin-right: 1px;
+  }
+
+  .table_closeT{
+    width: $table_closeIco_Size + 4px + 1px !important;
   }
 }
 
@@ -1997,6 +2002,7 @@ $selectInDiv_width: 32px;
     @include base-box($aTab-color);
     margin-right: 1px;
     margin-top: 1px;
+    cursor: pointer;
 
     &:hover {
       @include hoverBright(0.8);
@@ -2038,11 +2044,10 @@ $selectInDiv_width: 32px;
   background-color: $tableTitle-color !important;
   color: #ffffff;
 }
-$table_closeIco_Size: 16px;
 .table_ComboT {
   background: none !important;
   color: $tableTitle-color!important;
-  width: $tableBox_Button_width - $selectDotted_padding * 2 - ($table_NumberN_width + 9px)*2 - ($table_NumberN_width * 2) - (($selectInDiv_width + 3px) * 2 + 3px) - (($selectInDiv_width + 3px) * 6 + 3px) - ($showTab_width - 10px - 13px - $table_NumberN_width * 11 - $table_ot_width * 2 - 1px) - ($table_closeIco_Size + 4px) - 12px;
+  width: $tableBox_Button_width - $selectDotted_padding * 2 - ($table_NumberN_width + 9px)*2 - ($table_NumberN_width * 2) - (($selectInDiv_width + 3px) * 2 + 3px) - (($selectInDiv_width + 3px) * 6 + 3px) - ($showTab_width - 10px - 13px - $table_NumberN_width * 11 - $table_ot_width * 2 - 1px) - ($table_closeIco_Size + 4px + 1px) - 12px;
 }
 
 
@@ -2056,14 +2061,53 @@ $table_closeIco_Size: 16px;
   width: $table_closeIco_Size;
   margin-left: 2px;
   margin-top: 4px;
+  cursor: pointer;
+
+  &:hover{
+    opacity: 0.8;
+  }
 }
 
 .table_closeIcoA {
   background: url("../images/Close_W.svg") no-repeat;
-  background-size: $table_closeIco_Size;
+  background-size: $table_closeIco_Size $table_closeIco_Size;
 }
 
 .table_closeIcoB {
   background: url("../images/Close_B.svg") no-repeat;
-  background-size: $table_closeIco_Size;
+  background-size: $table_closeIco_Size $table_closeIco_Size;
+}
+
+.table_Combo{
+  position: relative;
+}
+
+$table_Combo_T_s:21px;
+.table_Combo_T{
+  position: absolute;
+  top: 16px;
+  left: 8px;
+  width: $table_Combo_T_s;
+  height: $table_Combo_T_s;
+  background: url("../images/Link_L.svg") no-repeat;
+  background-size: $table_Combo_T_s $table_Combo_T_s;
+}
+
+.table_ComboLink_T,
+.table_ComboLink_L,
+.table_ComboLink_B{
+  position: absolute;
+  width: 18px;
+  height: 11px;
+  top:8px;
+}
+
+.table_ComboLink_T{
+  background: url("../images/LinkLine_T.gif") no-repeat;
+}
+.table_ComboLink_L{
+  background: url("../images/LinkLine_L.gif") no-repeat;
+}
+.table_ComboLink_B{
+  background: url("../images/LinkLine_B.gif") no-repeat;
 }
