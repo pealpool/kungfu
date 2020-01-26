@@ -594,7 +594,6 @@ ul {
 }
 
 .rightContent_Bottom {
-  float: left;
   width: $showTab_width;
   margin-top: 15px;
 }
@@ -1931,7 +1930,7 @@ $kfSelectBoxHeight: 680px;
   height: $kfSelectBoxHeight;
   box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, .05);
 
-  div {
+  > div {
     float: left;
   }
 }
@@ -1961,8 +1960,10 @@ $selectDotted_padding: 5px;
 
 .selectTableTile_A {
   margin-bottom: 3px;
+  height: $table_NumberN_height + 2px;
 
   > div {
+    float: left;
     color: #ffffff;
     background-color: $tableTitle-color;
     height: $table_NumberN_height + 2px;
@@ -1971,7 +1972,7 @@ $selectDotted_padding: 5px;
     margin-right: 1px;
   }
 
-  .table_closeT{
+  .table_closeT {
     width: $table_closeIco_Size + 4px + 1px !important;
   }
 }
@@ -1994,6 +1995,7 @@ $selectInDiv_width: 32px;
   padding-left: 1px;
 
   > div {
+    float: left;
     font-size: 12px;
     width: $selectInDiv_width;
     height: $table_NumberN_height - 4px;
@@ -2018,7 +2020,12 @@ $selectInDiv_width: 32px;
   width: ($selectInDiv_width + 3px) * 6 + 3px;
 }
 
+.selectTC_Box{
+  height: $table_NumberN_height + 3px;
+}
+
 .selectTC {
+  float: left;
   height: $table_NumberN_height + 2px;
   background-color: #ffffff;
   box-sizing: border-box;
@@ -2044,26 +2051,27 @@ $selectInDiv_width: 32px;
   background-color: $tableTitle-color !important;
   color: #ffffff;
 }
+
 .table_ComboT {
   background: none !important;
-  color: $tableTitle-color!important;
+  color: $tableTitle-color !important;
   width: $tableBox_Button_width - $selectDotted_padding * 2 - ($table_NumberN_width + 9px)*2 - ($table_NumberN_width * 2) - (($selectInDiv_width + 3px) * 2 + 3px) - (($selectInDiv_width + 3px) * 6 + 3px) - ($showTab_width - 10px - 13px - $table_NumberN_width * 11 - $table_ot_width * 2 - 1px) - ($table_closeIco_Size + 4px + 1px) - 12px;
 }
 
 
-.table_closeT{
+.table_closeT {
   width: $table_closeIco_Size + 4px;
 }
 
 .table_closeIcoA,
-.table_closeIcoB{
+.table_closeIcoB {
   height: $table_closeIco_Size;
   width: $table_closeIco_Size;
   margin-left: 2px;
   margin-top: 4px;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     opacity: 0.8;
   }
 }
@@ -2078,12 +2086,13 @@ $selectInDiv_width: 32px;
   background-size: $table_closeIco_Size $table_closeIco_Size;
 }
 
-.table_Combo{
+.table_Combo {
+  float: left;
   position: relative;
 }
 
-$table_Combo_T_s:21px;
-.table_Combo_T{
+$table_Combo_T_s: 21px;
+.table_Combo_T {
   position: absolute;
   top: 16px;
   left: 8px;
@@ -2095,19 +2104,62 @@ $table_Combo_T_s:21px;
 
 .table_ComboLink_T,
 .table_ComboLink_L,
-.table_ComboLink_B{
+.table_ComboLink_B {
   position: absolute;
   width: 18px;
   height: 11px;
-  top:8px;
+  top: 8px;
 }
 
-.table_ComboLink_T{
+.table_ComboLink_T {
   background: url("../images/LinkLine_T.gif") no-repeat;
 }
-.table_ComboLink_L{
+
+.table_ComboLink_L {
   background: url("../images/LinkLine_L.gif") no-repeat;
 }
-.table_ComboLink_B{
+
+.table_ComboLink_B {
   background: url("../images/LinkLine_B.gif") no-repeat;
+}
+
+.KfBox_bottom {
+  margin-top: 9px;
+  width: $showTab_width;
+}
+
+.sumBoxBig_zq,
+.sumBoxBig_flaw,
+.selectOver{
+  float: right;
+  margin-left: 40px;
+
+  div{
+    text-align: right;
+  }
+}
+
+.selectOver {
+  width: 106px;
+  height: 54px;
+  line-height: 54px;
+  background-color: $tableTitle-color;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover{
+    @include hoverBright(1.2);
+  }
+}
+
+.sumBox_flaw,
+.sumBox_zq{
+  font-weight: bold;
+  font-size: 20px;
+
+  >span{
+    font-size: 26px!important;
+  }
 }
