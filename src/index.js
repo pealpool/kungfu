@@ -447,7 +447,7 @@ function setMyChat(six = new Array(5), sixSum = new Array(5), getID, onOff) {
 }
 
 
-$("#showTabs").tabs();
+$('.showTabs').tabs();
 
 //todo hover
 $(document).on('mouseenter', '.tableContent', function () {
@@ -455,7 +455,7 @@ $(document).on('mouseenter', '.tableContent', function () {
     let zName = $(this).find('div').eq(0).text();
     switch ($('.ui-state-active').children('a').attr('href').toString().substr(-1, 1)) {
         case 'A':
-            $('#showTabs_A .tableBox_Button_Rt').text(zName);
+
             $('#showTabs_A .tableBox_Button_Rb').text('攻击招式');
             $('#showTabs_A .tableBox_Button_C').text(tDataA.zAtt['' + zName + ''].remark);
             break;

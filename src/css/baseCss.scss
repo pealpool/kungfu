@@ -51,8 +51,6 @@ $myTransition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 
 body {
   background-color: $backgroundBase-color;
-  //display: flex;
-  //justify-content: center;
   width: 100%;
   height: 100%;
   padding: 0;
@@ -67,6 +65,7 @@ ul {
   margin-block-end: 0;
   margin-block-start: 0;
 }
+
 
 .smallBaseBox {
   width: $smallBaseBox-width;
@@ -594,6 +593,7 @@ ul {
 }
 
 .rightContent_Bottom {
+  float: left;
   width: $showTab_width;
   margin-top: 15px;
 }
@@ -671,52 +671,53 @@ $schoolNameBox_height: 56px;
   padding: 10px 20px;
 }
 
-#showTabs {
+.showTabs {
   width: $showTab_width;
-  padding: 0;
+  padding: 0!important;
   background-color: $lightGray-color;
 
   ul {
-    height: 23px;
-    width: $showTab_width;
-    background-color: $grayBox-color;
-    padding: 0;
+    height: 23px!important;
+    width: $showTab_width!important;
+    background-color: $grayBox-color!important;
+    padding: 0!important;
 
     li {
-      height: 22px;
-      width: 38px;
+      height: 22px!important;
+      width: 38px!important;
       background-color: $aTab-color;
-      line-height: 23px;
-      text-align: center;
-      padding: 0;
+      line-height: 23px!important;
+      text-align: center!important;
+      padding: 0!important;
 
       &.ui-state-hover {
         @include hoverBright(1.2);
       }
 
       &.ui-state-active {
-        height: 22px;
-        width: 77px;
-        background-color: $lightGray-color;
+        height: 22px!important;
+        width: 77px!important;
+        background-color: $lightGray-color!important;
 
         &.ui-state-hover {
           @include hoverBright(1);
         }
 
         a {
-          cursor: default;
+          cursor: default!important;
         }
       }
     }
   }
 
   a {
-    color: #ffffff;
-    padding: 0;
-    width: 100%;
+    color: #ffffff!important;
+    padding: 0!important;
+    width: 100%!important;
+    outline:none!important;
 
     &:active {
-      color: #ffffff;
+      color: #ffffff!important;
     }
   }
 }
@@ -1953,6 +1954,7 @@ $selectDotted_padding: 5px;
 .selectDotted {
   box-sizing: border-box;
   width: $tableBox_Button_width;
+  height: 170px;
   border: 1px dashed #ffffff;
   margin-top: 10px;
   padding: $selectDotted_padding;
@@ -2022,6 +2024,10 @@ $selectInDiv_width: 32px;
 
 .selectTC_Box{
   height: $table_NumberN_height + 3px;
+
+  &:hover{
+    @include hoverBright(1.2);
+  }
 }
 
 .selectTC {
@@ -2100,6 +2106,7 @@ $table_Combo_T_s: 21px;
   height: $table_Combo_T_s;
   background: url("../images/Link_L.svg") no-repeat;
   background-size: $table_Combo_T_s $table_Combo_T_s;
+  cursor: pointer;
 }
 
 .table_ComboLink_T,
@@ -2124,6 +2131,7 @@ $table_Combo_T_s: 21px;
 }
 
 .KfBox_bottom {
+  float: left;
   margin-top: 9px;
   width: $showTab_width;
 }
