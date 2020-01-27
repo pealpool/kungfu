@@ -1338,14 +1338,84 @@ $(document).on('click', '.moSSBox', function () {
 });
 
 $(document).on('click', '.moNext', function () {
-    $('.moDiv,.moNext,.moSetBigBox').hide('fade', 200,function () {
+    $('.moDiv,.moNext,.moSetBigBox').hide('fade', 200, function () {
         $('.fightSelectButtonBox').show(function () {
-            $('.fightTimeBigBox').show('slide', {direction: 'up'}, 200,function () {
+            $('.fightTimeBigBox').show('slide', {direction: 'up'}, 200, function () {
                 $('#GiveIn').show('slide', {direction: 'left'}, 200);
-                $('.speedSetBox,.fightButtonBoxB').show('slide', {direction: 'right'}, 200,function () {
+                $('.speedSetBox,.fightButtonBoxB').show('slide', {direction: 'right'}, 200, function () {
                     $('.fightStart').show('drop', {direction: 'up'}, 200);
                 });
             });
         });
     });
+});
+
+$(document).on('click', '.table_attFromT >div', function () {
+    $(this).parent().find('.tableSelect').removeClass('tableSelect');
+    $(this).addClass('tableSelect');
+});
+
+$(document).on('click', '.table_attToT >div', function () {
+    $(this).parent().find('.tableSelect').removeClass('tableSelect');
+    $(this).addClass('tableSelect');
+});
+
+$(document).on('click', '.table_closeIcoA', function () {
+    $('.selectTableContent_A').html('');
+});
+
+$(document).on('click', '.table_closeIcoB', function () {
+    $(this).parent().parent().parent().remove();
+    $('.table_Combo_T').attr('class', 'table_Combo_F');
+    $('.table_Combo_F').prev().hide();
+    $('.table_Combo_F').show();
+    $('.table_Combo_F').last().hide();
+});
+
+$('.selectTableContent_A').sortable({
+    placeholder: "selectTC_Box",
+    cursor: "move",
+    revert: true,
+    containment: ".kfBox",
+    start: function () {
+        $('.table_Combo_T').attr('class', 'table_Combo_F');
+        $('.table_Combo_F').prev().hide();
+    },
+    update: function () {
+        $('.table_Combo_F').show();
+        $('.table_Combo_F').last().hide();
+    }
+}).disableSelection();
+
+
+$(document).on('click', '.table_Combo_T', function () {
+    if ($(this).parent().parent().prev().find('.table_Combo >div:nth-child(2)').attr('class') == 'table_Combo_T') {
+        $(this).prev().attr('class', 'table_ComboLink_B');
+    } else {
+        $(this).prev().hide();
+    }
+    let $next = $(this).parent().parent().next().find('.table_Combo >div:nth-child(2)');
+    if ($next.attr('class') == 'table_Combo_F' || $next.css('display') == 'none') {
+        $next.prev().hide();
+    } else {
+        $next.prev().attr('class', 'table_ComboLink_T');
+    }
+    $(this).attr('class', 'table_Combo_F');
+});
+
+$(document).on('click', '.table_Combo_F', function () {
+    if ($(this).parent().parent().prev().find('.table_Combo >div:nth-child(2)').attr('class') == 'table_Combo_T') {
+        $(this).prev().attr('class', 'table_ComboLink_L');
+    } else {
+        $(this).prev().show();
+        $(this).prev().attr('class', 'table_ComboLink_T');
+    }
+    let $next = $(this).parent().parent().next().find('.table_Combo >div:nth-child(2)');
+    if ($next.attr('class') == 'table_Combo_F' || $next.css('display') == 'none') {
+        $next.prev().show();
+        $next.prev().attr('class', 'table_ComboLink_B');
+    } else {
+        $next.prev().attr('class', 'table_ComboLink_L');
+    }
+    $(this).attr('class', 'table_Combo_T');
 });

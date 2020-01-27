@@ -2098,15 +2098,22 @@ $selectInDiv_width: 32px;
 }
 
 $table_Combo_T_s: 21px;
-.table_Combo_T {
+.table_Combo_T,
+.table_Combo_F{
   position: absolute;
   top: 16px;
   left: 8px;
   width: $table_Combo_T_s;
   height: $table_Combo_T_s;
+  cursor: pointer;
+}
+.table_Combo_T{
+  background: url("../images/Link_Y.svg") no-repeat;
+  background-size: $table_Combo_T_s $table_Combo_T_s;
+}
+.table_Combo_F{
   background: url("../images/Link_L.svg") no-repeat;
   background-size: $table_Combo_T_s $table_Combo_T_s;
-  cursor: pointer;
 }
 
 .table_ComboLink_T,
