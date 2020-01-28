@@ -2178,3 +2178,8 @@ $table_Combo_T_s: 21px;
     font-size: 26px!important;
   }
 }
+
+.table_Dod,
+.table_Block{
+  width: (($selectInDiv_width + 3px) * 2 + 3px + $table_NumberN_width + 9px) / 2;
+}

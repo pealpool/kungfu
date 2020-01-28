@@ -1361,15 +1361,16 @@ $(document).on('click', '.table_attToT >div', function () {
 });
 
 $(document).on('click', '.table_closeIcoA', function () {
-    $('.selectTableContent_A').html('');
+    $(this).parent().parent().parent().find('.selectTableContent_A').html('');
 });
 
 $(document).on('click', '.table_closeIcoB', function () {
+    let $selectTC_Box = $(this).parent().parent().parent().parent();
     $(this).parent().parent().parent().remove();
-    $('.table_Combo_T').attr('class', 'table_Combo_F');
-    $('.table_Combo_F').prev().hide();
-    $('.table_Combo_F').show();
-    $('.table_Combo_F').last().hide();
+    $selectTC_Box.find('.table_Combo_T').attr('class', 'table_Combo_F');
+    $selectTC_Box.find('.table_Combo_F').prev().hide();
+    $selectTC_Box.find('.table_Combo_F').show();
+    $selectTC_Box.find('.table_Combo_F').last().hide();
 });
 
 $('.selectTableContent_A').sortable({
@@ -1378,12 +1379,12 @@ $('.selectTableContent_A').sortable({
     revert: true,
     containment: ".kfBox",
     start: function () {
-        $('.table_Combo_T').attr('class', 'table_Combo_F');
-        $('.table_Combo_F').prev().hide();
+        $(this).find('.table_Combo_T').attr('class', 'table_Combo_F');
+        $(this).find('.table_Combo_F').prev().hide();
     },
     update: function () {
-        $('.table_Combo_F').show();
-        $('.table_Combo_F').last().hide();
+        $(this).find('.table_Combo_F').show();
+        $(this).find('.table_Combo_F').last().hide();
     }
 }).disableSelection();
 
