@@ -673,51 +673,51 @@ $schoolNameBox_height: 56px;
 
 .showTabs {
   width: $showTab_width;
-  padding: 0!important;
+  padding: 0 !important;
   background-color: $lightGray-color;
 
   ul {
-    height: 23px!important;
-    width: $showTab_width!important;
-    background-color: $grayBox-color!important;
-    padding: 0!important;
+    height: 23px !important;
+    width: $showTab_width !important;
+    background-color: $grayBox-color !important;
+    padding: 0 !important;
 
     li {
-      height: 22px!important;
-      width: 38px!important;
+      height: 22px !important;
+      width: 38px !important;
       background-color: $aTab-color;
-      line-height: 23px!important;
-      text-align: center!important;
-      padding: 0!important;
+      line-height: 23px !important;
+      text-align: center !important;
+      padding: 0 !important;
 
       &.ui-state-hover {
         @include hoverBright(1.2);
       }
 
       &.ui-state-active {
-        height: 22px!important;
-        width: 77px!important;
-        background-color: $lightGray-color!important;
+        height: 22px !important;
+        width: 77px !important;
+        background-color: $lightGray-color !important;
 
         &.ui-state-hover {
           @include hoverBright(1);
         }
 
         a {
-          cursor: default!important;
+          cursor: default !important;
         }
       }
     }
   }
 
   a {
-    color: #ffffff!important;
-    padding: 0!important;
-    width: 100%!important;
-    outline:none!important;
+    color: #ffffff !important;
+    padding: 0 !important;
+    width: 100% !important;
+    outline: none !important;
 
     &:active {
-      color: #ffffff!important;
+      color: #ffffff !important;
     }
   }
 }
@@ -1500,7 +1500,6 @@ $contentBoxPadding: 10px;
 .contentTop,
 .contentMid {
   position: relative;
-  z-index: 0;
   left: 0;
   top: 0;
   box-sizing: border-box;
@@ -1510,10 +1509,12 @@ $contentBoxPadding: 10px;
 
 $contentTopHeight: 65px;
 .contentTop {
+  z-index: 2;
   height: $contentTopHeight;
 }
 
 .contentMid {
+  z-index: 1;
   margin-top: -1px;
   min-height: 587px;
 }
@@ -1712,25 +1713,38 @@ $contentTopHeight: 65px;
 
 $electKfSize: 42px;
 .selectKf_A,
-.selectKf_B {
+.selectKf_B,
+.selectKf_A_Click,
+.selectKf_B_Click{
   width: $electKfSize;
-  height: $electKfSize;
   box-sizing: border-box;
   padding: 7px;
   line-height: 14px;
   margin-top: 10px;
   position: absolute;
   top: 0;
+  z-index: 3;
   @include darkButton;
 }
 
 .selectKf_A {
+  height: $electKfSize;
   left: 0;
 }
 
+.selectKf_A_Click,
+.selectKf_B_Click{
+  height: 734px;
+}
+
 .selectKf_B {
+  height: $electKfSize;
+}
+.selectKf_B,
+.selectKf_B_Click{
   right: 0;
 }
+
 
 .fightTimeSmallBox {
   width: ($bigBaseBox-width  + 2px) - ($setBox_left_width * 2) - ($contentBoxMargin * 2) - (($electKfSize + $contentBoxPadding * 2) * 2);
@@ -1929,7 +1943,8 @@ $kfSelectBoxHeight: 680px;
   background-color: $grayBox-color;
   width: ($bigBaseBox-width  + 2px) - ($setBox_left_width * 2) - ($contentBoxMargin * 2) - ($contentBoxPadding * 2);
   height: $kfSelectBoxHeight;
-  box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, .05);
+  box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, .15);
+  display: none;
 
   > div {
     float: left;
@@ -1951,10 +1966,11 @@ $kfBoxLineSize: 7px;
 }
 
 $selectDotted_padding: 5px;
+$selectDotted_h: 170px;
 .selectDotted {
   box-sizing: border-box;
   width: $tableBox_Button_width;
-  height: 170px;
+  height: $selectDotted_h;
   border: 1px dashed #ffffff;
   margin-top: 10px;
   padding: $selectDotted_padding;
@@ -2022,10 +2038,10 @@ $selectInDiv_width: 32px;
   width: ($selectInDiv_width + 3px) * 6 + 3px;
 }
 
-.selectTC_Box{
+.selectTC_Box {
   height: $table_NumberN_height + 3px;
 
-  &:hover{
+  &:hover {
     @include hoverBright(1.2);
   }
 }
@@ -2099,7 +2115,7 @@ $selectInDiv_width: 32px;
 
 $table_Combo_T_s: 21px;
 .table_Combo_T,
-.table_Combo_F{
+.table_Combo_F {
   position: absolute;
   top: 16px;
   left: 8px;
@@ -2107,11 +2123,13 @@ $table_Combo_T_s: 21px;
   height: $table_Combo_T_s;
   cursor: pointer;
 }
-.table_Combo_T{
+
+.table_Combo_T {
   background: url("../images/Link_Y.svg") no-repeat;
   background-size: $table_Combo_T_s $table_Combo_T_s;
 }
-.table_Combo_F{
+
+.table_Combo_F {
   background: url("../images/Link_L.svg") no-repeat;
   background-size: $table_Combo_T_s $table_Combo_T_s;
 }
@@ -2145,11 +2163,11 @@ $table_Combo_T_s: 21px;
 
 .sumBoxBig_zq,
 .sumBoxBig_flaw,
-.selectOver{
+.selectOver {
   float: right;
   margin-left: 40px;
 
-  div{
+  div {
     text-align: right;
   }
 }
@@ -2164,22 +2182,39 @@ $table_Combo_T_s: 21px;
   text-align: center;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     @include hoverBright(1.2);
   }
 }
 
 .sumBox_flaw,
-.sumBox_zq{
+.sumBox_zq {
   font-weight: bold;
   font-size: 20px;
 
-  >span{
-    font-size: 26px!important;
+  > span {
+    font-size: 26px !important;
   }
 }
 
 .table_Dod,
-.table_Block{
+.table_Block {
   width: (($selectInDiv_width + 3px) * 2 + 3px + $table_NumberN_width + 9px) / 2;
+}
+
+$selectBbox_w: 100px;
+$selectBbox_h: 30px;
+.selectBbox {
+  width: $selectBbox_w;
+  height: $selectBbox_h;
+  line-height: $selectBbox_h;
+  background-color: $grayBox-color;
+  text-align: center;
+  margin-left: (($tableBox_Button_width - $selectDotted_padding * 2) - $selectBbox_w) / 2;
+  margin-top: ($selectDotted_h - $selectBbox_h) / 2 - 5px;
+  cursor: pointer;
+
+  &:hover{
+    @include hoverBright(1.2);
+  }
 }

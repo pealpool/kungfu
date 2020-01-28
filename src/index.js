@@ -481,62 +481,65 @@ $(document).on('mouseleave', '.tableContent', function () {
 });
 
 $(document).on('click', '.tableT_Tx', function () {
-    $('.tableT_TBo').addClass('tableTitle-color');
-    $('.tableT_NumberT, .tableT_NumberB').hide('fade', 100, function () {
-        $('.tableT_TBo').switchClass('tableT_TBo', 'table_ot tableT_TB', 200, function () {
-            $('.tableT_NumberS').show();
+    let pa = $(this).parent().parent();
+    pa.find('.tableT_TBo').addClass('tableTitle-color');
+    pa.find('.tableT_NumberT, .tableT_NumberB').hide('fade', 100, function () {
+        pa.find('.tableT_TBo').switchClass('tableT_TBo', 'table_ot tableT_TB', 200, function () {
+            pa.find('.tableT_NumberS').show();
         });
-        $('.tableT_Lzo').html('<span>连<br/>招</span>').switchClass('tableT_Lzo', 'table_ot tableT_Lz', 200);
-        $('.tableT_Tx').switchClass('table_ot tableT_Tx', 'tableT_Txo', 200).html('命中后特效');
+        pa.find('.tableT_Lzo').html('<span>连<br/>招</span>').switchClass('tableT_Lzo', 'table_ot tableT_Lz', 200);
+        pa.find('.tableT_Tx').switchClass('table_ot tableT_Tx', 'tableT_Txo', 200).html('命中后特效');
     });
 
-    $('.table_TBo').addClass('grayBox-color');
-    $('.table_NumberN').hide('fade', 100);
-    $('.table_TBo').switchClass('table_TBo', 'table_ot table_TB', 200);
-    $('.table_Lzo').switchClass('table_Lzo', 'table_ot table_Lz', 200);
-    $('.content_Lz').hide();
-    $('.content_LzLine').show();
-    $('.table_Tx').switchClass('table_ot table_Tx', 'table_Txo', 201);
-    $('.content_TxSup').hide();
-    $('.content_Tx').show();
+    pa.find('.table_TBo').addClass('grayBox-color');
+    pa.find('.table_NumberN').hide('fade', 100);
+    pa.find('.table_TBo').switchClass('table_TBo', 'table_ot table_TB', 200);
+    pa.find('.table_Lzo').switchClass('table_Lzo', 'table_ot table_Lz', 200);
+    pa.find('.content_Lz').hide();
+    pa.find('.content_LzLine').show();
+    pa.find('.table_Tx').switchClass('table_ot table_Tx', 'table_Txo', 201);
+    pa.find('.content_TxSup').hide();
+    pa.find('.content_Tx').show();
 });
 $(document).on('click', '.tableT_Lz', function () {
-    $('.tableT_TBo').addClass('tableTitle-color');
-    $('.tableT_NumberT, .tableT_NumberB').hide('fade', 100, function () {
-        $('.tableT_TBo').switchClass('tableT_TBo', 'table_ot tableT_TB', 200, function () {
-            $('.tableT_NumberS').show();
+    let pa = $(this).parent().parent();
+    pa.find('.tableT_TBo').addClass('tableTitle-color');
+    pa.find('.tableT_NumberT, .tableT_NumberB').hide('fade', 100, function () {
+        pa.find('.tableT_TBo').switchClass('tableT_TBo', 'table_ot tableT_TB', 200, function () {
+            pa.find('.tableT_NumberS').show();
         });
-        $('.tableT_Txo').html('<span>特<br/>效</span>').switchClass('tableT_Txo', 'table_ot tableT_Tx', 200);
-        $('.tableT_Lz').html('连招').switchClass('table_ot tableT_Lz', 'tableT_Lzo', 200);
+        pa.find('.tableT_Txo').html('<span>特<br/>效</span>').switchClass('tableT_Txo', 'table_ot tableT_Tx', 200);
+        pa.find('.tableT_Lz').html('连招').switchClass('table_ot tableT_Lz', 'tableT_Lzo', 200);
     });
 
-    $('.table_TBo').addClass('grayBox-color');
-    $('.table_NumberN').hide('fade', 100);
-    $('.table_TBo').switchClass('table_TBo', 'table_ot table_TB', 200);
-    $('.table_Txo').switchClass('table_Txo', 'table_ot table_Tx', 200);
-    $('.content_Tx').hide();
-    $('.content_TxSup').show();
-    $('.table_Lz').switchClass('table_ot table_Lz', 'table_Lzo', 201);
-    $('.content_LzLine').hide();
-    $('.content_Lz').show();
+    pa.find('.table_TBo').addClass('grayBox-color');
+    pa.find('.table_NumberN').hide('fade', 100);
+    pa.find('.table_TBo').switchClass('table_TBo', 'table_ot table_TB', 200);
+    pa.find('.table_Txo').switchClass('table_Txo', 'table_ot table_Tx', 200);
+    pa.find('.content_Tx').hide();
+    pa.find('.content_TxSup').show();
+    pa.find('.table_Lz').switchClass('table_ot table_Lz', 'table_Lzo', 201);
+    pa.find('.content_LzLine').hide();
+    pa.find('.content_Lz').show();
 });
 $(document).on('click', '.tableT_TB', function () {
-    $('.tableT_NumberS').hide();
-    $('.tableT_Txo').html('<span>特<br/>效</span>').switchClass('tableT_Txo', 'table_ot tableT_Tx', 200);
-    $('.tableT_Lzo').html('<span>连<br/>招</span>').switchClass('tableT_Lzo', 'table_ot tableT_Lz', 200);
-    $('.tableT_TB').switchClass('table_ot tableT_TB', 'tableT_TBo', 200, function () {
-        $('.tableT_NumberT, .tableT_NumberB, .table_NumberN').show();
-        $('.tableT_TBo').removeClass('tableTitle-color');
+    let pa = $(this).parent().parent();
+    pa.find('.tableT_NumberS').hide();
+    pa.find('.tableT_Txo').html('<span>特<br/>效</span>').switchClass('tableT_Txo', 'table_ot tableT_Tx', 200);
+    pa.find('.tableT_Lzo').html('<span>连<br/>招</span>').switchClass('tableT_Lzo', 'table_ot tableT_Lz', 200);
+    pa.find('.tableT_TB').switchClass('table_ot tableT_TB', 'tableT_TBo', 200, function () {
+        pa.find('.tableT_NumberT, .tableT_NumberB, .table_NumberN').show();
+        pa.find('.tableT_TBo').removeClass('tableTitle-color');
     });
 
-    $('.table_Lzo').switchClass('table_Lzo', 'table_ot table_Lz', 200);
-    $('.content_Lz').hide();
-    $('.content_LzLine').show();
-    $('.table_Txo').switchClass('table_Txo', 'table_ot table_Tx', 200);
-    $('.content_Tx').hide();
-    $('.content_TxSup').show();
-    $('.table_TB').switchClass('table_ot table_TB', 'table_ot table_TBo', 201);
-    $('.table_TB').removeClass('grayBox-color');
+    pa.find('.table_Lzo').switchClass('table_Lzo', 'table_ot table_Lz', 200);
+    pa.find('.content_Lz').hide();
+    pa.find('.content_LzLine').show();
+    pa.find('.table_Txo').switchClass('table_Txo', 'table_ot table_Tx', 200);
+    pa.find('.content_Tx').hide();
+    pa.find('.content_TxSup').show();
+    pa.find('.table_TB').switchClass('table_ot table_TB', 'table_ot table_TBo', 201);
+    pa.find('.table_TB').removeClass('grayBox-color');
 });
 
 //---------------------------------------------------------------------------------
@@ -1419,4 +1422,36 @@ $(document).on('click', '.table_Combo_F', function () {
         $next.prev().attr('class', 'table_ComboLink_L');
     }
     $(this).attr('class', 'table_Combo_T');
+});
+
+$(document).on('click', '.selectBbox', function () {
+    $(this).hide();
+});
+
+$(document).on('click', '.selectKf_A', function () {
+    if($('.kfSelectBox').css('display')!='none'){
+        $('.selectKf_B_Click').trigger('click');
+    }
+    $(this).switchClass('selectKf_A', 'selectKf_A_Click', 100, 'easeInOutCubic',function () {
+        $('.kfSelectBox').show('blind', {direction: 'left'}, 200);
+    });
+});
+$(document).on('click', '.selectKf_A_Click', function () {
+    $('.kfSelectBox').hide('blind', {direction: 'left'}, 100,function () {
+        $('.selectKf_A_Click').switchClass('selectKf_A_Click', 'selectKf_A', 200, 'easeInOutCubic');
+    });
+});
+
+$(document).on('click', '.selectKf_B', function () {
+    if($('.kfSelectBox').css('display')!='none'){
+        $('.selectKf_A_Click').trigger('click');
+    }
+    $(this).switchClass('selectKf_B', 'selectKf_B_Click', 100, 'easeInOutCubic',function () {
+        $('.kfSelectBox').show('blind', {direction: 'right'}, 200);
+    });
+});
+$(document).on('click', '.selectKf_B_Click', function () {
+    $('.kfSelectBox').hide('blind', {direction: 'right'}, 100,function () {
+        $('.selectKf_B_Click').switchClass('selectKf_B_Click', 'selectKf_B', 200, 'easeInOutCubic');
+    });
 });
