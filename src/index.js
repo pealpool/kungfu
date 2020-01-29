@@ -1493,6 +1493,16 @@ $(document).on('click', '.selectKf_B_Click', function () {
     });
 });
 
-$(document).on('click', '.tableContent', function () {
+$(document).on('click', '#showTabs_sA .tableContent', function () {
+    if($('#showTabs_sA .selectTC_Box').length < 5){
+        if($('.selectKf_A_Click').length > 0){
 
+        }
+        let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">'+ $(this).find('.table_Name').text()+'</div><div class="table_attFromT">';
+        addHtml = addHtml + '<div class="tableSelect">左手</div><div>右手</div></div><div class="table_attSubT">-100%</div><div class="table_attToT"><div>头部</div><div class="tableSelect">躯干</div><div>左手</div><div>右手</div><div>左脚</div><div>右脚</div></div><div class="table_attCostT">-10</div><div class="table_attNumY">2</div><div class="table_attFlawY">+100%</div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_F" style="display: none"></div></div></div>';
+
+        $('#showTabs_sA .table_Combo_F').eq(-1).show();
+        $('#showTabs_sA .selectTableContent_A').append(addHtml);
+
+    }
 });
