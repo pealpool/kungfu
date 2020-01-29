@@ -123,170 +123,170 @@ $(document).on('click', '.schoolBox', function () {
 
     $('.tableContentBox_A').html('');
     if ($('#showTabs_A').find('.tableT_TBo').length > 0) {
-        showTableContentBox_Att_TBo();
+        showTableContentBox_Att_TBo($('#showTabs_A'),tDataA,personA);
     } else if ($('#showTabs_A').find('.tableT_Txo').length > 0) {
-        showTableContentBox_Att_Txo();
+        showTableContentBox_Att_Txo($('#showTabs_A'),tDataA,personA);
     } else if ($('#showTabs_A').find('.tableT_Lzo').length > 0) {
-        showTableContentBox_Att_Lzo();
+        showTableContentBox_Att_Lzo($('#showTabs_A'),tDataA,personA);
     }
 
     $('.tableContentBox_D1').html('');
     $('.tableContentBox_D2').html('');
-    showTableContentBox_Def();
-    showTableContentBox_Dod();
+    showTableContentBox_Def($('#showTabs_D'),tDataA);
+    showTableContentBox_Dod($('#showTabs_D'),tDataA);
     $('.tableContentBox_B').html('');
-    showTableContentBox_Pas();
+    showTableContentBox_Pas($('#showTabs_B'),tDataA);
 
 });
 
-function showTableContentBox_Def() {
+function showTableContentBox_Def($mySelectID,tData) {
     let myContent = '';
-    for (let key in tDataA.zDef) {
+    for (let key in tData.zDef) {
         myContent = '<div class="tableContent"><div class="table_Name">' + key +
-            '</div><div class="table_Number_Db">' + toPercentAdd(tDataA.zDef[key].block) +
-            '</div><div class="table_Tx_D">' + tDataA.zDef[key].TX_inf +
-            '</div><div class="table_Lz_D">' + tDataA.zDef[key].LZ_inf +
+            '</div><div class="table_Number_Db">' + toPercentAdd(tData.zDef[key].block) +
+            '</div><div class="table_Tx_D">' + tData.zDef[key].TX_inf +
+            '</div><div class="table_Lz_D">' + tData.zDef[key].LZ_inf +
             '</div></div>';
-        $('#showTabs_D').find('.tableContentBox_D1').append(myContent);
+        $mySelectID.find('.tableContentBox_D1').append(myContent);
     }
 }
 
-function showTableContentBox_Dod() {
+function showTableContentBox_Dod(mySelectID,tData) {
     let myContent = '';
-    for (let key in tDataA.zDod) {
+    for (let key in tData.zDod) {
         myContent = '<div class="tableContent"><div class="table_Name">' + key +
-            '</div><div class="table_Number_Db">' + toPercentAdd(tDataA.zDod[key].dod) +
-            '</div><div class="table_Number_Ds">' + toZero(tDataA.zDod[key].const) +
-            '</div><div class="table_Tx_S">' + tDataA.zDod[key].TX_inf +
-            '</div><div class="table_Lz_D">' + tDataA.zDod[key].LZ_inf +
+            '</div><div class="table_Number_Db">' + toPercentAdd(tData.zDod[key].dod) +
+            '</div><div class="table_Number_Ds">' + toZero(tData.zDod[key].const) +
+            '</div><div class="table_Tx_S">' + tData.zDod[key].TX_inf +
+            '</div><div class="table_Lz_D">' + tData.zDod[key].LZ_inf +
             '</div></div>';
-        $('#showTabs_D').find('.tableContentBox_D2').append(myContent);
+        mySelectID.find('.tableContentBox_D2').append(myContent);
     }
 }
 
-function showTableContentBox_Pas() {
+function showTableContentBox_Pas(mySelectID,tData) {
     let myContent = '';
-    for (let key in tDataA.zPas) {
+    for (let key in tData.zPas) {
         myContent = '<div class="tableContent"><div class="table_Name">' + key +
-            '</div><div class="table_Tx_B">' + tDataA.zPas[key].TX_inf +
+            '</div><div class="table_Tx_B">' + tData.zPas[key].TX_inf +
             '</div></div>';
-        $('#showTabs_B').find('.tableContentBox_B').append(myContent);
+        mySelectID.find('.tableContentBox_B').append(myContent);
     }
 }
 
 
-function showTableContentBox_Att_TBo() {
+function showTableContentBox_Att_TBo($mySelectID,tData,person) {
     let myContent = '';
-    for (let key in tDataA.zAtt) {
+    for (let key in tData.zAtt) {
         myContent = '<div class="tableContent"><div class="table_Name">' + key +
             '</div><div class="table_TBo"><div class="table_NumberN">' +
-            toZero(Math.round(tDataA.zAtt[key].hurt_o * (1 + personA.attAdd))) + '</div><div class="table_NumberN">' +
-            toZero(Math.round(tDataA.zAtt[key].hurt_i * (1 + personA.attAdd))) + '</div><div class="table_NumberN">' +
-            toPercentAdd(tDataA.zAtt[key].hit + personA.hitRateAdd) + '</div><div class="table_NumberN">' +
-            toPercentAdd(tDataA.zAtt[key].block) + '</div><div class="table_NumberN">' +
-            (tDataA.zAtt[key].time_q + personA.timeAdd_q).toFixed(1) + 's</div><div class="table_NumberN">' +
-            (tDataA.zAtt[key].time_z + personA.timeAdd_z).toFixed(1) + 's</div><div class="table_NumberN">' +
-            (tDataA.zAtt[key].time_h + personA.timeAdd_h).toFixed(1) + 's</div><div class="table_NumberN">' +
-            toZero(tDataA.zAtt[key].const) + '</div><div class="table_NumberN">' +
-            toZero(Math.round(tDataA.zAtt[key].hurt_q * (1 + personA.zqHurtAdd))) + '</div><div class="table_NumberN">' +
-            toPerS(Math.round(tDataA.zAtt[key].hurt_b * (1 + personA.bleedAdd))) + '</div><div class="table_NumberN">' +
-            toZero(Math.round(tDataA.zAtt[key].hurt_p * (1 + personA.poisonAdd))) + '</div></div><div class="table_ot table_Tx">';
-        if (tDataA.zAtt[key].TX_inf != '') {
+            toZero(Math.round(tData.zAtt[key].hurt_o * (1 + person.attAdd))) + '</div><div class="table_NumberN">' +
+            toZero(Math.round(tData.zAtt[key].hurt_i * (1 + person.attAdd))) + '</div><div class="table_NumberN">' +
+            toPercentAdd(tData.zAtt[key].hit + person.hitRateAdd) + '</div><div class="table_NumberN">' +
+            toPercentAdd(tData.zAtt[key].block) + '</div><div class="table_NumberN">' +
+            (tData.zAtt[key].time_q + person.timeAdd_q).toFixed(1) + 's</div><div class="table_NumberN">' +
+            (tData.zAtt[key].time_z + person.timeAdd_z).toFixed(1) + 's</div><div class="table_NumberN">' +
+            (tData.zAtt[key].time_h + person.timeAdd_h).toFixed(1) + 's</div><div class="table_NumberN">' +
+            toZero(tData.zAtt[key].const) + '</div><div class="table_NumberN">' +
+            toZero(Math.round(tData.zAtt[key].hurt_q * (1 + person.zqHurtAdd))) + '</div><div class="table_NumberN">' +
+            toPerS(Math.round(tData.zAtt[key].hurt_b * (1 + person.bleedAdd))) + '</div><div class="table_NumberN">' +
+            toZero(Math.round(tData.zAtt[key].hurt_p * (1 + person.poisonAdd))) + '</div></div><div class="table_ot table_Tx">';
+        if (tData.zAtt[key].TX_inf != '') {
             myContent = myContent +
                 '<div class="content_TxSup">特</div><div class="content_Tx">' +
-                tDataA.zAtt[key].TX_inf + '</div>';
+                tData.zAtt[key].TX_inf + '</div>';
         }
         myContent = myContent + '</div>';
 
         myContent = myContent + '<div class="table_ot table_Lz"><div class="content_LzLine">-</div><div class="content_Lz">' +
-            tDataA.zAtt[key].LZ_inf + '</div></div>';
+            tData.zAtt[key].LZ_inf + '</div></div>';
 
         myContent = myContent + '</div></div>';
-        $('#showTabs_A').find('.tableContentBox_A').append(myContent);
+        $mySelectID.find('.tableContentBox_A').append(myContent);
     }
 }
 
-function showTableContentBox_Att_Txo() {
+function showTableContentBox_Att_Txo($mySelectID,tData,person) {
     let myContent = '';
-    for (let key in tDataA.zAtt) {
+    for (let key in tData.zAtt) {
         myContent = '<div class="tableContent"><div class="table_Name">' + key +
             '</div><div class="grayBox-color table_ot table_TB" style=""><div class="table_NumberN" style="display: none;">' +
-            toZero(Math.round(tDataA.zAtt[key].hurt_o * (1 + personA.attAdd))) +
+            toZero(Math.round(tData.zAtt[key].hurt_o * (1 + person.attAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(Math.round(tDataA.zAtt[key].hurt_i * (1 + personA.attAdd))) +
+            toZero(Math.round(tData.zAtt[key].hurt_i * (1 + person.attAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toPercentAdd(tDataA.zAtt[key].hit + personA.hitRateAdd) +
+            toPercentAdd(tData.zAtt[key].hit + person.hitRateAdd) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toPercentAdd(tDataA.zAtt[key].block) +
+            toPercentAdd(tData.zAtt[key].block) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            (tDataA.zAtt[key].time_q + personA.timeAdd_q).toFixed(1) +
+            (tData.zAtt[key].time_q + person.timeAdd_q).toFixed(1) +
             's</div><div class="table_NumberN" style="display: none;">' +
-            (tDataA.zAtt[key].time_z + personA.timeAdd_z).toFixed(1) +
+            (tData.zAtt[key].time_z + person.timeAdd_z).toFixed(1) +
             's</div><div class="table_NumberN" style="display: none;">' +
-            (tDataA.zAtt[key].time_h + personA.timeAdd_h).toFixed(1) +
+            (tData.zAtt[key].time_h + person.timeAdd_h).toFixed(1) +
             's</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tDataA.zAtt[key].const) +
+            toZero(tData.zAtt[key].const) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(Math.round(tDataA.zAtt[key].hurt_q * (1 + personA.zqHurtAdd))) +
+            toZero(Math.round(tData.zAtt[key].hurt_q * (1 + person.zqHurtAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toPerS(Math.round(tDataA.zAtt[key].hurt_b * (1 + personA.bleedAdd))) +
+            toPerS(Math.round(tData.zAtt[key].hurt_b * (1 + person.bleedAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(Math.round(tDataA.zAtt[key].hurt_p * (1 + personA.poisonAdd))) +
+            toZero(Math.round(tData.zAtt[key].hurt_p * (1 + person.poisonAdd))) +
             '</div></div><div class="table_Txo">';
-        if (tDataA.zAtt[key].TX_inf != '') {
+        if (tData.zAtt[key].TX_inf != '') {
             myContent = myContent +
                 '<div class="content_TxSup" style="display: none;">特</div><div class="content_Tx" style="display: inline;">' +
-                tDataA.zAtt[key].TX_inf + '</div>';
+                tData.zAtt[key].TX_inf + '</div>';
         }
         myContent = myContent + '</div>';
 
         myContent = myContent + '<div class="table_ot table_Lz"><div class="content_LzLine">-</div><div class="content_Lz">' +
-            tDataA.zAtt[key].LZ_inf + '</div></div>';
+            tData.zAtt[key].LZ_inf + '</div></div>';
 
         myContent = myContent + '</div></div>';
-        $('#showTabs_A').find('.tableContentBox_A').append(myContent);
+        $mySelectID.find('.tableContentBox_A').append(myContent);
     }
 }
 
-function showTableContentBox_Att_Lzo() {
+function showTableContentBox_Att_Lzo($mySelectID,tData,person) {
     let myContent = '';
-    for (let key in tDataA.zAtt) {
+    for (let key in tData.zAtt) {
         myContent = '<div class="tableContent"><div class="table_Name">' + key +
             '</div><div class="grayBox-color table_ot table_TB" style=""><div class="table_NumberN" style="display: none;">' +
-            toZero(Math.round(tDataA.zAtt[key].hurt_o * (1 + personA.attAdd))) +
+            toZero(Math.round(tData.zAtt[key].hurt_o * (1 + person.attAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(Math.round(tDataA.zAtt[key].hurt_i * (1 + personA.attAdd))) +
+            toZero(Math.round(tData.zAtt[key].hurt_i * (1 + person.attAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toPercentAdd(tDataA.zAtt[key].hit + personA.hitRateAdd) +
+            toPercentAdd(tData.zAtt[key].hit + person.hitRateAdd) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toPercentAdd(tDataA.zAtt[key].block) +
+            toPercentAdd(tData.zAtt[key].block) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            (tDataA.zAtt[key].time_q + personA.timeAdd_q).toFixed(1) +
+            (tData.zAtt[key].time_q + person.timeAdd_q).toFixed(1) +
             's</div><div class="table_NumberN" style="display: none;">' +
-            (tDataA.zAtt[key].time_z + personA.timeAdd_z).toFixed(1) +
+            (tData.zAtt[key].time_z + person.timeAdd_z).toFixed(1) +
             's</div><div class="table_NumberN" style="display: none;">' +
-            (tDataA.zAtt[key].time_h + personA.timeAdd_h).toFixed(1) +
+            (tData.zAtt[key].time_h + person.timeAdd_h).toFixed(1) +
             's</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tDataA.zAtt[key].const) +
+            toZero(tData.zAtt[key].const) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(Math.round(tDataA.zAtt[key].hurt_q * (1 + personA.zqHurtAdd))) +
+            toZero(Math.round(tData.zAtt[key].hurt_q * (1 + person.zqHurtAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toPerS(Math.round(tDataA.zAtt[key].hurt_b * (1 + personA.bleedAdd))) +
+            toPerS(Math.round(tData.zAtt[key].hurt_b * (1 + person.bleedAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
-            toZero(Math.round(tDataA.zAtt[key].hurt_p * (1 + personA.poisonAdd))) +
+            toZero(Math.round(tData.zAtt[key].hurt_p * (1 + person.poisonAdd))) +
             '</div></div><div class="table_ot table_Tx">';
-        if (tDataA.zAtt[key].TX_inf != '') {
+        if (tData.zAtt[key].TX_inf != '') {
             myContent = myContent +
                 '<div class="content_TxSup">特</div><div class="content_Tx">' +
-                tDataA.zAtt[key].TX_inf + '</div>';
+                tData.zAtt[key].TX_inf + '</div>';
         }
         myContent = myContent + '</div>';
 
         myContent = myContent + '<div class="table_Lzo" style=""><div class="content_LzLine" style="display: none;">-</div><div class="content_Lz" style="display: inline;">' +
-            tDataA.zAtt[key].LZ_inf + '</div></div>';
+            tData.zAtt[key].LZ_inf + '</div></div>';
 
         myContent = myContent + '</div></div>';
-        $('#showTabs_A').find('.tableContentBox_A').append(myContent);
+        $mySelectID.find('.tableContentBox_A').append(myContent);
     }
 }
 
@@ -359,6 +359,7 @@ $(".schoolBox").hover(function () {
 
 
 $(document).on('click', '.next_03', function () {
+    $('#giveName').text(personA.myName);
     if (!$(this).hasClass('next_off')) {
         $(this).addClass('next_04').removeClass('next_03');
         $('.loFiGd_B,.loFiGd_C').hide('fade', 200, function () {
@@ -665,6 +666,8 @@ function loadGameFile(a) {
     $('#set_SX_TP_A').text(a[3]);
     $('#set_SX_ZQ_A').text(a[4]);
     onOrOff(a, 0);
+    personA.myName = '段誉';
+    personB.myName = '晓月';
     personA.sixData[0] = a[0];
     personA.sixData[1] = a[1];
     personA.sixData[2] = a[2];
@@ -1258,6 +1261,8 @@ $(document).on('click', '.next_04', function () {
     }
 });
 
+
+//todo next_04
 function next_04_GoOn() {
     personB.sixData[0] = 2;
     personB.sixData[1] = 2;
@@ -1276,6 +1281,10 @@ function next_04_GoOn() {
     sltL.find('.statusBox_1').append(html_P);
     sltL.find('.statusBox_2').html(html_D);
     sltL = sltL.find('.sixDataFont').eq(0);
+    $('#sNameA').text(personA.myName);
+    $('#sNameB').text(personB.myName);
+    $('#sSchoolA').text(tDataA.name);
+    $('#sLevelA').text(tDataA.level[0]);
 
     let ij = 0;
     sltL.find('.sdsBox').each(function () {
@@ -1432,6 +1441,20 @@ $(document).on('click', '.selectKf_A', function () {
     if($('.kfSelectBox').css('display')!='none'){
         $('.selectKf_B_Click').trigger('click');
     }
+    $('.tableContentBox_A').html('');
+    if ($('#showTabs_sA').find('.tableT_TBo').length > 0) {
+        showTableContentBox_Att_TBo($('#showTabs_sA'),tDataA,personA);
+    } else if ($('#showTabs_sA').find('.tableT_Txo').length > 0) {
+        showTableContentBox_Att_Txo($('#showTabs_sA'),tDataA,personA);
+    } else if ($('#showTabs_sA').find('.tableT_Lzo').length > 0) {
+        showTableContentBox_Att_Lzo($('#showTabs_sA'),tDataA,personA);
+    }
+    $('.tableContentBox_D1').html('');
+    $('.tableContentBox_D2').html('');
+    $('.tableContentBox_B').html('');
+    showTableContentBox_Def($('#showTabs_sD'),tDataA);
+    showTableContentBox_Dod($('#showTabs_sD'),tDataA);
+    showTableContentBox_Pas($('#showTabs_sB'),tDataA);
     $(this).switchClass('selectKf_A', 'selectKf_A_Click', 100, 'easeInOutCubic',function () {
         $('.kfSelectBox').show('blind', {direction: 'left'}, 200);
     });
@@ -1446,6 +1469,20 @@ $(document).on('click', '.selectKf_B', function () {
     if($('.kfSelectBox').css('display')!='none'){
         $('.selectKf_A_Click').trigger('click');
     }
+    $('.tableContentBox_A').html('');
+    if ($('#showTabs_sA').find('.tableT_TBo').length > 0) {
+        showTableContentBox_Att_TBo($('#showTabs_sA'),tDataB,personB);
+    } else if ($('#showTabs_sA').find('.tableT_Txo').length > 0) {
+        showTableContentBox_Att_Txo($('#showTabs_sA'),tDataB,personB);
+    } else if ($('#showTabs_sA').find('.tableT_Lzo').length > 0) {
+        showTableContentBox_Att_Lzo($('#showTabs_sA'),tDataB,personB);
+    }
+    $('.tableContentBox_D1').html('');
+    $('.tableContentBox_D2').html('');
+    $('.tableContentBox_B').html('');
+    showTableContentBox_Def($('#showTabs_sD'),tDataB);
+    showTableContentBox_Dod($('#showTabs_sD'),tDataB);
+    showTableContentBox_Pas($('#showTabs_sB'),tDataB);
     $(this).switchClass('selectKf_B', 'selectKf_B_Click', 100, 'easeInOutCubic',function () {
         $('.kfSelectBox').show('blind', {direction: 'right'}, 200);
     });
@@ -1454,4 +1491,8 @@ $(document).on('click', '.selectKf_B_Click', function () {
     $('.kfSelectBox').hide('blind', {direction: 'right'}, 100,function () {
         $('.selectKf_B_Click').switchClass('selectKf_B_Click', 'selectKf_B', 200, 'easeInOutCubic');
     });
+});
+
+$(document).on('click', '.tableContent', function () {
+
 });
