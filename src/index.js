@@ -123,23 +123,23 @@ $(document).on('click', '.schoolBox', function () {
 
     $('.tableContentBox_A').html('');
     if ($('#showTabs_A').find('.tableT_TBo').length > 0) {
-        showTableContentBox_Att_TBo($('#showTabs_A'),tDataA,personA);
+        showTableContentBox_Att_TBo($('#showTabs_A'), tDataA, personA);
     } else if ($('#showTabs_A').find('.tableT_Txo').length > 0) {
-        showTableContentBox_Att_Txo($('#showTabs_A'),tDataA,personA);
+        showTableContentBox_Att_Txo($('#showTabs_A'), tDataA, personA);
     } else if ($('#showTabs_A').find('.tableT_Lzo').length > 0) {
-        showTableContentBox_Att_Lzo($('#showTabs_A'),tDataA,personA);
+        showTableContentBox_Att_Lzo($('#showTabs_A'), tDataA, personA);
     }
 
     $('.tableContentBox_D1').html('');
     $('.tableContentBox_D2').html('');
-    showTableContentBox_Def($('#showTabs_D'),tDataA);
-    showTableContentBox_Dod($('#showTabs_D'),tDataA);
+    showTableContentBox_Def($('#showTabs_D'), tDataA);
+    showTableContentBox_Dod($('#showTabs_D'), tDataA);
     $('.tableContentBox_B').html('');
-    showTableContentBox_Pas($('#showTabs_B'),tDataA);
+    showTableContentBox_Pas($('#showTabs_B'), tDataA);
 
 });
 
-function showTableContentBox_Def($mySelectID,tData) {
+function showTableContentBox_Def($mySelectID, tData) {
     let myContent = '';
     for (let key in tData.zDef) {
         myContent = '<div class="tableContent"><div class="table_Name">' + key +
@@ -151,7 +151,7 @@ function showTableContentBox_Def($mySelectID,tData) {
     }
 }
 
-function showTableContentBox_Dod(mySelectID,tData) {
+function showTableContentBox_Dod(mySelectID, tData) {
     let myContent = '';
     for (let key in tData.zDod) {
         myContent = '<div class="tableContent"><div class="table_Name">' + key +
@@ -164,7 +164,7 @@ function showTableContentBox_Dod(mySelectID,tData) {
     }
 }
 
-function showTableContentBox_Pas(mySelectID,tData) {
+function showTableContentBox_Pas(mySelectID, tData) {
     let myContent = '';
     for (let key in tData.zPas) {
         myContent = '<div class="tableContent"><div class="table_Name">' + key +
@@ -175,7 +175,7 @@ function showTableContentBox_Pas(mySelectID,tData) {
 }
 
 
-function showTableContentBox_Att_TBo($mySelectID,tData,person) {
+function showTableContentBox_Att_TBo($mySelectID, tData, person) {
     let myContent = '';
     for (let key in tData.zAtt) {
         myContent = '<div class="tableContent"><div class="table_Name">' + key +
@@ -206,7 +206,7 @@ function showTableContentBox_Att_TBo($mySelectID,tData,person) {
     }
 }
 
-function showTableContentBox_Att_Txo($mySelectID,tData,person) {
+function showTableContentBox_Att_Txo($mySelectID, tData, person) {
     let myContent = '';
     for (let key in tData.zAtt) {
         myContent = '<div class="tableContent"><div class="table_Name">' + key +
@@ -248,7 +248,7 @@ function showTableContentBox_Att_Txo($mySelectID,tData,person) {
     }
 }
 
-function showTableContentBox_Att_Lzo($mySelectID,tData,person) {
+function showTableContentBox_Att_Lzo($mySelectID, tData, person) {
     let myContent = '';
     for (let key in tData.zAtt) {
         myContent = '<div class="tableContent"><div class="table_Name">' + key +
@@ -1438,68 +1438,83 @@ $(document).on('click', '.selectBbox', function () {
 });
 
 $(document).on('click', '.selectKf_A', function () {
-    if($('.kfSelectBox').css('display')!='none'){
+    if ($('.kfSelectBox').css('display') != 'none') {
         $('.selectKf_B_Click').trigger('click');
     }
     $('.tableContentBox_A').html('');
     if ($('#showTabs_sA').find('.tableT_TBo').length > 0) {
-        showTableContentBox_Att_TBo($('#showTabs_sA'),tDataA,personA);
+        showTableContentBox_Att_TBo($('#showTabs_sA'), tDataA, personA);
     } else if ($('#showTabs_sA').find('.tableT_Txo').length > 0) {
-        showTableContentBox_Att_Txo($('#showTabs_sA'),tDataA,personA);
+        showTableContentBox_Att_Txo($('#showTabs_sA'), tDataA, personA);
     } else if ($('#showTabs_sA').find('.tableT_Lzo').length > 0) {
-        showTableContentBox_Att_Lzo($('#showTabs_sA'),tDataA,personA);
+        showTableContentBox_Att_Lzo($('#showTabs_sA'), tDataA, personA);
     }
     $('.tableContentBox_D1').html('');
     $('.tableContentBox_D2').html('');
     $('.tableContentBox_B').html('');
-    showTableContentBox_Def($('#showTabs_sD'),tDataA);
-    showTableContentBox_Dod($('#showTabs_sD'),tDataA);
-    showTableContentBox_Pas($('#showTabs_sB'),tDataA);
-    $(this).switchClass('selectKf_A', 'selectKf_A_Click', 100, 'easeInOutCubic',function () {
+    showTableContentBox_Def($('#showTabs_sD'), tDataA);
+    showTableContentBox_Dod($('#showTabs_sD'), tDataA);
+    showTableContentBox_Pas($('#showTabs_sB'), tDataA);
+    $(this).switchClass('selectKf_A', 'selectKf_A_Click', 100, 'easeInOutCubic', function () {
         $('.kfSelectBox').show('blind', {direction: 'left'}, 200);
     });
 });
 $(document).on('click', '.selectKf_A_Click', function () {
-    $('.kfSelectBox').hide('blind', {direction: 'left'}, 100,function () {
+    $('.kfSelectBox').hide('blind', {direction: 'left'}, 100, function () {
         $('.selectKf_A_Click').switchClass('selectKf_A_Click', 'selectKf_A', 200, 'easeInOutCubic');
     });
 });
 
 $(document).on('click', '.selectKf_B', function () {
-    if($('.kfSelectBox').css('display')!='none'){
+    if ($('.kfSelectBox').css('display') != 'none') {
         $('.selectKf_A_Click').trigger('click');
     }
     $('.tableContentBox_A').html('');
     if ($('#showTabs_sA').find('.tableT_TBo').length > 0) {
-        showTableContentBox_Att_TBo($('#showTabs_sA'),tDataB,personB);
+        showTableContentBox_Att_TBo($('#showTabs_sA'), tDataB, personB);
     } else if ($('#showTabs_sA').find('.tableT_Txo').length > 0) {
-        showTableContentBox_Att_Txo($('#showTabs_sA'),tDataB,personB);
+        showTableContentBox_Att_Txo($('#showTabs_sA'), tDataB, personB);
     } else if ($('#showTabs_sA').find('.tableT_Lzo').length > 0) {
-        showTableContentBox_Att_Lzo($('#showTabs_sA'),tDataB,personB);
+        showTableContentBox_Att_Lzo($('#showTabs_sA'), tDataB, personB);
     }
     $('.tableContentBox_D1').html('');
     $('.tableContentBox_D2').html('');
     $('.tableContentBox_B').html('');
-    showTableContentBox_Def($('#showTabs_sD'),tDataB);
-    showTableContentBox_Dod($('#showTabs_sD'),tDataB);
-    showTableContentBox_Pas($('#showTabs_sB'),tDataB);
-    $(this).switchClass('selectKf_B', 'selectKf_B_Click', 100, 'easeInOutCubic',function () {
+    showTableContentBox_Def($('#showTabs_sD'), tDataB);
+    showTableContentBox_Dod($('#showTabs_sD'), tDataB);
+    showTableContentBox_Pas($('#showTabs_sB'), tDataB);
+    $(this).switchClass('selectKf_B', 'selectKf_B_Click', 100, 'easeInOutCubic', function () {
         $('.kfSelectBox').show('blind', {direction: 'right'}, 200);
     });
 });
 $(document).on('click', '.selectKf_B_Click', function () {
-    $('.kfSelectBox').hide('blind', {direction: 'right'}, 100,function () {
+    $('.kfSelectBox').hide('blind', {direction: 'right'}, 100, function () {
         $('.selectKf_B_Click').switchClass('selectKf_B_Click', 'selectKf_B', 200, 'easeInOutCubic');
     });
 });
 
 $(document).on('click', '#showTabs_sA .tableContent', function () {
-    if($('#showTabs_sA .selectTC_Box').length < 5){
-        if($('.selectKf_A_Click').length > 0){
-
+    if ($('#showTabs_sA .selectTC_Box').length < 5) {
+        let zName, attFr, attTo, attSub, attCost, attNum, attFlaw;
+        zName = $(this).find('.table_Name').text();
+        if ($('.selectKf_A_Click').length > 0) {
+            let atF = tDataA.zAtt[''+zName+''].attFr_body;
+            switch (atF) {
+                case 'head':
+                    attFr = '<div class="tableSelect">头部</div>';
+                    break;
+                case 'hand':
+                    attFr = '<div class="tableSelect">左手</div><div>右手</div>';
+                    break;
+                case 'leg':
+                    attFr = '<div class="tableSelect">左脚</div><div>右脚</div>';
+                    break;
+                case 'all':
+                    attFr = '跟随对方';
+                    break;
+            }
         }
-        let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">'+ $(this).find('.table_Name').text()+'</div><div class="table_attFromT">';
-        addHtml = addHtml + '<div class="tableSelect">左手</div><div>右手</div></div><div class="table_attSubT">-100%</div><div class="table_attToT"><div>头部</div><div class="tableSelect">躯干</div><div>左手</div><div>右手</div><div>左脚</div><div>右脚</div></div><div class="table_attCostT">-10</div><div class="table_attNumY">2</div><div class="table_attFlawY">+100%</div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_F" style="display: none"></div></div></div>';
+        let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">' + zName + '</div><div class="table_attFromT">'+ attFr +'</div><div class="table_attSubT">-100%</div><div class="table_attToT"><div>头部</div><div class="tableSelect">躯干</div><div>左手</div><div>右手</div><div>左脚</div><div>右脚</div></div><div class="table_attCostT">-10</div><div class="table_attNumY">2</div><div class="table_attFlawY">+100%</div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_F" style="display: none"></div></div></div>';
 
         $('#showTabs_sA .table_Combo_F').eq(-1).show();
         $('#showTabs_sA .selectTableContent_A').append(addHtml);

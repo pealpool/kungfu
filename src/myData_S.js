@@ -1,6 +1,7 @@
 ﻿'use strict';
 export const data_S = {
-    'sixDataSum': [58, 53, 50, 50, 64], 'WP': {
+    'sixDataSum': [58, 53, 50, 50, 64],
+    'WP': {
         'name': '武当派',
         'level': ['弟子', '堂主', '长老', '掌门'],
         'rank': '2 ↑',
@@ -10,7 +11,7 @@ export const data_S = {
         'sixData': [30, 15, 18, 10, 0],
         'zAtt': {
             '八卦掌': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 0,
                 'hurt_i': 90,
@@ -28,7 +29,7 @@ export const data_S = {
                 'remark': '“两仪生四象，四象生八卦”，掌封八方，无处可躲',
             },
             '两仪掌': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 70,
                 'hurt_i': 70,
@@ -46,7 +47,7 @@ export const data_S = {
                 'remark': '太极始生两仪，两仪掌为太极基础掌法。',
             },
             '紫阳正气拳': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 100,
                 'hurt_i': 20,
@@ -64,7 +65,7 @@ export const data_S = {
                 'remark': '武当少有的刚猛拳法',
             },
             '无极劲': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 0,
                 'hurt_i': 150,
@@ -82,7 +83,7 @@ export const data_S = {
                 'remark': '蓄而发劲，劲透脏腑',
             },
             '太极拳': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 50,
                 'hurt_i': 100,
@@ -100,7 +101,7 @@ export const data_S = {
                 'remark': '后发先至，攻守兼备',
             },
             '破金鎚': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['body', 'hand',],
                 'hurt_o': 80,
                 'hurt_i': 120,
@@ -118,7 +119,7 @@ export const data_S = {
                 'remark': '拳劲所致，力破金钟',
             },
             '霹雳腿': {
-                'attFr_body': ['leg',],
+                'attFr_body': 'leg',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 110,
                 'hurt_i': 60,
@@ -136,7 +137,7 @@ export const data_S = {
                 'remark': '武当少有的高腿招式',
             },
             '隔山打牛': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 0,
                 'hurt_i': 180,
@@ -212,7 +213,7 @@ export const data_S = {
         'sixData': [35, 20, 20, 10, 0],
         'zAtt': {
             '龙爪手': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 140,
                 'hurt_i': 0,
@@ -230,7 +231,7 @@ export const data_S = {
                 'remark': '爪到之处刚猛绝伦，抓树留痕，抓肉成洞',
             },
             '般若掌': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 100,
                 'hurt_i': 30,
@@ -248,7 +249,7 @@ export const data_S = {
                 'remark': '刚猛有余，而内劲不足',
             },
             '六十八罗汉拳': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 180,
                 'hurt_i': 0,
@@ -266,7 +267,7 @@ export const data_S = {
                 'remark': '拳取十八罗汉之姿',
             },
             '一指禅': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 90,
                 'hurt_i': 10,
@@ -284,7 +285,7 @@ export const data_S = {
                 'remark': '南少林护寺神功',
             },
             '如来千手式': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 120,
                 'hurt_i': 0,
@@ -302,7 +303,7 @@ export const data_S = {
                 'remark': '千手如来掌由太极拳演变',
             },
             '伏魔腿': {
-                'attFr_body': ['leg',],
+                'attFr_body': 'leg',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 210,
                 'hurt_i': 0,
@@ -320,7 +321,7 @@ export const data_S = {
                 'remark': '威力巨大，伏虎降魔',
             },
             '大韦陀杵蹬': {
-                'attFr_body': ['leg',],
+                'attFr_body': 'leg',
                 'attTo_body': ['body', 'hand', 'leg',],
                 'hurt_o': 180,
                 'hurt_i': 20,
@@ -338,7 +339,7 @@ export const data_S = {
                 'remark': '力之所到断根折骨',
             },
             '因陀罗抓': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['body', 'hand', 'leg',],
                 'hurt_o': 100,
                 'hurt_i': 0,
@@ -420,7 +421,7 @@ export const data_S = {
         'sixData': [30, 16, 16, 25, 30],
         'zAtt': {
             '大力鹰爪': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 100,
                 'hurt_i': 0,
@@ -438,7 +439,7 @@ export const data_S = {
                 'remark': '爪法劲狠，碎石如捏豆腐',
             },
             '鹰爪擒拿': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand',],
                 'hurt_o': 80,
                 'hurt_i': 0,
@@ -456,7 +457,7 @@ export const data_S = {
                 'remark': '一旦被擒，爪必入肉生根',
             },
             '雁行刀': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 100,
                 'hurt_i': 0,
@@ -474,7 +475,7 @@ export const data_S = {
                 'remark': '以掌为刀，掌风若大雁飞过所带劲风',
             },
             '啄目争珠': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head',],
                 'hurt_o': 70,
                 'hurt_i': 0,
@@ -492,7 +493,7 @@ export const data_S = {
                 'remark': '以双眼为目标，中招者绝无还手之力',
             },
             '怒鹰锁喉': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head',],
                 'hurt_o': 90,
                 'hurt_i': 0,
@@ -510,7 +511,7 @@ export const data_S = {
                 'remark': '被锁喉者，气息立马混乱，再难招架',
             },
             '恶鹰掏心': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['body',],
                 'hurt_o': 120,
                 'hurt_i': 0,
@@ -528,7 +529,7 @@ export const data_S = {
                 'remark': '掏心如探囊取物',
             },
             '苍鹰踩兔': {
-                'attFr_body': ['leg',],
+                'attFr_body': 'leg',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 90,
                 'hurt_i': 0,
@@ -546,7 +547,7 @@ export const data_S = {
                 'remark': '鹰爪门轻灵腿法',
             },
             '雄鹰飞踢': {
-                'attFr_body': ['leg',],
+                'attFr_body': 'leg',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 150,
                 'hurt_i': 0,
@@ -608,7 +609,7 @@ export const data_S = {
         'sixData': [10, 10, 10, 35, 30],
         'zAtt': {
             '蛛网缠': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'hand', 'leg',],
                 'hurt_o': 0,
                 'hurt_i': 0,
@@ -626,7 +627,7 @@ export const data_S = {
                 'remark': '五毒教两大牵制神技之一',
             },
             '五毒神掌': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 20,
                 'hurt_i': 40,
@@ -644,7 +645,7 @@ export const data_S = {
                 'remark': '五毒教盛名绝技，一掌毙命',
             },
             '青蛇刁手': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 0,
                 'hurt_i': 30,
@@ -662,7 +663,7 @@ export const data_S = {
                 'remark': '爆发时积累达到20即能生效',
             },
             '三阴蜈蚣爪': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 30,
                 'hurt_i': 20,
@@ -680,7 +681,7 @@ export const data_S = {
                 'remark': '爆发时积累达到20即能生效',
             },
             '蝎子摆尾': {
-                'attFr_body': ['leg',],
+                'attFr_body': 'leg',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 50,
                 'hurt_i': 50,
@@ -698,7 +699,7 @@ export const data_S = {
                 'remark': '爆发时积累达到20即能生效',
             },
             '千蛛万毒手': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 0,
                 'hurt_i': 40,
@@ -716,7 +717,7 @@ export const data_S = {
                 'remark': '爆发时积累达到20即能生效',
             },
             '毒蟾砂': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 0,
                 'hurt_i': 0,
@@ -778,7 +779,7 @@ export const data_S = {
         'sixData': [18, 10, 10, 30, 25],
         'zAtt': {
             '一阳指': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 30,
                 'hurt_i': 30,
@@ -796,7 +797,7 @@ export const data_S = {
                 'remark': '六脉神剑的根基招式',
             },
             '少商剑': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 30,
                 'hurt_i': 70,
@@ -814,7 +815,7 @@ export const data_S = {
                 'remark': '剑路雄劲，颇有石破天惊，风雨大至之势',
             },
             '商阳剑': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 20,
                 'hurt_i': 40,
@@ -832,7 +833,7 @@ export const data_S = {
                 'remark': '巧妙灵活，难以捉摸',
             },
             '中冲剑': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 80,
                 'hurt_i': 20,
@@ -850,7 +851,7 @@ export const data_S = {
                 'remark': '大开大阖，气势雄迈',
             },
             '关冲剑': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 50,
                 'hurt_i': 50,
@@ -868,7 +869,7 @@ export const data_S = {
                 'remark': '以拙滞古朴取胜',
             },
             '少冲剑': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 60,
                 'hurt_i': 30,
@@ -886,7 +887,7 @@ export const data_S = {
                 'remark': '轻灵迅速',
             },
             '少泽剑': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 30,
                 'hurt_i': 40,
@@ -904,7 +905,7 @@ export const data_S = {
                 'remark': '忽来忽去，变化精妙',
             },
             '五罗轻烟掌': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 40,
                 'hurt_i': 30,
@@ -973,7 +974,7 @@ export const data_S = {
         'sixData': [30, 28, 14, 10, 0],
         'zAtt': {
             '通臂拳': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 100,
                 'hurt_i': 30,
@@ -991,7 +992,7 @@ export const data_S = {
                 'remark': '双手相互应援，发挥连环不断之巧',
             },
             '飘雪穿云掌': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 30,
                 'hurt_i': 70,
@@ -1009,7 +1010,7 @@ export const data_S = {
                 'remark': '掌力忽吞忽吐，意在引开敌人内力而后功',
             },
             '一元指': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 60,
                 'hurt_i': 80,
@@ -1027,7 +1028,7 @@ export const data_S = {
                 'remark': '轻盈迅捷指法',
             },
             '四象掌': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 80,
                 'hurt_i': 80,
@@ -1045,7 +1046,7 @@ export const data_S = {
                 'remark': '圆中有方，阴阳相成，暗藏天地阴阳、方圆动静四象',
             },
             '金顶绵掌': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 60,
                 'hurt_i': 100,
@@ -1063,7 +1064,7 @@ export const data_S = {
                 'remark': '迅速的直击掌法，掌力犹如长江大河，汹涌不绝',
             },
             '佛光普照': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 80,
                 'hurt_i': 80,
@@ -1081,7 +1082,7 @@ export const data_S = {
                 'remark': '源于佛门心法，佛光西来，普照天下众生',
             },
             '灭腿': {
-                'attFr_body': ['leg',],
+                'attFr_body': 'leg',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 160,
                 'hurt_i': 80,
@@ -1099,7 +1100,7 @@ export const data_S = {
                 'remark': '灭绝腿法',
             },
             '绝腿': {
-                'attFr_body': ['leg',],
+                'attFr_body': 'leg',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 80,
                 'hurt_i': 130,
@@ -1181,7 +1182,7 @@ export const data_S = {
         'sixData': [22, 10, 30, 35, 0],
         'zAtt': {
             '大力金刚指': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 20,
                 'hurt_i': 30,
@@ -1199,7 +1200,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 001',
             },
             '大力金刚拳': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 60,
                 'hurt_i': 60,
@@ -1217,7 +1218,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 002',
             },
             '无上大力蹬': {
-                'attFr_body': ['leg',],
+                'attFr_body': 'leg',
                 'attTo_body': ['body', 'hand', 'leg',],
                 'hurt_o': 30,
                 'hurt_i': 90,
@@ -1235,7 +1236,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 003',
             },
             '大力金刚腿': {
-                'attFr_body': ['leg',],
+                'attFr_body': 'leg',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 100,
                 'hurt_i': 50,
@@ -1253,7 +1254,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 004',
             },
             '波罗密掌': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 30,
                 'hurt_i': 50,
@@ -1271,7 +1272,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 005',
             },
             '金刚诛灭手': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 40,
                 'hurt_i': 70,
@@ -1289,7 +1290,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 006',
             },
             '明王拙火定': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 90,
                 'hurt_i': 20,
@@ -1307,7 +1308,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 007',
             },
             '大日如来掌': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 80,
                 'hurt_i': 60,
@@ -1383,7 +1384,7 @@ export const data_S = {
         'sixData': [10, 35, 8, 28, 28],
         'zAtt': {
             '子午毒砂': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head',],
                 'hurt_o': 0,
                 'hurt_i': 0,
@@ -1401,7 +1402,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 009',
             },
             '毒蒺藜': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 10,
                 'hurt_i': 0,
@@ -1419,7 +1420,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 010',
             },
             '暴雨梨花针': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 30,
                 'hurt_i': 0,
@@ -1437,7 +1438,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 011',
             },
             '十二金钱镖': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 20,
                 'hurt_i': 20,
@@ -1455,7 +1456,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 012',
             },
             '穿心透骨钉': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 30,
                 'hurt_i': 30,
@@ -1473,7 +1474,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 013',
             },
             '七煞袖箭': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 60,
                 'hurt_i': 0,
@@ -1491,7 +1492,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 014',
             },
             '乱飞蝗': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 30,
                 'hurt_i': 10,
@@ -1509,7 +1510,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 015',
             },
             '血天腐地炮': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 100,
                 'hurt_i': 20,
@@ -1561,7 +1562,7 @@ export const data_S = {
         'sixData': [10, 20, 20, 0, 35],
         'zAtt': {
             '黄坟砂': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 10,
                 'hurt_i': 0,
@@ -1579,7 +1580,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 017',
             },
             '血犼魔掌': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 50,
                 'hurt_i': 30,
@@ -1597,7 +1598,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 018',
             },
             '血池鬼爪': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 40,
                 'hurt_i': 10,
@@ -1615,7 +1616,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 019',
             },
             '腐尸化血掌': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 10,
                 'hurt_i': 20,
@@ -1633,7 +1634,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 020',
             },
             '黄泉指': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 30,
                 'hurt_i': 0,
@@ -1651,7 +1652,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 021',
             },
             '血煞掌': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 20,
                 'hurt_i': 20,
@@ -1669,7 +1670,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 022',
             },
             '大阴风腿': {
-                'attFr_body': ['leg',],
+                'attFr_body': 'leg',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 80,
                 'hurt_i': 0,
@@ -1687,7 +1688,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 023',
             },
             '血影腿': {
-                'attFr_body': ['leg',],
+                'attFr_body': 'leg',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 80,
                 'hurt_i': 0,
@@ -1750,7 +1751,7 @@ export const data_S = {
         'sixData': [25, 3, 35, 19, 0],
         'zAtt': {
             '狮啸功': {
-                'attFr_body': ['head',],
+                'attFr_body': 'head',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 0,
                 'hurt_i': 30,
@@ -1768,7 +1769,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 025',
             },
             '铁头功': {
-                'attFr_body': ['head',],
+                'attFr_body': 'head',
                 'attTo_body': ['head', 'body',],
                 'hurt_o': 80,
                 'hurt_i': 0,
@@ -1786,7 +1787,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 026',
             },
             '金砂掌': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 70,
                 'hurt_i': 0,
@@ -1804,7 +1805,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 027',
             },
             '开弓手': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 70,
                 'hurt_i': 0,
@@ -1822,7 +1823,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 028',
             },
             '裂碑掌': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 90,
                 'hurt_i': 0,
@@ -1840,7 +1841,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 029',
             },
             '铁担手': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 80,
                 'hurt_i': 0,
@@ -1858,7 +1859,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 030',
             },
             '推山掌': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand',],
                 'hurt_o': 50,
                 'hurt_i': 0,
@@ -1876,7 +1877,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 031',
             },
             '霸王腿': {
-                'attFr_body': ['leg',],
+                'attFr_body': 'leg',
                 'attTo_body': ['body', 'hand', 'leg',],
                 'hurt_o': 120,
                 'hurt_i': 0,
@@ -1958,7 +1959,7 @@ export const data_S = {
         'sixData': [18, 30, 5, 16, 0],
         'zAtt': {
             '参合指': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 30,
                 'hurt_i': 30,
@@ -1976,7 +1977,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 033',
             },
             '其人之道·攻': {
-                'attFr_body': ['head', 'hand', 'leg',],
+                'attFr_body': 'all',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 0,
                 'hurt_i': 0,
@@ -1994,7 +1995,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 034',
             },
             '流云袖': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 0,
                 'hurt_i': 40,
@@ -2012,7 +2013,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 035',
             },
             '重云掩日手': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 20,
                 'hurt_i': 30,
@@ -2030,7 +2031,7 @@ export const data_S = {
                 'remark': '[暂无数据] - 036',
             },
             '蓄云欲雨掌': {
-                'attFr_body': ['hand',],
+                'attFr_body': 'hand',
                 'attTo_body': ['head', 'body', 'hand', 'leg',],
                 'hurt_o': 10,
                 'hurt_i': 40,
