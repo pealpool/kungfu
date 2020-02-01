@@ -1,7 +1,6 @@
 ﻿'use strict';
 export const data_S = {
-    'sixDataSum': [58, 53, 50, 50, 64],
-    'WP': {
+    'sixDataSum': [58, 53, 50, 50, 64], 'WP': {
         'name': '武当派',
         'level': ['弟子', '堂主', '长老', '掌门'],
         'rank': '2 ↑',
@@ -12,7 +11,7 @@ export const data_S = {
         'zAtt': {
             '八卦掌': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 0,
                 'hurt_i': 90,
                 'hit': 0.1,
@@ -27,10 +26,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡+5%，5s',
                 'remark': '“两仪生四象，四象生八卦”，掌封八方，无处可躲',
+                'count_tt': 0,
+                'count_all': 0
             },
             '两仪掌': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 70,
                 'hurt_i': 70,
                 'hit': 0.05,
@@ -45,10 +46,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '太极始生两仪，两仪掌为太极基础掌法。',
+                'count_tt': 0,
+                'count_all': 0
             },
             '紫阳正气拳': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 100,
                 'hurt_i': 20,
                 'hit': 0,
@@ -63,10 +66,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '内伤伤害+5%，5s',
                 'remark': '武当少有的刚猛拳法',
+                'count_tt': 0,
+                'count_all': 0
             },
             '无极劲': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 0,
                 'hurt_i': 150,
                 'hit': -0.05,
@@ -81,10 +86,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '内伤伤害+5%，5s',
                 'remark': '蓄而发劲，劲透脏腑',
+                'count_tt': 0,
+                'count_all': 0
             },
             '太极拳': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 50,
                 'hurt_i': 100,
                 'hit': 0,
@@ -99,10 +106,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡+10%，5s',
                 'remark': '后发先至，攻守兼备',
+                'count_tt': 0,
+                'count_all': 0
             },
             '破金鎚': {
                 'attFr_body': 'hand',
-                'attTo_body': ['body', 'hand',],
+                'attTo_body': ['', 'body', 'hand', ''],
                 'hurt_o': 80,
                 'hurt_i': 120,
                 'hit': -0.05,
@@ -117,10 +126,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '内伤伤害+5%，5s',
                 'remark': '拳劲所致，力破金钟',
+                'count_tt': 0,
+                'count_all': 0
             },
             '霹雳腿': {
                 'attFr_body': 'leg',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 110,
                 'hurt_i': 60,
                 'hit': -0.05,
@@ -135,10 +146,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '内伤伤害+5%，5s',
                 'remark': '武当少有的高腿招式',
+                'count_tt': 0,
+                'count_all': 0
             },
             '隔山打牛': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 0,
                 'hurt_i': 180,
                 'hit': -0.1,
@@ -153,6 +166,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '内伤伤害+5%，5s',
                 'remark': '透劲最高深招式，隔山打牛所言非虚',
+                'count_tt': 0,
+                'count_all': 0
             },
         },
         'zDef': {
@@ -162,14 +177,26 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '内伤伤害+10%，5s',
                 'remark': '[暂无数据] - 038',
+                'count_tt': 0,
+                'count_all': 0
             },
-            '八封掌': {'def_body': ['hand',], 'block': 0.15, 'TX_inf': '', 'LZ_inf': '格挡+5%', 'remark': '[暂无数据] - 039',},
+            '八封掌': {
+                'def_body': ['hand',],
+                'block': 0.15,
+                'TX_inf': '',
+                'LZ_inf': '格挡+5%',
+                'remark': '[暂无数据] - 039',
+                'count_tt': 0,
+                'count_all': 0
+            },
             '沾衣十八跌': {
                 'def_body': ['hand', 'leg',],
                 'block': 0,
                 'TX_inf': '反击外伤伤害50，打断连招',
                 'LZ_inf': '闪避+5%',
                 'remark': '[暂无数据] - 040',
+                'count_tt': 0,
+                'count_all': 0
             },
             '四两拨千斤': {
                 'def_body': ['hand', 'leg',],
@@ -177,6 +204,8 @@ export const data_S = {
                 'TX_inf': '反击内伤伤害50，打断连招',
                 'LZ_inf': '闪避+5%',
                 'remark': '[暂无数据] - 041',
+                'count_tt': 0,
+                'count_all': 0
             },
             '弱水柔易': {
                 'def_body': ['hand', 'leg',],
@@ -184,18 +213,46 @@ export const data_S = {
                 'TX_inf': '不受内伤伤害',
                 'LZ_inf': '内伤伤害+5%，5s',
                 'remark': '[暂无数据] - 042',
+                'count_tt': 0,
+                'count_all': 0
             },
-            '游身手': {'def_body': ['hand',], 'block': 0.1, 'TX_inf': '', 'LZ_inf': '命中+5%', 'remark': '[暂无数据] - 043',},
+            '游身手': {
+                'def_body': ['hand',],
+                'block': 0.1,
+                'TX_inf': '',
+                'LZ_inf': '命中+5%',
+                'remark': '[暂无数据] - 043',
+                'count_tt': 0,
+                'count_all': 0
+            },
         },
         'zDod': {
-            '八卦步': {'const': 5, 'dod': 0.05, 'TX_inf': '', 'LZ_inf': '格挡+5%，5s', 'remark': '',},
-            '北斗步': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '内伤伤害+5%，5s', 'remark': '',},
+            '八卦步': {
+                'const': 5,
+                'dod': 0.05,
+                'TX_inf': '',
+                'LZ_inf': '格挡+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '北斗步': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '内伤伤害+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
             '梯云纵': {
                 'const': 10,
                 'dod': 0.1,
                 'TX_inf': '',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '乃是「武当七绝」之一，堪称轻功中的轻功，其注重身法的轻灵，不以步法多变来迷惑对手，要旨是身形轻巧，高低进退自如。',
+                'count_tt': 0,
+                'count_all': 0
             },
         },
         'zPas': {
@@ -214,7 +271,7 @@ export const data_S = {
         'zAtt': {
             '龙爪手': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 140,
                 'hurt_i': 0,
                 'hit': 0.05,
@@ -229,10 +286,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '爪到之处刚猛绝伦，抓树留痕，抓肉成洞',
+                'count_tt': 0,
+                'count_all': 0
             },
             '般若掌': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 100,
                 'hurt_i': 30,
                 'hit': 0,
@@ -247,10 +306,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '刚猛有余，而内劲不足',
+                'count_tt': 0,
+                'count_all': 0
             },
             '六十八罗汉拳': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 180,
                 'hurt_i': 0,
                 'hit': 0,
@@ -265,10 +326,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '拳取十八罗汉之姿',
+                'count_tt': 0,
+                'count_all': 0
             },
             '一指禅': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 90,
                 'hurt_i': 10,
                 'hit': 0.1,
@@ -283,10 +346,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '南少林护寺神功',
+                'count_tt': 0,
+                'count_all': 0
             },
             '如来千手式': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 120,
                 'hurt_i': 0,
                 'hit': 0,
@@ -301,10 +366,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡+10%，5s',
                 'remark': '千手如来掌由太极拳演变',
+                'count_tt': 0,
+                'count_all': 0
             },
             '伏魔腿': {
                 'attFr_body': 'leg',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 210,
                 'hurt_i': 0,
                 'hit': -0.1,
@@ -319,10 +386,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '威力巨大，伏虎降魔',
+                'count_tt': 0,
+                'count_all': 0
             },
             '大韦陀杵蹬': {
                 'attFr_body': 'leg',
-                'attTo_body': ['body', 'hand', 'leg',],
+                'attTo_body': ['', 'body', 'hand', 'leg'],
                 'hurt_o': 180,
                 'hurt_i': 20,
                 'hit': -0.1,
@@ -337,10 +406,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '力之所到断根折骨',
+                'count_tt': 0,
+                'count_all': 0
             },
             '因陀罗抓': {
                 'attFr_body': 'hand',
-                'attTo_body': ['body', 'hand', 'leg',],
+                'attTo_body': ['', 'body', 'hand', 'leg'],
                 'hurt_o': 100,
                 'hurt_i': 0,
                 'hit': 0.05,
@@ -355,6 +426,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '少林绝技中最为迅速的擒拿',
+                'count_tt': 0,
+                'count_all': 0
             },
         },
         'zDef': {
@@ -364,6 +437,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '[暂无数据] - 045',
+                'count_tt': 0,
+                'count_all': 0
             },
             '千手观音': {
                 'def_body': ['hand', 'leg',],
@@ -371,6 +446,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 046',
+                'count_tt': 0,
+                'count_all': 0
             },
             '铜人护体': {
                 'def_body': ['hand', 'leg',],
@@ -378,6 +455,8 @@ export const data_S = {
                 'TX_inf': '外伤防御+5%，5s',
                 'LZ_inf': '外伤防御+5%，5s',
                 'remark': '[暂无数据] - 047',
+                'count_tt': 0,
+                'count_all': 0
             },
             '去烦恼': {
                 'def_body': ['hand', 'leg',],
@@ -385,6 +464,8 @@ export const data_S = {
                 'TX_inf': '内伤防御+5%，5s',
                 'LZ_inf': '内伤防御+5%，5s',
                 'remark': '[暂无数据] - 048',
+                'count_tt': 0,
+                'count_all': 0
             },
             '阿罗汉附体': {
                 'def_body': ['hand', 'leg',],
@@ -392,6 +473,8 @@ export const data_S = {
                 'TX_inf': '外伤伤害+5%，5s',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '[暂无数据] - 049',
+                'count_tt': 0,
+                'count_all': 0
             },
         },
         'zDod': {
@@ -401,9 +484,27 @@ export const data_S = {
                 'TX_inf': '下次攻击前摇+0.2s',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '使出轻身发，奋力后跃，远离敌人',
+                'count_tt': 0,
+                'count_all': 0
             },
-            '壁虎游墙': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '命中+5%，5s', 'remark': '',},
-            '大智无定步': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '闪避+5%，5s', 'remark': '',},
+            '壁虎游墙': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '命中+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '大智无定步': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '闪避+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
         },
         'zPas': {
             '铁布衫': {'TX_inf': '外伤防御 +25%，弹反伤害+10%', 'remark': '[暂无数据] - 097',},
@@ -422,7 +523,7 @@ export const data_S = {
         'zAtt': {
             '大力鹰爪': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 100,
                 'hurt_i': 0,
                 'hit': 0.05,
@@ -437,10 +538,12 @@ export const data_S = {
                 'TX_inf': '流血持续 5s',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '爪法劲狠，碎石如捏豆腐',
+                'count_tt': 0,
+                'count_all': 0
             },
             '鹰爪擒拿': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand',],
+                'attTo_body': ['head', 'body', 'hand', ''],
                 'hurt_o': 80,
                 'hurt_i': 0,
                 'hit': 0.1,
@@ -455,10 +558,12 @@ export const data_S = {
                 'TX_inf': '对方-5%闪避，2s',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '一旦被擒，爪必入肉生根',
+                'count_tt': 0,
+                'count_all': 0
             },
             '雁行刀': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 100,
                 'hurt_i': 0,
                 'hit': 0.05,
@@ -473,10 +578,12 @@ export const data_S = {
                 'TX_inf': '流血持续 5s',
                 'LZ_inf': '格挡+5%，5s',
                 'remark': '以掌为刀，掌风若大雁飞过所带劲风',
+                'count_tt': 0,
+                'count_all': 0
             },
             '啄目争珠': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head',],
+                'attTo_body': ['head', '', '', ''],
                 'hurt_o': 70,
                 'hurt_i': 0,
                 'hit': -0.1,
@@ -491,10 +598,12 @@ export const data_S = {
                 'TX_inf': '对方-10%闪避，-50%命中，2s',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '以双眼为目标，中招者绝无还手之力',
+                'count_tt': 0,
+                'count_all': 0
             },
             '怒鹰锁喉': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head',],
+                'attTo_body': ['head', '', '', ''],
                 'hurt_o': 90,
                 'hurt_i': 0,
                 'hit': 0.05,
@@ -509,10 +618,12 @@ export const data_S = {
                 'TX_inf': '封锁对方真气回复3s',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '被锁喉者，气息立马混乱，再难招架',
+                'count_tt': 0,
+                'count_all': 0
             },
             '恶鹰掏心': {
                 'attFr_body': 'hand',
-                'attTo_body': ['body',],
+                'attTo_body': ['', 'body', '', ''],
                 'hurt_o': 120,
                 'hurt_i': 0,
                 'hit': 0.05,
@@ -527,10 +638,12 @@ export const data_S = {
                 'TX_inf': '流血持续 5s',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '掏心如探囊取物',
+                'count_tt': 0,
+                'count_all': 0
             },
             '苍鹰踩兔': {
                 'attFr_body': 'leg',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 90,
                 'hurt_i': 0,
                 'hit': 0.05,
@@ -545,10 +658,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '鹰爪门轻灵腿法',
+                'count_tt': 0,
+                'count_all': 0
             },
             '雄鹰飞踢': {
                 'attFr_body': 'leg',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 150,
                 'hurt_i': 0,
                 'hit': 0,
@@ -563,6 +678,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '鹰爪门凌厉腿法',
+                'count_tt': 0,
+                'count_all': 0
             },
         },
         'zDef': {
@@ -572,6 +689,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '[暂无数据] - 051',
+                'count_tt': 0,
+                'count_all': 0
             },
             '雄鹰展翅': {
                 'def_body': ['hand', 'leg',],
@@ -579,6 +698,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '命中+5%',
                 'remark': '[暂无数据] - 052',
+                'count_tt': 0,
+                'count_all': 0
             },
             '母鹰护雏': {
                 'def_body': ['hand', 'leg',],
@@ -586,13 +707,47 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 053',
+                'count_tt': 0,
+                'count_all': 0
             },
         },
         'zDod': {
-            '老鹰盘旋': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '命中+5%，5s', 'remark': '',},
-            '老鹰攀枝': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '外伤伤害+5%，5s', 'remark': '',},
-            '金鹰上架': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '闪避+5%，5s', 'remark': '',},
-            '雁行千里': {'const': 20, 'dod': 0.3, 'TX_inf': '下次攻击前摇+0.2s', 'LZ_inf': '闪避+5%，5s', 'remark': '奋力远离敌方',},
+            '老鹰盘旋': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '命中+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '老鹰攀枝': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '外伤伤害+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '金鹰上架': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '闪避+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '雁行千里': {
+                'const': 20,
+                'dod': 0.3,
+                'TX_inf': '下次攻击前摇+0.2s',
+                'LZ_inf': '闪避+5%，5s',
+                'remark': '奋力远离敌方',
+                'count_tt': 0,
+                'count_all': 0
+            },
         },
         'zPas': {
             '鹰爪提坛功': {'TX_inf': '外伤伤害+10%', 'remark': '[暂无数据] - 102',},
@@ -610,7 +765,7 @@ export const data_S = {
         'zAtt': {
             '蛛网缠': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'hand', 'leg',],
+                'attTo_body': ['head', '', 'hand', 'leg'],
                 'hurt_o': 0,
                 'hurt_i': 0,
                 'hit': -0.1,
@@ -625,10 +780,12 @@ export const data_S = {
                 'TX_inf': '不能格挡，不同部位不同效果：5s。①脚-10%闪避-10%格挡率；②手攻击慢0.2s速度，手格挡率-10%；③头：命中率-10%；④身：毒伤害+5，5s。【蜘蛛毒】',
                 'LZ_inf': '毒伤害+5',
                 'remark': '五毒教两大牵制神技之一',
+                'count_tt': 0,
+                'count_all': 0
             },
             '五毒神掌': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 20,
                 'hurt_i': 40,
                 'hit': 0,
@@ -643,10 +800,12 @@ export const data_S = {
                 'TX_inf': '随机五毒之一',
                 'LZ_inf': '毒伤害+5，5s',
                 'remark': '五毒教盛名绝技，一掌毙命',
+                'count_tt': 0,
+                'count_all': 0
             },
             '青蛇刁手': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 0,
                 'hurt_i': 30,
                 'hit': 0.1,
@@ -661,10 +820,12 @@ export const data_S = {
                 'TX_inf': '【青蛇毒】智力-1',
                 'LZ_inf': '命中率+5%，5s',
                 'remark': '爆发时积累达到20即能生效',
+                'count_tt': 0,
+                'count_all': 0
             },
             '三阴蜈蚣爪': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 30,
                 'hurt_i': 20,
                 'hit': 0.05,
@@ -679,10 +840,12 @@ export const data_S = {
                 'TX_inf': '【蜈蚣毒】体魄-1',
                 'LZ_inf': '毒伤害+5，5s',
                 'remark': '爆发时积累达到20即能生效',
+                'count_tt': 0,
+                'count_all': 0
             },
             '蝎子摆尾': {
                 'attFr_body': 'leg',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 50,
                 'hurt_i': 50,
                 'hit': 0,
@@ -697,10 +860,12 @@ export const data_S = {
                 'TX_inf': '【蝎子毒】力量-1',
                 'LZ_inf': '内伤伤害+5%，5s',
                 'remark': '爆发时积累达到20即能生效',
+                'count_tt': 0,
+                'count_all': 0
             },
             '千蛛万毒手': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 0,
                 'hurt_i': 40,
                 'hit': 0.05,
@@ -715,10 +880,12 @@ export const data_S = {
                 'TX_inf': '【蜘蛛毒】敏捷-1',
                 'LZ_inf': '毒伤害+5，5s',
                 'remark': '爆发时积累达到20即能生效',
+                'count_tt': 0,
+                'count_all': 0
             },
             '毒蟾砂': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 0,
                 'hurt_i': 0,
                 'hit': -0.1,
@@ -733,6 +900,8 @@ export const data_S = {
                 'TX_inf': '不能格挡，封锁对方真气回复3s。【蟾蜍毒】内力-1',
                 'LZ_inf': '毒伤害+5，5s',
                 'remark': '爆发时积累达到20即能生效',
+                'count_tt': 0,
+                'count_all': 0
             },
         },
         'zDef': {
@@ -742,6 +911,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '命中+5%',
                 'remark': '[暂无数据] - 055',
+                'count_tt': 0,
+                'count_all': 0
             },
             '妙手织天': {
                 'def_body': ['hand', 'leg',],
@@ -749,6 +920,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 056',
+                'count_tt': 0,
+                'count_all': 0
             },
             '天蛇换骨': {
                 'def_body': ['hand', 'leg',],
@@ -756,13 +929,47 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤内伤防御+5%，5s',
                 'remark': '[暂无数据] - 057',
+                'count_tt': 0,
+                'count_all': 0
             },
         },
         'zDod': {
-            '八步赶蟾': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '命中+5%，5s', 'remark': '',},
-            '遁地百足仙': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '闪避+5%，5s', 'remark': '',},
-            '蛤蟆纵跳': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '内伤伤害+5%，5s', 'remark': '',},
-            '天蛇翻': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '闪避+5%，5s', 'remark': '',},
+            '八步赶蟾': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '命中+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '遁地百足仙': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '闪避+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '蛤蟆纵跳': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '内伤伤害+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '天蛇翻': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '闪避+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
         },
         'zPas': {
             '补天诀': {'TX_inf': '真气回复+0.1/s', 'remark': '[暂无数据] - 106',},
@@ -780,7 +987,7 @@ export const data_S = {
         'zAtt': {
             '一阳指': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 30,
                 'hurt_i': 30,
                 'hit': 0.05,
@@ -795,10 +1002,12 @@ export const data_S = {
                 'TX_inf': '封锁对方真气回复3s',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '六脉神剑的根基招式',
+                'count_tt': 0,
+                'count_all': 0
             },
             '少商剑': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 30,
                 'hurt_i': 70,
                 'hit': 0.05,
@@ -813,10 +1022,12 @@ export const data_S = {
                 'TX_inf': '对方所有破绽率+10%，10s',
                 'LZ_inf': '内外伤伤害+5%，5s',
                 'remark': '剑路雄劲，颇有石破天惊，风雨大至之势',
+                'count_tt': 0,
+                'count_all': 0
             },
             '商阳剑': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 20,
                 'hurt_i': 40,
                 'hit': 0.05,
@@ -831,10 +1042,12 @@ export const data_S = {
                 'TX_inf': '对方所有破绽率+5%，10s',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '巧妙灵活，难以捉摸',
+                'count_tt': 0,
+                'count_all': 0
             },
             '中冲剑': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 80,
                 'hurt_i': 20,
                 'hit': 0.05,
@@ -849,10 +1062,12 @@ export const data_S = {
                 'TX_inf': '对方所有破绽率+10%，10s',
                 'LZ_inf': '直接命中时，本次真气伤害变为30',
                 'remark': '大开大阖，气势雄迈',
+                'count_tt': 0,
+                'count_all': 0
             },
             '关冲剑': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 50,
                 'hurt_i': 50,
                 'hit': 0.05,
@@ -867,10 +1082,12 @@ export const data_S = {
                 'TX_inf': '对方所有破绽率+8%，10s',
                 'LZ_inf': '格挡+5%，5s',
                 'remark': '以拙滞古朴取胜',
+                'count_tt': 0,
+                'count_all': 0
             },
             '少冲剑': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 60,
                 'hurt_i': 30,
                 'hit': 0.05,
@@ -885,10 +1102,12 @@ export const data_S = {
                 'TX_inf': '对方所有破绽率+6%，10s',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '轻灵迅速',
+                'count_tt': 0,
+                'count_all': 0
             },
             '少泽剑': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 30,
                 'hurt_i': 40,
                 'hit': 0.1,
@@ -903,10 +1122,12 @@ export const data_S = {
                 'TX_inf': '对方所有破绽率+5%，10s',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '忽来忽去，变化精妙',
+                'count_tt': 0,
+                'count_all': 0
             },
             '五罗轻烟掌': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 40,
                 'hurt_i': 30,
                 'hit': 0.1,
@@ -921,6 +1142,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '飘渺轻盈，招数精奇，拥有多重变势。',
+                'count_tt': 0,
+                'count_all': 0
             },
         },
         'zDef': {
@@ -930,6 +1153,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '[暂无数据] - 059',
+                'count_tt': 0,
+                'count_all': 0
             },
             '八门金锁·死': {
                 'def_body': ['hand', 'leg',],
@@ -937,6 +1162,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 060',
+                'count_tt': 0,
+                'count_all': 0
             },
             '八门金锁·惊': {
                 'def_body': ['hand', 'leg',],
@@ -944,6 +1171,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤内伤防御+5%，5s',
                 'remark': '[暂无数据] - 061',
+                'count_tt': 0,
+                'count_all': 0
             },
             '八门金锁·伤': {
                 'def_body': ['hand', 'leg',],
@@ -951,13 +1180,47 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤内伤伤害+5%，5s',
                 'remark': '[暂无数据] - 062',
+                'count_tt': 0,
+                'count_all': 0
             },
         },
         'zDod': {
-            '段氏步法·进': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '命中+5%，5s', 'remark': '',},
-            '段氏步法·退': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '闪避+5%，5s', 'remark': '',},
-            '段氏步法·攻': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '内伤伤害+5%，5s', 'remark': '',},
-            '段氏步法·守': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '格挡+5%，5s', 'remark': '',},
+            '段氏步法·进': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '命中+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '段氏步法·退': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '闪避+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '段氏步法·攻': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '内伤伤害+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '段氏步法·守': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '格挡+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
         },
         'zPas': {
             '枯荣禅功': {'TX_inf': '自身真气回复+10%，对方真气回复-10%', 'remark': '[暂无数据] - 110',},
@@ -975,7 +1238,7 @@ export const data_S = {
         'zAtt': {
             '通臂拳': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 100,
                 'hurt_i': 30,
                 'hit': 0.1,
@@ -990,10 +1253,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '双手相互应援，发挥连环不断之巧',
+                'count_tt': 0,
+                'count_all': 0
             },
             '飘雪穿云掌': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 30,
                 'hurt_i': 70,
                 'hit': 0,
@@ -1008,10 +1273,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '掌力忽吞忽吐，意在引开敌人内力而后功',
+                'count_tt': 0,
+                'count_all': 0
             },
             '一元指': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 60,
                 'hurt_i': 80,
                 'hit': 0.1,
@@ -1026,10 +1293,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '内伤伤害+5%，5s',
                 'remark': '轻盈迅捷指法',
+                'count_tt': 0,
+                'count_all': 0
             },
             '四象掌': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 80,
                 'hurt_i': 80,
                 'hit': 0,
@@ -1044,10 +1313,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '闪避+5%',
                 'remark': '圆中有方，阴阳相成，暗藏天地阴阳、方圆动静四象',
+                'count_tt': 0,
+                'count_all': 0
             },
             '金顶绵掌': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 60,
                 'hurt_i': 100,
                 'hit': 0,
@@ -1062,10 +1333,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '内伤伤害+5%，5s',
                 'remark': '迅速的直击掌法，掌力犹如长江大河，汹涌不绝',
+                'count_tt': 0,
+                'count_all': 0
             },
             '佛光普照': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 80,
                 'hurt_i': 80,
                 'hit': 0.3,
@@ -1080,10 +1353,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '闪避+5%',
                 'remark': '源于佛门心法，佛光西来，普照天下众生',
+                'count_tt': 0,
+                'count_all': 0
             },
             '灭腿': {
                 'attFr_body': 'leg',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 160,
                 'hurt_i': 80,
                 'hit': -0.1,
@@ -1098,10 +1373,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '灭绝腿法',
+                'count_tt': 0,
+                'count_all': 0
             },
             '绝腿': {
                 'attFr_body': 'leg',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 80,
                 'hurt_i': 130,
                 'hit': -0.1,
@@ -1116,6 +1393,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '内伤伤害+5%，5s',
                 'remark': '灭绝腿法',
+                'count_tt': 0,
+                'count_all': 0
             },
         },
         'zDef': {
@@ -1125,6 +1404,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '内伤伤害+5%，5s',
                 'remark': '[暂无数据] - 064',
+                'count_tt': 0,
+                'count_all': 0
             },
             '截手九式': {
                 'def_body': ['hand', 'leg',],
@@ -1132,6 +1413,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '[暂无数据] - 065',
+                'count_tt': 0,
+                'count_all': 0
             },
             '四象莲华': {
                 'def_body': ['hand', 'leg',],
@@ -1139,6 +1422,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '[暂无数据] - 066',
+                'count_tt': 0,
+                'count_all': 0
             },
             '分花拂柳': {
                 'def_body': ['hand', 'leg',],
@@ -1146,6 +1431,8 @@ export const data_S = {
                 'TX_inf': '如同闪避，不受格挡，不弹反伤害',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '[暂无数据] - 067',
+                'count_tt': 0,
+                'count_all': 0
             },
         },
         'zDod': {
@@ -1155,6 +1442,8 @@ export const data_S = {
                 'TX_inf': '下次的攻击前摇-0.2s',
                 'LZ_inf': '内外伤伤害+5%，5s',
                 'remark': '高高跃起，准备下落攻击',
+                'count_tt': 0,
+                'count_all': 0
             },
             '移花接木': {
                 'const': 5,
@@ -1162,10 +1451,36 @@ export const data_S = {
                 'TX_inf': '按命中弹反伤害',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '利用树木山石替代自身受到攻击，照常弹反伤害',
+                'count_tt': 0,
+                'count_all': 0
             },
-            '梅花步': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '外伤伤害+5%，5s', 'remark': '',},
-            '莲花步': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '内伤伤害+5%，5s', 'remark': '',},
-            '跌打十八式': {'const': 5, 'dod': 0.05, 'TX_inf': '反击外伤伤害25，内伤伤害25', 'LZ_inf': '外伤伤害+5%，5s', 'remark': '',},
+            '梅花步': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '外伤伤害+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '莲花步': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '内伤伤害+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '跌打十八式': {
+                'const': 5,
+                'dod': 0.05,
+                'TX_inf': '反击外伤伤害25，内伤伤害25',
+                'LZ_inf': '外伤伤害+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
         },
         'zPas': {
             '千手法': {'TX_inf': '格挡+10%', 'remark': '[暂无数据] - 114',},
@@ -1183,7 +1498,7 @@ export const data_S = {
         'zAtt': {
             '大力金刚指': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 20,
                 'hurt_i': 30,
                 'hit': 0.05,
@@ -1198,10 +1513,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '[暂无数据] - 001',
+                'count_tt': 0,
+                'count_all': 0
             },
             '大力金刚拳': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 60,
                 'hurt_i': 60,
                 'hit': 0,
@@ -1216,10 +1533,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡+5%，5s',
                 'remark': '[暂无数据] - 002',
+                'count_tt': 0,
+                'count_all': 0
             },
             '无上大力蹬': {
                 'attFr_body': 'leg',
-                'attTo_body': ['body', 'hand', 'leg',],
+                'attTo_body': ['', 'body', 'hand', 'leg'],
                 'hurt_o': 30,
                 'hurt_i': 90,
                 'hit': -0.05,
@@ -1234,10 +1553,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '内伤伤害 +5%，5s',
                 'remark': '[暂无数据] - 003',
+                'count_tt': 0,
+                'count_all': 0
             },
             '大力金刚腿': {
                 'attFr_body': 'leg',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 100,
                 'hurt_i': 50,
                 'hit': -0.05,
@@ -1252,10 +1573,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤伤害 +5%，5s',
                 'remark': '[暂无数据] - 004',
+                'count_tt': 0,
+                'count_all': 0
             },
             '波罗密掌': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 30,
                 'hurt_i': 50,
                 'hit': 0,
@@ -1270,10 +1593,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '真气伤害 +5%，5s',
                 'remark': '[暂无数据] - 005',
+                'count_tt': 0,
+                'count_all': 0
             },
             '金刚诛灭手': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 40,
                 'hurt_i': 70,
                 'hit': 0,
@@ -1288,10 +1613,12 @@ export const data_S = {
                 'TX_inf': '对方防御-20%，5s',
                 'LZ_inf': '本招式特效加倍',
                 'remark': '[暂无数据] - 006',
+                'count_tt': 0,
+                'count_all': 0
             },
             '明王拙火定': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 90,
                 'hurt_i': 20,
                 'hit': 0,
@@ -1306,10 +1633,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '真气伤害 +5%，5s',
                 'remark': '[暂无数据] - 007',
+                'count_tt': 0,
+                'count_all': 0
             },
             '大日如来掌': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 80,
                 'hurt_i': 60,
                 'hit': -0.05,
@@ -1324,6 +1653,8 @@ export const data_S = {
                 'TX_inf': '封锁对方真气回复3s',
                 'LZ_inf': '真气伤害 +5%，5s',
                 'remark': '[暂无数据] - 008',
+                'count_tt': 0,
+                'count_all': 0
             },
         },
         'zDef': {
@@ -1333,6 +1664,8 @@ export const data_S = {
                 'TX_inf': '真气恢复20',
                 'LZ_inf': '真气伤害+5%，5s',
                 'remark': '[暂无数据] - 070',
+                'count_tt': 0,
+                'count_all': 0
             },
             '金刚灌顶': {
                 'def_body': ['hand', 'leg',],
@@ -1340,6 +1673,8 @@ export const data_S = {
                 'TX_inf': '外伤防御+5%，5s',
                 'LZ_inf': '外伤防御+5%，5s',
                 'remark': '[暂无数据] - 071',
+                'count_tt': 0,
+                'count_all': 0
             },
             '三密合应手': {
                 'def_body': ['hand',],
@@ -1347,6 +1682,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 072',
+                'count_tt': 0,
+                'count_all': 0
             },
             '灵热护身掌': {
                 'def_body': ['hand',],
@@ -1354,6 +1691,8 @@ export const data_S = {
                 'TX_inf': '内伤防御+5%，5s',
                 'LZ_inf': '内伤防御+5%，5s',
                 'remark': '[暂无数据] - 073',
+                'count_tt': 0,
+                'count_all': 0
             },
             '魔障护体': {
                 'def_body': ['hand', 'leg',],
@@ -1361,12 +1700,38 @@ export const data_S = {
                 'TX_inf': '能格挡特殊招式',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 074',
+                'count_tt': 0,
+                'count_all': 0
             },
         },
         'zDod': {
-            '易筋缩骨': {'const': 5, 'dod': 0, 'TX_inf': '内外伤防御+5%，5s', 'LZ_inf': '内外伤防御+5%，5s', 'remark': '',},
-            '神足通': {'const': 20, 'dod': 0.3, 'TX_inf': '下次攻击前摇+0.2s', 'LZ_inf': '闪避+5%，5s', 'remark': '',},
-            '七轮感应': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '闪避+5%，5s', 'remark': '',},
+            '易筋缩骨': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '内外伤防御+5%，5s',
+                'LZ_inf': '内外伤防御+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '神足通': {
+                'const': 20,
+                'dod': 0.3,
+                'TX_inf': '下次攻击前摇+0.2s',
+                'LZ_inf': '闪避+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '七轮感应': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '闪避+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
         },
         'zPas': {
             '金刚不坏身': {'TX_inf': '外伤防御 +15%，内伤防御 +15%，', 'remark': '[暂无数据] - 118',},
@@ -1385,7 +1750,7 @@ export const data_S = {
         'zAtt': {
             '子午毒砂': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head',],
+                'attTo_body': ['head', '', '', ''],
                 'hurt_o': 0,
                 'hurt_i': 0,
                 'hit': -0.05,
@@ -1397,13 +1762,15 @@ export const data_S = {
                 'hurt_q': 0,
                 'hurt_b': 0,
                 'hurt_p': 25,
-                'TX_inf': '不能格挡，敌方命中-5%，格挡破绽+10%，5s',
+                'TX_inf': '不能格挡，敌方命中-20%，格挡破绽+10%，5s',
                 'LZ_inf': '毒伤害+5，5s',
-                'remark': '[暂无数据] - 009',
+                'remark': '以毒砂射向对方眼睛，阴险至极',
+                'count_tt': 0,
+                'count_all': 0
             },
             '毒蒺藜': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 10,
                 'hurt_i': 0,
                 'hit': 0,
@@ -1418,10 +1785,12 @@ export const data_S = {
                 'TX_inf': '流血持续 5s，对方闪避破绽+10%，5s',
                 'LZ_inf': '流血伤害+5/s，5s',
                 'remark': '[暂无数据] - 010',
+                'count_tt': 0,
+                'count_all': 0
             },
             '暴雨梨花针': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 30,
                 'hurt_i': 0,
                 'hit': 0.05,
@@ -1436,10 +1805,12 @@ export const data_S = {
                 'TX_inf': '流血持续 5s，对方所有破绽率+10%，5s',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '[暂无数据] - 011',
+                'count_tt': 0,
+                'count_all': 0
             },
             '十二金钱镖': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 20,
                 'hurt_i': 20,
                 'hit': 0,
@@ -1454,10 +1825,12 @@ export const data_S = {
                 'TX_inf': '对方所有破绽率+10%，10s',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '[暂无数据] - 012',
+                'count_tt': 0,
+                'count_all': 0
             },
             '穿心透骨钉': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 30,
                 'hurt_i': 30,
                 'hit': 0,
@@ -1472,10 +1845,12 @@ export const data_S = {
                 'TX_inf': '流血持续 5s',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '[暂无数据] - 013',
+                'count_tt': 0,
+                'count_all': 0
             },
             '七煞袖箭': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 60,
                 'hurt_i': 0,
                 'hit': 0,
@@ -1490,10 +1865,12 @@ export const data_S = {
                 'TX_inf': '流血持续 5s',
                 'LZ_inf': '流血伤害+5/s，5s',
                 'remark': '[暂无数据] - 014',
+                'count_tt': 0,
+                'count_all': 0
             },
             '乱飞蝗': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 30,
                 'hurt_i': 10,
                 'hit': 0.05,
@@ -1508,10 +1885,12 @@ export const data_S = {
                 'TX_inf': '对方所有破绽率+10%，5s',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '[暂无数据] - 015',
+                'count_tt': 0,
+                'count_all': 0
             },
             '血天腐地炮': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 100,
                 'hurt_i': 20,
                 'hit': -0.1,
@@ -1526,6 +1905,8 @@ export const data_S = {
                 'TX_inf': '流血持续 5s，敌方命中-5%，格挡破绽+10%，5s',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '[暂无数据] - 016',
+                'count_tt': 0,
+                'count_all': 0
             },
         },
         'zDef': {
@@ -1535,17 +1916,83 @@ export const data_S = {
                 'TX_inf': '如同闪避，不受格挡，不弹反伤害',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '[暂无数据] - 076',
+                'count_tt': 0,
+                'count_all': 0
             },
-            '奇门遁甲': {'def_body': ['hand',], 'block': 0, 'TX_inf': '', 'LZ_inf': '闪避+5%，5s', 'remark': '[暂无数据] - 077',},
+            '奇门遁甲': {
+                'def_body': ['hand',],
+                'block': 0,
+                'TX_inf': '',
+                'LZ_inf': '闪避+5%，5s',
+                'remark': '[暂无数据] - 077',
+                'count_tt': 0,
+                'count_all': 0
+            },
         },
         'zDod': {
-            '金蝉脱壳': {'const': 10, 'dod': 0.4, 'TX_inf': '下次的攻击前摇+0.1s', 'LZ_inf': '闪避+5%，5s', 'remark': '',},
-            '魅影迷踪': {'const': 6, 'dod': 0.1, 'TX_inf': '', 'LZ_inf': '命中+5%，5s', 'remark': '虚影重重，奥妙迷踪',},
-            '傀儡分身': {'const': 8, 'dod': 0.2, 'TX_inf': '', 'LZ_inf': '闪避+5%，5s', 'remark': '',},
-            '重重鬼影': {'const': 5, 'dod': 0.05, 'TX_inf': '', 'LZ_inf': '闪避+5%，5s', 'remark': '',},
-            '烟遁': {'const': 5, 'dod': 0.1, 'TX_inf': '', 'LZ_inf': '毒伤害+5，5s', 'remark': '',},
-            '冲天纵': {'const': 7, 'dod': 0, 'TX_inf': '下次的攻击前摇-0.1s', 'LZ_inf': '命中+5%，5s', 'remark': '一跃而起，居高临下',},
-            '飞沙急退': {'const': 5, 'dod': 0.1, 'TX_inf': '命中+15%，1s', 'LZ_inf': '闪避+5%，5s', 'remark': '急退同时踢起沙土，掩护暗器',},
+            '金蝉脱壳': {
+                'const': 10,
+                'dod': 0.4,
+                'TX_inf': '下次的攻击前摇+0.1s',
+                'LZ_inf': '闪避+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '魅影迷踪': {
+                'const': 6,
+                'dod': 0.1,
+                'TX_inf': '',
+                'LZ_inf': '命中+5%，5s',
+                'remark': '虚影重重，奥妙迷踪',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '傀儡分身': {
+                'const': 8,
+                'dod': 0.2,
+                'TX_inf': '',
+                'LZ_inf': '闪避+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '重重鬼影': {
+                'const': 5,
+                'dod': 0.05,
+                'TX_inf': '',
+                'LZ_inf': '闪避+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '烟遁': {
+                'const': 5,
+                'dod': 0.1,
+                'TX_inf': '',
+                'LZ_inf': '毒伤害+5，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '冲天纵': {
+                'const': 7,
+                'dod': 0,
+                'TX_inf': '下次的攻击前摇-0.1s',
+                'LZ_inf': '命中+5%，5s',
+                'remark': '一跃而起，居高临下',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '飞沙急退': {
+                'const': 5,
+                'dod': 0.1,
+                'TX_inf': '命中+15%，1s',
+                'LZ_inf': '闪避+5%，5s',
+                'remark': '急退同时踢起沙土，掩护暗器',
+                'count_tt': 0,
+                'count_all': 0
+            },
         },
         'zPas': {
             '天女散花': {'TX_inf': '命中+10%', 'remark': '[暂无数据] - 123',},
@@ -1563,7 +2010,7 @@ export const data_S = {
         'zAtt': {
             '黄坟砂': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 10,
                 'hurt_i': 0,
                 'hit': -0.05,
@@ -1578,10 +2025,12 @@ export const data_S = {
                 'TX_inf': '不能格挡，【尸血毒】爆发时，马上结算流血伤害',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '[暂无数据] - 017',
+                'count_tt': 0,
+                'count_all': 0
             },
             '血犼魔掌': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 50,
                 'hurt_i': 30,
                 'hit': 0,
@@ -1596,10 +2045,12 @@ export const data_S = {
                 'TX_inf': '对方所有流血持续时间+5s',
                 'LZ_inf': '流血伤害+5/s，5s',
                 'remark': '[暂无数据] - 018',
+                'count_tt': 0,
+                'count_all': 0
             },
             '血池鬼爪': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 40,
                 'hurt_i': 10,
                 'hit': 0,
@@ -1614,10 +2065,12 @@ export const data_S = {
                 'TX_inf': '流血持续 5s',
                 'LZ_inf': '流血伤害+5/s，5s',
                 'remark': '[暂无数据] - 019',
+                'count_tt': 0,
+                'count_all': 0
             },
             '腐尸化血掌': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 10,
                 'hurt_i': 20,
                 'hit': 0,
@@ -1632,10 +2085,12 @@ export const data_S = {
                 'TX_inf': '当前部位剩余流血伤害转化为【血毒】',
                 'LZ_inf': '毒伤害+5，5s',
                 'remark': '[暂无数据] - 020',
+                'count_tt': 0,
+                'count_all': 0
             },
             '黄泉指': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 30,
                 'hurt_i': 0,
                 'hit': 0.05,
@@ -1650,10 +2105,12 @@ export const data_S = {
                 'TX_inf': '流血持续 5s',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '[暂无数据] - 021',
+                'count_tt': 0,
+                'count_all': 0
             },
             '血煞掌': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 20,
                 'hurt_i': 20,
                 'hit': 0,
@@ -1668,10 +2125,12 @@ export const data_S = {
                 'TX_inf': '流血持续 5s，当前部位流血伤害马上结算',
                 'LZ_inf': '流血伤害+5/s，5s',
                 'remark': '[暂无数据] - 022',
+                'count_tt': 0,
+                'count_all': 0
             },
             '大阴风腿': {
                 'attFr_body': 'leg',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 80,
                 'hurt_i': 0,
                 'hit': -0.1,
@@ -1686,10 +2145,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '毒伤害+5，5s',
                 'remark': '[暂无数据] - 023',
+                'count_tt': 0,
+                'count_all': 0
             },
             '血影腿': {
                 'attFr_body': 'leg',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 80,
                 'hurt_i': 0,
                 'hit': -0.1,
@@ -1704,6 +2165,8 @@ export const data_S = {
                 'TX_inf': '流血持续 5s',
                 'LZ_inf': '流血伤害+5/s，5s',
                 'remark': '[暂无数据] - 024',
+                'count_tt': 0,
+                'count_all': 0
             },
         },
         'zDef': {
@@ -1713,6 +2176,8 @@ export const data_S = {
                 'TX_inf': '外伤防御+5%，5s',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 079',
+                'count_tt': 0,
+                'count_all': 0
             },
             '分筋错骨手': {
                 'def_body': ['hand',],
@@ -1720,21 +2185,65 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 080',
+                'count_tt': 0,
+                'count_all': 0
             },
-            '鬼门关': {'def_body': ['hand',], 'block': 0, 'TX_inf': '', 'LZ_inf': '格挡率+5%，5s', 'remark': '[暂无数据] - 081',},
+            '鬼门关': {
+                'def_body': ['hand',],
+                'block': 0,
+                'TX_inf': '',
+                'LZ_inf': '格挡率+5%，5s',
+                'remark': '[暂无数据] - 081',
+                'count_tt': 0,
+                'count_all': 0
+            },
             '百鬼临身': {
                 'def_body': ['hand', 'leg',],
                 'block': 0,
                 'TX_inf': '内伤防御+5%，5s',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 082',
+                'count_tt': 0,
+                'count_all': 0
             },
         },
         'zDod': {
-            '飞尸大傩舞': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '闪避+5%，5s', 'remark': '',},
-            '游魂诡步': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '命中+5%，5s', 'remark': '',},
-            '坟头遁': {'const': 5, 'dod': 0.05, 'TX_inf': '', 'LZ_inf': '闪避+5%，5s', 'remark': '',},
-            '移魂大法': {'const': 10, 'dod': 0.3, 'TX_inf': '下次攻击前摇+0.2s', 'LZ_inf': '闪避+5%，5s', 'remark': '',},
+            '飞尸大傩舞': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '闪避+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '游魂诡步': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '命中+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '坟头遁': {
+                'const': 5,
+                'dod': 0.05,
+                'TX_inf': '',
+                'LZ_inf': '闪避+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '移魂大法': {
+                'const': 10,
+                'dod': 0.3,
+                'TX_inf': '下次攻击前摇+0.2s',
+                'LZ_inf': '闪避+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
         },
         'zPas': {
             '血犼邪经': {'TX_inf': '流血持续时间+1s', 'remark': '[暂无数据] - 127',},
@@ -1752,25 +2261,27 @@ export const data_S = {
         'zAtt': {
             '狮啸功': {
                 'attFr_body': 'head',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', '', '', ''],
                 'hurt_o': 0,
                 'hurt_i': 30,
-                'hit': 0.3,
-                'block': 0,
+                'hit': 1,
+                'block': 1,
                 'time_q': 0.9,
                 'time_z': 2,
                 'time_h': 0.5,
                 'const': 20,
-                'hurt_q': 0,
+                'hurt_q': 50,
                 'hurt_b': 0,
                 'hurt_p': 0,
-                'TX_inf': '所有部位均受伤害，反伤/反击无效',
+                'TX_inf': '反伤/反击无效，封锁对方真气回复3s',
                 'LZ_inf': '连招命中后，内伤伤害+10，5s',
-                'remark': '[暂无数据] - 025',
+                'remark': '门派成名绝技',
+                'count_tt': 0,
+                'count_all': 0
             },
             '铁头功': {
                 'attFr_body': 'head',
-                'attTo_body': ['head', 'body',],
+                'attTo_body': ['head', 'body', '', ''],
                 'hurt_o': 80,
                 'hurt_i': 0,
                 'hit': 0.1,
@@ -1785,10 +2296,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '[暂无数据] - 026',
+                'count_tt': 0,
+                'count_all': 0
             },
             '金砂掌': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 70,
                 'hurt_i': 0,
                 'hit': 0,
@@ -1803,10 +2316,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '[暂无数据] - 027',
+                'count_tt': 0,
+                'count_all': 0
             },
             '开弓手': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 70,
                 'hurt_i': 0,
                 'hit': 0.05,
@@ -1821,10 +2336,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡+5%，5s',
                 'remark': '[暂无数据] - 028',
+                'count_tt': 0,
+                'count_all': 0
             },
             '裂碑掌': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 90,
                 'hurt_i': 0,
                 'hit': 0,
@@ -1839,10 +2356,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '[暂无数据] - 029',
+                'count_tt': 0,
+                'count_all': 0
             },
             '铁担手': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 80,
                 'hurt_i': 0,
                 'hit': 0,
@@ -1857,10 +2376,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡+5%，5s',
                 'remark': '[暂无数据] - 030',
+                'count_tt': 0,
+                'count_all': 0
             },
             '推山掌': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand',],
+                'attTo_body': ['head', 'body', 'hand', ''],
                 'hurt_o': 50,
                 'hurt_i': 0,
                 'hit': 0,
@@ -1875,10 +2396,12 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡+5%，5s',
                 'remark': '[暂无数据] - 031',
+                'count_tt': 0,
+                'count_all': 0
             },
             '霸王腿': {
                 'attFr_body': 'leg',
-                'attTo_body': ['body', 'hand', 'leg',],
+                'attTo_body': ['', 'body', 'hand', 'leg'],
                 'hurt_o': 120,
                 'hurt_i': 0,
                 'hit': -0.15,
@@ -1893,6 +2416,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '[暂无数据] - 032',
+                'count_tt': 0,
+                'count_all': 0
             },
         },
         'zDef': {
@@ -1902,6 +2427,8 @@ export const data_S = {
                 'TX_inf': '以真实伤害反击对方100%内伤攻击，打断连招',
                 'LZ_inf': '内外伤防御+5%，5s',
                 'remark': '[暂无数据] - 084',
+                'count_tt': 0,
+                'count_all': 0
             },
             '十三太保横练': {
                 'def_body': ['hand', 'leg',],
@@ -1909,6 +2436,8 @@ export const data_S = {
                 'TX_inf': '外伤防御+15%，5s',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 085',
+                'count_tt': 0,
+                'count_all': 0
             },
             '横江锁擒': {
                 'def_body': ['hand', 'leg',],
@@ -1916,6 +2445,8 @@ export const data_S = {
                 'TX_inf': '命中率+10%，5s，打断连招',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 086',
+                'count_tt': 0,
+                'count_all': 0
             },
             '霸王刃甲功': {
                 'def_body': ['hand', 'leg',],
@@ -1923,6 +2454,8 @@ export const data_S = {
                 'TX_inf': '以真实伤害反击对方100%外伤攻击，打断连招',
                 'LZ_inf': '外伤伤害+10%，5s',
                 'remark': '[暂无数据] - 087',
+                'count_tt': 0,
+                'count_all': 0
             },
             '刀枪不入法': {
                 'def_body': ['hand', 'leg',],
@@ -1930,6 +2463,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤防御+5%，5s',
                 'remark': '[暂无数据] - 088',
+                'count_tt': 0,
+                'count_all': 0
             },
             '铜筋铁骨': {
                 'def_body': ['hand', 'leg',],
@@ -1937,12 +2472,38 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '[暂无数据] - 089',
+                'count_tt': 0,
+                'count_all': 0
             },
         },
         'zDod': {
-            '铁桥步': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '格挡+5%，5s', 'remark': '',},
-            '狮子奋迅': {'const': 10, 'dod': 0.1, 'TX_inf': '', 'LZ_inf': '命中+5%，5s', 'remark': '',},
-            '震山步': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '内外伤防御+5%，5s', 'remark': '',},
+            '铁桥步': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '格挡+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '狮子奋迅': {
+                'const': 10,
+                'dod': 0.1,
+                'TX_inf': '',
+                'LZ_inf': '命中+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '震山步': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '内外伤防御+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
         },
         'zPas': {
             '金猊镇魔功': {'TX_inf': '格挡能打断连招', 'remark': '[暂无数据] - 131',},
@@ -1960,7 +2521,7 @@ export const data_S = {
         'zAtt': {
             '参合指': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 30,
                 'hurt_i': 30,
                 'hit': 0.05,
@@ -1975,10 +2536,12 @@ export const data_S = {
                 'TX_inf': '封锁对方真气回复3s',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '[暂无数据] - 033',
+                'count_tt': 0,
+                'count_all': 0
             },
             '其人之道·攻': {
                 'attFr_body': 'all',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 0,
                 'hurt_i': 0,
                 'hit': 0,
@@ -1993,10 +2556,12 @@ export const data_S = {
                 'TX_inf': '使用对方对应顺序的招式，所有效果一样。其人之道不算重复',
                 'LZ_inf': '',
                 'remark': '[暂无数据] - 034',
+                'count_tt': 0,
+                'count_all': 0
             },
             '流云袖': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 0,
                 'hurt_i': 40,
                 'hit': 0.15,
@@ -2011,10 +2576,12 @@ export const data_S = {
                 'TX_inf': '闪避+5%，5s',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '[暂无数据] - 035',
+                'count_tt': 0,
+                'count_all': 0
             },
             '重云掩日手': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 20,
                 'hurt_i': 30,
                 'hit': 0,
@@ -2029,10 +2596,12 @@ export const data_S = {
                 'TX_inf': '闪避+5%，5s',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '[暂无数据] - 036',
+                'count_tt': 0,
+                'count_all': 0
             },
             '蓄云欲雨掌': {
                 'attFr_body': 'hand',
-                'attTo_body': ['head', 'body', 'hand', 'leg',],
+                'attTo_body': ['head', 'body', 'hand', 'leg'],
                 'hurt_o': 10,
                 'hurt_i': 40,
                 'hit': 0.08,
@@ -2047,6 +2616,8 @@ export const data_S = {
                 'TX_inf': '闪避+5%，5s',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '[暂无数据] - 037',
+                'count_tt': 0,
+                'count_all': 0
             },
         },
         'zDef': {
@@ -2056,6 +2627,8 @@ export const data_S = {
                 'TX_inf': '反弹对方所有攻击，打断连招',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '[暂无数据] - 091',
+                'count_tt': 0,
+                'count_all': 0
             },
             '其人之道·守': {
                 'def_body': ['hand', 'leg',],
@@ -2063,14 +2636,56 @@ export const data_S = {
                 'TX_inf': '使用对方对应顺序的招式，所有效果一样。其人之道不算重复',
                 'LZ_inf': '',
                 'remark': '[暂无数据] - 092',
+                'count_tt': 0,
+                'count_all': 0
             },
         },
         'zDod': {
-            '移形换影': {'const': 7, 'dod': 0.1, 'TX_inf': '', 'LZ_inf': '闪避+5%，5s', 'remark': '',},
-            '斗转星移': {'const': 5, 'dod': 0.05, 'TX_inf': '反弹对方所有攻击，打断连招', 'LZ_inf': '闪避+5%，5s', 'remark': '',},
-            '柳拂衣': {'const': 5, 'dod': 0.05, 'TX_inf': '', 'LZ_inf': '闪避+5%，5s', 'remark': '',},
-            '驰骋疆场': {'const': 5, 'dod': 0, 'TX_inf': '', 'LZ_inf': '命中+5%，5s', 'remark': '',},
-            '其人之道·闪': {'const': 0, 'dod': 0, 'TX_inf': '使用对方对应顺序的招式，所有效果一样。其人之道不算重复', 'LZ_inf': '', 'remark': '',},
+            '移形换影': {
+                'const': 7,
+                'dod': 0.1,
+                'TX_inf': '',
+                'LZ_inf': '闪避+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '斗转星移': {
+                'const': 5,
+                'dod': 0.05,
+                'TX_inf': '反弹对方所有攻击，打断连招',
+                'LZ_inf': '闪避+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '柳拂衣': {
+                'const': 5,
+                'dod': 0.05,
+                'TX_inf': '',
+                'LZ_inf': '闪避+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '驰骋疆场': {
+                'const': 5,
+                'dod': 0,
+                'TX_inf': '',
+                'LZ_inf': '命中+5%，5s',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
+            '其人之道·闪': {
+                'const': 0,
+                'dod': 0,
+                'TX_inf': '使用对方对应顺序的招式，所有效果一样。其人之道不算重复',
+                'LZ_inf': '',
+                'remark': '',
+                'count_tt': 0,
+                'count_all': 0
+            },
         },
         'zPas': {
             '卜卦': {'TX_inf': '命中+10%，闪避+10%', 'remark': '[暂无数据] - 135',},

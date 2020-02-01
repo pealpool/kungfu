@@ -1,6 +1,7 @@
 'use strict';
 import $ from 'jquery';
 import {data_S} from './myData_S.js';
+import {data_const} from './myData_const.js';
 import {Person} from './myData_P.js';
 import './css/baseCss.scss';
 import 'webpack-jquery-ui';
@@ -1365,11 +1366,14 @@ $(document).on('click', '.moNext', function () {
 $(document).on('click', '.table_attFromT >div', function () {
     $(this).parent().find('.tableSelect').removeClass('tableSelect');
     $(this).addClass('tableSelect');
+    attCountSub($(this));
 });
 
 $(document).on('click', '.table_attToT >div', function () {
-    $(this).parent().find('.tableSelect').removeClass('tableSelect');
-    $(this).addClass('tableSelect');
+    if ($(this).attr('class') != 'tableSelect_disable') {
+        $(this).parent().find('.tableSelect').removeClass('tableSelect');
+        $(this).addClass('tableSelect');
+    }
 });
 
 $(document).on('click', '.table_closeIcoA', function () {
@@ -1383,6 +1387,7 @@ $(document).on('click', '.table_closeIcoB', function () {
     $selectTC_Box.find('.table_Combo_F').prev().hide();
     $selectTC_Box.find('.table_Combo_F').show();
     $selectTC_Box.find('.table_Combo_F').last().hide();
+    attCountNum($selectTC_Box);
 });
 
 $('.selectTableContent_A').sortable({
@@ -1397,6 +1402,7 @@ $('.selectTableContent_A').sortable({
     update: function () {
         $(this).find('.table_Combo_F').show();
         $(this).find('.table_Combo_F').last().hide();
+        attCountNum($(this));
     }
 }).disableSelection();
 
@@ -1495,29 +1501,122 @@ $(document).on('click', '.selectKf_B_Click', function () {
 
 $(document).on('click', '#showTabs_sA .tableContent', function () {
     if ($('#showTabs_sA .selectTC_Box').length < 5) {
-        let zName, attFr, attTo, attSub, attCost, attNum, attFlaw;
+        let zName, attFr, attTo, attSub, attCost, attNum, attFlaw, tData, hp;
         zName = $(this).find('.table_Name').text();
         if ($('.selectKf_A_Click').length > 0) {
-            let atF = tDataA.zAtt[''+zName+''].attFr_body;
-            switch (atF) {
-                case 'head':
-                    attFr = '<div class="tableSelect">头部</div>';
-                    break;
-                case 'hand':
-                    attFr = '<div class="tableSelect">左手</div><div>右手</div>';
-                    break;
-                case 'leg':
-                    attFr = '<div class="tableSelect">左脚</div><div>右脚</div>';
-                    break;
-                case 'all':
-                    attFr = '跟随对方';
-                    break;
-            }
+            tData = tDataA;
+            hp = personA.hp;
+        } else {
+            tData = tDataB;
+            hp = personB.hp;
         }
-        let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">' + zName + '</div><div class="table_attFromT">'+ attFr +'</div><div class="table_attSubT">-100%</div><div class="table_attToT"><div>头部</div><div class="tableSelect">躯干</div><div>左手</div><div>右手</div><div>左脚</div><div>右脚</div></div><div class="table_attCostT">-10</div><div class="table_attNumY">2</div><div class="table_attFlawY">+100%</div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_F" style="display: none"></div></div></div>';
+        let atF = tData.zAtt['' + zName + ''].attFr_body;
+        switch (atF) {
+            case 'head':
+                attFr = '<div class="tableSelect">头部</div>';
+                break;
+            case 'hand':
+                attFr = '<div class="tableSelect">左手</div><div>右手</div>';
+                break;
+            case 'leg':
+                attFr = '<div class="tableSelect">左脚</div><div>右脚</div>';
+                break;
+            case 'all':
+                attFr = '跟随对方';
+                break;
+        }
+        if (tData.zAtt['' + zName + ''].attTo_body[0] == 'head') {
+            attTo = '<div>头部</div>';
+        } else {
+            attTo = '<div class="tableSelect_disable">头部</div>';
+        }
+        if (tData.zAtt['' + zName + ''].attTo_body[1] == 'body') {
+            attTo = attTo + '<div>躯干</div>';
+        } else {
+            attTo = attTo + '<div class="tableSelect_disable">躯干</div>';
+        }
+        if (tData.zAtt['' + zName + ''].attTo_body[2] == 'hand') {
+            attTo = attTo + '<div>左手</div><div>右手</div>';
+        } else {
+            attTo = attTo + '<div class="tableSelect_disable">左手</div><div class="tableSelect_disable">右手</div>';
+        }
+        if (tData.zAtt['' + zName + ''].attTo_body[3] == 'leg') {
+            attTo = attTo + '<div>左脚</div><div>右脚</div>';
+        } else {
+            attTo = attTo + '<div class="tableSelect_disable">左脚</div><div class="tableSelect_disable">右脚</div>';
+        }
+        attCost = tData.zAtt['' + zName + ''].const;
+        let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">' + zName + '</div><div class="table_attFromT">' + attFr + '</div><div class="table_attSubT"></div><div class="table_attToT">' + attTo + '</div><div class="table_attCostT">' + attCost + '</div><div class="table_attNumY"></div><div class="table_attFlawY">' + attFlaw + '</div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_F" style="display: none"></div></div></div>';
 
         $('#showTabs_sA .table_Combo_F').eq(-1).show();
         $('#showTabs_sA .selectTableContent_A').append(addHtml);
-
+        $('#showTabs_sA .selectTC_Box:last .table_attToT >div').each(function () {
+            if ($(this).attr('class') == undefined) {
+                $(this).addClass('tableSelect');
+                return false;//跳出所有循环
+            }
+        });
+        attCountSub($('#showTabs_sA .selectTC_Box:last .table_attFromT .tableSelect'));
+        attCountNum($('#showTabs_sA .selectTableContent_A'));
     }
 });
+
+function hpToHart(hp) {
+    return (data_const.hpSubHart.a * Math.pow(hp, 2) + data_const.hpSubHart.b * hp + data_const.hpSubHart.c);
+}
+
+//招式选择栏，计算[hp伤害削减]
+function attCountSub($this) {
+    let hp;
+    if ($('.selectKf_A_Click').length > 0) {
+        hp = personA.hp;
+    } else {
+        hp = personB.hp;
+    }
+    switch ($this.text()) {
+        case '左手':
+            hp = hp.hand[0] / data_const.hp.hand;
+            break;
+        case '右手':
+            hp = hp.hand[1] / data_const.hp.hand;
+            break;
+        case '左脚':
+            hp = hp.leg[0] / data_const.hp.leg;
+            break;
+        case '右脚':
+            hp = hp.leg[1] / data_const.hp.leg;
+            break;
+        case '头部':
+            hp = hp.head / data_const.hp.head;
+            break;
+    }
+    let attSub = toPercent(hpToHart(hp));
+    $this.parent().next().text(attSub);
+}
+
+//招式选择栏，计算[已用数]
+function attCountNum($this) {
+    let tData;
+    if ($('.selectKf_A_Click').length > 0) {
+        tData = tDataA;
+    } else {
+        tData = tDataB;
+    }
+    let i = 0;
+    $this.find('.selectTC_Box .table_Name').each(function () {
+        let $that = $(this);
+        let zName = $that.text();
+        let j = 0, k = 0;
+        $this.find('.selectTC_Box .table_Name').each(function () {
+            if ($(this).text() == zName) {
+                j++;
+            }
+            if (k >= i) {
+                return false;
+            }
+            k++;
+        });
+        $that.parent().find('.table_attNumY').text(tData.zAtt['' + zName + ''].count_all + j);
+        i++;
+    });
+}

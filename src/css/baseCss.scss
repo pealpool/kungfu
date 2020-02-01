@@ -2218,3 +2218,11 @@ $selectBbox_h: 30px;
     @include hoverBright(1.2);
   }
 }
+
+.tableSelect_disable{
+  color: $aTab-color;
+  cursor: default!important;
+  &:hover {
+    filter: brightness(1)!important;
+  }
+}

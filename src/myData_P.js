@@ -2,6 +2,7 @@
 import $ from 'jquery';
 import {data_D} from './myData_D.js';
 import {data_i} from './myData_i.js';
+import {data_const} from './myData_const.js';
 
 export class Person {
     // sixData = new Array(4);
@@ -107,10 +108,10 @@ export class Person {
     }
 
     init() {
-        this.hp.head = 800;
-        this.hp.body = 2000;
-        this.hp.hand = [800, 800];
-        this.hp.leg = [1000, 1000];
+        this.hp.head = data_const.hp.head;
+        this.hp.body = data_const.hp.body;
+        this.hp.hand = [data_const.hp.hand, data_const.hp.hand];
+        this.hp.leg = [data_const.hp.leg, data_const.hp.leg];
         this.flaw = 0;
 
         this.calc_LL(0);
