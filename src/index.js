@@ -1620,3 +1620,7 @@ function attCountNum($this) {
         i++;
     });
 }
+
+$(document).on('click', '#showTabs_sD .tableContent', function () {
+
+});
