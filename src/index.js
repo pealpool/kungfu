@@ -455,26 +455,24 @@ $('.showTabs').tabs();
 $(document).on('mouseenter', '.tableContent', function () {
     $(this).addClass('tableContent_hover');
     let zName = $(this).find('div').eq(0).text();
-    switch ($('.ui-state-active').children('a').attr('href').toString().substr(-1, 1)) {
-        case 'A':
-
-            $('#showTabs_A .tableBox_Button_Rb').text('攻击招式');
-            $('#showTabs_A .tableBox_Button_C').text(tDataA.zAtt['' + zName + ''].remark);
+    let $this = $(this).parent().parent().parent();
+    $this.find('.tableBox_Button_Rt').text(zName);
+    switch ($(this).parent().prev().find('.table_Name').text()) {
+        case '攻击招式':
+            $this.find('.tableBox_Button_Rb').text('攻击招式');
+            $this.find('.tableBox_Button_C').text(tData.zAtt['' + zName + ''].remark);
             break;
-        case 'D':
-            $('#showTabs_D .tableBox_Button_Rt').text(zName);
-            if ($(this).parent().attr('class').toString().substr(-1, 1) == 1) {
-                $('#showTabs_D .tableBox_Button_Rb').text('格挡招式');
-                $('#showTabs_D .tableBox_Button_C').text(tDataA.zDef['' + zName + ''].remark);
-            } else {
-                $('#showTabs_D .tableBox_Button_Rb').text('闪避招式');
-                $('#showTabs_D .tableBox_Button_C').text(tDataA.zDod['' + zName + ''].remark);
-            }
+        case '格挡招式':
+            $this.find('.tableBox_Button_Rb').text('格挡招式');
+            $this.find('.tableBox_Button_C').text(tData.zDef['' + zName + ''].remark);
             break;
-        case 'B':
-            $('#showTabs_B .tableBox_Button_Rt').text(zName);
-            $('#showTabs_B .tableBox_Button_Rb').text('被动功法');
-            $('#showTabs_B .tableBox_Button_C').text(tDataA.zPas['' + zName + ''].remark);
+        case '闪避招式':
+            $this.find('.tableBox_Button_Rb').text('闪避招式');
+            $this.find('.tableBox_Button_C').text(tData.zDod['' + zName + ''].remark);
+            break;
+        case '被动功法':
+            $this.find('.tableBox_Button_Rb').text('被动功法');
+            $this.find('.tableBox_Button_C').text(tData.zPas['' + zName + ''].remark);
             break;
     }
 });
@@ -1501,7 +1499,7 @@ $(document).on('click', '.selectKf_B_Click', function () {
 
 $(document).on('click', '#showTabs_sA .tableContent', function () {
     if ($('#showTabs_sA .selectTC_Box').length < 5) {
-        let zName, attFr, attTo, attSub, attCost, attNum, attFlaw, tData, hp;
+        let zName, attFr, attTo, attCost, attFlaw, tData, hp;
         zName = $(this).find('.table_Name').text();
         if ($('.selectKf_A_Click').length > 0) {
             tData = tDataA;
@@ -1546,7 +1544,7 @@ $(document).on('click', '#showTabs_sA .tableContent', function () {
             attTo = attTo + '<div class="tableSelect_disable">左脚</div><div class="tableSelect_disable">右脚</div>';
         }
         attCost = tData.zAtt['' + zName + ''].const;
-        let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">' + zName + '</div><div class="table_attFromT">' + attFr + '</div><div class="table_attSubT"></div><div class="table_attToT">' + attTo + '</div><div class="table_attCostT">' + attCost + '</div><div class="table_attNumY"></div><div class="table_attFlawY">' + attFlaw + '</div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_F" style="display: none"></div></div></div>';
+        let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">' + zName + '</div><div class="table_attFromT">' + attFr + '</div><div class="table_attSubT"></div><div class="table_attToT">' + attTo + '</div><div class="table_attCostT">-' + attCost + '</div><div class="table_attNumY"></div><div class="table_attFlawY">' + attFlaw + '</div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_F" style="display: none"></div></div></div>';
 
         $('#showTabs_sA .table_Combo_F').eq(-1).show();
         $('#showTabs_sA .selectTableContent_A').append(addHtml);
@@ -1616,11 +1614,58 @@ function attCountNum($this) {
             }
             k++;
         });
-        $that.parent().find('.table_attNumY').text(tData.zAtt['' + zName + ''].count_all + j);
+        if ($this.parent().parent().parent().attr('id') == 'showTabs_sA') {
+            $that.parent().find('.table_attNumY').text(tData.zAtt['' + zName + ''].count_all + j);
+        } else {
+            let aaa = true;
+            for (let key in tData.zDef) {
+                console.log(key);
+                if (key == zName) {
+                    $that.parent().find('.table_attNumY').text(tData.zDef['' + zName + ''].count_all + j);
+                    aaa = false;
+                    return false;
+                }
+            }
+            if (aaa) {
+                $that.parent().find('.table_attNumY').text(tData.zDod['' + zName + ''].count_all + j);
+            }
+        }
         i++;
     });
 }
 
-$(document).on('click', '#showTabs_sD .tableContent', function () {
+$(document).on('click', '#showTabs_sD .tableContentBox_D1 .tableContent', function () {
+    if ($('#showTabs_sD .selectTC_Box').length < 5) {
+        let zName, def, attFlaw, tData;
+        zName = $(this).find('.table_Name').text();
+        if ($('.selectKf_A_Click').length > 0) {
+            tData = tDataA;
+        } else {
+            tData = tDataB;
+        }
+        def = $(this).find('.table_Number_Db').text();
+        let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">' + zName + '</div><div class="table_Dod"></div><div class="table_Block">' + def + '</div><div class="table_attToT"><div  class="tableSelect">头部</div><div>躯干</div><div>左手</div><div>右手</div><div>左脚</div><div>右脚</div></div><div class="table_attCostT"></div><div class="table_attNumY"></div><div class="table_attFlawY">' + attFlaw + '</div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_T" style="display: none"></div></div></div>';
 
+        $('#showTabs_sD .table_Combo_F').eq(-1).show();
+        $('#showTabs_sD .selectTableContent_A').append(addHtml);
+        attCountNum($('#showTabs_sD .selectTableContent_A'));
+    }
+});
+
+$(document).on('click', '#showTabs_sD .tableContentBox_D2 .tableContent', function () {
+    if ($('#showTabs_sD .selectTC_Box').length < 5) {
+        let zName, dod, attCost, attFlaw, tData;
+        zName = $(this).find('.table_Name').text();
+        if ($('.selectKf_A_Click').length > 0) {
+            tData = tDataA;
+        } else {
+            tData = tDataB;
+        }
+        dod = $(this).find('.table_Number_Db').text();
+        let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">' + zName + '</div><div class="table_Dod">' + dod + '</div><div class="table_Block"></div><div class="table_attToT"><div  class="tableSelect">头部</div><div>躯干</div><div>左手</div><div>右手</div><div>左脚</div><div>右脚</div></div><div class="table_attCostT"></div><div class="table_attNumY"></div><div class="table_attFlawY">' + attFlaw + '</div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_T" style="display: none"></div></div></div>';
+
+        $('#showTabs_sD .table_Combo_F').eq(-1).show();
+        $('#showTabs_sD .selectTableContent_A').append(addHtml);
+        attCountNum($('#showTabs_sD .selectTableContent_A'));
+    }
 });
