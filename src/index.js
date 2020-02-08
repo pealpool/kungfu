@@ -461,36 +461,36 @@ $(document).on('mouseenter', '.tableContent', function () {
     switch ($(this).parent().prev().find('.table_Name').text()) {
         case '攻击招式':
             $this.find('.tableBox_Button_Rb').text('攻击招式');
-            if(('' + zName + '') in tDataA.zAtt){
+            if (('' + zName + '') in tDataA.zAtt) {
                 tData = tDataA;
-            }else {
+            } else {
                 tData = tDataB;
             }
             $this.find('.tableBox_Button_C').text(tData.zAtt['' + zName + ''].remark);
             break;
         case '格挡招式':
             $this.find('.tableBox_Button_Rb').text('格挡招式');
-            if(('' + zName + '') in tDataA.zDef){
+            if (('' + zName + '') in tDataA.zDef) {
                 tData = tDataA;
-            }else {
+            } else {
                 tData = tDataB;
             }
             $this.find('.tableBox_Button_C').text(tData.zDef['' + zName + ''].remark);
             break;
         case '闪避招式':
             $this.find('.tableBox_Button_Rb').text('闪避招式');
-            if(('' + zName + '') in tDataA.zDod){
+            if (('' + zName + '') in tDataA.zDod) {
                 tData = tDataA;
-            }else {
+            } else {
                 tData = tDataB;
             }
             $this.find('.tableBox_Button_C').text(tData.zDod['' + zName + ''].remark);
             break;
         case '被动功法':
             $this.find('.tableBox_Button_Rb').text('被动功法');
-            if(('' + zName + '') in tDataA.zPas){
+            if (('' + zName + '') in tDataA.zPas) {
                 tData = tDataA;
-            }else {
+            } else {
                 tData = tDataB;
             }
             $this.find('.tableBox_Button_C').text(tData.zPas['' + zName + ''].remark);
@@ -1565,7 +1565,7 @@ $(document).on('click', '#showTabs_sA .tableContent', function () {
             attTo = attTo + '<div class="tableSelect_disable">左脚</div><div class="tableSelect_disable">右脚</div>';
         }
         attCost = tData.zAtt['' + zName + ''].const;
-        let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">' + zName + '</div><div class="table_attFromT">' + attFr + '</div><div class="table_attSubT"></div><div class="table_attToT">' + attTo + '</div><div class="table_attCostT">-' + attCost + '</div><div class="table_attNumY"></div><div class="table_attFlawY">' + attFlaw + '</div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_F" style="display: none"></div></div></div>';
+        let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">' + zName + '</div><div class="table_attFromT">' + attFr + '</div><div class="table_attSubT"></div><div class="table_attToT">' + attTo + '</div><div class="table_attCostT">-' + attCost + '</div><div class="table_attNumY"></div><div class="table_attFlawY"></div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_F" style="display: none"></div></div></div>';
 
         $('#showTabs_sA .table_Combo_F').eq(-1).show();
         $('#showTabs_sA .selectTableContent_A').append(addHtml);
@@ -1615,7 +1615,7 @@ function attCountSub($this) {
 
 //招式选择栏，计算[已用数]
 function attCountNum($this) {
-    let tData;
+    let tData, c;
     if ($('.selectKf_A_Click').length > 0) {
         tData = tDataA;
     } else {
@@ -1625,10 +1625,13 @@ function attCountNum($this) {
     $this.find('.selectTC_Box .table_Name').each(function () {
         let $that = $(this);
         let zName = $that.text();
-        let j = 0, k = 0;
+        let j = 0, k = 0, l = 0;
         $this.find('.selectTC_Box .table_Name').each(function () {
             if ($(this).text() == zName) {
                 j++;
+                if (k == (i - 1)) {
+                    l++;
+                }
             }
             if (k >= i) {
                 return false;
@@ -1637,13 +1640,17 @@ function attCountNum($this) {
         });
         if ($this.parent().parent().parent().attr('id') == 'showTabs_sA') {
             $that.parent().find('.table_attNumY').text(tData.zAtt['' + zName + ''].count_all + j);
+            c = (tData.zAtt['' + zName + ''].count_all + j - 1) * data_const.flaw.z + (j - 1) * data_const.flaw.h + data_const.flaw.l * l;
         } else {
-            if(('' + zName + '') in tDataA.zDef){
+            if (('' + zName + '') in tDataA.zDef) {
                 $that.parent().find('.table_attNumY').text(tData.zDef['' + zName + ''].count_all + j);
-            }else {
+                c = (tData.zDef['' + zName + ''].count_all + j - 1) * data_const.flaw.z + (j - 1) * data_const.flaw.h + data_const.flaw.l * l;
+            } else {
                 $that.parent().find('.table_attNumY').text(tData.zDod['' + zName + ''].count_all + j);
+                c = (tData.zDod['' + zName + ''].count_all + j - 1) * data_const.flaw.z + (j - 1) * data_const.flaw.h + data_const.flaw.l * l;
             }
         }
+        $that.parent().find('.table_attFlawY').text(toPercentAdd(c));
         i++;
     });
 }
@@ -1658,7 +1665,7 @@ $(document).on('click', '#showTabs_sD .tableContentBox_D1 .tableContent', functi
             tData = tDataB;
         }
         def = $(this).find('.table_Number_Db').text();
-        let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">' + zName + '</div><div class="table_Dod"></div><div class="table_Block">' + def + '</div><div class="table_attToT"><div  class="tableSelect">头部</div><div>躯干</div><div>左手</div><div>右手</div><div>左脚</div><div>右脚</div></div><div class="table_attCostT"></div><div class="table_attNumY"></div><div class="table_attFlawY">' + attFlaw + '</div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_F" style="display: none"></div></div></div>';
+        let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">' + zName + '</div><div class="table_Dod"></div><div class="table_Block">' + def + '</div><div class="table_attToT"><div  class="tableSelect">头部</div><div>躯干</div><div>左手</div><div>右手</div><div>左脚</div><div>右脚</div></div><div class="table_attCostT"></div><div class="table_attNumY"></div><div class="table_attFlawY"></div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_F" style="display: none"></div></div></div>';
 
         $('#showTabs_sD .table_Combo_F').eq(-1).show();
         $('#showTabs_sD .selectTableContent_A').append(addHtml);
@@ -1676,7 +1683,8 @@ $(document).on('click', '#showTabs_sD .tableContentBox_D2 .tableContent', functi
             tData = tDataB;
         }
         dod = $(this).find('.table_Number_Db').text();
-        let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">' + zName + '</div><div class="table_Dod">' + dod + '</div><div class="table_Block"></div><div class="table_attToT"><div  class="tableSelect">头部</div><div>躯干</div><div>左手</div><div>右手</div><div>左脚</div><div>右脚</div></div><div class="table_attCostT"></div><div class="table_attNumY"></div><div class="table_attFlawY">' + attFlaw + '</div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_F" style="display: none"></div></div></div>';
+        attCost = tData.zDod['' + zName + ''].const;
+        let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">' + zName + '</div><div class="table_Dod">' + dod + '</div><div class="table_Block"></div><div class="table_attToT"><div  class="tableSelect">头部</div><div>躯干</div><div>左手</div><div>右手</div><div>左脚</div><div>右脚</div></div><div class="table_attCostT">' + attCost + '</div><div class="table_attNumY"></div><div class="table_attFlawY"></div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_F" style="display: none"></div></div></div>';
 
         $('#showTabs_sD .table_Combo_F').eq(-1).show();
         $('#showTabs_sD .selectTableContent_A').append(addHtml);
