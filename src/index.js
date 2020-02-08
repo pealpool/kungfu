@@ -456,22 +456,43 @@ $(document).on('mouseenter', '.tableContent', function () {
     $(this).addClass('tableContent_hover');
     let zName = $(this).find('div').eq(0).text();
     let $this = $(this).parent().parent().parent();
+    let tData;
     $this.find('.tableBox_Button_Rt').text(zName);
     switch ($(this).parent().prev().find('.table_Name').text()) {
         case '攻击招式':
             $this.find('.tableBox_Button_Rb').text('攻击招式');
+            if(('' + zName + '') in tDataA.zAtt){
+                tData = tDataA;
+            }else {
+                tData = tDataB;
+            }
             $this.find('.tableBox_Button_C').text(tData.zAtt['' + zName + ''].remark);
             break;
         case '格挡招式':
             $this.find('.tableBox_Button_Rb').text('格挡招式');
+            if(('' + zName + '') in tDataA.zDef){
+                tData = tDataA;
+            }else {
+                tData = tDataB;
+            }
             $this.find('.tableBox_Button_C').text(tData.zDef['' + zName + ''].remark);
             break;
         case '闪避招式':
             $this.find('.tableBox_Button_Rb').text('闪避招式');
+            if(('' + zName + '') in tDataA.zDod){
+                tData = tDataA;
+            }else {
+                tData = tDataB;
+            }
             $this.find('.tableBox_Button_C').text(tData.zDod['' + zName + ''].remark);
             break;
         case '被动功法':
             $this.find('.tableBox_Button_Rb').text('被动功法');
+            if(('' + zName + '') in tDataA.zPas){
+                tData = tDataA;
+            }else {
+                tData = tDataB;
+            }
             $this.find('.tableBox_Button_C').text(tData.zPas['' + zName + ''].remark);
             break;
     }
@@ -1617,16 +1638,9 @@ function attCountNum($this) {
         if ($this.parent().parent().parent().attr('id') == 'showTabs_sA') {
             $that.parent().find('.table_attNumY').text(tData.zAtt['' + zName + ''].count_all + j);
         } else {
-            let aaa = true;
-            for (let key in tData.zDef) {
-                console.log(key);
-                if (key == zName) {
-                    $that.parent().find('.table_attNumY').text(tData.zDef['' + zName + ''].count_all + j);
-                    aaa = false;
-                    return false;
-                }
-            }
-            if (aaa) {
+            if(('' + zName + '') in tDataA.zDef){
+                $that.parent().find('.table_attNumY').text(tData.zDef['' + zName + ''].count_all + j);
+            }else {
                 $that.parent().find('.table_attNumY').text(tData.zDod['' + zName + ''].count_all + j);
             }
         }
@@ -1644,7 +1658,7 @@ $(document).on('click', '#showTabs_sD .tableContentBox_D1 .tableContent', functi
             tData = tDataB;
         }
         def = $(this).find('.table_Number_Db').text();
-        let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">' + zName + '</div><div class="table_Dod"></div><div class="table_Block">' + def + '</div><div class="table_attToT"><div  class="tableSelect">头部</div><div>躯干</div><div>左手</div><div>右手</div><div>左脚</div><div>右脚</div></div><div class="table_attCostT"></div><div class="table_attNumY"></div><div class="table_attFlawY">' + attFlaw + '</div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_T" style="display: none"></div></div></div>';
+        let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">' + zName + '</div><div class="table_Dod"></div><div class="table_Block">' + def + '</div><div class="table_attToT"><div  class="tableSelect">头部</div><div>躯干</div><div>左手</div><div>右手</div><div>左脚</div><div>右脚</div></div><div class="table_attCostT"></div><div class="table_attNumY"></div><div class="table_attFlawY">' + attFlaw + '</div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_F" style="display: none"></div></div></div>';
 
         $('#showTabs_sD .table_Combo_F').eq(-1).show();
         $('#showTabs_sD .selectTableContent_A').append(addHtml);
@@ -1662,7 +1676,7 @@ $(document).on('click', '#showTabs_sD .tableContentBox_D2 .tableContent', functi
             tData = tDataB;
         }
         dod = $(this).find('.table_Number_Db').text();
-        let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">' + zName + '</div><div class="table_Dod">' + dod + '</div><div class="table_Block"></div><div class="table_attToT"><div  class="tableSelect">头部</div><div>躯干</div><div>左手</div><div>右手</div><div>左脚</div><div>右脚</div></div><div class="table_attCostT"></div><div class="table_attNumY"></div><div class="table_attFlawY">' + attFlaw + '</div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_T" style="display: none"></div></div></div>';
+        let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">' + zName + '</div><div class="table_Dod">' + dod + '</div><div class="table_Block"></div><div class="table_attToT"><div  class="tableSelect">头部</div><div>躯干</div><div>左手</div><div>右手</div><div>左脚</div><div>右脚</div></div><div class="table_attCostT"></div><div class="table_attNumY"></div><div class="table_attFlawY">' + attFlaw + '</div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_F" style="display: none"></div></div></div>';
 
         $('#showTabs_sD .table_Combo_F').eq(-1).show();
         $('#showTabs_sD .selectTableContent_A').append(addHtml);
