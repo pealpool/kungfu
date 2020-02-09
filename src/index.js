@@ -157,7 +157,7 @@ function showTableContentBox_Dod(mySelectID, tData) {
     for (let key in tData.zDod) {
         myContent = '<div class="tableContent"><div class="table_Name">' + key +
             '</div><div class="table_Number_Db">' + toPercentAdd(tData.zDod[key].dod) +
-            '</div><div class="table_Number_Ds">' + toZero(tData.zDod[key].const) +
+            '</div><div class="table_Number_Ds">' + toZero(tData.zDod[key].zqConst) +
             '</div><div class="table_Tx_S">' + tData.zDod[key].TX_inf +
             '</div><div class="table_Lz_D">' + tData.zDod[key].LZ_inf +
             '</div></div>';
@@ -188,7 +188,7 @@ function showTableContentBox_Att_TBo($mySelectID, tData, person) {
             (tData.zAtt[key].time_q + person.timeAdd_q).toFixed(1) + 's</div><div class="table_NumberN">' +
             (tData.zAtt[key].time_z + person.timeAdd_z).toFixed(1) + 's</div><div class="table_NumberN">' +
             (tData.zAtt[key].time_h + person.timeAdd_h).toFixed(1) + 's</div><div class="table_NumberN">' +
-            toZero(tData.zAtt[key].const) + '</div><div class="table_NumberN">' +
+            toZero(tData.zAtt[key].zqConst) + '</div><div class="table_NumberN">' +
             toZero(Math.round(tData.zAtt[key].hurt_q * (1 + person.zqHurtAdd))) + '</div><div class="table_NumberN">' +
             toPerS(Math.round(tData.zAtt[key].hurt_b * (1 + person.bleedAdd))) + '</div><div class="table_NumberN">' +
             toZero(Math.round(tData.zAtt[key].hurt_p * (1 + person.poisonAdd))) + '</div></div><div class="table_ot table_Tx">';
@@ -226,7 +226,7 @@ function showTableContentBox_Att_Txo($mySelectID, tData, person) {
             's</div><div class="table_NumberN" style="display: none;">' +
             (tData.zAtt[key].time_h + person.timeAdd_h).toFixed(1) +
             's</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].const) +
+            toZero(tData.zAtt[key].zqConst) +
             '</div><div class="table_NumberN" style="display: none;">' +
             toZero(Math.round(tData.zAtt[key].hurt_q * (1 + person.zqHurtAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
@@ -268,7 +268,7 @@ function showTableContentBox_Att_Lzo($mySelectID, tData, person) {
             's</div><div class="table_NumberN" style="display: none;">' +
             (tData.zAtt[key].time_h + person.timeAdd_h).toFixed(1) +
             's</div><div class="table_NumberN" style="display: none;">' +
-            toZero(tData.zAtt[key].const) +
+            toZero(tData.zAtt[key].zqConst) +
             '</div><div class="table_NumberN" style="display: none;">' +
             toZero(Math.round(tData.zAtt[key].hurt_q * (1 + person.zqHurtAdd))) +
             '</div><div class="table_NumberN" style="display: none;">' +
@@ -1407,6 +1407,7 @@ $(document).on('click', '.table_closeIcoB', function () {
     $selectTC_Box.find('.table_Combo_F').show();
     $selectTC_Box.find('.table_Combo_F').last().hide();
     attCountNum($selectTC_Box);
+    comboCostCount($selectTC_Box);
 });
 
 $('.selectTableContent_A').sortable({
@@ -1422,6 +1423,7 @@ $('.selectTableContent_A').sortable({
         $(this).find('.table_Combo_F').show();
         $(this).find('.table_Combo_F').last().hide();
         attCountNum($(this));
+        comboCostCount($(this));
     }
 }).disableSelection();
 
@@ -1439,6 +1441,19 @@ $(document).on('click', '.table_Combo_T', function () {
         $next.prev().attr('class', 'table_ComboLink_T');
     }
     $(this).attr('class', 'table_Combo_F');
+
+    let zName, attCost, tData;
+    if ($('.selectKf_A_Click').length > 0) {
+        tData = tDataA;
+    } else {
+        tData = tDataB;
+    }
+    $next = $(this).parent().parent().next();
+    zName = $next.find('.table_Name').text();
+    if ($next.parent().parent().parent().parent().attr('id') == 'showTabs_sA') {
+        attCost = -tData.zAtt['' + zName + ''].zqConst;
+        $next.find('.table_attCostT').text(attCost);
+    }
 });
 
 $(document).on('click', '.table_Combo_F', function () {
@@ -1456,6 +1471,19 @@ $(document).on('click', '.table_Combo_F', function () {
         $next.prev().attr('class', 'table_ComboLink_L');
     }
     $(this).attr('class', 'table_Combo_T');
+
+    let zName, attCost, tData;
+    if ($('.selectKf_A_Click').length > 0) {
+        tData = tDataA;
+    } else {
+        tData = tDataB;
+    }
+    $next = $(this).parent().parent().next();
+    zName = $next.find('.table_Name').text();
+    if ($next.parent().parent().parent().parent().attr('id') == 'showTabs_sA') {
+        attCost = -Math.round(tData.zAtt['' + zName + ''].zqConst * data_const.comboCost);
+        $next.find('.table_attCostT').text(attCost);
+    }
 });
 
 $(document).on('click', '.selectBbox', function () {
@@ -1564,7 +1592,7 @@ $(document).on('click', '#showTabs_sA .tableContent', function () {
         } else {
             attTo = attTo + '<div class="tableSelect_disable">左脚</div><div class="tableSelect_disable">右脚</div>';
         }
-        attCost = tData.zAtt['' + zName + ''].const;
+        attCost = tData.zAtt['' + zName + ''].zqConst;
         let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">' + zName + '</div><div class="table_attFromT">' + attFr + '</div><div class="table_attSubT"></div><div class="table_attToT">' + attTo + '</div><div class="table_attCostT">-' + attCost + '</div><div class="table_attNumY"></div><div class="table_attFlawY"></div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_F" style="display: none"></div></div></div>';
 
         $('#showTabs_sA .table_Combo_F').eq(-1).show();
@@ -1683,7 +1711,7 @@ $(document).on('click', '#showTabs_sD .tableContentBox_D2 .tableContent', functi
             tData = tDataB;
         }
         dod = $(this).find('.table_Number_Db').text();
-        attCost = tData.zDod['' + zName + ''].const;
+        attCost = tData.zDod['' + zName + ''].zqConst;
         let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">' + zName + '</div><div class="table_Dod">' + dod + '</div><div class="table_Block"></div><div class="table_attToT"><div  class="tableSelect">头部</div><div>躯干</div><div>左手</div><div>右手</div><div>左脚</div><div>右脚</div></div><div class="table_attCostT">' + attCost + '</div><div class="table_attNumY"></div><div class="table_attFlawY"></div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_F" style="display: none"></div></div></div>';
 
         $('#showTabs_sD .table_Combo_F').eq(-1).show();
@@ -1691,3 +1719,23 @@ $(document).on('click', '#showTabs_sD .tableContentBox_D2 .tableContent', functi
         attCountNum($('#showTabs_sD .selectTableContent_A'));
     }
 });
+
+$(document).on('click', '#showTabs_sB .tableContentBox_B .tableContent', function () {
+    $('.selectBbox').text($(this).find('.table_Name').text()).show();
+});
+
+function comboCostCount($this) { //连招耗气还原
+    let zName, attCost, tData;
+    if ($('.selectKf_A_Click').length > 0) {
+        tData = tDataA;
+    } else {
+        tData = tDataB;
+    }
+    $this.find('.selectTC_Box .table_Name').each(function () {
+        zName = $(this).text();
+        if ($this.parent().parent().parent().attr('id') == 'showTabs_sA') {
+            attCost = -tData.zAtt['' + zName + ''].zqConst;
+            $(this).parent().find('.table_attCostT').text(attCost);
+        }
+    });
+}
