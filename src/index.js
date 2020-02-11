@@ -26,7 +26,9 @@ function showMyLoadFile() {
     $('#loginInTopMu').show('fade', 200);
     $('#loadFileBigBox').show('fade', 200);
     loadFile_count(4);
-    $('#liFiBox_R').show('fade', 200);
+    $('#liFiBox_R').show('fade', 200, function () {
+        $('#loadFileBigBox .loFiGd_F .liFiBox_S').eq(0).trigger('click');
+    });
 }
 
 function loadFile_count(n) {
@@ -61,6 +63,7 @@ $(".next_01").click(function () {
     $('.next_01').switchClass('next_01', 'next_02 next_off', 500, 'easeInOutCubic');
     $('.logoPosition01').switchClass('logoPosition01', 'logoPosition02', 500, 'easeInOutCubic', showMyLoadFile);
 });
+
 $('body').on('click', '.liFiBox_A', function () {
     $(this).html('').removeClass('liFiBox_A').addClass('liFiBox_S');
 });
@@ -1397,6 +1400,8 @@ $(document).on('click', '.table_attToT >div', function () {
 
 $(document).on('click', '.table_closeIcoA', function () {
     $(this).parent().parent().parent().find('.selectTableContent_A').html('');
+    countFlawSum();
+    countZQSum();
 });
 
 $(document).on('click', '.table_closeIcoB', function () {
@@ -1408,6 +1413,8 @@ $(document).on('click', '.table_closeIcoB', function () {
     $selectTC_Box.find('.table_Combo_F').last().hide();
     attCountNum($selectTC_Box);
     comboCostCount($selectTC_Box);
+    countFlawSum();
+    countZQSum();
 });
 
 $('.selectTableContent_A').sortable({
@@ -1424,6 +1431,8 @@ $('.selectTableContent_A').sortable({
         $(this).find('.table_Combo_F').last().hide();
         attCountNum($(this));
         comboCostCount($(this));
+        countFlawSum();
+        countZQSum();
     }
 }).disableSelection();
 
@@ -1454,6 +1463,7 @@ $(document).on('click', '.table_Combo_T', function () {
         attCost = -tData.zAtt['' + zName + ''].zqConst;
         $next.find('.table_attCostT').text(attCost);
     }
+    countZQSum();
 });
 
 $(document).on('click', '.table_Combo_F', function () {
@@ -1484,6 +1494,7 @@ $(document).on('click', '.table_Combo_F', function () {
         attCost = -Math.round(tData.zAtt['' + zName + ''].zqConst * data_const.comboCost);
         $next.find('.table_attCostT').text(attCost);
     }
+    countZQSum();
 });
 
 $(document).on('click', '.selectBbox', function () {
@@ -1511,6 +1522,8 @@ $(document).on('click', '.selectKf_A', function () {
     $(this).switchClass('selectKf_A', 'selectKf_A_Click', 100, 'easeInOutCubic', function () {
         $('.kfSelectBox').show('blind', {direction: 'left'}, 200);
     });
+    countFlawSum();
+    countZQSum();
 });
 $(document).on('click', '.selectKf_A_Click', function () {
     $('.kfSelectBox').hide('blind', {direction: 'left'}, 100, function () {
@@ -1539,6 +1552,8 @@ $(document).on('click', '.selectKf_B', function () {
     $(this).switchClass('selectKf_B', 'selectKf_B_Click', 100, 'easeInOutCubic', function () {
         $('.kfSelectBox').show('blind', {direction: 'right'}, 200);
     });
+    countFlawSum();
+    countZQSum();
 });
 $(document).on('click', '.selectKf_B_Click', function () {
     $('.kfSelectBox').hide('blind', {direction: 'right'}, 100, function () {
@@ -1605,6 +1620,8 @@ $(document).on('click', '#showTabs_sA .tableContent', function () {
         });
         attCountSub($('#showTabs_sA .selectTC_Box:last .table_attFromT .tableSelect'));
         attCountNum($('#showTabs_sA .selectTableContent_A'));
+        countFlawSum();
+        countZQSum();
     }
 });
 
@@ -1698,6 +1715,7 @@ $(document).on('click', '#showTabs_sD .tableContentBox_D1 .tableContent', functi
         $('#showTabs_sD .table_Combo_F').eq(-1).show();
         $('#showTabs_sD .selectTableContent_A').append(addHtml);
         attCountNum($('#showTabs_sD .selectTableContent_A'));
+        countFlawSum();
     }
 });
 
@@ -1712,11 +1730,13 @@ $(document).on('click', '#showTabs_sD .tableContentBox_D2 .tableContent', functi
         }
         dod = $(this).find('.table_Number_Db').text();
         attCost = tData.zDod['' + zName + ''].zqConst;
-        let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">' + zName + '</div><div class="table_Dod">' + dod + '</div><div class="table_Block"></div><div class="table_attToT"><div  class="tableSelect">头部</div><div>躯干</div><div>左手</div><div>右手</div><div>左脚</div><div>右脚</div></div><div class="table_attCostT">' + attCost + '</div><div class="table_attNumY"></div><div class="table_attFlawY"></div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_F" style="display: none"></div></div></div>';
+        let addHtml = '<div class="selectTC_Box"><div class="selectTC"><div class="table_Name">' + zName + '</div><div class="table_Dod">' + dod + '</div><div class="table_Block"></div><div class="table_attToT"><div  class="tableSelect">头部</div><div>躯干</div><div>左手</div><div>右手</div><div>左脚</div><div>右脚</div></div><div class="table_attCostT">-' + attCost + '</div><div class="table_attNumY"></div><div class="table_attFlawY"></div><div class="table_closeT"><div class="table_closeIcoB"></div></div></div><div class="table_Combo"><div class="table_ComboLink_T" style="display: none"></div><div class="table_Combo_F" style="display: none"></div></div></div>';
 
         $('#showTabs_sD .table_Combo_F').eq(-1).show();
         $('#showTabs_sD .selectTableContent_A').append(addHtml);
         attCountNum($('#showTabs_sD .selectTableContent_A'));
+        countFlawSum();
+        countZQSum();
     }
 });
 
@@ -1738,4 +1758,23 @@ function comboCostCount($this) { //连招耗气还原
             $(this).parent().find('.table_attCostT').text(attCost);
         }
     });
+}
+
+function countFlawSum() {
+    let f, s, person;
+    if ($('.selectKf_A_Click').length > 0) {
+        person = personA;
+    } else {
+        person = personB;
+    }
+    f = person.flaw;
+    $('.selectTableContent_A .table_attFlawY').each(function () {
+        s = $(this).text().replace(/[^0-9]/ig, "");
+        f = f + parseInt(0 + s);
+    });
+    $('.sumBox_flaw').html('<span>' + f + '</span>%');
+}
+
+function countZQSum(){
+
 }
