@@ -62,6 +62,8 @@ export class Person {
         eye: []
     };
 
+
+
     calc_LL(c) {
         this.sixData[0] = this.sixData[0] + c;
         this.attAdd = data_D.attAdd[this.sixData[0]];
@@ -245,4 +247,17 @@ export class Person {
         this.photo.legL[35] = (this.photo.legL[35] + (5 / 5 * this.sixData[4]) + (-13.4 / 5 * this.sixData[1])).toFixed(2);
     }
 
+}
+
+export class zsAttSort {
+    zName = '';
+    attFrom = '';
+    attTo = '';
+    comBo = false;
+}
+
+export class zsDefSort {
+    zName = '';
+    DefBody = '';
+    comBo = false;
 }

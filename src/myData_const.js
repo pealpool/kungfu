@@ -1,6 +1,6 @@
 'use strict';
 export const data_const = {
-    'hpSubHart': {
+    'hpSubHart': {//hp伤害衰减关系曲线
         'a': -0.8,
         'b': 1.8,
         'c': -0.0000000000000009,
@@ -16,5 +16,6 @@ export const data_const = {
         'z':0.01,//总计同招
         'l':0.05,//连续同招
     },
-    'comboCost':1.3333,//攻击连招耗气增加
+    'comboCost':1.5,//攻击连招耗气增加
+    'roundTime':18,//每回合时间
 };

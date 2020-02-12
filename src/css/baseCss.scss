@@ -1715,7 +1715,7 @@ $electKfSize: 42px;
 .selectKf_A,
 .selectKf_B,
 .selectKf_A_Click,
-.selectKf_B_Click{
+.selectKf_B_Click {
   width: $electKfSize;
   box-sizing: border-box;
   padding: 7px;
@@ -1733,15 +1733,16 @@ $electKfSize: 42px;
 }
 
 .selectKf_A_Click,
-.selectKf_B_Click{
+.selectKf_B_Click {
   height: 734px;
 }
 
 .selectKf_B {
   height: $electKfSize;
 }
+
 .selectKf_B,
-.selectKf_B_Click{
+.selectKf_B_Click {
   right: 0;
 }
 
@@ -2175,16 +2176,25 @@ $table_Combo_T_s: 21px;
 .selectOver {
   width: 106px;
   height: 54px;
-  line-height: 54px;
   background-color: $tableTitle-color;
   color: #ffffff;
-  font-size: 20px;
-  text-align: center;
   cursor: pointer;
 
   &:hover {
     @include hoverBright(1.2);
   }
+
+  div {
+    text-align: center;
+  }
+}
+
+.selectOver_Top {
+  margin-top: 6px;
+}
+
+.selectOver_Bottom {
+  font-size: 18px;
 }
 
 .sumBox_flaw,
@@ -2214,15 +2224,16 @@ $selectBbox_h: 30px;
   margin-top: ($selectDotted_h - $selectBbox_h) / 2 - 5px;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     @include hoverBright(1.2);
   }
 }
 
-.tableSelect_disable{
+.tableSelect_disable {
   color: $aTab-color;
-  cursor: default!important;
+  cursor: default !important;
+
   &:hover {
-    filter: brightness(1)!important;
+    filter: brightness(1) !important;
   }
 }

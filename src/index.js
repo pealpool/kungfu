@@ -2,7 +2,7 @@
 import $ from 'jquery';
 import {data_S} from './myData_S.js';
 import {data_const} from './myData_const.js';
-import {Person} from './myData_P.js';
+import {Person, zsAttSort, zsDefSort} from './myData_P.js';
 import './css/baseCss.scss';
 import 'webpack-jquery-ui';
 import anime from 'animejs/lib/anime.es.js';
@@ -11,6 +11,13 @@ import anime from 'animejs/lib/anime.es.js';
 // require('webpack-jquery-ui/css');
 
 let eChart = require('echarts');
+let personA = new Person();
+let personB = new Person();
+let zsAttSortA = [new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort()];
+let zsAttSortB = [new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort()];
+let selectBoxHtml_A = ['', '', '<div class="selectBbox" style="display: none"></div>'];
+let selectBoxHtml_B = ['', '', '<div class="selectBbox" style="display: none"></div>'];
+let mySaveFile = [2, 2, 2, 2, 2];
 
 
 loadSchoolBoxStar();
@@ -454,7 +461,7 @@ function setMyChat(six = new Array(5), sixSum = new Array(5), getID, onOff) {
 
 $('.showTabs').tabs();
 
-//todo hover
+
 $(document).on('mouseenter', '.tableContent', function () {
     $(this).addClass('tableContent_hover');
     let zName = $(this).find('div').eq(0).text();
@@ -675,10 +682,6 @@ $(document).on('mouseleave ', '.table_Tx_D,.table_Tx_S', function () {
     $(this).removeClass('heightTip');
 });
 
-let personA = new Person();
-let personB = new Person();
-let mySaveFile = [2, 2, 2, 2, 2];
-
 function loadGameFile(a) {
     let mySchool = 'SL';
     tDataA = data_S['' + mySchool + ''];
@@ -741,7 +744,7 @@ function initHP(head, body, hand, leg, who) {
     }
 }
 
-//todo +-
+
 $(document).on('click', '.bt_sub', function () {
     let t = $(this).next();
     let e = t.attr('id');
@@ -1074,7 +1077,6 @@ function onOrOff(a, who) {
     }
 }
 
-//todo 招式计算
 function setSX_LL() {
     $('#attAdd').text(toPercentAdd(personA.attAdd));
     $('#flawDam').text(toPercent(personA.flawDam));
@@ -1130,7 +1132,7 @@ function setSX_TP() {
 function setSX_ZQ() {
     $('#zqHurtAdd').text(toPercentAdd(personA.zqHurtAdd));
     $('#zqVal').text(personA.zqVal);
-    $('#zqPerSec').text(personA.zqPerSec + '/1s');
+    $('#zqPerSec').text(personA.zqPerSec + '/0.1s');
     let i = 0;
     for (let key in tDataA.zAtt) {
         $('.tableContent:eq(' + i + ')').find('.table_NumberN').eq(8).text(toZero(Math.round(tDataA.zAtt[key].hurt_q * (1 + personA.zqHurtAdd))));
@@ -1285,7 +1287,6 @@ $(document).on('click', '.next_04', function () {
 });
 
 
-//todo next_04
 function next_04_GoOn() {
     personB.sixData[0] = 2;
     personB.sixData[1] = 2;
@@ -1373,6 +1374,8 @@ $(document).on('click', '.moSSBox', function () {
 });
 
 $(document).on('click', '.moNext', function () {
+    $('#zqSpan_A').text(personA.zqVal);
+    $('#zqSpan_B').text(personB.zqVal);
     $('.moDiv,.moNext,.moSetBigBox').hide('fade', 200, function () {
         $('.fightSelectButtonBox').show(function () {
             $('.fightTimeBigBox').show('slide', {direction: 'up'}, 200, function () {
@@ -1506,6 +1509,9 @@ $(document).on('click', '.selectKf_A', function () {
         $('.selectKf_B_Click').trigger('click');
     }
     $('.tableContentBox_A').html('');
+    $('#showTabs_sA .selectTableContent_A').html(selectBoxHtml_A[0]);
+    $('#showTabs_sD .selectTableContent_A').html(selectBoxHtml_A[1]);
+    $('#showTabs_sB .selectDotted').html(selectBoxHtml_A[2]);
     if ($('#showTabs_sA').find('.tableT_TBo').length > 0) {
         showTableContentBox_Att_TBo($('#showTabs_sA'), tDataA, personA);
     } else if ($('#showTabs_sA').find('.tableT_Txo').length > 0) {
@@ -1521,9 +1527,9 @@ $(document).on('click', '.selectKf_A', function () {
     showTableContentBox_Pas($('#showTabs_sB'), tDataA);
     $(this).switchClass('selectKf_A', 'selectKf_A_Click', 100, 'easeInOutCubic', function () {
         $('.kfSelectBox').show('blind', {direction: 'left'}, 200);
+        countFlawSum();
+        countZQSum();
     });
-    countFlawSum();
-    countZQSum();
 });
 $(document).on('click', '.selectKf_A_Click', function () {
     $('.kfSelectBox').hide('blind', {direction: 'left'}, 100, function () {
@@ -1531,11 +1537,15 @@ $(document).on('click', '.selectKf_A_Click', function () {
     });
 });
 
+
 $(document).on('click', '.selectKf_B', function () {
     if ($('.kfSelectBox').css('display') != 'none') {
-        $('.selectKf_A_Click').trigger('click');
+        $('.selectKf_A_Click').trigger('click');//todo 速度问题，动作未做完，就进行下面的函数
     }
     $('.tableContentBox_A').html('');
+    $('#showTabs_sA .selectTableContent_A').html(selectBoxHtml_B[0]);
+    $('#showTabs_sD .selectTableContent_A').html(selectBoxHtml_B[1]);
+    $('#showTabs_sB .selectDotted').html(selectBoxHtml_B[2]);
     if ($('#showTabs_sA').find('.tableT_TBo').length > 0) {
         showTableContentBox_Att_TBo($('#showTabs_sA'), tDataB, personB);
     } else if ($('#showTabs_sA').find('.tableT_Txo').length > 0) {
@@ -1551,9 +1561,9 @@ $(document).on('click', '.selectKf_B', function () {
     showTableContentBox_Pas($('#showTabs_sB'), tDataB);
     $(this).switchClass('selectKf_B', 'selectKf_B_Click', 100, 'easeInOutCubic', function () {
         $('.kfSelectBox').show('blind', {direction: 'right'}, 200);
+        countFlawSum();
+        countZQSum();
     });
-    countFlawSum();
-    countZQSum();
 });
 $(document).on('click', '.selectKf_B_Click', function () {
     $('.kfSelectBox').hide('blind', {direction: 'right'}, 100, function () {
@@ -1687,7 +1697,7 @@ function attCountNum($this) {
             $that.parent().find('.table_attNumY').text(tData.zAtt['' + zName + ''].count_all + j);
             c = (tData.zAtt['' + zName + ''].count_all + j - 1) * data_const.flaw.z + (j - 1) * data_const.flaw.h + data_const.flaw.l * l;
         } else {
-            if (('' + zName + '') in tDataA.zDef) {
+            if (('' + zName + '') in tData.zDef) {
                 $that.parent().find('.table_attNumY').text(tData.zDef['' + zName + ''].count_all + j);
                 c = (tData.zDef['' + zName + ''].count_all + j - 1) * data_const.flaw.z + (j - 1) * data_const.flaw.h + data_const.flaw.l * l;
             } else {
@@ -1775,6 +1785,99 @@ function countFlawSum() {
     $('.sumBox_flaw').html('<span>' + f + '</span>%');
 }
 
-function countZQSum(){
-
+function countZQSum() {
+    let zName, a, s, cost, r, sum, tData, person, t, timeB;
+    if ($('.selectKf_A_Click').length > 0) {
+        tData = tDataA;
+        person = personA;
+    } else {
+        tData = tDataB;
+        person = personB;
+    }
+    a = person.zqVal;
+    cost = 0;
+    $('.selectTableContent_A .table_attCostT').each(function () {
+        s = $(this).text().replace(/[^0-9]/ig, "");
+        cost = cost + parseInt(0 + s);
+    });
+    t = 0;
+    $('#showTabs_sA .selectTC_Box .table_Name').each(function () {
+        zName = $(this).text();
+        t = t + (tData.zAtt['' + zName + ''].time_q + person.timeAdd_q) + (tData.zAtt['' + zName + ''].time_z + person.timeAdd_z);
+    });
+    timeB = 1.4;
+    $('#showTabs_sD .selectTC_Box .table_Name').each(function () {
+        zName = $(this).text();
+        if (('' + zName + '') in tData.zDod) {
+            t = t + timeB;
+        }
+    });
+    t = (data_const.roundTime - t).toFixed(1);
+    r = Math.round(person.zqPerSec * t * 10);
+    sum = a - cost + r;
+    if (sum > person.zqVal) {
+        sum = person.zqVal;
+    }
+    $('.sumBox_zq').html(a + ' - ' + cost + ' + ' + r + ' = <span>' + sum + '</span>');
 }
+
+$(document).on('click', '.selectOver', function () {
+    let i = 0;
+    if ($('.selectKf_A_Click').length > 0) {
+        aa(selectBoxHtml_A, zsAttSortA);
+    } else {
+        aa(selectBoxHtml_B, zsAttSortB);
+    }
+
+    function aa(ssHtml, ssAttSort) {
+        ssHtml[0] = $('#showTabs_sA .selectTableContent_A').html();
+        ssHtml[1] = $('#showTabs_sD .selectTableContent_A').html();
+        ssHtml[2] = $('#showTabs_sB .selectDotted').html();
+        $('#showTabs_sA .selectTC_Box').each(function () {
+            ssAttSort[i].zName = $(this).find('.table_Name').text();
+            switch ($(this).find('.table_attFromT .tableSelect').text()) {
+                case '头部':
+                    ssAttSort[i].attFrom = 'head';
+                    break;
+                case '左手':
+                    ssAttSort[i].attFrom = 'handL';
+                    break;
+                case '右手':
+                    ssAttSort[i].attFrom = 'handR';
+                    break;
+                case '左脚':
+                    ssAttSort[i].attFrom = 'legL';
+                    break;
+                case '右脚':
+                    ssAttSort[i].attFrom = 'legR';
+                    break;
+            }
+            switch ($(this).find('.table_attToT .tableSelect').text()) {
+                case '头部':
+                    ssAttSort[i].attTo = 'head';
+                    break;
+                case '躯干':
+                    ssAttSort[i].attTo = 'body';
+                    break;
+                case '左手':
+                    ssAttSort[i].attTo = 'handL';
+                    break;
+                case '右手':
+                    ssAttSort[i].attTo = 'handR';
+                    break;
+                case '左脚':
+                    ssAttSort[i].attTo = 'legL';
+                    break;
+                case '右脚':
+                    ssAttSort[i].attTo = 'legR';
+                    break;
+            }
+            if ($(this).find('.table_Combo_T').length > 0) {
+                ssAttSort[i].comBo = true;
+            }
+            i++;
+        });
+    }
+
+
+});
