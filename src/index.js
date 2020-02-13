@@ -15,6 +15,8 @@ let personA = new Person();
 let personB = new Person();
 let zsAttSortA = [new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort()];
 let zsAttSortB = [new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort()];
+let zsDefSortA = [new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort()];
+let zsDefSortB = [new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort()];
 let selectBoxHtml_A = ['', '', '<div class="selectBbox" style="display: none"></div>'];
 let selectBoxHtml_B = ['', '', '<div class="selectBbox" style="display: none"></div>'];
 let mySaveFile = [2, 2, 2, 2, 2];
@@ -1506,30 +1508,39 @@ $(document).on('click', '.selectBbox', function () {
 
 $(document).on('click', '.selectKf_A', function () {
     if ($('.kfSelectBox').css('display') != 'none') {
-        $('.selectKf_B_Click').trigger('click');
+        $('.kfSelectBox').hide('blind', {direction: 'right'}, 100, function () {
+            $('.selectKf_B_Click').switchClass('selectKf_B_Click', 'selectKf_B', 200, 'easeInOutCubic', function () {
+                f();
+            });
+        });
+    } else {
+        f();
     }
-    $('.tableContentBox_A').html('');
-    $('#showTabs_sA .selectTableContent_A').html(selectBoxHtml_A[0]);
-    $('#showTabs_sD .selectTableContent_A').html(selectBoxHtml_A[1]);
-    $('#showTabs_sB .selectDotted').html(selectBoxHtml_A[2]);
-    if ($('#showTabs_sA').find('.tableT_TBo').length > 0) {
-        showTableContentBox_Att_TBo($('#showTabs_sA'), tDataA, personA);
-    } else if ($('#showTabs_sA').find('.tableT_Txo').length > 0) {
-        showTableContentBox_Att_Txo($('#showTabs_sA'), tDataA, personA);
-    } else if ($('#showTabs_sA').find('.tableT_Lzo').length > 0) {
-        showTableContentBox_Att_Lzo($('#showTabs_sA'), tDataA, personA);
+
+    function f() {
+        $('.tableContentBox_A').html('');
+        $('#showTabs_sA .selectTableContent_A').html(selectBoxHtml_A[0]);
+        $('#showTabs_sD .selectTableContent_A').html(selectBoxHtml_A[1]);
+        $('#showTabs_sB .selectDotted').html(selectBoxHtml_A[2]);
+        if ($('#showTabs_sA').find('.tableT_TBo').length > 0) {
+            showTableContentBox_Att_TBo($('#showTabs_sA'), tDataA, personA);
+        } else if ($('#showTabs_sA').find('.tableT_Txo').length > 0) {
+            showTableContentBox_Att_Txo($('#showTabs_sA'), tDataA, personA);
+        } else if ($('#showTabs_sA').find('.tableT_Lzo').length > 0) {
+            showTableContentBox_Att_Lzo($('#showTabs_sA'), tDataA, personA);
+        }
+        $('.tableContentBox_D1').html('');
+        $('.tableContentBox_D2').html('');
+        $('.tableContentBox_B').html('');
+        showTableContentBox_Def($('#showTabs_sD'), tDataA);
+        showTableContentBox_Dod($('#showTabs_sD'), tDataA);
+        showTableContentBox_Pas($('#showTabs_sB'), tDataA);
+        $('.selectKf_A').switchClass('selectKf_A', 'selectKf_A_Click', 100, 'easeInOutCubic', function () {
+            $('.kfSelectBox').show('blind', {direction: 'left'}, 200);
+            countFlawSum();
+            countZQSum();
+        });
     }
-    $('.tableContentBox_D1').html('');
-    $('.tableContentBox_D2').html('');
-    $('.tableContentBox_B').html('');
-    showTableContentBox_Def($('#showTabs_sD'), tDataA);
-    showTableContentBox_Dod($('#showTabs_sD'), tDataA);
-    showTableContentBox_Pas($('#showTabs_sB'), tDataA);
-    $(this).switchClass('selectKf_A', 'selectKf_A_Click', 100, 'easeInOutCubic', function () {
-        $('.kfSelectBox').show('blind', {direction: 'left'}, 200);
-        countFlawSum();
-        countZQSum();
-    });
 });
 $(document).on('click', '.selectKf_A_Click', function () {
     $('.kfSelectBox').hide('blind', {direction: 'left'}, 100, function () {
@@ -1537,34 +1548,45 @@ $(document).on('click', '.selectKf_A_Click', function () {
     });
 });
 
-
+//todo
 $(document).on('click', '.selectKf_B', function () {
     if ($('.kfSelectBox').css('display') != 'none') {
-        $('.selectKf_A_Click').trigger('click');//todo 速度问题，动作未做完，就进行下面的函数
+        $('.kfSelectBox').hide('blind', {direction: 'left'}, 100, function () {
+            $('.selectKf_A_Click').switchClass('selectKf_A_Click', 'selectKf_A', 200, 'easeInOutCubic', function () {
+                f();
+            });
+        });
+    } else {
+        f();
     }
-    $('.tableContentBox_A').html('');
-    $('#showTabs_sA .selectTableContent_A').html(selectBoxHtml_B[0]);
-    $('#showTabs_sD .selectTableContent_A').html(selectBoxHtml_B[1]);
-    $('#showTabs_sB .selectDotted').html(selectBoxHtml_B[2]);
-    if ($('#showTabs_sA').find('.tableT_TBo').length > 0) {
-        showTableContentBox_Att_TBo($('#showTabs_sA'), tDataB, personB);
-    } else if ($('#showTabs_sA').find('.tableT_Txo').length > 0) {
-        showTableContentBox_Att_Txo($('#showTabs_sA'), tDataB, personB);
-    } else if ($('#showTabs_sA').find('.tableT_Lzo').length > 0) {
-        showTableContentBox_Att_Lzo($('#showTabs_sA'), tDataB, personB);
+
+    function f() {
+        $('.tableContentBox_A').html('');
+        $('#showTabs_sA .selectTableContent_A').html(selectBoxHtml_B[0]);
+        $('#showTabs_sD .selectTableContent_A').html(selectBoxHtml_B[1]);
+        $('#showTabs_sB .selectDotted').html(selectBoxHtml_B[2]);
+        if ($('#showTabs_sA').find('.tableT_TBo').length > 0) {
+            showTableContentBox_Att_TBo($('#showTabs_sA'), tDataB, personB);
+        } else if ($('#showTabs_sA').find('.tableT_Txo').length > 0) {
+            showTableContentBox_Att_Txo($('#showTabs_sA'), tDataB, personB);
+        } else if ($('#showTabs_sA').find('.tableT_Lzo').length > 0) {
+            showTableContentBox_Att_Lzo($('#showTabs_sA'), tDataB, personB);
+        }
+        $('.tableContentBox_D1').html('');
+        $('.tableContentBox_D2').html('');
+        $('.tableContentBox_B').html('');
+        showTableContentBox_Def($('#showTabs_sD'), tDataB);
+        showTableContentBox_Dod($('#showTabs_sD'), tDataB);
+        showTableContentBox_Pas($('#showTabs_sB'), tDataB);
+        $('.selectKf_B').switchClass('selectKf_B', 'selectKf_B_Click', 100, 'easeInOutCubic', function () {
+            $('.kfSelectBox').show('blind', {direction: 'right'}, 200);
+            countFlawSum();
+            countZQSum();
+        });
     }
-    $('.tableContentBox_D1').html('');
-    $('.tableContentBox_D2').html('');
-    $('.tableContentBox_B').html('');
-    showTableContentBox_Def($('#showTabs_sD'), tDataB);
-    showTableContentBox_Dod($('#showTabs_sD'), tDataB);
-    showTableContentBox_Pas($('#showTabs_sB'), tDataB);
-    $(this).switchClass('selectKf_B', 'selectKf_B_Click', 100, 'easeInOutCubic', function () {
-        $('.kfSelectBox').show('blind', {direction: 'right'}, 200);
-        countFlawSum();
-        countZQSum();
-    });
 });
+
+
 $(document).on('click', '.selectKf_B_Click', function () {
     $('.kfSelectBox').hide('blind', {direction: 'right'}, 100, function () {
         $('.selectKf_B_Click').switchClass('selectKf_B_Click', 'selectKf_B', 200, 'easeInOutCubic');
@@ -1824,15 +1846,18 @@ function countZQSum() {
 $(document).on('click', '.selectOver', function () {
     let i = 0;
     if ($('.selectKf_A_Click').length > 0) {
-        aa(selectBoxHtml_A, zsAttSortA);
+        aa(selectBoxHtml_A, zsAttSortA, zsDefSortA);
+        $('.selectKf_A_Click').trigger('click');
     } else {
-        aa(selectBoxHtml_B, zsAttSortB);
+        aa(selectBoxHtml_B, zsAttSortB, zsDefSortB);
+        $('.selectKf_B_Click').trigger('click');
     }
 
-    function aa(ssHtml, ssAttSort) {
+    function aa(ssHtml, ssAttSort, ssDefSort) {
         ssHtml[0] = $('#showTabs_sA .selectTableContent_A').html();
         ssHtml[1] = $('#showTabs_sD .selectTableContent_A').html();
         ssHtml[2] = $('#showTabs_sB .selectDotted').html();
+        let i = 0;
         $('#showTabs_sA .selectTC_Box').each(function () {
             ssAttSort[i].zName = $(this).find('.table_Name').text();
             switch ($(this).find('.table_attFromT .tableSelect').text()) {
@@ -1877,7 +1902,44 @@ $(document).on('click', '.selectOver', function () {
             }
             i++;
         });
+        i = 0;
+        $('#showTabs_sD .selectTC_Box').each(function () {
+            ssDefSort[i].zName = $(this).find('.table_Name').text();
+            switch ($(this).find('.table_attToT .tableSelect').text()) {
+                case '头部':
+                    ssDefSort[i].DefBody = 'head';
+                    break;
+                case '躯干':
+                    ssDefSort[i].DefBody = 'body';
+                    break;
+                case '左手':
+                    ssDefSort[i].DefBody = 'handL';
+                    break;
+                case '右手':
+                    ssDefSort[i].DefBody = 'handR';
+                    break;
+                case '左脚':
+                    ssDefSort[i].DefBody = 'legL';
+                    break;
+                case '右脚':
+                    ssDefSort[i].DefBody = 'legR';
+                    break;
+            }
+            if ($(this).find('.table_Combo_T').length > 0) {
+                ssDefSort[i].comBo = true;
+            }
+            i++;
+        });
     }
 
+});
 
+$(document).on('click', '.fightStart', function () {
+    if (zsAttSortA[0].zName == '' && zsDefSortA[0].zName == '') {
+        $('.selectKf_A').trigger('click');
+    } else if (zsAttSortB[0].zName == '' && zsDefSortB[0].zName == '') {
+        $('.selectKf_B').trigger('click');
+    }else {
+        $('.fightStart').hide('drop', {direction: 'up'}, 100);
+    }
 });
