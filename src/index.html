@@ -183,14 +183,14 @@
                                                     fill='freeze'
                                             />
                                             <animate
-                                                id="svgLight_aR_2"
-                                                begin="svgLight_aR_1.end"
-                                                attributeName="slope"
-                                                dur=".5s"
-                                                from="1.5"
-                                                to="1"
-                                                fill='freeze'
-                                        />
+                                                    id="svgLight_aR_2"
+                                                    begin="svgLight_aR_1.end"
+                                                    attributeName="slope"
+                                                    dur=".5s"
+                                                    from="1.5"
+                                                    to="1"
+                                                    fill='freeze'
+                                            />
                                         </feFuncR>
                                         <feFuncG type="linear" slope="1.5" intercept="0">
                                             <animate
@@ -628,7 +628,14 @@
                 <div class="fightTimeBigBox" style="display: none">
                     <div class="selectKf_A">己方武功</div>
                     <div class="fightTimeSmallBox">
-                        <div class="zqBigBox_A">
+                        <div class="hpBigBox_A">
+                            <div class="hpText">
+                                <span>体力 </span>
+                                <span id="hpSpan_A" class="hpSpan">100%</span>
+                            </div>
+                            <div class="hpBoxProcess">
+                                <div id="hpDP_A"></div>
+                            </div>
                             <div class="zqText">
                                 <span>真气 </span>
                                 <span id="zqSpan_A" class="zqSpan"></span>
@@ -636,7 +643,7 @@
                             <div class="zqHpBigBox">
                                 <div class="zqProcess">
                                     <div class="zqBoxP">
-                                        <div id="zqDP_A" class="zqDP"></div>
+                                        <div id="zqDP_A"></div>
                                     </div>
                                 </div>
                             </div>
@@ -649,7 +656,14 @@
                             </div>
                             <div id="fightTimeMBoxB">00.0s</div>
                         </div>
-                        <div class="zqBigBox_B">
+                        <div class="hpBigBox_B">
+                            <div class="hpText">
+                                <span id="hpSpan_B" class="hpSpan">100%</span>
+                                <span>体力 </span>
+                            </div>
+                            <div class="hpBoxProcess">
+                                <div id="hpDP_B"></div>
+                            </div>
                             <div class="zqText">
                                 <span id="zqSpan_B" class="zqSpan"></span>
                                 <span> 真气</span>
@@ -657,7 +671,7 @@
                             <div class="zqHpBigBox">
                                 <div class="zqProcess">
                                     <div class="zqBoxP">
-                                        <div id="zqDP_B" class="zqDP"></div>
+                                        <div id="zqDP_B"></div>
                                     </div>
                                 </div>
                             </div>
@@ -918,6 +932,19 @@
                             </div>
                         </div>
                         <div class="KfBox_bottom">
+                            <div class="baoDiBigBox">
+                                <div class="sumBoxLabel">保底真气</div>
+                                <div class="baoDiSetBox">
+                                    <div class="baoDiSetText">
+                                        <div class="baoDiSetTextF">5</div>
+                                        <div>10</div>
+                                        <div>20</div>
+                                        <div>30</div>
+                                        <div>40</div>
+                                    </div>
+                                    <div id="baoDiSetOn" class="baoDiSetOn_01"></div>
+                                </div>
+                            </div>
                             <div class="selectOver">
                                 <div class="selectOver_Top">第1回合</div>
                                 <div class="selectOver_Bottom">保存设置</div>

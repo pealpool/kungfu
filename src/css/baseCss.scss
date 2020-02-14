@@ -1797,17 +1797,18 @@ $fightTimeMBoxMargin: 10px;
   height: 30px;
   width: 100px;
   margin-top: -4px;
-  margin-left: 23px;
+  margin-left: 22px;
 }
 
-.zqBigBox_A,
-.zqBigBox_B {
+.hpBigBox_A,
+.hpBigBox_B {
   width: (($bigBaseBox-width  + 2px) - ($setBox_left_width * 2) - ($contentBoxMargin * 2) - (($electKfSize + $contentBoxPadding * 2) * 2) - $fightTimeMBoxWidth - $fightTimeMBoxMargin * 2)/2;
   height: 21px;
-  margin-top: 25px;
+  margin-top: 10px;
+  font-size: 12px;
 }
 
-.zqBigBox_A {
+.hpBigBox_A {
   float: left;
 
   div {
@@ -1815,7 +1816,7 @@ $fightTimeMBoxMargin: 10px;
   }
 }
 
-.zqBigBox_B {
+.hpBigBox_B {
   float: right;
 
   div {
@@ -1823,10 +1824,20 @@ $fightTimeMBoxMargin: 10px;
   }
 }
 
-$zqHpBigBoxHeight: 5px;
-.zqHpBigBox {
+.zqHpBigBox,
+.hpBoxProcess {
   width: (($bigBaseBox-width  + 2px) - ($setBox_left_width * 2) - ($contentBoxMargin * 2) - (($electKfSize + $contentBoxPadding * 2) * 2) - $fightTimeMBoxWidth - $fightTimeMBoxMargin * 2)/2;
+}
+
+$zqHpBigBoxHeight: 2px;
+.zqHpBigBox {
   height: $zqHpBigBoxHeight;
+}
+
+$hpBoxProcessHeight: 5px;
+.hpBoxProcess {
+  height: $hpBoxProcessHeight;
+  color: #ffffff;
 }
 
 .zqProcess {
@@ -1836,18 +1847,25 @@ $zqHpBigBoxHeight: 5px;
 }
 
 .zqBoxP {
-  box-sizing: border-box;
-  @include base-box($hp-blue-color);
-  background-color: #ffffff;
   width: 100%;
   height: 100%;
+  background-color: #ffffff;
 }
 
-.zqDP {
+#zqDP_A,
+#zqDP_B {
+  width: 100%;
+  height: 100%;
+  background-color: $myYellow-color;
+}
+
+#hpDP_A,
+#hpDP_B {
   width: 100%;
   height: 100%;
   background-color: $hp-blue-color;
 }
+
 
 .fightSelectButtonBox {
   margin-top: $contentBoxPadding;
@@ -1898,7 +1916,8 @@ $GiveInHeight: 24px;
   }
 }
 
-.speedSetTextF {
+.speedSetTextF,
+.baoDiSetTextF {
   color: $tableTitle-color;
 }
 
@@ -2160,6 +2179,71 @@ $table_Combo_T_s: 21px;
   float: left;
   margin-top: 9px;
   width: $showTab_width;
+}
+
+.baoDiBigBox {
+  float: left;
+  margin-left: 10px;
+}
+
+.baoDiSetBox {
+  width: 134px;
+  height: $GiveInHeight - 4px;
+  background-color: $tableTitle-color;
+  border: 2px solid $tableTitle-color;
+  margin-top: 6px;
+
+  &:hover {
+    @include hoverBright(1.2);
+  }
+}
+
+.baoDiSetText {
+  position: relative;
+  z-index: 2;
+  width: auto;
+  height: $GiveInHeight - 4px;
+  line-height: $GiveInHeight - 4px;
+  color: #ffffff;
+  padding: 0 2px;
+
+  div {
+    float: left;
+    width: 26px;
+    height: auto;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+#baoDiSetOn {
+  position: relative;
+  z-index: 1;
+  top: -20px;
+  background-color: #ffffff;
+  height: 20px;
+  width: 28px;
+}
+
+.baoDiSetOn_01 {
+  left: 0;
+}
+
+$baoDiSetOnLeft: 26px;
+.baoDiSetOn_02 {
+  left: $baoDiSetOnLeft + 2px;
+}
+
+.baoDiSetOn_03 {
+  left: $baoDiSetOnLeft * 2 + 2px;
+}
+
+.baoDiSetOn_04 {
+  left: $baoDiSetOnLeft * 3 + 2px;
+}
+
+.baoDiSetOn_05 {
+  left: $baoDiSetOnLeft *4 + 2px;
 }
 
 .sumBoxBig_zq,

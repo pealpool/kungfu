@@ -62,6 +62,17 @@ export class Person {
         eye: []
     };
 
+    zqValSub() {
+        let x = this.hp.body / data_const.hp.body;
+        let re = this.zqVal * (data_const.hpSubZqVal.a * Math.pow(x, 2) + data_const.hpSubZqVal.b * x + data_const.hpSubZqVal.c);
+        return re;
+    }
+
+    zqPerSecSub() {
+        let x = this.hp.body / data_const.hp.body;
+        let re = this.zqPerSec * (data_const.hpSubZqPerSec.a * Math.pow(x, 2) + data_const.hpSubZqPerSec.b * x + data_const.hpSubZqPerSec.c);
+        return re;
+    }
 
 
     calc_LL(c) {
@@ -136,9 +147,9 @@ export class Person {
 
         this.photo.eye[0] = (this.photo.eye[0] + (2.14 / 5 * this.sixData[2])).toFixed(2);
         this.photo.eye[2] = (this.photo.eye[2] + (-4.22 / 5 * this.sixData[2])).toFixed(2);
-        this.photo.eye[3] = (this.photo.eye[3] + (1.93/ 5 * this.sixData[2])).toFixed(2);
+        this.photo.eye[3] = (this.photo.eye[3] + (1.93 / 5 * this.sixData[2])).toFixed(2);
         this.photo.eye[4] = (this.photo.eye[4] + (-4.33 / 5 * this.sixData[2])).toFixed(2);
-        this.photo.eye[5] = (this.photo.eye[5] + (-3.06/ 5 * this.sixData[2])).toFixed(2);
+        this.photo.eye[5] = (this.photo.eye[5] + (-3.06 / 5 * this.sixData[2])).toFixed(2);
         this.photo.eye[6] = (this.photo.eye[6] + (2.75 / 5 * this.sixData[2])).toFixed(2);
         this.photo.eye[7] = (this.photo.eye[7] + (-0.68 / 5 * this.sixData[2])).toFixed(2);
         this.photo.eye[8] = (this.photo.eye[8] + (2.14 / 5 * this.sixData[2])).toFixed(2);

@@ -19,6 +19,8 @@ let zsDefSortA = [new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSo
 let zsDefSortB = [new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort()];
 let selectBoxHtml_A = ['', '', '<div class="selectBbox" style="display: none"></div>'];
 let selectBoxHtml_B = ['', '', '<div class="selectBbox" style="display: none"></div>'];
+let zqBaoDiVal_A = 5, zqBaoDiVal_B = 5;
+
 let mySaveFile = [2, 2, 2, 2, 2];
 
 
@@ -1539,6 +1541,7 @@ $(document).on('click', '.selectKf_A', function () {
             $('.kfSelectBox').show('blind', {direction: 'left'}, 200);
             countFlawSum();
             countZQSum();
+            zqBaoDiSetVal();
         });
     }
 });
@@ -1582,6 +1585,7 @@ $(document).on('click', '.selectKf_B', function () {
             $('.kfSelectBox').show('blind', {direction: 'right'}, 200);
             countFlawSum();
             countZQSum();
+            zqBaoDiSetVal();
         });
     }
 });
@@ -1816,7 +1820,7 @@ function countZQSum() {
         tData = tDataB;
         person = personB;
     }
-    a = person.zqVal;
+    a = person.zqValSub();
     cost = 0;
     $('.selectTableContent_A .table_attCostT').each(function () {
         s = $(this).text().replace(/[^0-9]/ig, "");
@@ -1835,12 +1839,46 @@ function countZQSum() {
         }
     });
     t = (data_const.roundTime - t).toFixed(1);
-    r = Math.round(person.zqPerSec * t * 10);
+    r = Math.round(person.zqPerSecSub() * t * 10);
     sum = a - cost + r;
-    if (sum > person.zqVal) {
-        sum = person.zqVal;
+    if (sum > a) {
+        sum = a;
     }
     $('.sumBox_zq').html(a + ' - ' + cost + ' + ' + r + ' = <span>' + sum + '</span>');
+}
+
+function zqBaoDiSetVal() {
+    let a, t, $this;
+    $('.baoDiSetTextF').removeClass('baoDiSetTextF');
+    if ($('.selectKf_A_Click').length > 0) {
+        a = zqBaoDiVal_A;
+    } else {
+        a = zqBaoDiVal_B;
+    }
+    switch (a) {
+        case 5:
+            t = 'baoDiSetOn_01';
+            $this = $('.baoDiSetText >div').eq(0);
+            break;
+        case 10:
+            t = 'baoDiSetOn_02';
+            $this = $('.baoDiSetText >div').eq(1);
+            break;
+        case 20:
+            t = 'baoDiSetOn_03';
+            $this = $('.baoDiSetText >div').eq(2);
+            break;
+        case 30:
+            t = 'baoDiSetOn_04';
+            $this = $('.baoDiSetText >div').eq(3);
+            break;
+        case 40:
+            t = 'baoDiSetOn_05';
+            $this = $('.baoDiSetText >div').eq(4);
+            break;
+    }
+    $('#baoDiSetOn').attr('class', t);
+    $this.addClass('baoDiSetTextF');
 }
 
 $(document).on('click', '.selectOver', function () {
@@ -1848,9 +1886,11 @@ $(document).on('click', '.selectOver', function () {
     if ($('.selectKf_A_Click').length > 0) {
         aa(selectBoxHtml_A, zsAttSortA, zsDefSortA);
         $('.selectKf_A_Click').trigger('click');
+        zqBaoDiVal_A = Number($('.baoDiSetTextF').text());
     } else {
         aa(selectBoxHtml_B, zsAttSortB, zsDefSortB);
         $('.selectKf_B_Click').trigger('click');
+        zqBaoDiVal_B = Number($('.baoDiSetTextF').text());
     }
 
     function aa(ssHtml, ssAttSort, ssDefSort) {
@@ -1939,7 +1979,34 @@ $(document).on('click', '.fightStart', function () {
         $('.selectKf_A').trigger('click');
     } else if (zsAttSortB[0].zName == '' && zsDefSortB[0].zName == '') {
         $('.selectKf_B').trigger('click');
-    }else {
+    } else {
         $('.fightStart').hide('drop', {direction: 'up'}, 100);
+    }
+});
+
+$(document).on('click', '.baoDiSetText >div', function () {
+    $('.baoDiSetTextF').removeClass('baoDiSetTextF');
+    $(this).attr('class', 'baoDiSetTextF');
+    let c = $('#baoDiSetOn').attr('class');
+    let t;
+    switch ($(this).text()) {
+        case "5":
+            t = 'baoDiSetOn_01';
+            break;
+        case "10":
+            t = 'baoDiSetOn_02';
+            break;
+        case "20":
+            t = 'baoDiSetOn_03';
+            break;
+        case "30":
+            t = 'baoDiSetOn_04';
+            break;
+        case "40":
+            t = 'baoDiSetOn_05';
+            break;
+    }
+    if (c != t) {
+        $('#baoDiSetOn').switchClass(c, t, 100, 'easeInOutCubic');
     }
 });
