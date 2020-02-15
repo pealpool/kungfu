@@ -2010,3 +2010,11 @@ $(document).on('click', '.baoDiSetText >div', function () {
         $('#baoDiSetOn').switchClass(c, t, 100, 'easeInOutCubic');
     }
 });
+
+function printDiv(s) {
+    $('.contentButton').append(s);
+}
+
+function fightStepGo() {
+
+}

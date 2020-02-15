@@ -1498,7 +1498,7 @@ $contentBoxPadding: 10px;
 }
 
 .contentTop,
-.contentMid {
+.contentMid{
   position: relative;
   left: 0;
   top: 0;
@@ -1516,6 +1516,7 @@ $contentTopHeight: 65px;
 .contentMid {
   z-index: 1;
   margin-top: -1px;
+  margin-bottom: 50px;
   min-height: 587px;
 }
 
@@ -1804,7 +1805,7 @@ $fightTimeMBoxMargin: 10px;
 .hpBigBox_B {
   width: (($bigBaseBox-width  + 2px) - ($setBox_left_width * 2) - ($contentBoxMargin * 2) - (($electKfSize + $contentBoxPadding * 2) * 2) - $fightTimeMBoxWidth - $fightTimeMBoxMargin * 2)/2;
   height: 21px;
-  margin-top: 10px;
+  margin-top: 9px;
   font-size: 12px;
 }
 
@@ -1823,6 +1824,11 @@ $fightTimeMBoxMargin: 10px;
     float: right;
   }
 }
+
+.zqText {
+  margin-top: 3px;
+}
+
 
 .zqHpBigBox,
 .hpBoxProcess {
@@ -2320,4 +2326,33 @@ $selectBbox_h: 30px;
   &:hover {
     filter: brightness(1) !important;
   }
+}
+
+.printBigBox,
+.printBox{
+  width: ($bigBaseBox-width  + 2px) - ($setBox_left_width * 2) - ($contentBoxMargin * 2) - $contentBoxPadding*2;
+
+}
+
+.printBigBox{
+  min-height:60px;
+}
+
+.printBox{
+  min-height:40px;
+  margin-bottom: 10px;
+}
+
+.pBoxTime {
+  float: left;
+  color: $hp-blue-color;
+  width: 75px;
+  text-align: right;
+  margin-right: 35px;
+}
+
+.pBigBoxDiv {
+  float: left;
+  width: 600px;
+  color: $tableTitle-color;
 }

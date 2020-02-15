@@ -14,10 +14,10 @@ module.exports = {
             template: './src/index.html',
             filename: 'index.html'
         }),
-        // new HtmlWebpackPlugin({
-        //     template: './src/Fight.html',
-        //     filename: 'Fight.html'
-        // }),
+        new HtmlWebpackPlugin({
+            template: './src/Fight.html',
+            filename: 'Fight.html'
+        }),
         // new HtmlWebpackPlugin({
         //     template: './src/selectSchool.html',
         //     filename: 'selectSchool.html'
