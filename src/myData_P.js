@@ -52,6 +52,18 @@ export class Person {
 
     flaw = 0;
 
+    dmMarker = {
+        blood: {
+            head: 0,
+            body: 0,
+            handL: 0,
+            handR: 0,
+            legL: 0,
+            legR: 0
+        },
+        poison: 0
+    };
+
     photo = {
         head: [],
         handL: [],
