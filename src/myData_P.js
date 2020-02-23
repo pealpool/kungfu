@@ -16,7 +16,7 @@ export class Person {
     // };
 
 
-    sixData = [0, 0, 0, 0, 0];//1力量，2敏捷，3智力，4体魄，5真气
+    sixData = [0, 0, 0, 0, 0];//1力量，2敏捷，3智力，4体魄，5内力
     myName = '';
     sex = 0;
     background = '落第书生';

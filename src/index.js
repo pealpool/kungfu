@@ -694,7 +694,7 @@ function loadGameFile(a) {
     $('#set_SX_MJ_A').text(a[1]);
     $('#set_SX_ZL_A').text(a[2]);
     $('#set_SX_TP_A').text(a[3]);
-    $('#set_SX_ZQ_A').text(a[4]);
+    $('#set_SX_NG_A').text(a[4]);
     onOrOff(a, 0);
     personA.myName = '段誉';
     personB.myName = '晓月';
@@ -708,7 +708,7 @@ function loadGameFile(a) {
     setSX_MJ();
     setSX_ZL();
     setSX_TP();
-    setSX_ZQ();
+    setSX_NG();
     initHP(personA.hp.head, personA.hp.body, personA.hp.hand, personA.hp.leg, 0);
     personA.init_photo();
     changePhoto(0);
@@ -788,12 +788,12 @@ $(document).on('click', '.bt_sub', function () {
                     setSX_TP();
                 }
                 break;
-            case 'set_SX_ZQ_A':
+            case 'set_SX_NG_A':
                 if (personA.sixData[4] >= 1) {
                     personA.calc_ZQ(-1);
                     t.text(personA.sixData[4]);
                     A.text(Number(A.text()) + 1);
-                    setSX_ZQ();
+                    setSX_NG();
                 }
                 break;
         }
@@ -841,12 +841,12 @@ $(document).on('click', '.bt_sub', function () {
                     s.eq(3).text(t.text());
                 }
                 break;
-            case 'set_SX_ZQ_B':
+            case 'set_SX_NG_B':
                 if (personB.sixData[4] >= 1) {
                     personB.calc_ZQ(-1);
                     t.text(personB.sixData[4]);
                     B.text(Number(B.text()) + 1);
-                    setSX_ZQ();
+                    setSX_NG();
                     s.eq(4).text(t.text());
                 }
                 break;
@@ -898,12 +898,12 @@ $(document).on('click', '.bt_add', function () {
                         setSX_TP();
                     }
                     break;
-                case 'set_SX_ZQ_A':
+                case 'set_SX_NG_A':
                     if (personA.sixData[4] <= 2) {
                         personA.calc_ZQ(1);
                         t.text(personA.sixData[4]);
                         A.text(A.text() - 1);
-                        setSX_ZQ();
+                        setSX_NG();
                     }
                     break;
             }
@@ -955,12 +955,12 @@ $(document).on('click', '.bt_add', function () {
                         s.eq(3).text(t.text());
                     }
                     break;
-                case 'set_SX_ZQ_B':
+                case 'set_SX_NG_B':
                     if (personB.sixData[4] <= 2) {
                         personB.calc_ZQ(1);
                         t.text(personB.sixData[4]);
                         B.text(B.text() - 1);
-                        setSX_ZQ();
+                        setSX_NG();
                         s.eq(4).text(t.text());
                     }
                     break;
@@ -998,9 +998,9 @@ function onOrOff(a, who) {
     let sum = 13 - a[0] - a[1] - a[2] - a[3] - a[4];
     if (who) {
         if (sum <= 0) {
-            $('#set_SX_LL_B,#set_SX_MJ_B,#set_SX_ZL_B,#set_SX_TP_B,#set_SX_ZQ_B').next().addClass('bt_off');
+            $('#set_SX_LL_B,#set_SX_MJ_B,#set_SX_ZL_B,#set_SX_TP_B,#set_SX_NG_B').next().addClass('bt_off');
         } else {
-            $('#set_SX_LL_B,#set_SX_MJ_B,#set_SX_ZL_B,#set_SX_TP_B,#set_SX_ZQ_B').next().removeClass('bt_off');
+            $('#set_SX_LL_B,#set_SX_MJ_B,#set_SX_ZL_B,#set_SX_TP_B,#set_SX_NG_B').next().removeClass('bt_off');
         }
         if (a[0] >= 5) {
             $('#set_SX_LL_B').next().addClass('bt_off');
@@ -1031,17 +1031,17 @@ function onOrOff(a, who) {
             $('#set_SX_TP_B').prev().removeClass('bt_off');
         }
         if (a[4] >= 3) {
-            $('#set_SX_ZQ_B').next().addClass('bt_off');
+            $('#set_SX_NG_B').next().addClass('bt_off');
         } else if (a[4] <= 0) {
-            $('#set_SX_ZQ_B').prev().addClass('bt_off');
+            $('#set_SX_NG_B').prev().addClass('bt_off');
         } else {
-            $('#set_SX_ZQ_B').prev().removeClass('bt_off');
+            $('#set_SX_NG_B').prev().removeClass('bt_off');
         }
     } else {
         if (sum <= 0) {
-            $('#set_SX_LL_A,#set_SX_MJ_A,#set_SX_ZL_A,#set_SX_TP_A,#set_SX_ZQ_A').next().addClass('bt_off');
+            $('#set_SX_LL_A,#set_SX_MJ_A,#set_SX_ZL_A,#set_SX_TP_A,#set_SX_NG_A').next().addClass('bt_off');
         } else {
-            $('#set_SX_LL_A,#set_SX_MJ_A,#set_SX_ZL_A,#set_SX_TP_A,#set_SX_ZQ_A').next().removeClass('bt_off');
+            $('#set_SX_LL_A,#set_SX_MJ_A,#set_SX_ZL_A,#set_SX_TP_A,#set_SX_NG_A').next().removeClass('bt_off');
         }
         if (a[0] >= 5) {
             $('#set_SX_LL_A').next().addClass('bt_off');
@@ -1072,11 +1072,11 @@ function onOrOff(a, who) {
             $('#set_SX_TP_A').prev().removeClass('bt_off');
         }
         if (a[4] >= 3) {
-            $('#set_SX_ZQ_A').next().addClass('bt_off');
+            $('#set_SX_NG_A').next().addClass('bt_off');
         } else if (a[4] <= 0) {
-            $('#set_SX_ZQ_A').prev().addClass('bt_off');
+            $('#set_SX_NG_A').prev().addClass('bt_off');
         } else {
-            $('#set_SX_ZQ_A').prev().removeClass('bt_off');
+            $('#set_SX_NG_A').prev().removeClass('bt_off');
         }
     }
 }
@@ -1133,7 +1133,7 @@ function setSX_TP() {
     $('#block_leg').text(toPercent(personA.block_leg));
 }
 
-function setSX_ZQ() {
+function setSX_NG() {
     $('#zqHurtAdd').text(toPercentAdd(personA.zqHurtAdd));
     $('#zqVal').text(personA.zqVal);
     $('#zqPerSec').text(personA.zqPerSec + '/0.1s');
