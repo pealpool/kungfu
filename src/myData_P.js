@@ -51,17 +51,24 @@ export class Person {
     zqHurtAdd = 0;
 
     flaw = 0;
+    zqBaoDiVal = 0;
 
-    dmMarker = {
-        blood: {
-            head: 0,
-            body: 0,
-            handL: 0,
-            handR: 0,
-            legL: 0,
-            legR: 0
-        },
-        poison: 0
+    mark_blood = {
+        head: 0,
+        body: 0,
+        handL: 0,
+        handR: 0,
+        legL: 0,
+        legR: 0
+    };
+    mark_poison = {
+        WJ_LL: 0,
+        WJ_MJ: 0,
+        WJ_ZL: 0,
+        WJ_TP: 0,
+        WJ_NL: 0,
+        TM: 0,
+        XH: 0
     };
 
     photo = {
@@ -124,12 +131,31 @@ export class Person {
         this.def_i = data_D.def_i[this.sixData[3]];
     }
 
-    calc_ZQ(c) {
+    calc_NL(c) {
         this.sixData[4] = this.sixData[4] + c;
         this.zqVal = data_D.zqVal[this.sixData[4]];
         this.zqPerSec = data_D.zqPerSec[this.sixData[4]];
         this.zqHurtAdd = data_D.zqHurtAdd[this.sixData[4]];
 
+    }
+
+    init_blood() {
+        this.mark_blood.head = 0;
+        this.mark_blood.body = 0;
+        this.mark_blood.handL = 0;
+        this.mark_blood.handR = 0;
+        this.mark_blood.legL = 0;
+        this.mark_blood.legR = 0;
+    }
+
+    init_poison() {
+        this.mark_poison.WJ_LL = 0;
+        this.mark_poison.WJ_MJ = 0;
+        this.mark_poison.WJ_ZL = 0;
+        this.mark_poison.WJ_TP = 0;
+        this.mark_poison.WJ_NL = 0;
+        this.mark_poison.TM = 0;
+        this.mark_poison.XH = 0;
     }
 
     init() {
@@ -138,14 +164,16 @@ export class Person {
         this.hp.hand = [data_const.hp.hand, data_const.hp.hand];
         this.hp.leg = [data_const.hp.leg, data_const.hp.leg];
         this.flaw = 0;
+        this.zqBaoDiVal = 5;
 
         this.calc_LL(0);
         this.calc_MJ(0);
         this.calc_ZL(0);
         this.calc_TP(0);
-        this.calc_ZQ(0);
+        this.calc_NL(0);
 
-
+        this.init_blood();
+        this.init_poison();
     }
 
     init_photo() {

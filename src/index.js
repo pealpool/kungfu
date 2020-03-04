@@ -19,7 +19,7 @@ let zsDefSortA = [new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSo
 let zsDefSortB = [new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort()];
 let selectBoxHtml_A = ['', '', '<div class="selectBbox" style="display: none"></div>'];
 let selectBoxHtml_B = ['', '', '<div class="selectBbox" style="display: none"></div>'];
-let zqBaoDiVal_A = 5, zqBaoDiVal_B = 5;
+let whoFirst = '';
 
 let mySaveFile = [2, 2, 2, 2, 2];
 
@@ -790,7 +790,7 @@ $(document).on('click', '.bt_sub', function () {
                 break;
             case 'set_SX_NG_A':
                 if (personA.sixData[4] >= 1) {
-                    personA.calc_ZQ(-1);
+                    personA.calc_NL(-1);
                     t.text(personA.sixData[4]);
                     A.text(Number(A.text()) + 1);
                     setSX_NG();
@@ -843,7 +843,7 @@ $(document).on('click', '.bt_sub', function () {
                 break;
             case 'set_SX_NG_B':
                 if (personB.sixData[4] >= 1) {
-                    personB.calc_ZQ(-1);
+                    personB.calc_NL(-1);
                     t.text(personB.sixData[4]);
                     B.text(Number(B.text()) + 1);
                     setSX_NG();
@@ -900,7 +900,7 @@ $(document).on('click', '.bt_add', function () {
                     break;
                 case 'set_SX_NG_A':
                     if (personA.sixData[4] <= 2) {
-                        personA.calc_ZQ(1);
+                        personA.calc_NL(1);
                         t.text(personA.sixData[4]);
                         A.text(A.text() - 1);
                         setSX_NG();
@@ -957,7 +957,7 @@ $(document).on('click', '.bt_add', function () {
                     break;
                 case 'set_SX_NG_B':
                     if (personB.sixData[4] <= 2) {
-                        personB.calc_ZQ(1);
+                        personB.calc_NL(1);
                         t.text(personB.sixData[4]);
                         B.text(B.text() - 1);
                         setSX_NG();
@@ -1857,9 +1857,9 @@ function zqBaoDiSetVal() {
     let a, t, $this;
     $('.baoDiSetTextF').removeClass('baoDiSetTextF');
     if ($('.selectKf_A_Click').length > 0) {
-        a = zqBaoDiVal_A;
+        a = personA.zqBaoDiVal;
     } else {
-        a = zqBaoDiVal_B;
+        a = personB.zqBaoDiVal;
     }
     switch (a) {
         case 5:
@@ -1892,11 +1892,11 @@ $(document).on('click', '.selectOver', function () {
     if ($('.selectKf_A_Click').length > 0) {
         aa(selectBoxHtml_A, zsAttSortA, zsDefSortA);
         $('.selectKf_A_Click').trigger('click');
-        zqBaoDiVal_A = Number($('.baoDiSetTextF').text());
+        personA.zqBaoDiVal = Number($('.baoDiSetTextF').text());
     } else {
         aa(selectBoxHtml_B, zsAttSortB, zsDefSortB);
         $('.selectKf_B_Click').trigger('click');
-        zqBaoDiVal_B = Number($('.baoDiSetTextF').text());
+        personB.zqBaoDiVal = Number($('.baoDiSetTextF').text());
     }
 
     function aa(ssHtml, ssAttSort, ssDefSort) {
@@ -2017,10 +2017,27 @@ $(document).on('click', '.baoDiSetText >div', function () {
     }
 });
 
-function printDiv(s) {
-    $('.contentButton').append(s);
+//todo 测试用
+$(document).on('click', '.fightPause', function () {
+    let t = 0.25;
+    printDiv(t);
+});
+
+function printDiv(t) {
+    let myDiv = '<div class="printBox"><div class="pBoxTime">' + t + 's</div><div class="pBigBoxDiv"><div></div></div></div>';
+    $('.printBigBox').append(myDiv);
 }
 
-function fightStepGo() {
-
+function findWhoFirst() {
+    switch (whoFirst) {
+        case "A":
+            break;
+        case "B":
+            break;
+        case "":
+            break;
+    }
 }
+
+//todo 回合开始
+// 回合开始前计算被动写入person，写招式excel
