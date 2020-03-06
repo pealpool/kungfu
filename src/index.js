@@ -2,7 +2,7 @@
 import $ from 'jquery';
 import {data_S} from './myData_S.js';
 import {data_const} from './myData_const.js';
-import {Person, zsAttSort, zsDefSort} from './myData_P.js';
+import {Person, zsAttSort, zsDefSort, buffer} from './myData_P.js';
 import './css/baseCss.scss';
 import 'webpack-jquery-ui';
 import anime from 'animejs/lib/anime.es.js';
@@ -2040,4 +2040,8 @@ function findWhoFirst() {
 }
 
 //todo 回合开始
-// 回合开始前计算被动写入person，写招式excel
+//
+
+let abcde = new buffer();
+abcde.int();
+console.log(abcde.def_p);

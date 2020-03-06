@@ -5,16 +5,6 @@ import {data_i} from './myData_i.js';
 import {data_const} from './myData_const.js';
 
 export class Person {
-    // sixData = new Array(4);
-    //
-    // constructor(sixData = new Array(4)) {
-    //     this.sixData[0] = sixData[0];
-    //     this.sixData[1] = sixData[1];
-    //     this.sixData[2] = sixData[2];
-    //     this.sixData[3] = sixData[3];
-    //     this.sixData[4] = sixData[4];
-    // };
-
 
     sixData = [0, 0, 0, 0, 0];//1力量，2敏捷，3智力，4体魄，5内力
     myName = '';
@@ -46,6 +36,8 @@ export class Person {
     block_leg = 0;
     def_o = 0;
     def_i = 0;
+    // def_p = 0;
+    // def_b = 0;
     zqVal = 0;
     zqPerSec = 0;
     zqHurtAdd = 0;
@@ -54,12 +46,12 @@ export class Person {
     zqBaoDiVal = 0;
 
     mark_blood = {
-        head: 0,
-        body: 0,
-        handL: 0,
-        handR: 0,
-        legL: 0,
-        legR: 0
+        head: [0, 0],
+        body: [0, 0],
+        handL: [0, 0],
+        handR: [0, 0],
+        legL: [0, 0],
+        legR: [0, 0]
     };
     mark_poison = {
         WJ_LL: 0,
@@ -83,14 +75,12 @@ export class Person {
 
     zqValSub() {
         let x = this.hp.body / data_const.hp.body;
-        let re = this.zqVal * (data_const.hpSubZqVal.a * Math.pow(x, 2) + data_const.hpSubZqVal.b * x + data_const.hpSubZqVal.c);
-        return re;
+        return this.zqVal * (data_const.hpSubZqVal.a * Math.pow(x, 2) + data_const.hpSubZqVal.b * x + data_const.hpSubZqVal.c);
     }
 
     zqPerSecSub() {
         let x = this.hp.body / data_const.hp.body;
-        let re = this.zqPerSec * (data_const.hpSubZqPerSec.a * Math.pow(x, 2) + data_const.hpSubZqPerSec.b * x + data_const.hpSubZqPerSec.c);
-        return re;
+        return this.zqPerSec * (data_const.hpSubZqPerSec.a * Math.pow(x, 2) + data_const.hpSubZqPerSec.b * x + data_const.hpSubZqPerSec.c);
     }
 
 
@@ -140,12 +130,12 @@ export class Person {
     }
 
     init_blood() {
-        this.mark_blood.head = 0;
-        this.mark_blood.body = 0;
-        this.mark_blood.handL = 0;
-        this.mark_blood.handR = 0;
-        this.mark_blood.legL = 0;
-        this.mark_blood.legR = 0;
+        this.mark_blood.head = [0, 0];
+        this.mark_blood.body = [0, 0];
+        this.mark_blood.handL = [0, 0];
+        this.mark_blood.handR = [0, 0];
+        this.mark_blood.legL = [0, 0];
+        this.mark_blood.legR = [0, 0];
     }
 
     init_poison() {
@@ -300,6 +290,7 @@ export class Person {
 
 }
 
+//所选攻击招式
 export class zsAttSort {
     zName = '';
     attFrom = '';
@@ -307,8 +298,37 @@ export class zsAttSort {
     comBo = false;
 }
 
+//所选防御招式
 export class zsDefSort {
     zName = '';
     DefBody = '';
     comBo = false;
+}
+
+export class buffer {
+    //二维数组 hurt_o = [[0.05,5],[0.1,2]]，代表两个buffer在身，一个5%，5s；另一个10%，2s。
+    int(){
+        this.hurt_o = [];
+        this.hurt_i = [];
+        this.hurt_p = [];
+        this.hurt_b = [];
+        this.hurt_q = [];
+        this.hit = [];
+        this.deBlock = [];
+        this.block = [];
+        this.dod = [];
+        this.flaw_to = [];
+        this.def_o = [];
+        this.def_i = [];
+        this.def_b = 0;
+        this.def_p = 0;
+        this.lock_zq = 0;
+        this.time_q = 0;
+        this.zqPerSec = 0;
+        this.attBack_cp=0;
+        this.attBack_po_normal = 0;
+        this.attBack_po_block = 0;
+        this.attBack_pi_normal = 0;
+        this.attBack_pi_block = 0;
+    }
 }
