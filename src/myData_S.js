@@ -193,6 +193,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '内伤伤害+10%，5s',
                 'remark': '[暂无数据] - 038',
+                'LZ_Data': {'hurt_i': [0.1, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -200,8 +202,10 @@ export const data_S = {
                 'def_body': ['hand',],
                 'block': 0.15,
                 'TX_inf': '',
-                'LZ_inf': '格挡+5%',
+                'LZ_inf': '格挡+5%，5s',
                 'remark': '[暂无数据] - 039',
+                'LZ_Data': {'block': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -209,8 +213,10 @@ export const data_S = {
                 'def_body': ['hand', 'leg',],
                 'block': 0,
                 'TX_inf': '反击外伤伤害50，打断连招',
-                'LZ_inf': '闪避+5%',
+                'LZ_inf': '闪避+5%，5s',
                 'remark': '[暂无数据] - 040',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {'breakLink': 1, 'attBack_co': 50},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -218,8 +224,10 @@ export const data_S = {
                 'def_body': ['hand', 'leg',],
                 'block': 0,
                 'TX_inf': '反击内伤伤害50，打断连招',
-                'LZ_inf': '闪避+5%',
+                'LZ_inf': '闪避+5%，5s',
                 'remark': '[暂无数据] - 041',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {'breakLink': 1, 'attBack_ci': 50},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -229,6 +237,8 @@ export const data_S = {
                 'TX_inf': '不受内伤伤害',
                 'LZ_inf': '内伤伤害+5%，5s',
                 'remark': '[暂无数据] - 042',
+                'LZ_Data': {'hurt_i': [0.1, 5]},
+                'TX_Data': {'wxDamage': 'i'},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -238,6 +248,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '命中+5%',
                 'remark': '[暂无数据] - 043',
+                'LZ_Data': {'hit': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -249,6 +261,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡+5%，5s',
                 'remark': '',
+                'LZ_Data': {'block': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -258,6 +272,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '内伤伤害+5%，5s',
                 'remark': '',
+                'LZ_Data': {'hurt_i': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -267,14 +283,24 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '乃是「武当七绝」之一，堪称轻功中的轻功，其注重身法的轻灵，不以步法多变来迷惑对手，要旨是身形轻巧，高低进退自如。',
+                'LZ_Data': {'hit': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
         },
         'zPas': {
-            '天蚕诀': {'TX_inf': '内伤伤害+10%，内伤防御+10%', 'remark': '[暂无数据] - 093',},
-            '三花聚顶': {'TX_inf': '外伤防御+10%，内伤防御+10%，毒防御5', 'remark': '[暂无数据] - 094',},
-            '无上罡气': {'TX_inf': '内伤伤害+15%', 'remark': '[暂无数据] - 095',},
+            '天蚕诀': {
+                'TX_inf': '内伤伤害+10%，内伤防御+10%',
+                'remark': '[暂无数据] - 093',
+                'TX_Data': {'hurt_i': 0.1, 'def_i': 0.1},
+            },
+            '三花聚顶': {
+                'TX_inf': '格挡率+5%，外伤防御+5%，内伤防御+5%，毒防御5',
+                'remark': '[暂无数据] - 094',
+                'TX_Data': {'hurt_o': 0.05, 'def_i': 0.05, 'def_p': 5, 'block': 0.05},
+            },
+            '无上罡气': {'TX_inf': '内伤伤害+20%', 'remark': '[暂无数据] - 095', 'TX_Data': {'hurt_i': 0.2,},},
         },
     }, 'SL': {
         'name': '少林派',
@@ -469,6 +495,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '[暂无数据] - 045',
+                'LZ_Data': {'hurt_o': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -478,6 +506,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 046',
+                'LZ_Data': {'block': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -487,6 +517,8 @@ export const data_S = {
                 'TX_inf': '外伤防御+5%，5s',
                 'LZ_inf': '外伤防御+5%，5s',
                 'remark': '[暂无数据] - 047',
+                'LZ_Data': {'def_o': [0.05, 5]},
+                'TX_Data': {'def_o': [0.05, 5]},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -496,6 +528,8 @@ export const data_S = {
                 'TX_inf': '内伤防御+5%，5s',
                 'LZ_inf': '内伤防御+5%，5s',
                 'remark': '[暂无数据] - 048',
+                'LZ_Data': {'def_i': [0.05, 5]},
+                'TX_Data': {'def_i': [0.05, 5]},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -505,6 +539,8 @@ export const data_S = {
                 'TX_inf': '外伤伤害+5%，5s',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '[暂无数据] - 049',
+                'LZ_Data': {'hurt_o': [0.05, 5]},
+                'TX_Data': {'hurt_o': [0.05, 5]},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -516,6 +552,8 @@ export const data_S = {
                 'TX_inf': '下次攻击前摇+0.2s',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '使出轻身发，奋力后跃，远离敌人',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {'time_q': 0.2},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -525,6 +563,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '',
+                'LZ_Data': {'hit': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -534,15 +574,21 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
         },
         'zPas': {
-            '铁布衫': {'TX_inf': '外伤防御 +25%', 'remark': '[暂无数据] - 097',},
-            '易筋经': {'TX_inf': '外伤伤害+15%', 'remark': '[暂无数据] - 098',},
-            '菩提心法': {'TX_inf': '命中+5%', 'remark': '[暂无数据] - 099',},
-            '金钟罩': {'TX_inf': '外伤防御 +5%，内伤防御 +20%', 'remark': '[暂无数据] - 100',},
+            '铁布衫': {'TX_inf': '外伤防御 +25%', 'remark': '[暂无数据] - 097', 'TX_Data': {'def_o': 0.25},},
+            '易筋经': {'TX_inf': '外伤伤害+15%', 'remark': '[暂无数据] - 098', 'TX_Data': {'hurt_o': 0.15},},
+            '菩提心法': {'TX_inf': '命中+5%', 'remark': '[暂无数据] - 099', 'TX_Data': {'hit': 0.05},},
+            '金钟罩': {
+                'TX_inf': '外伤防御 +5%，内伤防御 +20%',
+                'remark': '[暂无数据] - 100',
+                'TX_Data': {'def_o': 0.05, 'def_i': 0.2},
+            },
         },
     }, 'YZ': {
         'name': '鹰爪门',
@@ -737,6 +783,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '[暂无数据] - 051',
+                'LZ_Data': {'hurt_o': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -744,8 +792,10 @@ export const data_S = {
                 'def_body': ['hand', 'leg',],
                 'block': 0,
                 'TX_inf': '',
-                'LZ_inf': '命中+5%',
+                'LZ_inf': '命中+5%，5s',
                 'remark': '[暂无数据] - 052',
+                'LZ_Data': {'hit': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -755,6 +805,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 053',
+                'LZ_Data': {'block': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -766,6 +818,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '',
+                'LZ_Data': {'hit': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -775,6 +829,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '',
+                'LZ_Data': {'hurt_o': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -784,6 +840,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -793,14 +851,16 @@ export const data_S = {
                 'TX_inf': '下次攻击前摇+0.2s',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '奋力远离敌方',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {'time_q': 0.2},
                 'count_tt': 0,
                 'count_all': 0
             },
         },
         'zPas': {
-            '鹰爪提坛功': {'TX_inf': '外伤伤害+10%', 'remark': '[暂无数据] - 102',},
-            '鹰爪撕把功': {'TX_inf': '流血伤害+10/s', 'remark': '[暂无数据] - 103',},
-            '飞鹰叼桩功': {'TX_inf': '闪避+5%', 'remark': '[暂无数据] - 104',},
+            '鹰爪提坛功': {'TX_inf': '外伤伤害+15%', 'remark': '[暂无数据] - 102', 'TX_Data': {'hurt_o': 0.15},},
+            '鹰爪撕把功': {'TX_inf': '流血伤害+10/s', 'remark': '[暂无数据] - 103', 'TX_Data': {'hurt_b': 10},},
+            '飞鹰叼桩功': {'TX_inf': '闪避+5%', 'remark': '[暂无数据] - 104', 'TX_Data': {'dod': 0.05},},
         },
     }, 'WJ': {
         'name': '五毒教',
@@ -971,8 +1031,10 @@ export const data_S = {
                 'def_body': ['hand', 'leg',],
                 'block': 0,
                 'TX_inf': '',
-                'LZ_inf': '命中+5%',
+                'LZ_inf': '命中+5%，5s',
                 'remark': '[暂无数据] - 055',
+                'LZ_Data': {'hit': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -982,6 +1044,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 056',
+                'LZ_Data': {'block': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -991,6 +1055,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤内伤防御+5%，5s',
                 'remark': '[暂无数据] - 057',
+                'LZ_Data': {'def_o': [0.05, 5], 'def_i': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1002,6 +1068,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '',
+                'LZ_Data': {'hit': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1011,6 +1079,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1020,6 +1090,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '内伤伤害+5%，5s',
                 'remark': '',
+                'LZ_Data': {'hurt_i': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1029,14 +1101,20 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
         },
         'zPas': {
-            '补天诀': {'TX_inf': '真气回复+0.1/s', 'remark': '[暂无数据] - 106',},
-            '毒王经': {'TX_inf': '毒伤害+5，毒防御-5', 'remark': '[暂无数据] - 107',},
-            '五毒衣': {'TX_inf': '被直接命中时，反击毒伤害10；毒防御+5', 'remark': '[暂无数据] - 108',},
+            '补天诀': {'TX_inf': '真气回复+0.1/0.1s', 'remark': '[暂无数据] - 106', 'TX_Data': {'zqPerSec_m': 0.1},},
+            '毒王经': {'TX_inf': '毒伤害+5，毒防御-5', 'remark': '[暂无数据] - 107', 'TX_Data': {'hurt_p': 5, 'def_p': -5},},
+            '五毒衣': {
+                'TX_inf': '被直接命中时，反击毒伤害10；毒防御+5',
+                'remark': '[暂无数据] - 108',
+                'TX_Data': {'def_p': 5, 'attBack_cp': 10},
+            },
         },
     }, 'DL': {
         'name': '大理段氏',
@@ -1231,6 +1309,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '[暂无数据] - 059',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1240,6 +1320,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 060',
+                'LZ_Data': {'block': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1249,6 +1331,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤内伤防御+5%，5s',
                 'remark': '[暂无数据] - 061',
+                'LZ_Data': {'def_o': [0.05, 5], 'def_i': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1258,6 +1342,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤内伤伤害+5%，5s',
                 'remark': '[暂无数据] - 062',
+                'LZ_Data': {'def_o': [0.05, 5], 'def_i': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1269,6 +1355,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '',
+                'LZ_Data': {'hit': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1278,6 +1366,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1287,6 +1377,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '内伤伤害+5%，5s',
                 'remark': '',
+                'LZ_Data': {'hurt_i': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1296,14 +1388,20 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡+5%，5s',
                 'remark': '',
+                'LZ_Data': {'block': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
         },
         'zPas': {
-            '枯荣禅功': {'TX_inf': '自身真气回复+10%，对方真气回复-10%', 'remark': '[暂无数据] - 110',},
-            '段氏心法': {'TX_inf': '闪避+5%，命中+5%', 'remark': '[暂无数据] - 111',},
-            '六脉神剑经': {'TX_inf': '破绽发现+30%', 'remark': '[暂无数据] - 112',},
+            '枯荣禅功': {
+                'TX_inf': '自身真气回复+0.1/0.1s，对方真气回复-0.1/0.1s',
+                'remark': '[暂无数据] - 110',
+                'TX_Data': {'zqPerSec_m': 0.1, 'zqPerSec_t': -0.1},
+            },
+            '段氏心法': {'TX_inf': '闪避+5%，命中+5%', 'remark': '[暂无数据] - 111', 'TX_Data': {'dod': 0.05, 'hit': 0.05},},
+            '六脉神剑经': {'TX_inf': '破绽发现+15%', 'remark': '[暂无数据] - 112', 'TX_Data': {'flaw_to': 0.15},},
         },
     }, 'EM': {
         'name': '峨眉派',
@@ -1498,6 +1596,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '内伤伤害+5%，5s',
                 'remark': '[暂无数据] - 064',
+                'LZ_Data': {'hurt_i': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1507,6 +1607,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '[暂无数据] - 065',
+                'LZ_Data': {'hurt_o': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1516,15 +1618,19 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '[暂无数据] - 066',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
             '分花拂柳': {
                 'def_body': ['hand', 'leg',],
                 'block': 0,
-                'TX_inf': '如同闪避，不受格挡，不弹反伤害',
+                'TX_inf': '如同闪避，不受格挡伤害',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '[暂无数据] - 067',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {'wxDamage': 'io'},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1536,15 +1642,19 @@ export const data_S = {
                 'TX_inf': '下次的攻击前摇-0.2s',
                 'LZ_inf': '内外伤伤害+5%，5s',
                 'remark': '高高跃起，准备下落攻击',
+                'LZ_Data': {'hurt_i': [0.05, 5]},
+                'TX_Data': {'time_q': -0.2},
                 'count_tt': 0,
                 'count_all': 0
             },
             '移花接木': {
                 'zqConst': 5,
                 'dod': 0,
-                'TX_inf': '反弹25%伤害',
+                'TX_inf': '以外伤伤害反击对方25%外伤攻击',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '利用树木山石替代自身受到攻击，反伤敌人',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {'attBack_po': 1},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1554,6 +1664,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '',
+                'LZ_Data': {'hurt_o': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1563,6 +1675,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '内伤伤害+5%，5s',
                 'remark': '',
+                'LZ_Data': {'hurt_i': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1572,14 +1686,24 @@ export const data_S = {
                 'TX_inf': '反击外伤伤害25，内伤伤害25',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '',
+                'LZ_Data': {'hurt_o': [0.05, 5]},
+                'TX_Data': {'attBack_ci': 25, 'attBack_co': 25},
                 'count_tt': 0,
                 'count_all': 0
             },
         },
         'zPas': {
-            '千手法': {'TX_inf': '格挡+10%', 'remark': '[暂无数据] - 114',},
-            '金身法': {'TX_inf': '外伤伤害+10%，外伤防御 +10%', 'remark': '[暂无数据] - 115',},
-            '太玄功': {'TX_inf': '内伤伤害+10%，内伤防御 +10%', 'remark': '[暂无数据] - 116',},
+            '千手法': {'TX_inf': '格挡+10%', 'remark': '[暂无数据] - 114', 'TX_Data': {'block': 0.1},},
+            '金身法': {
+                'TX_inf': '外伤伤害+50%，内伤伤害-50%，外伤防御 +10%',
+                'remark': '[暂无数据] - 115',
+                'TX_Data': {'hurt_o': 0.5, 'hurt_i': -0.5, 'def_o': 0.1},
+            },
+            '太玄功': {
+                'TX_inf': '内伤伤害+50%，外伤伤害-50%，内伤防御 +10%',
+                'remark': '[暂无数据] - 116',
+                'TX_Data': {'hurt_i': 0.5, 'hurt_o': -0.5, 'def_i': 0.1},
+            },
         },
     }, 'JG': {
         'name': '金刚宗',
@@ -1774,6 +1898,8 @@ export const data_S = {
                 'TX_inf': '真气恢复20',
                 'LZ_inf': '真气伤害+5%，5s',
                 'remark': '[暂无数据] - 070',
+                'LZ_Data': {'hurt_q': [0.05, 5]},
+                'TX_Data': {'zqValAdd': 20},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1783,6 +1909,8 @@ export const data_S = {
                 'TX_inf': '外伤防御+5%，5s',
                 'LZ_inf': '外伤防御+5%，5s',
                 'remark': '[暂无数据] - 071',
+                'LZ_Data': {'def_o': [0.05, 5]},
+                'TX_Data': {'def_o': [0.05, 5]},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1792,6 +1920,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 072',
+                'LZ_Data': {'block': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1801,6 +1931,8 @@ export const data_S = {
                 'TX_inf': '内伤防御+5%，5s',
                 'LZ_inf': '内伤防御+5%，5s',
                 'remark': '[暂无数据] - 073',
+                'LZ_Data': {'def_i': [0.05, 5]},
+                'TX_Data': {'def_i': [0.05, 5]},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1810,6 +1942,8 @@ export const data_S = {
                 'TX_inf': '必定格挡特殊招式',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 074',
+                'LZ_Data': {'block': [0.05, 5]},
+                'TX_Data': {'def_s': 1},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1821,6 +1955,8 @@ export const data_S = {
                 'TX_inf': '内外伤防御+5%，5s',
                 'LZ_inf': '内外伤防御+5%，5s',
                 'remark': '',
+                'LZ_Data': {'def_i': [0.05, 5], 'def_o': [0.05, 5]},
+                'TX_Data': {'def_i': [0.05, 5], 'def_o': [0.05, 5]},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1830,6 +1966,8 @@ export const data_S = {
                 'TX_inf': '下次攻击前摇+0.2s',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -1839,15 +1977,29 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
         },
         'zPas': {
-            '金刚不坏身': {'TX_inf': '外伤防御 +15%，内伤防御 +15%，流血伤害-5', 'remark': '[暂无数据] - 118',},
-            '龙象般若功': {'TX_inf': '真气伤害+15%', 'remark': '[暂无数据] - 119',},
-            '明王拙火定': {'TX_inf': '格挡成功时以内伤伤害弹反20%攻击伤害，被直接命中反10%', 'remark': '[暂无数据] - 120',},
-            '瑜伽密乘': {'TX_inf': '外伤伤害 -5%，内伤伤害+15%', 'remark': '[暂无数据] - 121',},
+            '金刚不坏身': {
+                'TX_inf': '外伤防御 +15%，内伤防御 +15%，流血伤害-5',
+                'remark': '[暂无数据] - 118',
+                'TX_Data': {'def_o': 0.15, 'def_i': 0.15, 'def_b': 5},
+            },
+            '龙象般若功': {'TX_inf': '真气伤害+15%', 'remark': '[暂无数据] - 119', 'TX_Data': {'hurt_q': 0.15},},
+            '明王拙火定': {
+                'TX_inf': '格挡成功时以内伤伤害反击20%攻击伤害，被直接命中反10%',
+                'remark': '[暂无数据] - 120',
+                'TX_Data': {'attBack_pi_normal': 0.1, 'attBack_pi_block': 0.2,},
+            },
+            '瑜伽密乘': {
+                'TX_inf': '外伤伤害 -20%，内伤伤害+25%',
+                'remark': '[暂无数据] - 121',
+                'TX_Data': {'hurt_i': 0.25, 'hurt_o': 0.2},
+            },
         },
     }, 'TM': {
         'name': '唐门',
@@ -2039,9 +2191,11 @@ export const data_S = {
             '傀儡替身': {
                 'def_body': ['hand',],
                 'block': 0.1,
-                'TX_inf': '如同闪避，不受格挡，不弹反伤害',
+                'TX_inf': '如同闪避，不受格挡伤害',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '以傀儡承受伤害，本体伺机反击',
+                'LZ_Data': {'hit': [0.05, 5]},
+                'TX_Data': {'wxDamage': 'io'},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2051,6 +2205,8 @@ export const data_S = {
                 'TX_inf': '完全格挡伤害',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '[暂无数据] - 077',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {'wxDamage': 'io'},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2062,6 +2218,8 @@ export const data_S = {
                 'TX_inf': '下次的攻击前摇+0.1s',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {'time_q': 0.1},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2071,6 +2229,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '虚影重重，奥妙迷踪',
+                'LZ_Data': {'hit': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2080,6 +2240,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2089,6 +2251,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2098,6 +2262,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '毒伤害+5，5s',
                 'remark': '',
+                'LZ_Data': {'hurt_p': [5, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2107,6 +2273,8 @@ export const data_S = {
                 'TX_inf': '下次的攻击前摇-0.1s',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '一跃而起，居高临下',
+                'LZ_Data': {'hit': [0.05, 5]},
+                'TX_Data': {'time_q': -0.1},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2116,14 +2284,16 @@ export const data_S = {
                 'TX_inf': '命中+15%，1s',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '急退同时踢起沙土，掩护暗器',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {'hit': [0.15, 1]},
                 'count_tt': 0,
                 'count_all': 0
             },
         },
         'zPas': {
-            '天女散花': {'TX_inf': '命中+10%', 'remark': '[暂无数据] - 123',},
-            '万毒典': {'TX_inf': '毒伤害+5，毒防御-5', 'remark': '[暂无数据] - 124',},
-            '千刃炼器术': {'TX_inf': '流血伤害+5', 'remark': '[暂无数据] - 125',},
+            '天女散花': {'TX_inf': '命中+10%', 'remark': '[暂无数据] - 123', 'TX_Data': {'hit': 0.1},},
+            '万毒典': {'TX_inf': '毒伤害+5，毒防御-5', 'remark': '[暂无数据] - 124', 'TX_Data': {'hurt_p': 5, 'def_p': -5},},
+            '千刃炼器术': {'TX_inf': '流血伤害+5', 'remark': '[暂无数据] - 125', 'TX_Data': {'hurt_b': 5},},
         },
     }, 'XH': {
         'name': '血犼教',
@@ -2318,6 +2488,8 @@ export const data_S = {
                 'TX_inf': '外伤防御+5%，5s',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 079',
+                'LZ_Data': {'block': [0.05, 5]},
+                'TX_Data': {'def_o': [0.05, 5]},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2327,6 +2499,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 080',
+                'LZ_Data': {'block': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2336,6 +2510,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 081',
+                'LZ_Data': {'block': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2345,6 +2521,8 @@ export const data_S = {
                 'TX_inf': '内伤防御+5%，5s',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 082',
+                'LZ_Data': {'block': [0.05, 5]},
+                'TX_Data': {'def_i': [0.05, 5]},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2356,6 +2534,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2365,6 +2545,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '',
+                'LZ_Data': {'hit': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2374,6 +2556,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2383,14 +2567,16 @@ export const data_S = {
                 'TX_inf': '下次攻击前摇+0.2s',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {'time_q': 0.2},
                 'count_tt': 0,
                 'count_all': 0
             },
         },
         'zPas': {
-            '血犼邪经': {'TX_inf': '双方流血持续时间+1s', 'remark': '[暂无数据] - 127',},
-            '黑尸诀': {'TX_inf': '毒伤害+5，毒防御-5', 'remark': '[暂无数据] - 128',},
-            '血童不死身': {'TX_inf': '被击中时，当前部位所受一半伤害化成流血伤害，持续5s', 'remark': '[暂无数据] - 129',},
+            '血犼邪经': {'TX_inf': '双方流血持续时间+1s', 'remark': '[暂无数据] - 127', 'TX_Data': {'blood_last': 1},},
+            '黑尸诀': {'TX_inf': '毒伤害+5，毒防御-5', 'remark': '[暂无数据] - 128', 'TX_Data': {'hurt_p': 5, 'def_p': -5},},
+            '血童不死身': {'TX_inf': '被击中时，当前部位所受一半伤害化成流血伤害，持续5s', 'remark': '[暂无数据] - 129', 'TX_Data': {'special': 1},},
         },
     }, 'SX': {
         'name': '狮相门',
@@ -2582,9 +2768,11 @@ export const data_S = {
             '铁鼎金身响': {
                 'def_body': ['hand', 'leg',],
                 'block': 0,
-                'TX_inf': '以真实伤害反击对方100%内伤攻击，打断连招',
+                'TX_inf': '以内伤伤害反击对方100%内伤攻击，打断连招',
                 'LZ_inf': '内外伤防御+5%，5s',
                 'remark': '[暂无数据] - 084',
+                'LZ_Data': {'def_o': [0.05, 5], 'def_i': [0.05, 5]},
+                'TX_Data': {'breakLink': 1, 'attBack_pi': 1},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2594,6 +2782,8 @@ export const data_S = {
                 'TX_inf': '外伤防御+15%，5s',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 085',
+                'LZ_Data': {'block': [0.05, 5]},
+                'TX_Data': {'def_o': [0.15, 5]},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2603,15 +2793,19 @@ export const data_S = {
                 'TX_inf': '命中率+10%，5s，打断连招',
                 'LZ_inf': '格挡率+5%，5s',
                 'remark': '[暂无数据] - 086',
+                'LZ_Data': {'block': [0.05, 5]},
+                'TX_Data': {'breakLink': 1, 'hit': [0.1, 5]},
                 'count_tt': 0,
                 'count_all': 0
             },
             '霸王刃甲功': {
                 'def_body': ['hand', 'leg',],
                 'block': 0,
-                'TX_inf': '以真实伤害反击对方100%外伤攻击，打断连招',
+                'TX_inf': '以外伤伤害反击对方100%外伤攻击，打断连招',
                 'LZ_inf': '外伤伤害+10%，5s',
                 'remark': '[暂无数据] - 087',
+                'LZ_Data': {'hurt_o': [0.1, 5]},
+                'TX_Data': {'breakLink': 1, 'attBack_po': 1},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2621,6 +2815,8 @@ export const data_S = {
                 'TX_inf': '完全格挡伤害',
                 'LZ_inf': '外伤防御+5%，5s',
                 'remark': '[暂无数据] - 088',
+                'LZ_Data': {'def_o': [0.05, 5]},
+                'TX_Data': {'wxDamage': 'io'},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2630,6 +2826,8 @@ export const data_S = {
                 'TX_inf': '内伤防御+15%，5s',
                 'LZ_inf': '外伤伤害+5%，5s',
                 'remark': '[暂无数据] - 089',
+                'LZ_Data': {'hurt_o': [0.05, 5]},
+                'TX_Data': {'def_i': [0.15, 5]},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2641,6 +2839,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '格挡+5%，5s',
                 'remark': '',
+                'LZ_Data': {'block': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2650,6 +2850,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '',
+                'LZ_Data': {'hit': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2659,14 +2861,20 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '内外伤防御+5%，5s',
                 'remark': '',
+                'LZ_Data': {'def_i': [0.05, 5], 'def_o': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
         },
         'zPas': {
-            '金猊镇魔功': {'TX_inf': '格挡能打断连招', 'remark': '[暂无数据] - 131',},
-            '光明狮子劲': {'TX_inf': '50%外伤攻击化成内伤攻击', 'remark': '[暂无数据] - 132',},
-            '铁胆衣': {'TX_inf': '格挡成功时以外伤伤害弹反20%攻击伤害，被直接命中反10%', 'remark': '[暂无数据] - 133',},
+            '金猊镇魔功': {'TX_inf': '格挡能打断连招', 'remark': '[暂无数据] - 131', 'TX_Data': {'breakLink': 1},},
+            '光明狮子劲': {'TX_inf': '50%外伤攻击化成内伤攻击', 'remark': '[暂无数据] - 132', 'TX_Data': {'hurt_i': 0.5, 'hurt_o': -0.5},},
+            '铁胆衣': {
+                'TX_inf': '格挡成功时以外伤伤害反击20%攻击伤害，被直接命中反10%',
+                'remark': '[暂无数据] - 133',
+                'TX_Data': {'attBack_po_normal': 0.1, 'attBack_po_block': 0.2,},
+            },
         },
     }, 'MR': {
         'name': '慕容氏',
@@ -2792,9 +3000,11 @@ export const data_S = {
             '借力返施': {
                 'def_body': ['hand', 'leg',],
                 'block': 0,
-                'TX_inf': '反弹对方所有攻击，打断连招',
-                'LZ_inf': '闪避+5%，5s',
+                'TX_inf': '反击对方50%内外伤攻击',
+                'LZ_inf': '本招效果加倍',
                 'remark': '[暂无数据] - 091',
+                'LZ_Data': {'changeTX': {'attBack_po': 1, 'attBack_pi': 1}},
+                'TX_Data': {'attBack_po': 0.5, 'attBack_pi': 0.5},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2804,6 +3014,8 @@ export const data_S = {
                 'TX_inf': '使用对方对应顺序的招式，所有效果一样。其人之道不算重复',
                 'LZ_inf': '',
                 'remark': '[暂无数据] - 092',
+                'LZ_Data': {},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2815,15 +3027,19 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
             '斗转星移': {
                 'zqConst': 5,
                 'dod': 0.05,
-                'TX_inf': '反弹对方所有攻击，打断连招',
-                'LZ_inf': '闪避+5%，5s',
+                'TX_inf': '反击对方50%内外伤攻击',
+                'LZ_inf': '本招效果加倍',
                 'remark': '',
+                'LZ_Data': {'changeTX': {'attBack_po': 1, 'attBack_pi': 1}},
+                'TX_Data': {'attBack_po': 0.5, 'attBack_pi': 0.5},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2833,6 +3049,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '闪避+5%，5s',
                 'remark': '',
+                'LZ_Data': {'dod': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2842,6 +3060,8 @@ export const data_S = {
                 'TX_inf': '',
                 'LZ_inf': '命中+5%，5s',
                 'remark': '',
+                'LZ_Data': {'hit': [0.05, 5]},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
@@ -2851,14 +3071,16 @@ export const data_S = {
                 'TX_inf': '使用对方对应顺序的招式，所有效果一样。其人之道不算重复',
                 'LZ_inf': '',
                 'remark': '',
+                'LZ_Data': {},
+                'TX_Data': {},
                 'count_tt': 0,
                 'count_all': 0
             },
         },
         'zPas': {
-            '卜卦': {'TX_inf': '命中+10%，闪避+10%', 'remark': '[暂无数据] - 135',},
-            '复国': {'TX_inf': '非满点属性随机+1', 'remark': '[暂无数据] - 136',},
-            '博学': {'TX_inf': '复制对方被动', 'remark': '[暂无数据] - 137',},
+            '卜卦': {'TX_inf': '命中+10%，闪避+10%', 'remark': '[暂无数据] - 135', 'TX_Data': {'hit': 0.1, 'dod': 0.1},},
+            '复国': {'TX_inf': '非满点属性随机+1', 'remark': '[暂无数据] - 136', 'TX_Data': {'special': 1},},
+            '博学': {'TX_inf': '复制对方被动', 'remark': '[暂无数据] - 137', 'TX_Data': {},},
         },
     },
 };
