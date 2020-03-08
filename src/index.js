@@ -11,14 +11,20 @@ import anime from 'animejs/lib/anime.es.js';
 // require('webpack-jquery-ui/css');
 
 let eChart = require('echarts');
+let tDataA;
+let tDataB = data_S.SL;
 let personA = new Person();
 let personB = new Person();
 let zsAttSortA = [new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort()];
 let zsAttSortB = [new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort()];
 let zsDefSortA = [new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort()];
 let zsDefSortB = [new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort()];
+let zsPasSortA = '';
+let zsPasSortB = '';
 let selectBoxHtml_A = ['', '', '<div class="selectBbox" style="display: none"></div>'];
 let selectBoxHtml_B = ['', '', '<div class="selectBbox" style="display: none"></div>'];
+let buffer_A = new buffer();
+let buffer_B = new buffer();
 let whoFirst = '';
 
 let mySaveFile = [2, 2, 2, 2, 2];
@@ -105,8 +111,7 @@ $(document).on('click', '.liFiBox_S', function () {
     }
 });
 
-let tDataA;
-let tDataB = data_S.SL;
+
 $(document).on('click', '.schoolBox', function () {
     $('#schoolBox_select').attr('id', '');
     $(this).attr('id', 'schoolBox_select');
@@ -1891,15 +1896,17 @@ $(document).on('click', '.selectOver', function () {
     let i = 0;
     if ($('.selectKf_A_Click').length > 0) {
         aa(selectBoxHtml_A, zsAttSortA, zsDefSortA);
+        zsPasSortA = $('.selectBbox').text();
         $('.selectKf_A_Click').trigger('click');
         personA.zqBaoDiVal = Number($('.baoDiSetTextF').text());
     } else {
         aa(selectBoxHtml_B, zsAttSortB, zsDefSortB);
+        zsPasSortB = $('.selectBbox').text();
         $('.selectKf_B_Click').trigger('click');
         personB.zqBaoDiVal = Number($('.baoDiSetTextF').text());
     }
 
-    function aa(ssHtml, ssAttSort, ssDefSort) {
+    function aa(ssHtml, ssAttSort, ssDefSort,) {
         ssHtml[0] = $('#showTabs_sA .selectTableContent_A').html();
         ssHtml[1] = $('#showTabs_sD .selectTableContent_A').html();
         ssHtml[2] = $('#showTabs_sB .selectDotted').html();
@@ -1987,6 +1994,15 @@ $(document).on('click', '.fightStart', function () {
         $('.selectKf_B').trigger('click');
     } else {
         $('.fightStart').hide('drop', {direction: 'up'}, 100);
+        console.log(zsAttSortA);
+        console.log(zsAttSortB);
+        console.log(zsDefSortA);
+        console.log(zsDefSortB);
+        console.log(zsPasSortA);
+        console.log(zsPasSortB);
+        setPasBuffer();
+        console.log(buffer_A.hurt_o);
+        console.log(buffer_B.hurt_o);
     }
 });
 
@@ -2039,9 +2055,67 @@ function findWhoFirst() {
     }
 }
 
-//todo 回合开始
-//
+function setPasBuffer() {
+    buffer_A.int();
+    buffer_B.int();
+    f(tDataA,zsPasSortA,buffer_A);
+    f(tDataB,zsPasSortB,buffer_B);
 
-let abcde = new buffer();
-abcde.int();
-console.log(abcde.def_p);
+
+    function f(tData, ssPasSort,buffer) {
+        let dd =tData.zPas['' + ssPasSort + ''].TX_Data;
+        for (let tx in dd) {
+            switch (tx) {
+                case "hurt_o":
+                    buffer.hurt_o.push([dd.hurt_o,999]);
+                    break;
+                case "hurt_i":
+                    break;
+                case "hurt_p":
+                    break;
+                case "hurt_b":
+                    break;
+                case "hurt_q":
+                    break;
+                case "hit":
+                    break;
+                case "dod":
+                    break;
+                case "block":
+                    break;
+                case "def_o":
+                    break;
+                case "def_i":
+                    break;
+                case "def_p":
+                    break;
+                case "blood_last":
+                    break;
+                case "breakLink":
+                    break;
+                case "flaw_to":
+                    break;
+                case "zqPerSec_m":
+                    break;
+                case "zqPerSec_t":
+                    break;
+                case "attBack_cp":
+                    break;
+                case "attBack_pi_normal":
+                    break;
+                case "attBack_pi_block":
+                    break;
+                case "attBack_po_normal":
+                    break;
+                case "attBack_po_block":
+                    break;
+                default:
+                    console.log('reBuffer()未定义被动招式');
+                    break;
+            }
+        }
+    }
+
+}
+
+//todo 回合开始
