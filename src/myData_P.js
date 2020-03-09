@@ -317,6 +317,7 @@ export class buffer {
         this.deBlock = [];
         this.block = [];
         this.dod = [];
+        this.flaw = [];
         this.flaw_to = [];
         this.def_o = [];
         this.def_i = [];

@@ -23,8 +23,8 @@ let zsPasSortA = '';
 let zsPasSortB = '';
 let selectBoxHtml_A = ['', '', '<div class="selectBbox" style="display: none"></div>'];
 let selectBoxHtml_B = ['', '', '<div class="selectBbox" style="display: none"></div>'];
-let buffer_A = new buffer();
-let buffer_B = new buffer();
+let bufferA = new buffer();
+let bufferB = new buffer();
 let whoFirst = '';
 
 let mySaveFile = [2, 2, 2, 2, 2];
@@ -2001,8 +2001,8 @@ $(document).on('click', '.fightStart', function () {
         console.log(zsPasSortA);
         console.log(zsPasSortB);
         setPasBuffer();
-        console.log(buffer_A.hurt_o);
-        console.log(buffer_B.hurt_o);
+        console.log(bufferA.hurt_o);
+        console.log(bufferB.hurt_o);
     }
 });
 
@@ -2056,65 +2056,54 @@ function findWhoFirst() {
 }
 
 function setPasBuffer() {
-    buffer_A.int();
-    buffer_B.int();
-    f(tDataA,zsPasSortA,buffer_A);
-    f(tDataB,zsPasSortB,buffer_B);
+    bufferA.int();
+    bufferB.int();
+    sw(tDataA, zsPasSortA, bufferA, bufferB);
+    sw(tDataB, zsPasSortB, bufferB, bufferA);
 
 
-    function f(tData, ssPasSort,buffer) {
-        let dd =tData.zPas['' + ssPasSort + ''].TX_Data;
+    function sw(tData, ssPasSort, buffer1,buffer2) {
+        let dd = tData.zPas['' + ssPasSort + ''].TX_Data;
         for (let tx in dd) {
             switch (tx) {
-                case "hurt_o":
-                    buffer.hurt_o.push([dd.hurt_o,999]);
+                case 'hurt_o' || 'hurt_i' || 'hurt_p' || 'hurt_b' || 'hurt_q' || 'hit' || 'dod' || 'block' || 'def_o' || 'def_i' || 'blood_last' || 'breakLink' || 'flaw_to' :
+                    p1(tx);
                     break;
-                case "hurt_i":
+                case 'def_b' || 'def_p':
+                    p2(tx);
                     break;
-                case "hurt_p":
+                case 'zqPerSec_m':
+                    buffer1.zqPerSec.push(dd['' + tx + '']);
                     break;
-                case "hurt_b":
+                case 'zqPerSec_t':
+                    buffer2.zqPerSec.push(dd['' + tx + '']);
                     break;
-                case "hurt_q":
+                case 'attBack_cp':
                     break;
-                case "hit":
+                case 'attBack_pi_normal':
                     break;
-                case "dod":
+                case 'attBack_pi_block':
                     break;
-                case "block":
+                case 'attBack_po_normal':
                     break;
-                case "def_o":
-                    break;
-                case "def_i":
-                    break;
-                case "def_p":
-                    break;
-                case "blood_last":
-                    break;
-                case "breakLink":
-                    break;
-                case "flaw_to":
-                    break;
-                case "zqPerSec_m":
-                    break;
-                case "zqPerSec_t":
-                    break;
-                case "attBack_cp":
-                    break;
-                case "attBack_pi_normal":
-                    break;
-                case "attBack_pi_block":
-                    break;
-                case "attBack_po_normal":
-                    break;
-                case "attBack_po_block":
+                case 'attBack_po_block':
                     break;
                 default:
                     console.log('reBuffer()未定义被动招式');
                     break;
             }
         }
+
+
+        function p1(key) {
+            buffer1['' + key + ''].push([dd['' + key + ''], 999]);
+        }
+
+        function p2(key) {
+            buffer1['' + key + ''].push(dd['' + key + '']);
+        }
     }
+
 
 }
 
