@@ -2003,6 +2003,10 @@ $(document).on('click', '.fightStart', function () {
         setPasBuffer();
         console.log(bufferA.hurt_o);
         console.log(bufferB.hurt_o);
+        // console.log(findWhoFirst());
+        let whoF = $.extend(true, [], findWhoFirst());
+        printDiv(whoF[1]);
+        console.log(whoF[0] + ' 先手');
     }
 });
 
@@ -2045,14 +2049,27 @@ function printDiv(t) {
 }
 
 function findWhoFirst() {
+    let at, bt;
+    let takeTime = [];
     switch (whoFirst) {
         case "A":
             break;
         case "B":
             break;
         case "":
+            at = tDataA.zAtt['' + zsAttSortA[0].zName + ''].time_q;
+            bt = tDataB.zAtt['' + zsAttSortB[0].zName + ''].time_q;
+            if (at < bt) {
+                takeTime = ['A', at];
+            } else if (at > bt) {
+                takeTime = ['B', bt];
+            } else {
+                //判断简写(a>b ? 'a大' : 'b大');
+                takeTime = Boolean(Math.round(Math.random())) ? ['A', at] : ['B', bt];
+            }
             break;
     }
+    return takeTime;
 }
 
 function setPasBuffer() {
@@ -2061,39 +2078,29 @@ function setPasBuffer() {
     sw(tDataA, zsPasSortA, bufferA, bufferB);
     sw(tDataB, zsPasSortB, bufferB, bufferA);
 
-
-    function sw(tData, ssPasSort, buffer1,buffer2) {
-        let dd = tData.zPas['' + ssPasSort + ''].TX_Data;
-        for (let tx in dd) {
-            switch (tx) {
-                case 'hurt_o' || 'hurt_i' || 'hurt_p' || 'hurt_b' || 'hurt_q' || 'hit' || 'dod' || 'block' || 'def_o' || 'def_i' || 'blood_last' || 'breakLink' || 'flaw_to' :
-                    p1(tx);
-                    break;
-                case 'def_b' || 'def_p':
-                    p2(tx);
-                    break;
-                case 'zqPerSec_m':
-                    buffer1.zqPerSec.push(dd['' + tx + '']);
-                    break;
-                case 'zqPerSec_t':
-                    buffer2.zqPerSec.push(dd['' + tx + '']);
-                    break;
-                case 'attBack_cp':
-                    break;
-                case 'attBack_pi_normal':
-                    break;
-                case 'attBack_pi_block':
-                    break;
-                case 'attBack_po_normal':
-                    break;
-                case 'attBack_po_block':
-                    break;
-                default:
-                    console.log('reBuffer()未定义被动招式');
-                    break;
+    function sw(tData, ssPasSort, buffer1, buffer2) {
+        if (ssPasSort != '') {
+            let dd = tData.zPas['' + ssPasSort + ''].TX_Data;
+            for (let tx in dd) {
+                switch (tx) {
+                    case 'hurt_o' || 'hurt_i' || 'hurt_p' || 'hurt_b' || 'hurt_q' || 'hit' || 'dod' || 'block' || 'def_o' || 'def_i' || 'blood_last' || 'breakLink' || 'flaw_to' :
+                        p1(tx);
+                        break;
+                    case 'def_b' || 'def_p' || 'attBack_cp' || 'attBack_pi_normal' || 'attBack_pi_block' || 'attBack_po_normal' || 'attBack_po_normal' || 'attBack_po_block':
+                        p2(tx);
+                        break;
+                    case 'zqPerSec_m':
+                        buffer1.zqPerSec.push(dd['' + tx + '']);
+                        break;
+                    case 'zqPerSec_t':
+                        buffer2.zqPerSec.push(dd['' + tx + '']);
+                        break;
+                    default:
+                        console.log('reBuffer()未定义被动招式');
+                        break;
+                }
             }
         }
-
 
         function p1(key) {
             buffer1['' + key + ''].push([dd['' + key + ''], 999]);
@@ -2103,7 +2110,6 @@ function setPasBuffer() {
             buffer1['' + key + ''].push(dd['' + key + '']);
         }
     }
-
 
 }
 
