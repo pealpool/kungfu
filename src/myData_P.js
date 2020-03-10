@@ -296,6 +296,7 @@ export class zsAttSort {
     attFrom = '';
     attTo = '';
     comBo = false;
+
 }
 
 //所选防御招式
@@ -303,6 +304,7 @@ export class zsDefSort {
     zName = '';
     DefBody = '';
     comBo = false;
+    //todo 防御方防御失败要修改comBo,前置防御成功才能连招。
 }
 
 export class buffer {

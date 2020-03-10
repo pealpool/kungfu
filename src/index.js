@@ -11,22 +11,18 @@ import anime from 'animejs/lib/anime.es.js';
 // require('webpack-jquery-ui/css');
 
 let eChart = require('echarts');
-let tDataA;
-let tDataB = data_S.SL;
-let personA = new Person();
-let personB = new Person();
+let tDataA, tDataB = data_S.SL;
+let personA = new Person(), personB = new Person();
 let zsAttSortA = [new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort()];
 let zsAttSortB = [new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort()];
 let zsDefSortA = [new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort()];
 let zsDefSortB = [new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort()];
-let zsPasSortA = '';
-let zsPasSortB = '';
+let zsPasSortA = '', zsPasSortB = '';
 let selectBoxHtml_A = ['', '', '<div class="selectBbox" style="display: none"></div>'];
 let selectBoxHtml_B = ['', '', '<div class="selectBbox" style="display: none"></div>'];
-let bufferA = new buffer();
-let bufferB = new buffer();
+let bufferA = new buffer(), bufferB = new buffer();
 let whoFirst = '';
-
+let numAttSortA = 0, numAttSortB = 0, numDefSortA = 0, numDefSortB = 0;
 let mySaveFile = [2, 2, 2, 2, 2];
 
 
@@ -2051,25 +2047,51 @@ function printDiv(t) {
 function findWhoFirst() {
     let at, bt;
     let takeTime = [];
-    switch (whoFirst) {
-        case "A":
-            break;
-        case "B":
-            break;
-        case "":
-            at = tDataA.zAtt['' + zsAttSortA[0].zName + ''].time_q;
-            bt = tDataB.zAtt['' + zsAttSortB[0].zName + ''].time_q;
-            if (at < bt) {
-                takeTime = ['A', at];
-            } else if (at > bt) {
-                takeTime = ['B', bt];
-            } else {
-                //判断简写(a>b ? 'a大' : 'b大');
-                takeTime = Boolean(Math.round(Math.random())) ? ['A', at] : ['B', bt];
-            }
-            break;
+    if (whoFirst == '') {
+        at = tDataA.zAtt['' + zsAttSortA[0].zName + ''].time_q;
+        bt = tDataB.zAtt['' + zsAttSortB[0].zName + ''].time_q;
+        if (at < bt) {
+            takeTime = ['A', at];
+        } else if (at > bt) {
+            takeTime = ['B', bt];
+        } else {
+            //判断简写(a>b ? 'a大' : 'b大');
+            takeTime = Boolean(Math.round(Math.random())) ? ['A', at] : ['B', bt];
+        }
+    } else {
+        if (sideAorB('zsDefSort', 'def').comBo){
+            //防御方连招
+        }else {
+
+        }
     }
     return takeTime;
+}
+
+function sideAorB(what, attOrDef) {
+    if (attOrDef == 'att') {
+        //进攻方
+        switch (what) {
+            case 'zsDefSort':
+                if (whoFirst == 'A') return zsDefSortA[numDefSortA];
+                else return zsDefSortB[numDefSortB];
+            case 'zsAttSort':
+                if (whoFirst == 'A') return zsAttSortA[numAttSortA];
+                else return zsAttSortB[numAttSortB];
+        }
+
+    } else {
+        //防御方
+        switch (what) {
+            case 'zsDefSort':
+                if (whoFirst == 'A') return zsDefSortB[numDefSortB];
+                else return zsDefSortA[numDefSortA];
+            case 'zsAttSort':
+                if (whoFirst == 'A') return zsAttSortB[numAttSortB];
+                else return zsAttSortA[numAttSortA];
+        }
+    }
+
 }
 
 function setPasBuffer() {
