@@ -1951,6 +1951,9 @@ $(document).on('click', '.selectOver', function () {
             }
             i++;
         });
+        for (let k = i; k < 5; k++) {
+            ssAttSort[k] = new zsAttSort();
+        }
         i = 0;
         $('#showTabs_sD .selectTC_Box').each(function () {
             ssDefSort[i].zName = $(this).find('.table_Name').text();
@@ -1979,6 +1982,9 @@ $(document).on('click', '.selectOver', function () {
             }
             i++;
         });
+        for (let k = i; k < 5; k++) {
+            ssDefSort[k] = new zsDefSort();
+        }
     }
 
 });
@@ -2059,13 +2065,18 @@ function findWhoFirst() {
             takeTime = Boolean(Math.round(Math.random())) ? ['A', at] : ['B', bt];
         }
     } else {
-        if (sideAorB('zsDefSort', 'def').comBo){
-            //防御方连招
-        }else {
+        if (sideAorB('zsDefSort', 'def').comBo) {
+            //若防御方连招
+            //todo 3-16
+            sideAorB('zsAttSort', 'att')
+            // if(sideAorB('zsAttSort', 'att')){
+            //
+            // }
+        } else {
 
         }
     }
-    return takeTime;
+    return takeTime;//格式：['谁先手','几秒']
 }
 
 function sideAorB(what, attOrDef) {
@@ -2135,4 +2146,4 @@ function setPasBuffer() {
 
 }
 
-//todo 回合开始
+
