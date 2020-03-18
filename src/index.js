@@ -2065,11 +2065,16 @@ function findWhoFirst() {
             takeTime = Boolean(Math.round(Math.random())) ? ['A', at] : ['B', bt];
         }
     } else {
-        if (sideAorB('zsDefSort', 'def').comBo) {
+        if (sideWho('zsDefSort', 'def').comBo) {
             //若防御方连招
             //todo 3-16
-            sideAorB('zsAttSort', 'att')
-            // if(sideAorB('zsAttSort', 'att')){
+            try{//攻击方还有招式
+                if(sideWho('zsAttSort', 'att').zName != ''){
+
+                }
+            }catch (err) {//攻击方攻击招式全部用完
+                console.log('err');
+            }
             //
             // }
         } else {
@@ -2079,7 +2084,7 @@ function findWhoFirst() {
     return takeTime;//格式：['谁先手','几秒']
 }
 
-function sideAorB(what, attOrDef) {
+function sideWho(what, attOrDef) {
     if (attOrDef == 'att') {
         //进攻方
         switch (what) {
@@ -2112,8 +2117,9 @@ function setPasBuffer() {
     sw(tDataB, zsPasSortB, bufferB, bufferA);
 
     function sw(tData, ssPasSort, buffer1, buffer2) {
+        let dd;
         if (ssPasSort != '') {
-            let dd = tData.zPas['' + ssPasSort + ''].TX_Data;
+            dd = tData.zPas['' + ssPasSort + ''].TX_Data;
             for (let tx in dd) {
                 switch (tx) {
                     case 'hurt_o' || 'hurt_i' || 'hurt_p' || 'hurt_b' || 'hurt_q' || 'hit' || 'dod' || 'block' || 'def_o' || 'def_i' || 'blood_last' || 'breakLink' || 'flaw_to' :
