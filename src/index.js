@@ -2153,3 +2153,123 @@ function setPasBuffer() {
 }
 
 
+$(document).on('click', '#autoRunTest', function () {
+    $('#autoRunTest').remove();
+    $('.next_01').trigger('click');
+    setTimeout(function () {
+        $('.next_02').trigger('click');
+        setTimeout(function () {
+            $('.next_03').trigger('click');
+            setTimeout(function () {
+                $('.bt_add').eq(0).trigger('click');
+                $('.bt_add').eq(0).trigger('click');
+                $('.bt_add').eq(0).trigger('click');
+                $('.next_04').trigger('click');
+                setTimeout(function () {
+                    $('.moSSBox').eq(3).trigger('click');
+                    $('.contentMid .bt_add').eq(0).trigger('click');
+                    $('.contentMid .bt_add').eq(0).trigger('click');
+                    $('.contentMid .bt_add').eq(0).trigger('click');
+                    $('.next_05').trigger('click');
+                    setTimeout(function () {
+                        $('.selectKf_A').trigger('click');
+                        setTimeout(function () {
+                            $('.baoDiSetText div').eq(1).trigger('click');
+
+                            $('.tableContentBox_A .tableContent').eq(0).trigger('click');
+                            $('.tableContentBox_A .tableContent').eq(1).trigger('click');
+                            $('.tableContentBox_A .tableContent').eq(2).trigger('click');
+                            $('.tableContentBox_A .tableContent').eq(3).trigger('click');
+                            $('.tableContentBox_A .tableContent').eq(4).trigger('click');
+
+                            $('#showTabs_sA .table_attFromT div').eq(3).trigger('click');
+                            $('#showTabs_sA .table_attFromT div').eq(7).trigger('click');
+                            $('#showTabs_sA .table_attFromT div').eq(11).trigger('click');
+                            $('#showTabs_sA .table_attFromT div').eq(15).trigger('click');
+
+                            $('#showTabs_sA .table_attToT div').eq(7).trigger('click');
+                            $('#showTabs_sA .table_attToT div').eq(14).trigger('click');
+                            $('#showTabs_sA .table_attToT div').eq(21).trigger('click');
+                            $('#showTabs_sA .table_attToT div').eq(28).trigger('click');
+                            $('#showTabs_sA .table_attToT div').eq(35).trigger('click');
+
+                            $('#showTabs_sA .table_Combo_F').eq(1).trigger('click');
+                            $('#showTabs_sA .table_Combo_F').eq(1).trigger('click');
+
+                            $('#ui-id-5').trigger('click');
+
+                            $('.tableContentBox_D1 .tableContent').eq(0).trigger('click');
+                            $('.tableContentBox_D1 .tableContent').eq(1).trigger('click');
+                            $('.tableContentBox_D1 .tableContent').eq(2).trigger('click');
+                            $('.tableContentBox_D2 .tableContent').eq(0).trigger('click');
+                            $('.tableContentBox_D2 .tableContent').eq(1).trigger('click');
+
+                            $('#showTabs_sD .table_attToT div').eq(7).trigger('click');
+                            $('#showTabs_sD .table_attToT div').eq(14).trigger('click');
+                            $('#showTabs_sD .table_attToT div').eq(21).trigger('click');
+                            $('#showTabs_sD .table_attToT div').eq(28).trigger('click');
+                            $('#showTabs_sD .table_attToT div').eq(35).trigger('click');
+
+                            $('#showTabs_sD .table_Combo_F').eq(0).trigger('click');
+                            $('#showTabs_sD .table_Combo_F').eq(0).trigger('click');
+
+                            $('#ui-id-6').trigger('click');
+                            $('#showTabs_sB .tableContent').eq(0).trigger('click');
+                            $('.selectOver').trigger('click');
+
+                            setTimeout(function () {
+                                $('.selectKf_B').trigger('click');
+                                setTimeout(function () {
+
+                                    $('.tableContentBox_A .tableContent').eq(0).trigger('click');
+                                    $('.tableContentBox_A .tableContent').eq(1).trigger('click');
+                                    $('.tableContentBox_A .tableContent').eq(2).trigger('click');
+                                    $('.tableContentBox_A .tableContent').eq(3).trigger('click');
+                                    $('.tableContentBox_A .tableContent').eq(4).trigger('click');
+
+                                    $('#showTabs_sA .table_attFromT div').eq(3).trigger('click');
+                                    $('#showTabs_sA .table_attFromT div').eq(7).trigger('click');
+                                    $('#showTabs_sA .table_attFromT div').eq(11).trigger('click');
+                                    $('#showTabs_sA .table_attFromT div').eq(15).trigger('click');
+
+                                    $('#showTabs_sA .table_attToT div').eq(5).trigger('click');
+                                    $('#showTabs_sA .table_attToT div').eq(10).trigger('click');
+                                    $('#showTabs_sA .table_attToT div').eq(15).trigger('click');
+                                    $('#showTabs_sA .table_attToT div').eq(20).trigger('click');
+                                    $('#showTabs_sA .table_attToT div').eq(25).trigger('click');
+
+                                    $('#showTabs_sA .table_Combo_F').eq(0).trigger('click');
+                                    $('#showTabs_sA .table_Combo_F').eq(2).trigger('click');
+
+                                    $('#ui-id-5').trigger('click');
+
+                                    $('.tableContentBox_D1 .tableContent').eq(0).trigger('click');
+                                    $('.tableContentBox_D1 .tableContent').eq(1).trigger('click');
+                                    $('.tableContentBox_D1 .tableContent').eq(2).trigger('click');
+                                    $('.tableContentBox_D2 .tableContent').eq(0).trigger('click');
+                                    $('.tableContentBox_D2 .tableContent').eq(1).trigger('click');
+
+                                    $('#showTabs_sD .table_attToT div').eq(5).trigger('click');
+                                    $('#showTabs_sD .table_attToT div').eq(10).trigger('click');
+                                    $('#showTabs_sD .table_attToT div').eq(15).trigger('click');
+                                    $('#showTabs_sD .table_attToT div').eq(20).trigger('click');
+                                    $('#showTabs_sD .table_attToT div').eq(25).trigger('click');
+
+                                    $('#showTabs_sD .table_Combo_F').eq(1).trigger('click');
+                                    $('#showTabs_sD .table_Combo_F').eq(2).trigger('click');
+
+                                    $('#ui-id-6').trigger('click');
+                                    $('#showTabs_sB .tableContent').eq(0).trigger('click');
+                                    $('.selectOver').trigger('click');
+
+                                }, 1000);
+                            }, 500);
+                        }, 1000);
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 1000);
+    }, 1000);
+
+
+    });

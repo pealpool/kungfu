@@ -68,6 +68,24 @@ ul {
   margin-block-start: 0;
 }
 
+#autoRunTest{
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  height: 30px;
+  width: 100px;
+  line-height: 30px;
+  color: #8C8C8C;
+  background-color: #1A1E26;
+  position: absolute;
+  z-index: 999;
+  right: 10px;
+  bottom: 10px;
+
+  &:hover{
+    @include hoverBright(1.5);
+  }
+}
 
 .smallBaseBox {
   width: $smallBaseBox-width;
