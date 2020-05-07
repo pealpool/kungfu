@@ -1996,6 +1996,9 @@ $(document).on('click', '.fightStart', function () {
         $('.selectKf_B').trigger('click');
     } else {
         $('.fightStart').hide('drop', {direction: 'up'}, 100);
+        if ($('.speedSetText div').eq(0).attr('class') == 'speedSetTextF') {
+            $('.fightPause').text('继续');
+        }
         console.log(zsAttSortA);
         console.log(zsAttSortB);
         console.log(zsDefSortA);
@@ -2068,11 +2071,11 @@ function findWhoFirst() {
         if (sideWho('zsDefSort', 'def').comBo) {
             //若防御方连招
             //todo 3-16
-            try{//攻击方还有招式
-                if(sideWho('zsAttSort', 'att').zName != ''){
+            try {//攻击方还有招式
+                if (sideWho('zsAttSort', 'att').zName != '') {
 
                 }
-            }catch (err) {//攻击方攻击招式全部用完
+            } catch (err) {//攻击方攻击招式全部用完
                 console.log('err');
             }
             //
@@ -2167,9 +2170,9 @@ $(document).on('click', '#autoRunTest', function () {
                 $('.next_04').trigger('click');
                 setTimeout(function () {
                     $('.moSSBox').eq(3).trigger('click');
-                    $('.contentMid .bt_add').eq(0).trigger('click');
-                    $('.contentMid .bt_add').eq(0).trigger('click');
-                    $('.contentMid .bt_add').eq(0).trigger('click');
+                    $('.contentMid .bt_add').eq(1).trigger('click');
+                    $('.contentMid .bt_add').eq(1).trigger('click');
+                    $('.contentMid .bt_add').eq(1).trigger('click');
                     $('.next_05').trigger('click');
                     setTimeout(function () {
                         $('.selectKf_A').trigger('click');
@@ -2196,7 +2199,7 @@ $(document).on('click', '#autoRunTest', function () {
                             $('#showTabs_sA .table_Combo_F').eq(1).trigger('click');
                             $('#showTabs_sA .table_Combo_F').eq(1).trigger('click');
 
-                            $('#ui-id-5').trigger('click');
+                            // $('#ui-id-5').trigger('click');
 
                             $('.tableContentBox_D1 .tableContent').eq(0).trigger('click');
                             $('.tableContentBox_D1 .tableContent').eq(1).trigger('click');
@@ -2213,7 +2216,7 @@ $(document).on('click', '#autoRunTest', function () {
                             $('#showTabs_sD .table_Combo_F').eq(0).trigger('click');
                             $('#showTabs_sD .table_Combo_F').eq(0).trigger('click');
 
-                            $('#ui-id-6').trigger('click');
+                            // $('#ui-id-6').trigger('click');
                             $('#showTabs_sB .tableContent').eq(0).trigger('click');
                             $('.selectOver').trigger('click');
 
@@ -2241,7 +2244,7 @@ $(document).on('click', '#autoRunTest', function () {
                                     $('#showTabs_sA .table_Combo_F').eq(0).trigger('click');
                                     $('#showTabs_sA .table_Combo_F').eq(2).trigger('click');
 
-                                    $('#ui-id-5').trigger('click');
+                                    // $('#ui-id-5').trigger('click');
 
                                     $('.tableContentBox_D1 .tableContent').eq(0).trigger('click');
                                     $('.tableContentBox_D1 .tableContent').eq(1).trigger('click');
@@ -2258,7 +2261,7 @@ $(document).on('click', '#autoRunTest', function () {
                                     $('#showTabs_sD .table_Combo_F').eq(1).trigger('click');
                                     $('#showTabs_sD .table_Combo_F').eq(2).trigger('click');
 
-                                    $('#ui-id-6').trigger('click');
+                                    // $('#ui-id-6').trigger('click');
                                     $('#showTabs_sB .tableContent').eq(0).trigger('click');
                                     $('.selectOver').trigger('click');
 
@@ -2271,5 +2274,4 @@ $(document).on('click', '#autoRunTest', function () {
         }, 1000);
     }, 1000);
 
-
-    });
+});
