@@ -1998,6 +1998,7 @@ $(document).on('click', '.fightStart', function () {
         $('.fightStart').hide('drop', {direction: 'up'}, 100);
         if ($('.speedSetText div').eq(0).attr('class') == 'speedSetTextF') {
             $('.fightPause').text('继续');
+            $('.fightPause').addClass('goingFight');
         }
         console.log(zsAttSortA);
         console.log(zsAttSortB);
