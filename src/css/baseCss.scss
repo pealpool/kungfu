@@ -52,6 +52,16 @@ $myTransition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 }
 
+@mixin DarkButtonFreeze{
+  cursor: default;
+  background-color: $lightGray-color;
+  color: $myGray-color;
+  text-align: center;
+  &:hover {
+    @include hoverBright(1);
+  }
+}
+
 body {
   background-color: $backgroundBase-color;
   width: 100%;
@@ -1759,6 +1769,10 @@ $electKfSize: 42px;
   top: 0;
   z-index: 3;
   @include darkButton;
+
+  &.freezeButton{
+    @include DarkButtonFreeze;
+  }
 }
 
 .selectKf_A {

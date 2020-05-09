@@ -1515,15 +1515,18 @@ $(document).on('click', '.selectBbox', function () {
     $(this).hide();
 });
 
+
 $(document).on('click', '.selectKf_A', function () {
-    if ($('.kfSelectBox').css('display') != 'none') {
-        $('.kfSelectBox').hide('blind', {direction: 'right'}, 100, function () {
-            $('.selectKf_B_Click').switchClass('selectKf_B_Click', 'selectKf_B', 200, 'easeInOutCubic', function () {
-                f();
+    if ($('.freezeButton').length == 0) {
+        if ($('.kfSelectBox').css('display') != 'none') {
+            $('.kfSelectBox').hide('blind', {direction: 'right'}, 100, function () {
+                $('.selectKf_B_Click').switchClass('selectKf_B_Click', 'selectKf_B', 200, 'easeInOutCubic', function () {
+                    f();
+                });
             });
-        });
-    } else {
-        f();
+        } else {
+            f();
+        }
     }
 
     function f() {
@@ -1558,16 +1561,18 @@ $(document).on('click', '.selectKf_A_Click', function () {
     });
 });
 
-//todo
+
 $(document).on('click', '.selectKf_B', function () {
-    if ($('.kfSelectBox').css('display') != 'none') {
-        $('.kfSelectBox').hide('blind', {direction: 'left'}, 100, function () {
-            $('.selectKf_A_Click').switchClass('selectKf_A_Click', 'selectKf_A', 200, 'easeInOutCubic', function () {
-                f();
+    if ($('.freezeButton').length == 0) {
+        if ($('.kfSelectBox').css('display') != 'none') {
+            $('.kfSelectBox').hide('blind', {direction: 'left'}, 100, function () {
+                $('.selectKf_A_Click').switchClass('selectKf_A_Click', 'selectKf_A', 200, 'easeInOutCubic', function () {
+                    f();
+                });
             });
-        });
-    } else {
-        f();
+        } else {
+            f();
+        }
     }
 
     function f() {
@@ -1995,6 +2000,7 @@ $(document).on('click', '.fightStart', function () {
     } else if (zsAttSortB[0].zName == '' && zsDefSortB[0].zName == '') {
         $('.selectKf_B').trigger('click');
     } else {
+        $('.selectKf_A,.selectKf_B').addClass('freezeButton');
         $('.fightStart').hide('drop', {direction: 'up'}, 100);
         if ($('.speedSetText div').eq(0).attr('class') == 'speedSetTextF') {
             $('.fightPause').text('继续');
@@ -2011,7 +2017,7 @@ $(document).on('click', '.fightStart', function () {
         console.log(bufferB.hurt_o);
         // console.log(findWhoFirst());
         let whoF = $.extend(true, [], findWhoFirst());
-        printDiv(whoF[1]);
+        printDiv(whoF[1], whoF[0] + ' 先手');
         console.log(whoF[0] + ' 先手');
     }
 });
@@ -2046,11 +2052,11 @@ $(document).on('click', '.baoDiSetText >div', function () {
 //todo 测试用
 $(document).on('click', '.fightPause', function () {
     let t = 0.25;
-    printDiv(t);
+    printDiv(t,'');
 });
 
-function printDiv(t) {
-    let myDiv = '<div class="printBox"><div class="pBoxTime">' + t + 's</div><div class="pBigBoxDiv"><div></div></div></div>';
+function printDiv(t, c) {
+    let myDiv = '<div class="printBox"><div class="pBoxTime">' + t + 's</div><div class="pBigBoxDiv"><div>' + c + '</div></div></div>';
     $('.printBigBox').append(myDiv);
 }
 
