@@ -1370,8 +1370,8 @@ div.setBoxCon_rh {
   stroke: #9ca9c2;
 }
 
-#pA_eye,
-#pB_eye {
+.pA_eye,
+.pB_eye {
   fill: #ffffff;
 }
 
@@ -2421,4 +2421,8 @@ $selectBbox_h: 30px;
   100% {
     background-position: -100% 0;
   }
+}
+
+.darkHover{
+  background-color: #E1E1E1;
 }
