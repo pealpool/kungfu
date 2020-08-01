@@ -43,7 +43,7 @@ export class Person {
     zqHurtAdd = 0;
 
     flaw = 0;
-    zqBaoDiVal = 0;
+    zqBaoDiVal = 10;
 
     mark_blood = {
         head: [0, 0],

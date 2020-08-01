@@ -28,6 +28,20 @@ let mySaveFile = [2, 2, 2, 2, 2];
 
 loadSchoolBoxStar();
 
+function reChangePeoVal(){
+    personA = new Person(), personB = new Person();
+    zsAttSortA = [new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort()];
+    zsAttSortB = [new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort()];
+    zsDefSortA = [new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort()];
+    zsDefSortB = [new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort()];
+    zsPasSortA = '', zsPasSortB = '';
+    selectBoxHtml_A = ['', '', '<div class="selectBbox" style="display: none"></div>'];
+    selectBoxHtml_B = ['', '', '<div class="selectBbox" style="display: none"></div>'];
+    bufferA = new buffer(), bufferB = new buffer();
+    whoFirst = '';
+    numAttSortA = 0, numAttSortB = 0, numDefSortA = 0, numDefSortB = 0;
+}
+
 
 function myHideRemove(e) {
     $(e).hide('fade', 300, function () {
@@ -1393,8 +1407,15 @@ $(document).on('click', '.next_05', function () {
     });
 });
 
+//todo changePeople
 $(document).on('click', '.changePeople', function () {
-    $('.fightStart,.speedSetBox,.fightButtonBoxB,.littleButton,.fightTimeBigBox,.fightSelectButtonBox').hide('fade', 100, function () {
+    reChangePeoVal();
+    $('.fightPause').text('暂停');
+    $('.selectKf_A,.selectKf_B').removeClass('freezeButton');
+    $('.fightPause').removeClass('goingFight');
+    $('.printBigBox').html('');
+    $('.fightStart').hide();
+    $('.speedSetBox,.fightButtonBoxB,.littleButton,.fightTimeBigBox,.fightSelectButtonBox').hide('fade', 100, function () {
         $('.moDiv,.next_05,.moSetBigBox').show('fade', 200);
     });
 });
@@ -1556,7 +1577,7 @@ $(document).on('click', '.selectKf_A', function () {
     }
 });
 $(document).on('click', '.selectKf_A_Click', function () {
-    $('.kfSelectBox').hide('blind', {direction: 'left'}, 100, function () {
+    $('.kfSelectBox').hide('blind', {direction: 'left'}, 200, function () {
         $('.selectKf_A_Click').switchClass('selectKf_A_Click', 'selectKf_A', 200, 'easeInOutCubic');
     });
 });
@@ -1994,6 +2015,7 @@ $(document).on('click', '.selectOver', function () {
 
 });
 
+//todo fightStart
 $(document).on('click', '.fightStart', function () {
     if (zsAttSortA[0].zName == '' && zsDefSortA[0].zName == '') {
         $('.selectKf_A').trigger('click');
@@ -2052,12 +2074,12 @@ $(document).on('click', '.baoDiSetText >div', function () {
 //todo 测试用
 $(document).on('click', '.fightPause', function () {
     let t = 0.25;
-    printDiv(t,'');
+    printDiv(t,Date());
 });
 
 function printDiv(t, c) {
     let myDiv = '<div class="printBox"><div class="pBoxTime">' + t + 's</div><div class="pBigBoxDiv"><div>' + c + '</div></div></div>';
-    $('.printBigBox').append(myDiv);
+    $('.printBigBox').prepend(myDiv);
 }
 
 function findWhoFirst() {
