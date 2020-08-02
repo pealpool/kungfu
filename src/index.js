@@ -29,7 +29,10 @@ let mySaveFile = [2, 2, 2, 2, 2];
 loadSchoolBoxStar();
 
 function reChangePeoVal(){
-    personA = new Person(), personB = new Person();
+    personA.init();
+    initHP(personA.hp.head, personA.hp.body, personA.hp.hand, personA.hp.leg, 0);
+    personB.init();
+    initHP(personB.hp.head, personB.hp.body, personB.hp.hand, personB.hp.leg, 1);
     zsAttSortA = [new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort()];
     zsAttSortB = [new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort()];
     zsDefSortA = [new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort()];
@@ -1562,6 +1565,17 @@ $(document).on('click', '.changePeople', function () {
     $('.speedSetBox,.fightButtonBoxB,.littleButton,.fightTimeBigBox,.fightSelectButtonBox').hide('fade', 100, function () {
         $('.moDiv,.next_05,.moSetBigBox').show('fade', 200);
     });
+});
+
+$(document).on('click','.restart',function (){
+    bufferA = new buffer(), bufferB = new buffer();
+    whoFirst = '';
+    numAttSortA = 0, numAttSortB = 0, numDefSortA = 0, numDefSortB = 0;
+    $('.fightPause').text('暂停');
+    $('.selectKf_A,.selectKf_B').removeClass('freezeButton');
+    $('.fightPause').removeClass('goingFight');
+    $('.printBigBox').html('');
+    $('.fightStart').show('fade', 100);
 });
 
 $(document).on('click', '.table_attFromT >div', function () {
