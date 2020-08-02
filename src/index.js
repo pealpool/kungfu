@@ -28,7 +28,7 @@ let mySaveFile = [2, 2, 2, 2, 2];
 
 loadSchoolBoxStar();
 
-function reChangePeoVal(){
+function reChangePeoVal() {
     personA.init();
     initHP(personA.hp.head, personA.hp.body, personA.hp.hand, personA.hp.leg, 0);
     personB.init();
@@ -1234,199 +1234,191 @@ function toSpace(a) {
 
 
 $(document).on('mouseenter', '.bodyDataList', function () {
-        //绑定鼠标进入事件
-        let e = $(this).find('span').eq(0).text();
-        let y = $(this).find('span').eq(1).attr('id').substring(4, 5) == 'B';
-        switch (e) {
-            case '头部':
-                if (y) {
-                    $('.pB_head').addClass('mySvgLight');
-                } else {
-                    $('.pA_head').addClass('mySvgLight');
-                }
-                break;
-            case '躯干':
-                if (y) {
-                    $('.pB_body').addClass('mySvgLight');
-                } else {
-                    $('.pA_body').addClass('mySvgLight');
-                }
-                break;
-            case '左手':
-                if (y) {
-                    $('.pB_handL').addClass('mySvgLight');
-                } else {
-                    $('.pA_handL').addClass('mySvgLight');
-                }
-                break;
-            case '右手':
-                if (y) {
-                    $('.pB_handR').addClass('mySvgLight');
-                } else {
-                    $('.pA_handR').addClass('mySvgLight');
-                }
-                break;
-            case '左脚':
-                if (y) {
-                    $('.pB_legL').addClass('mySvgLight');
-                } else {
-                    $('.pA_legL').addClass('mySvgLight');
-                }
-                break;
-            case '右脚':
-                if (y) {
-                    $('.pB_legR').addClass('mySvgLight');
-                } else {
-                    $('.pA_legR').addClass('mySvgLight');
-                }
-                break;
-        }
+    //绑定鼠标进入事件
+    let e = $(this).find('span').eq(0).text();
+    let y = $(this).find('span').eq(1).attr('id').substring(4, 5) == 'B';
+    switch (e) {
+        case '头部':
+            if (y) {
+                $('.pB_head').addClass('mySvgLight');
+            } else {
+                $('.pA_head').addClass('mySvgLight');
+            }
+            break;
+        case '躯干':
+            if (y) {
+                $('.pB_body').addClass('mySvgLight');
+            } else {
+                $('.pA_body').addClass('mySvgLight');
+            }
+            break;
+        case '左手':
+            if (y) {
+                $('.pB_handL').addClass('mySvgLight');
+            } else {
+                $('.pA_handL').addClass('mySvgLight');
+            }
+            break;
+        case '右手':
+            if (y) {
+                $('.pB_handR').addClass('mySvgLight');
+            } else {
+                $('.pA_handR').addClass('mySvgLight');
+            }
+            break;
+        case '左脚':
+            if (y) {
+                $('.pB_legL').addClass('mySvgLight');
+            } else {
+                $('.pA_legL').addClass('mySvgLight');
+            }
+            break;
+        case '右脚':
+            if (y) {
+                $('.pB_legR').addClass('mySvgLight');
+            } else {
+                $('.pA_legR').addClass('mySvgLight');
+            }
+            break;
+    }
 });
 $(document).on('mouseleave', '.bodyDataList', function () {//绑定鼠标划出事件
     $('.mySvgLight').removeClass('mySvgLight');
 });
 
-$(document).on("mouseover mouseout",'.pA_head',function(event){
-    if(event.type == "mouseover"){
+$(document).on("mouseover mouseout", '.pA_head', function (event) {
+    if (event.type == "mouseover") {
         //鼠标悬浮
         $('.pA_head').addClass('mySvgLight');
         $('.bodyDataList').eq(0).addClass('darkHover');
-    }else if(event.type == "mouseout"){
+    } else if (event.type == "mouseout") {
         //鼠标离开
         $('.pA_head').removeClass('mySvgLight');
         $('.bodyDataList').eq(0).removeClass('darkHover');
     }
 })
-$(document).on("mouseover mouseout",'.pA_body',function(event){
-    if(event.type == "mouseover"){
+$(document).on("mouseover mouseout", '.pA_body', function (event) {
+    if (event.type == "mouseover") {
         //鼠标悬浮
         $('.pA_body').addClass('mySvgLight');
         $('.bodyDataList').eq(1).addClass('darkHover');
-    }else if(event.type == "mouseout"){
+    } else if (event.type == "mouseout") {
         //鼠标离开
         $('.pA_body').removeClass('mySvgLight');
         $('.bodyDataList').eq(1).removeClass('darkHover');
     }
 })
-$(document).on("mouseover mouseout",'.pA_handL',function(event){
-    if(event.type == "mouseover"){
+$(document).on("mouseover mouseout", '.pA_handL', function (event) {
+    if (event.type == "mouseover") {
         //鼠标悬浮
         $('.pA_handL').addClass('mySvgLight');
         $('.bodyDataList').eq(2).addClass('darkHover');
-    }else if(event.type == "mouseout"){
+    } else if (event.type == "mouseout") {
         //鼠标离开
         $('.pA_handL').removeClass('mySvgLight');
         $('.bodyDataList').eq(2).removeClass('darkHover');
     }
 })
-$(document).on("mouseover mouseout",'.pA_handR',function(event){
-    if(event.type == "mouseover"){
+$(document).on("mouseover mouseout", '.pA_handR', function (event) {
+    if (event.type == "mouseover") {
         //鼠标悬浮
         $('.pA_handR').addClass('mySvgLight');
         $('.bodyDataList').eq(3).addClass('darkHover');
-    }else if(event.type == "mouseout"){
+    } else if (event.type == "mouseout") {
         //鼠标离开
         $('.pA_handR').removeClass('mySvgLight');
         $('.bodyDataList').eq(3).removeClass('darkHover');
     }
 })
-$(document).on("mouseover mouseout",'.pA_legL',function(event){
-    if(event.type == "mouseover"){
+$(document).on("mouseover mouseout", '.pA_legL', function (event) {
+    if (event.type == "mouseover") {
         //鼠标悬浮
         $('.pA_legL').addClass('mySvgLight');
         $('.bodyDataList').eq(4).addClass('darkHover');
-    }else if(event.type == "mouseout"){
+    } else if (event.type == "mouseout") {
         //鼠标离开
         $('.pA_legL').removeClass('mySvgLight');
         $('.bodyDataList').eq(4).removeClass('darkHover');
     }
 })
-$(document).on("mouseover mouseout",'.pA_legR',function(event){
-    if(event.type == "mouseover"){
+$(document).on("mouseover mouseout", '.pA_legR', function (event) {
+    if (event.type == "mouseover") {
         //鼠标悬浮
         $('.pA_legR').addClass('mySvgLight');
         $('.bodyDataList').eq(5).addClass('darkHover');
-    }else if(event.type == "mouseout"){
+    } else if (event.type == "mouseout") {
         //鼠标离开
         $('.pA_legR').removeClass('mySvgLight');
         $('.bodyDataList').eq(5).removeClass('darkHover');
     }
 })
 
-$(document).on("mouseover mouseout",'.pB_head',function(event){
-    if(event.type == "mouseover"){
+$(document).on("mouseover mouseout", '.pB_head', function (event) {
+    if (event.type == "mouseover") {
         //鼠标悬浮
         $('.pB_head').addClass('mySvgLight');
         $('.bodyDataList').eq(6).addClass('darkHover');
-    }else if(event.type == "mouseout"){
+    } else if (event.type == "mouseout") {
         //鼠标离开
         $('.pB_head').removeClass('mySvgLight');
         $('.bodyDataList').eq(6).removeClass('darkHover');
     }
 })
-$(document).on("mouseover mouseout",'.pB_body',function(event){
-    if(event.type == "mouseover"){
+$(document).on("mouseover mouseout", '.pB_body', function (event) {
+    if (event.type == "mouseover") {
         //鼠标悬浮
         $('.pB_body').addClass('mySvgLight');
         $('.bodyDataList').eq(7).addClass('darkHover');
-    }else if(event.type == "mouseout"){
+    } else if (event.type == "mouseout") {
         //鼠标离开
         $('.pB_body').removeClass('mySvgLight');
         $('.bodyDataList').eq(7).removeClass('darkHover');
     }
 })
-$(document).on("mouseover mouseout",'.pB_handL',function(event){
-    if(event.type == "mouseover"){
+$(document).on("mouseover mouseout", '.pB_handL', function (event) {
+    if (event.type == "mouseover") {
         //鼠标悬浮
         $('.pB_handL').addClass('mySvgLight');
         $('.bodyDataList').eq(9).addClass('darkHover');
-    }else if(event.type == "mouseout"){
+    } else if (event.type == "mouseout") {
         //鼠标离开
         $('.pB_handL').removeClass('mySvgLight');
         $('.bodyDataList').eq(9).removeClass('darkHover');
     }
 })
-$(document).on("mouseover mouseout",'.pB_handR',function(event){
-    if(event.type == "mouseover"){
+$(document).on("mouseover mouseout", '.pB_handR', function (event) {
+    if (event.type == "mouseover") {
         //鼠标悬浮
         $('.pB_handR').addClass('mySvgLight');
         $('.bodyDataList').eq(8).addClass('darkHover');
-    }else if(event.type == "mouseout"){
+    } else if (event.type == "mouseout") {
         //鼠标离开
         $('.pB_handR').removeClass('mySvgLight');
         $('.bodyDataList').eq(8).removeClass('darkHover');
     }
 })
-$(document).on("mouseover mouseout",'.pB_legL',function(event){
-    if(event.type == "mouseover"){
+$(document).on("mouseover mouseout", '.pB_legL', function (event) {
+    if (event.type == "mouseover") {
         //鼠标悬浮
         $('.pB_legL').addClass('mySvgLight');
         $('.bodyDataList').eq(11).addClass('darkHover');
-    }else if(event.type == "mouseout"){
+    } else if (event.type == "mouseout") {
         //鼠标离开
         $('.pB_legL').removeClass('mySvgLight');
         $('.bodyDataList').eq(11).removeClass('darkHover');
     }
 })
-$(document).on("mouseover mouseout",'.pB_legR',function(event){
-    if(event.type == "mouseover"){
+$(document).on("mouseover mouseout", '.pB_legR', function (event) {
+    if (event.type == "mouseover") {
         //鼠标悬浮
         $('.pB_legR').addClass('mySvgLight');
         $('.bodyDataList').eq(10).addClass('darkHover');
-    }else if(event.type == "mouseout"){
+    } else if (event.type == "mouseout") {
         //鼠标离开
         $('.pB_legR').removeClass('mySvgLight');
         $('.bodyDataList').eq(10).removeClass('darkHover');
     }
 })
-
-
-
-
-
-
-
-
 
 
 $(document).on('click', '.next_04', function () {
@@ -1566,7 +1558,7 @@ $(document).on('click', '.changePeople', function () {
     });
 });
 
-$(document).on('click','.restart',function (){
+$(document).on('click', '.restart', function () {
     bufferA = new buffer(), bufferB = new buffer();
     whoFirst = '';
     numAttSortA = 0, numAttSortB = 0, numDefSortA = 0, numDefSortB = 0;
@@ -2228,10 +2220,9 @@ $(document).on('click', '.baoDiSetText >div', function () {
     }
 });
 
-//todo 测试用
 $(document).on('click', '.fightPause', function () {
     let t = 0.25;
-    printDiv(t,Date());
+    printDiv(t, Date());
 });
 
 function printDiv(t, c) {
@@ -2243,15 +2234,21 @@ function findWhoFirst() {
     let at, bt;
     let takeTime = [];
     if (whoFirst == '') {
-        at = tDataA.zAtt['' + zsAttSortA[0].zName + ''].time_q;
-        bt = tDataB.zAtt['' + zsAttSortB[0].zName + ''].time_q;
-        if (at < bt) {
-            takeTime = ['A', at];
-        } else if (at > bt) {
-            takeTime = ['B', bt];
-        } else {
-            //判断简写(a>b ? 'a大' : 'b大');
-            takeTime = Boolean(Math.round(Math.random())) ? ['A', at] : ['B', bt];
+        if (personA.zqVal > personA.zqBaoDiVal) {
+            if (personB.zqVal > personB.zqBaoDiVal) {
+                at = tDataA.zAtt['' + zsAttSortA[0].zName + ''].time_q;
+                bt = tDataB.zAtt['' + zsAttSortB[0].zName + ''].time_q;
+                if (at < bt) {
+                    takeTime = ['A', at];
+                } else if (at > bt) {
+                    takeTime = ['B', bt];
+                } else {
+                    //判断简写(a>b ? 'a大' : 'b大');
+                    takeTime = Boolean(Math.round(Math.random())) ? ['A', at] : ['B', bt];
+                }
+            }
+        }else {
+
         }
     } else {
         if (sideWho('zsDefSort', 'def').comBo) {
@@ -2271,6 +2268,12 @@ function findWhoFirst() {
         }
     }
     return takeTime;//格式：['谁先手','几秒']
+}
+
+//todo 20-18-14
+function chooseBigger(a,b){
+    //得出最快时间及谁的什么时间
+
 }
 
 function sideWho(what, attOrDef) {
