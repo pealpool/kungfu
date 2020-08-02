@@ -1554,7 +1554,6 @@ $(document).on('click', '.next_05', function () {
     });
 });
 
-//todo changePeople
 $(document).on('click', '.changePeople', function () {
     reChangePeoVal();
     $('.fightPause').text('暂停');
