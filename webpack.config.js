@@ -32,7 +32,11 @@ module.exports = {
                 use: [
                     'style-loader',
                     {loader: 'css-loader', options: {importLoaders: 2}},  //2代表css-loader后还需要几个loader
-                    {loader: 'postcss-loader', options: {plugins: [require("autoprefixer")("last 100 versions")]}},
+                    {
+                        loader: 'postcss-loader', options: {
+                            postcssOptions: {plugins: [require("autoprefixer")("last 100 versions")]},
+                        }
+                    },
                     'sass-loader'
                 ]
             },

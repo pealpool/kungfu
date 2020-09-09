@@ -5,7 +5,7 @@ import {data_const} from './myData_const.js';
 import {Person, zsAttSort, zsDefSort, buffer} from './myData_P.js';
 import './css/baseCss.scss';
 import 'webpack-jquery-ui';
-import anime from 'animejs/lib/anime.es.js';
+//import anime from 'animejs/lib/anime.es.js';
 
 //一般不需要jq ui 的默认样式，就不用其css
 // require('webpack-jquery-ui/css');
@@ -37,12 +37,17 @@ function reChangePeoVal() {
     zsAttSortB = [new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort(), new zsAttSort()];
     zsDefSortA = [new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort()];
     zsDefSortB = [new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort(), new zsDefSort()];
-    zsPasSortA = '', zsPasSortB = '';
+    zsPasSortA = '';
+    zsPasSortB = '';
     selectBoxHtml_A = ['', '', '<div class="selectBbox" style="display: none"></div>'];
     selectBoxHtml_B = ['', '', '<div class="selectBbox" style="display: none"></div>'];
-    bufferA = new buffer(), bufferB = new buffer();
+    bufferA = new buffer();
+    bufferB = new buffer();
     whoFirst = '';
-    numAttSortA = 0, numAttSortB = 0, numDefSortA = 0, numDefSortB = 0;
+    numAttSortA = 0;
+    numAttSortB = 0;
+    numDefSortA = 0;
+    numDefSortB = 0;
 }
 
 
@@ -1559,9 +1564,9 @@ $(document).on('click', '.changePeople', function () {
 });
 
 $(document).on('click', '.restart', function () {
-    bufferA = new buffer(), bufferB = new buffer();
+    bufferA = new buffer(); bufferB = new buffer();
     whoFirst = '';
-    numAttSortA = 0, numAttSortB = 0, numDefSortA = 0, numDefSortB = 0;
+    numAttSortA = 0; numAttSortB = 0; numDefSortA = 0; numDefSortB = 0;
     $('.fightPause').text('暂停');
     $('.selectKf_A,.selectKf_B').removeClass('freezeButton');
     $('.fightPause').removeClass('goingFight');
@@ -2037,26 +2042,27 @@ function zqBaoDiSetVal() {
     } else {
         a = personB.zqBaoDiVal;
     }
+    let $a = $('.baoDiSetText >div');
     switch (a) {
         case 5:
             t = 'baoDiSetOn_01';
-            $this = $('.baoDiSetText >div').eq(0);
+            $this = $a.eq(0);
             break;
         case 10:
             t = 'baoDiSetOn_02';
-            $this = $('.baoDiSetText >div').eq(1);
+            $this = $a.eq(1);
             break;
         case 20:
             t = 'baoDiSetOn_03';
-            $this = $('.baoDiSetText >div').eq(2);
+            $this = $a.eq(2);
             break;
         case 30:
             t = 'baoDiSetOn_04';
-            $this = $('.baoDiSetText >div').eq(3);
+            $this = $a.eq(3);
             break;
         case 40:
             t = 'baoDiSetOn_05';
-            $this = $('.baoDiSetText >div').eq(4);
+            $this = $a.eq(4);
             break;
     }
     $('#baoDiSetOn').attr('class', t);
@@ -2247,7 +2253,7 @@ function findWhoFirst() {
                     takeTime = Boolean(Math.round(Math.random())) ? ['A', at] : ['B', bt];
                 }
             }
-        }else {
+        } else {
 
         }
     } else {
@@ -2271,7 +2277,7 @@ function findWhoFirst() {
 }
 
 //todo 20-18-14
-function chooseBigger(a,b){
+function chooseBigger(a, b) {
     //得出最快时间及谁的什么时间
 
 }
@@ -2353,57 +2359,68 @@ $(document).on('click', '#autoRunTest', function () {
         setTimeout(function () {
             $('.next_03').trigger('click');
             setTimeout(function () {
-                $('.bt_add').eq(0).trigger('click');
-                $('.bt_add').eq(0).trigger('click');
-                $('.bt_add').eq(0).trigger('click');
+                let $B1 = $('.bt_add').eq(0);
+                $B1.eq(0).trigger('click');
+                $B1.eq(0).trigger('click');
+                $B1.eq(0).trigger('click');
                 $('.next_04').trigger('click');
                 setTimeout(function () {
-                    $('.moSSBox').eq(3).trigger('click');
-                    $('.contentMid .bt_add').eq(1).trigger('click');
-                    $('.contentMid .bt_add').eq(1).trigger('click');
-                    $('.contentMid .bt_add').eq(1).trigger('click');
+                    $('.moSSBox').eq(3).trigger('click')
+                    let $B2 = $('.contentMid .bt_add');
+                    $B2.eq(1).trigger('click');
+                    $B2.eq(1).trigger('click');
+                    $B2.eq(1).trigger('click');
                     $('.next_05').trigger('click');
                     setTimeout(function () {
                         $('.selectKf_A').trigger('click');
                         setTimeout(function () {
                             $('.baoDiSetText div').eq(1).trigger('click');
 
-                            $('.tableContentBox_A .tableContent').eq(0).trigger('click');
-                            $('.tableContentBox_A .tableContent').eq(1).trigger('click');
-                            $('.tableContentBox_A .tableContent').eq(2).trigger('click');
-                            $('.tableContentBox_A .tableContent').eq(3).trigger('click');
-                            $('.tableContentBox_A .tableContent').eq(4).trigger('click');
+                            let $A1 = $('.tableContentBox_A .tableContent');
+                            $A1.eq(0).trigger('click');
+                            $A1.eq(1).trigger('click');
+                            $A1.eq(2).trigger('click');
+                            $A1.eq(3).trigger('click');
+                            $A1.eq(4).trigger('click');
 
-                            $('#showTabs_sA .table_attFromT div').eq(3).trigger('click');
-                            $('#showTabs_sA .table_attFromT div').eq(7).trigger('click');
-                            $('#showTabs_sA .table_attFromT div').eq(11).trigger('click');
-                            $('#showTabs_sA .table_attFromT div').eq(15).trigger('click');
+                            let $A2 = $('#showTabs_sA .table_attFromT div');
+                            $A2.eq(3).trigger('click');
+                            $A2.eq(7).trigger('click');
+                            $A2.eq(11).trigger('click');
+                            $A2.eq(15).trigger('click');
 
-                            $('#showTabs_sA .table_attToT div').eq(7).trigger('click');
-                            $('#showTabs_sA .table_attToT div').eq(14).trigger('click');
-                            $('#showTabs_sA .table_attToT div').eq(21).trigger('click');
-                            $('#showTabs_sA .table_attToT div').eq(28).trigger('click');
-                            $('#showTabs_sA .table_attToT div').eq(35).trigger('click');
+                            let $A3 = $('#showTabs_sA .table_attToT div');
+                            $A3.eq(7).trigger('click');
+                            $A3.eq(14).trigger('click');
+                            $A3.eq(21).trigger('click');
+                            $A3.eq(28).trigger('click');
+                            $A3.eq(35).trigger('click');
 
-                            $('#showTabs_sA .table_Combo_F').eq(1).trigger('click');
-                            $('#showTabs_sA .table_Combo_F').eq(1).trigger('click');
+                            let $A4 = $('#showTabs_sA .table_Combo_F');
+                            $A4.eq(1).trigger('click');
+                            $A4.eq(1).trigger('click');
 
                             // $('#ui-id-5').trigger('click');
 
-                            $('.tableContentBox_D1 .tableContent').eq(0).trigger('click');
-                            $('.tableContentBox_D1 .tableContent').eq(1).trigger('click');
-                            $('.tableContentBox_D1 .tableContent').eq(2).trigger('click');
-                            $('.tableContentBox_D2 .tableContent').eq(0).trigger('click');
-                            $('.tableContentBox_D2 .tableContent').eq(1).trigger('click');
+                            let $A5 = $('.tableContentBox_D1 .tableContent');
+                            $A5.eq(0).trigger('click');
+                            $A5.eq(1).trigger('click');
+                            $A5.eq(2).trigger('click');
 
-                            $('#showTabs_sD .table_attToT div').eq(7).trigger('click');
-                            $('#showTabs_sD .table_attToT div').eq(14).trigger('click');
-                            $('#showTabs_sD .table_attToT div').eq(21).trigger('click');
-                            $('#showTabs_sD .table_attToT div').eq(28).trigger('click');
-                            $('#showTabs_sD .table_attToT div').eq(35).trigger('click');
+                            let $A6 = $('.tableContentBox_D2 .tableContent');
+                            $A6.eq(0).trigger('click');
+                            $A6.eq(1).trigger('click');
 
-                            $('#showTabs_sD .table_Combo_F').eq(0).trigger('click');
-                            $('#showTabs_sD .table_Combo_F').eq(0).trigger('click');
+                            let $A7 = $('#showTabs_sD .table_attToT div');
+                            $A7.eq(7).trigger('click');
+                            $A7.eq(14).trigger('click');
+                            $A7.eq(21).trigger('click');
+                            $A7.eq(28).trigger('click');
+                            $A7.eq(35).trigger('click');
+
+                            let $A8 = $('#showTabs_sD .table_Combo_F');
+                            $A8.eq(0).trigger('click');
+                            $A8.eq(0).trigger('click');
 
                             // $('#ui-id-6').trigger('click');
                             $('#showTabs_sB .tableContent').eq(0).trigger('click');
@@ -2413,42 +2430,51 @@ $(document).on('click', '#autoRunTest', function () {
                                 $('.selectKf_B').trigger('click');
                                 setTimeout(function () {
 
-                                    $('.tableContentBox_A .tableContent').eq(0).trigger('click');
-                                    $('.tableContentBox_A .tableContent').eq(1).trigger('click');
-                                    $('.tableContentBox_A .tableContent').eq(2).trigger('click');
-                                    $('.tableContentBox_A .tableContent').eq(3).trigger('click');
-                                    $('.tableContentBox_A .tableContent').eq(4).trigger('click');
+                                    let $A1 = $('.tableContentBox_A .tableContent');
+                                    $A1.eq(0).trigger('click');
+                                    $A1.eq(1).trigger('click');
+                                    $A1.eq(2).trigger('click');
+                                    $A1.eq(3).trigger('click');
+                                    $A1.eq(4).trigger('click');
 
-                                    $('#showTabs_sA .table_attFromT div').eq(3).trigger('click');
-                                    $('#showTabs_sA .table_attFromT div').eq(7).trigger('click');
-                                    $('#showTabs_sA .table_attFromT div').eq(11).trigger('click');
-                                    $('#showTabs_sA .table_attFromT div').eq(15).trigger('click');
+                                    let $A2 = $('#showTabs_sA .table_attFromT div');
+                                    $A2.eq(3).trigger('click');
+                                    $A2.eq(7).trigger('click');
+                                    $A2.eq(11).trigger('click');
+                                    $A2.eq(15).trigger('click');
 
-                                    $('#showTabs_sA .table_attToT div').eq(5).trigger('click');
-                                    $('#showTabs_sA .table_attToT div').eq(10).trigger('click');
-                                    $('#showTabs_sA .table_attToT div').eq(15).trigger('click');
-                                    $('#showTabs_sA .table_attToT div').eq(20).trigger('click');
-                                    $('#showTabs_sA .table_attToT div').eq(25).trigger('click');
+                                    let $A3 = $('#showTabs_sA .table_attToT div');
+                                    $A3.eq(5).trigger('click');
+                                    $A3.eq(10).trigger('click');
+                                    $A3.eq(15).trigger('click');
+                                    $A3.eq(20).trigger('click');
+                                    $A3.eq(25).trigger('click');
 
-                                    $('#showTabs_sA .table_Combo_F').eq(0).trigger('click');
-                                    $('#showTabs_sA .table_Combo_F').eq(2).trigger('click');
+                                    let $A4 = $('#showTabs_sA .table_Combo_F');
+                                    $A4.eq(0).trigger('click');
+                                    $A4.eq(2).trigger('click');
 
                                     // $('#ui-id-5').trigger('click');
 
-                                    $('.tableContentBox_D1 .tableContent').eq(0).trigger('click');
-                                    $('.tableContentBox_D1 .tableContent').eq(1).trigger('click');
-                                    $('.tableContentBox_D1 .tableContent').eq(2).trigger('click');
-                                    $('.tableContentBox_D2 .tableContent').eq(0).trigger('click');
-                                    $('.tableContentBox_D2 .tableContent').eq(1).trigger('click');
+                                    let $A5 = $('.tableContentBox_D1 .tableContent');
+                                    $A5.eq(0).trigger('click');
+                                    $A5.eq(1).trigger('click');
+                                    $A5.eq(2).trigger('click');
 
-                                    $('#showTabs_sD .table_attToT div').eq(5).trigger('click');
-                                    $('#showTabs_sD .table_attToT div').eq(10).trigger('click');
-                                    $('#showTabs_sD .table_attToT div').eq(15).trigger('click');
-                                    $('#showTabs_sD .table_attToT div').eq(20).trigger('click');
-                                    $('#showTabs_sD .table_attToT div').eq(25).trigger('click');
+                                    let $A6 = $('.tableContentBox_D2 .tableContent');
+                                    $A6.eq(0).trigger('click');
+                                    $A6.eq(1).trigger('click');
 
-                                    $('#showTabs_sD .table_Combo_F').eq(1).trigger('click');
-                                    $('#showTabs_sD .table_Combo_F').eq(2).trigger('click');
+                                    let $A7 = $('#showTabs_sD .table_attToT div');
+                                    $A7.eq(5).trigger('click');
+                                    $A7.eq(10).trigger('click');
+                                    $A7.eq(15).trigger('click');
+                                    $A7.eq(20).trigger('click');
+                                    $A7.eq(25).trigger('click');
+
+                                    let $A8 = $('#showTabs_sD .table_Combo_F');
+                                    $A8.eq(1).trigger('click');
+                                    $A8.eq(2).trigger('click');
 
                                     // $('#ui-id-6').trigger('click');
                                     $('#showTabs_sB .tableContent').eq(0).trigger('click');
