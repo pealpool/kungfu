@@ -9,6 +9,17 @@ module.exports = {
         path: path.join(__dirname, './dist'),
         filename: 'bundle.js'
     },
+    // 配置本地服务器
+    devServer: {
+        // 静态资源目录，index.html所在的目录。
+        contentBase: path.join(__dirname, 'dist'),
+        index: 'index.html',
+        compress: true, // 是否压缩
+        port: 9000, // 服务器的端口
+        host: "localhost", // 主机
+        open: true,
+        hot: true,
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html',
