@@ -473,7 +473,8 @@ function setMyChat(six = new Array(5), sixSum = new Array(5), getID, onOff) {
             data: [
                 {
                     // value: [30, 10, 20, 5, 15]
-                    value: [six[0], six[1], six[2], six[3], six[4]]
+                    value: [six[0], six[1], six[2], six[3], six[4]],
+                    symbol: 'none'
                 }
             ],
         }],
@@ -1564,9 +1565,13 @@ $(document).on('click', '.changePeople', function () {
 });
 
 $(document).on('click', '.restart', function () {
-    bufferA = new buffer(); bufferB = new buffer();
+    bufferA = new buffer();
+    bufferB = new buffer();
     whoFirst = '';
-    numAttSortA = 0; numAttSortB = 0; numDefSortA = 0; numDefSortB = 0;
+    numAttSortA = 0;
+    numAttSortB = 0;
+    numDefSortA = 0;
+    numDefSortB = 0;
     $('.fightPause').text('暂停');
     $('.selectKf_A,.selectKf_B').removeClass('freezeButton');
     $('.fightPause').removeClass('goingFight');
