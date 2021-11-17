@@ -11,9 +11,10 @@ module.exports = {
     },
     // 配置本地服务器
     devServer: {
-        // 静态资源目录，index.html所在的目录。
-        contentBase: path.join(__dirname, 'dist'),
-        index: 'index.html',
+        historyApiFallback:{
+            index: 'index.html',
+            contentBase: path.join(__dirname, 'dist'),
+        },
         compress: true, // 是否压缩
         port: 9000, // 服务器的端口
         host: "localhost", // 主机
