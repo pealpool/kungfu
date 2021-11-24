@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
 module.exports = {
     mode: 'development', // development 或 production
     entry: path.join(__dirname, './src/index.js'),
@@ -53,6 +52,7 @@ module.exports = {
                 ]
             },
             {
+                //todo 所有图片未转码内嵌
                 test: /\.jpg|png|gif|bmp|ttf|eot|svg|woff|woff2$/,
                 // use: 'url-loader?limit=100000',
                 use: {
