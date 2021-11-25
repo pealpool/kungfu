@@ -25,14 +25,14 @@
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1",
     "url-loader": "^4.1.1",
-    "webpack": "^5.64.1",
+    "webpack": "^5.64.3",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.5.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "SET NODE_OPTIONS=--openssl-legacy-provider && webpack serve --host 127.0.0.1 --port 3000",
-    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && webpack"
+    "dev": "webpack serve --host 127.0.0.1 --port 3000",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",

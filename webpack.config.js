@@ -25,24 +25,14 @@ module.exports = {
             template: './src/index.html',
             filename: 'index.html'
         }),
-        // new HtmlWebpackPlugin({
-        //     template: './src/Fight.html',
-        //     filename: 'Fight.html'
-        // }),
-        // new HtmlWebpackPlugin({
-        //     template: './src/selectSchool.html',
-        //     filename: 'selectSchool.html'
-        // }),
     ],
     module: {
         rules: [
-            // { test: /\.css$/, use: ['style-loader','css-loader','postcss-loader'] },
-            // { test: /\.scss$/, use: ['style-loader','css-loader','sass-loader'] }
             {
                 test: /\.css|.scss$/,
                 use: [
                     'style-loader',
-                    {loader: 'css-loader', options: {importLoaders: 2}},  //2代表css-loader后还需要几个loader
+                    { loader: 'css-loader', options: {importLoaders: 2}},  //2代表css-loader后还需要几个loader
                     {
                         loader: 'postcss-loader', options: {
                             postcssOptions: {plugins: [require("autoprefixer")("last 100 versions")]},
@@ -54,13 +44,14 @@ module.exports = {
             {
                 //todo 所有图片未转码内嵌
                 test: /\.jpg|png|gif|bmp|ttf|eot|svg|woff|woff2$/,
-                // use: 'url-loader?limit=100000',
+                type: 'javascript/auto',
                 use: {
                     loader: 'url-loader',
                     options: {
                         limit: 1024 * 10,
                         name: 'img/[name].[hash].[ext]',
-                        publichPath: './'
+                        publichPath: './',
+                        esModule: false
                     }
                 }
             },
