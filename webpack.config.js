@@ -42,18 +42,21 @@ module.exports = {
                 ]
             },
             {
-                //todo 所有图片未转码内嵌
-                test: /\.jpg|png|gif|bmp|ttf|eot|svg|woff|woff2$/,
-                type: 'javascript/auto',
-                use: {
-                    loader: 'url-loader',
-                    options: {
-                        limit: 1024 * 10,
-                        name: 'img/[name].[hash].[ext]',
-                        publichPath: './',
-                        esModule: false
+                test:/\.(jpg|png|gif|bmp|svg)$/,
+                type:"asset",
+                //解析
+                parser: {
+                    //转base64的条件
+                    dataUrlCondition: {
+                        maxSize: 20 * 1024, // 20kb
                     }
-                }
+                },
+                generator:{
+                    //与output.assetModuleFilename是相同的,这个写法引入的时候也会添加好这个路径
+                    filename:'[name].[hash:6][ext]',
+                    //打包后对资源的引入，文件命名已经有/img了
+                    publicPath:'./'
+                },
             },
             {
                 test: /\.js$/, use: 'babel-loader', exclude: /node_modules/
